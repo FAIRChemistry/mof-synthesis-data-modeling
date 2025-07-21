@@ -1,0 +1,25 @@
+[project]
+name = "fairsynthesis-analysis"
+version = "0.1.0"
+description = "A tool for analyzing FAIRSynthesis data in the JXDL format."
+readme = "README.md"
+authors = [
+    { name = "Frederic Bender", email = "frederic.bender@itt.uni-stuttgart.de" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "marimo>=0.12.6",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.4",
+    "polars>=1.26.0",
+    "pybaselines>=1.2.0",
+    "scipy>=1.15.2",
+    "seaborn>=0.13.2",
+]
+
+[project.scripts]
+fairsynthesis-analysis = "fairsynthesis_analysis:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

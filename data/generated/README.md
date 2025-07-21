@@ -1,0 +1,1 @@
+The mofsy.json file is generated using the `data-model/sciformation2mofsy.py` script.
