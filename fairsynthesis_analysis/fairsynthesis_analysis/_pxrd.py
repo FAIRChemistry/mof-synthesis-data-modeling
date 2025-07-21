@@ -1,8 +1,6 @@
-import marimo as mo
-
-from fairsynthesis_data_model import jxdl_api as api
-from fairsynthesis_data_model.generated.jxdl_data_structure import (
-    JXDLSchema,
+from fairsynthesis_data_model import mofsy_api as api
+from fairsynthesis_data_model.generated.mofsy_data_structure import (
+    Mofsy,
     SynthesisElement,
 )
 from fairsynthesis_data_model.pxrd_collector import PXRDFile
@@ -29,6 +27,7 @@ class PXRDAnalysis(ABC):
         pass
     
     def _display_(self):
+        import marimo as mo
         return mo.md(f"Hello to marimo from {self.__class__.__name__}!")
         
     

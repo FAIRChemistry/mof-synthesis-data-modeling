@@ -7,8 +7,8 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
-    from fairsynthesis_data_model.fairsynthesis_data_model import mofsy_api as api
-    from fairsynthesis_data_model.fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
+    from fairsynthesis_data_model import mofsy_api as api
+    from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
     return api, mo
 
 
@@ -34,10 +34,10 @@ def _():
 
 @app.cell
 def _(api, mo):
-    jxdl = api.load_jxdl(
-        mo.notebook_dir() / "../../data/generated/jxdl_from_sciformation.json"
+    mofsy = api.load_mofsy(
+        mo.notebook_dir() / "../../data/generated/mofsy_from_sciformation.json"
     )
-    return (jxdl,)
+    return (mofsy,)
 
 
 @app.cell
@@ -47,13 +47,13 @@ def _(mo):
 
 
 @app.cell
-def _(api, jxdl, mo):
-    _synthesis_list = api.get_synthesis_list(jxdl)
+def _(api, mo, mofsy):
+    _synthesis_list = api.get_synthesis_list(mofsy)
     _synthesis_names = [
         synthesis.metadata.description for synthesis in _synthesis_list
     ]
     ui_synthesis_selector = mo.ui.dropdown(_synthesis_names, label="Select Synthesis")
-    pxrd_file = api.find_corresponding_pxrd_files(api.get_synthesis_list(jxdl)[0])[0]
+    pxrd_file = api.find_corresponding_pxrd_files(api.get_synthesis_list(mofsy)[0])[0]
     return
 
 
@@ -63,14 +63,19 @@ def _():
 
 
 @app.cell
-def _(api, jxdl):
-    api.get_synthesis_list(jxdl)[0].metadata.description
+def _(api, mofsy):
+    api.get_synthesis_list(mofsy)[0].metadata.description
     return
 
 
 @app.cell
-def _(PXRDAnalysis, jxdl):
-    PXRDAnalysis(jxdl)
+def _(PXRDAnalysis, mofsy):
+    PXRDAnalysis(mofsy)
+    return
+
+
+@app.cell
+def _():
     return
 
 
