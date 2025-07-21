@@ -1,7 +1,7 @@
 import os
 
-from utils import load_json, save_string_as_file
-from generated.mofsy_data_structure import Mofsy
+from .utils import load_json, save_string_as_file
+from .generated.mofsy_data_structure import Mofsy
 from lxml import etree
 from string import Template
 

@@ -1,8 +1,8 @@
 import json
 from typing import List
 
-from generated.mofsy_data_structure import Mofsy, ReagentElement, SynthesisElement, Role, Amount
-from pxrd_collector import PXRDFile
+from .generated.mofsy_data_structure import Mofsy, ReagentElement, SynthesisElement, Role, Amount
+from .pxrd_collector import PXRDFile
 
 class Product:
     def __init__(self, name: str, mass: str|None, pxrd_files: List[PXRDFile]):

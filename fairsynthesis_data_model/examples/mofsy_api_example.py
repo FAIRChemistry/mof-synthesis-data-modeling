@@ -1,7 +1,7 @@
-from fairsynthesis_data_model.fairsynthesis_data_model import mofsy_api as api
-from fairsynthesis_data_model.fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
+from fairsynthesis_data_model import mofsy_api as api
+from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
 
-mofsy_file_path = "../data/generated/mofsy_from_sciformation.json"
+mofsy_file_path = "../../data/generated/mofsy_from_sciformation.json"
 # Load MOFSY file into our MOFSYSchema class structure
 mofsy: Mofsy = api.load_mofsy(mofsy_file_path)
 

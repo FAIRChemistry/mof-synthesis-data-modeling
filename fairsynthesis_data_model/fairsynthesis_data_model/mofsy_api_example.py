@@ -1,5 +1,5 @@
-import mofsy_api as api
-from generated.mofsy_data_structure import Mofsy
+from . import mofsy_api as api
+from .generated.mofsy_data_structure import Mofsy
 
 mofsy_file_path = "../../data/generated/mofsy_from_sciformation.json"
 # Load MOFSY file into our MOFSYSchema class structure
