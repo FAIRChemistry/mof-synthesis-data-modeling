@@ -140,18 +140,6 @@
             "Value": 0.008740000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-008_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -334,18 +322,6 @@
             "Unit": "gram",
             "Value": 0.00924,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-009_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -530,18 +506,6 @@
             "Value": 0.008480000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-010_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -724,18 +688,6 @@
             "Unit": "gram",
             "Value": 0.0088,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-011_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -940,18 +892,6 @@
             "Value": 0.00956,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-014_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -1147,18 +1087,6 @@
             "Value": 0.00742,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-015_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -1341,18 +1269,6 @@
             "Unit": "gram",
             "Value": 0.00657,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-016_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -1537,18 +1453,6 @@
             "Value": 0.00783,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-017_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -1732,18 +1636,6 @@
             "Value": 0.01033,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-019_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -1917,18 +1809,6 @@
             "Unit": "gram",
             "Value": 0.009210000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-020_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -2104,18 +1984,6 @@
             "Value": 0.01207,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-021_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -2290,18 +2158,6 @@
             "Value": 0.00717,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-022_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -2475,18 +2331,6 @@
             "Unit": "gram",
             "Value": 0.00958,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-033_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -2667,18 +2511,6 @@
             "Value": 0.00797,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-034_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -2857,42 +2689,6 @@
             "Unit": "gram",
             "Value": 0.0044,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-035_Cu-Ka1_capillary-0.3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 0.3,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-035_Cu-Ka1_capillary-0.5mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 0.5,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-035_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -3073,18 +2869,6 @@
             "Value": 0.00477,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-036_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -3258,18 +3042,6 @@
             "Unit": "gram",
             "Value": 0.0006500000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-040_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -3450,18 +3222,6 @@
             "Value": 0.00218,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-041_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -3641,18 +3401,6 @@
             "Value": 4e-05,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-042_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -3826,18 +3574,6 @@
             "Unit": "gram",
             "Value": 0.01362,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-044_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -4013,18 +3749,6 @@
             "Value": 0.01207,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-045_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -4198,18 +3922,6 @@
             "Unit": "gram",
             "Value": 0.01218,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-046_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -4568,18 +4280,6 @@
             "Value": 0.02585,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-048_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -4762,18 +4462,6 @@
             "Unit": "gram",
             "Value": 0.021660000000000002,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-049_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -4958,30 +4646,6 @@
             "Value": 0.01233,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-050_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-050_Cu-Ka1_capillary-1mm_46s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -5165,18 +4829,6 @@
             "Value": 0.01184,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-051_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -5354,18 +5006,6 @@
             "Unit": "gram",
             "Value": 0.010660000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-052_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -5550,18 +5190,6 @@
             "Value": 0.01019,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-053_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -5745,18 +5373,6 @@
             "Value": 0.01256,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-059_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -5931,18 +5547,6 @@
             "Value": 0.01087,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-060_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -6116,18 +5720,6 @@
             "Unit": "gram",
             "Value": 0.01238,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-061_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -6477,18 +6069,6 @@
             "Value": 0.00244,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-063_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -6662,18 +6242,6 @@
             "Unit": "gram",
             "Value": 0.0005600000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-064_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -6849,18 +6417,6 @@
             "Value": 0.00188,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-065_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -7034,18 +6590,6 @@
             "Unit": "gram",
             "Value": 0.00869,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-067_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -7221,18 +6765,6 @@
             "Value": 0.009859999999999999,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-068_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -7406,18 +6938,6 @@
             "Unit": "gram",
             "Value": 0.011689999999999999,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-069_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -7593,18 +7113,6 @@
             "Value": 0.011460000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-070_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -7778,18 +7286,6 @@
             "Unit": "gram",
             "Value": 0.012199999999999999,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-073_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -7975,18 +7471,6 @@
             "Value": 0.00717,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-075_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -8167,30 +7651,6 @@
             "Value": 0.011300000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-076_Cu-Ka1_capillary-1mm_60s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-076_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -8364,30 +7824,6 @@
             "Unit": "gram",
             "Value": 0.012920000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-081_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-081_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -8563,18 +7999,6 @@
             "Value": 0.00222,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-082_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -8748,18 +8172,6 @@
             "Unit": "gram",
             "Value": 0.01021,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-083_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -8939,18 +8351,6 @@
             "Unit": "gram",
             "Value": 0.0089,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-084_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -9141,18 +8541,6 @@
             "Value": 0.01255,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-085_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -9326,18 +8714,6 @@
             "Unit": "gram",
             "Value": 0.0368,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-086_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -9513,18 +8889,6 @@
             "Value": 0.011960000000000002,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-089_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -9699,18 +9063,6 @@
             "Value": 0.01358,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-090_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -9884,18 +9236,6 @@
             "Unit": "gram",
             "Value": 0.01502,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-091_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -10081,18 +9421,6 @@
             "Value": 0.00828,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-092_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -10248,18 +9576,6 @@
             "Unit": "gram",
             "Value": 0.00718,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-097_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -10444,18 +9760,6 @@
             "Unit": "gram",
             "Value": 0.008310000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-098_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -10647,18 +9951,6 @@
             "Value": 0.01846,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-099_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -10812,18 +10104,6 @@
         {
           "_weight": {
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-104_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -10999,18 +10279,6 @@
             "Value": 0.0125,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-105_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -11175,18 +10443,6 @@
             "Value": 0.0061200000000000004,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-106_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -11344,18 +10600,6 @@
             "Unit": "gram",
             "Value": 0.00572,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-107_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -11524,18 +10768,6 @@
             "Unit": "gram",
             "Value": 0.00214,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-108_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -11710,18 +10942,6 @@
             "Unit": "gram",
             "Value": 0.009720000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-109_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -11907,18 +11127,6 @@
             "Value": 0.01289,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-111_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -12074,18 +11282,6 @@
             "Unit": "gram",
             "Value": 0.00833,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-112_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -12435,18 +11631,6 @@
             "Value": 0.012050000000000002,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-114_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -12627,18 +11811,6 @@
             "Value": 0.01177,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-115_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -12812,18 +11984,6 @@
             "Unit": "gram",
             "Value": 0.0115,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-119_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -12999,18 +12159,6 @@
             "Value": 0.0076500000000000005,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-120_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -13179,18 +12327,6 @@
             "Unit": "gram",
             "Value": 0.008220000000000002,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-121_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -13366,18 +12502,6 @@
             "Value": 0.01045,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-125_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -13551,18 +12675,6 @@
             "Unit": "gram",
             "Value": 0.01115,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-126_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -13738,18 +12850,6 @@
             "Value": 0.01079,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-127_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -13923,18 +13023,6 @@
             "Unit": "gram",
             "Value": 0.00436,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-128_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -14110,18 +13198,6 @@
             "Value": 0.00639,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-129_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -14295,18 +13371,6 @@
             "Unit": "gram",
             "Value": 0.00652,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-130_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -14482,18 +13546,6 @@
             "Value": 0.007330000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-131_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -14667,18 +13719,6 @@
             "Unit": "gram",
             "Value": 0.01072,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-132_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -14854,18 +13894,6 @@
             "Value": 0.00683,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-135_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -15040,18 +14068,6 @@
             "Value": 0.009970000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-139_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -15225,18 +14241,6 @@
             "Unit": "gram",
             "Value": 0.00379,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-140_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -15422,18 +14426,6 @@
             "Value": 0.00836,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-141_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -15614,18 +14606,6 @@
             "Value": 0.013730000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-144_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -15794,18 +14774,6 @@
             "Unit": "gram",
             "Value": 0.014369999999999999,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-145_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -15981,18 +14949,6 @@
             "Value": 0.01402,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-146_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -16166,18 +15122,6 @@
             "Unit": "gram",
             "Value": 0.0,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-147_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -16362,18 +15306,6 @@
             "Value": 0.01336,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-149_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -16547,18 +15479,6 @@
             "Unit": "gram",
             "Value": 0.0126,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-150_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -16739,18 +15659,6 @@
             "Value": 0.00622,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-151_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -16924,18 +15832,6 @@
             "Unit": "gram",
             "Value": 0.01365,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-153_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -17111,18 +16007,6 @@
             "Value": 0.01221,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-154_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -17296,18 +16180,6 @@
             "Unit": "gram",
             "Value": 0.01487,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-155_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -17483,18 +16355,6 @@
             "Value": 0.01154,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-156_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -17668,18 +16528,6 @@
             "Unit": "gram",
             "Value": 0.01357,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-157_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -17855,18 +16703,6 @@
             "Value": 0.014580000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-158_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -18040,18 +16876,6 @@
             "Unit": "gram",
             "Value": 0.008060000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-161_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -18227,18 +17051,6 @@
             "Value": 0.007019999999999999,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-162_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -18412,18 +17224,6 @@
             "Unit": "gram",
             "Value": 0.012580000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-163_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -18599,18 +17399,6 @@
             "Value": 0.01516,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-164_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -18785,18 +17573,6 @@
             "Value": 0.00654,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-165_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -18970,18 +17746,6 @@
             "Unit": "gram",
             "Value": 0.00393,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-166_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -19167,18 +17931,6 @@
             "Value": 0.0015,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-167_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -19359,18 +18111,6 @@
             "Value": 0.00775,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-168_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -19545,18 +18285,6 @@
             "Value": 0.00885,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-172_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -19730,18 +18458,6 @@
             "Unit": "gram",
             "Value": 0.01125,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-173_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -20107,18 +18823,6 @@
             "Value": 0.01289,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-175_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -20292,18 +18996,6 @@
             "Unit": "gram",
             "Value": 0.01342,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-177_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -20479,18 +19171,6 @@
             "Value": 0.01324,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-178_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -20664,18 +19344,6 @@
             "Unit": "gram",
             "Value": 0.008960000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-179_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -20851,18 +19519,6 @@
             "Value": 0.006070000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-180_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -21036,18 +19692,6 @@
             "Unit": "gram",
             "Value": 0.013960000000000002,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-181_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -21223,18 +19867,6 @@
             "Value": 0.0026200000000000004,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-182_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -21408,18 +20040,6 @@
             "Unit": "gram",
             "Value": 0.01202,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-183_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -21595,18 +20215,6 @@
             "Value": 0.01034,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-184_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -21780,18 +20388,6 @@
             "Unit": "gram",
             "Value": 0.01375,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-186_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -21967,18 +20563,6 @@
             "Value": 0.01251,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-187_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -22152,18 +20736,6 @@
             "Unit": "gram",
             "Value": 0.00287,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-188_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -22349,18 +20921,6 @@
             "Value": 0.00859,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-190_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -22541,18 +21101,6 @@
             "Value": 0.00254,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-191_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -22727,18 +21275,6 @@
             "Value": 0.00895,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-192_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -22912,18 +21448,6 @@
             "Unit": "gram",
             "Value": 0.00962,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-193_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -23124,18 +21648,6 @@
             "Value": 0.00777,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-197_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -23322,18 +21834,6 @@
             "Value": 0.031420000000000003,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-198_Cu-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -23507,18 +22007,6 @@
             "Unit": "gram",
             "Value": 0.0369,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-199_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -23694,18 +22182,6 @@
             "Value": 0.03551,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-200_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -23879,18 +22355,6 @@
             "Unit": "gram",
             "Value": 0.00779,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-202_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -24076,18 +22540,6 @@
             "Value": 0.012920000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-203_Cu-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -24268,18 +22720,6 @@
             "Value": 0.0126,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-207_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -24453,18 +22893,6 @@
             "Unit": "gram",
             "Value": 0.0076,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-210_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -24640,18 +23068,6 @@
             "Value": 0.00634,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-212_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -24825,18 +23241,6 @@
             "Unit": "gram",
             "Value": 0.00521,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-213_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -25012,18 +23416,6 @@
             "Value": 0.0034700000000000004,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-214_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -25197,18 +23589,6 @@
             "Unit": "gram",
             "Value": 0.008960000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-216_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -25384,18 +23764,6 @@
             "Value": 0.010310000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-217_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -25569,18 +23937,6 @@
             "Unit": "gram",
             "Value": 0.01185,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-218_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -25760,18 +24116,6 @@
             "Unit": "gram",
             "Value": 0.00697,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-219_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -25962,18 +24306,6 @@
             "Value": 0.012119999999999999,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-220_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -26163,18 +24495,6 @@
             "Value": 0.011,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-221_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -26358,18 +24678,6 @@
             "Unit": "gram",
             "Value": 0.00908,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-222_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -26560,18 +24868,6 @@
             "Unit": "gram",
             "Value": 0.00666,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-224_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -26773,18 +25069,6 @@
             "Value": 0.00321,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-225_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -26980,18 +25264,6 @@
             "Value": 0.00674,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-226_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -27165,18 +25437,6 @@
             "Unit": "gram",
             "Value": 0.01017,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-227_Co-Ka1_film-3mm_5s-deg_MOCOF-1-3,5-DNBA.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -27361,18 +25621,6 @@
             "Unit": "gram",
             "Value": 0.01179,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-228_Co-Ka1_capillary-1mm_5s-deg_MOCOF-1.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -27563,18 +25811,6 @@
             "Unit": "gram",
             "Value": 0.0046500000000000005,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-229_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -27776,18 +26012,6 @@
             "Value": 0.01076,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-230_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -27984,18 +26208,6 @@
             "Value": 0.01098,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-231_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -28175,18 +26387,6 @@
             "Unit": "gram",
             "Value": 0.00542,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-232_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -28371,18 +26571,6 @@
             "Unit": "gram",
             "Value": 0.01101,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-233_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -28574,18 +26762,6 @@
             "Value": 0.014740000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-234_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -28775,18 +26951,6 @@
             "Unit": "gram",
             "Value": 0.05362,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-242_Co-Ka1_capillary-1mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -29354,30 +27518,6 @@
             "Value": 0.006110000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-254_Co-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-254_Co-Ka1_film-8mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 8.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -29562,18 +27702,6 @@
             "Unit": "gram",
             "Value": 0.0034100000000000003,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-258_Co-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -29760,18 +27888,6 @@
             "Value": 0.006030000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-259_Co-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -29952,18 +28068,6 @@
             "Value": 0.007690000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-260_Co-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -30138,18 +28242,6 @@
             "Value": 0.0071200000000000005,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-261_Co-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -30323,18 +28415,6 @@
             "Unit": "gram",
             "Value": 0.01506,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-266_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -30516,18 +28596,6 @@
             "Value": 0.01202,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-267_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -30697,18 +28765,6 @@
             "Value": 0.0035600000000000002,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-268_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -30877,18 +28933,6 @@
             "Unit": "gram",
             "Value": 0.009630000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-272_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -31068,18 +29112,6 @@
             "Unit": "gram",
             "Value": 0.00461,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-274_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -31261,18 +29293,6 @@
             "Value": 0.01357,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-282_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -31442,18 +29462,6 @@
             "Value": 0.01244,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-286_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -31622,30 +29630,6 @@
             "Unit": "gram",
             "Value": 0.00357,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-287_Co-Ka1_film-3mm_5s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-287_Co-Ka1_film-3mm_60s-deg.xyd",
-          "_x-ray_source": "Co K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -31825,30 +29809,6 @@
             "Unit": "gram",
             "Value": 0.0181,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-288_Cu-Ka1_capillary-1mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-288_Cu-Ka1_capillary-1mm_60s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -32035,18 +29995,6 @@
             "Value": 0.01119,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-289_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -32222,18 +30170,6 @@
             "Value": 0.0068,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-291_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -32402,18 +30338,6 @@
             "Unit": "gram",
             "Value": 0.00317,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-295_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -32584,18 +30508,6 @@
             "Value": 0.00158,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-296_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -32764,18 +30676,6 @@
             "Unit": "gram",
             "Value": 0.00076,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-297_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -32955,18 +30855,6 @@
             "Unit": "gram",
             "Value": 0.013890000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-301_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -33152,18 +31040,6 @@
             "Unit": "gram",
             "Value": 0.01446,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-302_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -33355,18 +31231,6 @@
             "Value": 0.10241,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-305_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
-          }
         }
       ],
       "Reagents": {
@@ -33556,18 +31420,6 @@
             "Value": 0.04366,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-309_Cu-Ka1_capillary-1mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -33756,30 +31608,6 @@
             "Unit": "gram",
             "Value": 0.07979000000000001,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-310_Cu-Ka1_capillary-1mm_60s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-310_Cu-Ka1_capillary-1mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -33975,18 +31803,6 @@
             "Value": 0.012289999999999999,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-312_Cu-Ka1_capillary-1mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -34165,18 +31981,6 @@
             "Unit": "gram",
             "Value": 0.00277,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-313_Cu-Ka1_film-3mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 3.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "KAPTON_FILMS"
           }
         }
       ],
@@ -34361,18 +32165,6 @@
             "Value": 0.07087,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-326_Cu-Ka1_capillary-1mm_3s-deg_MOCOF-1.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -34552,18 +32344,6 @@
             "Value": 0.010320000000000001,
             "$xml_append": "${Value} ${Unit}"
           }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-328_Cu-Ka1_capillary-1mm_3s-deg.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
-          }
         }
       ],
       "Reagents": {
@@ -34736,18 +32516,6 @@
             "Unit": "gram",
             "Value": 0.042409999999999996,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-339_Cu-Ka1_capillary-1mm_3s-deg_COF-366-Co.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],
@@ -34931,18 +32699,6 @@
             "Unit": "gram",
             "Value": 0.04395,
             "$xml_append": "${Value} ${Unit}"
-          }
-        },
-        {
-          "_relative_file_path": "../../data/PXRD/PXRD_KE-340_Cu-Ka1_capillary-1mm_3s-deg_MOCOF-1.xyd",
-          "_x-ray_source": "Cu K\u03b11",
-          "sample_holder": {
-            "_diameter": {
-              "Unit": "millimeter",
-              "Value": 1.0,
-              "$xml_append": "${Value} ${Unit}"
-            },
-            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
           }
         }
       ],

@@ -129,8 +129,9 @@ def clean_sciformation_eln(data: dict, max_entry_length: int = -1) -> dict:
 
 if __name__ == '__main__':
     # Can be run independently to test the function
-    file_path = os.path.join('../..', 'data', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    result_file_path = os.path.join('../..', 'data', 'generated', 'sciformation_eln_cleaned.json')
+    current_file_dir = __file__.rsplit('/', 1)[0]
+    file_path = os.path.join(current_file_dir, '../..', 'data', 'Sciformation_KE-MOCOF_jsonRaw.json')
+    result_file_path = os.path.join(current_file_dir, '../..', 'data', 'generated', 'sciformation_eln_cleaned.json')
 
     data = load_json(file_path)
     result = clean_sciformation_eln(data)
