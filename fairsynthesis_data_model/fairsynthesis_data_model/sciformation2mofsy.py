@@ -204,7 +204,7 @@ def format_length(length: str) -> Amount:
 
 if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(current_file_dir, '../..', 'data', 'Sciformation_KE-MOCOF_jsonRaw.json')
+    file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
     print("Cleaned data: " + str(cleaned_eln))
 
@@ -212,7 +212,7 @@ if __name__ == '__main__':
     validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, 'schemas', 'sciformation_eln_cleaned.schema.json')))
 
     mofsy = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln))
-    result_file_path = os.path.join(current_file_dir , '../..', 'data', 'generated', 'mofsy_from_sciformation.json')
+    result_file_path = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
     result_dict = mofsy.to_dict()
     print("MOFSY Result: " + str(result_dict))
     save_json(result_dict, result_file_path)
