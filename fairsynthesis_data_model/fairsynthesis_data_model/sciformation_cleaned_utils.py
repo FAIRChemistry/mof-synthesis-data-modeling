@@ -40,11 +40,43 @@ def time_to_seconds(time: float, time_unit: Unit) -> float:
     else:
         return time
 
+def time_to_target_format(time: float, time_unit_source: Unit, time_unit_target: Unit) -> float:
+    time_in_seconds = time_to_seconds(time, time_unit_source)
+    if time_unit_target == Unit.S:
+        return time_in_seconds
+    elif time_unit_target == Unit.M:
+        return time_in_seconds / 60
+    elif time_unit_target == Unit.H:
+        return time_in_seconds / 3600
+    elif time_unit_target == Unit.D:
+        return time_in_seconds / 86400
+    else:
+        raise ValueError(f"Unknown target time unit: {time_unit_target}")
+
 def mass_to_gram(mass: float, mass_unit: MassUnit) -> float:
-    if mass_unit == MassUnit.G:
+    if mass_unit == MassUnit.UG:
+        return mass / 1000000
+    elif mass_unit == MassUnit.MG:
+        return mass / 1000
+    elif mass_unit == MassUnit.G:
         return mass
+    elif mass_unit == MassUnit.KG:
+        return mass * 1000
     else:
         raise ValueError("Unknown mass unit")
+
+def mass_to_target_format(mass: float, mass_unit_source: MassUnit, mass_unit_target: MassUnit) -> float:
+    mass_in_gram = mass_to_gram(mass, mass_unit_source)
+    if mass_unit_target == MassUnit.MG:
+        return mass_in_gram * 1000
+    elif mass_unit_target == MassUnit.G:
+        return mass_in_gram
+    elif mass_unit_target == MassUnit.KG:
+        return mass_in_gram / 1000
+    elif mass_unit_target == MassUnit.UG:
+        return mass_in_gram * 1000000
+    else:
+        raise ValueError(f"Unknown target mass unit: {mass_unit_target}")
 
 def find_reaction_components(experiment: Experiment, rxn_type: RxnRole) -> List[ReactionComponent]:
     results = []
