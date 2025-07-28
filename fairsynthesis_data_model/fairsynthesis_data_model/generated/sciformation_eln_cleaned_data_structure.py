@@ -95,7 +95,10 @@ class ConcentrationUnit(Enum):
 
 
 class MassUnit(Enum):
+    UG = "ug"
+    MG = "mg"
     G = "g"
+    KG = "kg"
 
 
 class RxnRole(Enum):

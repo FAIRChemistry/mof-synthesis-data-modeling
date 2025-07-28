@@ -5,6 +5,7 @@ from datetime import datetime
 from .utils import format_to_camel_case, load_json, save_json
 from .use_case_specific.sciformation_cleaner_mocof1 import process_data_use_case_specific
 
+# These are the attributes and properties that we want to keep from the Sciformation ELN data.
 important_item_attributes = [
     '@id',
     'nrInLabJournal',

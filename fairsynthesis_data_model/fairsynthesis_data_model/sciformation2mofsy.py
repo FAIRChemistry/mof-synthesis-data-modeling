@@ -9,7 +9,7 @@ from .generated.mofsy_data_structure import Mofsy, SynthesisElement ,ReagentElem
 from .generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
 from .mofsy_utils import rxn_role_to_xdl_role
-from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_gram, time_to_seconds
+from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_target_format, time_to_target_format, Unit as TimeUnit
 from .sciformation_cleaner import clean_sciformation_eln
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
@@ -176,20 +176,22 @@ def format_temperature(temp: str) -> Amount:
         # return str(start_temp) + " -> " + str(end_temp) + " C"
     else:
         temp: float = float(sympify(temperature_string))
-        return Amount(value=float(temp), unit=Unit.CELSIUS)
+        return Amount(value=round(temp, 2), unit=Unit.CELSIUS)
 
 def format_mass(mass: float|None, mass_unit: MassUnit) -> Amount:
     if (mass is None) or (mass_unit is None):
         return Amount(value=None, unit=None)
-    return Amount(value=float(mass_to_gram(mass, mass_unit)), unit=Unit.GRAM)
+    mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
+    return Amount(value=round(mass_in_mg, 2), unit=Unit.MILLIGRAM)
 
 def format_amount(amount: float|None) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
-    return Amount(value=float(amount), unit=Unit.MOLE)
+    return Amount(value=float(round(amount * 1000000,2)), unit=Unit.MICROMOLE)
 
-def format_time(time: str, time_unit: Unit) -> Amount:
-    return Amount(value=float(time_to_seconds(float(sympify(time)), time_unit)), unit=Unit.SECOND)
+def format_time(time: str, time_unit: TimeUnit) -> Amount:
+    time_in_h = time_to_target_format(float(sympify(time)), time_unit, TimeUnit.H)
+    return Amount(value=round(time_in_h, 2), unit=Unit.HOUR)
 
 def format_length(length: str) -> Amount:
     if length.endswith("mm"):

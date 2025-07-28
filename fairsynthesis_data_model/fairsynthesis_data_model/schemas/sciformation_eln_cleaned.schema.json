@@ -121,7 +121,10 @@
                 "massUnit": {
                   "type": "string",
                   "enum": [
-                    "g"
+                    "ug",
+                    "mg",
+                    "g",
+                    "kg"
                   ]
                 },
                 "volume": {

@@ -101,6 +101,8 @@
       "properties": {
         "Unit": {
           "enum": [
+            "microgram",
+            "milligram",
             "gram",
             "kilogram",
             "ton",
@@ -115,6 +117,8 @@
             "ohm",
             "dimensionless",
             "item",
+            "micromole",
+            "millimole",
             "mole",
             "celsius",
             "kelvin",
