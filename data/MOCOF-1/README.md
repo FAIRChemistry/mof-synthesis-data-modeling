@@ -9,4 +9,4 @@ TODO
 
 ## Converting to the MOFSY format
 
-For the conversion to the MOFSY format, see the data [model folder README](../../fairsynthesis_data_model/).
+For the conversion to the MOFSY format, see the [data model folder README](../../fairsynthesis_data_model/).
