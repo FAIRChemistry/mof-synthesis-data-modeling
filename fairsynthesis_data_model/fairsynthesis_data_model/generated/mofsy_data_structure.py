@@ -143,6 +143,7 @@ class Metadata:
 class Unit(Enum):
     CELSIUS = "celsius"
     CENTIMETER = "centimeter"
+    DAY = "day"
     DIMENSIONLESS = "dimensionless"
     GRAM = "gram"
     HOUR = "hour"
@@ -151,12 +152,13 @@ class Unit(Enum):
     KILOGRAM = "kilogram"
     LITRE = "litre"
     METER = "meter"
-    METRE = "metre"
     MILLIMETER = "millimeter"
+    MILLISECOND = "millisecond"
     MINUTE = "minute"
     MOLE = "mole"
     OHM = "ohm"
     SECOND = "second"
+    TON = "ton"
     WEEK = "week"
 
 
@@ -259,21 +261,20 @@ class StepEntryClass:
 
 
 class FlatProcedureClass:
-    step: Optional[List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]]
+    step: List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]
 
-    def __init__(self, step: Optional[List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]]) -> None:
+    def __init__(self, step: List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]) -> None:
         self.step = step
 
     @staticmethod
     def from_dict(obj: Any) -> 'FlatProcedureClass':
         assert isinstance(obj, dict)
-        step = from_union([lambda x: from_list(lambda x: from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), StepEntryClass.from_dict], x), x), from_none], obj.get("Step"))
+        step = from_list(lambda x: from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), StepEntryClass.from_dict], x), obj.get("Step"))
         return FlatProcedureClass(step)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.step is not None:
-            result["Step"] = from_union([lambda x: from_list(lambda x: from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(StepEntryClass, x)], x), x), from_none], self.step)
+        result["Step"] = from_list(lambda x: from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(StepEntryClass, x)], x), self.step)
         return result
 
 

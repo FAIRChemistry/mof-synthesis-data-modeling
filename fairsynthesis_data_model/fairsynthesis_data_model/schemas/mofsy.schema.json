@@ -1,31 +1,114 @@
 {
-  "title": "MOFSY",
-  "type": "object",
-  "properties": {
-    "Synthesis": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/SynthesisEntry"
-      }
-    }
-  },
-  "required": [
-    "Synthesis"
-  ],
-  "definitions": {},
   "$defs": {
+    "$xml_type": {
+      "enum": [
+        "Add",
+        "HeatChill",
+        "EvacuateAndRefill",
+        "WashSolid",
+        "Wait",
+        "Evaporate"
+      ],
+      "type": "string"
+    },
+    "Characterization": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/pxrd"
+        },
+        {
+          "$ref": "#/$defs/weighing"
+        }
+      ],
+      "title": "Characterization",
+      "type": "object"
+    },
+    "Hardware": {
+      "properties": {
+        "Component": {
+          "items": {
+            "$ref": "#/$defs/HardwareComponentsEntry"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "HardwareComponents": {},
+    "HardwareComponentsEntry": {
+      "properties": {
+        "_chemical": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        },
+        "_id": {
+          "type": "string"
+        },
+        "_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_id"
+      ],
+      "type": "object"
+    },
+    "Metadata": {
+      "properties": {
+        "_description": {
+          "type": "string"
+        },
+        "_product": {
+          "type": "string"
+        },
+        "_product_inchi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_description"
+      ],
+      "type": "object"
+    },
+    "Procedure": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/StepsFlatProcedure"
+        },
+        {
+          "$ref": "#/$defs/ProcedureWithDifferentSections"
+        }
+      ],
+      "type": "object"
+    },
+    "ProcedureWithDifferentSections": {
+      "properties": {
+        "Prep": {
+          "$ref": "#/$defs/StepsFlatProcedure"
+        },
+        "Reaction": {
+          "$ref": "#/$defs/StepsFlatProcedure"
+        },
+        "Workup": {
+          "$ref": "#/$defs/StepsFlatProcedure"
+        }
+      },
+      "title": "Procedure with different sections"
+    },
     "Quantity": {
-      "type": "object",
       "properties": {
         "Unit": {
-          "type": "string",
           "enum": [
             "gram",
             "kilogram",
-            "metre",
+            "ton",
+            "millisecond",
             "second",
             "minute",
             "hour",
+            "day",
             "week",
             "kelvin",
             "litre",
@@ -38,33 +121,88 @@
             "millimeter",
             "centimeter",
             "meter"
-          ]
+          ],
+          "type": "string"
         },
         "Value": {
           "type": "number"
         }
-      }
+      },
+      "type": "object"
     },
-    "Characterization": {
-      "title": "Characterization",
-      "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/$defs/pxrd"
-        },
-        {
-          "$ref": "#/$defs/weighing"
+    "Reagents": {
+      "properties": {
+        "Reagent": {
+          "items": {
+            "$ref": "#/$defs/ReagentsEntry"
+          },
+          "type": "array"
         }
-      ]
+      },
+      "required": [
+        "Reagent"
+      ],
+      "type": "object"
+    },
+    "ReagentsEntry": {
+      "properties": {
+        "_cas": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        },
+        "_id": {
+          "type": "string"
+        },
+        "_inchi": {
+          "type": "string"
+        },
+        "_name": {
+          "type": "string"
+        },
+        "_purity": {
+          "type": "string"
+        },
+        "_role": {
+          "$ref": "#/$defs/_role"
+        }
+      },
+      "type": "object"
+    },
+    "SampleHolder": {
+      "properties": {
+        "_diameter": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "_type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
     },
     "StepEntry": {
-      "title": "Step Entry",
       "properties": {
-        "_reagent": {
-          "type": "string"
+        "$xml_type": {
+          "$ref": "#/$defs/$xml_type"
         },
         "_amount": {
           "$ref": "#/$defs/Quantity"
+        },
+        "_comment": {
+          "type": "string"
+        },
+        "_gas": {
+          "type": "string"
+        },
+        "_reagent": {
+          "type": "string"
+        },
+        "_solvent": {
+          "type": "string"
+        },
+        "_stir": {
+          "type": "string"
         },
         "_temp": {
           "$ref": "#/$defs/Quantity"
@@ -72,39 +210,57 @@
         "_time": {
           "$ref": "#/$defs/Quantity"
         },
-        "_stir": {
-          "type": "string"
-        },
         "_vessel": {
           "type": "string"
-        },
-        "_gas": {
-          "type": "string"
-        },
-        "_solvent": {
-          "type": "string"
-        },
-        "_comment": {
-          "type": "string"
-        },
-        "$xml_type": {
-          "$ref": "#/$defs/$xml_type"
         }
-      }
+      },
+      "title": "Step Entry"
     },
     "StepsFlatProcedure": {
-      "title": "Flat procedure",
       "properties": {
         "Step": {
-          "type": "array",
           "items": {
             "$ref": "#/$defs/StepEntry"
-          }
+          },
+          "type": "array"
         }
-      }
+      },
+      "required": [
+        "Step"
+      ],
+      "title": "Flat procedure"
+    },
+    "SynthesisEntry": {
+      "properties": {
+        "Hardware": {
+          "$ref": "#/$defs/Hardware"
+        },
+        "Metadata": {
+          "$ref": "#/$defs/Metadata"
+        },
+        "Procedure": {
+          "$ref": "#/$defs/Procedure"
+        },
+        "Product_characterization": {
+          "items": {
+            "$ref": "#/$defs/Characterization"
+          },
+          "title": "Product Characterization",
+          "type": "array"
+        },
+        "Reagents": {
+          "$ref": "#/$defs/Reagents"
+        }
+      },
+      "required": [
+        "Metadata",
+        "Reagents",
+        "Procedure",
+        "Product_characterization"
+      ],
+      "type": "object"
     },
     "_role": {
-      "type": "string",
       "enum": [
         "substrate",
         "solvent",
@@ -115,192 +271,36 @@
         "catalyst",
         "ligand",
         "quenching-agent"
-      ]
-    },
-    "ReagentsEntry": {
-      "type": "object",
-      "properties": {
-        "_name": {
-          "type": "string"
-        },
-        "_id": {
-          "type": "string"
-        },
-        "_inchi": {
-          "type": "string"
-        },
-        "_cas": {
-          "type": "string"
-        },
-        "_role": {
-          "$ref": "#/$defs/_role"
-        },
-        "_purity": {
-          "type": "string"
-        },
-        "_comment": {
-          "type": "string"
-        }
-      }
-    },
-    "ProcedureWithDifferentSections": {
-      "title": "Procedure with different sections",
-      "properties": {
-        "Prep": {
-          "$ref": "#/$defs/StepsFlatProcedure"
-        },
-        "Reaction": {
-          "$ref": "#/$defs/StepsFlatProcedure"
-        },
-        "Workup": {
-          "$ref": "#/$defs/StepsFlatProcedure"
-        }
-      }
-    },
-    "Metadata": {
-      "type": "object",
-      "properties": {
-        "_description": {
-          "type": "string"
-        },
-        "_product_inchi": {
-          "type": "string"
-        },
-        "_product": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "_description"
-      ]
-    },
-    "Hardware": {
-      "type": "object",
-      "properties": {
-        "Component": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/HardwareComponentsEntry"
-          }
-        }
-      }
-    },
-    "HardwareComponents": {},
-    "HardwareComponentsEntry": {
-      "type": "object",
-      "properties": {
-        "_id": {
-          "type": "string"
-        },
-        "_type": {
-          "type": "string"
-        },
-        "_chemical": {
-          "type": "string"
-        },
-        "_comment": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "_id"
-      ]
-    },
-    "Reagents": {
-      "type": "object",
-      "properties": {
-        "Reagent": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/ReagentsEntry"
-          }
-        }
-      },
-      "required": [
-        "Reagent"
-      ]
-    },
-    "Procedure": {
-      "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/$defs/StepsFlatProcedure"
-        },
-        {
-          "$ref": "#/$defs/ProcedureWithDifferentSections"
-        }
-      ]
+      ],
+      "type": "string"
     },
     "_x-ray_source": {
-      "type": "string",
       "enum": [
         "Co Kα1",
         "Cu Kα1"
-      ]
-    },
-    "SampleHolder": {
-      "type": "object",
-      "properties": {
-        "_type": {
-          "type": "string"
-        },
-        "_diameter": {
-          "$ref": "#/$defs/Quantity"
-        }
-      }
-    },
-    "SynthesisEntry": {
-      "type": "object",
-      "properties": {
-        "Metadata": {
-          "$ref": "#/$defs/Metadata"
-        },
-        "Hardware": {
-          "$ref": "#/$defs/Hardware"
-        },
-        "Reagents": {
-          "$ref": "#/$defs/Reagents"
-        },
-        "Procedure": {
-          "$ref": "#/$defs/Procedure"
-        },
-        "Product_characterization": {
-          "title": "Product Characterization",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/Characterization"
-          }
-        }
-      },
-      "required": [
-        "Metadata",
-        "Reagents",
-        "Procedure",
-        "Product_characterization"
-      ]
+      ],
+      "type": "string"
     },
     "pxrd": {
-      "title": "PXRD",
-      "type": "object",
       "properties": {
+        "_relative_file_path": {
+          "format": "uri",
+          "type": "string"
+        },
         "_x-ray_source": {
           "$ref": "#/$defs/_x-ray_source"
         },
         "sample_holder": {
           "$ref": "#/$defs/SampleHolder"
-        },
-        "_relative_file_path": {
-          "type": "string",
-          "format": "uri"
         }
       },
       "required": [
         "_relative_file_path"
-      ]
+      ],
+      "title": "PXRD",
+      "type": "object"
     },
     "weighing": {
-      "title": "weighing",
-      "type": "object",
       "properties": {
         "_weight": {
           "$ref": "#/$defs/Quantity"
@@ -308,18 +308,23 @@
       },
       "required": [
         "_weight"
-      ]
-    },
-    "$xml_type": {
-      "type": "string",
-      "enum": [
-        "Add",
-        "HeatChill",
-        "EvacuateAndRefill",
-        "WashSolid",
-        "Wait",
-        "Evaporate"
-      ]
+      ],
+      "title": "weighing",
+      "type": "object"
     }
-  }
+  },
+  "definitions": {},
+  "properties": {
+    "Synthesis": {
+      "items": {
+        "$ref": "#/$defs/SynthesisEntry"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "Synthesis"
+  ],
+  "title": "MOFSY",
+  "type": "object"
 }

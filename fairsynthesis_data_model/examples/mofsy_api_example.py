@@ -4,7 +4,7 @@ from fairsynthesis_data_model import mofsy_api as api
 from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
 
 current_file_dir = __file__.rsplit('/', 1)[0]
-mofsy_file_path = os.path.join(current_file_dir, "../../data/generated/mofsy_from_sciformation.json")
+mofsy_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/mofsy_from_sciformation.json")
 # Load MOFSY file into our MOFSYSchema class structure
 mofsy: Mofsy = api.load_mofsy(mofsy_file_path)
 

@@ -1,9 +1,13 @@
 # Data Model
+
+## Setup
 1. Install [uv](https://github.com/astral-sh/uv)
 3. open cmd / terminal, and change directory to this folder `fairsynthesis_data_model`. There you can use `uv run ...` as a substitution for `python ...` and everything you need will be installed.
 4. New packages can be added using `uv add ...` instead of `pip install ...`.
 
 ## Scripts
+
+### MOCOF-1 and Sciformation ELN to MOFSY and XDL
 
 Clean the sciformation ELN export:
 ```bash
