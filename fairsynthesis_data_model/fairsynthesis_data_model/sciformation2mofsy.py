@@ -79,7 +79,11 @@ def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> Pr
 
     # First create steps with type Add for all components that are not products
     for component in experiment.reaction_components:
-        amount = format_amount(component.amount)
+        amount = format_amount_mole(component.amount)
+        # for solvents, use volume instead of mole as unit for amount
+        if component.rxn_role == RxnRole.SOLVENT:
+            amount = format_amount_volume(component.volume)
+
         if component.rxn_role != RxnRole.PRODUCT:
             prep.append(
                 StepEntryClass(XMLType.ADD, amount=amount, reagent=component.molecule_name, stir=None, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None)
@@ -184,10 +188,17 @@ def format_mass(mass: float|None, mass_unit: MassUnit) -> Amount:
     mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
     return Amount(value=round(mass_in_mg, 2), unit=Unit.MILLIGRAM)
 
-def format_amount(amount: float|None) -> Amount:
+def format_amount_mole(amount: float | None) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
     return Amount(value=float(round(amount * 1000000,2)), unit=Unit.MICROMOLE)
+
+def format_amount_volume(amount: float | None) -> Amount:
+    if amount is None:
+        return Amount(value=None, unit=None)
+    # original value from sciformation is in mL but we want to export to microLitre
+    amount_in_ul = round(float(amount) * 1000, 3)
+    return Amount(value=amount_in_ul, unit=Unit.MICROLITRE)
 
 def format_time(time: str, time_unit: TimeUnit) -> Amount:
     time_in_h = time_to_target_format(float(sympify(time)), time_unit, TimeUnit.H)
