@@ -133,15 +133,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.74,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -316,15 +307,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.24,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -499,15 +481,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.48,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -682,15 +655,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.8,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -885,15 +849,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.56,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1080,15 +1035,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.42,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1263,15 +1209,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.57,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1446,15 +1383,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.83,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1629,15 +1557,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.33,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1803,15 +1722,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.21,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -1977,15 +1887,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.07,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -2151,15 +2052,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.17,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -2325,15 +2217,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.58,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -2504,15 +2387,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.97,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -2683,15 +2557,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 4.4,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -2862,15 +2727,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 4.77,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3036,15 +2892,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.65,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3215,15 +3062,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.18,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3394,15 +3232,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.04,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3568,15 +3397,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.62,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3742,15 +3562,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.07,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -3916,15 +3727,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.18,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -4090,15 +3892,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.0,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -4273,15 +4066,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 25.85,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -4456,15 +4240,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 21.66,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -4639,15 +4414,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.33,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -4822,15 +4588,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.84,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5000,15 +4757,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.66,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5183,15 +4931,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.19,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5366,15 +5105,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.56,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5540,15 +5270,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.87,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5714,15 +5435,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.38,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -5888,15 +5600,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 17.12,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6062,15 +5765,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.44,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6236,15 +5930,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.56,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6410,15 +6095,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 1.88,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6584,15 +6260,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.69,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6758,15 +6425,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.86,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -6932,15 +6590,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.69,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7106,15 +6755,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.46,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7280,15 +6920,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.2,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7464,15 +7095,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.17,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7644,15 +7266,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.3,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7818,15 +7431,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.92,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -7992,15 +7596,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.22,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -8166,15 +7761,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.21,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -8345,15 +7931,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.9,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -8534,15 +8111,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.55,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -8708,15 +8276,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 36.8,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -8882,15 +8441,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.96,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9056,15 +8606,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.58,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9230,15 +8771,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 15.02,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9414,15 +8946,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.28,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9570,15 +9093,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.18,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9754,15 +9268,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.31,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -9944,15 +9449,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 18.46,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10100,13 +9596,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10272,15 +9761,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.5,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10436,15 +9916,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.12,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10594,15 +10065,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 5.72,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10762,15 +10224,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.14,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -10936,15 +10389,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.72,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11120,15 +10564,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.89,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11276,15 +10711,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.33,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11442,13 +10868,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11624,15 +11043,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.05,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11804,15 +11214,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.77,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -11978,15 +11379,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.5,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -12152,15 +11544,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.65,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -12321,15 +11704,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.22,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -12495,15 +11869,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.45,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -12669,15 +12034,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.15,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -12843,15 +12199,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.79,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13017,15 +12364,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 4.36,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13191,15 +12529,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.39,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13365,15 +12694,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.52,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13539,15 +12859,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.33,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13713,15 +13024,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.72,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -13887,15 +13189,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.83,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14061,15 +13354,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.97,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14235,15 +13519,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.79,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14419,15 +13694,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.36,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14599,15 +13865,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.73,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14768,15 +14025,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.37,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -14942,15 +14190,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.02,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -15116,15 +14355,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.0,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -15299,15 +14529,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.36,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -15473,15 +14694,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.6,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -15652,15 +14864,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.22,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -15826,15 +15029,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.65,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16000,15 +15194,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.21,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16174,15 +15359,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.87,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16348,15 +15524,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.54,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16522,15 +15689,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.57,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16696,15 +15854,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.58,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -16870,15 +16019,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.06,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17044,15 +16184,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.02,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17218,15 +16349,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.58,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17392,15 +16514,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 15.16,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17566,15 +16679,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.54,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17740,15 +16844,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.93,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -17924,15 +17019,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 1.5,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18104,15 +17190,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.75,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18278,15 +17355,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.85,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18452,15 +17520,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.25,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18636,15 +17695,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.81,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18816,15 +17866,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.89,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -18990,15 +18031,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.42,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -19164,15 +18196,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.24,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -19338,15 +18361,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.96,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -19512,15 +18526,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.07,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -19686,15 +18691,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.96,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -19860,15 +18856,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.62,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20034,15 +19021,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.02,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20208,15 +19186,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.34,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20382,15 +19351,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.75,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20556,15 +19516,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.51,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20730,15 +19681,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.87,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -20914,15 +19856,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.59,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -21094,15 +20027,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.54,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -21268,15 +20192,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.95,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -21442,15 +20357,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.62,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -21641,15 +20547,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.77,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -21827,15 +20724,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 31.42,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22001,15 +20889,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 36.9,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22175,15 +21054,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 35.51,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22349,15 +21219,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.79,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22533,15 +21394,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.92,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22713,15 +21565,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.6,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -22887,15 +21730,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.6,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23061,15 +21895,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.34,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23235,15 +22060,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 5.21,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23409,15 +22225,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.47,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23583,15 +22390,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 8.96,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23757,15 +22555,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.31,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -23931,15 +22720,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.85,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -24110,15 +22890,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.97,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -24299,15 +23070,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.12,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -24488,15 +23250,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.0,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -24672,15 +23425,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.08,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -24862,15 +23606,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.66,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -25062,15 +23797,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.21,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -25257,15 +23983,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.74,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -25431,15 +24148,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.17,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -25615,15 +24323,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.79,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -25805,15 +24504,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 4.65,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26005,15 +24695,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.76,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26201,15 +24882,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.98,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26381,15 +25053,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 5.42,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26565,15 +25228,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.01,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26755,15 +25409,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.74,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -26945,15 +25590,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 53.62,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -27125,15 +25761,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.39,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -27320,15 +25947,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 23.2,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -27511,15 +26129,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.11,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -27696,15 +26305,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.41,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -27881,15 +26481,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.03,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28061,15 +26652,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.69,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28235,15 +26817,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 7.12,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28409,15 +26982,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 15.06,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28589,15 +27153,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.02,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28758,15 +27313,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.56,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -28927,15 +27473,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 9.63,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29106,15 +27643,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 4.61,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29286,15 +27814,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.57,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29455,15 +27974,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.44,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29624,15 +28134,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.57,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29803,15 +28304,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 18.1,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -29988,15 +28480,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 11.19,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -30163,15 +28646,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 6.8,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -30332,15 +28806,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 3.17,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -30501,15 +28966,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 1.58,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -30670,15 +29126,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 0.76,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -30849,15 +29296,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 13.89,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31034,15 +29472,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 14.46,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31224,15 +29653,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 102.41,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31413,15 +29833,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 43.66,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31602,15 +30013,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 79.79,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31796,15 +30198,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 12.29,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -31975,15 +30368,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 2.77,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -32158,15 +30542,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 70.87,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -32337,15 +30712,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 10.32,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -32510,15 +30876,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 42.41,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {
@@ -32693,15 +31050,6 @@
           ]
         }
       },
-      "Product_characterization": [
-        {
-          "_weight": {
-            "Unit": "milligram",
-            "Value": 43.95,
-            "$xml_append": "${Value} ${Unit}"
-          }
-        }
-      ],
       "Reagents": {
         "Reagent": [
           {

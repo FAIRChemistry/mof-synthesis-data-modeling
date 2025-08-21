@@ -3,20 +3,29 @@ import os.path
 from fairsynthesis_data_model import mofsy_api as api
 from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
 
+from fairsynthesis_data_model.generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+
 current_file_dir = __file__.rsplit('/', 1)[0]
 mofsy_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/mofsy_from_sciformation.json")
+characterization_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
+
 # Load MOFSY file into our MOFSYSchema class structure
 mofsy: Mofsy = api.load_mofsy(mofsy_file_path)
+
+# Load Characterization file into our CharacterizationEntry class structure
+characterization: ProductCharacterization = api.load_characterization(characterization_file_path)
 
 # Access an individual experiment by id
 example_experiment_id = "KE-232"
 example_synthesis = api.get_synthesis_by_experiment_id(mofsy, example_experiment_id)
-api.print_synthesis_data(example_synthesis)
+example_characterization = api.get_characterization_by_experiment_id(characterization, example_experiment_id)
+api.print_synthesis_data(example_synthesis, example_characterization)
 
 # Access the product of an individual experiment
 example_experiment_id_2 = "KE-010"
 example_synthesis_2 = api.get_synthesis_by_experiment_id(mofsy, example_experiment_id_2)
-product_2 = api.find_product(example_synthesis_2)
+example_characterization_2 = api.get_characterization_by_experiment_id(characterization, example_experiment_id_2)
+product_2 = api.find_product(example_synthesis_2, example_characterization_2)
 print(f"Experiment ID: {example_experiment_id}")
 api.print_product(product_2)
 
@@ -27,7 +36,8 @@ print(f"Total number of experiments: {len(synthesis_list)}")
 # Compute the average number of PXRD files per experiment
 pxrd_files_per_experiment = []
 for synthesis in synthesis_list:
-    pxrd_files = api.find_corresponding_pxrd_files(synthesis)
+    corresponding_characterization = api.get_characterization_by_experiment_id(characterization, synthesis.metadata.description)
+    pxrd_files = api.find_corresponding_pxrd_files(corresponding_characterization)
     pxrd_files_per_experiment.append(len(pxrd_files))
 average_pxrd_files = sum(pxrd_files_per_experiment) / len(pxrd_files_per_experiment)
 print(f"Average number of PXRD files per experiment: {average_pxrd_files:.2f}")

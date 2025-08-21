@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "Characterization": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/pxrd"
+        },
+        {
+          "$ref": "#/$defs/weighing"
+        }
+      ],
+      "title": "Characterization",
+      "type": "object"
+    },
+    "HardwareComponents": {},
+    "Metadata": {
+      "properties": {
+        "_description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_description"
+      ],
+      "type": "object"
+    },
+    "Quantity": {
+      "title": "Quantity",
+      "properties": {
+        "Unit": {
+          "enum": [
+            "microgram",
+            "milligram",
+            "gram",
+            "kilogram",
+            "ton",
+            "millisecond",
+            "second",
+            "minute",
+            "hour",
+            "day",
+            "week",
+            "kelvin",
+            "microlitre",
+            "millilitre",
+            "centilitre",
+            "decilitre",
+            "litre",
+            "ohm",
+            "dimensionless",
+            "item",
+            "micromole",
+            "millimole",
+            "mole",
+            "celsius",
+            "kelvin",
+            "millimeter",
+            "centimeter",
+            "meter"
+          ],
+          "type": "string"
+        },
+        "Value": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "SampleHolder": {
+      "properties": {
+        "_diameter": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "_type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CharacterizationEntry": {
+      "title": "CharacterizationEntry",
+      "properties": {
+        "Metadata": {
+          "$ref": "#/$defs/Metadata"
+        },
+        "Characterization": {
+          "items": {
+            "$ref": "#/$defs/Characterization"
+          },
+          "title": "Characterization",
+          "type": "array"
+        }
+      },
+      "required": [
+        "Metadata",
+        "Characterization"
+      ],
+      "type": "object"
+    },
+    "_x-ray_source": {
+      "enum": [
+        "Co Kα1",
+        "Cu Kα1"
+      ],
+      "type": "string"
+    },
+    "pxrd": {
+      "properties": {
+        "_relative_file_path": {
+          "format": "uri",
+          "type": "string"
+        },
+        "_x-ray_source": {
+          "$ref": "#/$defs/_x-ray_source"
+        },
+        "sample_holder": {
+          "$ref": "#/$defs/SampleHolder"
+        }
+      },
+      "required": [
+        "_relative_file_path"
+      ],
+      "title": "PXRD",
+      "type": "object"
+    },
+    "weighing": {
+      "properties": {
+        "_weight": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "_weight"
+      ],
+      "title": "weighing",
+      "type": "object"
+    }
+  },
+  "definitions": {},
+  "properties": {
+    "ProductCharacterization": {
+      "items": {
+        "$ref": "#/$defs/CharacterizationEntry"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "ProductCharacterization"
+  ],
+  "title": "ProductCharacterization",
+  "type": "object"
+}
