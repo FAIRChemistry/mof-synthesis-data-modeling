@@ -20,7 +20,7 @@ from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE", split_procedure_in_sections: bool = True) -> Tuple[Mofsy, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
-    pxrd_files = collect_pxrd_files(pxrd_folder)
+    pxrd_files = collect_pxrd_files(pxrd_folder_path)
 
     for experiment in eln.experiments:
         reaction_product = find_reaction_components(experiment, RxnRole.PRODUCT)[0]
@@ -227,13 +227,14 @@ if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'pxrd')
+    pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
     print("Cleaned data: " + str(cleaned_eln))
 
     # Validate data according to schema
     validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, 'schemas', 'sciformation_eln_cleaned.schema.json')))
 
-    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder)
+    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder_relative)
     result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
     result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
     result_dict_mofsy = mofsy.to_dict()
