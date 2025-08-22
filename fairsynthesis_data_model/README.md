@@ -7,6 +7,8 @@
 
 ## Scripts
 
+Run the following scripts from the `fairsynthesis_data_model` directory.
+
 ### MOCOF-1 and Sciformation ELN to MOFSY and XDL
 
 Clean the sciformation ELN export:
@@ -22,6 +24,11 @@ uv run -m fairsynthesis_data_model.sciformation2mofsy
 Export the data in MOFSY format to XDL:
 ```bash
 uv run -m fairsynthesis_data_model.mofsy2xdl
+```
+
+Run the API example:
+```bash
+uv run -m examples.mofsy_api_example
 ```
 
 ## Contributing
