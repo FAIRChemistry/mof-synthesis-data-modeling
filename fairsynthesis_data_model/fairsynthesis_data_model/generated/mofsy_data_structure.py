@@ -142,23 +142,23 @@ class Metadata:
 
 class Unit(Enum):
     CELSIUS = "celsius"
+    CENTILITRE = "centilitre"
     CENTIMETER = "centimeter"
     DAY = "day"
+    DECILITRE = "decilitre"
     DIMENSIONLESS = "dimensionless"
     GRAM = "gram"
     HOUR = "hour"
     ITEM = "item"
     KELVIN = "kelvin"
     KILOGRAM = "kilogram"
-    MICROLITRE = "microlitre"
-    MILLILITRE = "millilitre"
-    CENTILITRE = "centilitre"
-    DECILITRE = "decilitre"
     LITRE = "litre"
     METER = "meter"
     MICROGRAM = "microgram"
+    MICROLITRE = "microlitre"
     MICROMOLE = "micromole"
     MILLIGRAM = "milligram"
+    MILLILITRE = "millilitre"
     MILLIMETER = "millimeter"
     MILLIMOLE = "millimole"
     MILLISECOND = "millisecond"
@@ -320,69 +320,6 @@ class Procedure:
         return result
 
 
-class SampleHolder:
-    diameter: Optional[Amount]
-    type: Optional[str]
-
-    def __init__(self, diameter: Optional[Amount], type: Optional[str]) -> None:
-        self.diameter = diameter
-        self.type = type
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'SampleHolder':
-        assert isinstance(obj, dict)
-        diameter = from_union([Amount.from_dict, from_none], obj.get("_diameter"))
-        type = from_union([from_str, from_none], obj.get("_type"))
-        return SampleHolder(diameter, type)
-
-    def to_dict(self) -> dict:
-        result: dict = {}
-        if self.diameter is not None:
-            result["_diameter"] = from_union([lambda x: to_class(Amount, x), from_none], self.diameter)
-        if self.type is not None:
-            result["_type"] = from_union([from_str, from_none], self.type)
-        return result
-
-
-class XRaySource(Enum):
-    CO_KΑ1 = "Co Kα1"
-    CU_KΑ1 = "Cu Kα1"
-
-
-class Characterization:
-    relative_file_path: Optional[str]
-    x_ray_source: Optional[XRaySource]
-    sample_holder: Optional[SampleHolder]
-    weight: Optional[Amount]
-
-    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], sample_holder: Optional[SampleHolder], weight: Optional[Amount]) -> None:
-        self.relative_file_path = relative_file_path
-        self.x_ray_source = x_ray_source
-        self.sample_holder = sample_holder
-        self.weight = weight
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Characterization':
-        assert isinstance(obj, dict)
-        relative_file_path = from_union([from_str, from_none], obj.get("_relative_file_path"))
-        x_ray_source = from_union([XRaySource, from_none], obj.get("_x-ray_source"))
-        sample_holder = from_union([SampleHolder.from_dict, from_none], obj.get("sample_holder"))
-        weight = from_union([Amount.from_dict, from_none], obj.get("_weight"))
-        return Characterization(relative_file_path, x_ray_source, sample_holder, weight)
-
-    def to_dict(self) -> dict:
-        result: dict = {}
-        if self.relative_file_path is not None:
-            result["_relative_file_path"] = from_union([from_str, from_none], self.relative_file_path)
-        if self.x_ray_source is not None:
-            result["_x-ray_source"] = from_union([lambda x: to_enum(XRaySource, x), from_none], self.x_ray_source)
-        if self.sample_holder is not None:
-            result["sample_holder"] = from_union([lambda x: to_class(SampleHolder, x), from_none], self.sample_holder)
-        if self.weight is not None:
-            result["_weight"] = from_union([lambda x: to_class(Amount, x), from_none], self.weight)
-        return result
-
-
 class Role(Enum):
     ACID = "acid"
     ACTIVATING_AGENT = "activating-agent"
@@ -466,14 +403,12 @@ class SynthesisElement:
     hardware: Optional[Hardware]
     metadata: Metadata
     procedure: Procedure
-    product_characterization: List[Characterization]
     reagents: Reagents
 
-    def __init__(self, hardware: Optional[Hardware], metadata: Metadata, procedure: Procedure, product_characterization: List[Characterization], reagents: Reagents) -> None:
+    def __init__(self, hardware: Optional[Hardware], metadata: Metadata, procedure: Procedure, reagents: Reagents) -> None:
         self.hardware = hardware
         self.metadata = metadata
         self.procedure = procedure
-        self.product_characterization = product_characterization
         self.reagents = reagents
 
     @staticmethod
@@ -482,9 +417,8 @@ class SynthesisElement:
         hardware = from_union([Hardware.from_dict, from_none], obj.get("Hardware"))
         metadata = Metadata.from_dict(obj.get("Metadata"))
         procedure = Procedure.from_dict(obj.get("Procedure"))
-        product_characterization = from_list(Characterization.from_dict, obj.get("Product_characterization"))
         reagents = Reagents.from_dict(obj.get("Reagents"))
-        return SynthesisElement(hardware, metadata, procedure, product_characterization, reagents)
+        return SynthesisElement(hardware, metadata, procedure, reagents)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -492,7 +426,6 @@ class SynthesisElement:
             result["Hardware"] = from_union([lambda x: to_class(Hardware, x), from_none], self.hardware)
         result["Metadata"] = to_class(Metadata, self.metadata)
         result["Procedure"] = to_class(Procedure, self.procedure)
-        result["Product_characterization"] = from_list(lambda x: to_class(Characterization, x), self.product_characterization)
         result["Reagents"] = to_class(Reagents, self.reagents)
         return result
 

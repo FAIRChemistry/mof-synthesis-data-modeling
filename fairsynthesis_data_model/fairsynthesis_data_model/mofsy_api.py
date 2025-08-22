@@ -2,6 +2,7 @@ import json
 from typing import List
 
 from .generated.mofsy_data_structure import Mofsy, ReagentElement, SynthesisElement, Role, Amount
+from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
 from .pxrd_collector import PXRDFile
 
 class Product:
@@ -16,6 +17,11 @@ def load_mofsy(file_path: str) -> Mofsy:
         data = json.load(f)
     return Mofsy.from_dict(data)
 
+def load_characterization(file_path: str) -> ProductCharacterization:
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+    return ProductCharacterization.from_dict(data)
+
 
 def get_synthesis_list(mofsy: Mofsy) -> list[SynthesisElement]:
     return mofsy.synthesis
@@ -25,6 +31,12 @@ def get_synthesis_by_experiment_id(mofsy: Mofsy, experiment_id: str) -> Synthesi
     for synthesis in mofsy.synthesis:
         if synthesis.metadata.description == experiment_id:
             return synthesis
+    return None
+
+def get_characterization_by_experiment_id(characterization: ProductCharacterization, experiment_id: str) -> CharacterizationEntry | None:
+    for entry in characterization.product_characterization:
+        if entry.metadata.description == experiment_id:
+            return entry
     return None
 
 def find_reagent_by_name(synthesis: SynthesisElement, reagent_name: str) -> ReagentElement | None:
@@ -42,37 +54,37 @@ def find_reagents_by_role(synthesis: SynthesisElement, role: Role) -> list[Reage
     return results
 
 
-def find_product(synthesis: SynthesisElement) -> Product | None:
+def find_product(synthesis: SynthesisElement, product_characterization: CharacterizationEntry) -> Product | None:
     product_name = synthesis.metadata.product if synthesis.metadata.product else "unknown"
-    product_mass = find_product_mass(synthesis)
-    pxrd_files = find_corresponding_pxrd_files(synthesis)
+    product_mass = find_product_mass(product_characterization)
+    pxrd_files = find_corresponding_pxrd_files(product_characterization)
     return Product(product_name, product_mass, pxrd_files)
 
 
-def find_corresponding_pxrd_files(synthesis: SynthesisElement) -> List[PXRDFile]:
+def find_corresponding_pxrd_files(characterization: CharacterizationEntry) -> List[PXRDFile]:
     result = []
-    for characterization in synthesis.product_characterization:
-        if characterization.relative_file_path and characterization.x_ray_source and characterization.sample_holder and synthesis.metadata.description:
+    for ch in characterization.characterization:
+        if ch.relative_file_path and ch.x_ray_source and ch.sample_holder and characterization.metadata.description:
                 result.append(PXRDFile(
-                    characterization.relative_file_path
+                    ch.relative_file_path
                 ))
     return result
 
 
-def find_product_mass(synthesis: SynthesisElement) -> Amount | None:
+def find_product_mass(characterization: CharacterizationEntry) -> Amount | None:
     # Filter characterizations by whether they have the weight attribute
-    mass_characterizations = [c for c in synthesis.product_characterization if c.weight]
+    mass_characterizations = [c for c in characterization.characterization if c.weight]
     if mass_characterizations:
         # Return the weight of the first characterization that has it
         return mass_characterizations[0].weight
     return None
 
 
-def print_synthesis_data(synthesis: SynthesisElement):
+def print_synthesis_data(synthesis: SynthesisElement, characterization: CharacterizationEntry):
     print(f"Synthesis ID: {synthesis.metadata.description}")
     print_reagents(synthesis)
     print_procedure(synthesis)
-    product = find_product(synthesis)
+    product = find_product(synthesis, characterization)
     if product:
         print_product(product)
 

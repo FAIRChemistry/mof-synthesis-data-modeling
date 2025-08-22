@@ -1,11 +1,13 @@
 import os
-from typing import List
+from pathlib import Path
+from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
 from .generated.mofsy_data_structure import Mofsy, SynthesisElement ,ReagentElement, Metadata, ComponentElement, \
-    Procedure, Reagents, XMLType, Characterization, XRaySource, SampleHolder, StepEntryClass, FlatProcedureClass, \
+    Procedure, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Amount, Unit
+from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
 from .generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
 from .mofsy_utils import rxn_role_to_xdl_role
@@ -15,9 +17,10 @@ from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, default_code: str = "KE", split_procedure_in_sections: bool = True) -> Mofsy:
+def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE", split_procedure_in_sections: bool = True) -> Tuple[Mofsy, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
-    pxrd_files = collect_pxrd_files(os.path.join('../..', 'data', 'PXRD'))
+    characterization_list: List[CharacterizationEntry] = []
+    pxrd_files = collect_pxrd_files(pxrd_folder_path)
 
     for experiment in eln.experiments:
         reaction_product = find_reaction_components(experiment, RxnRole.PRODUCT)[0]
@@ -36,6 +39,8 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, default_code
             sample_holder=None,
             x_ray_source=None
         )]
+
+        characterization_list.append(CharacterizationEntry(product_characterizations, MetadataCharacterization(description=experiment_id)))
 
         experiment_pxrd_files = filter_pxrd_files(experiment_id, pxrd_files)
         if experiment_pxrd_files:
@@ -62,12 +67,15 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, default_code
             hardware= hardware,
             procedure = procedure,
             reagents = Reagents(reagents),
-            product_characterization = product_characterizations
         )
         synthesis_list.append(synthesis)
 
-    return Mofsy(
-        synthesis=synthesis_list,
+
+    return (
+        Mofsy(
+            synthesis=synthesis_list,
+        ),
+        ProductCharacterization(characterization_list)
     )
 
 def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> Procedure:
@@ -182,11 +190,11 @@ def format_temperature(temp: str) -> Amount:
         temp: float = float(sympify(temperature_string))
         return Amount(value=round(temp, 2), unit=Unit.CELSIUS)
 
-def format_mass(mass: float|None, mass_unit: MassUnit) -> Amount:
+def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization:
     if (mass is None) or (mass_unit is None):
-        return Amount(value=None, unit=None)
+        return AmountCharacterization(value=None, unit=None)
     mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
-    return Amount(value=round(mass_in_mg, 2), unit=Unit.MILLIGRAM)
+    return AmountCharacterization(value=round(mass_in_mg, 2), unit=UnitCharacterization.MILLIGRAM)
 
 def format_amount_mole(amount: float | None) -> Amount:
     if amount is None:
@@ -204,13 +212,13 @@ def format_time(time: str, time_unit: TimeUnit) -> Amount:
     time_in_h = time_to_target_format(float(sympify(time)), time_unit, TimeUnit.H)
     return Amount(value=round(time_in_h, 2), unit=Unit.HOUR)
 
-def format_length(length: str) -> Amount:
+def format_length(length: str) -> AmountCharacterization:
     if length.endswith("mm"):
-        return Amount(value=float(length[:-2]), unit=Unit.MILLIMETER)
+        return AmountCharacterization(value=float(length[:-2]), unit=UnitCharacterization.MILLIMETER)
     elif length.endswith("cm"):
-        return Amount(value=float(length[:-2]) * 10, unit=Unit.CENTIMETER)
+        return AmountCharacterization(value=float(length[:-2]) * 10, unit=UnitCharacterization.CENTIMETER)
     elif length.endswith("m"):
-        return Amount(value=float(length[:-1]) * 1000, unit=Unit.METER)
+        return AmountCharacterization(value=float(length[:-1]) * 1000, unit=UnitCharacterization.METER)
     else:
         raise ValueError(f"Unknown length unit in {length}")
 
@@ -218,17 +226,23 @@ def format_length(length: str) -> Amount:
 if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
+    pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'pxrd')
+    pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
     print("Cleaned data: " + str(cleaned_eln))
 
     # Validate data according to schema
     validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, 'schemas', 'sciformation_eln_cleaned.schema.json')))
 
-    mofsy = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln))
-    result_file_path = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
-    result_dict = mofsy.to_dict()
-    print("MOFSY Result: " + str(result_dict))
-    save_json(result_dict, result_file_path)
+    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder_relative)
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
+    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
+    result_dict_mofsy = mofsy.to_dict()
+    result_dict_characterization = characterization.to_dict()
+    print("MOFSY Result: " + str(result_dict_mofsy))
+    print("Characterization Result: " + str(result_dict_characterization))
+    save_json(result_dict_mofsy, result_file_path_mofsy)
+    save_json(result_dict_characterization, result_file_path_characterization)
 
 
 

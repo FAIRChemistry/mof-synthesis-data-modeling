@@ -1,0 +1,4447 @@
+{
+  "ProductCharacterization": [
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.74
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-008_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-008"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.24
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-009_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-009"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.48
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-010_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-010"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.8
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-011_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-011"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.56
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-014_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-014"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.42
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-015_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-015"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.57
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-016_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-016"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.83
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-017_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-017"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.33
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-019_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-019"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.21
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-020_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-020"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.07
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-021_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-021"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.17
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-022_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-022"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.58
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-033_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-033"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.97
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-034_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-034"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 4.4
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-035_Cu-Ka1_capillary-0.3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.3
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-035_Cu-Ka1_capillary-0.5mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.5
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-035_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-035"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 4.77
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-036_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-036"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.65
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-040_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-040"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.18
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-041_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-041"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.04
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-042_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-042"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.62
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-044_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-044"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.07
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-045_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-045"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.18
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-046_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-046"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.0
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-047"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 25.85
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-048_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-048"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 21.66
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-049_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-049"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.33
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-050_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-050_Cu-Ka1_capillary-1mm_46s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-050"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.84
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-051_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-051"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.66
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-052_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-052"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.19
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-053_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-053"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.56
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-059_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-059"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.87
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-060_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-060"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.38
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-061_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-061"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 17.12
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-062"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.44
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-063_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-063"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.56
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-064_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-064"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 1.88
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-065_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-065"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.69
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-067_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-067"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.86
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-068_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-068"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.69
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-069_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-069"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.46
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-070_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-070"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.2
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-073_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-073"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.17
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-075_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-075"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.3
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-076_Cu-Ka1_capillary-1mm_60s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-076_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-076"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.92
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-081_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-081_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-081"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.22
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-082_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-082"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.21
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-083_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-083"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.9
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-084_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-084"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.55
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-085_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-085"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 36.8
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-086_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-086"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.96
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-089_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-089"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.58
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-090_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-090"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 15.02
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-091_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-091"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.28
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-092_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-092"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.18
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-097_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-097"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.31
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-098_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-098"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 18.46
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-099_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-099"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {}
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-104_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-104"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.5
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-105_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-105"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.12
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-106_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-106"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 5.72
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-107_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-107"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.14
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-108_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-108"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.72
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-109_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-109"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.89
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-111_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-111"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.33
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-112_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-112"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {}
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-113"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.05
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-114_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-114"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.77
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-115_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-115"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.5
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-119_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-119"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.65
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-120_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-120"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.22
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-121_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-121"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.45
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-125_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-125"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.15
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-126_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-126"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.79
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-127_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-127"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 4.36
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-128_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-128"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.39
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-129_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-129"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.52
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-130_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-130"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.33
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-131_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-131"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.72
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-132_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-132"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.83
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-135_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-135"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.97
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-139_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-139"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.79
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-140_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-140"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.36
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-141_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-141"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.73
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-144_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-144"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.37
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-145_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-145"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.02
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-146_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-146"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.0
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-147_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-147"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.36
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-149_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-149"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.6
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-150_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-150"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.22
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-151_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-151"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.65
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-153_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-153"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.21
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-154_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-154"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.87
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-155_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-155"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.54
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-156_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-156"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.57
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-157_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-157"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.58
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-158_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-158"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.06
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-161_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-161"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.02
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-162_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-162"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.58
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-163_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-163"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 15.16
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-164_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-164"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.54
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-165_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-165"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.93
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-166_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-166"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 1.5
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-167_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-167"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.75
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-168_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-168"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.85
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-172_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-172"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.25
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-173_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-173"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.81
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-174"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.89
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-175_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-175"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.42
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-177_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-177"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.24
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-178_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-178"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.96
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-179_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-179"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.07
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-180_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-180"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.96
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-181_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-181"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.62
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-182_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-182"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.02
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-183_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-183"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.34
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-184_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-184"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.75
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-186_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-186"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.51
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-187_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-187"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.87
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-188_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-188"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.59
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-190_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-190"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.54
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-191_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-191"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.95
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-192_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-192"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.62
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-193_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-193"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.77
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-197_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-197"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 31.42
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-198_Cu-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-198"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 36.9
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-199_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-199"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 35.51
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-200_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-200"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.79
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-202_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-202"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.92
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-203_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-203"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.6
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-207_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-207"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.6
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-210_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-210"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.34
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-212_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-212"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 5.21
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-213_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-213"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.47
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-214_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-214"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 8.96
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-216_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-216"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.31
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-217_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-217"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.85
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-218_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-218"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.97
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-219_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-219"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.12
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-220_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-220"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.0
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-221_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-221"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.08
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-222_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-222"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.66
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-224_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-224"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.21
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-225_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-225"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.74
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-226_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-226"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.17
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-227_Co-Ka1_film-3mm_5s-deg_MOCOF-1-3,5-DNBA.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-227"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.79
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-228_Co-Ka1_capillary-1mm_5s-deg_MOCOF-1.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-228"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 4.65
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-229_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-229"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.76
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-230_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-230"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.98
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-231_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-231"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 5.42
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-232_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-232"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.01
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-233_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-233"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.74
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-234_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-234"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 53.62
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-242_Co-Ka1_capillary-1mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-242"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.39
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-252"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 23.2
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-253"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.11
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-254_Co-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-254_Co-Ka1_film-8mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 8.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-254"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.41
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-258_Co-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-258"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.03
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-259_Co-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-259"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.69
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-260_Co-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-260"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 7.12
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-261_Co-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-261"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 15.06
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-266_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-266"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.02
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-267_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-267"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.56
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-268_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-268"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 9.63
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-272_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-272"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 4.61
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-274_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-274"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.57
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-282_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-282"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.44
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-286_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-286"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.57
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-287_Co-Ka1_film-3mm_5s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-287_Co-Ka1_film-3mm_60s-deg.xyd",
+          "_x-ray_source": "Co K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-287"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 18.1
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-288_Cu-Ka1_capillary-1mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-288_Cu-Ka1_capillary-1mm_60s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-288"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 11.19
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-289_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-289"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 6.8
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-291_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-291"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 3.17
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-295_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-295"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 1.58
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-296_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-296"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 0.76
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-297_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-297"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 13.89
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-301_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-301"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 14.46
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-302_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-302"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 102.41
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-305_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-305"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 43.66
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-309_Cu-Ka1_capillary-1mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-309"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 79.79
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-310_Cu-Ka1_capillary-1mm_60s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-310_Cu-Ka1_capillary-1mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-310"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 12.29
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-312_Cu-Ka1_capillary-1mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-312"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 2.77
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-313_Cu-Ka1_film-3mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 3.0
+            },
+            "_type": "KAPTON_FILMS"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-313"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 70.87
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-326_Cu-Ka1_capillary-1mm_3s-deg_MOCOF-1.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-326"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 10.32
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-328_Cu-Ka1_capillary-1mm_3s-deg.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-328"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 42.41
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-339_Cu-Ka1_capillary-1mm_3s-deg_COF-366-Co.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-339"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_weight": {
+            "Unit": "milligram",
+            "Value": 43.95
+          }
+        },
+        {
+          "_relative_file_path": "../data/MOCOF-1/pxrd/PXRD_KE-340_Cu-Ka1_capillary-1mm_3s-deg_MOCOF-1.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 1.0
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "KE-340"
+      }
+    }
+  ]
+}
