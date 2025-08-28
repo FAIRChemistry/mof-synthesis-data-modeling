@@ -45,6 +45,11 @@ def to_class(c: Type[T], x: Any) -> dict:
     return cast(Any, x).to_dict()
 
 
+def from_bool(x: Any) -> bool:
+    assert isinstance(x, bool)
+    return x
+
+
 def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
     assert isinstance(x, list)
     return [f(y) for y in x]
@@ -138,12 +143,14 @@ class Characterization:
     x_ray_source: Optional[XRaySource]
     sample_holder: Optional[SampleHolder]
     weight: Optional[Quantity]
+    purity: Optional[bool]
 
-    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], sample_holder: Optional[SampleHolder], weight: Optional[Quantity]) -> None:
+    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], sample_holder: Optional[SampleHolder], weight: Optional[Quantity], purity: Optional[bool]) -> None:
         self.relative_file_path = relative_file_path
         self.x_ray_source = x_ray_source
         self.sample_holder = sample_holder
         self.weight = weight
+        self.purity = purity
 
     @staticmethod
     def from_dict(obj: Any) -> 'Characterization':
@@ -152,7 +159,8 @@ class Characterization:
         x_ray_source = from_union([XRaySource, from_none], obj.get("_x-ray_source"))
         sample_holder = from_union([SampleHolder.from_dict, from_none], obj.get("sample_holder"))
         weight = from_union([Quantity.from_dict, from_none], obj.get("_weight"))
-        return Characterization(relative_file_path, x_ray_source, sample_holder, weight)
+        purity = from_union([from_bool, from_none], obj.get("_purity"))
+        return Characterization(relative_file_path, x_ray_source, sample_holder, weight, purity)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -164,6 +172,8 @@ class Characterization:
             result["sample_holder"] = from_union([lambda x: to_class(SampleHolder, x), from_none], self.sample_holder)
         if self.weight is not None:
             result["_weight"] = from_union([lambda x: to_class(Quantity, x), from_none], self.weight)
+        if self.purity is not None:
+            result["_purity"] = from_union([from_bool, from_none], self.purity)
         return result
 
 

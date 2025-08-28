@@ -64,6 +64,44 @@
               "_vessel": "S-1"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-1"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -81,6 +119,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -150,6 +208,44 @@
               "_vessel": "S-2"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-2"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -167,6 +263,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -236,6 +352,44 @@
               "_vessel": "S-3"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-3"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -253,6 +407,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -322,6 +496,44 @@
               "_vessel": "S-4"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-4"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -339,6 +551,26 @@
           {
             "_id": "Dry DMF",
             "_name": "Dry DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -408,6 +640,44 @@
               "_vessel": "S-5"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-5"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -425,6 +695,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -494,6 +784,44 @@
               "_vessel": "S-6"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-6"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -511,6 +839,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -580,6 +928,44 @@
               "_vessel": "S-7"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-7"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -597,6 +983,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -666,6 +1072,44 @@
               "_vessel": "S-8"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-8"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -683,6 +1127,26 @@
           {
             "_id": "DMF, NaOH",
             "_name": "DMF, NaOH",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -752,6 +1216,44 @@
               "_vessel": "S-9"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-9"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -769,6 +1271,26 @@
           {
             "_id": "DMF, HCI",
             "_name": "DMF, HCI",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -838,6 +1360,44 @@
               "_vessel": "S-10"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-10"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -855,6 +1415,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -924,6 +1504,44 @@
               "_vessel": "S-11"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-11"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -941,6 +1559,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -1010,6 +1648,44 @@
               "_vessel": "S-12"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-12"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -1027,6 +1703,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -1096,6 +1792,44 @@
               "_vessel": "S-13"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-13"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -1113,6 +1847,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -1182,6 +1936,44 @@
               "_vessel": "S-14"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-14"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -1199,6 +1991,26 @@
           {
             "_id": "DMF",
             "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -1268,6 +2080,44 @@
               "_vessel": "S-15"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-15"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -1285,6 +2135,26 @@
           {
             "_id": "DMF, NaOH",
             "_name": "DMF, NaOH",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
@@ -1354,6 +2224,44 @@
               "_vessel": "S-16"
             }
           ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "ethanol",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "DMF",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "chcl3",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "meoh",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "Wait",
+              "_time": {
+                "Unit": "hour",
+                "Value": 24,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "WashSolid",
+              "_solvent": "scCO2",
+              "_vessel": "S-16"
+            }
+          ]
         }
       },
       "Reagents": {
@@ -1371,6 +2279,26 @@
           {
             "_id": "DMF, HCI",
             "_name": "DMF, HCI",
+            "_role": "solvent"
+          },
+          {
+            "_id": "ethanol",
+            "_name": "ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "chcl3",
+            "_name": "chcl3",
+            "_role": "solvent"
+          },
+          {
+            "_id": "meoh",
+            "_name": "meoh",
+            "_role": "solvent"
+          },
+          {
+            "_id": "scCO2",
+            "_name": "scCO2",
             "_role": "solvent"
           }
         ]
