@@ -78,9 +78,16 @@ def dict_to_xml(root_tag, data):
     return etree.tostring(root, pretty_print=True, encoding="unicode")
 
 if __name__ == '__main__':
-    # sciformation case
     current_file_dir = __file__.rsplit('/', 1)[0]
+
+    # sciformation case
     mofsy_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
     xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mofsy_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'xdl_from_sciformation.xml'))
+
+    # excel MIL case
+    mil_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL.json')
+    xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mil_file_path)))
+    print("XML Result: " + xml)
+    save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL.xml'))

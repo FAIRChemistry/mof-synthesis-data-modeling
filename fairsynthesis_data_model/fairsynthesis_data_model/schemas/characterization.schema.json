@@ -7,6 +7,9 @@
         },
         {
           "$ref": "#/$defs/weighing"
+        },
+        {
+          "$ref": "#/$defs/purity"
         }
       ],
       "title": "Characterization",
@@ -134,6 +137,15 @@
       ],
       "title": "weighing",
       "type": "object"
+    },
+    "purity": {
+      "title": "purity",
+      "type": "object",
+      "properties": {
+        "_purity": {
+          "type": "boolean"
+        }
+      }
     }
   },
   "definitions": {},

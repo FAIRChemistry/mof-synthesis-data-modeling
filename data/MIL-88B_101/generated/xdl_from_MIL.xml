@@ -13,11 +13,23 @@
       <Reaction>
         <HeatChill temp="60.0 celsius" time="1.0 day" vessel="S-1"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-1"/>
+        <WashSolid solvent="DMF" vessel="S-1"/>
+        <WashSolid solvent="chcl3" vessel="S-1"/>
+        <WashSolid solvent="meoh" vessel="S-1"/>
+        <Wait time="24.0 hour" vessel="S-1"/>
+        <WashSolid solvent="scCO2" vessel="S-1"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -34,11 +46,23 @@
       <Reaction>
         <HeatChill temp="80.0 celsius" time="1.0 day" vessel="S-2"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-2"/>
+        <WashSolid solvent="DMF" vessel="S-2"/>
+        <WashSolid solvent="chcl3" vessel="S-2"/>
+        <WashSolid solvent="meoh" vessel="S-2"/>
+        <Wait time="24.0 hour" vessel="S-2"/>
+        <WashSolid solvent="scCO2" vessel="S-2"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -55,11 +79,23 @@
       <Reaction>
         <HeatChill temp="100.0 celsius" time="1.0 day" vessel="S-3"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-3"/>
+        <WashSolid solvent="DMF" vessel="S-3"/>
+        <WashSolid solvent="chcl3" vessel="S-3"/>
+        <WashSolid solvent="meoh" vessel="S-3"/>
+        <Wait time="24.0 hour" vessel="S-3"/>
+        <WashSolid solvent="scCO2" vessel="S-3"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -76,11 +112,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-4"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-4"/>
+        <WashSolid solvent="DMF" vessel="S-4"/>
+        <WashSolid solvent="chcl3" vessel="S-4"/>
+        <WashSolid solvent="meoh" vessel="S-4"/>
+        <Wait time="24.0 hour" vessel="S-4"/>
+        <WashSolid solvent="scCO2" vessel="S-4"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="Dry DMF" name="Dry DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -97,11 +145,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-5"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-5"/>
+        <WashSolid solvent="DMF" vessel="S-5"/>
+        <WashSolid solvent="chcl3" vessel="S-5"/>
+        <WashSolid solvent="meoh" vessel="S-5"/>
+        <Wait time="24.0 hour" vessel="S-5"/>
+        <WashSolid solvent="scCO2" vessel="S-5"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -118,11 +178,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 hour" vessel="S-6"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-6"/>
+        <WashSolid solvent="DMF" vessel="S-6"/>
+        <WashSolid solvent="chcl3" vessel="S-6"/>
+        <WashSolid solvent="meoh" vessel="S-6"/>
+        <Wait time="24.0 hour" vessel="S-6"/>
+        <WashSolid solvent="scCO2" vessel="S-6"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -139,11 +211,23 @@
       <Reaction>
         <HeatChill temp="140.0 celsius" time="2.0 hour" vessel="S-7"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-7"/>
+        <WashSolid solvent="DMF" vessel="S-7"/>
+        <WashSolid solvent="chcl3" vessel="S-7"/>
+        <WashSolid solvent="meoh" vessel="S-7"/>
+        <Wait time="24.0 hour" vessel="S-7"/>
+        <WashSolid solvent="scCO2" vessel="S-7"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -160,11 +244,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-8"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-8"/>
+        <WashSolid solvent="DMF" vessel="S-8"/>
+        <WashSolid solvent="chcl3" vessel="S-8"/>
+        <WashSolid solvent="meoh" vessel="S-8"/>
+        <Wait time="24.0 hour" vessel="S-8"/>
+        <WashSolid solvent="scCO2" vessel="S-8"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF, NaOH" name="DMF, NaOH" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -181,11 +277,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-9"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-9"/>
+        <WashSolid solvent="DMF" vessel="S-9"/>
+        <WashSolid solvent="chcl3" vessel="S-9"/>
+        <WashSolid solvent="meoh" vessel="S-9"/>
+        <Wait time="24.0 hour" vessel="S-9"/>
+        <WashSolid solvent="scCO2" vessel="S-9"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF, HCI" name="DMF, HCI" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -202,11 +310,23 @@
       <Reaction>
         <HeatChill temp="60.0 celsius" time="1.0 day" vessel="S-10"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-10"/>
+        <WashSolid solvent="DMF" vessel="S-10"/>
+        <WashSolid solvent="chcl3" vessel="S-10"/>
+        <WashSolid solvent="meoh" vessel="S-10"/>
+        <Wait time="24.0 hour" vessel="S-10"/>
+        <WashSolid solvent="scCO2" vessel="S-10"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3-6H2O" name="FeCl3-6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -223,11 +343,23 @@
       <Reaction>
         <HeatChill temp="80.0 celsius" time="1.0 day" vessel="S-11"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-11"/>
+        <WashSolid solvent="DMF" vessel="S-11"/>
+        <WashSolid solvent="chcl3" vessel="S-11"/>
+        <WashSolid solvent="meoh" vessel="S-11"/>
+        <Wait time="24.0 hour" vessel="S-11"/>
+        <WashSolid solvent="scCO2" vessel="S-11"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3-6H2O" name="FeCl3-6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -244,11 +376,23 @@
       <Reaction>
         <HeatChill temp="100.0 celsius" time="1.0 day" vessel="S-12"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-12"/>
+        <WashSolid solvent="DMF" vessel="S-12"/>
+        <WashSolid solvent="chcl3" vessel="S-12"/>
+        <WashSolid solvent="meoh" vessel="S-12"/>
+        <Wait time="24.0 hour" vessel="S-12"/>
+        <WashSolid solvent="scCO2" vessel="S-12"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3�6H2O" name="FeCl3�6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -265,11 +409,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-13"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-13"/>
+        <WashSolid solvent="DMF" vessel="S-13"/>
+        <WashSolid solvent="chcl3" vessel="S-13"/>
+        <WashSolid solvent="meoh" vessel="S-13"/>
+        <Wait time="24.0 hour" vessel="S-13"/>
+        <WashSolid solvent="scCO2" vessel="S-13"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3�6H2O" name="FeCl3�6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -286,11 +442,23 @@
       <Reaction>
         <HeatChill temp="140.0 celsius" time="2.0 hour" vessel="S-14"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-14"/>
+        <WashSolid solvent="DMF" vessel="S-14"/>
+        <WashSolid solvent="chcl3" vessel="S-14"/>
+        <WashSolid solvent="meoh" vessel="S-14"/>
+        <Wait time="24.0 hour" vessel="S-14"/>
+        <WashSolid solvent="scCO2" vessel="S-14"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3-6H2O" name="FeCl3-6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -307,11 +475,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-15"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-15"/>
+        <WashSolid solvent="DMF" vessel="S-15"/>
+        <WashSolid solvent="chcl3" vessel="S-15"/>
+        <WashSolid solvent="meoh" vessel="S-15"/>
+        <Wait time="24.0 hour" vessel="S-15"/>
+        <WashSolid solvent="scCO2" vessel="S-15"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3-6H2O" name="FeCl3-6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF, NaOH" name="DMF, NaOH" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
   <Synthesis>
@@ -328,11 +508,23 @@
       <Reaction>
         <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-16"/>
       </Reaction>
+      <Workup>
+        <WashSolid solvent="ethanol" vessel="S-16"/>
+        <WashSolid solvent="DMF" vessel="S-16"/>
+        <WashSolid solvent="chcl3" vessel="S-16"/>
+        <WashSolid solvent="meoh" vessel="S-16"/>
+        <Wait time="24.0 hour" vessel="S-16"/>
+        <WashSolid solvent="scCO2" vessel="S-16"/>
+      </Workup>
     </Procedure>
     <Reagents>
       <Reagent id="FeCl3-6H2O" name="FeCl3-6H2O" role="substrate"/>
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF, HCI" name="DMF, HCI" role="solvent"/>
+      <Reagent id="ethanol" name="ethanol" role="solvent"/>
+      <Reagent id="chcl3" name="chcl3" role="solvent"/>
+      <Reagent id="meoh" name="meoh" role="solvent"/>
+      <Reagent id="scCO2" name="scCO2" role="solvent"/>
     </Reagents>
   </Synthesis>
 </XDL>

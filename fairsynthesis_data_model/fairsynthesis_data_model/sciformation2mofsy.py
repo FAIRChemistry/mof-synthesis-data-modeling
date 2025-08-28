@@ -37,10 +37,9 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
             weight=reaction_product_mass,
             relative_file_path=None,
             sample_holder=None,
-            x_ray_source=None
+            x_ray_source=None,
+            purity=None
         )]
-
-        characterization_list.append(CharacterizationEntry(product_characterizations, MetadataCharacterization(description=experiment_id)))
 
         experiment_pxrd_files = filter_pxrd_files(experiment_id, pxrd_files)
         if experiment_pxrd_files:
@@ -55,8 +54,11 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                     weight=None,
                     relative_file_path=pxrd_file.path,
                     sample_holder=sample_holder,
-                    x_ray_source=x_ray_source
+                    x_ray_source=x_ray_source,
+                    purity=None
                 ))
+
+        characterization_list.append(CharacterizationEntry(product_characterizations, MetadataCharacterization(description=experiment_id)))
 
         synthesis = SynthesisElement(
             metadata= Metadata(
