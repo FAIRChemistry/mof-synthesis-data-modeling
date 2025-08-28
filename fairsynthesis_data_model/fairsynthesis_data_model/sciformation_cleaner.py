@@ -1,11 +1,11 @@
 import os
 from datetime import datetime
-
+from copy import deepcopy
 
 from .utils import format_to_camel_case, load_json, save_json
-from .use_case_specific.sciformation_cleaner_mocof1 import process_data_use_case_specific
+from .use_case_specific.sciformation_cleaner_mocof1_llm import process_data_use_case_specific as process_data_with_llm
+from .use_case_specific.sciformation_cleaner_mocof1 import process_data_use_case_specific as process_data
 
-# These are the attributes and properties that we want to keep from the Sciformation ELN data.
 important_item_attributes = [
     '@id',
     'nrInLabJournal',
@@ -111,12 +111,15 @@ def apply_conversions(data):
     return data
 
 
-def clean_sciformation_eln(data: dict, max_entry_length: int = -1) -> dict:
+def clean_sciformation_eln(data: dict, max_entry_length: int = -1, use_llm_for_extraction: bool = False) -> dict:
     trimmed_data = clean_data(data)
     postprocessed_data = apply_conversions(trimmed_data)
 
     # Process the data according to the current use-case
-    process_data_use_case_specific(postprocessed_data)
+    if use_llm_for_extraction:
+        process_data_with_llm(postprocessed_data)
+    else:
+        process_data(postprocessed_data)
 
     if max_entry_length > 0:
         postprocessed_data = postprocessed_data[:min(max_entry_length, len(postprocessed_data))]
@@ -132,8 +135,11 @@ if __name__ == '__main__':
     # Can be run independently to test the function
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    result_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'sciformation_eln_cleaned.json')
-
+    result_file_path_normal = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'sciformation_eln_cleaned.json')
+    result_file_path_with_llm =  os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'sciformation_eln_cleaned_with_llm.json')
     data = load_json(file_path)
-    result = clean_sciformation_eln(data)
-    save_json(result, result_file_path)
+    result = clean_sciformation_eln(deepcopy(data))
+    result_llm = clean_sciformation_eln(deepcopy(data), use_llm_for_extraction=True)
+
+    save_json(result, result_file_path_normal)
+    save_json(result_llm, result_file_path_with_llm)
