@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ExperimentDiff.schema.json",
+  "title": "ExperimentDiff",
+  "description": "Schema for modifications applied to experiment data by process_data_use_case_specific.",
+    "type": "object",
+    "properties": {
+      "vessel": {
+        "type": "string",
+        "enum": ["microwave vial", "Schlenk bomb"],
+        "description": "Reaction vessel determined from realizationText."
+      },
+      "degassing": {
+        "type": ["string", "null"],
+        "enum": ["Ar", null],
+        "description": "Type of gas used for degassing, if detected."
+      },
+      "rinse": {
+        "type": "array",
+        "description": "List of solvents used for rinsing, inferred from realizationText.",
+        "items": {
+          "type": "string",
+          "enum": ["acetone", "et3n", "mecn", "nacl aq", "dmf", "chcl3", "meoh", "etoh"]
+        }
+      },
+      "wait_after_rinse": {
+        "type": ["number", "null"],
+        "enum": [24, null],
+        "description": "Wait duration after rinse, in hours. If not applicable, use null."
+      },
+      "wait_after_rinse_unit": {
+        "type": "string",
+        "enum": ["h"],
+        "description": "Unit of wait_after_rinse (always hours)."
+      },
+      "wash_solid": {
+        "type": ["string", "null"],
+        "enum": ["scCO2", "MeOH+scCO2", null],
+        "description": "Wash solid type inferred from realizationText. If not applicable, use null."
+      },
+      "evaporate": {
+        "type": "boolean",
+        "description": "Whether evaporation (vacuum) was applied after scCO2 step."
+      }
+  },
+  "additionalProperties": false
+}

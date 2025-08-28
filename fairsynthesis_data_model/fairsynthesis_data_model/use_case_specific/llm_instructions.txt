@@ -1,0 +1,43 @@
+You are given a `realizationText` (use case-insensitive search).
+Follow these steps and return a JSON object conforming **exactly** to the provided schema.
+If a field is not applicable, set it to 'null' (or 'false' in the case of booleans).
+Do not invent values. Only apply rules explicitly stated below.
+
+#### Preprocessing
+
+*   Only analyze the 'realizationText' **up until the first occurrence of "XRD"**. Ignore everything after "XRD".
+*   Searches are **case-insensitive**.
+    
+
+#### Vessel (vessel)
+
+*   If the text contains "microwave vial" → "microwave vial".
+*   Else if it contains "pressure tube", "J. Young tube", or "Schlenk bomb" → "Schlenk bomb".
+*   Else → null.
+    
+
+#### Degassing (degassing)
+
+*   If the text contains "FPT" or "Ar replace" → "Ar".
+*   Else → null.
+    
+
+#### Rinse (rinse) and Wait (wait\_after\_rinse, wait\_after\_rinse\_unit)
+
+*   Search for these solvents: "acetone", "Et3N", "MeCN", "NaCl aq", "DMF", "CHCl3", "MeOH", "EtOH".
+*   For each solvent found in the text that is **not already part of the reagent list** → add it to the rinse array (use lowercase exactly as in the schema: acetone, et3n, mecn, nacl aq, dmf, chcl3, meoh, etoh).
+*   If the text contains "Soxhlet" or "open to air" → set wait\_after\_rinse = 24 and wait\_after\_rinse\_unit = "h".
+*   Otherwise → wait\_after\_rinse = null, wait\_after\_rinse\_unit = "h".
+    
+
+#### Wash Solid (wash\_solid)
+
+*   If the text contains "supercritical CO2" or "scCO2" → "scCO2".
+*   If the text contains "samples under fillers" or "MeOH filled up" → "MeOH+scCO2".
+*   Otherwise → null.
+    
+
+#### Evaporation (evaporate)
+
+*   If the text contains "Vacuum" **after** a mention of "scCO2" → true.
+*   Otherwise → false.
