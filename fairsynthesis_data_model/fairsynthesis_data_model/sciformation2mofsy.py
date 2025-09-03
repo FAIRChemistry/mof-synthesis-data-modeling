@@ -96,40 +96,40 @@ def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> Pr
 
         if component.rxn_role != RxnRole.PRODUCT:
             prep.append(
-                StepEntryClass(XMLType.ADD, amount=amount, reagent=component.molecule_name, stir=None, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None)
+                StepEntryClass(XMLType.ADD, amount=amount, reagent=component.molecule_name, stir=None, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
             )
 
     if experiment.degassing:
         prep.append(
-            StepEntryClass(XMLType.EVACUATE_AND_REFILL, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=experiment.degassing.value, solvent=None, comment=None)
+            StepEntryClass(XMLType.EVACUATE_AND_REFILL, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=experiment.degassing.value, solvent=None, comment=None, pressure=None)
         )
 
     time: Amount = format_time(experiment.duration, experiment.duration_unit)
     temp: Amount = format_temperature(experiment.temperature)
     reaction.append(
-        StepEntryClass(XMLType.HEAT_CHILL, temp=temp, time=time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None)
+        StepEntryClass(XMLType.HEAT_CHILL, temp=temp, time=time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
     )
 
     if experiment.rinse:
         for rinseItem in experiment.rinse:
             workup.append(
-                StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=rinseItem, comment=None)
+                StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=rinseItem, comment=None, pressure=None)
             )
 
     if experiment.wait_after_rinse:
         wait_time: Amount = format_time(str(experiment.wait_after_rinse), experiment.wait_after_rinse_unit)
         workup.append(
-            StepEntryClass(XMLType.WAIT, temp=None, time=wait_time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None)
+            StepEntryClass(XMLType.WAIT, temp=None, time=wait_time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
         )
 
     if experiment.wash_solid:
         workup.append(
-            StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=experiment.wash_solid, comment=None)
+            StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=experiment.wash_solid, comment=None, pressure=None)
         )
 
     if experiment.evaporate:
         workup.append(
-            StepEntryClass(XMLType.EVAPORATE, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None)
+            StepEntryClass(XMLType.EVAPORATE, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
         )
 
     if merge_steps:

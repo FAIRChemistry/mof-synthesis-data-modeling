@@ -1,0 +1,191 @@
+{
+  "type": "object",
+  "required": [
+    "esenmof"
+  ],
+  "title": "Mil",
+  "properties": {
+    "esenmof": {
+      "title": "experiments",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "0_vial_no",
+          "0_date",
+          "1_metal_salt_name",
+          "1_metal_salt_mass",
+          "1_metal_salt_mass_unit",
+          "2_linker_name",
+          "2_linker_mass",
+          "2_linker_mass_unit",
+          "3_solvent",
+          "3_solvent_unit",
+          "3_solvent_amount",
+          "4_modulator",
+          "4_modulator_unit",
+          "4_modulator_amount",
+          "5_sonicator_time",
+          "5_sonicator_time_unit",
+          "6_reaction_vessel",
+          "6_place",
+          "6_temperature",
+          "6_temperature_unit",
+          "6_reaction_time",
+          "6_reaction_time_unit",
+          "7_washing_solids",
+          "8_drying_solids",
+          "8_activation_temperature",
+          "8_activation_temperature_unit",
+          "8_drying_solids_time",
+          "8_drying_time_unit",
+          "9_phase_purity",
+          "9_mof"
+        ],
+        "properties": {
+          "0_vial_no": {
+            "type": "string"
+          },
+          "0_date": {
+            "type": "string"
+          },
+          "1_metal_salt_name": {
+            "type": "string"
+          },
+          "1_metal_salt_mass": {
+            "type": "integer"
+          },
+          "1_metal_salt_mass_unit": {
+            "type": "string"
+          },
+          "2_linker_name": {
+            "type": "string"
+          },
+          "2_linker_mass": {
+            "type": "integer"
+          },
+          "2_linker_mass_unit": {
+            "type": "string"
+          },
+          "3_solvent": {
+            "type": "string"
+          },
+          "3_solvent_unit": {
+            "type": "string"
+          },
+          "3_solvent_amount": {
+            "type": "integer"
+          },
+          "4_modulator": {
+            "type": [
+              "string",
+              "boolean"
+            ],
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "const": false
+              }
+            ]
+          },
+          "4_modulator_unit": {
+            "type": "string"
+          },
+          "4_modulator_amount": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "5_sonicator_time": {
+            "type": "number"
+          },
+          "5_sonicator_time_unit": {
+            "type": "string"
+          },
+          "6_reaction_vessel": {
+            "type": "string"
+          },
+          "6_place": {
+            "type": "string"
+          },
+          "6_temperature": {
+            "type": "integer"
+          },
+          "6_temperature_unit": {
+            "type": "string"
+          },
+          "6_reaction_time": {
+            "type": "integer"
+          },
+          "6_reaction_time_unit": {
+            "type": "string"
+          },
+          "7_washing_solids": {
+            "type": "string"
+          },
+          "8_drying_solids": {
+            "type": "string"
+          },
+          "8_activation_temperature": {
+            "type": "integer"
+          },
+          "8_activation_temperature_unit": {
+            "type": "string"
+          },
+          "8_drying_solids_time": {
+            "type": "integer"
+          },
+          "8_drying_time_unit": {
+            "type": "string"
+          },
+          "9_phase_purity": {
+            "type": "boolean"
+          },
+          "9_mof": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

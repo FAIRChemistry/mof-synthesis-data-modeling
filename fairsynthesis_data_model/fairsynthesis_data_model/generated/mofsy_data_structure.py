@@ -141,6 +141,7 @@ class Metadata:
 
 
 class Unit(Enum):
+    BAR = "bar"
     CELSIUS = "celsius"
     CENTILITRE = "centilitre"
     CENTIMETER = "centimeter"
@@ -165,6 +166,7 @@ class Unit(Enum):
     MINUTE = "minute"
     MOLE = "mole"
     OHM = "ohm"
+    PASCAL = "pascal"
     SECOND = "second"
     TON = "ton"
     WEEK = "week"
@@ -197,9 +199,11 @@ class Amount:
 
 class XMLType(Enum):
     ADD = "Add"
+    DRY = "Dry"
     EVACUATE_AND_REFILL = "EvacuateAndRefill"
     EVAPORATE = "Evaporate"
     HEAT_CHILL = "HeatChill"
+    SONICATE = "Sonicate"
     WAIT = "Wait"
     WASH_SOLID = "WashSolid"
 
@@ -209,6 +213,7 @@ class StepEntryClass:
     amount: Optional[Amount]
     comment: Optional[str]
     gas: Optional[str]
+    pressure: Optional[Amount]
     reagent: Optional[str]
     solvent: Optional[str]
     stir: Optional[str]
@@ -216,11 +221,12 @@ class StepEntryClass:
     time: Optional[Amount]
     vessel: Optional[str]
 
-    def __init__(self, xml_type: Optional[XMLType], amount: Optional[Amount], comment: Optional[str], gas: Optional[str], reagent: Optional[str], solvent: Optional[str], stir: Optional[str], temp: Optional[Amount], time: Optional[Amount], vessel: Optional[str]) -> None:
+    def __init__(self, xml_type: Optional[XMLType], amount: Optional[Amount], comment: Optional[str], gas: Optional[str], pressure: Optional[Amount], reagent: Optional[str], solvent: Optional[str], stir: Optional[str], temp: Optional[Amount], time: Optional[Amount], vessel: Optional[str]) -> None:
         self.xml_type = xml_type
         self.amount = amount
         self.comment = comment
         self.gas = gas
+        self.pressure = pressure
         self.reagent = reagent
         self.solvent = solvent
         self.stir = stir
@@ -235,13 +241,14 @@ class StepEntryClass:
         amount = from_union([Amount.from_dict, from_none], obj.get("_amount"))
         comment = from_union([from_str, from_none], obj.get("_comment"))
         gas = from_union([from_str, from_none], obj.get("_gas"))
+        pressure = from_union([Amount.from_dict, from_none], obj.get("_pressure"))
         reagent = from_union([from_str, from_none], obj.get("_reagent"))
         solvent = from_union([from_str, from_none], obj.get("_solvent"))
         stir = from_union([from_str, from_none], obj.get("_stir"))
         temp = from_union([Amount.from_dict, from_none], obj.get("_temp"))
         time = from_union([Amount.from_dict, from_none], obj.get("_time"))
         vessel = from_union([from_str, from_none], obj.get("_vessel"))
-        return StepEntryClass(xml_type, amount, comment, gas, reagent, solvent, stir, temp, time, vessel)
+        return StepEntryClass(xml_type, amount, comment, gas, pressure, reagent, solvent, stir, temp, time, vessel)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -253,6 +260,8 @@ class StepEntryClass:
             result["_comment"] = from_union([from_str, from_none], self.comment)
         if self.gas is not None:
             result["_gas"] = from_union([from_str, from_none], self.gas)
+        if self.pressure is not None:
+            result["_pressure"] = from_union([lambda x: to_class(Amount, x), from_none], self.pressure)
         if self.reagent is not None:
             result["_reagent"] = from_union([from_str, from_none], self.reagent)
         if self.solvent is not None:

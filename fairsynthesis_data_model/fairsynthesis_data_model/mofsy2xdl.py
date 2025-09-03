@@ -91,3 +91,9 @@ if __name__ == '__main__':
     xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mil_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL.xml'))
+
+    # excel MIL_2 case
+    mil_2_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL_2.json')
+    xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mil_2_file_path)))
+    print("XML Result: " + xml)
+    save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL_2.xml'))

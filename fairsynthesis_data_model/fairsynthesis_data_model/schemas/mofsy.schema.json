@@ -7,7 +7,9 @@
         "EvacuateAndRefill",
         "WashSolid",
         "Wait",
-        "Evaporate"
+        "Evaporate",
+        "Sonicate",
+        "Dry"
       ],
       "type": "string"
     },
@@ -116,7 +118,9 @@
             "kelvin",
             "millimeter",
             "centimeter",
-            "meter"
+            "meter",
+            "pascal",
+            "bar"
           ],
           "type": "string"
         },
@@ -197,6 +201,9 @@
         },
         "_vessel": {
           "type": "string"
+        },
+        "_pressure": {
+          "$ref": "#/$defs/Quantity"
         }
       },
       "title": "Step Entry"
