@@ -7,38 +7,51 @@ from .generated.mofsy_data_structure import Mofsy, SynthesisElement, ReagentElem
     Procedure, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Amount, Unit, Role
 from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
-from .generated.mil_json_from_excel_data_structure import Mil
+from .generated.mil_2_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Mofsy, ProductCharacterization]:
+def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Mofsy, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
 
-    # hardcoded values
-    solvent_volume = 4.0
-
-
-    for experiment in mil.esenmofsynthesis:
-        vial_no = experiment.vial_no
-        metal_salt = experiment.metal_salt_name
-        metal_salt_mass = experiment.metal_salt_mass
-        metal_salt_mass_unit = experiment.metal_salt_mass_unit
-        linker = experiment.linker_name
-        linker_mass = experiment.linker_mass
-        linker_mass_unit = experiment.linker_mass_unit
-        solvent = experiment.solvent
-        temperature = experiment.temperature
-        temperature_unit = experiment.temperature_unit
-        time = experiment.time
-        time_unit = experiment.time_unit
-        place = experiment.place
-        phase_purity = experiment.phase_purity
+    for experiment in mil.esenmof:
+        vial_no = experiment.the_0__vial_no
+        date = experiment.the_0__date
+        metal_salt = experiment.the_1__metal_salt_name
+        metal_salt_mass = experiment.the_1__metal_salt_mass
+        metal_salt_mass_unit = experiment.the_1__metal_salt_mass_unit
+        linker = experiment.the_2__linker_name
+        linker_mass = experiment.the_2__linker_mass
+        linker_mass_unit = experiment.the_2__linker_mass_unit
+        solvent = experiment.the_3__solvent
+        solvent_unit = experiment.the_3__solvent_unit
+        solvent_amount = experiment.the_3__solvent_amount
+        modulator = experiment.the_4__modulator
+        modulator_amount = experiment.the_4__modulator_amount
+        modulator_unit = experiment.the_4__modulator_unit
+        sonicator_time = experiment.the_5__sonicator_time
+        sonicator_time_unit = experiment.the_5__sonicator_time_unit
+        temperature = experiment.the_6__temperature
+        temperature_unit = experiment.the_6__temperature_unit
+        reaction_time = experiment.the_6__reaction_time
+        reaction_time_unit = experiment.the_6__reaction_time_unit
+        reaction_vessel = experiment.the_6__reaction_vessel
+        reaction_place = experiment.the_6__place
+        washing_solids = experiment.the_7__washing_solids
+        activation_temperature = experiment.the_8__activation_temperature
+        activation_temperature_unit = experiment.the_8__activation_temperature_unit
+        drying_solids = experiment.the_8__drying_solids
+        drying_solids_time = experiment.the_8__drying_solids_time
+        drying_time_unit = experiment.the_8__drying_time_unit
+        mof = experiment.the_9__mof
+        phase_purity = experiment.the_9__phase_purity
 
         experiment_id = "Esen_" + vial_no
 
+        # Build up a list of all reagents
         reagents: List[ReagentElement] = [
             ReagentElement(
                 cas=None,
@@ -67,46 +80,19 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
             ReagentElement(
                 cas=None,
                 comment=None,
-                id="ethanol",
+                id=washing_solids,
                 inchi=None,
-                name = "ethanol",
-                purity=None,
-                role=Role.SOLVENT),
-            ReagentElement(
-                cas=None,
-                comment=None,
-                id="chcl3",
-                inchi=None,
-                name = "chcl3",
-                purity=None,
-                role=Role.SOLVENT),
-            ReagentElement(
-                cas=None,
-                comment=None,
-                id="meoh",
-                inchi=None,
-                name = "meoh",
-                purity=None,
-                role=Role.SOLVENT),
-            ReagentElement(
-                cas=None,
-                comment=None,
-                id="scCO2",
-                inchi=None,
-                name = "scCO2",
+                name = washing_solids,
                 purity=None,
                 role=Role.SOLVENT)
-
-
         ]
 
+        # The hardware is simply the one vial
         hardware: Hardware = Hardware([
-            ComponentElement(chemical=None, comment=None, id=vial_no, type="vial")
+            ComponentElement(chemical=None, comment=None, id=vial_no, type=reaction_vessel)
         ])
 
-        procedure: Procedure = Procedure(
-            step=None,
-            prep=FlatProcedureClass(step=[
+        prep_steps = [
                 StepEntryClass(
                     XMLType.ADD,
                     amount=format_mass(metal_salt_mass, metal_salt_mass_unit),
@@ -118,7 +104,7 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure=None
+                    pressure = None
                 ),
                 StepEntryClass(
                     XMLType.ADD,
@@ -131,11 +117,11 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure=None
+                    pressure = None
                 ),
                 StepEntryClass(
                     XMLType.ADD,
-                    amount=format_amount_volume(float(sympify(solvent_volume))),
+                    amount=format_amount_volume(solvent_amount, solvent_unit),
                     reagent=solvent,
                     stir=None,
                     temp=None,
@@ -144,14 +130,43 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure=None
+                    pressure = None
                 )
-            ]),
-            reaction=FlatProcedureClass(step=[
+            ]
+
+        # if modulator is given, add it to the reagents and the prep steps
+        if modulator:
+            reagents.append(ReagentElement(
+                cas=None,
+                comment=None,
+                id=modulator,
+                inchi=None,
+                name = modulator,
+                purity=None,
+                role=Role.REAGENT)
+            )
+            prep_steps.append(
                 StepEntryClass(
-                    XMLType.HEAT_CHILL,
-                    temp=format_temperature(str(temperature)),
-                    time=format_time(time, time_unit),
+                    XMLType.ADD,
+                    amount=format_amount_volume(float(modulator_amount), modulator_unit),
+                    reagent=modulator,
+                    stir=None,
+                    temp=None,
+                    time=None,
+                    vessel=vial_no,
+                    gas=None,
+                    solvent=None,
+                    comment=None,
+                    pressure = None
+                )
+            )
+
+        reaction_steps = [
+
+                StepEntryClass(
+                    XMLType.SONICATE,
+                    temp=None,
+                    time=format_time(sonicator_time, sonicator_time_unit),
                     amount=None,
                     reagent=None,
                     stir=None,
@@ -159,10 +174,58 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure=None
+                    pressure = None
+                ),
+                StepEntryClass(
+                    XMLType.HEAT_CHILL,
+                    temp=format_temperature(str(temperature), temperature_unit),
+                    time=format_time(reaction_time, reaction_time_unit),
+                    amount=None,
+                    reagent=None,
+                    stir=None,
+                    vessel=vial_no,
+                    gas=None,
+                    solvent=None,
+                    comment="In: " + reaction_place,
+                    pressure = None
                 )
-            ]),
-            workup=construct_workup(vial_no))
+            ]
+
+        workup_steps = [
+            StepEntryClass(
+                XMLType.WASH_SOLID,
+                amount=None,
+                reagent=washing_solids,
+                stir=None,
+                temp=None,
+                time=None,
+                vessel=vial_no,
+                gas=None,
+                solvent=None,
+                comment=None,
+                pressure = None
+            ),
+            StepEntryClass(
+                XMLType.DRY,
+                temp=format_temperature(str(activation_temperature), activation_temperature_unit),
+                time=format_time(drying_solids_time, drying_time_unit),
+                amount=None,
+                reagent=None,
+                stir=None,
+                vessel=vial_no,
+                gas=None,
+                solvent=None,
+                comment=None,
+                pressure = Amount(value=0, unit=Unit.PASCAL) # hardcode, because it always is vacuum in every experiment
+            ),
+        ]
+
+        # Build up the full procedure
+        procedure: Procedure = Procedure(
+            step=None,
+            prep=FlatProcedureClass(step=prep_steps),
+            reaction=FlatProcedureClass(step=reaction_steps),
+            workup=FlatProcedureClass(step=workup_steps))
 
 
         product_characterizations: List[Characterization] = [Characterization(
@@ -195,7 +258,7 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
         synthesis = SynthesisElement(
             metadata= Metadata(
                 description= experiment_id,
-                product= None,
+                product= mof,
                 product_inchi= None
             ),
             hardware= hardware,
@@ -213,91 +276,11 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
     )
 
 
-def construct_workup(vial_no):
-    workup = FlatProcedureClass(step=[
-        StepEntryClass(
-            XMLType.WASH_SOLID,
-            temp=None,
-            time=None,
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent="ethanol",
-            comment=None,
-            pressure=None
-        ),
-        StepEntryClass(
-            XMLType.WASH_SOLID,
-            temp=None,
-            time=None,
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent="DMF",
-            comment=None,
-            pressure=None
-        ),
-        StepEntryClass(
-            XMLType.WASH_SOLID,
-            temp=None,
-            time=None,
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent="chcl3",
-            comment=None,
-            pressure=None
-        ),
-        StepEntryClass(
-            XMLType.WASH_SOLID,
-            temp=None,
-            time=None,
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent="meoh",
-            comment=None,
-            pressure=None
-        ),
-        StepEntryClass(
-            XMLType.WAIT,
-            temp=None,
-            time=format_time(24, "h"),
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent=None,
-            comment=None,
-            pressure=None
-        ),
-        StepEntryClass(
-            XMLType.WASH_SOLID,
-            temp=None,
-            time=None,
-            amount=None,
-            reagent=None,
-            stir=None,
-            vessel=vial_no,
-            gas=None,
-            solvent="scCO2",
-            comment=None,
-            pressure=None
-        )
-    ])
-    return workup
 
 
-def format_temperature(temp: str) -> Amount:
+def format_temperature(temp: str, temp_unit: str) -> Amount:
+    if not temp_unit in ["C", "°C", "deg C"]:
+        raise ValueError(f"Only Celsius is supported as temperature unit in converter, but got {temp_unit}")
     temperature_string: str = temp.replace("RT", "25")
     temp: float = float(sympify(temperature_string))
     return Amount(value=round(temp, 2), unit=Unit.CELSIUS)
@@ -310,11 +293,17 @@ def format_mass(mass: float|None, mass_unit: str) -> Amount:
     return Amount(value=round(mass, 2), unit=Unit.MILLIGRAM)
 
 
-def format_amount_volume(amount: float | None) -> Amount:
+def format_amount_volume(amount: float | None, volume_unit: str) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
-    # original value is in Ml and we keep it that way
-    return Amount(value=amount, unit=Unit.MILLILITRE)
+    if volume_unit.lower() == "ml":
+        return Amount(value=amount, unit=Unit.MILLILITRE)
+    elif volume_unit.lower() in ["l", "lt", "liter", "litre"]:
+        return Amount(value=round(amount, 2), unit=Unit.LITRE)
+    elif volume_unit.lower() in ["µl", "ul", "microliter", "microlitre", "μl"]:
+        return Amount(value=round(amount, 2), unit=Unit.MICROLITRE)
+
+    raise ValueError(f"{volume_unit} is not supported as volume unit in converter")
 
 def format_time(time: float | None, time_unit: str) -> Amount:
     if time is None or time_unit is None:
@@ -343,17 +332,17 @@ def format_length(length: str) -> AmountCharacterization:
 
 if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL.json')
+    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL_2.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'pxrd')
     pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     mil = load_json(file_path)
 
     # Validate data according to schema
-    validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL.schema.json')))
+    validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL_2.schema.json')))
 
-    mofsy, characterization = convert_mil_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder_relative)
-    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL.json')
-    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL.json')
+    mofsy, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder_relative)
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL_2.json')
+    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL_2.json')
     result_dict_mofsy = mofsy.to_dict()
     result_dict_characterization = characterization.to_dict()
     print("MOFSY Result: " + str(result_dict_mofsy))
