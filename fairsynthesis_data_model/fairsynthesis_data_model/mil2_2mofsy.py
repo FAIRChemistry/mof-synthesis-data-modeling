@@ -49,7 +49,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
         mof = experiment.the_9__mof
         phase_purity = experiment.the_9__phase_purity
 
-        experiment_id = "Esen_" + vial_no
+        experiment_id = vial_no
 
         # Build up a list of all reagents
         reagents: List[ReagentElement] = [
@@ -333,7 +333,7 @@ def format_length(length: str) -> AmountCharacterization:
 if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL_2.json')
-    pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'pxrd')
+    pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'PXRD')
     pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     mil = load_json(file_path)
 
