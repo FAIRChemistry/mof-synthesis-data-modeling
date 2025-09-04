@@ -1,0 +1,523 @@
+<XDL>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-1" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-1" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-1"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-1"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-1"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-1"/>
+        <HeatChill comment="In: oven" temp="60.0 celsius" time="1.0 day" vessel="S-1"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-1"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-1"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-2" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-2" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-2"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-2"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-2"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-2"/>
+        <HeatChill comment="In: oven" temp="80.0 celsius" time="1.0 day" vessel="S-2"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-2"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-2"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-3" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-3" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-3"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-3"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-3"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-3"/>
+        <HeatChill comment="In: oven" temp="100.0 celsius" time="1.0 day" vessel="S-3"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-3"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-3"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-4" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-4" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-4"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-4"/>
+        <Add amount="4.0 millilitre" reagent="Dry DMF" vessel="S-4"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-4"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-4"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-4"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-4"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="Dry DMF" name="Dry DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-5" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-5" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-5"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-5"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-5"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-5"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-5"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-5"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-5"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-6" type="microwave vial"/>
+    </Hardware>
+    <Metadata description="S-6" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-6"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-6"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-6"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-6"/>
+        <HeatChill comment="In: microwave" temp="120.0 celsius" time="1.0 hour" vessel="S-6"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-6"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-6"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-7" type="microwave vial"/>
+    </Hardware>
+    <Metadata description="S-7" product="MIL-88B (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-7"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-7"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-7"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-7"/>
+        <HeatChill comment="In: microwave" temp="140.0 celsius" time="2.0 hour" vessel="S-7"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-7"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-7"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-8" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-8" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-8"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-8"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-8"/>
+        <Add amount="100.0 microlitre" reagent="NaOH (1 M)" vessel="S-8"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-8"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-8"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-8"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-8"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+      <Reagent id="NaOH (1 M)" name="NaOH (1 M)" role="reagent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-9" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-9" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="16.0 milligram" reagent="FeCl3" vessel="S-9"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-9"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-9"/>
+        <Add amount="100.0 microlitre" reagent="HCI (1 M)" vessel="S-9"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-9"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-9"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-9"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-9"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3" name="FeCl3" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+      <Reagent id="HCI (1 M)" name="HCI (1 M)" role="reagent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-10" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-10" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-10"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-10"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-10"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-10"/>
+        <HeatChill comment="In: oven" temp="60.0 celsius" time="1.0 day" vessel="S-10"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-10"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-10"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-11" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-11" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-11"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-11"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-11"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-11"/>
+        <HeatChill comment="In: oven" temp="80.0 celsius" time="1.0 day" vessel="S-11"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-11"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-11"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-12" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-12" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-12"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-12"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-12"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-12"/>
+        <HeatChill comment="In: oven" temp="100.0 celsius" time="1.0 day" vessel="S-12"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-12"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-12"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-13" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-13" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-13"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-13"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-13"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-13"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-13"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-13"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-13"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-14" type="microwave vial"/>
+    </Hardware>
+    <Metadata description="S-14" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-14"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-14"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-14"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-14"/>
+        <HeatChill comment="In: microwave" temp="140.0 celsius" time="2.0 hour" vessel="S-14"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-14"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-14"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-15" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-15" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-15"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-15"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-15"/>
+        <Add amount="100.0 microlitre" reagent="NaOH (1 M)" vessel="S-15"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-15"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-15"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-15"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-15"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+      <Reagent id="NaOH (1 M)" name="NaOH (1 M)" role="reagent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-16" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-16" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="27.0 milligram" reagent="FeCl3·6H2O" vessel="S-16"/>
+        <Add amount="16.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-16"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-16"/>
+        <Add amount="100.0 microlitre" reagent="HCI (1 M)" vessel="S-16"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-16"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="1.0 day" vessel="S-16"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-16"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-16"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+      <Reagent id="HCI (1 M)" name="HCI (1 M)" role="reagent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-17" type="glass vial"/>
+    </Hardware>
+    <Metadata description="S-17" product="MIL-88B+MIL101 (mix phases)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="270.0 milligram" reagent="FeCl3·6H2O" vessel="S-17"/>
+        <Add amount="166.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-17"/>
+        <Add amount="4.0 millilitre" reagent="DMF" vessel="S-17"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-17"/>
+        <HeatChill comment="In: oven" temp="120.0 celsius" time="3.0 day" vessel="S-17"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-17"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-17"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-18" type="Teflon-lined autoclave"/>
+    </Hardware>
+    <Metadata description="S-18" product="MIL-53 (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="270.0 milligram" reagent="FeCl3·6H2O" vessel="S-18"/>
+        <Add amount="166.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-18"/>
+        <Add amount="5.0 millilitre" reagent="DMF" vessel="S-18"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-18"/>
+        <HeatChill comment="In: oven" temp="150.0 celsius" time="3.0 day" vessel="S-18"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-18"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-18"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-19" type="Teflon-lined autoclave"/>
+    </Hardware>
+    <Metadata description="S-19" product="MIL-101 (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="452.0 milligram" reagent="FeCl3·6H2O" vessel="S-19"/>
+        <Add amount="138.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-19"/>
+        <Add amount="10.0 millilitre" reagent="DMF" vessel="S-19"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-19"/>
+        <HeatChill comment="In: oven" temp="110.0 celsius" time="1.0 day" vessel="S-19"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-19"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-19"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+</XDL>

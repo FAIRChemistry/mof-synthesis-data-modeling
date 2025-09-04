@@ -1,0 +1,403 @@
+{
+  "ProductCharacterization": [
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-1_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-1"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-2_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-2"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-3_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-3"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-4_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-4"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-5"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-6_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-6"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-7_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-7"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-8_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-8"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-9_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-9"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-10_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-10"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-11_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-11"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-12_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-12"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-13_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-13"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-14_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-14"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-15_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-15"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-16_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-16"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": false
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-17_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-17"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-18_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-18"
+      }
+    },
+    {
+      "Characterization": [
+        {
+          "_purity": true
+        },
+        {
+          "_relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-19_Cu-K\u03b11_capillary-0.7mm.xyd",
+          "_x-ray_source": "Cu K\u03b11",
+          "sample_holder": {
+            "_diameter": {
+              "Unit": "millimeter",
+              "Value": 0.7
+            },
+            "_type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+          }
+        }
+      ],
+      "Metadata": {
+        "_description": "S-19"
+      }
+    }
+  ]
+}

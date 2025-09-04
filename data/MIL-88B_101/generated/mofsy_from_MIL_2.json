@@ -1,0 +1,2534 @@
+{
+  "Synthesis": [
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-1",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-1",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-1"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 60.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-1"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-1"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-1"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-2",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-2",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-2"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 80.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-2"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-2"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-2"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-3",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-3",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-3"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-3"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-3"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-3"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-4",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-4",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Dry DMF",
+              "_vessel": "S-4"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-4"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-4"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-4"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "Dry DMF",
+            "_name": "Dry DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-5",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-5",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-5"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-5"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-5"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-5"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-6",
+            "_type": "microwave vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-6",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-6"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: microwave",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-6"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-6"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-6"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-7",
+            "_type": "microwave vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-7",
+        "_product": "MIL-88B (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-7"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: microwave",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 140.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 2,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-7"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-7"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-7"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-8",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-8",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "NaOH (1 M)",
+              "_vessel": "S-8"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-8"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-8"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-8"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "NaOH (1 M)",
+            "_name": "NaOH (1 M)",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-9",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-9",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "HCI (1 M)",
+              "_vessel": "S-9"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-9"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-9"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-9"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3",
+            "_name": "FeCl3",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "HCI (1 M)",
+            "_name": "HCI (1 M)",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-10",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-10",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-10"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 60.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-10"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-10"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-10"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-11",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-11",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-11"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 80.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-11"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-11"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-11"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-12",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-12",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-12"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-12"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-12"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-12"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-13",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-13",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-13"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-13"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-13"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-13"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-14",
+            "_type": "microwave vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-14",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-14"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: microwave",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 140.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 2,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-14"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-14"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-14"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-15",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-15",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "NaOH (1 M)",
+              "_vessel": "S-15"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-15"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-15"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-15"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "NaOH (1 M)",
+            "_name": "NaOH (1 M)",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-16",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-16",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 27,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 16,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "HCI (1 M)",
+              "_vessel": "S-16"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-16"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-16"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-16"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          },
+          {
+            "_id": "HCI (1 M)",
+            "_name": "HCI (1 M)",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-17",
+            "_type": "glass vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-17",
+        "_product": "MIL-88B+MIL101 (mix phases)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 270,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-17"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 166,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-17"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 4,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-17"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-17"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 3,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-17"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-17"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-17"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-18",
+            "_type": "Teflon-lined autoclave"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-18",
+        "_product": "MIL-53 (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 270,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-18"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 166,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-18"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 5,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-18"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-18"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 150.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 3,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-18"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-18"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-18"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "S-19",
+            "_type": "Teflon-lined autoclave"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "S-19",
+        "_product": "MIL-101 (Fe)"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 452,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "FeCl3\u00b76H2O",
+              "_vessel": "S-19"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 138,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "Benzene-1,4-dicarboxylic acid",
+              "_vessel": "S-19"
+            },
+            {
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "millilitre",
+                "Value": 10,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF",
+              "_vessel": "S-19"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "$xml_type": "Sonicate",
+              "_time": {
+                "Unit": "minute",
+                "Value": 30.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-19"
+            },
+            {
+              "$xml_type": "HeatChill",
+              "_comment": "In: oven",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 110.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-19"
+            }
+          ]
+        },
+        "Workup": {
+          "Step": [
+            {
+              "$xml_type": "WashSolid",
+              "_reagent": "Ethanol",
+              "_vessel": "S-19"
+            },
+            {
+              "$xml_type": "Dry",
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "day",
+                "Value": 1,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_vessel": "S-19"
+            }
+          ]
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "FeCl3\u00b76H2O",
+            "_name": "FeCl3\u00b76H2O",
+            "_role": "substrate"
+          },
+          {
+            "_id": "Benzene-1,4-dicarboxylic acid",
+            "_name": "Benzene-1,4-dicarboxylic acid",
+            "_role": "ligand"
+          },
+          {
+            "_id": "DMF",
+            "_name": "DMF",
+            "_role": "solvent"
+          },
+          {
+            "_id": "Ethanol",
+            "_name": "Ethanol",
+            "_role": "solvent"
+          }
+        ]
+      }
+    }
+  ]
+}
