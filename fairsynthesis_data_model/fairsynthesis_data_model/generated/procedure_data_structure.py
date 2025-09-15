@@ -295,7 +295,7 @@ class FlatProcedureClass:
         return result
 
 
-class Procedure:
+class ProcedureClass:
     step: Optional[List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]]
     prep: Optional[Union[float, int, bool, str, List[Any], FlatProcedureClass]]
     reaction: Optional[Union[float, int, bool, str, List[Any], FlatProcedureClass]]
@@ -308,13 +308,13 @@ class Procedure:
         self.workup = workup
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Procedure':
+    def from_dict(obj: Any) -> 'ProcedureClass':
         assert isinstance(obj, dict)
         step = from_union([lambda x: from_list(lambda x: from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), StepEntryClass.from_dict], x), x), from_none], obj.get("Step"))
         prep = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), FlatProcedureClass.from_dict], obj.get("Prep"))
         reaction = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), FlatProcedureClass.from_dict], obj.get("Reaction"))
         workup = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), FlatProcedureClass.from_dict], obj.get("Workup"))
-        return Procedure(step, prep, reaction, workup)
+        return ProcedureClass(step, prep, reaction, workup)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -411,10 +411,10 @@ class Reagents:
 class SynthesisElement:
     hardware: Optional[Hardware]
     metadata: Metadata
-    procedure: Procedure
+    procedure: ProcedureClass
     reagents: Reagents
 
-    def __init__(self, hardware: Optional[Hardware], metadata: Metadata, procedure: Procedure, reagents: Reagents) -> None:
+    def __init__(self, hardware: Optional[Hardware], metadata: Metadata, procedure: ProcedureClass, reagents: Reagents) -> None:
         self.hardware = hardware
         self.metadata = metadata
         self.procedure = procedure
@@ -425,7 +425,7 @@ class SynthesisElement:
         assert isinstance(obj, dict)
         hardware = from_union([Hardware.from_dict, from_none], obj.get("Hardware"))
         metadata = Metadata.from_dict(obj.get("Metadata"))
-        procedure = Procedure.from_dict(obj.get("Procedure"))
+        procedure = ProcedureClass.from_dict(obj.get("Procedure"))
         reagents = Reagents.from_dict(obj.get("Reagents"))
         return SynthesisElement(hardware, metadata, procedure, reagents)
 
@@ -434,22 +434,22 @@ class SynthesisElement:
         if self.hardware is not None:
             result["Hardware"] = from_union([lambda x: to_class(Hardware, x), from_none], self.hardware)
         result["Metadata"] = to_class(Metadata, self.metadata)
-        result["Procedure"] = to_class(Procedure, self.procedure)
+        result["Procedure"] = to_class(ProcedureClass, self.procedure)
         result["Reagents"] = to_class(Reagents, self.reagents)
         return result
 
 
-class Mofsy:
+class Procedure:
     synthesis: List[SynthesisElement]
 
     def __init__(self, synthesis: List[SynthesisElement]) -> None:
         self.synthesis = synthesis
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Mofsy':
+    def from_dict(obj: Any) -> 'Procedure':
         assert isinstance(obj, dict)
         synthesis = from_list(SynthesisElement.from_dict, obj.get("Synthesis"))
-        return Mofsy(synthesis)
+        return Procedure(synthesis)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -457,9 +457,9 @@ class Mofsy:
         return result
 
 
-def mofsy_from_dict(s: Any) -> Mofsy:
-    return Mofsy.from_dict(s)
+def procedure_from_dict(s: Any) -> Procedure:
+    return Procedure.from_dict(s)
 
 
-def mofsy_to_dict(x: Mofsy) -> Any:
-    return to_class(Mofsy, x)
+def procedure_to_dict(x: Procedure) -> Any:
+    return to_class(Procedure, x)

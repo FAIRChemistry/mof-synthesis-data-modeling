@@ -3,8 +3,8 @@ from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
-from .generated.mofsy_data_structure import Mofsy, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
-    Procedure, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
+from .generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
+    ProcedureClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Amount, Unit, Role
 from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
 from .generated.mil_2_json_from_excel_data_structure import Mil
@@ -12,7 +12,7 @@ from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Mofsy, ProductCharacterization]:
+def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Procedure, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
@@ -221,7 +221,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
         ]
 
         # Build up the full procedure
-        procedure: Procedure = Procedure(
+        procedure: ProcedureClass = ProcedureClass(
             step=None,
             prep=FlatProcedureClass(step=prep_steps),
             reaction=FlatProcedureClass(step=reaction_steps),
@@ -269,7 +269,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
 
 
     return (
-        Mofsy(
+        Procedure(
             synthesis=synthesis_list,
         ),
         ProductCharacterization(characterization_list)
@@ -341,11 +341,11 @@ if __name__ == '__main__':
     validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL_2.schema.json')))
 
     mofsy, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder_relative)
-    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL_2.json')
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL_2.json')
     result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL_2.json')
     result_dict_mofsy = mofsy.to_dict()
     result_dict_characterization = characterization.to_dict()
-    print("MOFSY Result: " + str(result_dict_mofsy))
+    print("Procedure Result: " + str(result_dict_mofsy))
     print("Characterization Result: " + str(result_dict_characterization))
     save_json(result_dict_mofsy, result_file_path_mofsy)
     save_json(result_dict_characterization, result_file_path_characterization)
