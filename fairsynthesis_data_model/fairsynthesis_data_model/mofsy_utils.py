@@ -1,5 +1,5 @@
 
-from .generated.mofsy_data_structure import Role
+from .generated.procedure_data_structure import Role
 from .generated.sciformation_eln_cleaned_data_structure import RxnRole
 
 

@@ -1,13 +1,13 @@
 import os
 
 from .utils import load_json, save_string_as_file
-from .generated.mofsy_data_structure import Mofsy
+from .generated.procedure_data_structure import Procedure
 from lxml import etree
 from string import Template
 
-def convert_mofsy_to_xdl_string(mofsy: Mofsy) -> str:
+def convert_mofsy_procedure_to_xdl_string(mofsy: Procedure) -> str:
     """
-    Convert Mofsy to XDL format, which is in XML.
+    Convert Mofsy procedure to XDL format, which is in XML.
     """
     # Convert the Mofsy to a dictionary
     xdl_dict = mofsy.to_dict()
@@ -81,19 +81,19 @@ if __name__ == '__main__':
     current_file_dir = __file__.rsplit('/', 1)[0]
 
     # sciformation case
-    mofsy_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json')
-    xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mofsy_file_path)))
+    mofsy_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
+    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mofsy_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'xdl_from_sciformation.xml'))
 
     # excel MIL case
-    mil_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL.json')
-    xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mil_file_path)))
+    mil_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
+    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL.xml'))
 
     # excel MIL_2 case
-    mil_2_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL_2.json')
-    xml = convert_mofsy_to_xdl_string(Mofsy.from_dict(load_json(mil_2_file_path)))
+    mil_2_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL_2.json')
+    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_2_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL_2.xml'))
