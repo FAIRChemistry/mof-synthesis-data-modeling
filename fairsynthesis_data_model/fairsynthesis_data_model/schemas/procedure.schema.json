@@ -194,7 +194,33 @@
           "type": "string"
         },
         "_temp": {
-          "$ref": "#/$defs/Quantity"
+          "$ref": "#/$defs/Quantity",
+          "oneOf": [
+            {
+              "title": "Temperature in Kelvin",
+              "type": "object",
+              "properties": {
+                "Unit": {
+                  "const": "kelvin"
+                },
+                "Value": {
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "title": "Temperature in Celsius",
+              "type": "object",
+              "properties": {
+                "Unit": {
+                  "const": "celsius"
+                },
+                "Value": {
+                  "minimum": -273.15
+                }
+              }
+            }
+          ]
         },
         "_time": {
           "$ref": "#/$defs/Quantity"
@@ -203,7 +229,20 @@
           "type": "string"
         },
         "_pressure": {
-          "$ref": "#/$defs/Quantity"
+          "$ref": "#/$defs/Quantity",
+          "oneOf": [
+            {
+              "title": "Pressure in Pascal",
+              "properties": {
+                "Unit": {
+                  "const": "pascal"
+                },
+                "Value": {
+                  "minimum": 0
+                }
+              }
+            }
+          ]
         }
       },
       "title": "Step Entry"
