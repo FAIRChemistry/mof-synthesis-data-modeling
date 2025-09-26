@@ -520,4 +520,60 @@
       <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
     </Reagents>
   </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-20" type="Teflon-lined autoclave"/>
+    </Hardware>
+    <Metadata description="S-20" product="MIL-53 (Fe)+MIL-68 (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="270.0 milligram" reagent="FeCl3·6H2O" vessel="S-20"/>
+        <Add amount="166.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-20"/>
+        <Add amount="10.0 millilitre" reagent="DMF" vessel="S-20"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-20"/>
+        <HeatChill comment="In: oven" temp="100.0 celsius" time="7.0 day" vessel="S-20"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-20"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-20"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+    </Reagents>
+  </Synthesis>
+  <Synthesis>
+    <Hardware>
+      <Component id="S-21" type="Teflon-lined autoclave"/>
+    </Hardware>
+    <Metadata description="S-21" product="MIL-68 (Fe)"/>
+    <Procedure>
+      <Prep>
+        <Add amount="332.0 milligram" reagent="FeCl3·6H2O" vessel="S-21"/>
+        <Add amount="138.0 milligram" reagent="Benzene-1,4-dicarboxylic acid" vessel="S-21"/>
+        <Add amount="10.0 millilitre" reagent="DMF" vessel="S-21"/>
+        <Add amount="240.0 microlitre" reagent="5M HF, 1M HCl" vessel="S-21"/>
+      </Prep>
+      <Reaction>
+        <Sonicate time="30.0 minute" vessel="S-21"/>
+        <HeatChill comment="In: oven" temp="100.0 celsius" time="5.0 day" vessel="S-21"/>
+      </Reaction>
+      <Workup>
+        <WashSolid reagent="Ethanol" vessel="S-21"/>
+        <Dry pressure="0.0 pascal" temp="120.0 celsius" time="1.0 day" vessel="S-21"/>
+      </Workup>
+    </Procedure>
+    <Reagents>
+      <Reagent id="FeCl3·6H2O" name="FeCl3·6H2O" role="substrate"/>
+      <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
+      <Reagent id="DMF" name="DMF" role="solvent"/>
+      <Reagent id="Ethanol" name="Ethanol" role="solvent"/>
+      <Reagent id="5M HF, 1M HCl" name="5M HF, 1M HCl" role="reagent"/>
+    </Reagents>
+  </Synthesis>
 </XDL>

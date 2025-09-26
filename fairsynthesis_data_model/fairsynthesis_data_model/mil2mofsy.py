@@ -3,13 +3,13 @@ from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
-from .generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
+from generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Amount, Unit, Role
-from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
-from .generated.mil_json_from_excel_data_structure import Mil
-from .utils import load_json, save_json
-from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
+from generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
+from generated.mil_json_from_excel_data_structure import Mil
+from utils import load_json, save_json
+from pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
 def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Procedure, ProductCharacterization]:
@@ -170,6 +170,7 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
             relative_file_path=None,
             sample_holder=None,
             x_ray_source=None,
+            other_metadata=None,
             purity=phase_purity
         )]
 
@@ -187,6 +188,7 @@ def convert_mil_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tup
                     relative_file_path=pxrd_file.path,
                     sample_holder=sample_holder,
                     x_ray_source=x_ray_source,
+                    other_metadata=pxrd_file.other_metadata,
                     purity=None
                 ))
 

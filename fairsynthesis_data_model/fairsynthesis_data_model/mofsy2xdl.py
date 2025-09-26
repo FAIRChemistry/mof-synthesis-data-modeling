@@ -1,7 +1,7 @@
 import os
 
-from .utils import load_json, save_string_as_file
-from .generated.procedure_data_structure import Procedure
+from utils import load_json, save_string_as_file
+from generated.procedure_data_structure import Procedure
 from lxml import etree
 from string import Template
 

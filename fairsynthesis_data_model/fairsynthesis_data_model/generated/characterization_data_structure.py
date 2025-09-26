@@ -141,13 +141,15 @@ class XRaySource(Enum):
 class Characterization:
     relative_file_path: Optional[str]
     x_ray_source: Optional[XRaySource]
+    other_metadata: Optional[str]
     sample_holder: Optional[SampleHolder]
     weight: Optional[Quantity]
     purity: Optional[bool]
 
-    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], sample_holder: Optional[SampleHolder], weight: Optional[Quantity], purity: Optional[bool]) -> None:
+    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], other_metadata: Optional[str], sample_holder: Optional[SampleHolder], weight: Optional[Quantity], purity: Optional[bool]) -> None:
         self.relative_file_path = relative_file_path
         self.x_ray_source = x_ray_source
+        self.other_metadata = other_metadata
         self.sample_holder = sample_holder
         self.weight = weight
         self.purity = purity
@@ -157,10 +159,11 @@ class Characterization:
         assert isinstance(obj, dict)
         relative_file_path = from_union([from_str, from_none], obj.get("_relative_file_path"))
         x_ray_source = from_union([XRaySource, from_none], obj.get("_x-ray_source"))
+        other_metadata = from_union([from_str, from_none], obj.get("other_metadata"))
         sample_holder = from_union([SampleHolder.from_dict, from_none], obj.get("sample_holder"))
         weight = from_union([Quantity.from_dict, from_none], obj.get("_weight"))
         purity = from_union([from_bool, from_none], obj.get("_purity"))
-        return Characterization(relative_file_path, x_ray_source, sample_holder, weight, purity)
+        return Characterization(relative_file_path, x_ray_source, other_metadata, sample_holder, weight, purity)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -168,6 +171,8 @@ class Characterization:
             result["_relative_file_path"] = from_union([from_str, from_none], self.relative_file_path)
         if self.x_ray_source is not None:
             result["_x-ray_source"] = from_union([lambda x: to_enum(XRaySource, x), from_none], self.x_ray_source)
+        if self.other_metadata is not None:
+            result["other_metadata"] = from_union([from_str, from_none], self.other_metadata)
         if self.sample_holder is not None:
             result["sample_holder"] = from_union([lambda x: to_class(SampleHolder, x), from_none], self.sample_holder)
         if self.weight is not None:

@@ -1,6 +1,6 @@
 import os
 from typing import List
-from .use_case_specific.pxrd_collector_mocof1 import process_pxrd_file_use_case_specific
+from use_case_specific.pxrd_collector_mocof1 import process_pxrd_file_use_case_specific
 
 
 class PXRDFile:
@@ -22,6 +22,7 @@ class PXRDFile:
         self.xray_source = file_name_parts[2].replace("a","α")
         self.sample_holder_shape = file_name_parts[3].split("-")[0]
         self.sample_holder_diameter = file_name_parts[3].split("-")[1] if "-" in file_name_parts[3] else None
+        self.other_metadata = file_name_parts[4] if len(file_name_parts) > 4 else None
         process_pxrd_file_use_case_specific(self)  # Process the PXRD file
 
 

@@ -1,6 +1,6 @@
 
-from .generated.procedure_data_structure import Role
-from .generated.sciformation_eln_cleaned_data_structure import RxnRole
+from generated.procedure_data_structure import Role
+from generated.sciformation_eln_cleaned_data_structure import RxnRole
 
 
 def rxn_role_to_xdl_role(rnx_role: RxnRole) -> Role | None:

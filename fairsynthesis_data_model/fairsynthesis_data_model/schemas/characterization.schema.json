@@ -118,6 +118,9 @@
         },
         "sample_holder": {
           "$ref": "#/$defs/SampleHolder"
+        },
+        "other_metadata": {
+          "type": "string"
         }
       },
       "required": [

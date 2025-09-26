@@ -18,3 +18,5 @@ S-16,01.02.2024,FeCl3·6H2O,27,mg,"Benzene-1,4-dicarboxylic acid",16,mg,DMF,ml,4
 S-17,01.02.2024,FeCl3·6H2O,270,mg,"Benzene-1,4-dicarboxylic acid",166,mg,DMF,ml,4,no,,,30 min,glass vial,oven,120,deg C,3,day,with Ethanol,under vacuum ,120,deg C,1,day,no,MIL-88B+MIL101 (mix phases)
 S-18,01.02.2024,FeCl3·6H2O,270,mg,"Benzene-1,4-dicarboxylic acid",166,mg,DMF,ml,5,no,,,30 min,Teflon-lined autoclave,oven,150,deg C,3,day,with Ethanol,under vacuum ,120,deg C,1,day,yes,MIL-53 (Fe)
 S-19,01.02.2024,FeCl3·6H2O,452,mg,"Benzene-1,4-dicarboxylic acid",138,mg,DMF,ml,10,no,,,30 min,Teflon-lined autoclave,oven,110,deg C,1,day,with Ethanol,under vacuum ,120,deg C,1,day,yes,MIL-101 (Fe)
+S-20,01.02.2024,FeCl3·6H2O,270,mg,"Benzene-1,4-dicarboxylic acid",166,mg,DMF,ml,10,no,,,30 min,Teflon-lined autoclave,oven,100,deg C,1,day,with Ethanol,under vacuum ,120,deg C,7,day,no,MIL-53 (Fe)+MIL-68 (Fe)
+S-21,01.02.2024,FeCl3·6H2O,270,mg,"Benzene-1,4-dicarboxylic acid",332,mg,DMF,ml,10,5M HF, 1M HCl,μl,120+120,30 min,Teflon-lined autoclave,oven,100,deg C,1,day,with Ethanol,under vacuum ,120,deg C,5,day,yes,MIL-68 (Fe)
