@@ -42,12 +42,12 @@ def process_realization_text(data):
             # Search the realizationText with "acetone", "Et3N", "MeCN", "NaCl aq", "DMF", "CHCl3", "MeOH", and "EtOH" -> If they are not in the reagent list, add "WashSolid" with corresponding solvent after HeatChill.
             # If the realizationText contains "Soxhlet" or "open to air" -> Add "Wait" with 24 h (it varies in reality, but let's approximate so) as wait_after_rinse property.
             # Else -> Nothing
-            solvents = ["acetone", "et3n", "mecn", "nacl aq", "dmf", "chcl3", "meoh", "etoh"]
+            solvents = ["acetone", "Et3N", "MeCN", "NaCl aq", "DMF", "CHCl3", "MeOH", "EtOH"]
             for solvent in solvents:
-                if solvent in realization_text.lower() and not any(solvent in component['moleculeName'].lower() for component in item['reactionComponents']):
+                if solvent.lower() in realization_text.lower() and not any(solvent.lower() in component['moleculeName'].lower() for component in item['reactionComponents']):
                     if 'rinse' not in item:
                         item['rinse'] = []
-                    item['rinse'].append(solvent.lower())
+                    item['rinse'].append(solvent)
 
 
             if "soxhlet" in realization_text.lower() or "open to air" in realization_text.lower():

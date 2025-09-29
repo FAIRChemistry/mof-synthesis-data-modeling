@@ -18,9 +18,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -53,9 +53,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -88,9 +88,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -123,9 +123,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -160,9 +160,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -197,9 +197,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -232,9 +232,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -267,9 +267,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -302,9 +302,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -337,9 +337,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -371,9 +371,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -405,9 +405,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -439,9 +439,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -474,9 +474,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -509,9 +509,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -544,9 +544,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -578,9 +578,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -613,9 +613,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -648,9 +648,9 @@
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -682,9 +682,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -716,9 +716,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -750,9 +750,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -784,9 +784,9 @@
         <HeatChill temp="25.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -818,9 +818,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -853,9 +853,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -888,9 +888,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -923,9 +923,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -957,9 +957,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -992,9 +992,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -1027,9 +1027,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -1062,9 +1062,9 @@
         <HeatChill temp="120.0 celsius" time="48.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1096,9 +1096,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1130,9 +1130,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1164,9 +1164,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1198,9 +1198,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1232,9 +1232,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1266,9 +1266,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1300,9 +1300,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1334,9 +1334,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1368,9 +1368,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1402,9 +1402,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1437,9 +1437,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1472,9 +1472,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1506,9 +1506,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1540,9 +1540,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1574,9 +1574,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1608,9 +1608,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1643,9 +1643,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -1678,9 +1678,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1712,9 +1712,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1746,9 +1746,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -1780,9 +1780,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1815,9 +1815,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1879,9 +1879,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1915,9 +1915,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -1978,9 +1978,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2011,9 +2011,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2043,9 +2043,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2076,9 +2076,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2110,9 +2110,9 @@
         <HeatChill temp="120.0 celsius" time="24.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2145,9 +2145,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2208,9 +2208,9 @@
         <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2243,9 +2243,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2278,9 +2278,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2312,9 +2312,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -2346,9 +2346,9 @@
         <HeatChill temp="120.0 celsius" time="23.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -2380,9 +2380,9 @@
         <HeatChill temp="120.0 celsius" time="24.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
       </Workup>
     </Procedure>
     <Reagents>
@@ -2413,9 +2413,9 @@
         <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2447,9 +2447,9 @@
         <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2481,9 +2481,9 @@
         <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2515,9 +2515,9 @@
         <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2549,9 +2549,9 @@
         <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2583,9 +2583,9 @@
         <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2617,9 +2617,9 @@
         <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2651,9 +2651,9 @@
         <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2685,9 +2685,9 @@
         <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2719,9 +2719,9 @@
         <HeatChill temp="100.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2753,9 +2753,9 @@
         <HeatChill temp="120.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2788,9 +2788,9 @@
         <HeatChill temp="120.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2823,9 +2823,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2856,9 +2856,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2890,9 +2890,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2924,9 +2924,9 @@
         <HeatChill temp="80.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -2958,9 +2958,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <Wait time="24.0 hour" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
@@ -2993,9 +2993,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3027,10 +3027,10 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="mecn" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeCN" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3062,9 +3062,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3096,9 +3096,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3130,9 +3130,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3164,9 +3164,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3198,9 +3198,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -3232,9 +3232,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -3266,9 +3266,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3300,9 +3300,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3334,9 +3334,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3368,9 +3368,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3402,9 +3402,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3436,9 +3436,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3471,9 +3471,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3506,9 +3506,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3540,9 +3540,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3574,9 +3574,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3609,9 +3609,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3644,9 +3644,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3678,9 +3678,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3712,9 +3712,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3746,9 +3746,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3780,9 +3780,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3814,9 +3814,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3848,9 +3848,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3882,9 +3882,9 @@
         <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3916,9 +3916,9 @@
         <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3950,9 +3950,9 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -3984,9 +3984,9 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4018,9 +4018,9 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4053,9 +4053,9 @@
         <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4088,9 +4088,9 @@
         <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4122,9 +4122,9 @@
         <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="microwave vial"/>
-        <WashSolid solvent="chcl3" vessel="microwave vial"/>
-        <WashSolid solvent="meoh" vessel="microwave vial"/>
+        <WashSolid solvent="DMF" vessel="microwave vial"/>
+        <WashSolid solvent="CHCl3" vessel="microwave vial"/>
+        <WashSolid solvent="MeOH" vessel="microwave vial"/>
         <WashSolid solvent="scCO2" vessel="microwave vial"/>
       </Workup>
     </Procedure>
@@ -4156,9 +4156,9 @@
         <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4192,10 +4192,10 @@
         <HeatChill temp="120.0 celsius" time="115.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="et3n" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="Et3N" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4229,9 +4229,9 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4263,9 +4263,9 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4297,9 +4297,9 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4331,9 +4331,9 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4366,9 +4366,9 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4401,9 +4401,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4435,9 +4435,9 @@
         <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4469,9 +4469,9 @@
         <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4503,9 +4503,9 @@
         <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4537,9 +4537,9 @@
         <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4571,9 +4571,9 @@
         <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4605,9 +4605,9 @@
         <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4639,9 +4639,9 @@
         <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4673,10 +4673,10 @@
         <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="mecn" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeCN" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4709,10 +4709,10 @@
         <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="et3n" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="Et3N" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4745,9 +4745,9 @@
         <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <Wait time="24.0 hour" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
@@ -4781,9 +4781,9 @@
         <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4817,9 +4817,9 @@
         <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4854,9 +4854,9 @@
         <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4890,9 +4890,9 @@
         <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <Wait time="24.0 hour" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
@@ -4925,9 +4925,9 @@
         <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4960,9 +4960,9 @@
         <HeatChill temp="120.0 celsius" time="110.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -4996,9 +4996,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5033,9 +5033,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5070,9 +5070,9 @@
         <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5105,9 +5105,9 @@
         <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="MeOH+scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5140,9 +5140,9 @@
         <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="MeOH+scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5176,9 +5176,9 @@
         <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="MeOH+scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5212,9 +5212,9 @@
         <HeatChill temp="120.0 celsius" time="62.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="MeOH+scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5248,8 +5248,8 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
     <Reagents>
@@ -5283,8 +5283,8 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5319,8 +5319,8 @@
         <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5354,8 +5354,8 @@
         <HeatChill temp="150.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5389,8 +5389,8 @@
         <HeatChill temp="150.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5423,9 +5423,9 @@
         <HeatChill temp="120.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5457,9 +5457,9 @@
         <HeatChill temp="120.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="chcl3" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="CHCl3" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5492,8 +5492,8 @@
         <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="etoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="EtOH" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
     <Reagents>
@@ -5525,9 +5525,9 @@
         <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
-        <WashSolid solvent="etoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
+        <WashSolid solvent="EtOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5559,8 +5559,8 @@
         <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5592,8 +5592,8 @@
         <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5626,8 +5626,8 @@
         <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5660,9 +5660,9 @@
         <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="nacl aq" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5694,8 +5694,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5727,8 +5727,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5761,8 +5761,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="nacl aq" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5796,8 +5796,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5830,8 +5830,8 @@
         <HeatChill temp="120.0 celsius" time="310.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5863,8 +5863,8 @@
         <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5896,8 +5896,8 @@
         <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5929,8 +5929,8 @@
         <HeatChill temp="150.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5963,8 +5963,8 @@
         <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="nacl aq" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -5998,8 +5998,8 @@
         <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="nacl aq" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -6033,9 +6033,9 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="nacl aq" vessel="Schlenk bomb"/>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
       </Workup>
     </Procedure>
@@ -6069,8 +6069,8 @@
         <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6105,8 +6105,8 @@
         <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6141,9 +6141,9 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
-        <WashSolid solvent="etoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
+        <WashSolid solvent="EtOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6177,8 +6177,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6212,8 +6212,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6247,8 +6247,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6281,8 +6281,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
@@ -6316,8 +6316,8 @@
         <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
-        <WashSolid solvent="dmf" vessel="Schlenk bomb"/>
-        <WashSolid solvent="meoh" vessel="Schlenk bomb"/>
+        <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
+        <WashSolid solvent="MeOH" vessel="Schlenk bomb"/>
         <WashSolid solvent="scCO2" vessel="Schlenk bomb"/>
         <Evaporate vessel="Schlenk bomb"/>
       </Workup>
