@@ -1,12 +1,11 @@
 import os
-from pathlib import Path
 from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
 from generated.procedure_data_structure import Procedure, SynthesisElement ,ReagentElement, Metadata, ComponentElement, \
-    ProcedureClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
-    Hardware, Amount, AmountUnit, Temp, TempUnit
+    ProcedureWithDifferentSectionsClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
+    Hardware, Quantity, AmountUnit, Empty , TempUnit, Time, Solvent, Gas
 from generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
 from generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
@@ -17,7 +16,7 @@ from utils import load_json, save_json
 from pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE", split_procedure_in_sections: bool = True) -> Tuple[Procedure, ProductCharacterization]:
+def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE") -> Tuple[Procedure, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
@@ -28,7 +27,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         reaction_product_inchi = get_inchi(reaction_product)
         reagents: List[ReagentElement] = construct_reagents(experiment.reaction_components)
         hardware: Hardware = construct_hardware(experiment)
-        procedure: ProcedureClass = construct_procedure(experiment, not split_procedure_in_sections)
+        procedure: ProcedureWithDifferentSectionsClass = construct_procedure(experiment)
         # pad the experiment nr in lab journal to a length of 3 digits, adding preceding zeros
         experiment_nr = str(experiment.nr_in_lab_journal).zfill(3)
         experiment_id = (experiment.code if experiment.code else default_code) + "-" + experiment_nr
@@ -82,9 +81,8 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         ProductCharacterization(characterization_list)
     )
 
-def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> ProcedureClass:
+def construct_procedure(experiment: Experiment) -> ProcedureWithDifferentSectionsClass:
     vessel: str = str(experiment.vessel.value)
-    steps = None
     prep = []
     reaction = []
     workup = []
@@ -98,57 +96,51 @@ def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> Pr
 
         if component.rxn_role != RxnRole.PRODUCT:
             prep.append(
-                StepEntryClass(XMLType.ADD, amount=amount, reagent=component.molecule_name, stir=None, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
+                StepEntryClass(xml_type=XMLType.ADD, amount=amount, reagent=component.molecule_name, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None, unknown=None)
             )
 
     if experiment.degassing:
+        gas: Gas = Gas(experiment.degassing.value)
         prep.append(
-            StepEntryClass(XMLType.EVACUATE_AND_REFILL, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=experiment.degassing.value, solvent=None, comment=None, pressure=None)
+            StepEntryClass(xml_type=XMLType.EVACUATE_AND_REFILL, temp=None, time=None, amount=None, reagent=None, vessel=vessel, gas=gas, solvent=None, comment=None, pressure=None, unknown=None)
         )
 
-    time: Amount = format_time(experiment.duration, experiment.duration_unit)
-    temp: Temp = format_temperature(experiment.temperature)
+    time: Time = format_time(experiment.duration, experiment.duration_unit)
+    temp: Empty = format_temperature(experiment.temperature)
     reaction.append(
-        StepEntryClass(XMLType.HEAT_CHILL, temp=temp, time=time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
+        StepEntryClass(xml_type=XMLType.HEAT_CHILL, temp=temp, time=time, amount=None, reagent=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None, unknown=None)
     )
 
     if experiment.rinse:
         for rinseItem in experiment.rinse:
+            solvent: Solvent = Solvent(rinseItem)
             workup.append(
-                StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=rinseItem, comment=None, pressure=None)
+                StepEntryClass(xml_type=XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, vessel=vessel, gas=None, solvent=solvent, comment=None, pressure=None, unknown=None)
             )
 
     if experiment.wait_after_rinse:
-        wait_time: Amount = format_time(str(experiment.wait_after_rinse), experiment.wait_after_rinse_unit)
+        wait_time: Time = format_time(str(experiment.wait_after_rinse), experiment.wait_after_rinse_unit)
         workup.append(
-            StepEntryClass(XMLType.WAIT, temp=None, time=wait_time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
+            StepEntryClass(xml_type=XMLType.WAIT, temp=None, time=wait_time, amount=None, reagent=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None, unknown=None)
         )
 
     if experiment.wash_solid:
+        solvent = Solvent(experiment.wash_solid)
         workup.append(
-            StepEntryClass(XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=experiment.wash_solid, comment=None, pressure=None)
+            StepEntryClass(xml_type=XMLType.WASH_SOLID, temp=None, time=None, amount=None, reagent=None, vessel=vessel, gas=None, solvent=solvent, comment=None, pressure=None, unknown=None)
         )
 
     if experiment.evaporate:
         workup.append(
-            StepEntryClass(XMLType.EVAPORATE, temp=None, time=None, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
+            StepEntryClass(xml_type=XMLType.EVAPORATE, temp=None, time=None, amount=None, reagent=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None, unknown=None)
         )
 
-    if merge_steps:
-        # Merge the steps into one list
-        steps = prep + reaction + workup
-        prep = None
-        reaction = None
-        workup = None
-    else:
-        # Create a procedure with separate sections for prep, reaction, and workup
-        steps = None
-    prep = FlatProcedureClass(prep) if len(prep) > 0 else None
-    reaction = FlatProcedureClass(reaction) if len(reaction) > 0 else None
-    workup = FlatProcedureClass(workup) if len(workup) > 0 else None
+    prep = FlatProcedureClass(prep)
+    reaction = FlatProcedureClass(reaction)
+    workup = FlatProcedureClass(workup)
 
     # Create the procedure
-    procedure = ProcedureClass(step=steps, prep=prep, reaction=reaction, workup=workup)
+    procedure = ProcedureWithDifferentSectionsClass(prep=prep, reaction=reaction, workup=workup)
     return procedure
 
 
@@ -182,17 +174,17 @@ def construct_hardware(experiment: Experiment):
     )
 
 
-def format_temperature(temp: str) -> Temp:
+def format_temperature(temp: str) -> Empty:
     temperature_string: str = temp.replace("RT", "25")
     if "->" in temperature_string: # if temperature is a range
         start_temp: float = float(sympify(temperature_string.split("->")[0]))
         end_temp: float = float(sympify(temperature_string.split("->")[1]))
-        return Temp(value=float(end_temp), unit=TempUnit.CELSIUS)
+        return Empty(value=float(end_temp), unit=TempUnit.CELSIUS)
         # raise ValueError("Temperature ranges are not supported in MOFSY. Please provide a single temperature value.")
         # return str(start_temp) + " -> " + str(end_temp) + " C"
     else:
         temp: float = float(sympify(temperature_string))
-        return Temp(value=round(temp, 2), unit=TempUnit.CELSIUS)
+        return Empty(value=round(temp, 2), unit=TempUnit.CELSIUS)
 
 def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization:
     if (mass is None) or (mass_unit is None):
@@ -200,21 +192,21 @@ def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization
     mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
     return AmountCharacterization(value=round(mass_in_mg, 2), unit=UnitCharacterization.MILLIGRAM)
 
-def format_amount_mole(amount: float | None) -> Amount:
+def format_amount_mole(amount: float | None) -> Quantity:
     if amount is None:
-        return Amount(value=None, unit=None)
-    return Amount(value=float(round(amount * 1000000,2)), unit=AmountUnit.MICROMOLE)
+        return Quantity(value=None, unit=None)
+    return Quantity(value=float(round(amount * 1000000,2)), unit=AmountUnit.MICROMOLE)
 
-def format_amount_volume(amount: float | None) -> Amount:
+def format_amount_volume(amount: float | None) -> Quantity:
     if amount is None:
-        return Amount(value=None, unit=None)
+        return Quantity(value=None, unit=None)
     # original value from sciformation is in mL but we want to export to microLitre
     amount_in_ul = round(float(amount) * 1000, 3)
-    return Amount(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
+    return Quantity(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
 
-def format_time(time: str, time_unit: TimeUnit) -> Amount:
+def format_time(time: str, time_unit: TimeUnit) -> Time:
     time_in_h = time_to_target_format(float(sympify(time)), time_unit, TimeUnit.H)
-    return Amount(value=round(time_in_h, 2), unit=AmountUnit.HOUR)
+    return Time(value=round(time_in_h, 2), unit=AmountUnit.HOUR)
 
 def format_length(length: str) -> AmountCharacterization:
     if length.endswith("mm"):

@@ -86,12 +86,6 @@ if __name__ == '__main__':
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'xdl_from_sciformation.xml'))
 
-    # excel MIL case
-    mil_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
-    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_file_path)))
-    print("XML Result: " + xml)
-    save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL.xml'))
-
     # excel MIL_2 case
     mil_2_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL_2.json')
     xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_2_file_path)))

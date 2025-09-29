@@ -1,17 +1,26 @@
 {
   "$defs": {
-    "$xml_type": {
-      "enum": [
-        "Add",
-        "HeatChill",
-        "EvacuateAndRefill",
-        "WashSolid",
-        "Wait",
-        "Evaporate",
-        "Sonicate",
-        "Dry"
+    "SynthesisEntry": {
+      "properties": {
+        "Hardware": {
+          "$ref": "#/$defs/Hardware"
+        },
+        "Metadata": {
+          "$ref": "#/$defs/Metadata"
+        },
+        "Procedure": {
+          "$ref": "#/$defs/ProcedureWithDifferentSections"
+        },
+        "Reagents": {
+          "$ref": "#/$defs/Reagents"
+        }
+      },
+      "required": [
+        "Metadata",
+        "Reagents",
+        "Procedure"
       ],
-      "type": "string"
+      "type": "object"
     },
     "Hardware": {
       "properties": {
@@ -24,7 +33,6 @@
       },
       "type": "object"
     },
-    "HardwareComponents": {},
     "HardwareComponentsEntry": {
       "properties": {
         "_chemical": {
@@ -62,17 +70,6 @@
       ],
       "type": "object"
     },
-    "Procedure": {
-      "oneOf": [
-        {
-          "$ref": "#/$defs/StepsFlatProcedure"
-        },
-        {
-          "$ref": "#/$defs/ProcedureWithDifferentSections"
-        }
-      ],
-      "type": "object"
-    },
     "ProcedureWithDifferentSections": {
       "properties": {
         "Prep": {
@@ -87,7 +84,191 @@
       },
       "title": "Procedure with different sections"
     },
+    "StepsFlatProcedure": {
+      "properties": {
+        "Step": {
+          "items": {
+            "$ref": "#/$defs/StepEntry"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "Step"
+      ],
+      "title": "Flat procedure"
+    },
+    "StepEntry": {
+      "required": [
+        "$xml_type"
+      ],
+      "properties": {
+        "_vessel": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        }
+      },
+      "oneOf": [
+        {
+          "title": "Add",
+          "required": [
+            "_reagent",
+            "_amount"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "Add"
+            },
+            "_reagent": {
+              "type": "string",
+              "description": "name of the involved chemical as listed in the \"reagents\""
+            },
+            "_amount": {
+              "$ref": "#/$defs/Quantity",
+              "description": "amount of the involved chemical"
+            }
+          }
+        },
+        {
+          "title": "HeatChill",
+          "required": [
+            "_temp"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "HeatChill"
+            },
+            "_temp": {
+              "$ref": "#/$defs/Temperature",
+              "properties": {
+                "Unit": {
+                  "const": "celsius"
+                },
+                "Value": {
+                  "minimum": 20
+                }
+              },
+              "type": "object",
+              "description": "temperature in the case of HeatChill",
+              "title": ""
+            },
+            "_time": {
+              "$ref": "#/$defs/Time",
+              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+            }
+          }
+        },
+        {
+          "title": "EvacuateAndRefill",
+          "required": [
+            "_gas"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "EvacuateAndRefill"
+            },
+            "_gas": {
+              "type": "string",
+              "const": "Ar",
+              "description": "refilling gas in the case of EvacuateAndRefill"
+            }
+          }
+        },
+        {
+          "title": "WashSolid",
+          "required": [
+            "_solvent"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "WashSolid"
+            },
+            "_solvent": {
+              "type": "string",
+              "description": "name of the solvent in the case of WashSolid",
+              "enum": [
+                "CHCl3",
+                "DMF",
+                "MeOH",
+                "acetone",
+                "EtOH",
+                "NaCl aq",
+                "scCO2",
+                "MeCN",
+                "Et3N",
+                "MeOH+scCO2"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Wait",
+          "required": [
+            "_reagent",
+            "_time"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "Wait"
+            },
+            "_time": {
+              "$ref": "#/$defs/Time",
+              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+            }
+          }
+        },
+        {
+          "title": "Evaporate",
+          "properties": {
+            "$xml_type": {
+              "const": "Evaporate"
+            },
+            "_unknown": {
+              "description": "Ken please add the corresponding attributes if existing"
+            }
+          }
+        },
+        {
+          "title": "Sonicate",
+          "properties": {
+            "$xml_type": {
+              "const": "Sonicate"
+            },
+            "_time": {
+              "$ref": "#/$defs/Time",
+              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+            }
+          }
+        },
+        {
+          "required": [
+            "_reagent",
+            "_time"
+          ],
+          "title": "Dry",
+          "properties": {
+            "$xml_type": {
+              "const": "Dry"
+            },
+            "_time": {
+              "$ref": "#/$defs/Time",
+              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+            },
+            "_pressure": {
+              "$ref": "#/$defs/Pressure"
+            },
+            "_temp": {
+              "$ref": "#/$defs/Temperature"
+            }
+          }
+        }
+      ],
+      "title": "Step Entry"
+    },
     "Quantity": {
+      "title": "Quantity",
       "properties": {
         "Unit": {
           "enum": [
@@ -130,6 +311,54 @@
       },
       "type": "object"
     },
+    "Temperature": {
+      "title": "Temperature",
+      "$ref": "#/$defs/Quantity",
+          "type": "object",
+          "properties": {
+            "Unit": {
+              "const": "celsius"
+            },
+            "Value": {
+              "minimum": -273.15
+            }
+          }
+    },
+    "Time": {
+      "title": "Time",
+      "$ref": "#/$defs/Quantity",
+      "properties": {
+        "Value": {
+          "minimum": 0
+        }
+      }
+    },
+    "Pressure": {
+      "$ref": "#/$defs/Quantity",
+      "title": "Pressure",
+      "properties": {
+        "Unit": {
+          "const": "pascal"
+        },
+        "Value": {
+          "minimum": 0
+        }
+      }
+    },
+    "Role": {
+      "enum": [
+        "substrate",
+        "solvent",
+        "reagent",
+        "acid",
+        "activating-agent",
+        "base",
+        "catalyst",
+        "ligand",
+        "quenching-agent"
+      ],
+      "type": "string"
+    },
     "Reagents": {
       "properties": {
         "Reagent": {
@@ -165,140 +394,12 @@
           "type": "string"
         },
         "_role": {
-          "$ref": "#/$defs/_role"
+          "$ref": "#/$defs/Role"
         }
       },
       "type": "object"
-    },
-    "StepEntry": {
-      "properties": {
-        "$xml_type": {
-          "$ref": "#/$defs/$xml_type"
-        },
-        "_amount": {
-          "$ref": "#/$defs/Quantity"
-        },
-        "_comment": {
-          "type": "string"
-        },
-        "_gas": {
-          "type": "string"
-        },
-        "_reagent": {
-          "type": "string"
-        },
-        "_solvent": {
-          "type": "string"
-        },
-        "_stir": {
-          "type": "string"
-        },
-        "_temp": {
-          "$ref": "#/$defs/Quantity",
-          "oneOf": [
-            {
-              "title": "Temperature in Kelvin",
-              "type": "object",
-              "properties": {
-                "Unit": {
-                  "const": "kelvin"
-                },
-                "Value": {
-                  "minimum": 0
-                }
-              }
-            },
-            {
-              "title": "Temperature in Celsius",
-              "type": "object",
-              "properties": {
-                "Unit": {
-                  "const": "celsius"
-                },
-                "Value": {
-                  "minimum": -273.15
-                }
-              }
-            }
-          ]
-        },
-        "_time": {
-          "$ref": "#/$defs/Quantity"
-        },
-        "_vessel": {
-          "type": "string"
-        },
-        "_pressure": {
-          "$ref": "#/$defs/Quantity",
-          "oneOf": [
-            {
-              "title": "Pressure in Pascal",
-              "properties": {
-                "Unit": {
-                  "const": "pascal"
-                },
-                "Value": {
-                  "minimum": 0
-                }
-              }
-            }
-          ]
-        }
-      },
-      "title": "Step Entry"
-    },
-    "StepsFlatProcedure": {
-      "properties": {
-        "Step": {
-          "items": {
-            "$ref": "#/$defs/StepEntry"
-          },
-          "type": "array"
-        }
-      },
-      "required": [
-        "Step"
-      ],
-      "title": "Flat procedure"
-    },
-    "SynthesisEntry": {
-      "properties": {
-        "Hardware": {
-          "$ref": "#/$defs/Hardware"
-        },
-        "Metadata": {
-          "$ref": "#/$defs/Metadata"
-        },
-        "Procedure": {
-          "$ref": "#/$defs/Procedure"
-        },
-        "Reagents": {
-          "$ref": "#/$defs/Reagents"
-        }
-      },
-      "required": [
-        "Metadata",
-        "Reagents",
-        "Procedure"
-      ],
-      "type": "object"
-    },
-    "_role": {
-      "enum": [
-        "substrate",
-        "solvent",
-        "reagent",
-        "acid",
-        "activating-agent",
-        "base",
-        "catalyst",
-        "ligand",
-        "quenching-agent"
-      ],
-      "type": "string"
     }
   },
-  "definitions": {},
   "properties": {
     "Synthesis": {
       "items": {

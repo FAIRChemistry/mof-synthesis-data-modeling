@@ -17,90 +17,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-1",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-1"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-1",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-1"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-1",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-1"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-1",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-1"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-1",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 60.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-1"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-1",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-1"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-1",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-1"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -147,90 +147,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-2",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-2"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-2",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-2"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-2",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-2"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-2",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-2"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-2",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 80.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-2"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-2",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-2"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-2",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-2"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -277,90 +277,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-3",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-3"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-3",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-3"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-3",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-3"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-3",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-3"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-3",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-3"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-3",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-3"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-3",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-3"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -407,90 +407,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-4",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-4"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-4",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-4"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-4",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Dry DMF",
-              "_vessel": "S-4"
+              "_reagent": "Dry DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-4",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-4"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-4",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-4"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-4",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-4"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-4",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-4"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -537,90 +537,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-5",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-5"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-5",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-5"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-5",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-5"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-5",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-5"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-5",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-5"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-5",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-5"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-5",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-5"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -667,90 +667,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-6",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-6"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-6",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-6"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-6",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-6"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-6",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-6"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: microwave",
+              "_vessel": "S-6",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "hour",
                 "Value": 1,
+                "Unit": "hour",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-6"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-6",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-6"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-6",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-6"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -797,90 +797,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-7",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-7"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-7",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-7"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-7",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-7"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-7",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-7"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: microwave",
+              "_vessel": "S-7",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 140.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "hour",
                 "Value": 2,
+                "Unit": "hour",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-7"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-7",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-7"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-7",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-7"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -927,100 +927,100 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-8",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-8"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-8",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-8"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-8",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-8"
+              "_reagent": "DMF"
             },
             {
+              "_vessel": "S-8",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "NaOH (1 M)",
-              "_vessel": "S-8"
+              "_reagent": "NaOH (1 M)"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-8",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-8"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-8",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-8"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-8",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-8"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-8",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-8"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1072,100 +1072,100 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-9",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3",
-              "_vessel": "S-9"
+              "_reagent": "FeCl3"
             },
             {
+              "_vessel": "S-9",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-9"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-9",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-9"
+              "_reagent": "DMF"
             },
             {
+              "_vessel": "S-9",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "HCI (1 M)",
-              "_vessel": "S-9"
+              "_reagent": "HCI (1 M)"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-9",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-9"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-9",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-9"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-9",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-9"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-9",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-9"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1217,90 +1217,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-10",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-10"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-10",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-10"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-10",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-10"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-10",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-10"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-10",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 60.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-10"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-10",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-10"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-10",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-10"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1347,90 +1347,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-11",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-11"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-11",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-11"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-11",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-11"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-11",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-11"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-11",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 80.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-11"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-11",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-11"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-11",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-11"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1477,90 +1477,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-12",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-12"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-12",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-12"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-12",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-12"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-12",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-12"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-12",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-12"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-12",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-12"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-12",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-12"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1607,90 +1607,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-13",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-13"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-13",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-13"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-13",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-13"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-13",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-13"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-13",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-13"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-13",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-13"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-13",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-13"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1737,90 +1737,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-14",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-14"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-14",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-14"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-14",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-14"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-14",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-14"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: microwave",
+              "_vessel": "S-14",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 140.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "hour",
                 "Value": 2,
+                "Unit": "hour",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-14"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-14",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-14"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-14",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-14"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -1867,100 +1867,100 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-15",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-15"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-15",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-15"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-15",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-15"
+              "_reagent": "DMF"
             },
             {
+              "_vessel": "S-15",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "NaOH (1 M)",
-              "_vessel": "S-15"
+              "_reagent": "NaOH (1 M)"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-15",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-15"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-15",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-15"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-15",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-15"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-15",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-15"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2012,100 +2012,100 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-16",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 27,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-16"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-16",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 16,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-16"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-16",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-16"
+              "_reagent": "DMF"
             },
             {
+              "_vessel": "S-16",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "HCI (1 M)",
-              "_vessel": "S-16"
+              "_reagent": "HCI (1 M)"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-16",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-16"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-16",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-16"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-16",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-16"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-16",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-16"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2157,90 +2157,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-17",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 270,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-17"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-17",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 166,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-17"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-17",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 4,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-17"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-17",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-17"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-17",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 3,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-17"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-17",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-17"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-17",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-17"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2287,90 +2287,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-18",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 270,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-18"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-18",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 166,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-18"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-18",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 5,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-18"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-18",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-18"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-18",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 150.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 3,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-18"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-18",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-18"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-18",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-18"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2417,90 +2417,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-19",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 452,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-19"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-19",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 138,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-19"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-19",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 10,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-19"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-19",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-19"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-19",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 110.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-19"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-19",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-19"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-19",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-19"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2547,90 +2547,90 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-20",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 270,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-20"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-20",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 166,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-20"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-20",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 10,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-20"
+              "_reagent": "DMF"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-20",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-20"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-20",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 7,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-20"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-20",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-20"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-20",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-20"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
@@ -2677,100 +2677,100 @@
         "Prep": {
           "Step": [
             {
+              "_vessel": "S-21",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 332,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "FeCl3\u00b76H2O",
-              "_vessel": "S-21"
+              "_reagent": "FeCl3\u00b76H2O"
             },
             {
+              "_vessel": "S-21",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
                 "Value": 138,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "Benzene-1,4-dicarboxylic acid",
-              "_vessel": "S-21"
+              "_reagent": "Benzene-1,4-dicarboxylic acid"
             },
             {
+              "_vessel": "S-21",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "millilitre",
                 "Value": 10,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "DMF",
-              "_vessel": "S-21"
+              "_reagent": "DMF"
             },
             {
+              "_vessel": "S-21",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
                 "Value": 240.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "5M HF, 1M HCl",
-              "_vessel": "S-21"
+              "_reagent": "5M HF, 1M HCl"
             }
           ]
         },
         "Reaction": {
           "Step": [
             {
+              "_vessel": "S-21",
               "$xml_type": "Sonicate",
               "_time": {
-                "Unit": "minute",
                 "Value": 30.0,
+                "Unit": "minute",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-21"
+              }
             },
             {
-              "$xml_type": "HeatChill",
               "_comment": "In: oven",
+              "_vessel": "S-21",
+              "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
                 "Value": 100.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 5,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
-              },
-              "_vessel": "S-21"
+              }
             }
           ]
         },
         "Workup": {
           "Step": [
             {
+              "_vessel": "S-21",
               "$xml_type": "WashSolid",
-              "_reagent": "Ethanol",
-              "_vessel": "S-21"
+              "_reagent": "Ethanol"
             },
             {
+              "_vessel": "S-21",
               "$xml_type": "Dry",
-              "_pressure": {
-                "Unit": "pascal",
-                "Value": 0,
-                "$xml_append": "${Value} ${Unit}"
-              },
               "_temp": {
                 "Unit": "celsius",
                 "Value": 120.0,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Unit": "day",
                 "Value": 1,
+                "Unit": "day",
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_vessel": "S-21"
+              "_pressure": {
+                "Unit": "pascal",
+                "Value": 0,
+                "$xml_append": "${Value} ${Unit}"
+              }
             }
           ]
         }
