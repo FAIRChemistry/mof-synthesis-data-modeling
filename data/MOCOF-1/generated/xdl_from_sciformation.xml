@@ -14,7 +14,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -49,7 +49,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -84,7 +84,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -119,7 +119,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -156,7 +156,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -193,7 +193,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -228,7 +228,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -263,7 +263,7 @@
         <Add amount="4550.5 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -298,7 +298,7 @@
         <Add amount="4597.23 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -333,7 +333,7 @@
         <Add amount="4755.79 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="48.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="48.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -367,7 +367,7 @@
         <Add amount="4618.93 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -401,7 +401,7 @@
         <Add amount="4311.0 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -435,7 +435,7 @@
         <Add amount="4273.03 micromole" reagent="H2O" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="microwave vial"/>
@@ -470,7 +470,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
@@ -505,7 +505,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
@@ -540,7 +540,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
@@ -575,7 +575,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -609,7 +609,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
@@ -644,7 +644,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="acetone" vessel="Schlenk bomb"/>
@@ -679,7 +679,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -713,7 +713,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -747,7 +747,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -781,7 +781,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="25.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 25.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -815,7 +815,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -850,7 +850,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -885,7 +885,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -920,7 +920,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -954,7 +954,7 @@
         <Add amount="500.0 microlitre" reagent="DO" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -989,7 +989,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1024,7 +1024,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1059,7 +1059,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="48.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="48.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1093,7 +1093,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1127,7 +1127,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1161,7 +1161,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1195,7 +1195,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1229,7 +1229,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1263,7 +1263,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1297,7 +1297,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1331,7 +1331,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1365,7 +1365,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1399,7 +1399,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1434,7 +1434,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1469,7 +1469,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1503,7 +1503,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1537,7 +1537,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1571,7 +1571,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1605,7 +1605,7 @@
         <Add amount="500.0 microlitre" reagent="DO" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1640,7 +1640,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1675,7 +1675,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1709,7 +1709,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1743,7 +1743,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -1777,7 +1777,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1812,7 +1812,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1847,7 +1847,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
     </Procedure>
     <Reagents>
@@ -1876,7 +1876,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1912,7 +1912,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -1947,7 +1947,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
     </Procedure>
     <Reagents>
@@ -1975,7 +1975,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2008,7 +2008,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2040,7 +2040,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2073,7 +2073,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2107,7 +2107,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="24.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="24.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2142,7 +2142,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2177,7 +2177,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
     </Procedure>
     <Reagents>
@@ -2205,7 +2205,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2240,7 +2240,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2275,7 +2275,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2309,7 +2309,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -2343,7 +2343,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="23.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="23.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -2377,7 +2377,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="24.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="24.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -2410,7 +2410,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2444,7 +2444,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2478,7 +2478,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2512,7 +2512,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="240.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="240.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2546,7 +2546,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2580,7 +2580,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2614,7 +2614,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2648,7 +2648,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="216.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="216.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2682,7 +2682,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2716,7 +2716,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="100.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 100.0}" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2750,7 +2750,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2785,7 +2785,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="144.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="144.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2820,7 +2820,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2853,7 +2853,7 @@
         <Add amount="500.0 microlitre" reagent="DO" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2887,7 +2887,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2921,7 +2921,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="80.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 80.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -2955,7 +2955,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -2990,7 +2990,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3024,7 +3024,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="MeCN" vessel="Schlenk bomb"/>
@@ -3059,7 +3059,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3093,7 +3093,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3127,7 +3127,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3161,7 +3161,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3195,7 +3195,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -3229,7 +3229,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -3263,7 +3263,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3297,7 +3297,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3331,7 +3331,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3365,7 +3365,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3399,7 +3399,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3433,7 +3433,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3468,7 +3468,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3503,7 +3503,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3537,7 +3537,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3571,7 +3571,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3606,7 +3606,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3641,7 +3641,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3675,7 +3675,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3709,7 +3709,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3743,7 +3743,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3777,7 +3777,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3811,7 +3811,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3845,7 +3845,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3879,7 +3879,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3913,7 +3913,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3947,7 +3947,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -3981,7 +3981,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4015,7 +4015,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4050,7 +4050,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4085,7 +4085,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4119,7 +4119,7 @@
         <EvacuateAndRefill gas="Ar" vessel="microwave vial"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="microwave vial"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="113.0 hour" vessel="microwave vial"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="microwave vial"/>
@@ -4153,7 +4153,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4189,7 +4189,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="115.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="115.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="Et3N" vessel="Schlenk bomb"/>
@@ -4226,7 +4226,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4260,7 +4260,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4294,7 +4294,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4328,7 +4328,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4363,7 +4363,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4398,7 +4398,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4432,7 +4432,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4466,7 +4466,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4500,7 +4500,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4534,7 +4534,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="69.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="69.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4568,7 +4568,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4602,7 +4602,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4636,7 +4636,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4670,7 +4670,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="87.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="87.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="MeCN" vessel="Schlenk bomb"/>
@@ -4706,7 +4706,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="Et3N" vessel="Schlenk bomb"/>
@@ -4742,7 +4742,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4778,7 +4778,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="114.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="114.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4814,7 +4814,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4851,7 +4851,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4887,7 +4887,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4922,7 +4922,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="96.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="96.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4957,7 +4957,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="110.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="110.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -4993,7 +4993,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5030,7 +5030,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5067,7 +5067,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="120.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="120.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5102,7 +5102,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5137,7 +5137,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5173,7 +5173,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="139.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="139.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5209,7 +5209,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="62.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="62.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5245,7 +5245,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5280,7 +5280,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5316,7 +5316,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="64.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="64.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5351,7 +5351,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5386,7 +5386,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5420,7 +5420,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5454,7 +5454,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="71.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="71.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5489,7 +5489,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5522,7 +5522,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5556,7 +5556,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="88.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="88.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5589,7 +5589,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5623,7 +5623,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="68.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="68.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5657,7 +5657,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="72.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="72.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
@@ -5691,7 +5691,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5724,7 +5724,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5758,7 +5758,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
@@ -5793,7 +5793,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5827,7 +5827,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="310.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="310.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5860,7 +5860,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5893,7 +5893,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5926,7 +5926,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="150.0 celsius" time="113.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 150.0}" time="113.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -5960,7 +5960,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
@@ -5995,7 +5995,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
@@ -6030,7 +6030,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="NaCl aq" vessel="Schlenk bomb"/>
@@ -6066,7 +6066,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6102,7 +6102,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="66.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="66.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6138,7 +6138,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6174,7 +6174,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6209,7 +6209,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6244,7 +6244,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6278,7 +6278,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>
@@ -6313,7 +6313,7 @@
         <EvacuateAndRefill gas="Ar" vessel="Schlenk bomb"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="70.0 hour" vessel="Schlenk bomb"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="70.0 hour" vessel="Schlenk bomb"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="DMF" vessel="Schlenk bomb"/>

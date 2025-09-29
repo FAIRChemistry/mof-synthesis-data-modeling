@@ -11,7 +11,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-1"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="60.0 celsius" time="1.0 day" vessel="S-1"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 60.0}" time="1.0 day" vessel="S-1"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-1"/>
@@ -44,7 +44,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-2"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="80.0 celsius" time="1.0 day" vessel="S-2"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 80.0}" time="1.0 day" vessel="S-2"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-2"/>
@@ -77,7 +77,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-3"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="100.0 celsius" time="1.0 day" vessel="S-3"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 100.0}" time="1.0 day" vessel="S-3"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-3"/>
@@ -110,7 +110,7 @@
         <Add amount="4.0 millilitre" reagent="Dry DMF" vessel="S-4"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-4"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-4"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-4"/>
@@ -143,7 +143,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-5"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-5"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-5"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-5"/>
@@ -176,7 +176,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-6"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 hour" vessel="S-6"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 hour" vessel="S-6"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-6"/>
@@ -209,7 +209,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-7"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="140.0 celsius" time="2.0 hour" vessel="S-7"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 140.0}" time="2.0 hour" vessel="S-7"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-7"/>
@@ -242,7 +242,7 @@
         <Add amount="4.0 millilitre" reagent="DMF, NaOH" vessel="S-8"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-8"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-8"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-8"/>
@@ -275,7 +275,7 @@
         <Add amount="4.0 millilitre" reagent="DMF, HCI" vessel="S-9"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-9"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-9"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-9"/>
@@ -308,7 +308,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-10"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="60.0 celsius" time="1.0 day" vessel="S-10"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 60.0}" time="1.0 day" vessel="S-10"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-10"/>
@@ -341,7 +341,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-11"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="80.0 celsius" time="1.0 day" vessel="S-11"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 80.0}" time="1.0 day" vessel="S-11"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-11"/>
@@ -374,7 +374,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-12"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="100.0 celsius" time="1.0 day" vessel="S-12"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 100.0}" time="1.0 day" vessel="S-12"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-12"/>
@@ -407,7 +407,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-13"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-13"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-13"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-13"/>
@@ -440,7 +440,7 @@
         <Add amount="4.0 millilitre" reagent="DMF" vessel="S-14"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="140.0 celsius" time="2.0 hour" vessel="S-14"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 140.0}" time="2.0 hour" vessel="S-14"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-14"/>
@@ -473,7 +473,7 @@
         <Add amount="4.0 millilitre" reagent="DMF, NaOH" vessel="S-15"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-15"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-15"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-15"/>
@@ -506,7 +506,7 @@
         <Add amount="4.0 millilitre" reagent="DMF, HCI" vessel="S-16"/>
       </Prep>
       <Reaction>
-        <HeatChill temp="120.0 celsius" time="1.0 day" vessel="S-16"/>
+        <HeatChill temp="{'Unit': 'celsius', 'Value': 120.0}" time="1.0 day" vessel="S-16"/>
       </Reaction>
       <Workup>
         <WashSolid solvent="ethanol" vessel="S-16"/>

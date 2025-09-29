@@ -140,7 +140,7 @@ class Metadata:
         return result
 
 
-class Unit(Enum):
+class AmountUnit(Enum):
     BAR = "bar"
     CELSIUS = "celsius"
     CENTILITRE = "centilitre"
@@ -173,27 +173,84 @@ class Unit(Enum):
 
 
 class Amount:
-    unit: Optional[Unit]
+    unit: Optional[AmountUnit]
     value: Optional[float]
 
-    def __init__(self, unit: Optional[Unit], value: Optional[float]) -> None:
+    def __init__(self, unit: Optional[AmountUnit], value: Optional[float]) -> None:
         self.unit = unit
         self.value = value
 
     @staticmethod
     def from_dict(obj: Any) -> 'Amount':
         assert isinstance(obj, dict)
-        unit = from_union([Unit, from_none], obj.get("Unit"))
+        unit = from_union([AmountUnit, from_none], obj.get("Unit"))
         value = from_union([from_float, from_none], obj.get("Value"))
         return Amount(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.unit is not None:
-            result["Unit"] = from_union([lambda x: to_enum(Unit, x), from_none], self.unit)
+            result["Unit"] = from_union([lambda x: to_enum(AmountUnit, x), from_none], self.unit)
         if self.value is not None:
             result["Value"] = from_union([to_float, from_none], self.value)
         result["$xml_append"] = "${Value} ${Unit}"
+        return result
+
+
+class PressureUnit(Enum):
+    PASCAL = "pascal"
+
+
+class Pressure:
+    unit: Optional[PressureUnit]
+    value: Optional[float]
+
+    def __init__(self, unit: Optional[PressureUnit], value: Optional[float]) -> None:
+        self.unit = unit
+        self.value = value
+
+    @staticmethod
+    def from_dict(obj: Any) -> 'Pressure':
+        assert isinstance(obj, dict)
+        unit = from_union([PressureUnit, from_none], obj.get("Unit"))
+        value = from_union([from_float, from_none], obj.get("Value"))
+        return Pressure(unit, value)
+
+    def to_dict(self) -> dict:
+        result: dict = {}
+        if self.unit is not None:
+            result["Unit"] = from_union([lambda x: to_enum(PressureUnit, x), from_none], self.unit)
+        if self.value is not None:
+            result["Value"] = from_union([to_float, from_none], self.value)
+        return result
+
+
+class TempUnit(Enum):
+    CELSIUS = "celsius"
+    KELVIN = "kelvin"
+
+
+class Temp:
+    unit: Optional[TempUnit]
+    value: Optional[float]
+
+    def __init__(self, unit: Optional[TempUnit], value: Optional[float]) -> None:
+        self.unit = unit
+        self.value = value
+
+    @staticmethod
+    def from_dict(obj: Any) -> 'Temp':
+        assert isinstance(obj, dict)
+        unit = from_union([TempUnit, from_none], obj.get("Unit"))
+        value = from_union([from_float, from_none], obj.get("Value"))
+        return Temp(unit, value)
+
+    def to_dict(self) -> dict:
+        result: dict = {}
+        if self.unit is not None:
+            result["Unit"] = from_union([lambda x: to_enum(TempUnit, x), from_none], self.unit)
+        if self.value is not None:
+            result["Value"] = from_union([to_float, from_none], self.value)
         return result
 
 
@@ -213,15 +270,15 @@ class StepEntryClass:
     amount: Optional[Amount]
     comment: Optional[str]
     gas: Optional[str]
-    pressure: Optional[Amount]
+    pressure: Optional[Pressure]
     reagent: Optional[str]
     solvent: Optional[str]
     stir: Optional[str]
-    temp: Optional[Amount]
+    temp: Optional[Temp]
     time: Optional[Amount]
     vessel: Optional[str]
 
-    def __init__(self, xml_type: Optional[XMLType], amount: Optional[Amount], comment: Optional[str], gas: Optional[str], pressure: Optional[Amount], reagent: Optional[str], solvent: Optional[str], stir: Optional[str], temp: Optional[Amount], time: Optional[Amount], vessel: Optional[str]) -> None:
+    def __init__(self, xml_type: Optional[XMLType], amount: Optional[Amount], comment: Optional[str], gas: Optional[str], pressure: Optional[Pressure], reagent: Optional[str], solvent: Optional[str], stir: Optional[str], temp: Optional[Temp], time: Optional[Amount], vessel: Optional[str]) -> None:
         self.xml_type = xml_type
         self.amount = amount
         self.comment = comment
@@ -241,11 +298,11 @@ class StepEntryClass:
         amount = from_union([Amount.from_dict, from_none], obj.get("_amount"))
         comment = from_union([from_str, from_none], obj.get("_comment"))
         gas = from_union([from_str, from_none], obj.get("_gas"))
-        pressure = from_union([Amount.from_dict, from_none], obj.get("_pressure"))
+        pressure = from_union([Pressure.from_dict, from_none], obj.get("_pressure"))
         reagent = from_union([from_str, from_none], obj.get("_reagent"))
         solvent = from_union([from_str, from_none], obj.get("_solvent"))
         stir = from_union([from_str, from_none], obj.get("_stir"))
-        temp = from_union([Amount.from_dict, from_none], obj.get("_temp"))
+        temp = from_union([Temp.from_dict, from_none], obj.get("_temp"))
         time = from_union([Amount.from_dict, from_none], obj.get("_time"))
         vessel = from_union([from_str, from_none], obj.get("_vessel"))
         return StepEntryClass(xml_type, amount, comment, gas, pressure, reagent, solvent, stir, temp, time, vessel)
@@ -261,7 +318,7 @@ class StepEntryClass:
         if self.gas is not None:
             result["_gas"] = from_union([from_str, from_none], self.gas)
         if self.pressure is not None:
-            result["_pressure"] = from_union([lambda x: to_class(Amount, x), from_none], self.pressure)
+            result["_pressure"] = from_union([lambda x: to_class(Pressure, x), from_none], self.pressure)
         if self.reagent is not None:
             result["_reagent"] = from_union([from_str, from_none], self.reagent)
         if self.solvent is not None:
@@ -269,7 +326,7 @@ class StepEntryClass:
         if self.stir is not None:
             result["_stir"] = from_union([from_str, from_none], self.stir)
         if self.temp is not None:
-            result["_temp"] = from_union([lambda x: to_class(Amount, x), from_none], self.temp)
+            result["_temp"] = from_union([lambda x: to_class(Temp, x), from_none], self.temp)
         if self.time is not None:
             result["_time"] = from_union([lambda x: to_class(Amount, x), from_none], self.time)
         if self.vessel is not None:

@@ -1,11 +1,12 @@
 import os
+from pathlib import Path
 from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
 from generated.procedure_data_structure import Procedure, SynthesisElement ,ReagentElement, Metadata, ComponentElement, \
     ProcedureClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
-    Hardware, Amount, Unit
+    Hardware, Amount, AmountUnit, Temp, TempUnit
 from generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
 from generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
@@ -55,7 +56,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                     relative_file_path=pxrd_file.path,
                     sample_holder=sample_holder,
                     x_ray_source=x_ray_source,
-                    other_metadata=pxrd_file.other_metadata,
+                    other_metadata=None,
                     purity=None
                 ))
 
@@ -106,7 +107,7 @@ def construct_procedure(experiment: Experiment, merge_steps: bool = False) -> Pr
         )
 
     time: Amount = format_time(experiment.duration, experiment.duration_unit)
-    temp: Amount = format_temperature(experiment.temperature)
+    temp: Temp = format_temperature(experiment.temperature)
     reaction.append(
         StepEntryClass(XMLType.HEAT_CHILL, temp=temp, time=time, amount=None, reagent=None, stir=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
     )
@@ -181,17 +182,17 @@ def construct_hardware(experiment: Experiment):
     )
 
 
-def format_temperature(temp: str) -> Amount:
+def format_temperature(temp: str) -> Temp:
     temperature_string: str = temp.replace("RT", "25")
     if "->" in temperature_string: # if temperature is a range
         start_temp: float = float(sympify(temperature_string.split("->")[0]))
         end_temp: float = float(sympify(temperature_string.split("->")[1]))
-        return Amount(value=float(end_temp), unit=Unit.CELSIUS)
+        return Temp(value=float(end_temp), unit=TempUnit.CELSIUS)
         # raise ValueError("Temperature ranges are not supported in MOFSY. Please provide a single temperature value.")
         # return str(start_temp) + " -> " + str(end_temp) + " C"
     else:
         temp: float = float(sympify(temperature_string))
-        return Amount(value=round(temp, 2), unit=Unit.CELSIUS)
+        return Temp(value=round(temp, 2), unit=TempUnit.CELSIUS)
 
 def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization:
     if (mass is None) or (mass_unit is None):
@@ -202,18 +203,18 @@ def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization
 def format_amount_mole(amount: float | None) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
-    return Amount(value=float(round(amount * 1000000,2)), unit=Unit.MICROMOLE)
+    return Amount(value=float(round(amount * 1000000,2)), unit=AmountUnit.MICROMOLE)
 
 def format_amount_volume(amount: float | None) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
     # original value from sciformation is in mL but we want to export to microLitre
     amount_in_ul = round(float(amount) * 1000, 3)
-    return Amount(value=amount_in_ul, unit=Unit.MICROLITRE)
+    return Amount(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
 
 def format_time(time: str, time_unit: TimeUnit) -> Amount:
     time_in_h = time_to_target_format(float(sympify(time)), time_unit, TimeUnit.H)
-    return Amount(value=round(time_in_h, 2), unit=Unit.HOUR)
+    return Amount(value=round(time_in_h, 2), unit=AmountUnit.HOUR)
 
 def format_length(length: str) -> AmountCharacterization:
     if length.endswith("mm"):

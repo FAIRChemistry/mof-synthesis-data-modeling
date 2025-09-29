@@ -5,7 +5,7 @@ from sympy import sympify
 
 from generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
-    Hardware, Amount, Unit, Role
+    Hardware, Amount, AmountUnit, Role, Temp, TempUnit, Pressure, PressureUnit
 from generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
 from generated.mil_2_json_from_excel_data_structure import Mil
 from utils import load_json, save_json
@@ -216,7 +216,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                 gas=None,
                 solvent=None,
                 comment=None,
-                pressure = Amount(value=0, unit=Unit.PASCAL) # hardcode, because it always is vacuum in every experiment
+                pressure = Pressure(value=0, unit=PressureUnit.PASCAL) # hardcode, because it always is vacuum in every experiment
             ),
         ]
 
@@ -280,30 +280,30 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
 
 
 
-def format_temperature(temp: str, temp_unit: str) -> Amount:
+def format_temperature(temp: str, temp_unit: str) -> Temp:
     if not temp_unit in ["C", "°C", "deg C"]:
         raise ValueError(f"Only Celsius is supported as temperature unit in converter, but got {temp_unit}")
     temperature_string: str = temp.replace("RT", "25")
     temp: float = float(sympify(temperature_string))
-    return Amount(value=round(temp, 2), unit=Unit.CELSIUS)
+    return Temp(value=round(temp, 2), unit=TempUnit.CELSIUS)
 
 def format_mass(mass: float|None, mass_unit: str) -> Amount:
     if (mass is None) or (mass_unit is None):
         return Amount(value=None, unit=None)
     if not mass_unit == "mg":
         raise ValueError(f"Only mg is supported as mass unit in converter, but got {mass_unit}")
-    return Amount(value=round(mass, 2), unit=Unit.MILLIGRAM)
+    return Amount(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
 
 
 def format_amount_volume(amount: float | None, volume_unit: str) -> Amount:
     if amount is None:
         return Amount(value=None, unit=None)
     if volume_unit.lower() == "ml":
-        return Amount(value=amount, unit=Unit.MILLILITRE)
+        return Amount(value=amount, unit=AmountUnit.MILLILITRE)
     elif volume_unit.lower() in ["l", "lt", "liter", "litre"]:
-        return Amount(value=round(amount, 2), unit=Unit.LITRE)
+        return Amount(value=round(amount, 2), unit=AmountUnit.LITRE)
     elif volume_unit.lower() in ["µl", "ul", "microliter", "microlitre", "μl"]:
-        return Amount(value=round(amount, 2), unit=Unit.MICROLITRE)
+        return Amount(value=round(amount, 2), unit=AmountUnit.MICROLITRE)
 
     raise ValueError(f"{volume_unit} is not supported as volume unit in converter")
 
@@ -311,13 +311,13 @@ def format_time(time: float | None, time_unit: str) -> Amount:
     if time is None or time_unit is None:
         return Amount(value=None, unit=None)
     if time_unit in ["h", "hour", "hours"]:
-        return Amount(value=round(time, 2), unit=Unit.HOUR)
+        return Amount(value=round(time, 2), unit=AmountUnit.HOUR)
     elif time_unit in ["min", "mins", "minute", "minutes"]:
-        return Amount(value=round(time, 2), unit=Unit.MINUTE)
+        return Amount(value=round(time, 2), unit=AmountUnit.MINUTE)
     elif time_unit in ["s", "sec", "secs", "second", "seconds"]:
-        return Amount(value=round(time, 2), unit=Unit.SECOND)
+        return Amount(value=round(time, 2), unit=AmountUnit.SECOND)
     elif time_unit in ["d", "day", "days"]:
-        return Amount(value=round(time, 2), unit=Unit.DAY)
+        return Amount(value=round(time, 2), unit=AmountUnit.DAY)
     else:
         raise ValueError(f"Unknown time unit in {time_unit}")
 
