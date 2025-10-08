@@ -1,8 +1,8 @@
 import os.path
 
-import mofsy_api as api
-from generated.procedure_data_structure import Procedure
-from generated.characterization_data_structure import ProductCharacterization
+import fairsynthesis_data_model.mofsy_api as api
+from fairsynthesis_data_model.generated.procedure_data_structure import Procedure
+from fairsynthesis_data_model.generated.characterization_data_structure import ProductCharacterization
 
 current_file_dir = __file__.rsplit('/', 1)[0]
 procedure_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/procedure_from_sciformation.json")

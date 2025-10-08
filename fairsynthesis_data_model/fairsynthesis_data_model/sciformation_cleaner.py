@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 from copy import deepcopy
 
-from utils import format_to_camel_case, load_json, save_json
-from use_case_specific.sciformation_cleaner_mocof1_llm import process_data_use_case_specific as process_data_with_llm
-from use_case_specific.sciformation_cleaner_mocof1 import process_data_use_case_specific as process_data
+from .utils import format_to_camel_case, load_json, save_json
+from .use_case_specific.sciformation_cleaner_mocof1_llm import process_data_use_case_specific as process_data_with_llm
+from .use_case_specific.sciformation_cleaner_mocof1 import process_data_use_case_specific as process_data
 
 important_item_attributes = [
     '@id',

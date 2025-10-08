@@ -3,13 +3,13 @@ from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
-from generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
+from .generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureWithDifferentSectionsClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Quantity, AmountUnit, Role, Empty, TempUnit, Pressure, PressureUnit, Time
-from generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
-from generated.mil_2_json_from_excel_data_structure import Mil
-from utils import load_json, save_json
-from pxrd_collector import collect_pxrd_files, filter_pxrd_files
+from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
+from .generated.mil_2_json_from_excel_data_structure import Mil
+from .utils import load_json, save_json
+from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
 def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Procedure, ProductCharacterization]:
