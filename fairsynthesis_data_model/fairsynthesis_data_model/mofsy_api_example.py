@@ -1,36 +1,36 @@
 import os.path
 
-from fairsynthesis_data_model import mofsy_api as api
-from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
-
-from fairsynthesis_data_model.generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+import mofsy_api as api
+from generated.procedure_data_structure import Procedure
+from generated.characterization_data_structure import ProductCharacterization
 
 current_file_dir = __file__.rsplit('/', 1)[0]
-mofsy_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/mofsy_from_sciformation.json")
-characterization_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
+procedure_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/procedure_from_sciformation.json")
+characterization_file_path = os.path.join(current_file_dir,
+                                          "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
 
-# Load MOFSY file into our MOFSYSchema class structure
-mofsy: Mofsy = api.load_mofsy(mofsy_file_path)
+# Load Procedure file into our Procedure class structure
+procedure: Procedure = api.load_mofsy(procedure_file_path)
 
 # Load Characterization file into our CharacterizationEntry class structure
 characterization: ProductCharacterization = api.load_characterization(characterization_file_path)
 
 # Access an individual experiment by id
 example_experiment_id = "KE-232"
-example_synthesis = api.get_synthesis_by_experiment_id(mofsy, example_experiment_id)
+example_synthesis = api.get_synthesis_by_experiment_id(procedure, example_experiment_id)
 example_characterization = api.get_characterization_by_experiment_id(characterization, example_experiment_id)
 api.print_synthesis_data(example_synthesis, example_characterization)
 
 # Access the product of an individual experiment
 example_experiment_id_2 = "KE-010"
-example_synthesis_2 = api.get_synthesis_by_experiment_id(mofsy, example_experiment_id_2)
+example_synthesis_2 = api.get_synthesis_by_experiment_id(procedure, example_experiment_id_2)
 example_characterization_2 = api.get_characterization_by_experiment_id(characterization, example_experiment_id_2)
 product_2 = api.find_product(example_synthesis_2, example_characterization_2)
 print(f"Experiment ID: {example_experiment_id}")
 api.print_product(product_2)
 
 # Access and count all experiments
-synthesis_list = api.get_synthesis_list(mofsy)
+synthesis_list = api.get_synthesis_list(procedure)
 print(f"Total number of experiments: {len(synthesis_list)}")
 
 # Compute the average number of PXRD files per experiment

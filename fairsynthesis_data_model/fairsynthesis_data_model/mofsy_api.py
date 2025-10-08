@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-from generated.procedure_data_structure import Procedure, ReagentElement, SynthesisElement, Role, Amount
+from generated.procedure_data_structure import Procedure, ReagentElement, SynthesisElement, Role, Quantity
 from generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
 from pxrd_collector import PXRDFile
 
@@ -71,7 +71,7 @@ def find_corresponding_pxrd_files(characterization: CharacterizationEntry) -> Li
     return result
 
 
-def find_product_mass(characterization: CharacterizationEntry) -> Amount | None:
+def find_product_mass(characterization: CharacterizationEntry) -> Quantity | None:
     # Filter characterizations by whether they have the weight attribute
     mass_characterizations = [c for c in characterization.characterization if c.weight]
     if mass_characterizations:
@@ -95,23 +95,18 @@ def print_reagents(synthesis: SynthesisElement):
 
 def print_procedure(synthesis: SynthesisElement):
     print("Procedure:")
-    # The procedure either has all steps in the "step" array, or it is split into "prep", "reaction", and "workup"
-    if synthesis.procedure.step:
-        for step in synthesis.procedure.step:
-            print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Stir: {step.stir}, Temp: {step.temp}, Time: {step.time})")
-    else:
-        if synthesis.procedure.prep:
-            print("Prep Steps:")
-            for step in synthesis.procedure.prep.step:
-                print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Stir: {step.stir}, Temp: {step.temp}, Time: {step.time})")
-        if synthesis.procedure.reaction:
-            print("Reaction Steps:")
-            for step in synthesis.procedure.reaction.step:
-                print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Stir: {step.stir}, Temp: {step.temp}, Time: {step.time})")
-        if synthesis.procedure.workup:
-            print("Workup Steps:")
-            for step in synthesis.procedure.workup.step:
-                print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Stir: {step.stir}, Temp: {step.temp}, Time: {step.time})")
+    if synthesis.procedure.prep:
+        print("Prep Steps:")
+        for step in synthesis.procedure.prep.step:
+            print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, Comment: {step.comment})")
+    if synthesis.procedure.reaction:
+        print("Reaction Steps:")
+        for step in synthesis.procedure.reaction.step:
+            print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, Comment: {step.comment})")
+    if synthesis.procedure.workup:
+        print("Workup Steps:")
+        for step in synthesis.procedure.workup.step:
+            print(f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, Comment: {step.comment})")
 
 def print_product(product: Product):
     if product:
