@@ -1,6 +1,6 @@
 from fairsynthesis_data_model import mofsy_api as api
-from fairsynthesis_data_model.generated.mofsy_data_structure import (
-    Mofsy,
+from fairsynthesis_data_model.generated.procedure_data_structure import (
+    Procedure,
     SynthesisElement,
 )
 from fairsynthesis_data_model.pxrd_collector import PXRDFile

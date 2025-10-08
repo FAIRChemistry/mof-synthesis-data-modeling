@@ -8,7 +8,7 @@ app = marimo.App(width="medium")
 def _():
     import marimo as mo
     from fairsynthesis_data_model import mofsy_api as api
-    from fairsynthesis_data_model.generated.mofsy_data_structure import Mofsy
+    from fairsynthesis_data_model.generated.procedure_data_structure import Procedure
     return api, mo
 
 
@@ -35,7 +35,7 @@ def _():
 @app.cell
 def _(api, mo):
     mofsy = api.load_mofsy(
-        mo.notebook_dir() / "../../data/generated/mofsy_from_sciformation.json"
+        mo.notebook_dir() / "../../data/MOCOF-1/generated/procedure_from_sciformation.json"
     )
     return (mofsy,)
 
