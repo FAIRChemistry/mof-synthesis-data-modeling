@@ -1,9 +1,9 @@
 import json
 from typing import List
 
-from generated.procedure_data_structure import Procedure, ReagentElement, SynthesisElement, Role, Quantity
-from generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
-from pxrd_collector import PXRDFile
+from .generated.procedure_data_structure import Procedure, ReagentElement, SynthesisElement, Role, Quantity
+from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+from .pxrd_collector import PXRDFile
 
 class Product:
     def __init__(self, name: str, mass: str|None, pxrd_files: List[PXRDFile]):
