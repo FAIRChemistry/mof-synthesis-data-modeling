@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.4"
+__generated_with = "0.16.5"
 app = marimo.App(width="medium")
 
 
@@ -42,7 +42,7 @@ def _(Path, mo):
 
             The uploaded files schould each provide two columns. 
             The first column features the angle in the form of $2 \\theta / °$, the second column includes the information about CPS intensity.
-            An example file can be downloaded here: {mo.download(Path("public/PXRD_KE-163.xyd").read_text(), "example.csv")}
+            An example file can be downloaded here: {mo.download(Path(mo.notebook_dir() / "public/PXRD_KE-163.xyd").read_text(), "example.csv")}
             ///
             """
         )
@@ -57,7 +57,6 @@ def _(Path, mo):
             {_file_format}
             """)
         return _
-
     return (file_picker,)
 
 
@@ -93,6 +92,7 @@ def _(
         ui_file_jxdl.value,
     ]
 
+
     def any_file(
         file_ui=[ui_files_samples, ui_files_pure, ui_files_blank, ui_file_jxdl],
     ):
@@ -101,6 +101,7 @@ def _(
 
         return any([_file_ui.value for _file_ui in file_ui])
 
+
     def all_files(
         file_ui=[ui_files_samples, ui_files_pure, ui_files_blank, ui_file_jxdl],
     ):
@@ -108,6 +109,7 @@ def _(
             return True if file_ui.value else False
 
         return all([_file_ui.value for _file_ui in file_ui])
+
 
     if not all_files():
         _ = _
@@ -160,8 +162,10 @@ def _(baseline_correction, dataclass, io, normalization, np, pl):
         def dict_from_marimo_file(cls, marimo_file):
             return {_.name: cls(_.name, _.contents) for _ in marimo_file.value}
 
+
     class BlankMeasurement(PXRDMeasurement):
         pass
+
 
     class PureProduct(PXRDMeasurement):
         @property
@@ -175,6 +179,7 @@ def _(baseline_correction, dataclass, io, normalization, np, pl):
         @property
         def corrected(self):
             return baseline_correction(self)
+
 
     class SampleProduct(PXRDMeasurement):
         pure_products: list[PureProduct]
@@ -223,7 +228,6 @@ def _(baseline_correction, dataclass, io, normalization, np, pl):
             cls, marimo_file, jxdl, pure_prducts_dict, blank_measurements_dict
         ):
             return {_.name: cls(_.name, _.contents) for _ in marimo_file.value}
-
     return BlankMeasurement, PXRDMeasurement, PureProduct, SampleProduct
 
 
@@ -366,9 +370,9 @@ def _(pl):
                 )
                 .with_columns(
                     [
-                        (
-                            pl.col(_key) - pl.col(sample.blank_measurement.filename)
-                        ).alias(_key)
+                        (pl.col(_key) - pl.col(sample.blank_measurement.filename)).alias(
+                            _key
+                        )
                         for _key in sample.data.columns
                         if _key != "angle"
                     ]
@@ -378,7 +382,6 @@ def _(pl):
             if sample.blank_measurement
             else sample.data
         )
-
     return
 
 
@@ -428,9 +431,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo, ui_normalization_cu_reset):
     _ = ui_normalization_cu_reset.value
-    ui_normalization_cu_range_start = mo.ui.number(
-        start=0, stop=180, step=0.1, value=38
-    )
+    ui_normalization_cu_range_start = mo.ui.number(start=0, stop=180, step=0.1, value=38)
     ui_normalization_cu_range_end = mo.ui.number(start=0, stop=180, step=0.1, value=40)
 
     mo.md(
@@ -446,9 +447,7 @@ def _(mo, ui_normalization_cu_reset):
 @app.cell(hide_code=True)
 def _(mo, ui_normalization_co_reset):
     _ = ui_normalization_co_reset.value
-    ui_normalization_co_range_start = mo.ui.number(
-        start=0, stop=180, step=0.1, value=1.5
-    )
+    ui_normalization_co_range_start = mo.ui.number(start=0, stop=180, step=0.1, value=1.5)
     ui_normalization_co_range_end = mo.ui.number(start=0, stop=180, step=0.1, value=1.8)
 
     mo.md(
@@ -496,7 +495,6 @@ def _(
                 if _key != "angle"
             ]
         )
-
     return (normalization,)
 
 
@@ -532,6 +530,7 @@ def _(Baseline, np):
     # if baselines do not fit your problem, try tweaking the parameters in baseline_fitter.snip
     # or use a different algorithm from the pybaselines package
 
+
     def _baseline_determination(x, y):
         _bool = np.isnan(y)
         _y_org = y.copy()
@@ -544,6 +543,7 @@ def _(Baseline, np):
         y_detrend[~_bool] = y - base
         return y_detrend
 
+
     def baseline_correction(sample):
         _data = sample.normalized
         return _data.with_columns(
@@ -555,7 +555,6 @@ def _(Baseline, np):
                 for _key in _data.columns[1:]
             }
         )
-
     return (baseline_correction,)
 
 
@@ -699,6 +698,7 @@ def _():
 def _(np):
     from scipy.optimize import nnls as _nnls
 
+
     def composition(sample):
         phases = {_.filename: _.corrected.to_numpy().T[1] for _ in sample.pure_products}
         phases_list = list(phases)
@@ -728,7 +728,6 @@ def _(np):
         return {key: weight for key, weight in zip(phases_list, weights)} | {
             "unknown": 1 - np.sum(weights)
         }
-
     return (composition,)
 
 
@@ -750,9 +749,7 @@ def _(composition, mo, plt, sample_selected_for_plot):
             )
             _sum = 0
             for _pure in _val.pure_products:
-                _sum += (
-                    _val.composition[_pure.filename] * _pure.corrected.to_numpy()[:, 1]
-                )
+                _sum += _val.composition[_pure.filename] * _pure.corrected.to_numpy()[:, 1]
             _ax[1].plot(
                 _val.pure_products[0].corrected.to_numpy()[:, 0],
                 _sum,
@@ -943,6 +940,7 @@ def _(mo):
             ///"""
         )
 
+
     table = lambda x: mo.ui.table(x, selection=None, show_column_summaries=False)
     return
 
@@ -950,7 +948,6 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
-
     return (mo,)
 
 
@@ -968,7 +965,6 @@ def _():
     from dataclasses import dataclass
     import json
     import seaborn as sns
-
     return Baseline, Path, dataclass, io, json, np, pl, plt
 
 
