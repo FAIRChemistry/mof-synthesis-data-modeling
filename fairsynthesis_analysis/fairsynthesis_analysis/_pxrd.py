@@ -69,14 +69,14 @@ class PXRDSpectrum(PXRDFile):
         if two_theta is None or intensity is None:
             pxrd_path = Path(__file__).parent.parent / pxrd_file.path
             pxrd_data = np.loadtxt(pxrd_path)
-            
+
             def _convert_Co_to_Cu(two_theta: np.ndarray) -> np.ndarray:
                 """Convert 2θ from Co-Kα1 to Cu-Kα1."""
                 λ_Cu = 1.540562  # Å
                 λ_Co = 1.788965  # Å
                 return np.degrees(
                     2 * np.arcsin(λ_Cu / λ_Co * np.sin(np.radians(two_theta) / 2))
-        )
+                )
 
             if pxrd_file.xray_source == "Co-Kα1":
                 two_theta = _convert_Co_to_Cu(pxrd_data[:, 0])
@@ -92,7 +92,6 @@ class PXRDSpectrum(PXRDFile):
 
         self.two_theta = np.asarray(two_theta)
         self.intensity = np.asarray(intensity)
-
 
     def subtract_background(self, background=None, normalize=False) -> "PXRDSpectrum":
         """Subtracts a background from the intensity values.
@@ -170,7 +169,6 @@ class PXRDSpectrum(PXRDFile):
 
         def _baseline_correction(x, y):
             _bool = np.isnan(y)
-            _y_org = y.copy()
             y = y[~np.isnan(y)].copy()
             baseline_fitter = pb.Baseline(x_data=x[~_bool])
             base, _ = baseline_fitter.snip(
@@ -194,22 +192,15 @@ class PXRDSpectrum(PXRDFile):
         Returns:
             dict[str, float]: A dictionary of product names and their corresponding yields.
         """
-        _products = {
-            k: _extract_corresponding_reference(self, v) if isinstance(v, list) else v  # type: ignore
-            for k, v in products.items()
-        }
-        for k, v in _products.items():
-            if v is None:
-                raise ValueError(
-                    f"No suitable product file found for PXRD file: {self.path}"
-                )
 
         def _linear_combination_shortening(x, y, components):
             phase_keys = list(components)
             if not phase_keys:
                 return {"unknown": 1.0}
 
-            phase_arrays = [np.asarray(components[name], dtype=float) for name in phase_keys]
+            phase_arrays = [
+                np.asarray(components[name], dtype=float) for name in phase_keys
+            ]
             target = np.asarray(y, dtype=float)
 
             min_len = min(target.size, *[arr.size for arr in phase_arrays])
@@ -236,6 +227,16 @@ class PXRDSpectrum(PXRDFile):
                 contributions = {k: v / total for k, v in contributions.items()}
             return contributions
 
+        _products = {
+            k: _extract_corresponding_reference(self, v) if isinstance(v, list) else v  # type: ignore
+            for k, v in products.items()
+        }
+        for k, v in _products.items():
+            if v is None:
+                raise ValueError(
+                    f"No suitable product file found for PXRD file: {self.path}"
+                )
+
         intensities = _linear_combination_shortening(
             self.two_theta,
             self.intensity,
@@ -243,7 +244,7 @@ class PXRDSpectrum(PXRDFile):
                 k: np.interp(self.two_theta, v.two_theta, v.intensity)  # type: ignore
                 for k, v in _products.items()
             },
-        ) 
+        )
         return intensities
 
     def _display_(self):
