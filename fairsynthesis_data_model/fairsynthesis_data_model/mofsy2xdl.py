@@ -77,7 +77,8 @@ def dict_to_xml(root_tag, data):
         build_element(root, key, val)
     return etree.tostring(root, pretty_print=True, encoding="unicode")
 
-if __name__ == '__main__':
+
+def mofsy2xdl():
     current_file_dir = __file__.rsplit('/', 1)[0]
 
     # sciformation case
@@ -91,3 +92,8 @@ if __name__ == '__main__':
     xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_2_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL_2.xml'))
+
+
+
+if __name__ == '__main__':
+    mofsy2xdl()

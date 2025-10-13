@@ -6,7 +6,9 @@ from sympy import sympify
 from .generated.procedure_data_structure import Procedure, SynthesisElement ,ReagentElement, Metadata, ComponentElement, \
     ProcedureWithDifferentSectionsClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Quantity, AmountUnit, Empty , TempUnit, Time, Solvent, Gas
-from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
+from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
+    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
+    Unit as UnitCharacterization, Weighing, Pxrd
 from .generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
 from .mofsy_utils import rxn_role_to_xdl_role
@@ -32,15 +34,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         experiment_nr = str(experiment.nr_in_lab_journal).zfill(3)
         experiment_id = (experiment.code if experiment.code else default_code) + "-" + experiment_nr
 
-        product_characterizations: List[Characterization] = [Characterization(
-            weight=reaction_product_mass,
-            relative_file_path=None,
-            sample_holder=None,
-            x_ray_source=None,
-            other_metadata=None,
-            purity=None
-        )]
-
+        pxrd_list: List[Pxrd] = []
         experiment_pxrd_files = filter_pxrd_files(experiment_id, pxrd_files)
         if experiment_pxrd_files:
             for pxrd_file in experiment_pxrd_files:
@@ -50,16 +44,19 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                     diameter=diameter,
                     type=pxrd_file.sample_holder_shape
                 )
-                product_characterizations.append(Characterization(
-                    weight=None,
+                pxrd_list.append(Pxrd(
                     relative_file_path=pxrd_file.path,
                     sample_holder=sample_holder,
                     x_ray_source=x_ray_source,
                     other_metadata=None,
-                    purity=None
                 ))
 
-        characterization_list.append(CharacterizationEntry(product_characterizations, MetadataCharacterization(description=experiment_id)))
+        characterization_list.append(CharacterizationEntry(Characterization(
+            purity=[],
+            pxrd = pxrd_list,
+            weight=[ Weighing(reaction_product_mass) ]
+
+        ), MetadataCharacterization(description=experiment_id)))
 
         synthesis = SynthesisElement(
             metadata= Metadata(
@@ -219,7 +216,7 @@ def format_length(length: str) -> AmountCharacterization:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-if __name__ == '__main__':
+def sciformation2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'pxrd')
@@ -242,3 +239,5 @@ if __name__ == '__main__':
 
 
 
+if __name__ == '__main__':
+    sciformation2mofsy()

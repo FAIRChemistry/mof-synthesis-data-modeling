@@ -6,7 +6,9 @@ from sympy import sympify
 from .generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureWithDifferentSectionsClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
     Hardware, Quantity, AmountUnit, Role, Empty, TempUnit, Pressure, PressureUnit, Time
-from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, Unit as UnitCharacterization
+from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
+    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
+    Unit as UnitCharacterization, Purity, Pxrd
 from .generated.mil_2_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
@@ -226,16 +228,8 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
             reaction=FlatProcedureClass(step=reaction_steps),
             workup=FlatProcedureClass(step=workup_steps))
 
-
-        product_characterizations: List[Characterization] = [Characterization(
-            weight=None,
-            relative_file_path=None,
-            sample_holder=None,
-            x_ray_source=None,
-            other_metadata=None,
-            purity=phase_purity,
-        )]
-
+        # Collect all PXRD files for this experiment
+        pxrd_list = []
         experiment_pxrd_files = filter_pxrd_files(experiment_id, pxrd_files)
         if experiment_pxrd_files:
             for pxrd_file in experiment_pxrd_files:
@@ -245,16 +239,18 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     diameter=diameter,
                     type=pxrd_file.sample_holder_shape
                 )
-                product_characterizations.append(Characterization(
-                    weight=None,
+                pxrd_list.append(Pxrd(
                     relative_file_path=pxrd_file.path,
                     sample_holder=sample_holder,
                     x_ray_source=x_ray_source,
-                    other_metadata=pxrd_file.other_metadata,
-                    purity=None
+                    other_metadata=pxrd_file.other_metadata
                 ))
 
-        characterization_list.append(CharacterizationEntry(product_characterizations, MetadataCharacterization(description=experiment_id)))
+        characterization_list.append(CharacterizationEntry(characterization=Characterization(
+            purity=[ Purity(phase_purity) ],
+            pxrd=pxrd_list,
+            weight=[]
+        ), metadata=MetadataCharacterization(description=experiment_id)))
 
         synthesis = SynthesisElement(
             metadata= Metadata(
@@ -331,7 +327,7 @@ def format_length(length: str) -> AmountCharacterization:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-if __name__ == '__main__':
+def mil2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL_2.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'PXRD')
@@ -352,4 +348,6 @@ if __name__ == '__main__':
     save_json(result_dict_characterization, result_file_path_characterization)
 
 
+if __name__ == '__main__':
+    mil2mofsy()
 

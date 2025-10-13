@@ -1,9 +1,14 @@
-from enum import Enum
 from typing import Optional, Any, List, TypeVar, Type, cast, Callable
+from enum import Enum
 
 
 T = TypeVar("T")
 EnumT = TypeVar("EnumT", bound=Enum)
+
+
+def from_bool(x: Any) -> bool:
+    assert isinstance(x, bool)
+    return x
 
 
 def from_none(x: Any) -> Any:
@@ -45,14 +50,28 @@ def to_class(c: Type[T], x: Any) -> dict:
     return cast(Any, x).to_dict()
 
 
-def from_bool(x: Any) -> bool:
-    assert isinstance(x, bool)
-    return x
-
-
 def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
     assert isinstance(x, list)
     return [f(y) for y in x]
+
+
+class Purity:
+    purity: Optional[bool]
+
+    def __init__(self, purity: Optional[bool]) -> None:
+        self.purity = purity
+
+    @staticmethod
+    def from_dict(obj: Any) -> 'Purity':
+        assert isinstance(obj, dict)
+        purity = from_union([from_bool, from_none], obj.get("_purity"))
+        return Purity(purity)
+
+    def to_dict(self) -> dict:
+        result: dict = {}
+        if self.purity is not None:
+            result["_purity"] = from_union([from_bool, from_none], self.purity)
+        return result
 
 
 class Unit(Enum):
@@ -138,47 +157,80 @@ class XRaySource(Enum):
     CU_KΑ1 = "Cu Kα1"
 
 
-class Characterization:
-    relative_file_path: Optional[str]
+class Pxrd:
+    relative_file_path: str
     x_ray_source: Optional[XRaySource]
     other_metadata: Optional[str]
     sample_holder: Optional[SampleHolder]
-    weight: Optional[Quantity]
-    purity: Optional[bool]
 
-    def __init__(self, relative_file_path: Optional[str], x_ray_source: Optional[XRaySource], other_metadata: Optional[str], sample_holder: Optional[SampleHolder], weight: Optional[Quantity], purity: Optional[bool]) -> None:
+    def __init__(self, relative_file_path: str, x_ray_source: Optional[XRaySource], other_metadata: Optional[str], sample_holder: Optional[SampleHolder]) -> None:
         self.relative_file_path = relative_file_path
         self.x_ray_source = x_ray_source
         self.other_metadata = other_metadata
         self.sample_holder = sample_holder
-        self.weight = weight
-        self.purity = purity
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Characterization':
+    def from_dict(obj: Any) -> 'Pxrd':
         assert isinstance(obj, dict)
-        relative_file_path = from_union([from_str, from_none], obj.get("_relative_file_path"))
+        relative_file_path = from_str(obj.get("_relative_file_path"))
         x_ray_source = from_union([XRaySource, from_none], obj.get("_x-ray_source"))
         other_metadata = from_union([from_str, from_none], obj.get("other_metadata"))
         sample_holder = from_union([SampleHolder.from_dict, from_none], obj.get("sample_holder"))
-        weight = from_union([Quantity.from_dict, from_none], obj.get("_weight"))
-        purity = from_union([from_bool, from_none], obj.get("_purity"))
-        return Characterization(relative_file_path, x_ray_source, other_metadata, sample_holder, weight, purity)
+        return Pxrd(relative_file_path, x_ray_source, other_metadata, sample_holder)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.relative_file_path is not None:
-            result["_relative_file_path"] = from_union([from_str, from_none], self.relative_file_path)
+        result["_relative_file_path"] = from_str(self.relative_file_path)
         if self.x_ray_source is not None:
             result["_x-ray_source"] = from_union([lambda x: to_enum(XRaySource, x), from_none], self.x_ray_source)
         if self.other_metadata is not None:
             result["other_metadata"] = from_union([from_str, from_none], self.other_metadata)
         if self.sample_holder is not None:
             result["sample_holder"] = from_union([lambda x: to_class(SampleHolder, x), from_none], self.sample_holder)
-        if self.weight is not None:
-            result["_weight"] = from_union([lambda x: to_class(Quantity, x), from_none], self.weight)
-        if self.purity is not None:
-            result["_purity"] = from_union([from_bool, from_none], self.purity)
+        return result
+
+
+class Weighing:
+    weight: Quantity
+
+    def __init__(self, weight: Quantity) -> None:
+        self.weight = weight
+
+    @staticmethod
+    def from_dict(obj: Any) -> 'Weighing':
+        assert isinstance(obj, dict)
+        weight = Quantity.from_dict(obj.get("_weight"))
+        return Weighing(weight)
+
+    def to_dict(self) -> dict:
+        result: dict = {}
+        result["_weight"] = to_class(Quantity, self.weight)
+        return result
+
+
+class Characterization:
+    purity: List[Purity]
+    pxrd: List[Pxrd]
+    weight: List[Weighing]
+
+    def __init__(self, purity: List[Purity], pxrd: List[Pxrd], weight: List[Weighing]) -> None:
+        self.purity = purity
+        self.pxrd = pxrd
+        self.weight = weight
+
+    @staticmethod
+    def from_dict(obj: Any) -> 'Characterization':
+        assert isinstance(obj, dict)
+        purity = from_list(Purity.from_dict, obj.get("purity"))
+        pxrd = from_list(Pxrd.from_dict, obj.get("pxrd"))
+        weight = from_list(Weighing.from_dict, obj.get("weight"))
+        return Characterization(purity, pxrd, weight)
+
+    def to_dict(self) -> dict:
+        result: dict = {}
+        result["purity"] = from_list(lambda x: to_class(Purity, x), self.purity)
+        result["pxrd"] = from_list(lambda x: to_class(Pxrd, x), self.pxrd)
+        result["weight"] = from_list(lambda x: to_class(Weighing, x), self.weight)
         return result
 
 
@@ -201,23 +253,23 @@ class Metadata:
 
 
 class CharacterizationEntry:
-    characterization: List[Characterization]
+    characterization: Characterization
     metadata: Metadata
 
-    def __init__(self, characterization: List[Characterization], metadata: Metadata) -> None:
+    def __init__(self, characterization: Characterization, metadata: Metadata) -> None:
         self.characterization = characterization
         self.metadata = metadata
 
     @staticmethod
     def from_dict(obj: Any) -> 'CharacterizationEntry':
         assert isinstance(obj, dict)
-        characterization = from_list(Characterization.from_dict, obj.get("Characterization"))
+        characterization = Characterization.from_dict(obj.get("Characterization"))
         metadata = Metadata.from_dict(obj.get("Metadata"))
         return CharacterizationEntry(characterization, metadata)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Characterization"] = from_list(lambda x: to_class(Characterization, x), self.characterization)
+        result["Characterization"] = to_class(Characterization, self.characterization)
         result["Metadata"] = to_class(Metadata, self.metadata)
         return result
 

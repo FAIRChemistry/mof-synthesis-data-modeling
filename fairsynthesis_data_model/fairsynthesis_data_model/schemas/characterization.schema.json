@@ -1,21 +1,42 @@
 {
   "$defs": {
-    "Characterization": {
-      "oneOf": [
-        {
-          "$ref": "#/$defs/pxrd"
+    "CharacterizationEntry": {
+      "title": "CharacterizationEntry",
+      "properties": {
+        "Metadata": {
+          "$ref": "#/$defs/Metadata"
         },
-        {
-          "$ref": "#/$defs/weighing"
+        "Characterization": {
+      "properties": {
+        "pxrd": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pxrd"
+          }
         },
-        {
-          "$ref": "#/$defs/purity"
+        "weight": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/weighing"
+          }
+        },
+        "purity": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/purity"
+          }
         }
+      },
+      "required": ["pxrd", "weight", "purity"],
+      "type": "object"
+        }
+      },
+      "required": [
+        "Metadata",
+        "Characterization"
       ],
-      "title": "Characterization",
       "type": "object"
     },
-    "HardwareComponents": {},
     "Metadata": {
       "properties": {
         "_description": {
@@ -26,6 +47,67 @@
         "_description"
       ],
       "type": "object"
+    },
+    "pxrd": {
+      "properties": {
+        "_relative_file_path": {
+          "format": "uri",
+          "type": "string"
+        },
+        "_x-ray_source": {
+          "$ref": "#/$defs/_x-ray_source"
+        },
+        "sample_holder": {
+          "$ref": "#/$defs/SampleHolder"
+        },
+        "other_metadata": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_relative_file_path"
+      ],
+      "title": "PXRD",
+      "type": "object"
+    },
+    "SampleHolder": {
+      "properties": {
+        "_diameter": {
+          "$ref": "#/$defs/Quantity"
+        },
+        "_type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "_x-ray_source": {
+      "enum": [
+        "Co Kα1",
+        "Cu Kα1"
+      ],
+      "type": "string"
+    },
+    "weighing": {
+      "properties": {
+        "_weight": {
+          "$ref": "#/$defs/Quantity"
+        }
+      },
+      "required": [
+        "_weight"
+      ],
+      "title": "weighing",
+      "type": "object"
+    },
+    "purity": {
+      "title": "purity",
+      "type": "object",
+      "properties": {
+        "_purity": {
+          "type": "boolean"
+        }
+      }
     },
     "Quantity": {
       "title": "Quantity",
@@ -68,90 +150,8 @@
         }
       },
       "type": "object"
-    },
-    "SampleHolder": {
-      "properties": {
-        "_diameter": {
-          "$ref": "#/$defs/Quantity"
-        },
-        "_type": {
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "CharacterizationEntry": {
-      "title": "CharacterizationEntry",
-      "properties": {
-        "Metadata": {
-          "$ref": "#/$defs/Metadata"
-        },
-        "Characterization": {
-          "items": {
-            "$ref": "#/$defs/Characterization"
-          },
-          "title": "Characterization",
-          "type": "array"
-        }
-      },
-      "required": [
-        "Metadata",
-        "Characterization"
-      ],
-      "type": "object"
-    },
-    "_x-ray_source": {
-      "enum": [
-        "Co Kα1",
-        "Cu Kα1"
-      ],
-      "type": "string"
-    },
-    "pxrd": {
-      "properties": {
-        "_relative_file_path": {
-          "format": "uri",
-          "type": "string"
-        },
-        "_x-ray_source": {
-          "$ref": "#/$defs/_x-ray_source"
-        },
-        "sample_holder": {
-          "$ref": "#/$defs/SampleHolder"
-        },
-        "other_metadata": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "_relative_file_path"
-      ],
-      "title": "PXRD",
-      "type": "object"
-    },
-    "weighing": {
-      "properties": {
-        "_weight": {
-          "$ref": "#/$defs/Quantity"
-        }
-      },
-      "required": [
-        "_weight"
-      ],
-      "title": "weighing",
-      "type": "object"
-    },
-    "purity": {
-      "title": "purity",
-      "type": "object",
-      "properties": {
-        "_purity": {
-          "type": "boolean"
-        }
-      }
     }
   },
-  "definitions": {},
   "properties": {
     "ProductCharacterization": {
       "items": {
