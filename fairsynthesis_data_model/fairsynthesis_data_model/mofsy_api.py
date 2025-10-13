@@ -63,7 +63,7 @@ def find_product(synthesis: SynthesisElement, product_characterization: Characte
 
 def find_corresponding_pxrd_files(characterization: CharacterizationEntry) -> List[PXRDFile]:
     result = []
-    for ch in characterization.characterization:
+    for ch in characterization.characterization.pxrd:
         if ch.relative_file_path and ch.x_ray_source and ch.sample_holder and characterization.metadata.description:
                 result.append(PXRDFile(
                     ch.relative_file_path
@@ -73,7 +73,7 @@ def find_corresponding_pxrd_files(characterization: CharacterizationEntry) -> Li
 
 def find_product_mass(characterization: CharacterizationEntry) -> Quantity | None:
     # Filter characterizations by whether they have the weight attribute
-    mass_characterizations = [c for c in characterization.characterization if c.weight]
+    mass_characterizations = [c for c in characterization.characterization.weight if c.weight]
     if mass_characterizations:
         # Return the weight of the first characterization that has it
         return mass_characterizations[0].weight
