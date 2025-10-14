@@ -61,7 +61,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         synthesis = SynthesisElement(
             metadata= Metadata(
                 description= experiment_id,
-                product= None,
+                product= reaction_product.molecule_name,
                 product_inchi= None
             ),
             hardware= hardware,
