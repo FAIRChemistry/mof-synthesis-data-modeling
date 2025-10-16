@@ -24,14 +24,17 @@ import {
     StepEntryObject,
     XMLType
 } from "./generated/procedure";
+import { MPIFParameters, Convert as ConvertToMpifParams} from "./generated/mpif_params"
 import * as fs from 'fs';
 import path from "path";
+import Ajv from 'ajv';
 
 
 // __dirname gives the directory of the current script
 const currentDir = __dirname;
 const rootDirectory = path.join(currentDir, "..", "..", "..");
 const dataDirectory = path.join(rootDirectory, "data");
+const schemasDirectory = path.join(rootDirectory, "fairsynthesis_data_model", "fairsynthesis_data_model", "schemas");
 
 
 function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reagentId: string): StepEntryObject | undefined {
@@ -84,28 +87,28 @@ function stringifySteps(steps: StepEntryObject[]): string {
     for (const step of steps) {
         switch (step.$xml_type) {
             case XMLType.Add:
-                result += `Add ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''} of ${step._reagent || step._solvent}\n`;
+                result += `Add ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''} of ${step._reagent || step._solvent}. `;
                 break;
             case XMLType.HeatChill:
-                result += `Heat/Chill to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}\n`;
+                result += `Heat/Chill to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Dry:
-                result += `Dry for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}\n`;
+                result += `Dry for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.EvacuateAndRefill:
-                result += `Evacuate and refill with ${step._gas || ''}\n`;
+                result += `Evacuate and refill with ${step._gas || ''}. `;
                 break;
             case XMLType.Wait:
-                result += `Wait for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}\n`;
+                result += `Wait for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Evaporate:
-                result += `Evaporate solvent\n`;
+                result += `Evaporate solvent. `;
                 break;
             case XMLType.Sonicate:
-                result += `Sonicate for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}\n`;
+                result += `Sonicate for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.WashSolid:
-                result += `Wash solid with ${step._solvent || ''} ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''}\n`;
+                result += `Wash solid with ${step._solvent || ''} ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''}. `;
                 break;
 
 
@@ -114,10 +117,21 @@ function stringifySteps(steps: StepEntryObject[]): string {
     return result;
 }
 
-function mofsyToMpif(inputProcedure: string, inputCharacterization: string, outputFolder: string) {
+function mofsyToMpif(inputProcedurePath: string, inputCharacterizationPath: string, outputFolderPath: string, inputParamsPath: string, paramsSchemaPath: string) {
 
-const procedureJsonFile = fs.readFileSync(inputProcedure, 'utf-8');
-const characterizationJsonFile = fs.readFileSync(inputCharacterization, 'utf-8');
+const procedureJsonFile = fs.readFileSync(inputProcedurePath, 'utf-8');
+const characterizationJsonFile = fs.readFileSync(inputCharacterizationPath, 'utf-8');
+
+const ajv = new Ajv();
+const paramsSchema = JSON.parse(fs.readFileSync(paramsSchemaPath, 'utf-8'));
+const paramsDataString = fs.readFileSync(inputParamsPath, 'utf-8');
+const paramsData = JSON.parse(paramsDataString);
+const validate = ajv.compile(paramsSchema);
+if (!validate(paramsData)) {
+  console.log(validate.errors);
+    throw new Error("MPIF Parameters JSON file is not valid against the schema.");
+}
+const mpifParams: MPIFParameters = ConvertToMpifParams.toMPIFParameters(paramsDataString);
 
 // reads in procedure and characterization JSON files and writes the corresponding data into the MPIFData structure, which is then converted to a string in MPIF format and written to a file
 // the procedure and characterization values are actually objects of lists of procedure and characterization entries from many experiments.
@@ -142,7 +156,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     let reactionTemp = -1;
     let reactionTime = -1;
     let reactionTimeUnit: '' | 's' | 'min' | 'h' | 'days' = '';
-    let reactionNote = undefined;
+    let reactionNote = mpifParams.synthesisGeneral.reactionNote || '';
 
     const heatStep = findStepByType(synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject, XMLType.HeatChill);
     if (heatStep) {
@@ -159,7 +173,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
 
         if (heatStep._comment) {
-            reactionNote = heatStep._comment;
+            reactionNote += heatStep._comment;
         }
     }
 
@@ -235,67 +249,67 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 
     // write all the data into the MPIF structures
     const metadata: MPIFMetadata = {
-        dataName: productName,
+        dataName: mpifParams.metadata.dataName,
         creationDate: new Date().toISOString().split('T')[0],
-        generatorVersion: '1.0',
-        publicationDOI: 'TODO',
+        generatorVersion: mpifParams.metadata.generatorVersion,
+        publicationDOI: mpifParams.metadata.publicationDOI,
         procedureStatus: 'success',
-        name: 'Todo',
-        email: 'Todo',
-        orcid: 'Todo',
-        address: 'Todo',
-        phone: undefined
+        name: mpifParams.metadata.name,
+        email: mpifParams.metadata.email,
+        orcid: mpifParams.metadata.orcid,
+        address: mpifParams.metadata.address,
+        phone: mpifParams.metadata.phone,
     }
 
     const productInfo: ProductInfo = {
-        type: 'composite',
-        casNumber: undefined,
-        commonName: productName,
-        systematicName: 'Todo',
-        formula: undefined,
-        formulaWeight: undefined,
-        state: 'solid',
-        color: 'white',
-        handlingAtmosphere: 'air',
-        handlingNote: undefined,
-        cif: undefined
+        type: mpifParams.productInfo.type,
+        casNumber: mpifParams.productInfo.casNumber,
+        commonName: mpifParams.productInfo.commonName || productName,
+        systematicName: mpifParams.productInfo.systematicName,
+        formula: mpifParams.productInfo.formula,
+        formulaWeight: mpifParams.productInfo.formulaWeight,
+        state: mpifParams.productInfo.state,
+        color: mpifParams.productInfo.color,
+        handlingAtmosphere: mpifParams.productInfo.handlingAtmosphere,
+        handlingNote: mpifParams.productInfo.handlingNote,
+        cif: mpifParams.productInfo.cif
     }
 
     const synthesisGeneral: SynthesisGeneral = {
-        performedDate: synthesisEntry.Metadata._date as string || new Date().toISOString().split('T')[0].toString(),
-        labTemperature: 35,
-        labHumidity: 45,
-        reactionType: 'mix',
+        performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || new Date().toISOString().split('T')[0].toString(),
+        labTemperature: mpifParams.synthesisGeneral.labTemperature,
+        labHumidity: mpifParams.synthesisGeneral.labHumidity,
+        reactionType: mpifParams.synthesisGeneral.reactionType,
         reactionTemperature: reactionTemp,
-        temperatureController: 'oven',
+        temperatureController: mpifParams.synthesisGeneral.temperatureController,
         reactionTime: reactionTime,
         reactionTimeUnit: reactionTimeUnit,
-        reactionAtmosphere: 'air',
+        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere,
         reactionContainer: vessel._name || 'unknown_container',
         reactionNote: reactionNote,
-        productAmount: undefined,
-        productAmountUnit: "",
-        productYield: undefined,
-        scale: 'gram',
+        productAmount: mpifParams.productInfo.productAmount,
+        productAmountUnit: mpifParams.productInfo.productAmountUnit,
+        productYield: mpifParams.productInfo.productYield,
+        scale: mpifParams.synthesisGeneral.scale,
     }
 
     const steps: ProcedureStep[] = [
         {
             id: 'preparation',
             type: 'Preparation',
-            atmosphere: 'Air',
+            atmosphere: mpifParams.steps.preparationAtmosphere || 'Air',
             detail: prep_details
         },
         {
             id: 'reaction',
             type: 'Reaction',
-            atmosphere: 'Air',
+            atmosphere: mpifParams.steps.reactionAtmosphere || 'Air',
             detail: reaction_details
         },
         {
             id: 'workup',
             type: 'Work-up',
-            atmosphere: 'Air',
+            atmosphere: mpifParams.steps.workupAtmosphere || 'Air',
             detail: workup_details
         }
 
@@ -372,11 +386,14 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "generated", "procedure_from_MIL.json");
 let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "generated", "characterization_from_MIL.json");
 let outputFolder = path.join(dataDirectory, "MIL-88B_101", "generated", "mpif_outputs");
-mofsyToMpif(inputProcedure, inputCharacterization, outputFolder);
+let paramsFile = path.join(dataDirectory, "MIL-88B_101", "mpif_params.json");
+const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");
+mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
 
 // MOCOF-1
 inputProcedure = path.join(dataDirectory, "MOCOF-1", "generated", "procedure_from_sciformation.json");
 inputCharacterization = path.join(dataDirectory, "MOCOF-1", "generated", "characterization_from_sciformation.json");
 outputFolder = path.join(dataDirectory, "MOCOF-1", "generated", "mpif_outputs");
-mofsyToMpif(inputProcedure, inputCharacterization, outputFolder);
+paramsFile = path.join(dataDirectory, "MOCOF-1", "mpif_params.json");
+mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
 

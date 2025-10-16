@@ -3,6 +3,7 @@
     "start": "npx ts-node src/mofsy2mpif.ts"
   },
   "dependencies": {
-    "@types/node": "^24.7.2"
+    "@types/node": "^24.7.2",
+    "ajv": "^8.17.1"
   }
 }

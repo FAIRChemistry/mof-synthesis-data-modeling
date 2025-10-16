@@ -1,0 +1,315 @@
+{
+  "title": "MPIF Parameters",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/MPIFMetadata"
+    },
+    "productInfo": {
+      "$ref": "#/$defs/ProductInfo"
+    },
+    "synthesisGeneral": {
+      "$ref": "#/$defs/SynthesisGeneral"
+    },
+    "steps": {
+      "type": "object",
+      "properties": {
+        "preparationAtmosphere": {
+          "$ref": "#/$defs/Atmosphere"
+        },
+        "reactionAtmosphere": {
+          "$ref": "#/$defs/Atmosphere"
+        },
+        "workupAtmosphere": {
+          "$ref": "#/$defs/Atmosphere"
+        }
+      },
+      "required": [
+        "preparationAtmosphere",
+        "reactionAtmosphere",
+        "workupAtmosphere"
+      ],
+      "$defs": {
+        "ProcedureStep": {
+          "type": "object",
+          "properties": {
+            "stepDescription": {
+              "type": "string"
+            },
+            "duration": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "stepDescription",
+            "duration"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "metadata",
+    "productInfo",
+    "synthesisGeneral",
+    "steps"
+  ],
+  "$defs": {
+    "MPIFMetadata": {
+      "type": "object",
+      "properties": {
+        "dataName": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "generatorVersion": {
+          "type": "string"
+        },
+        "publicationDOI": {
+          "type": "string"
+        },
+        "procedureStatus": {
+          "$ref": "#/$defs/ProcedureStatus"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "orcid": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "phone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "dataName",
+        "creationDate",
+        "generatorVersion",
+        "publicationDOI",
+        "procedureStatus",
+        "name",
+        "email",
+        "orcid",
+        "address"
+      ]
+    },
+    "ProductInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/ProductType"
+        },
+        "casNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "systematicName": {
+          "type": "string"
+        },
+        "formula": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "formulaWeight": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "state": {
+          "$ref": "#/$defs/ProductState"
+        },
+        "color": {
+          "type": "string"
+        },
+        "handlingAtmosphere": {
+          "$ref": "#/$defs/HandlingAtmosphere"
+        },
+        "handlingNote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cif": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "systematicName",
+        "state",
+        "color",
+        "handlingAtmosphere"
+      ]
+    },
+    "SynthesisGeneral": {
+      "type": "object",
+      "properties": {
+        "performedDate": {
+          "type": "string"
+        },
+        "labTemperature": {
+          "type": "integer"
+        },
+        "labHumidity": {
+          "type": "integer"
+        },
+        "reactionType": {
+          "$ref": "#/$defs/ReactionType"
+        },
+        "temperatureController": {
+          "$ref": "#/$defs/TemperatureController"
+        },
+        "reactionNote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "productAmount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "productAmountUnit": {
+          "type": "string"
+        },
+        "productYield": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scale": {
+          "$ref": "#/$defs/Scale"
+        },
+        "reactionAtmosphere": {
+          "$ref": "#/$defs/ReactionAtmosphere"
+        }
+      },
+      "required": [
+        "performedDate",
+        "labTemperature",
+        "labHumidity",
+        "reactionType",
+        "temperatureController",
+        "scale"
+      ]
+    },
+    "Atmosphere": {
+      "type": "string",
+      "enum": [
+        "Air",
+        "Dry",
+        "Inert",
+        "Vacuum"
+      ]
+    },
+    "ReactionAtmosphere": {
+      "type": "string",
+      "enum": [
+        "air",
+        "dry",
+        "inert",
+        "vacuum"
+      ]
+    },
+    "ProcedureStatus": {
+      "type": "string",
+      "enum": [
+        "success",
+        "test",
+        "failure"
+      ]
+    },
+    "ProductType": {
+      "type": "string",
+      "enum": [
+        "porous framework material",
+        "composite",
+        "organic",
+        "inorganic"
+      ]
+    },
+    "ProductState": {
+      "type": "string",
+      "enum": [
+        "solid",
+        "liquid",
+        "gas",
+        "suspension"
+      ]
+    },
+    "ReactionType": {
+      "type": "string",
+      "enum": [
+        "mix",
+        "diffusion",
+        "evaporation",
+        "microwave",
+        "mechanochemical",
+        "electrochemical",
+        "sonochemical",
+        "photochemical",
+        "flow",
+        "other"
+      ]
+    },
+    "TemperatureController": {
+      "type": "string",
+      "enum": [
+        "ambient",
+        "oven",
+        "oil_bath",
+        "water_bath",
+        "dry_bath",
+        "hot_plate",
+        "microwave",
+        "furnace",
+        "other",
+        "liquid_bath"
+      ]
+    },
+    "HandlingAtmosphere": {
+      "type": "string",
+      "enum": [
+        "air",
+        "inert",
+        "other",
+        "water-free",
+        "oxygen-free",
+        ""
+      ]
+    },
+    "Scale": {
+      "type": "string",
+      "enum": [
+        "milligram",
+        "gram",
+        "multigram",
+        "kilogram"
+      ]
+    }
+  }
+}

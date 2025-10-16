@@ -1,14 +1,14 @@
-data_Co(tapp)-TPA-IMCOF
-_mpif_audit_creation_date	2025-10-14
+data_MOCOF-1
+_mpif_audit_creation_date	2025-10-16
 _mpif_audit_generator_version	1.0
-_mpif_audit_publication_doi	'TODO'
+_mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
 
 #Section 1: Author details
-_mpif_audit_contact_author_name	'Todo'
-_mpif_audit_contact_author_email	Todo
-_mpif_audit_contact_author_id_orcid	Todo
-_mpif_audit_contact_author_address	'Todo'
+_mpif_audit_contact_author_name	'Endo, Kenichi'
+_mpif_audit_contact_author_email	kenichi.endo.2@ipoc.uni-stuttgart.de
+_mpif_audit_contact_author_id_orcid	0000-0002-4128-6514
+_mpif_audit_contact_author_address	'Pfaffenwaldring 55, 70569 Stuttgart, Germany'
 _mpif_audit_contact_author_phone	?
 
 #Section 2: Product General Information
@@ -16,7 +16,7 @@ _mpif_product_type	'composite'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
 _mpif_product_name_common	'Co(tapp)-TPA-IMCOF'
-_mpif_product_name_systematic	'Todo'
+_mpif_product_name_systematic	'MOCOF-1'
 _mpif_product_formula	''
 _mpif_product_formula_weight	
 _mpif_product_state	'solid'
@@ -28,23 +28,23 @@ _mpif_product_handling_note
 ;
 
 #Section 3: Synthesis General Information
-_mpif_synthesis_performed_date	2025-10-14
-_mpif_synthesis_lab_temperature_C	35
-_mpif_synthesis_lab_humidity_percent	45
+_mpif_synthesis_performed_date	Sun Jan 01 2023 01:00:00 GMT+0100 (Central European Standard Time)
+_mpif_synthesis_lab_temperature_C	24
+_mpif_synthesis_lab_humidity_percent	35
 _mpif_synthesis_type	'mix'
 _mpif_synthesis_react_temperature_C	120
-_mpif_synthesis_react_temperature_controller	'oven'
+_mpif_synthesis_react_temperature_controller	'microwave'
 _mpif_synthesis_react_time	69
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	'air'
+_mpif_synthesis_react_atmosphere	'undefined'
 _mpif_synthesis_react_container	'unknown_container'
 _mpif_synthesis_react_note
 ;
 
 ;
 _mpif_synthesis_product_amount	undefined
-_mpif_synthesis_product_amount_unit	''
-_mpif_synthesis_scale	'gram'
+_mpif_synthesis_product_amount_unit	'undefined'
+_mpif_synthesis_scale	'milligram'
 _mpif_synthesis_safety_note
 ;
 
@@ -99,21 +99,9 @@ _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 13.3 micromole of KE-185
-Add 13.3 micromole of Terephthalaldehyde
-Add 598.5 micromole of Wasser
-Add 418.37 micromole of 4-Nitrophenol
-Add 167 microlitre of oDCB
-Add 500 microlitre of DO
-Evacuate and refill with Ar
-
-reaction	Reaction	Air	Heat/Chill to 120 celsius for 69 hour
-
-workup	Work-up	Air	Wash solid with DMF  
-Wash solid with CHCl3  
-Wash solid with MeOH  
-Wash solid with scCO2  
-
+preparation	Preparation	Air	Add 13.3 micromole of KE-185. Add 13.3 micromole of Terephthalaldehyde. Add 598.5 micromole of Wasser. Add 418.37 micromole of 4-Nitrophenol. Add 167 microlitre of oDCB. Add 500 microlitre of DO. Evacuate and refill with Ar. 
+reaction	Reaction	Air	Heat/Chill to 120 celsius for 69 hour. 
+workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
 
 #Characterization Information
 
