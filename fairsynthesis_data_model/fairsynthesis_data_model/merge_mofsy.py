@@ -84,12 +84,12 @@ def merge_mofsy():
     save_json(merged, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json'))
 
     # excel MIL_2 case
-    mil_2_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL_2.json')
-    mil_2_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL_2.json')
+    mil_2_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
+    mil_2_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL.json')
     procedure = Procedure.from_dict(load_json(mil_2_procedure_file_path))
     characterization = ProductCharacterization.from_dict(load_json(mil_2_characterization_file_path))
     merged = merge_mofsy_procecure_and_characterization_to_dict(procedure, characterization)
-    save_json(merged, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL_2.json'))
+    save_json(merged, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL.json'))
 
 
 

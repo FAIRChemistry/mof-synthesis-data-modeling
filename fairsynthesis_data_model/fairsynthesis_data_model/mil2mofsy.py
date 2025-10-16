@@ -9,7 +9,7 @@ from .generated.procedure_data_structure import Procedure, SynthesisElement, Rea
 from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
     SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
     Unit as UnitCharacterization, Purity, Pxrd
-from .generated.mil_2_json_from_excel_data_structure import Mil
+from .generated.mil_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
@@ -285,9 +285,12 @@ def format_temperature(temp: str, temp_unit: str) -> Empty:
 def format_mass(mass: float|None, mass_unit: str) -> Quantity:
     if (mass is None) or (mass_unit is None):
         return Quantity(value=None, unit=None)
-    if not mass_unit == "mg":
+    if mass_unit == "mg":
+        return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
+    elif mass_unit == "mmol":
+        return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIMOLE)
+    else:
         raise ValueError(f"Only mg is supported as mass unit in converter, but got {mass_unit}")
-    return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
 
 
 def format_amount_volume(amount: float | None, volume_unit: str) -> Quantity:
@@ -329,17 +332,17 @@ def format_length(length: str) -> AmountCharacterization:
 
 def mil2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL_2.json')
+    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'PXRD')
     pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     mil = load_json(file_path)
 
     # Validate data according to schema
-    validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL_2.schema.json')))
+    validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL.schema.json')))
 
     mofsy, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder_relative)
-    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL_2.json')
-    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL_2.json')
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
+    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL.json')
     result_dict_mofsy = mofsy.to_dict()
     result_dict_characterization = characterization.to_dict()
     print("Procedure Result: " + str(result_dict_mofsy))

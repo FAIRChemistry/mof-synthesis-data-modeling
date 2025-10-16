@@ -9,6 +9,11 @@ def from_str(x: Any) -> str:
     return x
 
 
+def from_float(x: Any) -> float:
+    assert isinstance(x, (float, int)) and not isinstance(x, bool)
+    return float(x)
+
+
 def from_int(x: Any) -> int:
     assert isinstance(x, int) and not isinstance(x, bool)
     return x
@@ -26,11 +31,6 @@ def from_union(fs, x):
         except:
             pass
     assert False
-
-
-def from_float(x: Any) -> float:
-    assert isinstance(x, (float, int)) and not isinstance(x, bool)
-    return float(x)
 
 
 def to_float(x: Any) -> float:
@@ -51,10 +51,10 @@ def to_class(c: Type[T], x: Any) -> dict:
 class Experiment:
     the_0__date: str
     the_0__vial_no: str
-    the_1__metal_salt_mass: int
+    the_1__metal_salt_mass: float
     the_1__metal_salt_mass_unit: str
     the_1__metal_salt_name: str
-    the_2__linker_mass: int
+    the_2__linker_mass: float
     the_2__linker_mass_unit: str
     the_2__linker_name: str
     the_3__solvent: str
@@ -80,7 +80,7 @@ class Experiment:
     the_9__mof: str
     the_9__phase_purity: bool
 
-    def __init__(self, the_0__date: str, the_0__vial_no: str, the_1__metal_salt_mass: int, the_1__metal_salt_mass_unit: str, the_1__metal_salt_name: str, the_2__linker_mass: int, the_2__linker_mass_unit: str, the_2__linker_name: str, the_3__solvent: str, the_3__solvent_amount: int, the_3__solvent_unit: str, the_4__modulator: Union[bool, str], the_4__modulator_amount: Union[int, str], the_4__modulator_unit: str, the_5__sonicator_time: float, the_5__sonicator_time_unit: str, the_6__place: str, the_6__reaction_time: int, the_6__reaction_time_unit: str, the_6__reaction_vessel: str, the_6__temperature: int, the_6__temperature_unit: str, the_7__washing_solids: str, the_8__activation_temperature: int, the_8__activation_temperature_unit: str, the_8__drying_solids: str, the_8__drying_solids_time: int, the_8__drying_time_unit: str, the_9__mof: str, the_9__phase_purity: bool) -> None:
+    def __init__(self, the_0__date: str, the_0__vial_no: str, the_1__metal_salt_mass: float, the_1__metal_salt_mass_unit: str, the_1__metal_salt_name: str, the_2__linker_mass: float, the_2__linker_mass_unit: str, the_2__linker_name: str, the_3__solvent: str, the_3__solvent_amount: int, the_3__solvent_unit: str, the_4__modulator: Union[bool, str], the_4__modulator_amount: Union[int, str], the_4__modulator_unit: str, the_5__sonicator_time: float, the_5__sonicator_time_unit: str, the_6__place: str, the_6__reaction_time: int, the_6__reaction_time_unit: str, the_6__reaction_vessel: str, the_6__temperature: int, the_6__temperature_unit: str, the_7__washing_solids: str, the_8__activation_temperature: int, the_8__activation_temperature_unit: str, the_8__drying_solids: str, the_8__drying_solids_time: int, the_8__drying_time_unit: str, the_9__mof: str, the_9__phase_purity: bool) -> None:
         self.the_0__date = the_0__date
         self.the_0__vial_no = the_0__vial_no
         self.the_1__metal_salt_mass = the_1__metal_salt_mass
@@ -117,10 +117,10 @@ class Experiment:
         assert isinstance(obj, dict)
         the_0__date = from_str(obj.get("0_date"))
         the_0__vial_no = from_str(obj.get("0_vial_no"))
-        the_1__metal_salt_mass = from_int(obj.get("1_metal_salt_mass"))
+        the_1__metal_salt_mass = from_float(obj.get("1_metal_salt_mass"))
         the_1__metal_salt_mass_unit = from_str(obj.get("1_metal_salt_mass_unit"))
         the_1__metal_salt_name = from_str(obj.get("1_metal_salt_name"))
-        the_2__linker_mass = from_int(obj.get("2_linker_mass"))
+        the_2__linker_mass = from_float(obj.get("2_linker_mass"))
         the_2__linker_mass_unit = from_str(obj.get("2_linker_mass_unit"))
         the_2__linker_name = from_str(obj.get("2_linker_name"))
         the_3__solvent = from_str(obj.get("3_solvent"))
@@ -151,10 +151,10 @@ class Experiment:
         result: dict = {}
         result["0_date"] = from_str(self.the_0__date)
         result["0_vial_no"] = from_str(self.the_0__vial_no)
-        result["1_metal_salt_mass"] = from_int(self.the_1__metal_salt_mass)
+        result["1_metal_salt_mass"] = to_float(self.the_1__metal_salt_mass)
         result["1_metal_salt_mass_unit"] = from_str(self.the_1__metal_salt_mass_unit)
         result["1_metal_salt_name"] = from_str(self.the_1__metal_salt_name)
-        result["2_linker_mass"] = from_int(self.the_2__linker_mass)
+        result["2_linker_mass"] = to_float(self.the_2__linker_mass)
         result["2_linker_mass_unit"] = from_str(self.the_2__linker_mass_unit)
         result["2_linker_name"] = from_str(self.the_2__linker_name)
         result["3_solvent"] = from_str(self.the_3__solvent)
