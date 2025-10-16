@@ -369,8 +369,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 }
 
 // MIL-88B_101
-let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "generated", "procedure_from_MIL_2.json");
-let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "generated", "characterization_from_MIL_2.json");
+let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "generated", "procedure_from_MIL.json");
+let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "generated", "characterization_from_MIL.json");
 let outputFolder = path.join(dataDirectory, "MIL-88B_101", "generated", "mpif_outputs");
 mofsyToMpif(inputProcedure, inputCharacterization, outputFolder);
 
