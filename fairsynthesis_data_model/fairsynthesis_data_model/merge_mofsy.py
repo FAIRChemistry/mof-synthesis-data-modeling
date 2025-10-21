@@ -4,9 +4,9 @@ from typing import Tuple
 from .generated.characterization_data_structure import \
     ProductCharacterization, CharacterizationEntry
 from .utils import load_json, save_json
-from .generated.procedure_data_structure import Procedure, SynthesisElement
+from .generated.procedure_data_structure import SynthesisProcedure, SynthesisElement
 
-def merge_mofsy_procecure_and_characterization(procedure: Procedure, characterization: ProductCharacterization) -> list[Tuple[SynthesisElement, CharacterizationEntry]]:
+def merge_mofsy_procecure_and_characterization(procedure: SynthesisProcedure, characterization: ProductCharacterization) -> list[Tuple[SynthesisElement, CharacterizationEntry]]:
     """
     Merge Mofsy procedure and characterization into a single dictionary which is returned as a dict.
     Both inputs have a Metadata field which contains their unique id in the description field.
@@ -38,7 +38,7 @@ def merge_mofsy_procecure_and_characterization(procedure: Procedure, characteriz
 
 
 
-def merge_mofsy_procecure_and_characterization_to_dict(procedure: Procedure, characterization: ProductCharacterization) -> list[
+def merge_mofsy_procecure_and_characterization_to_dict(procedure: SynthesisProcedure, characterization: ProductCharacterization) -> list[
     dict]:
     """
     Merge Mofsy procedure and characterization into a single dictionary which is returned as a dict.
@@ -78,7 +78,7 @@ def merge_mofsy():
     # sciformation case
     mofsy_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
     mofsy_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
-    procedure = Procedure.from_dict(load_json(mofsy_procedure_file_path))
+    procedure = SynthesisProcedure.from_dict(load_json(mofsy_procedure_file_path))
     characterization = ProductCharacterization.from_dict(load_json(mofsy_characterization_file_path))
     merged = merge_mofsy_procecure_and_characterization_to_dict(procedure, characterization)
     save_json(merged, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'mofsy_from_sciformation.json'))
@@ -86,7 +86,7 @@ def merge_mofsy():
     # excel MIL_2 case
     mil_2_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
     mil_2_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL.json')
-    procedure = Procedure.from_dict(load_json(mil_2_procedure_file_path))
+    procedure = SynthesisProcedure.from_dict(load_json(mil_2_procedure_file_path))
     characterization = ProductCharacterization.from_dict(load_json(mil_2_characterization_file_path))
     merged = merge_mofsy_procecure_and_characterization_to_dict(procedure, characterization)
     save_json(merged, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'mofsy_from_MIL.json'))

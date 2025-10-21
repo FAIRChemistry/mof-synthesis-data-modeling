@@ -1,11 +1,11 @@
 import os
 
 from .utils import load_json, save_string_as_file
-from .generated.procedure_data_structure import Procedure
+from .generated.procedure_data_structure import SynthesisProcedure
 from lxml import etree
 from string import Template
 
-def convert_mofsy_procedure_to_xdl_string(mofsy: Procedure) -> str:
+def convert_mofsy_procedure_to_xdl_string(mofsy: SynthesisProcedure) -> str:
     """
     Convert Mofsy procedure to XDL format, which is in XML.
     """
@@ -83,13 +83,13 @@ def mofsy2xdl():
 
     # sciformation case
     mofsy_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
-    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mofsy_file_path)))
+    xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mofsy_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'xdl_from_sciformation.xml'))
 
     # excel MIL_2 case
     mil_2_file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
-    xml = convert_mofsy_procedure_to_xdl_string(Procedure.from_dict(load_json(mil_2_file_path)))
+    xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
     print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'xdl_from_MIL.xml'))
 

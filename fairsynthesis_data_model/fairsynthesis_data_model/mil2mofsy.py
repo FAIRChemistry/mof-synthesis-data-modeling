@@ -3,9 +3,9 @@ from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
-from .generated.procedure_data_structure import Procedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
-    ProcedureWithDifferentSectionsClass, Reagents, XMLType, StepEntryClass, FlatProcedureClass, \
-    Hardware, Quantity, AmountUnit, Role, Empty, TempUnit, Pressure, PressureUnit, Time
+from .generated.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
+    ProcedureSectionClass, ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, \
+    Hardware, Quantity, AmountUnit, Role, Temperature, TempUnit, Pressure, PressureUnit, Time
 from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
     SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
     Unit as UnitCharacterization, Purity, Pxrd
@@ -14,7 +14,7 @@ from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[Procedure, ProductCharacterization]:
+def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[SynthesisProcedure, ProductCharacterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
@@ -105,8 +105,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 ),
                 StepEntryClass(
                     xml_type=XMLType.ADD,
@@ -118,8 +117,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 ),
                 StepEntryClass(
                     xml_type=XMLType.ADD,
@@ -131,8 +129,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 )
             ]
 
@@ -158,8 +155,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 )
             )
 
@@ -175,8 +171,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment=None,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 ),
                 StepEntryClass(
                     xml_type=XMLType.HEAT_CHILL,
@@ -188,8 +183,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     gas=None,
                     solvent=None,
                     comment="In: " + reaction_place,
-                    pressure = None,
-                    unknown=None
+                    pressure = None
                 )
             ]
 
@@ -204,8 +198,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                 gas=None,
                 solvent=None,
                 comment=None,
-                pressure = None,
-                    unknown=None
+                pressure = None
             ),
             StepEntryClass(
                 xml_type=XMLType.DRY,
@@ -217,16 +210,15 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                 gas=None,
                 solvent=None,
                 comment=None,
-                pressure = Pressure(value=0, unit=PressureUnit.PASCAL), # hardcode, because it always is vacuum in every experiment
-                    unknown=None
+                pressure = Pressure(value=0, unit=PressureUnit.PASCAL) # hardcode, because it always is vacuum in every experiment
             ),
         ]
 
         # Build up the full procedure
-        procedure: ProcedureWithDifferentSectionsClass = ProcedureWithDifferentSectionsClass(
-            prep=FlatProcedureClass(step=prep_steps),
-            reaction=FlatProcedureClass(step=reaction_steps),
-            workup=FlatProcedureClass(step=workup_steps))
+        procedure: ProcedureSectionsClass = ProcedureSectionsClass(
+            prep=ProcedureSectionClass(step=prep_steps),
+            reaction=ProcedureSectionClass(step=reaction_steps),
+            workup=ProcedureSectionClass(step=workup_steps))
 
         # Collect all PXRD files for this experiment
         pxrd_list = []
@@ -266,7 +258,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
 
 
     return (
-        Procedure(
+        SynthesisProcedure(
             synthesis=synthesis_list,
         ),
         ProductCharacterization(characterization_list)
@@ -275,16 +267,16 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
 
 
 
-def format_temperature(temp: str, temp_unit: str) -> Empty:
+def format_temperature(temp: str, temp_unit: str) -> Temperature:
     if not temp_unit in ["C", "°C", "deg C"]:
         raise ValueError(f"Only Celsius is supported as temperature unit in converter, but got {temp_unit}")
     temperature_string: str = temp.replace("RT", "25")
     temp: float = float(sympify(temperature_string))
-    return Empty(value=round(temp, 2), unit=TempUnit.CELSIUS)
+    return Temperature(value=round(temp, 2), unit=TempUnit.CELSIUS)
 
 def format_mass(mass: float|None, mass_unit: str) -> Quantity:
     if (mass is None) or (mass_unit is None):
-        return Quantity(value=None, unit=None)
+        return Quantity(value=-1, unit=None)
     if mass_unit == "mg":
         return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
     elif mass_unit == "mmol":
@@ -295,7 +287,7 @@ def format_mass(mass: float|None, mass_unit: str) -> Quantity:
 
 def format_amount_volume(amount: float | None, volume_unit: str) -> Quantity:
     if amount is None:
-        return Quantity(value=None, unit=None)
+        return Quantity(value=-1, unit=None)
     if volume_unit.lower() == "ml":
         return Quantity(value=amount, unit=AmountUnit.MILLILITRE)
     elif volume_unit.lower() in ["l", "lt", "liter", "litre"]:
@@ -307,7 +299,7 @@ def format_amount_volume(amount: float | None, volume_unit: str) -> Quantity:
 
 def format_time(time: float | None, time_unit: str) -> Time:
     if time is None or time_unit is None:
-        return Time(value=None, unit=None)
+        return Time(value=-1, unit=None)
     if time_unit in ["h", "hour", "hours"]:
         return Time(value=round(time, 2), unit=AmountUnit.HOUR)
     elif time_unit in ["min", "mins", "minute", "minutes"]:

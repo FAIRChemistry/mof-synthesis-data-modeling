@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-from .generated.procedure_data_structure import Procedure, ReagentElement, SynthesisElement, Role, Quantity
+from .generated.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity
 from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
 from .pxrd_collector import PXRDFile
 
@@ -12,10 +12,10 @@ class Product:
         self.pxrd_files = pxrd_files
 
 
-def load_mofsy(file_path: str) -> Procedure:
+def load_mofsy(file_path: str) -> SynthesisProcedure:
     with open(file_path, 'r') as f:
         data = json.load(f)
-    return Procedure.from_dict(data)
+    return SynthesisProcedure.from_dict(data)
 
 def load_characterization(file_path: str) -> ProductCharacterization:
     with open(file_path, 'r') as f:
@@ -23,11 +23,11 @@ def load_characterization(file_path: str) -> ProductCharacterization:
     return ProductCharacterization.from_dict(data)
 
 
-def get_synthesis_list(procedure: Procedure) -> list[SynthesisElement]:
+def get_synthesis_list(procedure: SynthesisProcedure) -> list[SynthesisElement]:
     return procedure.synthesis
 
 
-def get_synthesis_by_experiment_id(procedure: Procedure, experiment_id: str) -> SynthesisElement | None:
+def get_synthesis_by_experiment_id(procedure: SynthesisProcedure, experiment_id: str) -> SynthesisElement | None:
     for synthesis in procedure.synthesis:
         if synthesis.metadata.description == experiment_id:
             return synthesis

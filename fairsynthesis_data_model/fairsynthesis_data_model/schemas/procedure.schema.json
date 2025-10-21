@@ -9,7 +9,7 @@
           "$ref": "#/$defs/Metadata"
         },
         "Procedure": {
-          "$ref": "#/$defs/ProcedureWithDifferentSections"
+          "$ref": "#/$defs/ProcedureSections"
         },
         "Reagents": {
           "$ref": "#/$defs/Reagents"
@@ -54,6 +54,7 @@
       "type": "object"
     },
     "Metadata": {
+      "title": "Metadata",
       "properties": {
         "_description": {
           "type": "string"
@@ -70,21 +71,25 @@
       ],
       "type": "object"
     },
-    "ProcedureWithDifferentSections": {
+    "ProcedureSections": {
+      "title": "ProcedureSections",
       "properties": {
         "Prep": {
-          "$ref": "#/$defs/StepsFlatProcedure"
+          "$ref": "#/$defs/ProcedureSection"
         },
         "Reaction": {
-          "$ref": "#/$defs/StepsFlatProcedure"
+          "$ref": "#/$defs/ProcedureSection"
         },
         "Workup": {
-          "$ref": "#/$defs/StepsFlatProcedure"
+          "$ref": "#/$defs/ProcedureSection"
         }
       },
-      "title": "Procedure with different sections"
+      "required": [
+        "Reaction"
+      ]
     },
-    "StepsFlatProcedure": {
+    "ProcedureSection": {
+      "title": "ProcedureSection",
       "properties": {
         "Step": {
           "items": {
@@ -95,10 +100,10 @@
       },
       "required": [
         "Step"
-      ],
-      "title": "Flat procedure"
+      ]
     },
     "StepEntry": {
+      "title": "StepEntry",
       "required": [
         "$xml_type"
       ],
@@ -147,11 +152,12 @@
                   "const": "celsius"
                 },
                 "Value": {
-                  "minimum": 20
+                  "minimum": 20,
+                  "type": "number"
                 }
               },
               "type": "object",
-              "title": ""
+              "title": "Temperature"
             },
             "_time": {
               "$ref": "#/$defs/Time"
@@ -169,7 +175,8 @@
             },
             "_gas": {
               "type": "string",
-              "const": "Ar"
+              "const": "Ar",
+              "description": "refilling gas"
             }
           }
         },
@@ -214,14 +221,6 @@
           }
         },
         {
-          "title": "Evaporate",
-          "properties": {
-            "$xml_type": {
-              "const": "Evaporate"
-            }
-          }
-        },
-        {
           "title": "Sonicate",
           "properties": {
             "$xml_type": {
@@ -233,9 +232,7 @@
           }
         },
         {
-          "required": [
-            "_time"
-          ],
+          "required": [],
           "title": "Dry",
           "properties": {
             "$xml_type": {
@@ -252,8 +249,7 @@
             }
           }
         }
-      ],
-      "title": "Step Entry"
+      ]
     },
     "Quantity": {
       "title": "Quantity",
@@ -297,27 +293,32 @@
           "type": "number"
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": [
+        "Value"
+      ]
     },
     "Temperature": {
       "title": "Temperature",
       "$ref": "#/$defs/Quantity",
-          "type": "object",
-          "properties": {
-            "Unit": {
-              "const": "celsius"
-            },
-            "Value": {
-              "minimum": -273.15
-            }
-          }
+      "type": "object",
+      "properties": {
+        "Unit": {
+          "const": "celsius"
+        },
+        "Value": {
+          "minimum": -273.15,
+          "type": "number"
+        }
+      }
     },
     "Time": {
       "title": "Time",
       "$ref": "#/$defs/Quantity",
       "properties": {
         "Value": {
-          "minimum": 0
+          "minimum": 0,
+          "type": "number"
         }
       }
     },
@@ -329,7 +330,8 @@
           "const": "pascal"
         },
         "Value": {
-          "minimum": 0
+          "minimum": 0,
+          "type": "number"
         }
       }
     },
@@ -399,6 +401,6 @@
   "required": [
     "Synthesis"
   ],
-  "title": "Procedure",
+  "title": "Synthesis Procedure",
   "type": "object"
 }
