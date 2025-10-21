@@ -5,9 +5,6 @@ from jsonschema import validate, ValidationError
 
 from .sciformation_cleaner_mocof1 import fix_inchi_code_for_do, use_more_detailed_reagent_roles
 
-# Initialize client (requires OPENAI_API_KEY in env)
-client = OpenAI()
-
 # Load schema from file
 schema_path = Path(__file__).parent / "experiment_diff.schema.json"
 with open(schema_path, "r", encoding="utf-8") as f:
@@ -20,6 +17,9 @@ def extract_experiment_diff(realization_text: str):
     following the ExperimentDiff schema. The result is validated
     against the schema before returning.
     """
+    # Initialize client (requires OPENAI_API_KEY in env)
+    client = OpenAI()
+
     # Read further instructions from llm_instructions.txt
     instructions_path = Path(__file__).parent / "llm_instructions.txt"
     with open(instructions_path, "r", encoding="utf-8") as f:
