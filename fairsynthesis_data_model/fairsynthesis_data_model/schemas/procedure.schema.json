@@ -151,12 +151,10 @@
                 }
               },
               "type": "object",
-              "description": "temperature in the case of HeatChill",
               "title": ""
             },
             "_time": {
-              "$ref": "#/$defs/Time",
-              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+              "$ref": "#/$defs/Time"
             }
           }
         },
@@ -171,8 +169,7 @@
             },
             "_gas": {
               "type": "string",
-              "const": "Ar",
-              "description": "refilling gas in the case of EvacuateAndRefill"
+              "const": "Ar"
             }
           }
         },
@@ -187,7 +184,6 @@
             },
             "_solvent": {
               "type": "string",
-              "description": "name of the solvent in the case of WashSolid",
               "enum": [
                 "CHCl3",
                 "DMF",
@@ -213,8 +209,7 @@
               "const": "Wait"
             },
             "_time": {
-              "$ref": "#/$defs/Time",
-              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+              "$ref": "#/$defs/Time"
             }
           }
         },
@@ -223,9 +218,6 @@
           "properties": {
             "$xml_type": {
               "const": "Evaporate"
-            },
-            "_unknown": {
-              "description": "Ken please add the corresponding attributes if existing"
             }
           }
         },
@@ -236,8 +228,7 @@
               "const": "Sonicate"
             },
             "_time": {
-              "$ref": "#/$defs/Time",
-              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+              "$ref": "#/$defs/Time"
             }
           }
         },
@@ -251,8 +242,7 @@
               "const": "Dry"
             },
             "_time": {
-              "$ref": "#/$defs/Time",
-              "description": "time of the step in the case of HeatChill, Wait, Sonicate, or Dry"
+              "$ref": "#/$defs/Time"
             },
             "_pressure": {
               "$ref": "#/$defs/Pressure"
