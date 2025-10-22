@@ -25,7 +25,17 @@
               "items": {
                 "$ref": "#/$defs/purity"
               }
-            },
+            }
+          },
+          "required": [
+            "pxrd",
+            "weight"
+          ],
+          "type": "object"
+        },
+        "AnalysisResults": {
+          "type": "object",
+          "properties": {
             "components": {
               "type": "array",
               "items": {
@@ -56,12 +66,7 @@
                 ]
               }
             }
-          },
-          "required": [
-            "pxrd",
-            "weight"
-          ],
-          "type": "object"
+          }
         }
       },
       "required": [
