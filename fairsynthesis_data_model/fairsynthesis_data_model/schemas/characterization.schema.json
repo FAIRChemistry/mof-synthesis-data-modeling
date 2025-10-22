@@ -7,28 +7,57 @@
           "$ref": "#/$defs/Metadata"
         },
         "Characterization": {
-      "properties": {
-        "pxrd": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/pxrd"
-          }
-        },
-        "weight": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/weighing"
-          }
-        },
-        "purity": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/purity"
-          }
-        }
-      },
-      "required": ["pxrd", "weight", "purity"],
-      "type": "object"
+          "properties": {
+            "pxrd": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pxrd"
+              }
+            },
+            "weight": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/weighing"
+              }
+            },
+            "purity": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/purity"
+              }
+            },
+            "components": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "enum": [
+                      "MOCOF-1",
+                      "COF-366-Co",
+                      "unknown"
+                    ]
+                  },
+                  "molar_fraction": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "molar fraction of the component in percentage"
+                  }
+                },
+                "required": [
+                  "molar_fraction",
+                  "name"
+                ]
+              }
+            }
+          },
+          "required": [
+            "pxrd",
+            "weight"
+          ],
+          "type": "object"
         }
       },
       "required": [
@@ -40,7 +69,9 @@
     "Metadata": {
       "properties": {
         "_description": {
-          "type": "string"
+          "type": "string",
+          "description": "Experiment code",
+          "pattern": "KE-\\d\\d\\d|S-\\d"
         }
       },
       "required": [
@@ -51,7 +82,7 @@
     "pxrd": {
       "properties": {
         "_relative_file_path": {
-          "format": "uri",
+          "format": "iri",
           "type": "string"
         },
         "_x-ray_source": {
@@ -65,7 +96,9 @@
         }
       },
       "required": [
-        "_relative_file_path"
+        "_relative_file_path",
+        "_x-ray_source",
+        "sample_holder"
       ],
       "title": "PXRD",
       "type": "object"
@@ -76,10 +109,18 @@
           "$ref": "#/$defs/Quantity"
         },
         "_type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "HILGENBERG_GLASS_NO_14_CAPILLARY",
+            "KAPTON_FILMS"
+          ]
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": [
+        "_diameter",
+        "_type"
+      ]
     },
     "_x-ray_source": {
       "enum": [
@@ -113,43 +154,26 @@
       "title": "Quantity",
       "properties": {
         "Unit": {
-          "enum": [
-            "microgram",
-            "milligram",
-            "gram",
-            "kilogram",
-            "ton",
-            "millisecond",
-            "second",
-            "minute",
-            "hour",
-            "day",
-            "week",
-            "kelvin",
-            "microlitre",
-            "millilitre",
-            "centilitre",
-            "decilitre",
-            "litre",
-            "ohm",
-            "dimensionless",
-            "item",
-            "micromole",
-            "millimole",
-            "mole",
-            "celsius",
-            "kelvin",
-            "millimeter",
-            "centimeter",
-            "meter"
-          ],
-          "type": "string"
+          "$ref": "#/$defs/Unit"
         },
         "Value": {
           "type": "number"
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": [
+        "Unit",
+        "Value"
+      ]
+    },
+    "Unit": {
+      "enum": [
+        "microgram",
+        "milligram",
+        "gram",
+        "millimeter"
+      ],
+      "type": "string"
     }
   },
   "properties": {
@@ -163,6 +187,7 @@
   "required": [
     "ProductCharacterization"
   ],
-  "title": "ProductCharacterization",
-  "type": "object"
+  "title": "characterization",
+  "type": "object",
+  "description": "characterization data and analysis results of products from the MOF synthesis test cases"
 }
