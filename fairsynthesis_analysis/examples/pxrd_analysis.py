@@ -1,7 +1,13 @@
 import marimo
 
-__generated_with = "0.16.5"
+__generated_with = "0.17.0"
 app = marimo.App(width="medium")
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""# Overview PXRD Yield Calculation""")
+    return
 
 
 @app.cell
@@ -78,12 +84,6 @@ def _(PXRDFile, PXRDSpectrum):
         Returns:
             PXRDSpectrum | None: The loaded PXRD spectrum or None if not available.
         """
-    return
-
-
-@app.cell
-def _(mo):
-    mo.md(r"""# Overview PXRD Yield Calculation""")
     return
 
 
@@ -348,7 +348,9 @@ def _(
         _settings = json.load(_f)
     for _s in all_synthesis:
         try:
-            di[_s] = (get_pxrd_spectrum(_s)).calc_yield({"COF-366": cof366, "MOCOF-1": mocof1})
+            di[_s] = (get_pxrd_spectrum(_s)).calc_yield(
+                {"COF-366": cof366, "MOCOF-1": mocof1}
+            )
         except:
             di[_s] = None
     return (di,)
