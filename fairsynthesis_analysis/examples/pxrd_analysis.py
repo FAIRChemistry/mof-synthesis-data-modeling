@@ -31,13 +31,13 @@ def _():
 @app.cell
 def _():
     import fairsynthesis_data_model.mofsy_api as api
-    from fairsynthesis_data_model.generated.procedure_data_structure import Procedure
+    from fairsynthesis_data_model.generated.procedure_data_structure import SynthesisProcedure
     from fairsynthesis_data_model.generated.characterization_data_structure import (
         ProductCharacterization,
         CharacterizationEntry,
     )
     from fairsynthesis_data_model.pxrd_collector import PXRDFile
-    return PXRDFile, Procedure, ProductCharacterization, api
+    return PXRDFile, ProductCharacterization, SynthesisProcedure, api
 
 
 @app.cell
@@ -60,13 +60,13 @@ def _(mo):
 
 @app.cell
 def _(
-    Procedure,
     ProductCharacterization,
+    SynthesisProcedure,
     api,
     characterization_file_path,
     procedure_file_path,
 ):
-    procedure: Procedure = api.load_mofsy(procedure_file_path)
+    procedure: SynthesisProcedure = api.load_mofsy(procedure_file_path)
     characterization: ProductCharacterization = api.load_characterization(
         characterization_file_path
     )
@@ -120,7 +120,7 @@ def _(di, mo, pl):
 
 
 @app.cell
-def _(api, procedure: "Procedure"):
+def _(api, procedure: "SynthesisProcedure"):
     _list = []
     for _it in api.get_synthesis_list(procedure):
         try:
