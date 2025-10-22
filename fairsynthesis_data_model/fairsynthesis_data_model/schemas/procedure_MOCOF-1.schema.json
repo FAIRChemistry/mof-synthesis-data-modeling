@@ -1,0 +1,359 @@
+{
+  "$defs": {
+    "SynthesisEntry": {
+      "properties": {
+        "Hardware": {
+          "$ref": "#/$defs/Hardware"
+        },
+        "Metadata": {
+          "$ref": "#/$defs/Metadata"
+        },
+        "Procedure": {
+          "$ref": "#/$defs/ProcedureSections"
+        },
+        "Reagents": {
+          "$ref": "#/$defs/Reagents"
+        }
+      },
+      "required": [
+        "Metadata",
+        "Reagents",
+        "Procedure",
+        "Hardware"
+      ],
+      "type": "object"
+    },
+    "Hardware": {
+      "properties": {
+        "Component": {
+          "items": {
+            "$ref": "#/$defs/HardwareComponentsEntry"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object",
+      "required": [
+        "Component"
+      ]
+    },
+    "HardwareComponentsEntry": {
+      "properties": {
+        "_type": {
+          "type": "string",
+          "enum": [
+            "microwave vial",
+            "Schlenk bomb"
+          ]
+        }
+      },
+      "required": [
+        "_type"
+      ],
+      "type": "object",
+      "description": "Reaction vessel"
+    },
+    "Metadata": {
+      "title": "Metadata",
+      "properties": {
+        "_description": {
+          "type": "string",
+          "description": "Experiment code",
+          "pattern": "KE-\\d\\d\\d"
+        }
+      },
+      "required": [
+        "_description"
+      ],
+      "type": "object"
+    },
+    "ProcedureSections": {
+      "title": "ProcedureSections",
+      "properties": {
+        "Prep": {
+          "$ref": "#/$defs/ProcedureSection"
+        },
+        "Reaction": {
+          "$ref": "#/$defs/ProcedureSection"
+        },
+        "Workup": {
+          "$ref": "#/$defs/ProcedureSection"
+        }
+      },
+      "required": [
+        "Reaction",
+        "Prep",
+        "Workup"
+      ]
+    },
+    "ProcedureSection": {
+      "title": "ProcedureSection",
+      "properties": {
+        "Step": {
+          "items": {
+            "$ref": "#/$defs/StepEntry"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "Step"
+      ]
+    },
+    "StepEntry": {
+      "title": "StepEntry",
+      "required": [
+        "$xml_type"
+      ],
+      "properties": {
+        "_vessel": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        }
+      },
+      "oneOf": [
+        {
+          "title": "Add",
+          "required": [
+            "_reagent",
+            "_amount"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "Add"
+            },
+            "_reagent": {
+              "type": "string",
+              "description": "name of the involved chemical as listed in the \"reagents\""
+            },
+            "_amount": {
+              "$ref": "#/$defs/Quantity",
+              "description": "amount of the involved chemical"
+            }
+          }
+        },
+        {
+          "title": "HeatChill",
+          "required": [
+            "_time",
+            "_temp"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "HeatChill"
+            },
+            "_temp": {
+              "properties": {
+                "Unit": {
+                  "const": "celsius"
+                },
+                "Value": {
+                  "minimum": 25,
+                  "type": "number",
+                  "maximum": 150
+                }
+              },
+              "type": "object",
+              "title": "",
+              "required": [
+                "Unit",
+                "Value"
+              ]
+            },
+            "_time": {
+              "$ref": "#/$defs/Time"
+            }
+          }
+        },
+        {
+          "title": "EvacuateAndRefill",
+          "required": [
+            "_gas"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "EvacuateAndRefill"
+            },
+            "_gas": {
+              "type": "string",
+              "const": "Ar",
+              "description": "refilling gas"
+            }
+          }
+        },
+        {
+          "title": "WashSolid",
+          "required": [
+            "_solvent"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "WashSolid"
+            },
+            "_solvent": {
+              "type": "string",
+              "enum": [
+                "CHCl3",
+                "DMF",
+                "MeOH",
+                "acetone",
+                "EtOH",
+                "NaCl aq",
+                "scCO2",
+                "MeCN",
+                "Et3N",
+                "MeOH+scCO2"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Wait",
+          "required": [
+            "_time"
+          ],
+          "properties": {
+            "$xml_type": {
+              "const": "Wait"
+            },
+            "_time": {
+              "$ref": "#/$defs/Time"
+            }
+          }
+        },
+        {
+          "$ref": "#/$defs/sonicate"
+        },
+        {
+          "required": [],
+          "title": "Dry",
+          "properties": {
+            "$xml_type": {
+              "const": "Dry"
+            }
+          }
+        }
+      ]
+    },
+    "Quantity": {
+      "title": "Quantity",
+      "properties": {
+        "Unit": {
+          "$ref": "#/$defs/Unit"
+        },
+        "Value": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "type": "object",
+      "required": [
+        "Value",
+        "Unit"
+      ]
+    },
+    "Time": {
+      "title": "Time",
+      "$ref": "#/$defs/Quantity",
+      "properties": {
+        "Value": {
+          "minimum": 0,
+          "type": "number",
+          "maximum": 300
+        },
+        "Unit": {
+          "type": "string",
+          "const": "hour"
+        }
+      },
+      "required": [
+        "Value",
+        "Unit"
+      ]
+    },
+    "Role": {
+      "enum": [
+        "substrate",
+        "solvent",
+        "reagent",
+        "acid",
+        "catalyst"
+      ],
+      "type": "string"
+    },
+    "Reagents": {
+      "properties": {
+        "Reagent": {
+          "items": {
+            "$ref": "#/$defs/ReagentsEntry"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "Reagent"
+      ],
+      "type": "object"
+    },
+    "ReagentsEntry": {
+      "properties": {
+        "_cas": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        },
+        "_inchi": {
+          "type": "string"
+        },
+        "_name": {
+          "type": "string"
+        },
+        "_purity": {
+          "type": "string"
+        },
+        "_role": {
+          "$ref": "#/$defs/Role"
+        }
+      },
+      "type": "object",
+      "required": [
+        "_inchi",
+        "_role",
+        "_name"
+      ]
+    },
+    "Unit": {
+      "enum": [
+        "microgram",
+        "milligram",
+        "gram",
+        "millisecond",
+        "hour",
+        "microlitre",
+        "millilitre",
+        "micromole",
+        "millimole",
+        "mole",
+        "celsius"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "Synthesis": {
+      "items": {
+        "$ref": "#/$defs/SynthesisEntry"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "Synthesis"
+  ],
+  "title": "procedure_MOCOF-1",
+  "type": "object",
+  "description": "Synthesis procedures for MOCOF-1 and COF-366-Co based on XDL and Sciformation"
+}

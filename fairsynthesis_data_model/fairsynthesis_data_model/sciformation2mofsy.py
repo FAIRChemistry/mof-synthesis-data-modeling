@@ -26,7 +26,6 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
     for experiment in eln.experiments:
         reaction_product = find_reaction_components(experiment, RxnRole.PRODUCT)[0]
         reaction_product_mass = format_mass(reaction_product.mass, reaction_product.mass_unit)
-        reaction_product_inchi = get_inchi(reaction_product)
         reagents: List[ReagentElement] = construct_reagents(experiment.reaction_components)
         hardware: Hardware = construct_hardware(experiment)
         procedure: ProcedureSectionsClass = construct_procedure(experiment)
@@ -61,7 +60,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         synthesis = SynthesisElement(
             metadata= Metadata(
                 description= experiment_id,
-                product= reaction_product.molecule_name,
+                product= None,
                 product_inchi= None
             ),
             hardware= hardware,
@@ -155,7 +154,7 @@ def construct_reagents(reaction_components: List[ReactionComponent]) -> List[Rea
                 name=component.molecule_name,
                 role=role,
                 purity=None,
-                id = component.molecule_name,
+                id=None,
                 cas=cas,
                 comment=None
             )
@@ -167,7 +166,7 @@ def construct_reagents(reaction_components: List[ReactionComponent]) -> List[Rea
 
 def construct_hardware(experiment: Experiment):
     return Hardware(
-        [ComponentElement(id=str(experiment.vessel.value), type=None, chemical=None, comment=None)]
+        [ComponentElement(id="", type=str(experiment.vessel.value), chemical=None, comment=None)]
     )
 
 
