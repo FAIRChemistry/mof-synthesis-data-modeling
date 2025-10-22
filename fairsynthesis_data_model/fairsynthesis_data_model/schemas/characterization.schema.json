@@ -40,10 +40,14 @@
                     ]
                   },
                   "molar_fraction": {
-                    "type": "number",
+                    "type": "integer",
                     "minimum": 0,
                     "maximum": 100,
                     "description": "molar fraction of the component in percentage"
+                  },
+                  "yield": {
+                    "type": "integer",
+                    "description": "yield of the component in percentage"
                   }
                 },
                 "required": [
