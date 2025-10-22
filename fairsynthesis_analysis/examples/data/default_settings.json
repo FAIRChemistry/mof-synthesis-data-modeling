@@ -1,0 +1,10 @@
+{
+    "normalization": {
+        "cu_range": [38, 40],
+        "co_range": [1.5, 1.8]
+    },
+    "correct_baseline": {
+        "max_half_window": 40,
+        "smooth_half_window": 3
+    }
+}
