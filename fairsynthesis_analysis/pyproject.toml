@@ -10,12 +10,10 @@ requires-python = ">=3.13"
 dependencies = [
     "altair>=5.5.0",
     "marimo>=0.12.6",
-    "matplotlib>=3.10.1",
     "numpy>=2.2.4",
     "polars>=1.26.0",
     "pybaselines>=1.2.0",
     "scipy>=1.15.2",
-    "seaborn>=0.13.2",
 ]
 
 [project.scripts]
@@ -24,3 +22,24 @@ fairsynthesis-analysis = "fairsynthesis_analysis:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.ruff]
+src = []
+extend-exclude = ["*.mo.py"]
+line-length = 120
+
+[tool.ruff.lint]
+fixable = ["I001", "F401", "UP"]
+ignore = ["E402", "E721", "E731", "E741", "F722"]
+select = ["E", "F", "I001", "UP"]
+
+[tool.ruff.lint.flake8-import-conventions.extend-aliases]
+"collections" = "co"
+"functools" = "ft"
+"itertools" = "it"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+extra-standard-library = ["typing_extensions"]
+lines-after-imports = 2
+order-by-type = false

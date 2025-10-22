@@ -1,8 +1,9 @@
-from fairsynthesis_data_model.pxrd_collector import PXRDFile
 from dataclasses import dataclass
-import numpy as np
 from pathlib import Path
+
+import numpy as np
 import pybaselines as pb
+from fairsynthesis_data_model.pxrd_collector import PXRDFile
 from scipy.optimize import nnls as _nnls
 
 
@@ -192,7 +193,8 @@ class PXRDSpectrum(PXRDFile):
         """Calculates the yield of each product based on the intensity values.
 
         Args:
-            products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]): A dictionary of product names and their corresponding PXRD files.
+            products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]): 
+                A dictionary of product names and their corresponding PXRD files.
         Returns:
             dict[str, float]: A dictionary of product names and their corresponding yields.
         """
@@ -252,8 +254,8 @@ class PXRDSpectrum(PXRDFile):
         return intensities
 
     def _display_(self):
-        import marimo as mo
         import altair as alt
+        import marimo as mo
         import polars as pl
 
         chart = (
