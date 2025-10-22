@@ -137,17 +137,21 @@ class PXRDSpectrum(PXRDFile):
             - np.interp(two_theta, background.two_theta, background.intensity),
         )
 
-    def normalize(self) -> "PXRDSpectrum":
+    def normalize(self, settings=None) -> "PXRDSpectrum":
         """Normalizes the intensity values to a range of 0 to 1.
 
         Returns:
             PXRDSpectrum: A new PXRDSpectrum instance with normalized intensity values.
         """
+        if settings is None:
+            settings = {}
+        if type(settings) is not dict:
+            raise ValueError("Settings must be a dictionary.")
 
         if self.xray_source == "Co-Kα1":
-            reference_range = (1.5, 1.8)
+            reference_range = settings.get("co_range", (1.5, 1.8))
         elif self.xray_source == "Cu-Kα1":
-            reference_range = (38, 40)
+            reference_range = settings.get("cu_range", (38, 40))
         else:
             raise ValueError(f"Unsupported X-ray source: {self.xray_source}")
 
@@ -160,19 +164,26 @@ class PXRDSpectrum(PXRDFile):
 
         return PXRDSpectrum(self, self.two_theta, self.intensity / mean_in_range)
 
-    def correct_baseline(self) -> "PXRDSpectrum":
+    def correct_baseline(self, settings=None) -> "PXRDSpectrum":
         """Corrects the baseline of the intensity values.
 
         Returns:
             PXRDSpectrum: A new PXRDSpectrum instance with baseline-corrected intensity values.
         """
+        if settings is None:
+            settings = {}
+        if type(settings) is not dict:
+            raise ValueError("Settings must be a dictionary.")
 
         def _baseline_correction(x, y):
             _bool = np.isnan(y)
             y = y[~np.isnan(y)].copy()
             baseline_fitter = pb.Baseline(x_data=x[~_bool])
             base, _ = baseline_fitter.snip(
-                y, max_half_window=40, decreasing=True, smooth_half_window=3
+                y,
+                max_half_window=settings.get("max_half_window", 40),
+                decreasing=True,
+                smooth_half_window=settings.get("smooth_half_window", 3),
             )
             y_detrend = np.ones_like(x) * np.nan
             y_detrend[~_bool] = y - base
