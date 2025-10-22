@@ -83,7 +83,7 @@ def _(PXRDFile, PXRDSpectrum):
 
 @app.cell
 def _(mo):
-    mo.md(r"""# Overview PXRD Analysis""")
+    mo.md(r"""# Overview PXRD Yield Calculation""")
     return
 
 
@@ -124,19 +124,7 @@ def _(api, procedure: "Procedure"):
     _list = []
     for _it in api.get_synthesis_list(procedure):
         try:
-            _list.append(
-                (
-                    _it.metadata.description
-                    # [
-                    #    _i.xray_source
-                    #    for _i in api.find_corresponding_pxrd_files(
-                    #        api.get_characterization_by_experiment_id(
-                    #            characterization, _it.metadata.description
-                    #        ),
-                    #    )
-                    # ][0],
-                )
-            )
+            _list.append(_it.metadata.description)
         except:
             continue
     all_synthesis = _list
@@ -227,28 +215,37 @@ def _(id_settings, json, mo, save_button, selection, settings_override):
 
 
 @app.cell
-def _(it, mo, settings_override):
+def _(it, settings):
+    it_measurement = it[0]
+    it_background_subtracted = it_measurement.subtract_background()
+    it_normalized = it_background_subtracted.normalize(settings["normalization"])
+    it_baseline_corrected = it_normalized.correct_baseline(settings["correct_baseline"])
+    return (
+        it_background_subtracted,
+        it_baseline_corrected,
+        it_measurement,
+        it_normalized,
+    )
+
+
+@app.cell
+def _(
+    it_background_subtracted,
+    it_baseline_corrected,
+    it_measurement,
+    it_normalized,
+    mo,
+):
     mo.md(
         f"""
     {
             mo.accordion(
                 {
-                    "Measurement": it[0]._display_(),
-                    "Background subtracted": it[0].subtract_background()._display_(),
-                    "Normalized": (
-                        it[0]
-                        .subtract_background()
-                        .normalize(settings_override["normalization"])
-                        ._display_()
-                    ),
-                    "Baseline Corrected": (
-                        it[0]
-                        .subtract_background()
-                        .normalize(settings_override["normalization"])
-                        .correct_baseline(settings_override["correct_baseline"])
-                        ._display_()
-                    ),
-                }
+                    "Measurement": it_measurement._display_(),
+                    "Background subtracted": it_background_subtracted._display_(),
+                    "Normalized": it_normalized._display_(),
+                    "Baseline Corrected": it_baseline_corrected._display_(),
+                },
             )
         }
     """
@@ -257,14 +254,8 @@ def _(it, mo, settings_override):
 
 
 @app.cell
-def _(cof366, it, mocof1, settings_override):
-    (
-        it[0]
-        .subtract_background()
-        .normalize(settings_override["normalization"])
-        .correct_baseline(settings_override["correct_baseline"])
-        .calc_yield({"COF-366": cof366, "MOCOF-1": mocof1})
-    )
+def _(cof366, it_baseline_corrected, mocof1):
+    it_baseline_corrected.calc_yield({"COF-366": cof366, "MOCOF-1": mocof1})
     return
 
 
