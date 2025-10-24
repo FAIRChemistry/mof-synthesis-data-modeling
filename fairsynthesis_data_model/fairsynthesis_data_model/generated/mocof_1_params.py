@@ -64,14 +64,14 @@ class Mocof1Param:
     other_additives: Optional[str]
     solvent_1__name: str
     solvent_1__volume_u_l: float
-    solvent_2__name: str
+    solvent_2__name: Optional[str]
     solvent_2__volume_u_l: float
     temperature_c: float
     vessel: str
     water_amount_umol: float
     workup_with_na_cl: bool
 
-    def __init__(self, acid_amount_umol: float, acid_structure: str, activation_under_vacuum: bool, activation_with_sc_co2: bool, aldehyde_monomer_amount_umol: float, aldehyde_monomer_structure: str, aminoporphyrin_monomer_amount_umol: float, aminoporphyrin_monomer_source: str, aminoporphyrin_monomer_type: str, degassing: bool, duration_h: float, me_oh_in_sc_co2_activation: bool, other_additives: Optional[str], solvent_1__name: str, solvent_1__volume_u_l: float, solvent_2__name: str, solvent_2__volume_u_l: float, temperature_c: float, vessel: str, water_amount_umol: float, workup_with_na_cl: bool) -> None:
+    def __init__(self, acid_amount_umol: float, acid_structure: str, activation_under_vacuum: bool, activation_with_sc_co2: bool, aldehyde_monomer_amount_umol: float, aldehyde_monomer_structure: str, aminoporphyrin_monomer_amount_umol: float, aminoporphyrin_monomer_source: str, aminoporphyrin_monomer_type: str, degassing: bool, duration_h: float, me_oh_in_sc_co2_activation: bool, other_additives: Optional[str], solvent_1__name: str, solvent_1__volume_u_l: float, solvent_2__name: Optional[str], solvent_2__volume_u_l: float, temperature_c: float, vessel: str, water_amount_umol: float, workup_with_na_cl: bool) -> None:
         self.acid_amount_umol = acid_amount_umol
         self.acid_structure = acid_structure
         self.activation_under_vacuum = activation_under_vacuum
@@ -112,7 +112,7 @@ class Mocof1Param:
         other_additives = from_union([from_none, from_str], obj.get("other_additives"))
         solvent_1__name = from_str(obj.get("solvent_1_name"))
         solvent_1__volume_u_l = from_float(obj.get("solvent_1_volume_uL"))
-        solvent_2__name = from_str(obj.get("solvent_2_name"))
+        solvent_2__name = from_union([from_none, from_str], obj.get("solvent_2_name"))
         solvent_2__volume_u_l = from_float(obj.get("solvent_2_volume_uL"))
         temperature_c = from_float(obj.get("temperature_C"))
         vessel = from_str(obj.get("vessel"))
@@ -137,7 +137,7 @@ class Mocof1Param:
         result["other_additives"] = from_union([from_none, from_str], self.other_additives)
         result["solvent_1_name"] = from_str(self.solvent_1__name)
         result["solvent_1_volume_uL"] = to_float(self.solvent_1__volume_u_l)
-        result["solvent_2_name"] = from_str(self.solvent_2__name)
+        result["solvent_2_name"] = from_union([from_none, from_str], self.solvent_2__name)
         result["solvent_2_volume_uL"] = to_float(self.solvent_2__volume_u_l)
         result["temperature_C"] = to_float(self.temperature_c)
         result["vessel"] = from_str(self.vessel)

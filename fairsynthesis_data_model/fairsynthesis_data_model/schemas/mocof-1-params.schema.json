@@ -41,7 +41,7 @@
         "type": "number"
       },
       "solvent_2_name": {
-        "type": "string"
+        "type": ["string"]
       },
       "solvent_2_volume_uL": {
         "type": "number"
