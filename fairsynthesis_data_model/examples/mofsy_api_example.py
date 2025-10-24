@@ -10,7 +10,7 @@ characterization_file_path = os.path.join(current_file_dir,
                                           "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
 
 # Load Procedure file into our Procedure class structure
-procedure: SynthesisProcedure = api.load_mofsy(procedure_file_path)
+procedure: SynthesisProcedure = api.load_procedure(procedure_file_path)
 
 # Load Characterization file into our CharacterizationEntry class structure
 characterization: ProductCharacterization = api.load_characterization(characterization_file_path)

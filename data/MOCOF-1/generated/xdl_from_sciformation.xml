@@ -1,7 +1,7 @@
 <XDL>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-008" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -36,7 +36,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-009" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -71,7 +71,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-010" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -106,7 +106,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-011" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -141,7 +141,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-014" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -180,7 +180,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-015" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -215,7 +215,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-016" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -250,7 +250,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-017" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -285,7 +285,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-019" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -320,7 +320,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-020" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -354,7 +354,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-021" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -388,7 +388,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-022" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -422,7 +422,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-033" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -456,7 +456,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-034" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -491,7 +491,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-035" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -526,7 +526,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-036" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -561,7 +561,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-040" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -595,7 +595,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-041" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -630,7 +630,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-042" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -665,7 +665,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-044" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -699,7 +699,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-045" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -733,7 +733,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-046" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -767,7 +767,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-047" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -801,7 +801,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-048" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -836,7 +836,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-049" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -871,7 +871,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-050" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -906,7 +906,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-051" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -941,7 +941,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-052" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -975,7 +975,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-053" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1010,7 +1010,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-059" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1045,7 +1045,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-060" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1079,7 +1079,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-061" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1113,7 +1113,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-062" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1147,7 +1147,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-063" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1181,7 +1181,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-064" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1215,7 +1215,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-065" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1249,7 +1249,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-067" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1283,7 +1283,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-068" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1317,7 +1317,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-069" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1351,7 +1351,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-070" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1385,7 +1385,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-073" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1419,7 +1419,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-075" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1455,7 +1455,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-076" product="Co(tapp)-DMTA COF"/>
     <Procedure>
@@ -1489,7 +1489,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-081" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -1523,7 +1523,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-082" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1557,7 +1557,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-083" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1591,7 +1591,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-084" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1626,7 +1626,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-085" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1661,7 +1661,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-086" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1695,7 +1695,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-089" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1729,7 +1729,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-090" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1763,7 +1763,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-091" product="Co(tapp)-TFTA COF"/>
     <Procedure>
@@ -1797,7 +1797,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-092" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1833,7 +1833,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-097" product="Co(tapp)-PDA COF"/>
     <Procedure>
@@ -1862,7 +1862,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-098" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1898,7 +1898,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-099" product="Co(tapp)I-PDA-PBA"/>
     <Procedure>
@@ -1934,7 +1934,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-104" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -1963,7 +1963,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-105" product="Co(tapp)-PDA-COF·DNP"/>
     <Procedure>
@@ -1997,7 +1997,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-106" product="Co(tapp)-PDA COF·PNP"/>
     <Procedure>
@@ -2029,7 +2029,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-107" product="Co(tapp)-PDA COF·PNP"/>
     <Procedure>
@@ -2061,7 +2061,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-108" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2095,7 +2095,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-109" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2129,7 +2129,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-111" product="Co(tapp)-PDA-COF·DNP"/>
     <Procedure>
@@ -2165,7 +2165,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-112" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2194,7 +2194,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-113" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2228,7 +2228,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-114" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2264,7 +2264,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-115" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2298,7 +2298,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-119" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2332,7 +2332,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-120" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2366,7 +2366,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-121" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2399,7 +2399,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-125" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2433,7 +2433,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-126" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2467,7 +2467,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-127" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2501,7 +2501,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-128" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2535,7 +2535,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-129" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2569,7 +2569,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-130" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2603,7 +2603,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-131" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2637,7 +2637,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-132" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -2671,7 +2671,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-135" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2705,7 +2705,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-139" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2739,7 +2739,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-140" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2773,7 +2773,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-141" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2809,7 +2809,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-144" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2843,7 +2843,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-145" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2876,7 +2876,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-146" product="Co(tapp)-PDA-COF PNP"/>
     <Procedure>
@@ -2910,7 +2910,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-147" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2944,7 +2944,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-149" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -2979,7 +2979,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-150" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3013,7 +3013,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-151" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3048,7 +3048,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-153" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3082,7 +3082,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-154" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3116,7 +3116,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-155" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3150,7 +3150,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-156" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3184,7 +3184,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-157" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3218,7 +3218,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-158" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3252,7 +3252,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-161" product="Co(tapp)2-PDA3-MCOF·PNP"/>
     <Procedure>
@@ -3286,7 +3286,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-162" product="Co(tapp)-PDA-MCOF·PNP"/>
     <Procedure>
@@ -3320,7 +3320,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-163" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3354,7 +3354,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-164" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3388,7 +3388,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-165" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3422,7 +3422,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-166" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3456,7 +3456,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-167" product="Co(tapp)-PDA-COF·PNP"/>
     <Procedure>
@@ -3492,7 +3492,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-168" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3526,7 +3526,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-172" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3560,7 +3560,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-173" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3594,7 +3594,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-174" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3630,7 +3630,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-175" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3664,7 +3664,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-177" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3698,7 +3698,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-178" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3732,7 +3732,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-179" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3766,7 +3766,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-180" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3800,7 +3800,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-181" product="Co(tapp)-TPA-RMOF·DNP"/>
     <Procedure>
@@ -3834,7 +3834,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-182" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3868,7 +3868,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-183" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3902,7 +3902,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-184" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3936,7 +3936,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-186" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -3970,7 +3970,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-187" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -4004,7 +4004,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-188" product="Co(tapp)-PDA-COF"/>
     <Procedure>
@@ -4038,7 +4038,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-190" product="Co(tapp)-TPA-COF·PNP"/>
     <Procedure>
@@ -4074,7 +4074,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-191" product="Product"/>
     <Procedure>
@@ -4108,7 +4108,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
     <Metadata description="KE-192" product="Co(tapp)-TPA-COF·PNP"/>
     <Procedure>
@@ -4142,7 +4142,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-193" product="Co(tapp)-TPA-RMOF·DNP"/>
     <Procedure>
@@ -4176,7 +4176,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-197" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4215,7 +4215,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-198" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4249,7 +4249,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-199" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4283,7 +4283,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-200" product="COF-366-Co"/>
     <Procedure>
@@ -4317,7 +4317,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-202" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4351,7 +4351,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-203" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4387,7 +4387,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-207" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4421,7 +4421,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-210" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4455,7 +4455,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-212" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4489,7 +4489,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-213" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4523,7 +4523,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-214" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4557,7 +4557,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-216" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4591,7 +4591,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-217" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4625,7 +4625,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-218" product="Co(tapp)-TPA-IMCOF"/>
     <Procedure>
@@ -4659,7 +4659,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-219" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -4694,7 +4694,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-220" product="0.64Co(tapp)-TPA-IMOF, 0.36Co(tapp)-TPA-COF, 0.51 2,4-DNBA"/>
     <Procedure>
@@ -4731,7 +4731,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-221" product="0.64Co(tapp)-TPA-IMOF, 0.36Co(tapp)-TPA-COF, 0.51 2,4-DNBA"/>
     <Procedure>
@@ -4766,7 +4766,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-222" product="Co(tapp)-TPA-IMOF·0.28PNP"/>
     <Procedure>
@@ -4802,7 +4802,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-224" product="Co(tapp)-TFTA-IMOF"/>
     <Procedure>
@@ -4838,7 +4838,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-225" product="Co(tapp)-TFTA-IMOF"/>
     <Procedure>
@@ -4876,7 +4876,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-226" product="0.65IMOF + 0.35Co(tapp)·PNP"/>
     <Procedure>
@@ -4911,7 +4911,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-227" product="IMOF·0.77DNBA"/>
     <Procedure>
@@ -4945,7 +4945,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-228" product="Product"/>
     <Procedure>
@@ -4981,7 +4981,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-229" product="Co(III)(tapp)-TPA-hybrid·X"/>
     <Procedure>
@@ -5017,7 +5017,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-230" product="Co(tapp)-TPA-IMOF·0.22PNP"/>
     <Procedure>
@@ -5055,7 +5055,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-231" product="0.85Co(tapp)-DMTA-IMOF + 0.15COF + 0.20PNP"/>
     <Procedure>
@@ -5091,7 +5091,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-232" product="Co(tapp)-TPA-IMOF"/>
     <Procedure>
@@ -5125,7 +5125,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-233" product="Co(tapp)-DMTA-IMOF"/>
     <Procedure>
@@ -5161,7 +5161,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-234" product="Co(tapp)-DHTA-COF"/>
     <Procedure>
@@ -5197,7 +5197,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-242" product="Hybrid"/>
     <Procedure>
@@ -5233,7 +5233,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-252" product="Co(tapp)-TPA-RMOF·CNP"/>
     <Procedure>
@@ -5267,7 +5267,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-253" product="Co(tapp)-DHTA-RMOF·OH"/>
     <Procedure>
@@ -5304,7 +5304,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-254" product="Co(tapp)-TPA-RMOF·OH"/>
     <Procedure>
@@ -5339,7 +5339,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-258" product="Co(tapp)-TPA-CHF·OH"/>
     <Procedure>
@@ -5374,7 +5374,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-259" product="Co(tapp)-DMTA-CHF·OH"/>
     <Procedure>
@@ -5409,7 +5409,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-260" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -5443,7 +5443,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-261" product="Co(tapp)-TPA-COF"/>
     <Procedure>
@@ -5477,7 +5477,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-266" product="Co(III)(tapp)-TPA-hybrid·CNP"/>
     <Procedure>
@@ -5511,7 +5511,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-267" product="Co(III)(tapp)-TPA-hybrid·3,5-DNBA"/>
     <Procedure>
@@ -5545,7 +5545,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-268" product="Co(III)(tapp)-TPA-hybrid·OH"/>
     <Procedure>
@@ -5578,7 +5578,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-272" product="Co(III)(tapp)-TPA-hybrid·OH"/>
     <Procedure>
@@ -5611,7 +5611,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-274" product="Co(III)(tapp)-DFTA-hybrid·OH"/>
     <Procedure>
@@ -5646,7 +5646,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-282" product="Product"/>
     <Procedure>
@@ -5680,7 +5680,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-286" product="Product"/>
     <Procedure>
@@ -5713,7 +5713,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-287" product="Product"/>
     <Procedure>
@@ -5746,7 +5746,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-288" product="Product"/>
     <Procedure>
@@ -5781,7 +5781,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-289" product="Product"/>
     <Procedure>
@@ -5816,7 +5816,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-291" product="Product"/>
     <Procedure>
@@ -5849,7 +5849,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-295" product="Product"/>
     <Procedure>
@@ -5882,7 +5882,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-296" product="Product"/>
     <Procedure>
@@ -5915,7 +5915,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-297" product="Product"/>
     <Procedure>
@@ -5948,7 +5948,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-301" product="Product"/>
     <Procedure>
@@ -5983,7 +5983,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-302" product="Product"/>
     <Procedure>
@@ -6018,7 +6018,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-305" product="Product"/>
     <Procedure>
@@ -6054,7 +6054,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-309" product="MOCOF-1·DNBA"/>
     <Procedure>
@@ -6090,7 +6090,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-310" product="MOCOF-1"/>
     <Procedure>
@@ -6126,7 +6126,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-312" product="MOCOF-1"/>
     <Procedure>
@@ -6163,7 +6163,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-313" product="COF-366-Co"/>
     <Procedure>
@@ -6197,7 +6197,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-326" product="MOCOF-1"/>
     <Procedure>
@@ -6233,7 +6233,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-328" product="COF-366-Co"/>
     <Procedure>
@@ -6267,7 +6267,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-339" product="COF-366-Co"/>
     <Procedure>
@@ -6301,7 +6301,7 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
     <Metadata description="KE-340" product="MOCOF-1"/>
     <Procedure>

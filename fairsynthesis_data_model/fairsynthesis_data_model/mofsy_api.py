@@ -12,7 +12,7 @@ class Product:
         self.pxrd_files = pxrd_files
 
 
-def load_mofsy(file_path: str) -> SynthesisProcedure:
+def load_procedure(file_path: str) -> SynthesisProcedure:
     with open(file_path, 'r') as f:
         data = json.load(f)
     return SynthesisProcedure.from_dict(data)

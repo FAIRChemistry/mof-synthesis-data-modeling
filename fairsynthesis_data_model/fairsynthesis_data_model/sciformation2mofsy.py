@@ -166,7 +166,7 @@ def construct_reagents(reaction_components: List[ReactionComponent]) -> List[Rea
 
 def construct_hardware(experiment: Experiment):
     return Hardware(
-        [ComponentElement(id="", type=str(experiment.vessel.value), chemical=None, comment=None)]
+        [ComponentElement(id=str(experiment.vessel.value), type=str(experiment.vessel.value), chemical=None, comment=None)]
     )
 
 

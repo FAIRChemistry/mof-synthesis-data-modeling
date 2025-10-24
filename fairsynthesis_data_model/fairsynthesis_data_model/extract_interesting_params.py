@@ -1,0 +1,142 @@
+import os
+
+from .generated.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity, AmountUnit, TempUnit, XMLType, Solvent
+from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+from .pxrd_collector import PXRDFile
+from .utils import load_json, save_json
+
+
+def extract_interesting_params_for_mocof_1(procedure: SynthesisProcedure, characterization: ProductCharacterization):
+    """Interesting are:
+    Experimend ID: Metadata._description (just to keep track of data)
+Aminoporphyrin monomer type: Search for the Reagent with _inchi containing "Co" (case sensitive) and match _inchi with /^InChI=1S\/(.*?)\// and extract $1
+Aminoporphyrin monomer source: extract _name of the same Reagent
+Aminoporphyrin monomer amount (µmol): Search for the Add Step with _reagent same as the _name above, and extract _amount.Value. Make sure Unit is "micromole".
+Aldehyde monomer structure: Search for the Reagent with _role of "substrate" and _inchi does not contain "Co" and extract _inchi
+Aldehyde monomer amount (µmol): Search for the Add Step with _reagent same as the _name of the Reagent above, and extract _amount.Value. Make sure Unit is "micromole".
+Water amount (µmol): Search for the Reagent with _inchi matching "InChI=1S/H2O/h1H2". If not found return 0. Search for the Add Step with _reagent matching _name of the Reagent and extract _amount.Value. Make sure Unit is "micromole".
+Acid structure: Search for the Reagent with _role of "acid". Match _inchi with the regex above and return $1.
+Acid amount (µmol): Search for the Add Step with _reagent matching _name of the Reagent above. Extract _amount.Value. Make sure Unit is "micromole".
+Other additives: Search for the Reagent with _role of "catalyst" and _inchi not matching "InChI=1S/H2O/h1H2". If not found, return None. Match _inchi with the regex above and return $1.
+Solvent x (x=1,2,3) name: Search for all the Reagents with _role of "solvent". Give them number x and name in the following manner using _inchi.
+InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2 → 1: 1,4-dioxane
+InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H → 2: nitrobenzene
+InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H → 2: o-dichlorobenzene
+InChI=1S/C9H12/c1-7-4-8(2)6-9(3)5-7/h4-6H,1-3H3 → 2: mesitylene
+InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H → 3: m-dinitrobenzene
+If no matching, give the remaining smallest number and extract name with the regex above and $1.
+Solvent x (x=1,2,3) volume (µL): Search for the Add Step with _reagent matching _name of the Reagent above. Extract _amount.Value. Make sure Unit is "microlitre".
+Vessel: Hardware.Component._type
+Degassing (boolean): EvacuateAndRefill exists or not
+Temperature (°C): HeatChill _temp
+Duration (h): HeatChill _time
+Workup with NaCl (boolean): If there is WashSolid with _solvent = NaCl aq
+Activation with scCO2 (boolean): If there is WashSolid with _solvent = scCO2 or MeOH+scCO2
+MeOH in scCO2 activation (boolean): If the above condition is true and _solvent = MeOH+scCO2
+Activation under vacuum (boolean): If there is Dry"""
+    params_per_experiment = {}
+
+    for synthesis in procedure.synthesis:
+        experiment_id = synthesis.metadata.description if synthesis.metadata.description else "unknown"
+        params = {}
+
+        # Aminoporphyrin monomer
+        aminoporphyrin_reagent = next((r for r in synthesis.reagents.reagent if r.inchi and "Co" in r.inchi), None)
+        if aminoporphyrin_reagent:
+            params['aminoporphyrin_monomer_type'] = aminoporphyrin_reagent.inchi.split('/')[1] if aminoporphyrin_reagent.inchi.startswith("InChI=1S/") else aminoporphyrin_reagent.inchi
+            params['aminoporphyrin_monomer_source'] = aminoporphyrin_reagent.name
+            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aminoporphyrin_reagent.name), None)
+            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
+                params['aminoporphyrin_monomer_amount_umol'] = add_step.amount.value
+
+        # Aldehyde monomer
+        aldehyde_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.SUBSTRATE and (not r.inchi or "Co" not in r.inchi)), None)
+        if aldehyde_reagent:
+            params['aldehyde_monomer_structure'] = aldehyde_reagent.inchi
+            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aldehyde_reagent.name), None)
+            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
+                params['aldehyde_monomer_amount_umol'] = add_step.amount.value
+
+        # Water amount
+        water_reagent = next((r for r in synthesis.reagents.reagent if r.inchi == "InChI=1S/H2O/h1H2"), None)
+        if water_reagent:
+            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == water_reagent.name), None)
+            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
+                params['water_amount_umol'] = add_step.amount.value
+        else:
+            params['water_amount_umol'] = 0.0
+
+        # Acid
+        acid_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.ACID), None)
+        if acid_reagent:
+            params['acid_structure'] = acid_reagent.inchi.split('/')[1] if acid_reagent.inchi.startswith("InChI=1S/") else acid_reagent.inchi
+            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == acid_reagent.name), None)
+            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
+                params['acid_amount_umol'] = add_step.amount.value
+
+        # Other additives
+        catalyst_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.CATALYST and r.inchi != "InChI=1S/H2O/h1H2"), None)
+        if catalyst_reagent:
+            params['other_additives'] = catalyst_reagent.inchi.split('/')[1] if catalyst_reagent.inchi.startswith("InChI=1S/") else catalyst_reagent.inchi
+        else:
+            params['other_additives'] = None
+
+        # Solvents
+        solvent_reagents = [r for r in synthesis.reagents.reagent if r.role == Role.SOLVENT]
+        for idx, solvent_reagent in enumerate(solvent_reagents):
+            solvent_number = idx + 1
+            params[f'solvent_{solvent_number}_name'] = solvent_reagent.name
+            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_reagent.name), None)
+            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
+                params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+
+        # Vessel
+        if synthesis.hardware and synthesis.hardware.component:
+            vessel_component = next((comp for comp in synthesis.hardware.component if comp.type), None)
+            if vessel_component:
+                params['vessel'] = vessel_component.type
+
+        # Degassing
+        params['degassing'] = any(step for step in synthesis.procedure.prep.step if step.xml_type == XMLType.EVACUATE_AND_REFILL)
+
+        # Temperature and Duration
+        heat_chill_step = next((step for step in synthesis.procedure.reaction.step if step.xml_type == XMLType.HEAT_CHILL), None)
+        if heat_chill_step:
+            if heat_chill_step.temp:
+                params['temperature_C'] = heat_chill_step.temp.value
+                assert heat_chill_step.temp.unit == TempUnit.CELSIUS
+            if heat_chill_step.time:
+                params['duration_h'] = heat_chill_step.time.value
+                assert heat_chill_step.time.unit == AmountUnit.HOUR
+
+        # Workup with NaCl
+        params['workup_with_NaCl'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent == Solvent.NA_CL_AQ)
+
+        # Activation with scCO2
+        scCO2_activation = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and (step.solvent == Solvent.SC_CO2 or step.solvent == Solvent.ME_OH_SC_CO2))
+        params['activation_with_scCO2'] = scCO2_activation
+        if scCO2_activation:
+            params['MeOH_in_scCO2_activation'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent ==Solvent.ME_OH_SC_CO2)
+        else:
+            params['MeOH_in_scCO2_activation'] = False
+
+        # Activation under vacuum
+        params['activation_under_vacuum'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.DRY)
+
+        params_per_experiment[experiment_id] = params
+
+    return params_per_experiment
+
+
+
+def extract_interesting_params():
+    current_file_dir = __file__.rsplit('/', 1)[0]
+
+    # sciformation case
+    mofsy_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
+    mofsy_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
+    procedure = SynthesisProcedure.from_dict(load_json(mofsy_procedure_file_path))
+    characterization = ProductCharacterization.from_dict(load_json(mofsy_characterization_file_path))
+    params = extract_interesting_params_for_mocof_1(procedure, characterization)
+    save_json(params, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'params_from_sciformation.json'))
+
