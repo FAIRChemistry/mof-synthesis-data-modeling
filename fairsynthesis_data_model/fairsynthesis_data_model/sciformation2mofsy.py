@@ -154,7 +154,7 @@ def construct_reagents(reaction_components: List[ReactionComponent]) -> List[Rea
                 name=component.molecule_name,
                 role=role,
                 purity=None,
-                id=None,
+                id=component.molecule_name,
                 cas=cas,
                 comment=None
             )
