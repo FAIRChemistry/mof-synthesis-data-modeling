@@ -7,9 +7,6 @@
       "aminoporphyrin_monomer_type": {
         "type": "string"
       },
-      "aminoporphyrin_monomer_source": {
-        "type": "string"
-      },
       "aminoporphyrin_monomer_amount_umol": {
         "type": "number"
       },
@@ -29,10 +26,7 @@
         "type": "number"
       },
       "other_additives": {
-        "type": [
-          "null",
-          "string"
-        ]
+        "type": "string"
       },
       "solvent_1_name": {
         "type": "string"
@@ -41,7 +35,7 @@
         "type": "number"
       },
       "solvent_2_name": {
-        "type": ["string"]
+        "type": "string"
       },
       "solvent_2_volume_uL": {
         "type": "number"
@@ -73,18 +67,14 @@
     },
     "required": [
       "aminoporphyrin_monomer_type",
-      "aminoporphyrin_monomer_source",
       "aminoporphyrin_monomer_amount_umol",
       "aldehyde_monomer_structure",
       "aldehyde_monomer_amount_umol",
       "water_amount_umol",
       "acid_structure",
       "acid_amount_umol",
-      "other_additives",
       "solvent_1_name",
       "solvent_1_volume_uL",
-      "solvent_2_name",
-      "solvent_2_volume_uL",
       "vessel",
       "degassing",
       "temperature_C",

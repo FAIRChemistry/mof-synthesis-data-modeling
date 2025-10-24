@@ -56,7 +56,6 @@ class Mocof1Param:
     aldehyde_monomer_amount_umol: float
     aldehyde_monomer_structure: str
     aminoporphyrin_monomer_amount_umol: float
-    aminoporphyrin_monomer_source: str
     aminoporphyrin_monomer_type: str
     degassing: bool
     duration_h: float
@@ -71,7 +70,7 @@ class Mocof1Param:
     water_amount_umol: float
     workup_with_na_cl: bool
 
-    def __init__(self, acid_amount_umol: float, acid_structure: str, activation_under_vacuum: bool, activation_with_sc_co2: bool, aldehyde_monomer_amount_umol: float, aldehyde_monomer_structure: str, aminoporphyrin_monomer_amount_umol: float, aminoporphyrin_monomer_source: str, aminoporphyrin_monomer_type: str, degassing: bool, duration_h: float, me_oh_in_sc_co2_activation: bool, other_additives: Optional[str], solvent_1__name: str, solvent_1__volume_u_l: float, solvent_2__name: Optional[str], solvent_2__volume_u_l: float, temperature_c: float, vessel: str, water_amount_umol: float, workup_with_na_cl: bool) -> None:
+    def __init__(self, acid_amount_umol: float, acid_structure: str, activation_under_vacuum: bool, activation_with_sc_co2: bool, aldehyde_monomer_amount_umol: float, aldehyde_monomer_structure: str, aminoporphyrin_monomer_amount_umol: float,  aminoporphyrin_monomer_type: str, degassing: bool, duration_h: float, me_oh_in_sc_co2_activation: bool, other_additives: Optional[str], solvent_1__name: str, solvent_1__volume_u_l: float, solvent_2__name: Optional[str], solvent_2__volume_u_l: float, temperature_c: float, vessel: str, water_amount_umol: float, workup_with_na_cl: bool) -> None:
         self.acid_amount_umol = acid_amount_umol
         self.acid_structure = acid_structure
         self.activation_under_vacuum = activation_under_vacuum
@@ -79,7 +78,6 @@ class Mocof1Param:
         self.aldehyde_monomer_amount_umol = aldehyde_monomer_amount_umol
         self.aldehyde_monomer_structure = aldehyde_monomer_structure
         self.aminoporphyrin_monomer_amount_umol = aminoporphyrin_monomer_amount_umol
-        self.aminoporphyrin_monomer_source = aminoporphyrin_monomer_source
         self.aminoporphyrin_monomer_type = aminoporphyrin_monomer_type
         self.degassing = degassing
         self.duration_h = duration_h
@@ -104,7 +102,6 @@ class Mocof1Param:
         aldehyde_monomer_amount_umol = from_float(obj.get("aldehyde_monomer_amount_umol"))
         aldehyde_monomer_structure = from_str(obj.get("aldehyde_monomer_structure"))
         aminoporphyrin_monomer_amount_umol = from_float(obj.get("aminoporphyrin_monomer_amount_umol"))
-        aminoporphyrin_monomer_source = from_str(obj.get("aminoporphyrin_monomer_source"))
         aminoporphyrin_monomer_type = from_str(obj.get("aminoporphyrin_monomer_type"))
         degassing = from_bool(obj.get("degassing"))
         duration_h = from_float(obj.get("duration_h"))
@@ -118,7 +115,7 @@ class Mocof1Param:
         vessel = from_str(obj.get("vessel"))
         water_amount_umol = from_float(obj.get("water_amount_umol"))
         workup_with_na_cl = from_bool(obj.get("workup_with_NaCl"))
-        return Mocof1Param(acid_amount_umol, acid_structure, activation_under_vacuum, activation_with_sc_co2, aldehyde_monomer_amount_umol, aldehyde_monomer_structure, aminoporphyrin_monomer_amount_umol, aminoporphyrin_monomer_source, aminoporphyrin_monomer_type, degassing, duration_h, me_oh_in_sc_co2_activation, other_additives, solvent_1__name, solvent_1__volume_u_l, solvent_2__name, solvent_2__volume_u_l, temperature_c, vessel, water_amount_umol, workup_with_na_cl)
+        return Mocof1Param(acid_amount_umol, acid_structure, activation_under_vacuum, activation_with_sc_co2, aldehyde_monomer_amount_umol, aldehyde_monomer_structure, aminoporphyrin_monomer_amount_umol, aminoporphyrin_monomer_type, degassing, duration_h, me_oh_in_sc_co2_activation, other_additives, solvent_1__name, solvent_1__volume_u_l, solvent_2__name, solvent_2__volume_u_l, temperature_c, vessel, water_amount_umol, workup_with_na_cl)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -129,7 +126,6 @@ class Mocof1Param:
         result["aldehyde_monomer_amount_umol"] = to_float(self.aldehyde_monomer_amount_umol)
         result["aldehyde_monomer_structure"] = from_str(self.aldehyde_monomer_structure)
         result["aminoporphyrin_monomer_amount_umol"] = to_float(self.aminoporphyrin_monomer_amount_umol)
-        result["aminoporphyrin_monomer_source"] = from_str(self.aminoporphyrin_monomer_source)
         result["aminoporphyrin_monomer_type"] = from_str(self.aminoporphyrin_monomer_type)
         result["degassing"] = from_bool(self.degassing)
         result["duration_h"] = to_float(self.duration_h)

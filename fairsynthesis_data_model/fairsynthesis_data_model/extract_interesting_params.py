@@ -9,8 +9,7 @@ from .utils import load_json, save_json
 def extract_interesting_params_for_mocof_1(procedure: SynthesisProcedure, characterization: ProductCharacterization):
     """Interesting are:
     Experimend ID: Metadata._description (just to keep track of data)
-Aminoporphyrin monomer type: Search for the Reagent with _inchi containing "Co" (case sensitive) and match _inchi with /^InChI=1S\/(.*?)\// and extract $1
-Aminoporphyrin monomer source: extract _name of the same Reagent
+Aminoporphyrin monomer type: Search for the Reagent with _inchi containing "Co" (case sensitive) and extract sum formula from  _inchi
 Aminoporphyrin monomer amount (µmol): Search for the Add Step with _reagent same as the _name above, and extract _amount.Value. Make sure Unit is "micromole".
 Aldehyde monomer structure: Search for the Reagent with _role of "substrate" and _inchi does not contain "Co" and extract _inchi
 Aldehyde monomer amount (µmol): Search for the Add Step with _reagent same as the _name of the Reagent above, and extract _amount.Value. Make sure Unit is "micromole".
@@ -44,7 +43,6 @@ Activation under vacuum (boolean): If there is Dry"""
         aminoporphyrin_reagent = next((r for r in synthesis.reagents.reagent if r.inchi and "Co" in r.inchi), None)
         if aminoporphyrin_reagent:
             params['aminoporphyrin_monomer_type'] = aminoporphyrin_reagent.inchi.split('/')[1] if aminoporphyrin_reagent.inchi.startswith("InChI=1S/") else aminoporphyrin_reagent.inchi
-            params['aminoporphyrin_monomer_source'] = aminoporphyrin_reagent.name
             add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aminoporphyrin_reagent.name), None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['aminoporphyrin_monomer_amount_umol'] = add_step.amount.value
@@ -52,13 +50,12 @@ Activation under vacuum (boolean): If there is Dry"""
                 params['aminoporphyrin_monomer_amount_umol'] = -1.0
         else:
             params['aminoporphyrin_monomer_type'] = "unknown"
-            params['aminoporphyrin_monomer_source'] = "unknown"
             params['aminoporphyrin_monomer_amount_umol'] = -1.0
 
         # Aldehyde monomer
         aldehyde_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.SUBSTRATE and (not r.inchi or "Co" not in r.inchi)), None)
         if aldehyde_reagent:
-            params['aldehyde_monomer_structure'] = aldehyde_reagent.inchi
+            params['aldehyde_monomer_structure'] = aldehyde_reagent.inchi.split('/')[1]
             add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aldehyde_reagent.name), None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['aldehyde_monomer_amount_umol'] = add_step.amount.value
@@ -100,19 +97,38 @@ Activation under vacuum (boolean): If there is Dry"""
             params['other_additives'] = None
 
         # Solvents
+        solvent_inchi_map = {
+              "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2": (1, "1,4-dioxane"),
+              "InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H": (2, "nitrobenzene"),
+              "InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H": (2, "o-dichlorobenzene"),
+              "InChI=1S/C9H12/c1-7-4-8(2)6-9(3)5-7/h4-6H,1-3H3": (2, "mesitylene"),
+              "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H": (3, "m-dinitrobenzene")
+        }
         solvent_reagents = [r for r in synthesis.reagents.reagent if r.role == Role.SOLVENT]
+        solvent_others = []
         for idx, solvent_reagent in enumerate(solvent_reagents):
-            solvent_number = idx + 1
-            params[f'solvent_{solvent_number}_name'] = solvent_reagent.name
-            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_reagent.name), None)
-            if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
-                params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+            if solvent_reagent.inchi in solvent_inchi_map:
+                      solvent_number, solvent_name = solvent_inchi_map[solvent_reagent.inchi]
+                      params[f'solvent_{solvent_number}_name'] = solvent_name
+                      add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_reagent.name), None)
+                      if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
+                              params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+            else:
+                      solvent_others.append(solvent_reagent.name)
 
-        # if solvent slots 1-2 are missing, fill them with "D0" and 0.0
-        for solvent_number in range(1, 3):
-            if f'solvent_{solvent_number}_name' not in params:
-                params[f'solvent_{solvent_number}_name'] = "D0"
-                params[f'solvent_{solvent_number}_volume_uL'] = 0.0
+        for solvent_other in solvent_others:
+                for solvent_number in range(1, 3):
+                        if f'solvent_{solvent_number}_name' not in params:
+                                params[f'solvent_{solvent_number}_name'] = solvent_other
+                                add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_other), None)
+                                if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
+                                        params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+
+        #if solvent slots 1-3 are missing, fill them with "None" and 0.0
+        for solvent_number in range(1, 4):
+           if f'solvent_{solvent_number}_name' not in params:
+                params[f'solvent_{solvent_number}_name'] = None
+                params[f'solvent_{solvent_number}_volume_uL'] = None
 
         # Vessel
         if synthesis.hardware and synthesis.hardware.component:
