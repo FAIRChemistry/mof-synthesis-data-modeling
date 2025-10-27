@@ -1,9 +1,9 @@
 <XDL>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-008" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-008"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="11.43 micromole" reagent="KE-006"/>
@@ -36,9 +36,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-009" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-009"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="11.97 micromole" reagent="KE-006"/>
@@ -71,9 +71,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-010" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-010"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="11.52 micromole" reagent="KE-007"/>
@@ -106,9 +106,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-011" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-011"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.07 micromole" reagent="KE-007"/>
@@ -141,9 +141,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-014" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-014"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.49 micromole" reagent="KE-007"/>
@@ -180,9 +180,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-015" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-015"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.83 micromole" reagent="KE-013"/>
@@ -215,9 +215,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-016" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-016"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.16 micromole" reagent="KE-013"/>
@@ -250,9 +250,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-017" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-017"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.09 micromole" reagent="KE-013"/>
@@ -285,9 +285,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-019" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-019"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="14.0 micromole" reagent="KE-007"/>
@@ -320,9 +320,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-020" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-020"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.9 micromole" reagent="KE-007"/>
@@ -354,9 +354,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-021" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-021"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.5 micromole" reagent="KE-018"/>
@@ -388,9 +388,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-022" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-022"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.6 micromole" reagent="KE-018"/>
@@ -422,9 +422,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-033" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-033"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.4 micromole" reagent="KE-031"/>
@@ -456,9 +456,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-034" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-034"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -491,9 +491,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-035" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-035"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -526,9 +526,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-036" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-036"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -561,9 +561,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-040" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-040"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -595,9 +595,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-041" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-041"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -630,9 +630,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-042" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-042"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-032"/>
@@ -665,9 +665,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-044" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-044"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.52 micromole" reagent="KE-039"/>
@@ -699,9 +699,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-045" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-045"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-039"/>
@@ -733,9 +733,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-046" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-046"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.99 micromole" reagent="KE-039"/>
@@ -767,9 +767,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-047" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-047"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.58 micromole" reagent="KE-039"/>
@@ -801,9 +801,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-048" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-048"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="27.34 micromole" reagent="KE-039"/>
@@ -836,9 +836,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-049" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-049"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="26.87 micromole" reagent="KE-039"/>
@@ -871,9 +871,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-050" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-050"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.17 micromole" reagent="KE-039"/>
@@ -906,9 +906,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-051" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-051"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.11 micromole" reagent="KE-039"/>
@@ -941,9 +941,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-052" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-052"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-039"/>
@@ -975,9 +975,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-053" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-053"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.06 micromole" reagent="KE-039"/>
@@ -1010,9 +1010,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-059" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-059"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.06 micromole" reagent="KE-039"/>
@@ -1045,9 +1045,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-060" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-060"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.06 micromole" reagent="KE-039"/>
@@ -1079,9 +1079,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-061" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-061"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.06 micromole" reagent="KE-039"/>
@@ -1113,9 +1113,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-062" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-062"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.71 micromole" reagent="KE-039"/>
@@ -1147,9 +1147,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-063" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-063"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.06 micromole" reagent="KE-039"/>
@@ -1181,9 +1181,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-064" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-064"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-057"/>
@@ -1215,9 +1215,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-065" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-065"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-057"/>
@@ -1249,9 +1249,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-067" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-067"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.93 micromole" reagent="KE-056"/>
@@ -1283,9 +1283,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-068" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-068"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.93 micromole" reagent="KE-056"/>
@@ -1317,9 +1317,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-069" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-069"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.93 micromole" reagent="KE-056"/>
@@ -1351,9 +1351,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-070" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-070"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-056"/>
@@ -1385,9 +1385,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-073" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-073"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.93 micromole" reagent="KE-056"/>
@@ -1419,9 +1419,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-075" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-075"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.93 micromole" reagent="KE-056"/>
@@ -1455,9 +1455,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-076" product="Co(tapp)-DMTA COF"/>
+    <Metadata description="KE-076"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-056"/>
@@ -1489,9 +1489,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-081" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-081"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.81 micromole" reagent="KE-056"/>
@@ -1523,9 +1523,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-082" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-082"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.76 micromole" reagent="KE-056"/>
@@ -1557,9 +1557,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-083" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-083"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.17 micromole" reagent="KE-056"/>
@@ -1591,9 +1591,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-084" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-084"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.17 micromole" reagent="KE-056"/>
@@ -1626,9 +1626,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-085" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-085"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.87 micromole" reagent="KE-056"/>
@@ -1661,9 +1661,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-086" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-086"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="38.74 micromole" reagent="KE-056"/>
@@ -1695,9 +1695,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-089" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-089"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.85 micromole" reagent="KE-072"/>
@@ -1729,9 +1729,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-090" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-090"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.85 micromole" reagent="KE-072"/>
@@ -1763,9 +1763,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-091" product="Co(tapp)-TFTA COF"/>
+    <Metadata description="KE-091"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -1797,9 +1797,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-092" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-092"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.85 micromole" reagent="KE-072"/>
@@ -1833,9 +1833,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-097" product="Co(tapp)-PDA COF"/>
+    <Metadata description="KE-097"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -1862,9 +1862,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-098" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-098"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -1898,9 +1898,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-099" product="Co(tapp)I-PDA-PBA"/>
+    <Metadata description="KE-099"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.69 micromole" reagent="KE-095"/>
@@ -1934,9 +1934,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-104" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-104"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="12.77 micromole" reagent="KE-072"/>
@@ -1963,9 +1963,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-105" product="Co(tapp)-PDA-COF·DNP"/>
+    <Metadata description="KE-105"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.77 micromole" reagent="KE-072"/>
@@ -1997,9 +1997,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-106" product="Co(tapp)-PDA COF·PNP"/>
+    <Metadata description="KE-106"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.77 micromole" reagent="KE-072"/>
@@ -2029,9 +2029,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-107" product="Co(tapp)-PDA COF·PNP"/>
+    <Metadata description="KE-107"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2061,9 +2061,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-108" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-108"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2095,9 +2095,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-109" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-109"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2129,9 +2129,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-111" product="Co(tapp)-PDA-COF·DNP"/>
+    <Metadata description="KE-111"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2165,9 +2165,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-112" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-112"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.69 micromole" reagent="KE-072"/>
@@ -2194,9 +2194,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-113" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-113"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="-1.0 ${Unit}" reagent="KE-072"/>
@@ -2228,9 +2228,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-114" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-114"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.34 micromole" reagent="KE-072"/>
@@ -2264,9 +2264,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-115" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-115"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2298,9 +2298,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-119" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-119"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-072"/>
@@ -2332,9 +2332,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-120" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-120"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-072"/>
@@ -2366,9 +2366,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-121" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-121"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-072"/>
@@ -2399,9 +2399,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-125" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-125"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2433,9 +2433,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-126" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-126"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2467,9 +2467,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-127" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-127"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2501,9 +2501,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-128" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-128"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-072"/>
@@ -2535,9 +2535,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-129" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-129"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.07 micromole" reagent="ASR-119"/>
@@ -2569,9 +2569,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-130" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-130"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.17 micromole" reagent="ASR-125"/>
@@ -2603,9 +2603,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-131" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-131"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.05 micromole" reagent="ASR-118"/>
@@ -2637,9 +2637,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-132" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-132"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.17 micromole" reagent="KE-072"/>
@@ -2671,9 +2671,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-135" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-135"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.09 micromole" reagent="KE-072"/>
@@ -2705,9 +2705,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-139" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-139"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2739,9 +2739,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-140" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-140"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2773,9 +2773,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-141" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-141"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2809,9 +2809,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-144" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-144"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2843,9 +2843,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-145" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-145"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2876,9 +2876,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-146" product="Co(tapp)-PDA-COF PNP"/>
+    <Metadata description="KE-146"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2910,9 +2910,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-147" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-147"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -2944,9 +2944,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-149" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-149"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.19 micromole" reagent="KE-072"/>
@@ -2979,9 +2979,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-150" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-150"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.11 micromole" reagent="KE-138"/>
@@ -3013,9 +3013,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-151" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-151"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.82 micromole" reagent="KE-138"/>
@@ -3048,9 +3048,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-153" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-153"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="26.79 micromole" reagent="ASR-119"/>
@@ -3082,9 +3082,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-154" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-154"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="26.1 micromole" reagent="ASR-125"/>
@@ -3116,9 +3116,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-155" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-155"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="26.51 micromole" reagent="ASR-118"/>
@@ -3150,9 +3150,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-156" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-156"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.19 micromole" reagent="KE-072"/>
@@ -3184,9 +3184,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-157" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-157"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-138"/>
@@ -3218,9 +3218,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-158" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-158"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="14.23 micromole" reagent="KE-138"/>
@@ -3252,9 +3252,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-161" product="Co(tapp)2-PDA3-MCOF·PNP"/>
+    <Metadata description="KE-161"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3286,9 +3286,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-162" product="Co(tapp)-PDA-MCOF·PNP"/>
+    <Metadata description="KE-162"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3320,9 +3320,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-163" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-163"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3354,9 +3354,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-164" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-164"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3388,9 +3388,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-165" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-165"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3422,9 +3422,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-166" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-166"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3456,9 +3456,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-167" product="Co(tapp)-PDA-COF·PNP"/>
+    <Metadata description="KE-167"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-138"/>
@@ -3492,9 +3492,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-168" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-168"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="16.67 micromole" reagent="(SP-4-1)-[[4,4',4'',4'''-(21H,23H-Porphine-5,10,15,20-tetrayl-κN21,κN22,κN23,κN24)tetrakis[benzenaminato]](2-)]cobalt"/>
@@ -3526,9 +3526,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-172" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-172"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.57 micromole" reagent="ASR-118"/>
@@ -3560,9 +3560,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-173" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-173"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.23 micromole" reagent="KE-138"/>
@@ -3594,9 +3594,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-174" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-174"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.05 micromole" reagent="KE-138"/>
@@ -3630,9 +3630,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-175" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-175"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.41 micromole" reagent="KE-160"/>
@@ -3664,9 +3664,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-177" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-177"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.52 micromole" reagent="KE-138"/>
@@ -3698,9 +3698,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-178" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-178"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.25 micromole" reagent="KE-160"/>
@@ -3732,9 +3732,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-179" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-179"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.93 micromole" reagent="KE-138"/>
@@ -3766,9 +3766,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-180" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-180"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="12.94 micromole" reagent="ASR-118"/>
@@ -3800,9 +3800,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-181" product="Co(tapp)-TPA-RMOF·DNP"/>
+    <Metadata description="KE-181"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.76 micromole" reagent="KE-160"/>
@@ -3834,9 +3834,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-182" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-182"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.15 micromole" reagent="KE-160"/>
@@ -3868,9 +3868,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-183" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-183"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.91 micromole" reagent="KE-160"/>
@@ -3902,9 +3902,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-184" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-184"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.05 micromole" reagent="KE-138"/>
@@ -3936,9 +3936,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-186" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-186"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.61 micromole" reagent="KE-185"/>
@@ -3970,9 +3970,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-187" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-187"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-160"/>
@@ -4004,9 +4004,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-188" product="Co(tapp)-PDA-COF"/>
+    <Metadata description="KE-188"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-160"/>
@@ -4038,9 +4038,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-190" product="Co(tapp)-TPA-COF·PNP"/>
+    <Metadata description="KE-190"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-185"/>
@@ -4074,9 +4074,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-191" product="Product"/>
+    <Metadata description="KE-191"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-185"/>
@@ -4108,9 +4108,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="microwave vial"/>
+      <Component id="microwave vial" type="microwave vial"/>
     </Hardware>
-    <Metadata description="KE-192" product="Co(tapp)-TPA-COF·PNP"/>
+    <Metadata description="KE-192"/>
     <Procedure>
       <Prep>
         <Add vessel="microwave vial" amount="13.3 micromole" reagent="KE-185"/>
@@ -4142,9 +4142,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-193" product="Co(tapp)-TPA-RMOF·DNP"/>
+    <Metadata description="KE-193"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-185"/>
@@ -4176,9 +4176,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-197" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-197"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="9.97 micromole" reagent="KE-185"/>
@@ -4215,9 +4215,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-198" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-198"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="55.35 micromole" reagent="ASR-125"/>
@@ -4249,9 +4249,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-199" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-199"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="52.89 micromole" reagent="ASR-118"/>
@@ -4283,9 +4283,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-200" product="COF-366-Co"/>
+    <Metadata description="KE-200"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="39.62 micromole" reagent="KE-138"/>
@@ -4317,9 +4317,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-202" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-202"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.02 micromole" reagent="KE-185"/>
@@ -4351,9 +4351,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-203" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-203"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.08 micromole" reagent="KE-185"/>
@@ -4387,9 +4387,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-207" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-207"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4421,9 +4421,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-210" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-210"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4455,9 +4455,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-212" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-212"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="KE-185"/>
@@ -4489,9 +4489,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-213" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-213"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4523,9 +4523,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-214" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-214"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4557,9 +4557,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-216" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-216"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent=""/>
@@ -4591,9 +4591,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-217" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-217"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4625,9 +4625,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-218" product="Co(tapp)-TPA-IMCOF"/>
+    <Metadata description="KE-218"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
@@ -4659,9 +4659,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-219" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-219"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.32 micromole" reagent="KE-176"/>
@@ -4694,9 +4694,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-220" product="0.64Co(tapp)-TPA-IMOF, 0.36Co(tapp)-TPA-COF, 0.51 2,4-DNBA"/>
+    <Metadata description="KE-220"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4731,9 +4731,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-221" product="0.64Co(tapp)-TPA-IMOF, 0.36Co(tapp)-TPA-COF, 0.51 2,4-DNBA"/>
+    <Metadata description="KE-221"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4766,9 +4766,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-222" product="Co(tapp)-TPA-IMOF·0.28PNP"/>
+    <Metadata description="KE-222"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4802,9 +4802,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-224" product="Co(tapp)-TFTA-IMOF"/>
+    <Metadata description="KE-224"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4838,9 +4838,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-225" product="Co(tapp)-TFTA-IMOF"/>
+    <Metadata description="KE-225"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4876,9 +4876,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-226" product="0.65IMOF + 0.35Co(tapp)·PNP"/>
+    <Metadata description="KE-226"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4911,9 +4911,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-227" product="IMOF·0.77DNBA"/>
+    <Metadata description="KE-227"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4945,9 +4945,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-228" product="Product"/>
+    <Metadata description="KE-228"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -4981,9 +4981,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-229" product="Co(III)(tapp)-TPA-hybrid·X"/>
+    <Metadata description="KE-229"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -5017,9 +5017,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-230" product="Co(tapp)-TPA-IMOF·0.22PNP"/>
+    <Metadata description="KE-230"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5055,9 +5055,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-231" product="0.85Co(tapp)-DMTA-IMOF + 0.15COF + 0.20PNP"/>
+    <Metadata description="KE-231"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -5091,9 +5091,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-232" product="Co(tapp)-TPA-IMOF"/>
+    <Metadata description="KE-232"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -5125,9 +5125,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-233" product="Co(tapp)-DMTA-IMOF"/>
+    <Metadata description="KE-233"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -5161,9 +5161,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-234" product="Co(tapp)-DHTA-COF"/>
+    <Metadata description="KE-234"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="Co(tdpp)"/>
@@ -5197,9 +5197,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-242" product="Hybrid"/>
+    <Metadata description="KE-242"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="40.0 micromole" reagent="Co(tdpp)"/>
@@ -5233,9 +5233,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-252" product="Co(tapp)-TPA-RMOF·CNP"/>
+    <Metadata description="KE-252"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5267,9 +5267,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-253" product="Co(tapp)-DHTA-RMOF·OH"/>
+    <Metadata description="KE-253"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="7.55 micromole" reagent="KE-231"/>
@@ -5304,9 +5304,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-254" product="Co(tapp)-TPA-RMOF·OH"/>
+    <Metadata description="KE-254"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5339,9 +5339,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-258" product="Co(tapp)-TPA-CHF·OH"/>
+    <Metadata description="KE-258"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5374,9 +5374,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-259" product="Co(tapp)-DMTA-CHF·OH"/>
+    <Metadata description="KE-259"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.85 micromole" reagent="Co(tdpp)"/>
@@ -5409,9 +5409,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-260" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-260"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.43 micromole" reagent="SVG-127"/>
@@ -5443,9 +5443,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-261" product="Co(tapp)-TPA-COF"/>
+    <Metadata description="KE-261"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.42 micromole" reagent="SVG-127"/>
@@ -5477,9 +5477,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-266" product="Co(III)(tapp)-TPA-hybrid·CNP"/>
+    <Metadata description="KE-266"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5511,9 +5511,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-267" product="Co(III)(tapp)-TPA-hybrid·3,5-DNBA"/>
+    <Metadata description="KE-267"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5545,9 +5545,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-268" product="Co(III)(tapp)-TPA-hybrid·OH"/>
+    <Metadata description="KE-268"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5578,9 +5578,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-272" product="Co(III)(tapp)-TPA-hybrid·OH"/>
+    <Metadata description="KE-272"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.61 micromole" reagent="Co(tdpp)"/>
@@ -5611,9 +5611,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-274" product="Co(III)(tapp)-DFTA-hybrid·OH"/>
+    <Metadata description="KE-274"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5646,9 +5646,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-282" product="Product"/>
+    <Metadata description="KE-282"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="14.32 micromole" reagent="KE-279"/>
@@ -5680,9 +5680,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-286" product="Product"/>
+    <Metadata description="KE-286"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.65 micromole" reagent="Co(tdpp)"/>
@@ -5713,9 +5713,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-287" product="Product"/>
+    <Metadata description="KE-287"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.51 micromole" reagent="Co(tdpp)"/>
@@ -5746,9 +5746,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-288" product="Product"/>
+    <Metadata description="KE-288"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.41 micromole" reagent="Co(tdpp)"/>
@@ -5781,9 +5781,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-289" product="Product"/>
+    <Metadata description="KE-289"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.51 micromole" reagent="Co(tdpp)"/>
@@ -5816,9 +5816,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-291" product="Product"/>
+    <Metadata description="KE-291"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="15.04 micromole" reagent="Co(tdpp)"/>
@@ -5849,9 +5849,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-295" product="Product"/>
+    <Metadata description="KE-295"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5882,9 +5882,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-296" product="Product"/>
+    <Metadata description="KE-296"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5915,9 +5915,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-297" product="Product"/>
+    <Metadata description="KE-297"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -5948,9 +5948,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-301" product="Product"/>
+    <Metadata description="KE-301"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.51 micromole" reagent="Co(tdpp)"/>
@@ -5983,9 +5983,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-302" product="Product"/>
+    <Metadata description="KE-302"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.6 micromole" reagent="Co(tdpp)"/>
@@ -6018,9 +6018,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-305" product="Product"/>
+    <Metadata description="KE-305"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="80.0 micromole" reagent="Co(tdpp)"/>
@@ -6054,9 +6054,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-309" product="MOCOF-1·DNBA"/>
+    <Metadata description="KE-309"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="40.0 micromole" reagent="Co(tdpp)"/>
@@ -6090,9 +6090,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-310" product="MOCOF-1"/>
+    <Metadata description="KE-310"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="80.0 micromole" reagent="Co(tdpp)"/>
@@ -6126,9 +6126,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-312" product="MOCOF-1"/>
+    <Metadata description="KE-312"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -6163,9 +6163,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-313" product="COF-366-Co"/>
+    <Metadata description="KE-313"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -6197,9 +6197,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-326" product="MOCOF-1"/>
+    <Metadata description="KE-326"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="80.0 micromole" reagent="Co(tdpp)"/>
@@ -6233,9 +6233,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-328" product="COF-366-Co"/>
+    <Metadata description="KE-328"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Co(tdpp)"/>
@@ -6267,9 +6267,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-339" product="COF-366-Co"/>
+    <Metadata description="KE-339"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="43.73 micromole" reagent="Co(tdpp)"/>
@@ -6301,9 +6301,9 @@
   </Synthesis>
   <Synthesis>
     <Hardware>
-      <Component id="Schlenk bomb"/>
+      <Component id="Schlenk bomb" type="Schlenk bomb"/>
     </Hardware>
-    <Metadata description="KE-340" product="MOCOF-1"/>
+    <Metadata description="KE-340"/>
     <Procedure>
       <Prep>
         <Add vessel="Schlenk bomb" amount="43.73 micromole" reagent="Co(tdpp)"/>

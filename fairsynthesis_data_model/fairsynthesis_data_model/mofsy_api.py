@@ -1,8 +1,9 @@
 import json
-from typing import List
+from typing import List, Dict
 
 from .generated.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity
 from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+from .generated.mocof_1_params import Mocof1Param
 from .pxrd_collector import PXRDFile
 
 class Product:
@@ -12,7 +13,7 @@ class Product:
         self.pxrd_files = pxrd_files
 
 
-def load_mofsy(file_path: str) -> SynthesisProcedure:
+def load_procedure(file_path: str) -> SynthesisProcedure:
     with open(file_path, 'r') as f:
         data = json.load(f)
     return SynthesisProcedure.from_dict(data)
@@ -21,6 +22,12 @@ def load_characterization(file_path: str) -> ProductCharacterization:
     with open(file_path, 'r') as f:
         data = json.load(f)
     return ProductCharacterization.from_dict(data)
+
+def load_mocof_1_params(file_path: str) -> Dict[str, Mocof1Param]:
+    with open(file_path, 'r') as f:
+        data: dict[str, dict] = json.load(f)
+    # Convert each entry in the dictionary to Mocof1Param
+    return {k: Mocof1Param.from_dict(v) for k, v in data.items()}
 
 
 def get_synthesis_list(procedure: SynthesisProcedure) -> list[SynthesisElement]:
@@ -38,6 +45,9 @@ def get_characterization_by_experiment_id(characterization: ProductCharacterizat
         if entry.metadata.description == experiment_id:
             return entry
     return None
+
+def get_params_by_experiment_id(params: Dict[str, Mocof1Param], experiment_id: str) -> Mocof1Param | None:
+    return params.get(experiment_id, None)
 
 def find_reagent_by_name(synthesis: SynthesisElement, reagent_name: str) -> ReagentElement | None:
     for reagent in synthesis.reagents.reagent:

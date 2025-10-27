@@ -1,0 +1,88 @@
+{
+  "title": "Mocof-1-Params",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "aminoporphyrin_monomer_type": {
+        "type": "string"
+      },
+      "aminoporphyrin_monomer_amount_umol": {
+        "type": "number"
+      },
+      "aldehyde_monomer_structure": {
+        "type": "string"
+      },
+      "aldehyde_monomer_amount_umol": {
+        "type": "number"
+      },
+      "water_amount_umol": {
+        "type": "number"
+      },
+      "acid_structure": {
+        "type": "string"
+      },
+      "acid_amount_umol": {
+        "type": "number"
+      },
+      "other_additives": {
+        "type": "string"
+      },
+      "solvent_1_name": {
+        "type": "string"
+      },
+      "solvent_1_volume_uL": {
+        "type": "number"
+      },
+      "solvent_2_name": {
+        "type": "string"
+      },
+      "solvent_2_volume_uL": {
+        "type": "number"
+      },
+      "vessel": {
+        "type": "string"
+      },
+      "degassing": {
+        "type": "boolean"
+      },
+      "temperature_C": {
+        "type": "number"
+      },
+      "duration_h": {
+        "type": "number"
+      },
+      "workup_with_NaCl": {
+        "type": "boolean"
+      },
+      "activation_with_scCO2": {
+        "type": "boolean"
+      },
+      "MeOH_in_scCO2_activation": {
+        "type": "boolean"
+      },
+      "activation_under_vacuum": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "aminoporphyrin_monomer_type",
+      "aminoporphyrin_monomer_amount_umol",
+      "aldehyde_monomer_structure",
+      "aldehyde_monomer_amount_umol",
+      "water_amount_umol",
+      "acid_structure",
+      "acid_amount_umol",
+      "solvent_1_name",
+      "solvent_1_volume_uL",
+      "vessel",
+      "degassing",
+      "temperature_C",
+      "duration_h",
+      "workup_with_NaCl",
+      "activation_with_scCO2",
+      "MeOH_in_scCO2_activation",
+      "activation_under_vacuum"
+    ]
+  }
+}

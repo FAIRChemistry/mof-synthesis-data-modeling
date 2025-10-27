@@ -1,19 +1,25 @@
+import json
 import os.path
 
 import fairsynthesis_data_model.mofsy_api as api
 from fairsynthesis_data_model.generated.procedure_data_structure import SynthesisProcedure
 from fairsynthesis_data_model.generated.characterization_data_structure import ProductCharacterization
+from fairsynthesis_data_model.generated.mocof_1_params import Mocof1Param
 
 current_file_dir = __file__.rsplit('/', 1)[0]
 procedure_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/procedure_from_sciformation.json")
 characterization_file_path = os.path.join(current_file_dir,
                                           "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
+params_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/params_from_sciformation.json")
 
 # Load Procedure file into our Procedure class structure
-procedure: SynthesisProcedure = api.load_mofsy(procedure_file_path)
+procedure: SynthesisProcedure = api.load_procedure(procedure_file_path)
 
 # Load Characterization file into our CharacterizationEntry class structure
 characterization: ProductCharacterization = api.load_characterization(characterization_file_path)
+
+# Load Mocof 1 Params file into our Mocof1Param class structure
+params: dict[str, Mocof1Param] = api.load_mocof_1_params(params_file_path)
 
 # Access an individual experiment by id
 example_experiment_id = "KE-232"
@@ -41,3 +47,8 @@ for synthesis in synthesis_list:
     pxrd_files_per_experiment.append(len(pxrd_files))
 average_pxrd_files = sum(pxrd_files_per_experiment) / len(pxrd_files_per_experiment)
 print(f"Average number of PXRD files per experiment: {average_pxrd_files:.2f}")
+
+# Print params of an experiment
+example_experiment_id_3 = "KE-008"
+example_synthesis_3 = api.get_params_by_experiment_id(params, example_experiment_id_3)
+print(f"Parameters for Experiment ID {example_experiment_id_3}: {json.dumps(Mocof1Param.to_dict(example_synthesis_3))}")
