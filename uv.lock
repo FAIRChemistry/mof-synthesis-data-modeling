@@ -139,6 +139,7 @@ version = "0.1.0"
 source = { editable = "fairsynthesis_analysis" }
 dependencies = [
     { name = "altair" },
+    { name = "fairsynthesis-data-model" },
     { name = "marimo" },
     { name = "numpy" },
     { name = "polars" },
@@ -149,6 +150,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "altair", specifier = ">=5.5.0" },
+    { name = "fairsynthesis-data-model", editable = "fairsynthesis_data_model" },
     { name = "marimo", specifier = ">=0.12.6" },
     { name = "numpy", specifier = ">=2.2.4" },
     { name = "polars", specifier = ">=1.26.0" },
