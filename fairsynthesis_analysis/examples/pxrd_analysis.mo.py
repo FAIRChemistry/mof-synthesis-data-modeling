@@ -1,12 +1,14 @@
 import marimo
 
-__generated_with = "0.17.0"
+__generated_with = "0.17.6"
 app = marimo.App(width="medium")
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""# Overview PXRD Yield Calculation""")
+    mo.md(r"""
+    # Overview PXRD Molar Fraction Calculation
+    """)
     return
 
 
@@ -31,7 +33,9 @@ def _():
 @app.cell
 def _():
     import fairsynthesis_data_model.mofsy_api as api
-    from fairsynthesis_data_model.generated.procedure_data_structure import SynthesisProcedure
+    from fairsynthesis_data_model.generated.procedure_data_structure import (
+        SynthesisProcedure,
+    )
     from fairsynthesis_data_model.generated.characterization_data_structure import (
         ProductCharacterization,
         CharacterizationEntry,
@@ -66,7 +70,7 @@ def _(
     characterization_file_path,
     procedure_file_path,
 ):
-    procedure: SynthesisProcedure = api.load_mofsy(procedure_file_path)
+    procedure: SynthesisProcedure = api.load_procedure(procedure_file_path)
     characterization: ProductCharacterization = api.load_characterization(
         characterization_file_path
     )
@@ -100,20 +104,20 @@ def _(di, mo, pl):
         pl.DataFrame(
             {
                 "id": di.keys(),
-                "yield": di.values(),
+                "molar_fraction": di.values(),
             }
         )
         .select(
             [
                 pl.col("id"),
-                pl.col("yield").struct.field("COF-366").alias("COF-366"),
-                pl.col("yield").struct.field("MOCOF-1").alias("MOCOF-1"),
-                pl.col("yield").struct.field("unknown").alias("unknown"),
+                pl.col("molar_fraction").struct.field("COF-366").alias("COF-366"),
+                pl.col("molar_fraction").struct.field("MOCOF-1").alias("MOCOF-1"),
+                pl.col("molar_fraction").struct.field("unknown").alias("unknown"),
             ]
         )
         .sort("id")
     )
-    _data.write_csv(mo.notebook_dir() / "data/pxrd_yield_overview.csv")
+    _data.write_csv(mo.notebook_dir() / "data/pxrd_molar_fraction_overview.csv")
     overview_selection = mo.ui.table(_data, selection="single")
     overview_selection
     return (overview_selection,)
@@ -215,11 +219,13 @@ def _(id_settings, json, mo, save_button, selection, settings_override):
 
 
 @app.cell
-def _(it, settings):
+def _(it, settings_override):
     it_measurement = it[0]
     it_background_subtracted = it_measurement.subtract_background()
-    it_normalized = it_background_subtracted.normalize(settings["normalization"])
-    it_baseline_corrected = it_normalized.correct_baseline(settings["correct_baseline"])
+    it_normalized = it_background_subtracted.normalize(settings_override["normalization"])
+    it_baseline_corrected = it_normalized.correct_baseline(
+        settings_override["correct_baseline"]
+    )
     return (
         it_background_subtracted,
         it_baseline_corrected,
@@ -230,32 +236,29 @@ def _(it, settings):
 
 @app.cell
 def _(
+    cof366,
     it_background_subtracted,
     it_baseline_corrected,
     it_measurement,
     it_normalized,
     mo,
+    mocof1,
 ):
-    mo.md(
-        f"""
+    mo.md(f"""
     {
-            mo.accordion(
-                {
-                    "Measurement": it_measurement._display_(),
-                    "Background subtracted": it_background_subtracted._display_(),
-                    "Normalized": it_normalized._display_(),
-                    "Baseline Corrected": it_baseline_corrected._display_(),
-                },
-            )
-        }
-    """
-    )
-    return
-
-
-@app.cell
-def _(cof366, it_baseline_corrected, mocof1):
-    it_baseline_corrected.calc_yield({"COF-366": cof366, "MOCOF-1": mocof1})
+        mo.accordion(
+            {
+                "Measurement": it_measurement._display_(),
+                "Background subtracted": it_background_subtracted._display_(),
+                "Normalized": it_normalized._display_(),
+                "Baseline Corrected": it_baseline_corrected._display_(),
+                "Molar Fractions": it_baseline_corrected.calc_molar_fraction(
+                    {"COF-366": cof366, "MOCOF-1": mocof1}
+                ),
+            },
+        )
+    }
+    """)
     return
 
 
@@ -348,7 +351,7 @@ def _(
         _settings = json.load(_f)
     for _s in all_synthesis:
         try:
-            di[_s] = (get_pxrd_spectrum(_s)).calc_yield(
+            di[_s] = (get_pxrd_spectrum(_s)).calc_molar_fraction(
                 {"COF-366": cof366, "MOCOF-1": mocof1}
             )
         except:

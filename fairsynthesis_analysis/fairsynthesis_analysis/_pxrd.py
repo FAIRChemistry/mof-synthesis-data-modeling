@@ -7,9 +7,7 @@ from fairsynthesis_data_model.pxrd_collector import PXRDFile
 from scipy.optimize import nnls as _nnls
 
 
-def _extract_corresponding_reference(
-    pxrd_file: PXRDFile, references: list[PXRDFile]
-) -> PXRDFile | None:
+def _extract_corresponding_reference(pxrd_file: PXRDFile, references: list[PXRDFile]) -> PXRDFile | None:
     """Extracts the corresponding reference PXRD file from a list of references.
 
     Args:
@@ -22,16 +20,10 @@ def _extract_corresponding_reference(
     _filtered = [f for f in references if f.xray_source == pxrd_file.xray_source]
     if len(_filtered) > 0:
         references = _filtered
-    _filtered = [
-        f for f in references if f.sample_holder_shape == pxrd_file.sample_holder_shape
-    ]
+    _filtered = [f for f in references if f.sample_holder_shape == pxrd_file.sample_holder_shape]
     if len(_filtered) > 0:
         references = _filtered
-    _filtered = [
-        f
-        for f in references
-        if f.sample_holder_diameter == pxrd_file.sample_holder_diameter
-    ]
+    _filtered = [f for f in references if f.sample_holder_diameter == pxrd_file.sample_holder_diameter]
     if len(_filtered) > 0:
         references = _filtered
     _filtered = [f for f in references if f.other_metadata == pxrd_file.other_metadata]
@@ -68,9 +60,7 @@ class PXRDSpectrum(PXRDFile):
                 """Convert 2θ from Co-Kα1 to Cu-Kα1."""
                 λ_Cu = 1.540562  # Å
                 λ_Co = 1.788965  # Å
-                return np.degrees(
-                    2 * np.arcsin(λ_Cu / λ_Co * np.sin(np.radians(two_theta) / 2))
-                )
+                return np.degrees(2 * np.arcsin(λ_Cu / λ_Co * np.sin(np.radians(two_theta) / 2)))
 
             if pxrd_file.xray_source == "Co-Kα1":
                 two_theta = _convert_Co_to_Cu(pxrd_data[:, 0])
@@ -98,18 +88,17 @@ class PXRDSpectrum(PXRDFile):
         """
         if background is None:
 
-            def select_background_spectrum(pxrd_file: PXRDFile) -> PXRDFile:
-                _dir = Path(pxrd_file.path).parent
-                _background_files = list(_dir.glob("*PXRD_Blank_*.xyd"))
-                _background_files = [PXRDFile(str(f)) for f in _background_files]
+            def select_background_spectrum(pxrd_file: PXRDFile, background_files: list[str] | None = None) -> PXRDFile:
+                if not background_files:
+                    _dir = Path(pxrd_file.path).parent
+                    _background_files = list(_dir.glob("*PXRD_Blank_*.xyd"))
+                    _background_files = [PXRDFile(str(f)) for f in _background_files]
+                else:
+                    _background_files = [PXRDFile(f) for f in background_files]
 
-                _background_file = _extract_corresponding_reference(
-                    pxrd_file, _background_files
-                )
+                _background_file = _extract_corresponding_reference(pxrd_file, _background_files)
                 if _background_file is None:
-                    raise ValueError(
-                        f"No suitable background file found for PXRD file: {pxrd_file.path}"
-                    )
+                    raise ValueError(f"No suitable background file found for PXRD file: {pxrd_file.path}")
                 return _background_file
 
             background_file = select_background_spectrum(self)
@@ -127,8 +116,7 @@ class PXRDSpectrum(PXRDFile):
         return PXRDSpectrum(
             self,
             two_theta,
-            intensity
-            - np.interp(two_theta, background.two_theta, background.intensity),
+            intensity - np.interp(two_theta, background.two_theta, background.intensity),
         )
 
     def normalize(self, settings=None) -> "PXRDSpectrum":
@@ -150,10 +138,7 @@ class PXRDSpectrum(PXRDFile):
             raise ValueError(f"Unsupported X-ray source: {self.xray_source}")
 
         mean_in_range = np.mean(
-            self.intensity[
-                (self.two_theta >= reference_range[0])
-                & (self.two_theta <= reference_range[1])
-            ]
+            self.intensity[(self.two_theta >= reference_range[0]) & (self.two_theta <= reference_range[1])]
         )
 
         return PXRDSpectrum(self, self.two_theta, self.intensity / mean_in_range)
@@ -183,17 +168,15 @@ class PXRDSpectrum(PXRDFile):
             y_detrend[~_bool] = y - base
             return y_detrend
 
-        return PXRDSpectrum(
-            self, self.two_theta, _baseline_correction(self.two_theta, self.intensity)
-        )
+        return PXRDSpectrum(self, self.two_theta, _baseline_correction(self.two_theta, self.intensity))
 
-    def calc_yield(
+    def calc_molar_fraction(
         self, products: dict[str, "PXRDSpectrum"] | dict[str, list["PXRDSpectrum"]]
     ) -> dict[str, float]:
-        """Calculates the yield of each product based on the intensity values.
+        """Calculates the molar fraction of each product based on the intensity values.
 
         Args:
-            products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]): 
+            products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]):
                 A dictionary of product names and their corresponding PXRD files.
         Returns:
             dict[str, float]: A dictionary of product names and their corresponding yields.
@@ -204,9 +187,7 @@ class PXRDSpectrum(PXRDFile):
             if not phase_keys:
                 return {"unknown": 1.0}
 
-            phase_arrays = [
-                np.asarray(components[name], dtype=float) for name in phase_keys
-            ]
+            phase_arrays = [np.asarray(components[name], dtype=float) for name in phase_keys]
             target = np.asarray(y, dtype=float)
 
             min_len = min(target.size, *[arr.size for arr in phase_arrays])
@@ -215,7 +196,7 @@ class PXRDSpectrum(PXRDFile):
 
             design_matrix = np.column_stack(phase_arrays)
             weights, _ = _nnls(design_matrix, target)
-            weights = np.minimum(weights, 1.0)
+            # weights = np.minimum(weights, 1.0)
 
             labels = []
             for name in phase_keys:
@@ -229,7 +210,7 @@ class PXRDSpectrum(PXRDFile):
             contributions = {label: value for label, value in zip(labels, weights)}
             contributions["unknown"] = max(0.0, 1.0 - weights.sum())
             if sum(contributions.values()) > 0:
-                total = sum(contributions.values())
+                total = 1 #sum(contributions.values())
                 contributions = {k: v / total for k, v in contributions.items()}
             return contributions
 
@@ -239,9 +220,7 @@ class PXRDSpectrum(PXRDFile):
         }
         for k, v in _products.items():
             if v is None:
-                raise ValueError(
-                    f"No suitable product file found for PXRD file: {self.path}"
-                )
+                raise ValueError(f"No suitable product file found for PXRD file: {self.path}")
 
         intensities = _linear_combination_shortening(
             self.two_theta,
@@ -260,10 +239,12 @@ class PXRDSpectrum(PXRDFile):
 
         chart = (
             alt.Chart(
-                pl.DataFrame({
-                    "two_theta": self.two_theta,
-                    "intensity": self.intensity,
-                })
+                pl.DataFrame(
+                    {
+                        "two_theta": self.two_theta,
+                        "intensity": self.intensity,
+                    }
+                )
             )
             .mark_line()
             .encode(

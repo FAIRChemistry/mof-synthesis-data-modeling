@@ -9,7 +9,9 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "altair>=5.5.0",
+    "fairsynthesis-data-model",
     "marimo>=0.12.6",
+    "molmass>=2025.9.4",
     "numpy>=2.2.4",
     "polars>=1.26.0",
     "pybaselines>=1.2.0",
@@ -43,3 +45,6 @@ combine-as-imports = true
 extra-standard-library = ["typing_extensions"]
 lines-after-imports = 2
 order-by-type = false
+
+[tool.uv.sources]
+fairsynthesis-data-model = { workspace = true }
