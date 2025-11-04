@@ -26,9 +26,9 @@ def _extract_corresponding_reference(pxrd_file: PXRDFile, references: list[PXRDF
     _filtered = [f for f in references if f.sample_holder_diameter == pxrd_file.sample_holder_diameter]
     if len(_filtered) > 0:
         references = _filtered
-    _filtered = [f for f in references if f.other_metadata == pxrd_file.other_metadata]
-    if len(_filtered) > 0:
-        references = _filtered
+    #_filtered = [f for f in references if f.other_metadata == pxrd_file.other_metadata]
+    #if len(_filtered) > 0:
+    #    references = _filtered
     if len(references) == 0:
         return None
     return references[0]
@@ -179,7 +179,7 @@ class PXRDSpectrum(PXRDFile):
             products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]):
                 A dictionary of product names and their corresponding PXRD files.
         Returns:
-            dict[str, float]: A dictionary of product names and their corresponding yields.
+            dict[str, float]: A dictionary of product names and their corresponding molar fractions (2 digits after decimal).
         """
 
         def _linear_combination_shortening(x, y, components):
@@ -230,7 +230,7 @@ class PXRDSpectrum(PXRDFile):
                 for k, v in _products.items()
             },
         )
-        return intensities
+        return {k: round(v, 2) for k, v in intensities.items()}
 
     def _display_(self):
         import altair as alt

@@ -110,7 +110,7 @@ def _(di, mo, pl):
         .select(
             [
                 pl.col("id"),
-                pl.col("molar_fraction").struct.field("COF-366").alias("COF-366"),
+                pl.col("molar_fraction").struct.field("COF-366-Co").alias("COF-366-Co"),
                 pl.col("molar_fraction").struct.field("MOCOF-1").alias("MOCOF-1"),
                 pl.col("molar_fraction").struct.field("unknown").alias("unknown"),
             ]
@@ -247,7 +247,7 @@ def _(
                 "Normalized": it_normalized._display_(),
                 "Baseline Corrected": it_baseline_corrected._display_(),
                 "Molar Fractions": it_baseline_corrected.calc_molar_fraction(
-                    {"COF-366": cof366, "MOCOF-1": mocof1}
+                    {"COF-366-Co": cof366, "MOCOF-1": mocof1}
                 ),
             },
         )
@@ -302,8 +302,8 @@ def _(
 
 @app.cell
 def _(get_pxrd_spectrum):
-    cof366 = ["KE-132", "KE-207", "KE-286", "KE-328"]
-    mocof1 = ["KE-228", "KE-254", "KE-301", "KE-326"]
+    cof366 = ["KE-197", "KE-207", "KE-286", "KE-130"]
+    mocof1 = ["KE-229", "KE-226", "KE-301", "KE-193"]
     cof366 = [get_pxrd_spectrum(_s) for _s in cof366]
     mocof1 = [get_pxrd_spectrum(_s) for _s in mocof1]
     return cof366, mocof1
@@ -346,7 +346,7 @@ def _(
     for _s in all_synthesis:
         try:
             di[_s] = (get_pxrd_spectrum(_s)).calc_molar_fraction(
-                {"COF-366": cof366, "MOCOF-1": mocof1}
+                {"COF-366-Co": cof366, "MOCOF-1": mocof1}
             )
         except:
             di[_s] = None

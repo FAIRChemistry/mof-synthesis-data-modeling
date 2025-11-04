@@ -149,7 +149,7 @@ def _():
     from molmass import Formula
 
     sum_formula = {
-        "CPF-366": "C60H36CoN8",
+        "COF-366-Co": "C60H36CoN8",
         "MOCOF-1": "C52H33CoN8",
         "unknown": "C44H31CoN8",
     }
@@ -260,35 +260,35 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
             df_procedure.select(
                 "id",
                 (pl.col("Procedure_Prep_Step_0__amount_Value") * 1e-6).alias(
-                    "educt_amount_mol"
+                    "precursor_amount_mol"
                 ),
             ),
             on="id",
         )
         .with_columns(
             (
-                pl.col("COF-366")
+                pl.col("COF-366-Co")
                 * pl.col("product_weight_g")
                 / (
-                    pl.col("COF-366") * formula_mass["CPF-366"]
+                    pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
-                / pl.col("educt_amount_mol")
-            ).alias("yield_COF-366"),
+                / pl.col("precursor_amount_mol")
+            ).alias("yield_COF-366-Co"),
             (
                 pl.col("MOCOF-1")
                 * pl.col("product_weight_g")
                 / (
-                    pl.col("COF-366") * formula_mass["CPF-366"]
+                    pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
-                / pl.col("educt_amount_mol")
+                / pl.col("precursor_amount_mol")
             ).alias("yield_MOCOF-1"),
         )
         .with_columns(
-            pl.col("COF-366").alias("mol_fraction_COF-366"),
+            pl.col("COF-366-Co").alias("mol_fraction_COF-366-Co"),
             pl.col("MOCOF-1").alias("mol_fraction_MOCOF-1"),
             pl.col("unknown").alias("mol_fraction_unknown"),
         )
@@ -296,14 +296,15 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
             pl.col("*").exclude(
                 [
                     "product_weight_g",
-                    "educt_amount_mol",
-                    "COF-366",
+                    "precursor_amount_mol",
+                    "COF-366-Co",
                     "MOCOF-1",
                     "unknown",
                 ]
             )
         )
     )
+    df3
     return (df3,)
 
 
@@ -337,15 +338,7 @@ def _():
 @app.cell
 def _(df_selected, px):
     _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amino", y="mol_fraction_COF-366", z="yield_MOCOF-1")
-    _fig.show()
-    return
-
-
-@app.cell
-def _(df_selected, px):
-    _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amino", y="mol_fraction_COF-366", z="yield_MOCOF-1")
+    _fig = px.scatter_3d(_df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1")
     _fig.show()
     return
 
