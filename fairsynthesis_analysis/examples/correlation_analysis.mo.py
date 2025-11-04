@@ -329,13 +329,24 @@ def _(df3, mo, pl):
 
 
 @app.cell
-def _(df_selected):
+def _():
     import plotly.express as px
-    import pandas as pd
+    return (px,)
 
-    df = df_selected.value
-    fig = px.scatter_3d(df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1")
-    fig.show()
+
+@app.cell
+def _(df_selected, px):
+    _df = df_selected.value
+    _fig = px.scatter_3d(_df, x="ald_per_amino", y="mol_fraction_COF-366", z="yield_MOCOF-1")
+    _fig.show()
+    return
+
+
+@app.cell
+def _(df_selected, px):
+    _df = df_selected.value
+    _fig = px.scatter_3d(_df, x="ald_per_amino", y="mol_fraction_COF-366", z="yield_MOCOF-1")
+    _fig.show()
     return
 
 
