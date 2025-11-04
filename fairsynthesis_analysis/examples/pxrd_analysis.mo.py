@@ -221,23 +221,17 @@ def _(id_settings, json, mo, save_button, selection, settings_override):
 @app.cell
 def _(it, settings_override):
     it_measurement = it[0]
-    it_background_subtracted = it_measurement.subtract_background()
-    it_normalized = it_background_subtracted.normalize(settings_override["normalization"])
+    #it_background_subtracted = it_measurement.subtract_background()
+    it_normalized = it_measurement.normalize(settings_override["normalization"])
     it_baseline_corrected = it_normalized.correct_baseline(
         settings_override["correct_baseline"]
     )
-    return (
-        it_background_subtracted,
-        it_baseline_corrected,
-        it_measurement,
-        it_normalized,
-    )
+    return it_baseline_corrected, it_measurement, it_normalized
 
 
 @app.cell
 def _(
     cof366,
-    it_background_subtracted,
     it_baseline_corrected,
     it_measurement,
     it_normalized,
@@ -249,7 +243,7 @@ def _(
         mo.accordion(
             {
                 "Measurement": it_measurement._display_(),
-                "Background subtracted": it_background_subtracted._display_(),
+                #"Background subtracted": it_background_subtracted._display_(),
                 "Normalized": it_normalized._display_(),
                 "Baseline Corrected": it_baseline_corrected._display_(),
                 "Molar Fractions": it_baseline_corrected.calc_molar_fraction(
@@ -298,7 +292,7 @@ def _(
         # if pxrd_files:
         return (
             PXRDSpectrum(pxrd_files[0])
-            .subtract_background()
+            #.subtract_background()
             .normalize(settings["normalization"])
             .correct_baseline(settings["correct_baseline"])
         )
