@@ -308,9 +308,41 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
 
 
 @app.cell
-def _(alt, df3, pl):
+def _(df3, mo, pl):
+    df_selected = mo.ui.table(
+        df3.with_columns(
+            ald_per_amino=(
+                pl.col("aldehyde_monomer_amount_umol")
+                / pl.col("aminoporphyrin_monomer_amount_umol")
+            ),
+            water_per_amino=(
+                pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
+            ),
+            water_per_aldeyde=(
+                pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
+            ),
+        ),
+        initial_selection=range(len(df3)),
+    )
+    df_selected
+    return (df_selected,)
+
+
+@app.cell
+def _(df_selected):
+    import plotly.express as px
+    import pandas as pd
+
+    df = df_selected.value
+    fig = px.scatter_3d(df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1")
+    fig.show()
+    return
+
+
+@app.cell
+def _(alt, df_selected, pl):
     # replace _df with your data source
-    _df = df3.with_columns(
+    _df = df_selected.value.with_columns(
         ald_per_amino=(
             pl.col("aldehyde_monomer_amount_umol")
             / pl.col("aminoporphyrin_monomer_amount_umol")
@@ -364,7 +396,7 @@ def _(alt, df3, pl):
         .encode(
             x=alt.X(field="water_per_aldeyde", type="quantitative"),
             y=alt.Y(field="mol_fraction_MOCOF-1", type="quantitative"),
-            color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
+            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
             tooltip=[
                 alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
                 alt.Tooltip(field="mol_fraction_MOCOF-1", format=",.2f"),
@@ -378,33 +410,64 @@ def _(alt, df3, pl):
 
 
 @app.cell
-def _(alt, df3, pl):
-    # replace _df with your data source
-    _df = df3.with_columns(
-        ald_per_amino=(
-            pl.col("aldehyde_monomer_amount_umol")
-            / pl.col("aminoporphyrin_monomer_amount_umol")
-        ),
-        water_per_amino=(
-            pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
-        ),
-        water_per_aldeyde=(
-            pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
-        ),
+def _(alt, df_selected):
+    _chart = (
+        alt.Chart(df_selected.value)
+        .mark_point()
+        .encode(
+            x=alt.X(field="water_per_aldeyde", type="quantitative"),
+            y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
+            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
+            tooltip=[
+                alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
+                alt.Tooltip(field="mol_fraction_MOCOF-1", format=",.2f"),
+                alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
+            ],
+        )
+        .properties(height=290, width="container", config={"axis": {"grid": True}})
     )
+    _chart
+    return
+
+
+@app.cell
+def _(df3):
+    df3["acid_structure"].unique().to_list()
+    return
+
+
+@app.cell
+def _(alt, df_selected, pl):
+    # replace _df with your data source
+    _df = df_selected.value.with_columns(
+        order=pl.col("acid_structure").replace_strict(
+            {
+                "C6H4ClNO3": 0,
+                "C2H4O2": 0,
+                "C2HF3O2": 0,
+                "C5H10O2": 0,
+                "C6H5NO3": 0,
+                "unknown": 0,
+                "C6H4N2O5": 0,
+                "C7H5NO": 0,
+                "C7H4N2O6": 0,
+                "C7H6O2": 0,
+                "C6H5BrO": 0,
+                "C6HF5O": 0,
+            }
+        )
+    ).sort("order", "id")
 
     _chart = (
         alt.Chart(_df)
         .mark_point()
         .encode(
             x=alt.X(field="acid_structure", type="nominal"),
-            y=alt.Y(field="water_per_aldeyde", type="quantitative"),
-            color=alt.Color(field="yield_MOCOF-1", type="quantitative").scale(
-                domain=[0.5, 1]
-            ),
-            opacity=alt.Opacity(field="yield_MOCOF-1", type="quantitative").scale(
-                domain=[0.5, 0.8]
-            ),
+            y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
+            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
+            # opacity=alt.Opacity(field="yield_MOCOF-1", type="quantitative").scale(
+            #    domain=[0.5, 0.8]
+            # ),
             tooltip=[
                 alt.Tooltip(field="acid_structure"),
                 alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
