@@ -9,5 +9,5 @@ from fairsynthesis_data_model.extract_interesting_params import extract_interest
 sciformation2mofsy()
 mil2mofsy()
 mofsy2xdl()
-merge_mofsy()
+# merge_mofsy()  Right now not executed because we do not work with a merged file.
 extract_interesting_params()
