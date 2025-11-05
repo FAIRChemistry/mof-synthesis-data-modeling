@@ -3,161 +3,94 @@
     "CharacterizationEntry": {
       "title": "CharacterizationEntry",
       "properties": {
-        "Metadata": {
-          "$ref": "#/$defs/Metadata"
+        "ExperimentId": {
+          "type": "string"
         },
         "Characterization": {
           "properties": {
-            "pxrd": {
+            "Pxrd": {
               "type": "array",
               "items": {
-                "$ref": "#/$defs/pxrd"
+                "$ref": "#/$defs/PxrdMetadata"
               }
             },
-            "weight": {
+            "Weight": {
               "type": "array",
               "items": {
-                "$ref": "#/$defs/weighing"
-              }
-            },
-            "purity": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/purity"
+                "$ref": "#/$defs/Weighing"
               }
             }
           },
           "required": [
-            "pxrd",
-            "weight"
+            "Pxrd",
+            "Weight"
           ],
           "type": "object"
-        },
-        "AnalysisResults": {
-          "type": "object",
-          "properties": {
-            "components": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "enum": [
-                      "MOCOF-1",
-                      "COF-366-Co",
-                      "unknown"
-                    ]
-                  },
-                  "molar_fraction": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "molar fraction of the component in percentage"
-                  },
-                  "yield": {
-                    "type": "integer",
-                    "description": "yield of the component in percentage"
-                  }
-                },
-                "required": [
-                  "molar_fraction",
-                  "name"
-                ]
-              }
-            }
-          }
         }
       },
       "required": [
-        "Metadata",
-        "Characterization"
+        "Characterization",
+        "ExperimentId"
       ],
       "type": "object"
     },
-    "Metadata": {
+    "PxrdMetadata": {
       "properties": {
-        "_description": {
-          "type": "string",
-          "description": "Experiment code",
-          "pattern": "KE-\\d\\d\\d|S-\\d"
-        }
-      },
-      "required": [
-        "_description"
-      ],
-      "type": "object"
-    },
-    "pxrd": {
-      "properties": {
-        "_relative_file_path": {
+        "RelativeFilePath": {
           "format": "iri",
           "type": "string"
         },
-        "_x-ray_source": {
-          "$ref": "#/$defs/_x-ray_source"
+        "XRaySource": {
+          "$ref": "#/$defs/X-ray_source"
         },
-        "sample_holder": {
+        "SampleHolder": {
           "$ref": "#/$defs/SampleHolder"
         },
-        "other_metadata": {
+        "OtherMetadata": {
           "type": "string"
         }
       },
       "required": [
-        "_relative_file_path",
-        "_x-ray_source",
-        "sample_holder"
+        "RelativeFilePath",
+        "XRaySource",
+        "SampleHolder"
       ],
       "title": "PXRD",
       "type": "object"
     },
     "SampleHolder": {
       "properties": {
-        "_diameter": {
+        "Diameter": {
           "$ref": "#/$defs/Quantity"
         },
-        "_type": {
-          "type": "string",
-          "enum": [
-            "HILGENBERG_GLASS_NO_14_CAPILLARY",
-            "KAPTON_FILMS"
-          ]
+        "Type": {
+          "$ref": "#/$defs/SampleHolderType"
         }
       },
       "type": "object",
       "required": [
-        "_diameter",
-        "_type"
+        "Type",
+        "Diameter"
       ]
     },
-    "_x-ray_source": {
+    "X-ray_source": {
       "enum": [
         "Co Kα1",
         "Cu Kα1"
       ],
       "type": "string"
     },
-    "weighing": {
+    "Weighing": {
       "properties": {
-        "_weight": {
+        "Weight": {
           "$ref": "#/$defs/Quantity"
         }
       },
       "required": [
-        "_weight"
+        "Weight"
       ],
       "title": "weighing",
       "type": "object"
-    },
-    "purity": {
-      "title": "purity",
-      "type": "object",
-      "properties": {
-        "_purity": {
-          "type": "boolean"
-        }
-      }
     },
     "Quantity": {
       "title": "Quantity",
@@ -171,8 +104,8 @@
       },
       "type": "object",
       "required": [
-        "Unit",
-        "Value"
+        "Value",
+        "Unit"
       ]
     },
     "Unit": {
@@ -180,9 +113,19 @@
         "microgram",
         "milligram",
         "gram",
-        "millimeter"
+        "millimeter",
+        "centimeter",
+        "meter"
       ],
       "type": "string"
+    },
+    "SampleHolderType": {
+      "title": "SampleHolderType",
+      "type": "string",
+      "enum": [
+        "HILGENBERG_GLASS_NO_14_CAPILLARY",
+        "KAPTON_FILMS"
+      ]
     }
   },
   "properties": {
@@ -196,7 +139,7 @@
   "required": [
     "ProductCharacterization"
   ],
-  "title": "characterization",
+  "title": "Characterization",
   "type": "object",
   "description": "characterization data and analysis results of products from the MOF synthesis test cases"
 }

@@ -1,12 +1,11 @@
 import os
 
-from .generated.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity, AmountUnit, TempUnit, XMLType, Solvent
-from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
-from .pxrd_collector import PXRDFile
+from .generated.procedure_data_structure import SynthesisProcedure, Role, AmountUnit, TempUnit, XMLType, Solvent
+from .generated.characterization_data_structure import Characterization
 from .utils import load_json, save_json
 
 
-def extract_interesting_params_for_mocof_1(procedure: SynthesisProcedure, characterization: ProductCharacterization):
+def extract_interesting_params_for_mocof_1(procedure: SynthesisProcedure, characterization: Characterization):
     """Interesting are:
     Experimend ID: Metadata._description (just to keep track of data)
 Aminoporphyrin monomer type: Search for the Reagent with _inchi containing "Co" (case sensitive) and extract sum formula from  _inchi
@@ -128,7 +127,7 @@ Activation under vacuum (boolean): If there is Dry"""
         for solvent_number in range(1, 4):
            if f'solvent_{solvent_number}_name' not in params:
                 params[f'solvent_{solvent_number}_name'] = None
-                params[f'solvent_{solvent_number}_volume_uL'] = None
+                params[f'solvent_{solvent_number}_volume_uL'] = 0.0
 
         # Vessel
         if synthesis.hardware and synthesis.hardware.component:
@@ -176,7 +175,7 @@ def extract_interesting_params():
     mofsy_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
     mofsy_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
     procedure = SynthesisProcedure.from_dict(load_json(mofsy_procedure_file_path))
-    characterization = ProductCharacterization.from_dict(load_json(mofsy_characterization_file_path))
+    characterization = Characterization.from_dict(load_json(mofsy_characterization_file_path))
     params = extract_interesting_params_for_mocof_1(procedure, characterization)
     save_json(params, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'params_from_sciformation.json'))
 
