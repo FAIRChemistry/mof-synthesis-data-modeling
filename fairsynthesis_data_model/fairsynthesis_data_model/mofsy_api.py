@@ -2,7 +2,7 @@ import json
 from typing import List, Dict
 
 from .generated.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity
-from .generated.characterization_data_structure import CharacterizationEntry, ProductCharacterization
+from .generated.characterization_data_structure import CharacterizationEntry, Characterization
 from .generated.mocof_1_params import Mocof1Param
 from .pxrd_collector import PXRDFile
 
@@ -18,10 +18,10 @@ def load_procedure(file_path: str) -> SynthesisProcedure:
         data = json.load(f)
     return SynthesisProcedure.from_dict(data)
 
-def load_characterization(file_path: str) -> ProductCharacterization:
+def load_characterization(file_path: str) -> Characterization:
     with open(file_path, 'r') as f:
         data = json.load(f)
-    return ProductCharacterization.from_dict(data)
+    return Characterization.from_dict(data)
 
 def load_mocof_1_params(file_path: str) -> Dict[str, Mocof1Param]:
     with open(file_path, 'r') as f:
@@ -40,9 +40,9 @@ def get_synthesis_by_experiment_id(procedure: SynthesisProcedure, experiment_id:
             return synthesis
     return None
 
-def get_characterization_by_experiment_id(characterization: ProductCharacterization, experiment_id: str) -> CharacterizationEntry | None:
+def get_characterization_by_experiment_id(characterization: Characterization, experiment_id: str) -> CharacterizationEntry | None:
     for entry in characterization.product_characterization:
-        if entry.metadata.description == experiment_id:
+        if entry.experiment_id == experiment_id:
             return entry
     return None
 
@@ -74,7 +74,7 @@ def find_product(synthesis: SynthesisElement, product_characterization: Characte
 def find_corresponding_pxrd_files(characterization: CharacterizationEntry) -> List[PXRDFile]:
     result = []
     for ch in characterization.characterization.pxrd:
-        if ch.relative_file_path and ch.x_ray_source and ch.sample_holder and characterization.metadata.description:
+        if ch.relative_file_path and ch.x_ray_source and ch.sample_holder and characterization.experiment_id:
                 result.append(PXRDFile(
                     ch.relative_file_path
                 ))

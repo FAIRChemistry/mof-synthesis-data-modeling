@@ -6,15 +6,15 @@ from sympy import sympify
 from .generated.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionClass, ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, \
     Hardware, Quantity, AmountUnit, Role, Temperature, TempUnit, Pressure, PressureUnit, Time
-from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
-    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
-    Unit as UnitCharacterization, Purity, Pxrd
+from .generated.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
+    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
+    Unit as UnitCharacterization, Pxrd, SampleHolderType
 from .generated.mil_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[SynthesisProcedure, ProductCharacterization]:
+def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> Tuple[SynthesisProcedure, Characterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
@@ -229,7 +229,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                 diameter = format_length(pxrd_file.sample_holder_diameter)
                 sample_holder: SampleHolder = SampleHolder(
                     diameter=diameter,
-                    type=pxrd_file.sample_holder_shape
+                    type=SampleHolderType(pxrd_file.sample_holder_shape)
                 )
                 pxrd_list.append(Pxrd(
                     relative_file_path=pxrd_file.path,
@@ -238,11 +238,10 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     other_metadata=pxrd_file.other_metadata
                 ))
 
-        characterization_list.append(CharacterizationEntry(characterization=Characterization(
-            purity=[ Purity(phase_purity) ],
+        characterization_list.append(CharacterizationEntry(analysis_results=None, characterization=CharacterizationClass(
             pxrd=pxrd_list,
             weight=[]
-        ), metadata=MetadataCharacterization(description=experiment_id)))
+        ), experiment_id=experiment_id))
 
         synthesis = SynthesisElement(
             metadata= Metadata(
@@ -261,7 +260,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
         SynthesisProcedure(
             synthesis=synthesis_list,
         ),
-        ProductCharacterization(characterization_list)
+        Characterization(characterization_list)
     )
 
 

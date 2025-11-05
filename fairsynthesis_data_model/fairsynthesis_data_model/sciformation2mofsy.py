@@ -6,9 +6,9 @@ from sympy import sympify
 from .generated.procedure_data_structure import SynthesisProcedure, SynthesisElement ,ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, ProcedureSectionClass, \
     Hardware, Quantity, AmountUnit, Temperature , TempUnit, Time, Solvent, Gas
-from .generated.characterization_data_structure import ProductCharacterization, Characterization, XRaySource, \
-    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, Metadata as MetadataCharacterization, \
-    Unit as UnitCharacterization, Weighing, Pxrd
+from .generated.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
+    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
+    Unit as UnitCharacterization, Weighing, Pxrd, SampleHolderType
 from .generated.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
 from .mofsy_utils import rxn_role_to_xdl_role
@@ -18,7 +18,7 @@ from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE") -> Tuple[SynthesisProcedure, ProductCharacterization]:
+def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE") -> Tuple[SynthesisProcedure, Characterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
     pxrd_files = collect_pxrd_files(pxrd_folder_path)
@@ -41,7 +41,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                 diameter = format_length(pxrd_file.sample_holder_diameter)
                 sample_holder: SampleHolder = SampleHolder(
                     diameter=diameter,
-                    type=pxrd_file.sample_holder_shape
+                    type=SampleHolderType(pxrd_file.sample_holder_shape)
                 )
                 pxrd_list.append(Pxrd(
                     relative_file_path=pxrd_file.path,
@@ -50,12 +50,11 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                     other_metadata=None,
                 ))
 
-        characterization_list.append(CharacterizationEntry(Characterization(
-            purity=[],
+        characterization_list.append(CharacterizationEntry(analysis_results=None, characterization=CharacterizationClass(
             pxrd = pxrd_list,
             weight=[ Weighing(reaction_product_mass) ]
 
-        ), MetadataCharacterization(description=experiment_id)))
+        ), experiment_id=experiment_id))
 
         synthesis = SynthesisElement(
             metadata= Metadata(
@@ -74,7 +73,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
         SynthesisProcedure(
             synthesis=synthesis_list,
         ),
-        ProductCharacterization(characterization_list)
+        Characterization(characterization_list)
     )
 
 def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
@@ -184,7 +183,7 @@ def format_temperature(temp: str) -> Temperature:
 
 def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization:
     if (mass is None) or (mass_unit is None):
-        return AmountCharacterization(value=None, unit=None)
+        return AmountCharacterization(value=-1, unit=UnitCharacterization.MILLIGRAM)
     mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
     return AmountCharacterization(value=round(mass_in_mg, 2), unit=UnitCharacterization.MILLIGRAM)
 
