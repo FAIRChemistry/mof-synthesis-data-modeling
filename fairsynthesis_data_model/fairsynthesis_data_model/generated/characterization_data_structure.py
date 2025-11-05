@@ -1,9 +1,29 @@
 from enum import Enum
-from typing import Optional, Any, List, TypeVar, Type, Callable, cast
+from typing import Any, Optional, List, TypeVar, Type, cast, Callable
 
 
 T = TypeVar("T")
 EnumT = TypeVar("EnumT", bound=Enum)
+
+
+def from_float(x: Any) -> float:
+    assert isinstance(x, (float, int)) and not isinstance(x, bool)
+    return float(x)
+
+
+def to_enum(c: Type[EnumT], x: Any) -> EnumT:
+    assert isinstance(x, c)
+    return x.value
+
+
+def to_float(x: Any) -> float:
+    assert isinstance(x, (int, float))
+    return x
+
+
+def to_class(c: Type[T], x: Any) -> dict:
+    assert isinstance(x, c)
+    return cast(Any, x).to_dict()
 
 
 def from_str(x: Any) -> str:
@@ -25,94 +45,9 @@ def from_union(fs, x):
     assert False
 
 
-def from_int(x: Any) -> int:
-    assert isinstance(x, int) and not isinstance(x, bool)
-    return x
-
-
-def to_enum(c: Type[EnumT], x: Any) -> EnumT:
-    assert isinstance(x, c)
-    return x.value
-
-
 def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
     assert isinstance(x, list)
     return [f(y) for y in x]
-
-
-def to_class(c: Type[T], x: Any) -> dict:
-    assert isinstance(x, c)
-    return cast(Any, x).to_dict()
-
-
-def from_float(x: Any) -> float:
-    assert isinstance(x, (float, int)) and not isinstance(x, bool)
-    return float(x)
-
-
-def to_float(x: Any) -> float:
-    assert isinstance(x, (int, float))
-    return x
-
-
-class Name(Enum):
-    COF_366_CO = "COF-366-Co"
-    MOCOF_1 = "MOCOF-1"
-    UNKNOWN = "unknown"
-
-
-class Component:
-    crystalline_phases: Optional[str]
-    molar_fraction: int
-    """molar fraction of the component in percentage"""
-
-    name: Name
-    component_yield: Optional[int]
-    """yield of the component in percentage"""
-
-    def __init__(self, crystalline_phases: Optional[str], molar_fraction: int, name: Name, component_yield: Optional[int]) -> None:
-        self.crystalline_phases = crystalline_phases
-        self.molar_fraction = molar_fraction
-        self.name = name
-        self.component_yield = component_yield
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Component':
-        assert isinstance(obj, dict)
-        crystalline_phases = from_union([from_str, from_none], obj.get("CrystallinePhases"))
-        molar_fraction = from_int(obj.get("MolarFraction"))
-        name = Name(obj.get("Name"))
-        component_yield = from_union([from_int, from_none], obj.get("Yield"))
-        return Component(crystalline_phases, molar_fraction, name, component_yield)
-
-    def to_dict(self) -> dict:
-        result: dict = {}
-        if self.crystalline_phases is not None:
-            result["CrystallinePhases"] = from_union([from_str, from_none], self.crystalline_phases)
-        result["MolarFraction"] = from_int(self.molar_fraction)
-        result["Name"] = to_enum(Name, self.name)
-        if self.component_yield is not None:
-            result["Yield"] = from_union([from_int, from_none], self.component_yield)
-        return result
-
-
-class AnalysisResults:
-    components: Optional[List[Component]]
-
-    def __init__(self, components: Optional[List[Component]]) -> None:
-        self.components = components
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'AnalysisResults':
-        assert isinstance(obj, dict)
-        components = from_union([lambda x: from_list(Component.from_dict, x), from_none], obj.get("Components"))
-        return AnalysisResults(components)
-
-    def to_dict(self) -> dict:
-        result: dict = {}
-        if self.components is not None:
-            result["Components"] = from_union([lambda x: from_list(lambda x: to_class(Component, x), x), from_none], self.components)
-        return result
 
 
 class Unit(Enum):
@@ -250,27 +185,22 @@ class CharacterizationClass:
 
 
 class CharacterizationEntry:
-    analysis_results: Optional[AnalysisResults]
     characterization: CharacterizationClass
     experiment_id: str
 
-    def __init__(self, analysis_results: Optional[AnalysisResults], characterization: CharacterizationClass, experiment_id: str) -> None:
-        self.analysis_results = analysis_results
+    def __init__(self, characterization: CharacterizationClass, experiment_id: str) -> None:
         self.characterization = characterization
         self.experiment_id = experiment_id
 
     @staticmethod
     def from_dict(obj: Any) -> 'CharacterizationEntry':
         assert isinstance(obj, dict)
-        analysis_results = from_union([AnalysisResults.from_dict, from_none], obj.get("AnalysisResults"))
         characterization = CharacterizationClass.from_dict(obj.get("Characterization"))
         experiment_id = from_str(obj.get("ExperimentId"))
-        return CharacterizationEntry(analysis_results, characterization, experiment_id)
+        return CharacterizationEntry(characterization, experiment_id)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.analysis_results is not None:
-            result["AnalysisResults"] = from_union([lambda x: to_class(AnalysisResults, x), from_none], self.analysis_results)
         result["Characterization"] = to_class(CharacterizationClass, self.characterization)
         result["ExperimentId"] = from_str(self.experiment_id)
         return result

@@ -238,7 +238,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
                     other_metadata=pxrd_file.other_metadata
                 ))
 
-        characterization_list.append(CharacterizationEntry(analysis_results=None, characterization=CharacterizationClass(
+        characterization_list.append(CharacterizationEntry(characterization=CharacterizationClass(
             pxrd=pxrd_list,
             weight=[]
         ), experiment_id=experiment_id))

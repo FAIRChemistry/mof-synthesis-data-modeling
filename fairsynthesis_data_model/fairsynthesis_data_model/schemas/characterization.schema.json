@@ -26,44 +26,6 @@
             "Weight"
           ],
           "type": "object"
-        },
-        "AnalysisResults": {
-          "type": "object",
-          "properties": {
-            "Components": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Name": {
-                    "type": "string",
-                    "enum": [
-                      "MOCOF-1",
-                      "COF-366-Co",
-                      "unknown"
-                    ]
-                  },
-                  "MolarFraction": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 100,
-                    "description": "molar fraction of the component in percentage"
-                  },
-                  "Yield": {
-                    "type": "integer",
-                    "description": "yield of the component in percentage"
-                  },
-                  "CrystallinePhases": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "Name",
-                  "MolarFraction"
-                ]
-              }
-            }
-          }
         }
       },
       "required": [

@@ -50,7 +50,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_
                     other_metadata=None,
                 ))
 
-        characterization_list.append(CharacterizationEntry(analysis_results=None, characterization=CharacterizationClass(
+        characterization_list.append(CharacterizationEntry(characterization=CharacterizationClass(
             pxrd = pxrd_list,
             weight=[ Weighing(reaction_product_mass) ]
 
