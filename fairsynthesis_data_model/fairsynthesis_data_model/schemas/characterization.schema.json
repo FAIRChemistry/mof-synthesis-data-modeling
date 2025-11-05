@@ -43,7 +43,7 @@
                       "unknown"
                     ]
                   },
-                  "Molar_fraction": {
+                  "MolarFraction": {
                     "type": "integer",
                     "minimum": 0,
                     "maximum": 100,
@@ -59,7 +59,7 @@
                 },
                 "required": [
                   "Name",
-                  "Molar_fraction"
+                  "MolarFraction"
                 ]
               }
             }
@@ -74,24 +74,24 @@
     },
     "PxrdMetadata": {
       "properties": {
-        "Relative_file_path": {
+        "RelativeFilePath": {
           "format": "iri",
           "type": "string"
         },
-        "X-ray_source": {
+        "XRaySource": {
           "$ref": "#/$defs/X-ray_source"
         },
-        "Sample_holder": {
+        "SampleHolder": {
           "$ref": "#/$defs/SampleHolder"
         },
-        "Other_metadata": {
+        "OtherMetadata": {
           "type": "string"
         }
       },
       "required": [
-        "Relative_file_path",
-        "X-ray_source",
-        "Sample_holder"
+        "RelativeFilePath",
+        "XRaySource",
+        "SampleHolder"
       ],
       "title": "PXRD",
       "type": "object"

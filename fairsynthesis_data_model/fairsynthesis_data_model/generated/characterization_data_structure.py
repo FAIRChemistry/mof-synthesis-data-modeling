@@ -80,7 +80,7 @@ class Component:
     def from_dict(obj: Any) -> 'Component':
         assert isinstance(obj, dict)
         crystalline_phases = from_union([from_str, from_none], obj.get("CrystallinePhases"))
-        molar_fraction = from_int(obj.get("Molar_fraction"))
+        molar_fraction = from_int(obj.get("MolarFraction"))
         name = Name(obj.get("Name"))
         component_yield = from_union([from_int, from_none], obj.get("Yield"))
         return Component(crystalline_phases, molar_fraction, name, component_yield)
@@ -89,7 +89,7 @@ class Component:
         result: dict = {}
         if self.crystalline_phases is not None:
             result["CrystallinePhases"] = from_union([from_str, from_none], self.crystalline_phases)
-        result["Molar_fraction"] = from_int(self.molar_fraction)
+        result["MolarFraction"] = from_int(self.molar_fraction)
         result["Name"] = to_enum(Name, self.name)
         if self.component_yield is not None:
             result["Yield"] = from_union([from_int, from_none], self.component_yield)
@@ -193,19 +193,19 @@ class Pxrd:
     @staticmethod
     def from_dict(obj: Any) -> 'Pxrd':
         assert isinstance(obj, dict)
-        other_metadata = from_union([from_str, from_none], obj.get("Other_metadata"))
-        relative_file_path = from_str(obj.get("Relative_file_path"))
-        sample_holder = SampleHolder.from_dict(obj.get("Sample_holder"))
-        x_ray_source = XRaySource(obj.get("X-ray_source"))
+        other_metadata = from_union([from_str, from_none], obj.get("OtherMetadata"))
+        relative_file_path = from_str(obj.get("RelativeFilePath"))
+        sample_holder = SampleHolder.from_dict(obj.get("SampleHolder"))
+        x_ray_source = XRaySource(obj.get("XRaySource"))
         return Pxrd(other_metadata, relative_file_path, sample_holder, x_ray_source)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.other_metadata is not None:
-            result["Other_metadata"] = from_union([from_str, from_none], self.other_metadata)
-        result["Relative_file_path"] = from_str(self.relative_file_path)
-        result["Sample_holder"] = to_class(SampleHolder, self.sample_holder)
-        result["X-ray_source"] = to_enum(XRaySource, self.x_ray_source)
+            result["OtherMetadata"] = from_union([from_str, from_none], self.other_metadata)
+        result["RelativeFilePath"] = from_str(self.relative_file_path)
+        result["SampleHolder"] = to_class(SampleHolder, self.sample_holder)
+        result["XRaySource"] = to_enum(XRaySource, self.x_ray_source)
         return result
 
 

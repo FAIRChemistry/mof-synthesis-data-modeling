@@ -4,15 +4,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-1_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-1_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -23,15 +23,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-2_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-2_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -42,15 +42,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-3_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-3_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -61,15 +61,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-4_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-4_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -80,51 +80,51 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Other_metadata": "MIL-88B-Water",
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-Water.xyd",
-            "Sample_holder": {
+            "OtherMetadata": "MIL-88B-Water",
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-Water.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           },
           {
-            "Other_metadata": "MIL-88B-Dry",
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-Dry.xyd",
-            "Sample_holder": {
+            "OtherMetadata": "MIL-88B-Dry",
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-Dry.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           },
           {
-            "Other_metadata": "MIL-88B-DMF",
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-DMF.xyd",
-            "Sample_holder": {
+            "OtherMetadata": "MIL-88B-DMF",
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm_MIL-88B-DMF.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           },
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-5_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -135,15 +135,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-6_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-6_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
@@ -154,15 +154,15 @@
       "Characterization": {
         "Pxrd": [
           {
-            "Relative_file_path": "../data/MIL-88B_101/PXRD/PXRD_S-7_Cu-K\u03b11_capillary-0.7mm.xyd",
-            "Sample_holder": {
+            "RelativeFilePath": "../data/MIL-88B_101/PXRD/PXRD_S-7_Cu-K\u03b11_capillary-0.7mm.xyd",
+            "SampleHolder": {
               "Diameter": {
                 "Unit": "millimeter",
                 "Value": 0.7
               },
               "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
             },
-            "X-ray_source": "Cu K\u03b11"
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": []
