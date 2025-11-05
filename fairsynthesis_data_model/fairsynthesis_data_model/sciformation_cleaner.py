@@ -135,8 +135,8 @@ if __name__ == '__main__':
     # Can be run independently to test the function
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    result_file_path_normal = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'sciformation_eln_cleaned.json')
-    result_file_path_with_llm =  os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'sciformation_eln_cleaned_with_llm.json')
+    result_file_path_normal = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'sciformation_eln_cleaned.json')
+    result_file_path_with_llm =  os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'sciformation_eln_cleaned_with_llm.json')
     data = load_json(file_path)
     result = clean_sciformation_eln(deepcopy(data))
     result_llm = clean_sciformation_eln(deepcopy(data), use_llm_for_extraction=True)

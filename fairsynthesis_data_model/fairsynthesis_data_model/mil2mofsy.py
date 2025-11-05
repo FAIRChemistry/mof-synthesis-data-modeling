@@ -324,7 +324,7 @@ def format_length(length: str) -> AmountCharacterization:
 
 def mil2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'generated', 'MIL.json')
+    file_path = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'converted', 'MIL.json')
     pxrd_folder = os.path.join(current_file_dir, '../..', 'data', 'MIL-88B_101', 'PXRD')
     pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     mil = load_json(file_path)
@@ -333,8 +333,8 @@ def mil2mofsy():
     validate(instance=mil, schema=load_json(os.path.join(current_file_dir, 'schemas', 'MIL.schema.json')))
 
     mofsy, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder_relative)
-    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'procedure_from_MIL.json')
-    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'generated', 'characterization_from_MIL.json')
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'converted', 'procedure_from_MIL.json')
+    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MIL-88B_101', 'converted', 'characterization_from_MIL.json')
     result_dict_mofsy = mofsy.to_dict()
     result_dict_characterization = characterization.to_dict()
     print("Procedure Result: " + str(result_dict_mofsy))

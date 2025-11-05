@@ -8,7 +8,7 @@ Synthetic procedures and product masses exported from [Sciformation electronic l
 
 TODO
 
-## [generated](./generated/)
+## [generated](converted/)
 
 Converting to the MOFSY format
 For the conversion to the MOFSY format, see the [data model folder README](../../fairsynthesis_data_model/).
