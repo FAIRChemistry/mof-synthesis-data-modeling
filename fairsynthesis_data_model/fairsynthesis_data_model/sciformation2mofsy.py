@@ -227,8 +227,8 @@ def sciformation2mofsy():
     validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, 'schemas', 'sciformation_eln_cleaned.schema.json')))
 
     mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder_relative)
-    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
-    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
+    result_file_path_mofsy = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
+    result_file_path_characterization = os.path.join(current_file_dir , '../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
     result_dict_mofsy = mofsy.to_dict()
     result_dict_characterization = characterization.to_dict()
     print("Procedure Result: " + str(result_dict_mofsy))

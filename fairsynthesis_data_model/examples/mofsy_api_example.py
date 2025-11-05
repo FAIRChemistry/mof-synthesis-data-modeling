@@ -2,15 +2,15 @@ import json
 import os.path
 
 import fairsynthesis_data_model.mofsy_api as api
-from fairsynthesis_data_model.generated.procedure_data_structure import SynthesisProcedure
-from fairsynthesis_data_model.generated.characterization_data_structure import ProductCharacterization
-from fairsynthesis_data_model.generated.mocof_1_params import Mocof1Param
+from fairsynthesis_data_model.converted.procedure_data_structure import SynthesisProcedure
+from fairsynthesis_data_model.converted.characterization_data_structure import ProductCharacterization
+from fairsynthesis_data_model.converted.mocof_1_params import Mocof1Param
 
 current_file_dir = __file__.rsplit('/', 1)[0]
-procedure_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/procedure_from_sciformation.json")
+procedure_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/converted/procedure_from_sciformation.json")
 characterization_file_path = os.path.join(current_file_dir,
-                                          "../../data/MOCOF-1/generated/characterization_from_sciformation.json")
-params_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/generated/params_from_sciformation.json")
+                                          "../../data/MOCOF-1/converted/characterization_from_sciformation.json")
+params_file_path = os.path.join(current_file_dir, "../../data/MOCOF-1/converted/params_from_sciformation.json")
 
 # Load Procedure file into our Procedure class structure
 procedure: SynthesisProcedure = api.load_procedure(procedure_file_path)

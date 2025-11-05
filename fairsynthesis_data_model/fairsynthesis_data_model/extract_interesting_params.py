@@ -173,10 +173,10 @@ def extract_interesting_params():
     current_file_dir = __file__.rsplit('/', 1)[0]
 
     # sciformation case
-    mofsy_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'procedure_from_sciformation.json')
-    mofsy_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'characterization_from_sciformation.json')
+    mofsy_procedure_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
+    mofsy_characterization_file_path = os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
     procedure = SynthesisProcedure.from_dict(load_json(mofsy_procedure_file_path))
     characterization = ProductCharacterization.from_dict(load_json(mofsy_characterization_file_path))
     params = extract_interesting_params_for_mocof_1(procedure, characterization)
-    save_json(params, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'generated', 'params_from_sciformation.json'))
+    save_json(params, os.path.join(current_file_dir, '../..', 'data', 'MOCOF-1', 'converted', 'params_from_sciformation.json'))
 
