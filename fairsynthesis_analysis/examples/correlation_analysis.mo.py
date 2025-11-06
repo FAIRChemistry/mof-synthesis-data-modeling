@@ -205,48 +205,9 @@ def _(molar_fraction, params, pl):
 
 @app.cell
 def _(df_2, df_characterization, df_procedure, formula_mass, pl):
-    _df = (
-        df_2.with_columns(true=pl.lit(True))
-        .pivot("solvent_1_name", index="id", values="true")
-        .join(
-            df_2.with_columns(true=pl.lit(True)).pivot(
-                "solvent_2_name", index="id", values="true"
-            ),
-            on="id",
-            how="inner",
-        )
-        .select(pl.col("*").exclude("null"))
-        .join(
-            df_2.with_columns(true=pl.lit(True)).pivot(
-                "solvent_3_name", index="id", values="true"
-            ),
-            on="id",
-            how="inner",
-        )
-        .select(pl.col("*").exclude("null"))
-    )
     df3 = (
         df_2.select(
-            pl.col("*").exclude(
-                [
-                    "solvent_1_name",
-                    "solvent_2_name",
-                    "solvent_3_name",
-                ]
-            )
-        )
-        .join(
-            _df.unpivot(
-                on=[c for c in _df.columns if c != "id"],
-                variable_name="solvent",
-                index="id",
-            )
-            .filter(pl.col("value") == True)
-            .group_by("id")
-            .agg("solvent")
-            .sort("id")
-            .with_columns(pl.col("solvent").list.join(", ")),
-            on="id",
+            pl.col("*")
         )
         .join(
             df_characterization.select(
@@ -276,7 +237,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
                 / pl.col("precursor_amount_mol")
-            ).alias("yield_COF-366-Co"),
+            ).clip(upper_bound=1).alias("yield_COF-366-Co"),
             (
                 pl.col("MOCOF-1")
                 * pl.col("product_weight_g")
@@ -286,7 +247,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
                 / pl.col("precursor_amount_mol")
-            ).alias("yield_MOCOF-1"),
+            ).clip(upper_bound=1).alias("yield_MOCOF-1"),
         )
         .with_columns(
             pl.col("COF-366-Co").alias("mol_fraction_COF-366-Co"),
@@ -319,7 +280,7 @@ def _(df3, mo, pl):
             ),
             water_per_amino=(
                 pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
-            ),
+            ).clip(lower_bound=10),
             water_per_aldeyde=(
                 pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
             ),
@@ -339,7 +300,8 @@ def _():
 @app.cell
 def _(df_selected, px):
     _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1")
+    _fig = px.scatter_3d(_df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1", log_x=True, log_y=True)
+    _fig.update_layout(scene_aspectmode="cube")
     _fig.show()
     return
 
