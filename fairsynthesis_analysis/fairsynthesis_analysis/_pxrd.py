@@ -23,9 +23,9 @@ def _extract_corresponding_reference(pxrd_file: PXRDFile, references: list[PXRDF
     _filtered = [f for f in references if f.sample_holder_shape == pxrd_file.sample_holder_shape]
     if len(_filtered) > 0:
         references = _filtered
-    _filtered = [f for f in references if f.sample_holder_diameter == pxrd_file.sample_holder_diameter]
-    if len(_filtered) > 0:
-        references = _filtered
+    #_filtered = [f for f in references if f.sample_holder_diameter == pxrd_file.sample_holder_diameter]
+    #if len(_filtered) > 0:
+    #    references = _filtered
     #_filtered = [f for f in references if f.other_metadata == pxrd_file.other_metadata]
     #if len(_filtered) > 0:
     #    references = _filtered
