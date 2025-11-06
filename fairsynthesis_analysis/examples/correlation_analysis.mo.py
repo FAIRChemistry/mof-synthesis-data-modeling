@@ -384,7 +384,10 @@ def _():
 def _(alt, df_selected):
     _chart = (
         alt.Chart(df_selected.value)
-        .mark_point()
+        .mark_circle(   # use mark_circle for filled circles
+            size=60,    # adjust size as needed
+            opacity=1
+        )
         .encode(
             x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
@@ -412,20 +415,23 @@ def _(ConvexHull, alt, df_selected, np, pl):
         _df["yield_MOCOF-1"].to_numpy()
     ])
 
-    hull = ConvexHull(_points)
-    hull_points = _points[hull.vertices]
-    hull_closed = np.append(hull_points, [hull_points[0]], axis=0)
+    _hull = ConvexHull(_points)
+    _hull_points = _points[_hull.vertices]
+    _hull_closed = np.append(_hull_points, [_hull_points[0]], axis=0)
 
     # Build hull DataFrame in Polars
-    hull_df = pl.DataFrame({
-        "water_per_aldeyde": hull_closed[:, 0],
-        "yield_MOCOF-1": hull_closed[:, 1],
+    _hull_df = pl.DataFrame({
+        "water_per_aldeyde": _hull_closed[:, 0],
+        "yield_MOCOF-1": _hull_closed[:, 1],
     })
 
     # --- Scatter plot with log x-axis ---
     _chart = (
         alt.Chart(_df)
-        .mark_point()
+        .mark_circle(   # use mark_circle for filled circles
+            size=60,    # adjust size as needed
+            opacity=1
+        )
         .encode(
             x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
@@ -437,8 +443,8 @@ def _(ConvexHull, alt, df_selected, np, pl):
     )
 
     # --- Convex hull line overlay ---
-    hull_line = (
-        alt.Chart(hull_df)
+    _hull_line = (
+        alt.Chart(_hull_df)
         .mark_line(color='lightblue')
         .encode(
             x="water_per_aldeyde",
@@ -447,64 +453,96 @@ def _(ConvexHull, alt, df_selected, np, pl):
     )
 
     # --- Combine plots ---
-    final_chart = (
-        (_chart + hull_line)
+    _final_chart = (
+        (_chart + _hull_line)
         .configure_axis(grid=False)  # for axis config
     )
 
-    final_chart
+    _final_chart
 
     return
 
 
 @app.cell
-def _(df3):
-    df3["acid_structure"].unique().to_list()
-    return
+def _(alt, df_selected):
+    _df = df_selected.value
+    # Sort your dataframe by the desired column
+    sorted_df = _df.sort("acid_pKa_DMSO")
 
+    # Extract your ordered acid names as a list
+    acid_order = sorted_df["acid_name"].to_list()
 
-@app.cell
-def _(alt, df_selected, pl):
-    # replace _df with your data source
-    _df = df_selected.value.with_columns(
-        order=pl.col("acid_structure").replace_strict(
-            {
-                "C6H4ClNO3": 0,
-                "C2H4O2": 0,
-                "C2HF3O2": 0,
-                "C5H10O2": 0,
-                "C6H5NO3": 0,
-                "unknown": 0,
-                "C6H4N2O5": 0,
-                "C7H5NO": 0,
-                "C7H4N2O6": 0,
-                "C7H6O2": 0,
-                "C6H5BrO": 0,
-                "C6HF5O": 0,
-            }
-        )
-    ).sort("order", "id")
-
+    # Pass this order to Altair's sort argument
     _chart = (
         alt.Chart(_df)
-        .mark_point()
+        .mark_circle(   # use mark_circle for filled circles
+            size=60,    # adjust size as needed
+            opacity=1
+        )
         .encode(
-            x=alt.X(field="acid_structure", type="nominal"),
+            x=alt.X(field="acid_name", type="nominal", sort=acid_order),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
-            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
-            # opacity=alt.Opacity(field="yield_MOCOF-1", type="quantitative").scale(
-            #    domain=[0.5, 0.8]
-            # ),
             tooltip=[
-                alt.Tooltip(field="acid_structure"),
-                alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
-                alt.Tooltip(field="MOCOF-1", format=",.2f"),
+                alt.Tooltip(field="id"),
             ],
         )
         .properties(height=290, width="container", config={"axis": {"grid": True}})
-        .interactive()
     )
     _chart
+
+    return
+
+
+@app.cell
+def _(ConvexHull, alt, df_selected, np, pl):
+    import pandas as pd
+
+    # Convert Polars dataframe to pandas for calculation and Altair
+    _df = df_selected.value.filter(pl.col("acid_name") != "Scandium triflate")
+    _df_pd = _df.to_pandas().dropna(subset=["acid_pKa_DMSO", "yield_MOCOF-1"])
+
+    # Get X and Y as arrays
+    _x_vals = _df_pd["acid_pKa_DMSO"].values
+    _y_vals = _df_pd["yield_MOCOF-1"].values
+
+    # Compute hull
+    _points = np.column_stack([_x_vals, _y_vals])
+    _hull = ConvexHull(_points)
+    _hull_vertices = np.append(_hull.vertices, _hull.vertices[0])  # Close path
+
+    _hull_df = pd.DataFrame({
+        "acid_pKa_DMSO": _x_vals[_hull_vertices],
+        "yield_MOCOF-1": _y_vals[_hull_vertices]
+    })
+
+    _scatter = (
+        alt.Chart(_df_pd)
+        .mark_circle(   # use mark_circle for filled circles
+            size=60,    # adjust size as needed
+            opacity=1
+        )
+        .encode(
+            x=alt.X('acid_pKa_DMSO', type='quantitative', title='acid_pKa_DMSO'),
+            y=alt.Y('yield_MOCOF-1', type='quantitative', title='yield_MOCOF-1'),
+            tooltip=[
+                alt.Tooltip('acid_name'),
+                alt.Tooltip('id'),
+            ]
+        )
+    )
+
+    _hull_line = (
+        alt.Chart(_hull_df)
+        .mark_line(color='lightblue', strokeWidth=2)
+        .encode(
+            x='acid_pKa_DMSO',
+            y='yield_MOCOF-1'
+        )
+    )
+
+    _final_chart = _scatter + _hull_line
+    _final_chart
+
     return
 
 
