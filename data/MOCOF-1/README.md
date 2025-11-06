@@ -5,8 +5,12 @@ This folder contains the dataset for [the synthesis of MOCOF-1](https://www.natu
 ## Sciformation_KE-MOCOF_jsonRaw.json
 
 Synthetic procedures and product masses exported from [Sciformation electronic lab notebook](https://sciformation.com/sciformation_eln.html).
-
-TODO
+Procedure:
+Lab journal > Search experiments
+Search with certain parameters
+">>" > Copy Query URL
+Paste it into the address bar. Change the "startUseCase?useCase=performSearch&" in the beginning to "performSearch?". Add "format=jsonRaw" at the end. Open the URL. (It takes time for large data)
+Save the JSON data.
 
 ## [generated](converted/)
 
@@ -15,12 +19,12 @@ For the conversion to the MOFSY format, see the [data model folder README](../..
 
 ## [PXRD](./PXRD/)
 
-PXRD patterns recorded on a Stoe Stadi P diffractometer (primary Ge(111)-Johann-type monochromator, single Mythen detector (Dectris), Debye-Scherrer geometry) and WinXPow software (v3.12.3).  
-The measurements were conducted with sample spinning at room temperature.  
-The measured data were converted into the XYD format (ASCII text. first column, 2theta; second column, counts per seconds) using the Raw Data Handling function of WinXPow.  
+PXRD patterns recorded on a Stoe Stadi P diffractometer (primary Ge(111)-Johann-type monochromator, single Mythen detector (Dectris), Debye-Scherrer geometry) and WinXPOW software (v3.12.3).
+The measurements were conducted with sample spinning at room temperature.
+The measured data were converted into the XYD format (ASCII text. first column, 2theta; second column, counts per seconds) using the Raw Data Handling function of WinXPOW.
 As this format does not support metadata export, all the metadata have been written in the filename according to the following rules, which are recognized by the Sciformation-MOFSY importer.
 
-Filename template: PXRD\_(Experiment code)\_(X-ray source)\_(sample holder)\_\[conditions\]\_\[component\].xyd  
-*The last two fields are optional and ignored by the Sciformation-MOFSY importer.  
-X-ray source: Cu-Ka1 or Co-Ka1  
+Filename template: PXRD\_(Experiment code)\_(X-ray source)\_(sample holder)\_\[conditions\]\_\[component\].xyd
+*The last two fields are optional and ignored by the Sciformation-MOFSY importer.
+X-ray source: Cu-Ka1 or Co-Ka1
 sample holder: capillary (Hilgenberg glass No. 14) or film (Kapton tape), with diameter

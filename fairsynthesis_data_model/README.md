@@ -11,14 +11,20 @@ Run the following scripts from the `fairsynthesis_data_model` directory.
 
 ### MOCOF-1 and Sciformation ELN to MOFSY and XDL
 
+Re-run all conversion
+```bash
+uv run examples/generate_all.py
+uv run examples/mofsy_api_example.py
+```
+
 Clean the sciformation ELN export:
 ```bash
-uv run -m fairsynthesis_data_model.sciformation_cleaner 
+uv run -m fairsynthesis_data_model.sciformation_cleaner
 ```
 
 Convert the sciformation ELN export to MOFSY:
 ```bash
-uv run -m fairsynthesis_data_model.sciformation2mofsy     
+uv run -m fairsynthesis_data_model.sciformation2mofsy
 ```
 
 Export the data in MOFSY format to XDL:
