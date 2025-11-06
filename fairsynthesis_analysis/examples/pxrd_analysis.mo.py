@@ -53,11 +53,11 @@ def _():
 @app.cell
 def _(mo):
     procedure_file_path = (
-        mo.notebook_dir() / "../../data/MOCOF-1/generated/procedure_from_sciformation.json"
+        mo.notebook_dir() / "../../data/MOCOF-1/converted/procedure_from_sciformation.json"
     )
     characterization_file_path = (
         mo.notebook_dir()
-        / "../../data/MOCOF-1/generated/characterization_from_sciformation.json"
+        / "../../data/MOCOF-1/converted/characterization_from_sciformation.json"
     )
     return characterization_file_path, procedure_file_path
 

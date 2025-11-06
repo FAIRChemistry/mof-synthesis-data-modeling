@@ -64,7 +64,7 @@ class Mocof1Param:
     solvent_1__name: str
     solvent_1__volume_u_l: float
     solvent_2__name: Optional[str]
-    solvent_2__volume_u_l: float
+    solvent_2__volume_u_l: Optional[float]
     temperature_c: float
     vessel: str
     water_amount_umol: float
@@ -110,7 +110,8 @@ class Mocof1Param:
         solvent_1__name = from_str(obj.get("solvent_1_name"))
         solvent_1__volume_u_l = from_float(obj.get("solvent_1_volume_uL"))
         solvent_2__name = from_union([from_none, from_str], obj.get("solvent_2_name"))
-        solvent_2__volume_u_l = from_float(obj.get("solvent_2_volume_uL"))
+        value = obj.get("solvent_2_volume_uL")
+        solvent_2__volume_u_l = from_float(value) if isinstance(value, (float, int)) and not isinstance(value, bool) else None
         temperature_c = from_float(obj.get("temperature_C"))
         vessel = from_str(obj.get("vessel"))
         water_amount_umol = from_float(obj.get("water_amount_umol"))
