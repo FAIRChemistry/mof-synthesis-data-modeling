@@ -243,7 +243,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
                 / pl.col("precursor_amount_mol")
-            ).clip(upper_bound=1).alias("yield_COF-366-Co"),
+            ).round(2).clip(upper_bound=1).alias("yield_COF-366-Co"),
             (
                 pl.col("MOCOF-1")
                 * pl.col("product_mass_g")
@@ -253,7 +253,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                     + pl.col("unknown") * formula_mass["unknown"]
                 )
                 / pl.col("precursor_amount_mol")
-            ).clip(upper_bound=1).alias("yield_MOCOF-1"),
+            ).round(2).clip(upper_bound=1).alias("yield_MOCOF-1"),
         )
         .with_columns(
             pl.col("COF-366-Co").alias("mol_fraction_COF-366-Co"),
@@ -280,16 +280,16 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
 def _(df3, mo, pl):
     df_selected = mo.ui.table(
         df3.with_columns(
-            ald_per_amino=(
+            ald_per_amine=(
                 pl.col("aldehyde_monomer_amount_umol")
                 / pl.col("aminoporphyrin_monomer_amount_umol")
-            ),
-            water_per_amino=(
+            ).round(2),
+            water_per_amine=(
                 pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
-            ).clip(lower_bound=10),
+            ).round(1).clip(lower_bound=10),
             water_per_aldeyde=(
                 pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
-            ),
+            ).round(1).clip(lower_bound=10),
         ),
         initial_selection=range(len(df3)),
     )
@@ -306,7 +306,7 @@ def _():
 @app.cell
 def _(df_selected, px):
     _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1", log_x=True, log_y=True)
+    _fig = px.scatter_3d(_df, x="ald_per_amine", y="water_per_amine", z="yield_MOCOF-1", log_x=True, log_y=True, hover_data=['id', 'ald_per_amine', 'water_per_amine', 'yield_MOCOF-1'])
     _fig.update_traces(marker=dict(size=4))
     _fig.update_layout(scene_aspectmode="cube")
     _fig.show()
@@ -314,14 +314,46 @@ def _(df_selected, px):
 
 
 @app.cell
-def _(alt, df_selected, pl):
-    # replace _df with your data source
-    _df = df_selected.value.with_columns(
-        ald_per_amino=(
+def _(df_selected, px):
+    _df = df_selected.value
+    _fig = px.scatter_3d(_df, x="ald_per_amine", y="water_per_amine", z="yield_MOCOF-1", log_x=True, log_y=True, hover_data=['id', 'ald_per_amine', 'water_per_amine', 'yield_MOCOF-1'])
+    _fig.update_traces(marker=dict(size=4))
+    _fig.update_layout(scene_aspectmode="cube")
+
+    from scipy.spatial import ConvexHull
+    import numpy as np
+
+    _points = _df.drop_nulls(["ald_per_amine", "water_per_amine", "yield_MOCOF-1"])[["ald_per_amine", "water_per_amine", "yield_MOCOF-1"]]
+    _hull = ConvexHull(_points).simplices
+
+    import plotly.graph_objects as go
+
+    _mesh = go.Mesh3d(
+        x=_points[:,0], y=_points[:,1], z=_points[:,2],
+        i=_hull[:,0], j=_hull[:,1], k=_hull[:,2],
+        opacity=0.5,
+        color='lightblue',
+        flatshading=True,
+        lighting=dict(ambient=0.4, diffuse=0.7, specular=0.2, roughness=0.7, fresnel=0.05),
+        lightposition=dict(x=2, y=90, z=2),
+        hoverinfo='skip'
+    )
+
+    _fig.add_trace(_mesh)
+
+    _fig.show()
+    return ConvexHull, np
+
+
+@app.cell(hide_code=True)
+def _():
+    # 2D plot
+    """_df = df_selected.value.with_columns(
+        ald_per_amine=(
             pl.col("aldehyde_monomer_amount_umol")
             / pl.col("aminoporphyrin_monomer_amount_umol")
         ),
-        water_per_amino=(
+        water_per_amine=(
             pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
         ),
         water_per_aldeyde=(
@@ -333,53 +365,18 @@ def _(alt, df_selected, pl):
         alt.Chart(_df)
         .mark_point()
         .encode(
-            x=alt.X(field="ald_per_amino", type="quantitative"),
-            y=alt.Y(field="water_per_amino", type="quantitative"),
+            x=alt.X(field="ald_per_amine", type="quantitative"),
+            y=alt.Y(field="water_per_amine", type="quantitative"),
             color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
             tooltip=[
-                alt.Tooltip(field="ald_per_amino", format=",.2f"),
-                alt.Tooltip(field="water_per_amino", format=",.2f"),
+                alt.Tooltip(field="ald_per_amine", format=",.2f"),
+                alt.Tooltip(field="water_per_amine", format=",.2f"),
                 alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
             ],
         )
         .properties(height=290, width="container", config={"axis": {"grid": True}})
     )
-    _chart
-    return
-
-
-@app.cell
-def _(alt, df3, pl):
-    # replace _df with your data source
-    _df = df3.with_columns(
-        ald_per_amino=(
-            pl.col("aldehyde_monomer_amount_umol")
-            / pl.col("aminoporphyrin_monomer_amount_umol")
-        ),
-        water_per_amino=(
-            pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
-        ),
-        water_per_aldeyde=(
-            pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
-        ),
-    )
-
-    _chart = (
-        alt.Chart(_df)
-        .mark_point()
-        .encode(
-            x=alt.X(field="water_per_aldeyde", type="quantitative"),
-            y=alt.Y(field="mol_fraction_MOCOF-1", type="quantitative"),
-            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
-            tooltip=[
-                alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
-                alt.Tooltip(field="mol_fraction_MOCOF-1", format=",.2f"),
-                alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
-            ],
-        )
-        .properties(height=290, width="container", config={"axis": {"grid": True}})
-    )
-    _chart
+    _chart"""
     return
 
 
@@ -389,18 +386,74 @@ def _(alt, df_selected):
         alt.Chart(df_selected.value)
         .mark_point()
         .encode(
-            x=alt.X(field="water_per_aldeyde", type="quantitative"),
+            x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
-            # color=alt.Color(field="yield_MOCOF-1", type="quantitative"),
             tooltip=[
-                alt.Tooltip(field="water_per_aldeyde", format=",.2f"),
-                alt.Tooltip(field="mol_fraction_MOCOF-1", format=",.2f"),
-                alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
+                alt.Tooltip(field="id"),
+                #alt.Tooltip(field="water_per_aldeyde", format=",.1f"),
+                #alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
             ],
         )
-        .properties(height=290, width="container", config={"axis": {"grid": True}})
+        .properties(height=290, width="container",
+                    config={"axis": {"grid": False}}
+                   )
     )
     _chart
+    return
+
+
+@app.cell
+def _(ConvexHull, alt, df_selected, np, pl):
+    _df = df_selected.value.filter(
+        pl.col("water_per_aldeyde").is_not_null() & pl.col("yield_MOCOF-1").is_not_null()
+    )
+    _points = np.column_stack([
+        _df["water_per_aldeyde"].to_numpy(), 
+        _df["yield_MOCOF-1"].to_numpy()
+    ])
+
+    hull = ConvexHull(_points)
+    hull_points = _points[hull.vertices]
+    hull_closed = np.append(hull_points, [hull_points[0]], axis=0)
+
+    # Build hull DataFrame in Polars
+    hull_df = pl.DataFrame({
+        "water_per_aldeyde": hull_closed[:, 0],
+        "yield_MOCOF-1": hull_closed[:, 1],
+    })
+
+    # --- Scatter plot with log x-axis ---
+    _chart = (
+        alt.Chart(_df)
+        .mark_point()
+        .encode(
+            x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
+            y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
+            tooltip=[
+                alt.Tooltip(field="id"),
+            ],
+        )
+        .properties(height=290, width="container")
+    )
+
+    # --- Convex hull line overlay ---
+    hull_line = (
+        alt.Chart(hull_df)
+        .mark_line(color='lightblue')
+        .encode(
+            x="water_per_aldeyde",
+            y="yield_MOCOF-1"
+        )
+    )
+
+    # --- Combine plots ---
+    final_chart = (
+        (_chart + hull_line)
+        .configure_axis(grid=False)  # for axis config
+    )
+
+    final_chart
+
     return
 
 
