@@ -3961,7 +3961,10 @@
     },
     {
       "Characterization": {
-        "Pxrd": [],
+        "Pxrd": [
+          {
+          }
+        ],
         "Weight": [
           {
             "Weight": {
@@ -3972,20 +3975,6 @@
         ]
       },
       "ExperimentId": "KE-252"
-    },
-    {
-      "Characterization": {
-        "Pxrd": [],
-        "Weight": [
-          {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 23.2
-            }
-          }
-        ]
-      },
-      "ExperimentId": "KE-253"
     },
     {
       "Characterization": {
