@@ -37,11 +37,11 @@ def _():
         SynthesisProcedure,
     )
     from fairsynthesis_data_model.generated.characterization_data_structure import (
-        ProductCharacterization,
+        Characterization,
         CharacterizationEntry,
     )
     from fairsynthesis_data_model.pxrd_collector import PXRDFile
-    return PXRDFile, ProductCharacterization, SynthesisProcedure, api
+    return Characterization, PXRDFile, SynthesisProcedure, api
 
 
 @app.cell
@@ -64,14 +64,14 @@ def _(mo):
 
 @app.cell
 def _(
-    ProductCharacterization,
+    Characterization,
     SynthesisProcedure,
     api,
     characterization_file_path,
     procedure_file_path,
 ):
     procedure: SynthesisProcedure = api.load_procedure(procedure_file_path)
-    characterization: ProductCharacterization = api.load_characterization(
+    characterization: Characterization = api.load_characterization(
         characterization_file_path
     )
     return characterization, procedure
@@ -144,12 +144,7 @@ def _(mo, overview_selection):
 
 
 @app.cell
-def _(
-    PXRDSpectrum,
-    api,
-    characterization: "ProductCharacterization",
-    selection,
-):
+def _(PXRDSpectrum, api, characterization: "Characterization", selection):
     _c = api.get_characterization_by_experiment_id(characterization, selection)
     it = [PXRDSpectrum(it) for it in api.find_corresponding_pxrd_files(_c)]
     return (it,)
@@ -266,7 +261,7 @@ def _():
 def _(
     PXRDSpectrum,
     api,
-    characterization: "ProductCharacterization",
+    characterization: "Characterization",
     default_settings,
     id_settings,
 ):
