@@ -4633,7 +4633,7 @@
         <Add vessel="Schlenk bomb" amount="13.36 micromole" reagent="KE-185"/>
         <Add vessel="Schlenk bomb" amount="26.6 micromole" reagent="Terephthalaldehyde"/>
         <Add vessel="Schlenk bomb" amount="1197.0 micromole" reagent="Wasser"/>
-        <Add vessel="Schlenk bomb" amount="393.18 micromole" reagent="dinitrobenzoic acid"/>
+        <Add vessel="Schlenk bomb" amount="393.18 micromole" reagent="2,4-Dinitrobenzoic acid"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="oDCB"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -4652,7 +4652,7 @@
       <Reagent id="KE-185" inchi="InChI=1S/C128H104N8O8.Co/c1-137-105-61-37-93(38-62-105)125(89-21-13-9-14-22-89,94-39-63-106(138-2)64-40-94)133-101-53-29-85(30-54-101)121-113-77-79-115(129-113)122(86-31-55-102(56-32-86)134-126(90-23-15-10-16-24-90,95-41-65-107(139-3)66-42-95)96-43-67-108(140-4)68-44-96)117-81-83-119(131-117)124(88-35-59-104(60-36-88)136-128(92-27-19-12-20-28-92,99-49-73-111(143-7)74-50-99)100-51-75-112(144-8)76-52-100)120-84-82-118(132-120)123(116-80-78-114(121)130-116)87-33-57-103(58-34-87)135-127(91-25-17-11-18-26-91,97-45-69-109(141-5)70-46-97)98-47-71-110(142-6)72-48-98;/h9-84,133-136H,1-8H3;/q-2;+2/b121-113-,121-114-,122-115-,122-117-,123-116-,123-118-,124-119-,124-120-;" name="KE-185" role="substrate"/>
       <Reagent id="Terephthalaldehyde" inchi="InChI=1S/C8H6O2/c9-5-7-1-2-8(6-10)4-3-7/h1-6H" name="Terephthalaldehyde" role="substrate"/>
       <Reagent id="Wasser" inchi="InChI=1S/H2O/h1H2" name="Wasser" role="catalyst"/>
-      <Reagent id="dinitrobenzoic acid" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="dinitrobenzoic acid" role="reagent"/>
+      <Reagent id="2,4-Dinitrobenzoic acid" inchi="InChI=1S/C7H4N2O6/c10-7(11)5-2-1-4(8(12)13)3-6(5)9(14)15/h1-3H,(H,10,11)" name="2,4-Dinitrobenzoic acid" role="acid"/>
       <Reagent id="oDCB" inchi="InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H" name="oDCB" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>

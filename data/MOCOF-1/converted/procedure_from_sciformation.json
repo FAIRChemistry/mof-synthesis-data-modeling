@@ -22797,7 +22797,7 @@
                 "Value": 393.18,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "dinitrobenzoic acid"
+              "_reagent": "2,4-Dinitrobenzoic acid"
             },
             {
               "_vessel": "Schlenk bomb",
@@ -22890,10 +22890,10 @@
             "_role": "catalyst"
           },
           {
-            "_id": "dinitrobenzoic acid",
-            "_inchi": "InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H",
-            "_name": "dinitrobenzoic acid",
-            "_role": "reagent"
+            "_id": "2,4-Dinitrobenzoic acid",
+            "_inchi": "InChI=1S/C7H4N2O6/c10-7(11)5-2-1-4(8(12)13)3-6(5)9(14)15/h1-3H,(H,10,11)",
+            "_name": "2,4-Dinitrobenzoic acid",
+            "_role": "acid"
           },
           {
             "_id": "oDCB",
