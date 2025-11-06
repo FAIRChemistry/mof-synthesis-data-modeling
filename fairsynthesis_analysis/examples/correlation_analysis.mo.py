@@ -23,7 +23,7 @@ def _():
         SynthesisProcedure,
     )
     from fairsynthesis_data_model.generated.characterization_data_structure import (
-        ProductCharacterization,
+        Characterization,
         CharacterizationEntry,
     )
     return (api,)
@@ -204,6 +204,12 @@ def _(molar_fraction, params, pl):
 
 
 @app.cell
+def _(df_characterization):
+    df_characterization
+    return
+
+
+@app.cell
 def _(df_2, df_characterization, df_procedure, formula_mass, pl):
     df3 = (
         df_2.select(
@@ -212,8 +218,8 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
         .join(
             df_characterization.select(
                 "id",
-                (pl.col("Characterization_weight_0__weight_Value") * 1e-3).alias(
-                    "product_weight_g"
+                (pl.col("Characterization_Weight_0_Weight_Value") * 1e-3).alias(
+                    "product_mass_g"
                 ),
             ),
             on="id",
@@ -230,7 +236,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
         .with_columns(
             (
                 pl.col("COF-366-Co")
-                * pl.col("product_weight_g")
+                * pl.col("product_mass_g")
                 / (
                     pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
@@ -240,7 +246,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
             ).clip(upper_bound=1).alias("yield_COF-366-Co"),
             (
                 pl.col("MOCOF-1")
-                * pl.col("product_weight_g")
+                * pl.col("product_mass_g")
                 / (
                     pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
@@ -257,7 +263,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
         .select(
             pl.col("*").exclude(
                 [
-                    "product_weight_g",
+                    "product_mass_g",
                     "precursor_amount_mol",
                     "COF-366-Co",
                     "MOCOF-1",
@@ -301,6 +307,7 @@ def _():
 def _(df_selected, px):
     _df = df_selected.value
     _fig = px.scatter_3d(_df, x="ald_per_amino", y="water_per_amino", z="yield_MOCOF-1", log_x=True, log_y=True)
+    _fig.update_traces(marker=dict(size=4))
     _fig.update_layout(scene_aspectmode="cube")
     _fig.show()
     return
