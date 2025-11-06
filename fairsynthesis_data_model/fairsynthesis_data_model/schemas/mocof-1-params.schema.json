@@ -19,8 +19,11 @@
       "water_amount_umol": {
         "type": "number"
       },
-      "acid_structure": {
+      "acid_name": {
         "type": "string"
+      },
+      "acid_pKa_DMSO": {
+        "type": "number"
       },
       "acid_amount_umol": {
         "type": "number"
@@ -71,7 +74,8 @@
       "aldehyde_monomer_structure",
       "aldehyde_monomer_amount_umol",
       "water_amount_umol",
-      "acid_structure",
+      "acid_name",
+      "acid_pKa_DMSO",
       "acid_amount_umol",
       "solvent_1_name",
       "solvent_1_volume_uL",

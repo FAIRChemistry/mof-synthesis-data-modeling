@@ -76,16 +76,40 @@ Activation under vacuum (boolean): If there is Dry"""
             params['water_amount_umol'] = 0.0
 
         # Acid
+        acid_structure_mapping = {
+            "C6H4N2O5": ("2,4-Dinitrophenol", 5.1),
+            "C7H6O2": ("Benzoic acid", 11.0),
+            "C6H5BrO": ("m-Bromophenol", 15),
+            "C7H5NO": ("p-Cyanophenol", 13.2),
+            "C5H10O2": ("Pivalic acid", 13),
+            "C6HF5O": ("Pentafluorophenol", 5.55),
+            "unknown": ("unknown", 31.4),
+            "C2HF3O2": ("Trifluoroacetic acid", 3.45),
+            "C7H4N2O6": ("Dinitrobenzoic acid", 7),
+            "C6H4ClNO3": ("4-Chloro-2-nitrophenol", 8),
+            "C6H5NO3": ("p-Nitrophenol", 10.8),
+            "C7H5NO4": ("p-Nitrobenzoic acid", 9.1),
+            "C2H4O2": ("Acetic acid", 12.6),
+            "3CHF3O3S.Sc": ("Scandium triflate", 20)
+        }
+
+        def get_acid_name_and_pKa(acid_structure):
+            return acid_structure_mapping.get(acid_structure, ("unknown", -100.0))
+
         acid_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.ACID), None)
         if acid_reagent:
-            params['acid_structure'] = acid_reagent.inchi.split('/')[1] if acid_reagent.inchi.startswith("InChI=1S/") else acid_reagent.inchi
+            acid_structure = acid_reagent.inchi.split('/')[1] if acid_reagent.inchi.startswith("InChI=1S/") else acid_reagent.inchi
+            acid_name, acid_pKa = get_acid_name_and_pKa(acid_structure)
+            params['acid_name'] = acid_name
+            params['acid_pKa_DMSO'] = acid_pKa
             add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == acid_reagent.name), None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['acid_amount_umol'] = add_step.amount.value
             else:
                 params['acid_amount_umol'] = -1.0
         else:
-            params['acid_structure'] = "unknown"
+            params['acid_name'] = "unknown"
+            params['acid_pKa_DMSO'] = 31.4
             params['acid_amount_umol'] = -1.0
 
         # Other additives
