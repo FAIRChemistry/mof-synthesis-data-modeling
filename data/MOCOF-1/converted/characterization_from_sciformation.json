@@ -2751,7 +2751,19 @@
     },
     {
       "Characterization": {
-        "Pxrd": [],
+        "Pxrd": [
+          {
+            "RelativeFilePath": "../data/MOCOF-1/pxrd/PXRD_KE-174_Cu-Ka1_capillary-1mm_5s-deg.xyd",
+            "SampleHolder": {
+              "Diameter": {
+                "Unit": "millimeter",
+                "Value": 1.0
+              },
+              "Type": "HILGENBERG_GLASS_NO_14_CAPILLARY"
+            },
+            "XRaySource": "Cu K\u03b11"
+          }
+        ],
         "Weight": [
           {
             "Weight": {
@@ -3963,6 +3975,15 @@
       "Characterization": {
         "Pxrd": [
           {
+            "RelativeFilePath": "../data/MOCOF-1/pxrd/PXRD_KE-252_Cu-Ka1_film-8mm_4s-deg_continuous.xyd",
+            "SampleHolder": {
+              "Diameter": {
+                "Unit": "millimeter",
+                "Value": 8.0
+              },
+              "Type": "KAPTON_FILMS"
+            },
+            "XRaySource": "Cu K\u03b11"
           }
         ],
         "Weight": [
