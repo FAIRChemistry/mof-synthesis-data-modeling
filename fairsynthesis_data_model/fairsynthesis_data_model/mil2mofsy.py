@@ -5,7 +5,7 @@ from sympy import sympify
 
 from .generated.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionClass, ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, \
-    Hardware, Quantity, AmountUnit, Role, Temperature, TempUnit, Pressure, PressureUnit, Time
+    Hardware, Quantity, AmountUnit, Role, Temperature, TempUnit, Pressure, PressureUnit, Time, Solvent
 from .generated.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
     SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
     Unit as UnitCharacterization, Pxrd, SampleHolderType
@@ -191,12 +191,12 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil, pxrd_folder_path: str) -> T
             StepEntryClass(
                 xml_type=XMLType.WASH_SOLID,
                 amount=None,
-                reagent=washing_solids,
+                reagent=None,
                 temp=None,
                 time=None,
                 vessel=vial_no,
                 gas=None,
-                solvent=None,
+                solvent=Solvent(washing_solids),
                 comment=None,
                 pressure = None
             ),

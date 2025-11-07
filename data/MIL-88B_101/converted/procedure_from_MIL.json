@@ -81,7 +81,7 @@
             {
               "_vessel": "S-1",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-1",
@@ -123,8 +123,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -211,7 +211,7 @@
             {
               "_vessel": "S-2",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-2",
@@ -253,8 +253,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -341,7 +341,7 @@
             {
               "_vessel": "S-3",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-3",
@@ -383,8 +383,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -471,7 +471,7 @@
             {
               "_vessel": "S-4",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-4",
@@ -513,8 +513,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -601,7 +601,7 @@
             {
               "_vessel": "S-5",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-5",
@@ -643,8 +643,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -731,7 +731,7 @@
             {
               "_vessel": "S-6",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-6",
@@ -773,8 +773,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           }
         ]
@@ -871,7 +871,7 @@
             {
               "_vessel": "S-7",
               "$xml_type": "WashSolid",
-              "_reagent": "with Ethanol"
+              "_solvent": "EtOH"
             },
             {
               "_vessel": "S-7",
@@ -913,8 +913,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "with Ethanol",
-            "_name": "with Ethanol",
+            "_id": "EtOH",
+            "_name": "EtOH",
             "_role": "solvent"
           },
           {
