@@ -1,5 +1,5 @@
 data_MOCOF-1
-_mpif_audit_creation_date	2025-10-16
+_mpif_audit_creation_date	2025-11-07
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
@@ -15,7 +15,7 @@ _mpif_audit_contact_author_phone	?
 _mpif_product_type	'composite'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
-_mpif_product_name_common	'Co(III)(tapp)-DFTA-hybrid·OH'
+_mpif_product_name_common	'unknown_product'
 _mpif_product_name_systematic	'MOCOF-1'
 _mpif_product_formula	''
 _mpif_product_formula_weight	
@@ -92,7 +92,7 @@ _mpif_vessel_type
 _mpif_vessel_supplier
 _mpif_vessel_purpose
 _mpif_vessel_note
-Schlenk bomb	undefined	mL	unknown		-	Reaction	-
+Schlenk bomb	undefined	mL	Glass	Flask	-	Reaction	-
 
 _mpif_procedure_number	3
 loop_

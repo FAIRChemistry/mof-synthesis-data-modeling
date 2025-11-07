@@ -1,41 +1,64 @@
 // To parse this data:
 //
-//   import { Convert, ProductCharacterization } from "./file";
+//   import { Convert, Characterization } from "./file";
 //
-//   const productCharacterization = Convert.toProductCharacterization(json);
+//   const characterization = Convert.toCharacterization(json);
 //
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface ProductCharacterization {
+/**
+ * characterization data and analysis results of products from the MOF synthesis test cases
+ */
+export interface Characterization {
     ProductCharacterization: CharacterizationEntry[];
     [property: string]: any;
 }
 
 export interface CharacterizationEntry {
-    Characterization: Characterization;
-    Metadata:         Metadata;
+    Characterization: CharacterizationObject;
+    ExperimentId:     string;
     [property: string]: any;
 }
 
-export interface Characterization {
-    purity: Purity[];
-    pxrd:   Pxrd[];
-    weight: Weighing[];
-    [property: string]: any;
-}
-
-export interface Purity {
-    _purity?: boolean;
+export interface CharacterizationObject {
+    Pxrd:   Pxrd[];
+    Weight: Weighing[];
     [property: string]: any;
 }
 
 export interface Pxrd {
-    _relative_file_path: string;
-    "_x-ray_source"?:    XRaySource;
-    other_metadata?:     string;
-    sample_holder?:      SampleHolder;
+    OtherMetadata?:   string;
+    RelativeFilePath: string;
+    SampleHolder:     SampleHolder;
+    XRaySource:       XRaySource;
     [property: string]: any;
+}
+
+export interface SampleHolder {
+    Diameter: Quantity;
+    Type:     SampleHolderType;
+    [property: string]: any;
+}
+
+export interface Quantity {
+    Unit:  Unit;
+    Value: number;
+    [property: string]: any;
+}
+
+export enum Unit {
+    Centimeter = "centimeter",
+    Gram = "gram",
+    Meter = "meter",
+    Microgram = "microgram",
+    Milligram = "milligram",
+    Millimeter = "millimeter",
+}
+
+export enum SampleHolderType {
+    HilgenbergGlassNo14_Capillary = "HILGENBERG_GLASS_NO_14_CAPILLARY",
+    KaptonFilms = "KAPTON_FILMS",
 }
 
 export enum XRaySource {
@@ -43,67 +66,20 @@ export enum XRaySource {
     CuKα1 = "Cu Kα1",
 }
 
-export interface SampleHolder {
-    _diameter?: Quantity;
-    _type?:     string;
-    [property: string]: any;
-}
-
-export interface Quantity {
-    Unit?:  Unit;
-    Value?: number;
-    [property: string]: any;
-}
-
-export enum Unit {
-    Celsius = "celsius",
-    Centilitre = "centilitre",
-    Centimeter = "centimeter",
-    Day = "day",
-    Decilitre = "decilitre",
-    Dimensionless = "dimensionless",
-    Gram = "gram",
-    Hour = "hour",
-    Item = "item",
-    Kelvin = "kelvin",
-    Kilogram = "kilogram",
-    Litre = "litre",
-    Meter = "meter",
-    Microgram = "microgram",
-    Microlitre = "microlitre",
-    Micromole = "micromole",
-    Milligram = "milligram",
-    Millilitre = "millilitre",
-    Millimeter = "millimeter",
-    Millimole = "millimole",
-    Millisecond = "millisecond",
-    Minute = "minute",
-    Mole = "mole",
-    Ohm = "ohm",
-    Second = "second",
-    Ton = "ton",
-    Week = "week",
-}
-
 export interface Weighing {
-    _weight: Quantity;
-    [property: string]: any;
-}
-
-export interface Metadata {
-    _description: string;
+    Weight: Quantity;
     [property: string]: any;
 }
 
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toProductCharacterization(json: string): ProductCharacterization {
-        return cast(JSON.parse(json), r("ProductCharacterization"));
+    public static toCharacterization(json: string): Characterization {
+        return cast(JSON.parse(json), r("Characterization"));
     }
 
-    public static productCharacterizationToJson(value: ProductCharacterization): string {
-        return JSON.stringify(uncast(value, r("ProductCharacterization")), null, 2);
+    public static characterizationToJson(value: Characterization): string {
+        return JSON.stringify(uncast(value, r("Characterization")), null, 2);
     }
 }
 
@@ -260,72 +236,48 @@ function r(name: string) {
 }
 
 const typeMap: any = {
-    "ProductCharacterization": o([
+    "Characterization": o([
         { json: "ProductCharacterization", js: "ProductCharacterization", typ: a(r("CharacterizationEntry")) },
     ], "any"),
     "CharacterizationEntry": o([
-        { json: "Characterization", js: "Characterization", typ: r("Characterization") },
-        { json: "Metadata", js: "Metadata", typ: r("Metadata") },
+        { json: "Characterization", js: "Characterization", typ: r("CharacterizationObject") },
+        { json: "ExperimentId", js: "ExperimentId", typ: "" },
     ], "any"),
-    "Characterization": o([
-        { json: "purity", js: "purity", typ: a(r("Purity")) },
-        { json: "pxrd", js: "pxrd", typ: a(r("Pxrd")) },
-        { json: "weight", js: "weight", typ: a(r("Weighing")) },
-    ], "any"),
-    "Purity": o([
-        { json: "_purity", js: "_purity", typ: u(undefined, true) },
+    "CharacterizationObject": o([
+        { json: "Pxrd", js: "Pxrd", typ: a(r("Pxrd")) },
+        { json: "Weight", js: "Weight", typ: a(r("Weighing")) },
     ], "any"),
     "Pxrd": o([
-        { json: "_relative_file_path", js: "_relative_file_path", typ: "" },
-        { json: "_x-ray_source", js: "_x-ray_source", typ: u(undefined, r("XRaySource")) },
-        { json: "other_metadata", js: "other_metadata", typ: u(undefined, "") },
-        { json: "sample_holder", js: "sample_holder", typ: u(undefined, r("SampleHolder")) },
+        { json: "OtherMetadata", js: "OtherMetadata", typ: u(undefined, "") },
+        { json: "RelativeFilePath", js: "RelativeFilePath", typ: "" },
+        { json: "SampleHolder", js: "SampleHolder", typ: r("SampleHolder") },
+        { json: "XRaySource", js: "XRaySource", typ: r("XRaySource") },
     ], "any"),
     "SampleHolder": o([
-        { json: "_diameter", js: "_diameter", typ: u(undefined, r("Quantity")) },
-        { json: "_type", js: "_type", typ: u(undefined, "") },
+        { json: "Diameter", js: "Diameter", typ: r("Quantity") },
+        { json: "Type", js: "Type", typ: r("SampleHolderType") },
     ], "any"),
     "Quantity": o([
-        { json: "Unit", js: "Unit", typ: u(undefined, r("Unit")) },
-        { json: "Value", js: "Value", typ: u(undefined, 3.14) },
+        { json: "Unit", js: "Unit", typ: r("Unit") },
+        { json: "Value", js: "Value", typ: 3.14 },
     ], "any"),
     "Weighing": o([
-        { json: "_weight", js: "_weight", typ: r("Quantity") },
+        { json: "Weight", js: "Weight", typ: r("Quantity") },
     ], "any"),
-    "Metadata": o([
-        { json: "_description", js: "_description", typ: "" },
-    ], "any"),
+    "Unit": [
+        "centimeter",
+        "gram",
+        "meter",
+        "microgram",
+        "milligram",
+        "millimeter",
+    ],
+    "SampleHolderType": [
+        "HILGENBERG_GLASS_NO_14_CAPILLARY",
+        "KAPTON_FILMS",
+    ],
     "XRaySource": [
         "Co Kα1",
         "Cu Kα1",
-    ],
-    "Unit": [
-        "celsius",
-        "centilitre",
-        "centimeter",
-        "day",
-        "decilitre",
-        "dimensionless",
-        "gram",
-        "hour",
-        "item",
-        "kelvin",
-        "kilogram",
-        "litre",
-        "meter",
-        "microgram",
-        "microlitre",
-        "micromole",
-        "milligram",
-        "millilitre",
-        "millimeter",
-        "millimole",
-        "millisecond",
-        "minute",
-        "mole",
-        "ohm",
-        "second",
-        "ton",
-        "week",
     ],
 };

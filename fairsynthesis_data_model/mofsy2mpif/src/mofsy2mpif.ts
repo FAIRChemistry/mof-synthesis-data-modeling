@@ -138,13 +138,13 @@ const mpifParams: MPIFParameters = ConvertToMpifParams.toMPIFParameters(paramsDa
 // For each of them, a separate output file should be created.
 
 const prodedure = ConvertProc.toProcedure(procedureJsonFile);
-const productCharacterization = ConvertChar.toProductCharacterization(characterizationJsonFile);
+const productCharacterization = ConvertChar.toCharacterization(characterizationJsonFile);
 
 prodedure.Synthesis.forEach((synthesisEntry, index) => {
 
     // prepare data
     const experimentId = synthesisEntry.Metadata._description;
-    const correspondingCharacterization: CharacterizationEntry|undefined = productCharacterization.ProductCharacterization.find(charEntry => charEntry.Metadata._description === experimentId);
+    const correspondingCharacterization: CharacterizationEntry|undefined = productCharacterization.ProductCharacterization.find(charEntry => charEntry.ExperimentId === experimentId);
     if (!correspondingCharacterization) {
         console.warn(`No corresponding characterization found for experiment ID: ${experimentId}`);
         return;
@@ -219,6 +219,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
             vessel_note = vessel._type;
         } else if (vessel._type!.toLowerCase().includes("teflon")) {
             vessel_material = "Teflon"
+        } else if (vessel._type!.toLowerCase().includes("schlenk bomb")) {
+            vessel_material = "Glass"
         } else {
             throw new Error("Vessel material not recognized: " + vessel._type)
         }
@@ -226,6 +228,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
             vessel_type = "Vial"
         } else if (vessel._type!.toLowerCase().includes("autoclave")) {
             vessel_type = "Autoclave"
+        } else if (vessel._type!.toLowerCase().includes("schlenk bomb")) {
+            vessel_type = "Flask"
         } else {
             throw new Error("Vessel type not recognized: " + vessel._type)
         }
@@ -324,11 +328,10 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     }
 
     let pxrd: PXRDData|undefined = undefined;
-
-    if (char.pxrd.length > 0) {
-        const firstPxrd = char.pxrd[0];
+    if (char.Pxrd.length > 0) {
+        const firstPxrd = char.Pxrd[0];
         let pxrdSource: 'Cu' | 'Cr' | 'Fe' | 'Co' | 'Mo' | 'Ag' | 'synchrotron' | 'other'  = 'other'
-        switch (firstPxrd["_x-ray_source"]) {
+        switch (firstPxrd.XRaySource) {
             case XRaySource.CoKα1:
                 pxrdSource = 'Co';
                 break;
@@ -338,7 +341,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
 
 
-        const pxrdFilePath = path.join(dataDirectory, firstPxrd._relative_file_path);
+        const pxrdFilePath = path.join(dataDirectory, firstPxrd.RelativeFilePath);
         const pxrdContent = fs.readFileSync(pxrdFilePath, 'utf-8');
         const pxrdData: Array<{ twoTheta: number; intensity: number; }> = [];
         const lines = pxrdContent.split('\n');
@@ -383,17 +386,17 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 }
 
 // MIL-88B_101
-let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "generated", "procedure_from_MIL.json");
-let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "generated", "characterization_from_MIL.json");
-let outputFolder = path.join(dataDirectory, "MIL-88B_101", "generated", "mpif_outputs");
+let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "converted", "procedure_from_MIL.json");
+let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "converted", "characterization_from_MIL.json");
+let outputFolder = path.join(dataDirectory, "MIL-88B_101", "converted", "mpif_outputs");
 let paramsFile = path.join(dataDirectory, "MIL-88B_101", "mpif_params.json");
 const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");
 mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
 
 // MOCOF-1
-inputProcedure = path.join(dataDirectory, "MOCOF-1", "generated", "procedure_from_sciformation.json");
-inputCharacterization = path.join(dataDirectory, "MOCOF-1", "generated", "characterization_from_sciformation.json");
-outputFolder = path.join(dataDirectory, "MOCOF-1", "generated", "mpif_outputs");
+inputProcedure = path.join(dataDirectory, "MOCOF-1", "converted", "procedure_from_sciformation.json");
+inputCharacterization = path.join(dataDirectory, "MOCOF-1", "converted", "characterization_from_sciformation.json");
+outputFolder = path.join(dataDirectory, "MOCOF-1", "converted", "mpif_outputs");
 paramsFile = path.join(dataDirectory, "MOCOF-1", "mpif_params.json");
 mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
 

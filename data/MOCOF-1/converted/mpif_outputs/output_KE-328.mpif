@@ -1,5 +1,5 @@
 data_MOCOF-1
-_mpif_audit_creation_date	2025-10-16
+_mpif_audit_creation_date	2025-11-07
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
@@ -15,7 +15,7 @@ _mpif_audit_contact_author_phone	?
 _mpif_product_type	'composite'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
-_mpif_product_name_common	'COF-366-Co'
+_mpif_product_name_common	'unknown_product'
 _mpif_product_name_systematic	'MOCOF-1'
 _mpif_product_formula	''
 _mpif_product_formula_weight	
@@ -91,7 +91,7 @@ _mpif_vessel_type
 _mpif_vessel_supplier
 _mpif_vessel_purpose
 _mpif_vessel_note
-Schlenk bomb	undefined	mL	unknown		-	Reaction	-
+Schlenk bomb	undefined	mL	Glass	Flask	-	Reaction	-
 
 _mpif_procedure_number	3
 loop_
@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 26.6 micromole of Terephthalaldehyde. Add 427.45 micromole of Benzoic acid. Add 598.5 micromole of Water. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Evacuate and refill with Ar. 
 reaction	Reaction	Air	Heat/Chill to 120 celsius for 70 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Evaporate solvent. 
+workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry for  . 
 
 #Characterization Information
 

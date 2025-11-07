@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "dataName": "MOCOF-1",
+    "dataName": "MIL-88B_101",
     "creationDate": "2023-01-01",
     "generatorVersion": "1.0",
     "publicationDOI": "todo",
     "procedureStatus": "success",
-    "name": "Endo, Kenichi",
-    "email": "kenichi.endo.2@ipoc.uni-stuttgart.de",
-    "orcid": "0000-0002-4128-6514",
-    "address": "Pfaffenwaldring 55, 70569 Stuttgart, Germany"
+    "name": "Ciftci, Esengul",
+    "email": "e.ciftci@fkf.mpg.de",
+    "orcid": "0000-0002-4994-3486",
+    "address": "Heisenbergstrasse 1, 70569, Stuttgart, Germany"
   },
   "productInfo": {
-    "type": "composite",
-    "systematicName": "MOCOF-1",
+    "type": "porous framework material",
+    "systematicName": "MIL-88B_101",
     "state": "solid",
     "color": "white",
     "handlingAtmosphere": "air"
@@ -22,6 +22,7 @@
     "labTemperature": 24,
     "labHumidity": 35,
     "reactionType": "mix",
+    "reactionAtmosphere": "vacuum",
     "temperatureController": "microwave",
     "productAmountUnit": "",
     "scale": "milligram"

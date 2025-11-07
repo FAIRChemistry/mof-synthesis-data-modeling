@@ -1,22 +1,22 @@
-data_MOCOF-1
-_mpif_audit_creation_date	2025-10-16
+data_MIL-88B_101
+_mpif_audit_creation_date	2025-11-07
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
 
 #Section 1: Author details
-_mpif_audit_contact_author_name	'Endo, Kenichi'
-_mpif_audit_contact_author_email	kenichi.endo.2@ipoc.uni-stuttgart.de
-_mpif_audit_contact_author_id_orcid	0000-0002-4128-6514
-_mpif_audit_contact_author_address	'Pfaffenwaldring 55, 70569 Stuttgart, Germany'
+_mpif_audit_contact_author_name	'Ciftci, Esengul'
+_mpif_audit_contact_author_email	e.ciftci@fkf.mpg.de
+_mpif_audit_contact_author_id_orcid	0000-0002-4994-3486
+_mpif_audit_contact_author_address	'Heisenbergstrasse 1, 70569, Stuttgart, Germany'
 _mpif_audit_contact_author_phone	?
 
 #Section 2: Product General Information
-_mpif_product_type	'composite'
+_mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
 _mpif_product_name_common	'MIL-53 (Fe)+MIL-68 (Fe)'
-_mpif_product_name_systematic	'MOCOF-1'
+_mpif_product_name_systematic	'MIL-88B_101'
 _mpif_product_formula	''
 _mpif_product_formula_weight	
 _mpif_product_state	'solid'
@@ -36,7 +36,7 @@ _mpif_synthesis_react_temperature_C	100
 _mpif_synthesis_react_temperature_controller	'microwave'
 _mpif_synthesis_react_time	7
 _mpif_synthesis_react_time_unit	'days'
-_mpif_synthesis_react_atmosphere	'undefined'
+_mpif_synthesis_react_atmosphere	'vacuum'
 _mpif_synthesis_react_container	'unknown_container'
 _mpif_synthesis_react_note
 ;
@@ -78,7 +78,7 @@ _mpif_solvent_purity_percent
 _mpif_solvent_cas
 _mpif_solvent_smiles
 DMF	DMF			10	millilitre				?
-with Ethanol	with Ethanol			undefined					?
+EtOH	EtOH			undefined					?
 
 _mpif_vessel_number	1
 loop_
@@ -100,7 +100,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 1 millimole of FeCl3·6H2O. Add 1 millimole of Benzene-1,4-dicarboxylic acid. Add 10 millilitre of DMF. 
 reaction	Reaction	Air	Sonicate for 30 minute. Heat/Chill to 100 celsius for 7 day. 
-workup	Work-up	Air	Wash solid with   . Dry for 1 day. 
+workup	Work-up	Air	Wash solid with EtOH  . Dry for 1 day. 
 
 #Characterization Information
 
