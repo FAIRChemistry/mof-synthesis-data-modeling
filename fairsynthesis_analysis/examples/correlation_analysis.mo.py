@@ -316,9 +316,37 @@ def _(df_selected, px):
 @app.cell
 def _(df_selected, px):
     _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amine", y="water_per_amine", z="yield_MOCOF-1", log_x=True, log_y=True, hover_data=['id', 'ald_per_amine', 'water_per_amine', 'yield_MOCOF-1'])
+    _fig = px.scatter_3d(
+        _df,
+        x="ald_per_amine",
+        y="water_per_amine",
+        z="yield_MOCOF-1",
+        log_x=True,
+        log_y=True,
+        hover_data=['id', 'ald_per_amine', 'water_per_amine', 'yield_MOCOF-1']
+    )
+
     _fig.update_traces(marker=dict(size=4))
-    _fig.update_layout(scene_aspectmode="cube")
+    _fig.update_layout(
+        scene_aspectmode="cube",
+        scene=dict(
+            xaxis=dict(
+                title=dict(text="Aldehyde equiv", font=dict(size=18)),
+                tickfont=dict(size=14)
+            ),
+            yaxis=dict(
+                title=dict(text="Water equiv", font=dict(size=18)),
+                tickfont=dict(size=14)
+            ),
+            zaxis=dict(
+                title=dict(text="Yield of MOCOF-1", font=dict(size=18)),
+                tickfont=dict(size=14)
+            )
+        ),
+        width=900,
+        height=700,
+        font=dict(size=16)
+    )
 
     from scipy.spatial import ConvexHull
     import numpy as np
@@ -342,6 +370,7 @@ def _(df_selected, px):
     _fig.add_trace(_mesh)
 
     _fig.show()
+
     return ConvexHull, np
 
 
@@ -459,7 +488,6 @@ def _(ConvexHull, alt, df_selected, np, pl):
     )
 
     _final_chart
-
     return
 
 
@@ -489,7 +517,6 @@ def _(alt, df_selected):
         .properties(height=290, width="container", config={"axis": {"grid": True}})
     )
     _chart
-
     return
 
 
@@ -518,12 +545,12 @@ def _(ConvexHull, alt, df_selected, np, pl):
     _scatter = (
         alt.Chart(_df_pd)
         .mark_circle(   # use mark_circle for filled circles
-            size=60,    # adjust size as needed
+            size=20,    # adjust size as needed
             opacity=1
         )
         .encode(
-            x=alt.X('acid_pKa_DMSO', type='quantitative', title='acid_pKa_DMSO'),
-            y=alt.Y('yield_MOCOF-1', type='quantitative', title='yield_MOCOF-1'),
+            x=alt.X('acid_pKa_DMSO', type='quantitative', title='Acid pKa(DMSO)'),
+            y=alt.Y('yield_MOCOF-1', type='quantitative', title='Yield of MOCOF-1'),
             tooltip=[
                 alt.Tooltip('acid_name'),
                 alt.Tooltip('id'),
@@ -540,9 +567,13 @@ def _(ConvexHull, alt, df_selected, np, pl):
         )
     )
 
-    _final_chart = _scatter + _hull_line
+    _final_chart = (
+        (_hull_line + _scatter)
+        .properties(width=140, height=140)
+        .configure_axis(labelFontSize=8, titleFontSize=8)
+        .configure_legend(labelFontSize=8, titleFontSize=8)
+    )
     _final_chart
-
     return
 
 
