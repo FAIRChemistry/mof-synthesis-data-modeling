@@ -17,7 +17,7 @@ export interface MPIFParameters {
 
 export interface Metadata {
     address:          string;
-    creationDate:     Date;
+    creationDate:     string;
     dataName:         string;
     email:            string;
     generatorVersion: string;
@@ -30,6 +30,7 @@ export interface Metadata {
 }
 
 export enum ProcedureStatus {
+    Empty = "",
     Failure = "failure",
     Success = "success",
     Test = "test",
@@ -59,6 +60,7 @@ export enum HandlingAtmosphere {
 }
 
 export enum State {
+    Empty = "",
     Gas = "gas",
     Liquid = "liquid",
     Solid = "solid",
@@ -67,6 +69,7 @@ export enum State {
 
 export enum Type {
     Composite = "composite",
+    Empty = "",
     Inorganic = "inorganic",
     Organic = "organic",
     PorousFrameworkMaterial = "porous framework material",
@@ -82,14 +85,15 @@ export interface Steps {
 export enum PreparationAtmosphere {
     Air = "Air",
     Dry = "Dry",
+    Empty = "",
     Inert = "Inert",
     Vacuum = "Vacuum",
 }
 
 export interface SynthesisGeneral {
-    labHumidity:           number;
-    labTemperature:        number;
-    performedDate:         Date;
+    labHumidity?:          number;
+    labTemperature?:       number;
+    performedDate:         string;
     productAmount?:        number | null;
     productAmountUnit?:    string;
     productYield?:         number | null;
@@ -104,6 +108,7 @@ export interface SynthesisGeneral {
 export enum ReactionAtmosphere {
     Air = "air",
     Dry = "dry",
+    Empty = "",
     Inert = "inert",
     Vacuum = "vacuum",
 }
@@ -111,6 +116,7 @@ export enum ReactionAtmosphere {
 export enum ReactionType {
     Diffusion = "diffusion",
     Electrochemical = "electrochemical",
+    Empty = "",
     Evaporation = "evaporation",
     Flow = "flow",
     Mechanochemical = "mechanochemical",
@@ -122,6 +128,7 @@ export enum ReactionType {
 }
 
 export enum Scale {
+    Empty = "",
     Gram = "gram",
     Kilogram = "kilogram",
     Milligram = "milligram",
@@ -131,6 +138,7 @@ export enum Scale {
 export enum TemperatureController {
     Ambient = "ambient",
     DryBath = "dry_bath",
+    Empty = "",
     Furnace = "furnace",
     HotPlate = "hot_plate",
     LiquidBath = "liquid_bath",
@@ -314,7 +322,7 @@ const typeMap: any = {
     ], "any"),
     "Metadata": o([
         { json: "address", js: "address", typ: "" },
-        { json: "creationDate", js: "creationDate", typ: Date },
+        { json: "creationDate", js: "creationDate", typ: "" },
         { json: "dataName", js: "dataName", typ: "" },
         { json: "email", js: "email", typ: "" },
         { json: "generatorVersion", js: "generatorVersion", typ: "" },
@@ -342,9 +350,9 @@ const typeMap: any = {
         { json: "workupAtmosphere", js: "workupAtmosphere", typ: r("PreparationAtmosphere") },
     ], "any"),
     "SynthesisGeneral": o([
-        { json: "labHumidity", js: "labHumidity", typ: 0 },
-        { json: "labTemperature", js: "labTemperature", typ: 0 },
-        { json: "performedDate", js: "performedDate", typ: Date },
+        { json: "labHumidity", js: "labHumidity", typ: u(undefined, 0) },
+        { json: "labTemperature", js: "labTemperature", typ: u(undefined, 0) },
+        { json: "performedDate", js: "performedDate", typ: "" },
         { json: "productAmount", js: "productAmount", typ: u(undefined, u(3.14, null)) },
         { json: "productAmountUnit", js: "productAmountUnit", typ: u(undefined, "") },
         { json: "productYield", js: "productYield", typ: u(undefined, u(3.14, null)) },
@@ -355,6 +363,7 @@ const typeMap: any = {
         { json: "temperatureController", js: "temperatureController", typ: r("TemperatureController") },
     ], "any"),
     "ProcedureStatus": [
+        "",
         "failure",
         "success",
         "test",
@@ -368,6 +377,7 @@ const typeMap: any = {
         "water-free",
     ],
     "State": [
+        "",
         "gas",
         "liquid",
         "solid",
@@ -375,6 +385,7 @@ const typeMap: any = {
     ],
     "Type": [
         "composite",
+        "",
         "inorganic",
         "organic",
         "porous framework material",
@@ -382,18 +393,21 @@ const typeMap: any = {
     "PreparationAtmosphere": [
         "Air",
         "Dry",
+        "",
         "Inert",
         "Vacuum",
     ],
     "ReactionAtmosphere": [
         "air",
         "dry",
+        "",
         "inert",
         "vacuum",
     ],
     "ReactionType": [
         "diffusion",
         "electrochemical",
+        "",
         "evaporation",
         "flow",
         "mechanochemical",
@@ -404,6 +418,7 @@ const typeMap: any = {
         "sonochemical",
     ],
     "Scale": [
+        "",
         "gram",
         "kilogram",
         "milligram",
@@ -412,6 +427,7 @@ const typeMap: any = {
     "TemperatureController": [
         "ambient",
         "dry_bath",
+        "",
         "furnace",
         "hot_plate",
         "liquid_bath",

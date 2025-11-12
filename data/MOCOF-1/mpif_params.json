@@ -19,8 +19,6 @@
   },
   "synthesisGeneral": {
     "performedDate": "",
-    "labTemperature": "",
-    "labHumidity": "",
     "reactionType": "mix",
     "temperatureController": "",
     "productAmountUnit": "",

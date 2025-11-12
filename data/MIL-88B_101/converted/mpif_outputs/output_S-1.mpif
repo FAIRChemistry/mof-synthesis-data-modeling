@@ -1,5 +1,5 @@
 data_MIL-88B_101
-_mpif_audit_creation_date	2025-11-07
+_mpif_audit_creation_date	2025-11-12
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
@@ -28,7 +28,7 @@ _mpif_product_handling_note
 ;
 
 #Section 3: Synthesis General Information
-_mpif_synthesis_performed_date	Sun Jan 01 2023 01:00:00 GMT+0100 (Central European Standard Time)
+_mpif_synthesis_performed_date	2023-01-01
 _mpif_synthesis_lab_temperature_C	24
 _mpif_synthesis_lab_humidity_percent	35
 _mpif_synthesis_type	'mix'

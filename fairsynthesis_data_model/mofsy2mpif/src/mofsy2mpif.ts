@@ -280,7 +280,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     }
 
     const synthesisGeneral: SynthesisGeneral = {
-        performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || new Date().toISOString().split('T')[0].toString(),
+        performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || "undefined",
         labTemperature: mpifParams.synthesisGeneral.labTemperature,
         labHumidity: mpifParams.synthesisGeneral.labHumidity,
         reactionType: mpifParams.synthesisGeneral.reactionType,

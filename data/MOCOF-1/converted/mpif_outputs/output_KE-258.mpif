@@ -1,39 +1,39 @@
-data_MOCOF-1
-_mpif_audit_creation_date	2025-11-07
+data_MOCOF-1 synthesis trial
+_mpif_audit_creation_date	2025-11-12
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	'todo'
 _mpif_audit_procedure_status	'success'
 
 #Section 1: Author details
 _mpif_audit_contact_author_name	'Endo, Kenichi'
-_mpif_audit_contact_author_email	kenichi.endo.2@ipoc.uni-stuttgart.de
+_mpif_audit_contact_author_email	kenichi.endo@ipoc.uni-stuttgart.de
 _mpif_audit_contact_author_id_orcid	0000-0002-4128-6514
 _mpif_audit_contact_author_address	'Pfaffenwaldring 55, 70569 Stuttgart, Germany'
 _mpif_audit_contact_author_phone	?
 
 #Section 2: Product General Information
-_mpif_product_type	'composite'
+_mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
 _mpif_product_name_common	'unknown_product'
-_mpif_product_name_systematic	'MOCOF-1'
+_mpif_product_name_systematic	''
 _mpif_product_formula	''
 _mpif_product_formula_weight	
 _mpif_product_state	'solid'
-_mpif_product_color	'white'
-_mpif_product_handling_atmosphere	'air'
+_mpif_product_color	''
+_mpif_product_handling_atmosphere	''
 _mpif_product_handling_note
 ;
 
 ;
 
 #Section 3: Synthesis General Information
-_mpif_synthesis_performed_date	Sun Jan 01 2023 01:00:00 GMT+0100 (Central European Standard Time)
-_mpif_synthesis_lab_temperature_C	24
-_mpif_synthesis_lab_humidity_percent	35
+_mpif_synthesis_performed_date	undefined
+_mpif_synthesis_lab_temperature_C	undefined
+_mpif_synthesis_lab_humidity_percent	undefined
 _mpif_synthesis_type	'mix'
 _mpif_synthesis_react_temperature_C	150
-_mpif_synthesis_react_temperature_controller	'microwave'
+_mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	71
 _mpif_synthesis_react_time_unit	'h'
 _mpif_synthesis_react_atmosphere	'undefined'

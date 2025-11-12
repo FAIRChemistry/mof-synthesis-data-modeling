@@ -210,8 +210,6 @@
       },
       "required": [
         "performedDate",
-        "labTemperature",
-        "labHumidity",
         "reactionType",
         "temperatureController",
         "scale"
@@ -223,7 +221,8 @@
         "Air",
         "Dry",
         "Inert",
-        "Vacuum"
+        "Vacuum",
+        ""
       ]
     },
     "ReactionAtmosphere": {
@@ -232,7 +231,8 @@
         "air",
         "dry",
         "inert",
-        "vacuum"
+        "vacuum",
+        ""
       ]
     },
     "ProcedureStatus": {
@@ -240,7 +240,8 @@
       "enum": [
         "success",
         "test",
-        "failure"
+        "failure",
+        ""
       ]
     },
     "ProductType": {
@@ -249,7 +250,8 @@
         "porous framework material",
         "composite",
         "organic",
-        "inorganic"
+        "inorganic",
+        ""
       ]
     },
     "ProductState": {
@@ -258,7 +260,8 @@
         "solid",
         "liquid",
         "gas",
-        "suspension"
+        "suspension",
+        ""
       ]
     },
     "ReactionType": {
@@ -273,7 +276,8 @@
         "sonochemical",
         "photochemical",
         "flow",
-        "other"
+        "other",
+        ""
       ]
     },
     "TemperatureController": {
@@ -288,7 +292,8 @@
         "microwave",
         "furnace",
         "other",
-        "liquid_bath"
+        "liquid_bath",
+        ""
       ]
     },
     "HandlingAtmosphere": {
@@ -308,7 +313,8 @@
         "milligram",
         "gram",
         "multigram",
-        "kilogram"
+        "kilogram",
+        ""
       ]
     }
   }
