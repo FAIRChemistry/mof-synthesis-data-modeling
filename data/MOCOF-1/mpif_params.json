@@ -1,34 +1,34 @@
 {
   "metadata": {
-    "dataName": "MOCOF-1",
-    "creationDate": "2023-01-01",
+    "dataName": "MOCOF-1 synthesis trial",
+    "creationDate": "",
     "generatorVersion": "1.0",
     "publicationDOI": "todo",
-    "procedureStatus": "success",
+    "procedureStatus": "",
     "name": "Endo, Kenichi",
-    "email": "kenichi.endo.2@ipoc.uni-stuttgart.de",
+    "email": "kenichi.endo@ipoc.uni-stuttgart.de",
     "orcid": "0000-0002-4128-6514",
     "address": "Pfaffenwaldring 55, 70569 Stuttgart, Germany"
   },
   "productInfo": {
-    "type": "composite",
-    "systematicName": "MOCOF-1",
+    "type": "porous framework material",
+    "systematicName": "",
     "state": "solid",
-    "color": "white",
-    "handlingAtmosphere": "air"
+    "color": "",
+    "handlingAtmosphere": ""
   },
   "synthesisGeneral": {
-    "performedDate": "2023-01-01",
-    "labTemperature": 24,
-    "labHumidity": 35,
+    "performedDate": "",
+    "labTemperature": "",
+    "labHumidity": "",
     "reactionType": "mix",
-    "temperatureController": "microwave",
+    "temperatureController": "",
     "productAmountUnit": "",
     "scale": "milligram"
   },
   "steps": {
     "preparationAtmosphere": "Air",
-    "reactionAtmosphere": "Air",
+    "reactionAtmosphere": "",
     "workupAtmosphere": "Air"
   }
 }
