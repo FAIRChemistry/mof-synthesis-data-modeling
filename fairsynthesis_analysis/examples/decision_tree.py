@@ -14,6 +14,8 @@ import fairsynthesis_data_model.fairsynthesis_data_model.mofsy_api as api
 from molmass import Formula
 
 BASE = Path(__file__).parents[2] # repository root
+TARGET = "yield_MOCOF-1"
+# TARGET = "MOCOF-1"  # alternative target
 
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
@@ -96,7 +98,6 @@ df["yield_MOCOF-1"] = (
 df["yield_MOCOF-1"] = df["yield_MOCOF-1"].round(2)
 
 # 6. Remove rows where the target is NaN (missing mass or precursor)
-TARGET = "yield_MOCOF-1"
 
 n_before = len(df)
 mask_missing = df[[TARGET, "precursor_amount_mol", "product_mass_g"]].isnull().any(axis=1)
@@ -110,7 +111,7 @@ dropped_ids = df.loc[mask_missing, "id"].tolist()
 df = df.dropna(subset=[TARGET, "precursor_amount_mol", "product_mass_g"]).reset_index(drop=True)
 y = df[TARGET].values
 # drop these as they give information about the result and should not be used for prediction
-to_drop_from_X = ["COF-366-Co", "MOCOF-1", "unknown", "product_mass_g"]
+to_drop_from_X = ["COF-366-Co", "MOCOF-1", "unknown", "product_mass_g", "yield_MOCOF-1"]
 X = df.drop(columns=["id", TARGET] + to_drop_from_X)
 
 n_after = len(df)
