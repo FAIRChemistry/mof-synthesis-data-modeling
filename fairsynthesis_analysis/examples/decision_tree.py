@@ -10,12 +10,20 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeRegressor, export_text
 from sklearn.tree import ExtraTreeRegressor
+from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 import fairsynthesis_data_model.fairsynthesis_data_model.mofsy_api as api
 from molmass import Formula
 
 BASE = Path(__file__).parents[2] # repository root
-TARGET = "yield_MOCOF-1"
-# TARGET = "MOCOF-1"  # alternative target
+
+TASK_IS_CLASSIFICATION = True # Classification vs. Regression
+EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
+
+if TASK_IS_CLASSIFICATION:
+    TARGET = "dominant_product"
+else:
+    TARGET = "yield_MOCOF-1"
+    # TARGET = "MOCOF-1" # regression on molar fraction directly
 
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
@@ -82,7 +90,7 @@ df["precursor_amount_mol"] = (
 df["total_volume_uL"] = df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)
 df["acid_mol_ratio"] = df["acid_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
 
-# 5. Yield calculation (real values)
+# 5. Yield calculation (real values) and categorical dominant product
 
 # avoid division by zero – rows with missing precursor or product mass will be dropped later
 df["yield_MOCOF-1"] = (
@@ -96,6 +104,10 @@ df["yield_MOCOF-1"] = (
 )
 
 df["yield_MOCOF-1"] = df["yield_MOCOF-1"].round(2)
+
+fraction_cols = ["COF-366-Co", "MOCOF-1", "unknown"]
+df["dominant_product"] = df[fraction_cols].idxmax(axis=1)
+TARGET = "dominant_product"
 
 # 6. Remove rows where the target is NaN (missing mass or precursor)
 
@@ -111,7 +123,7 @@ dropped_ids = df.loc[mask_missing, "id"].tolist()
 df = df.dropna(subset=[TARGET, "precursor_amount_mol", "product_mass_g"]).reset_index(drop=True)
 y = df[TARGET].values
 # drop these as they give information about the result and should not be used for prediction
-to_drop_from_X = ["COF-366-Co", "MOCOF-1", "unknown", "product_mass_g", "yield_MOCOF-1"]
+to_drop_from_X = fraction_cols + ["product_mass_g", "yield_MOCOF-1", "dominant_product"]
 X = df.drop(columns=["id", TARGET] + to_drop_from_X)
 
 n_after = len(df)
@@ -141,32 +153,57 @@ preprocess = ColumnTransformer(
 )
 
 # 8. Decision‑Tree pipeline
-other_regressor = False
-if other_regressor:
-    model = Pipeline(
-        [("preprocess", preprocess), ("regressor", ExtraTreeRegressor(
-        max_depth=5,  # Explizite Limitierung
-        min_samples_leaf=5,
-        random_state=42
-    ))]
-    )
+if TASK_IS_CLASSIFICATION:
+    if EXTRA_TREE:
+        model = Pipeline([
+            ("preprocess", preprocess),
+            ("classifier", ExtraTreeClassifier(  # Changed to Classifier
+                max_depth=5,
+                min_samples_leaf=5,
+                random_state=42
+            ))
+        ])
+    else:
+        model = Pipeline([
+            ("preprocess", preprocess),
+            ("classifier", DecisionTreeClassifier(  # Changed to Classifier
+                random_state=42
+            ))
+        ])
 else:
-    model = Pipeline(
-        [("preprocess", preprocess), ("regressor", DecisionTreeRegressor(random_state=42))]
-    )
+    if EXTRA_TREE:
+        model = Pipeline(
+            [("preprocess", preprocess), ("regressor", ExtraTreeRegressor(
+            max_depth=5,  # Explizite Limitierung
+            min_samples_leaf=5,
+            random_state=42
+        ))]
+        )
+    else:
+        model = Pipeline(
+            [("preprocess", preprocess), ("regressor", DecisionTreeRegressor(random_state=42))]
+        )
 
 # 9. Repeated 5‑fold CV (3 repeats) – report R^2 & MSE
 cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
 
-r2 = cross_val_score(model, X, y, cv=cv, scoring="r2")
-mse = -cross_val_score(model, X, y, cv=cv, scoring="neg_mean_squared_error")
+if TASK_IS_CLASSIFICATION:
+    accuracy = cross_val_score(model, X, y, cv=cv, scoring="accuracy")
+    print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}")
 
-print(f"R^2  mean ± std : {r2.mean():.3f} ± {r2.std():.3f}")
-print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
+else:
+    r2 = cross_val_score(model, X, y, cv=cv, scoring="r2")
+    mse = -cross_val_score(model, X, y, cv=cv, scoring="neg_mean_squared_error")
+
+    print(f"R^2  mean ± std : {r2.mean():.3f} ± {r2.std():.3f}")
+    print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
 
 # 10. Fit on the full data set & extract insight
 model.fit(X, y)
-tree = model.named_steps["regressor"]
+if TASK_IS_CLASSIFICATION:
+    tree = model.named_steps["classifier"]
+else:
+    tree = model.named_steps["regressor"]
 
 # feature names after one‑hot encoding
 ohe = model.named_steps["preprocess"].named_transformers_["cat"].named_steps["onehot"]
@@ -177,5 +214,5 @@ print("\nTop‑10 feature importances")
 for idx in np.argsort(tree.feature_importances_)[-10:][::-1]:
     print(f"{feature_names[idx]:30s} : {tree.feature_importances_[idx]:.4f}")
 
-print("\nDecision‑tree (first 3 levels)")
-print(export_text(tree, feature_names=feature_names, max_depth=10))
+print("\nDecision‑tree (first 4 levels)")
+print(export_text(tree, feature_names=feature_names, max_depth=4))
