@@ -11,7 +11,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeRegressor, export_text
 from sklearn.tree import ExtraTreeRegressor
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
-import fairsynthesis_data_model.fairsynthesis_data_model.mofsy_api as api
+import fairsynthesis_data_model.mofsy_api as api
 from molmass import Formula
 
 BASE = Path(__file__).parents[2] # repository root

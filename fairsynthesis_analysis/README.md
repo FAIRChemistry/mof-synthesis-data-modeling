@@ -10,3 +10,10 @@ It imports PXRD patterns and metadata, and calculates the approximate molar frac
 
 ## statistics.mo.py
 It imports molar fractions and synthesis data, calculates the approximate yield of each phase, and analyzes its statistics with respect to the synthesis procedure.
+
+## decision_tree.py
+Trains decision tree classifiers to predict the outcome of the synthesis based on the synthesis parameters.
+From this folder, perform:
+```
+uv run examples/decision_tree.py
+```
