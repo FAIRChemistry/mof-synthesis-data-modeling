@@ -1,11 +1,12 @@
 [project]
 name = "fairsynthesis-analysis"
 version = "0.1.0"
-description = "A tool for analyzing FAIRSynthesis data in the JXDL format."
+description = "Tools for analyzing the synthesis and characterization data of the MOCOF-1 synthesis trials using the data model."
 readme = "README.md"
 authors = [
     { name = "Frederic Bender", email = "frederic.bender@itt.uni-stuttgart.de" },
-    { name = "Felix Neubauer", email = "felix.neubauer@ipvs.uni-stuttgart.de"}
+    { name = "Felix Neubauer", email = "felix.neubauer@ipvs.uni-stuttgart.de"},
+    { name = "Kenichi Endo", email = "kenichi.endo@ipoc.uni-stuttgart.de"}
 ]
 requires-python = ">=3.13"
 dependencies = [
