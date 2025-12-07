@@ -130,6 +130,8 @@ Activation under vacuum (boolean): If there is Dry"""
         solvent_reagents = [r for r in synthesis.reagents.reagent if r.role == Role.SOLVENT]
         solvent_others = []
         for idx, solvent_reagent in enumerate(solvent_reagents):
+            if solvent_reagent.inchi == "None" and solvent_reagent.name == "C4H8O2":
+                      solvent_reagent.inchi = "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
             if solvent_reagent.inchi in solvent_inchi_map:
                       solvent_number, solvent_name = solvent_inchi_map[solvent_reagent.inchi]
                       params[f'solvent_{solvent_number}_name'] = solvent_name
