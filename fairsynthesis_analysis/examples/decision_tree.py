@@ -77,12 +77,19 @@ df = (
 # 4. Parameter conversion
 df["dialdehyde_equiv"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
 df["water_per_dialdehyde"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
-df["porphyrin_conc_mmol_L"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round(1)
-df["acid_conc_mol_L"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)
+df["porphyrin_conc_mmol_L"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
+df["acid_conc_mol_L"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
 df["solvent_hydrophobic_fraction"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
-df["acid_conc_mol_L"] = df["acid_conc_mol_L"].round(1)
 df["additional_m-dinitrobenzene"] = (df["solvent_3_volume_uL"] > 0)
-#print(df["additional_m-dinitrobenzene"])
+
+centers = np.array([7, 10, 13, 20, 40])
+bin_edges = [-np.inf, 8.5, 11.5, 16.5, 30, np.inf]
+cats = pd.cut(
+    df["porphyrin_conc_mmol_L"],
+    bins=bin_edges,
+    include_lowest=True,
+)
+df["porphyrin_conc_mmol_L"] = centers[cats.cat.codes]
 
 # 5. Yield calculation (real values) and categorical main product
 df["yield_MOCOF-1"] = (
