@@ -3,12 +3,14 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+pd.set_option("display.max_rows", None)
+import matplotlib.pyplot as plt
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import RepeatedKFold, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.tree import DecisionTreeRegressor, export_text
+from sklearn.tree import DecisionTreeRegressor, export_text, plot_tree
 from sklearn.tree import ExtraTreeRegressor
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 import fairsynthesis_data_model.mofsy_api as api
@@ -19,16 +21,10 @@ BASE = Path(__file__).parents[2] # repository root
 TASK_IS_CLASSIFICATION = True # Classification vs. Regression
 EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
 
-if TASK_IS_CLASSIFICATION:
-    TARGET = "dominant_product"
-else:
-    TARGET = "yield_MOCOF-1"
-    # TARGET = "MOCOF-1" # regression on molar fraction directly
-
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
     "MOCOF-1": "C52H33CoN8",
-    "unknown": "C44H31CoN8",
+    "unknown": "C44H31CoN8", #assuming Co(H−1tapp)
 }
 formula_mass = {k: Formula(v).mass for k, v in sum_formula.items()}
 
@@ -56,8 +52,7 @@ params_df = (
 # 2.2 Molar fractions (PXRD)
 frac_df = pd.read_csv(frac_path)
 
-
-# 2.3 Characterisation – extract the weight (mg) -> g
+# 2.3 Characterisation – extract the product mass (mg) -> g
 char_rows = []
 for exp_id in frac_df["id"]:
     char_entry = api.get_characterization_by_experiment_id(characterization, exp_id)
@@ -79,53 +74,65 @@ df = (
     .merge(char_df, on="id", how="left")
 )
 
-# 4. Helper columns (equivalence ratios + other values)
-df["ald_per_amine"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
-df["water_per_amine"] = df["water_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
-df["water_per_aldeyde"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
+# 4. Parameter conversion
+df["dialdehyde_equiv"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
+df["water_per_dialdehyde"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
+df["porphyrin_conc_mmol_L"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round(1)
+df["acid_conc_mol_L"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)
+df["solvent_hydrophobic_fraction"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
+df["acid_conc_mol_L"] = df["acid_conc_mol_L"].round(1)
+df["additional_m-dinitrobenzene"] = (df["solvent_3_volume_uL"] > 0)
+#print(df["additional_m-dinitrobenzene"])
 
-df["precursor_amount_mol"] = (
-    df["aminoporphyrin_monomer_amount_umol"] * 1e-6
-)
-df["total_volume_uL"] = df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)
-df["acid_mol_ratio"] = df["acid_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
-
-# 5. Yield calculation (real values) and categorical dominant product
-
-# avoid division by zero – rows with missing precursor or product mass will be dropped later
+# 5. Yield calculation (real values) and categorical main product
 df["yield_MOCOF-1"] = (
     df["MOCOF-1"]
     * df["product_mass_g"]
     / (
         df["COF-366-Co"] * formula_mass["COF-366-Co"]
         + df["MOCOF-1"] * formula_mass["MOCOF-1"]
+        + df["unknown"] * formula_mass["unknown"]
     )
-    / df["precursor_amount_mol"]
-)
+    / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
+).round(2)
+df["yield_COF-366-Co"] = (
+    df["COF-366-Co"]
+    * df["product_mass_g"]
+    / (
+        df["COF-366-Co"] * formula_mass["COF-366-Co"]
+        + df["MOCOF-1"] * formula_mass["MOCOF-1"]
+        + df["unknown"] * formula_mass["unknown"]
+    )
+    / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
+).round(2)
+# Assuming the amorphous component was Co(tapp)nXn. Minimum function to avoid overestimation.
+df["yield_Co(tapp)nXn"] = (
+    np.minimum(1 - df["yield_COF-366-Co"] - df["yield_MOCOF-1"],
+            df["unknown"]
+            * df["product_mass_g"]
+            / (
+                df["COF-366-Co"] * formula_mass["COF-366-Co"]
+                + df["MOCOF-1"] * formula_mass["MOCOF-1"]
+                + df["unknown"] * formula_mass["unknown"]
+            )
+            / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
+    )
+).round(2)
+df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXn"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
 
-df["yield_MOCOF-1"] = df["yield_MOCOF-1"].round(2)
+yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXn", "yield_Co(tapp)"]
+df["main_product"] = df[yield_cols].idxmax(axis=1).str.replace("yield_", "")
+#print(df[["id"] + yield_cols + ["main_product"]])
+TARGET = "main_product"
 
-fraction_cols = ["COF-366-Co", "MOCOF-1", "unknown"]
-df["dominant_product"] = df[fraction_cols].idxmax(axis=1)
-TARGET = "dominant_product"
-
-# 6. Remove rows where the target is NaN (missing mass or precursor)
-
+# 6. Remove rows where the target is NaN
 n_before = len(df)
-mask_missing = df[[TARGET, "precursor_amount_mol", "product_mass_g"]].isnull().any(axis=1)
+mask_missing = df[[TARGET]].isnull().any(axis=1)
 missing_counts = {
     "target_nan":               int(df[TARGET].isnull().sum()),
-    "precursor_amount_nan":     int(df["precursor_amount_mol"].isnull().sum()),
-    "product_mass_nan":         int(df["product_mass_g"].isnull().sum()),
 }
 dropped_ids = df.loc[mask_missing, "id"].tolist()
-
-df = df.dropna(subset=[TARGET, "precursor_amount_mol", "product_mass_g"]).reset_index(drop=True)
-y = df[TARGET].values
-# drop these as they give information about the result and should not be used for prediction
-to_drop_from_X = fraction_cols + ["product_mass_g", "yield_MOCOF-1", "dominant_product"]
-X = df.drop(columns=["id", TARGET] + to_drop_from_X)
-
+df = df.dropna(subset=[TARGET]).reset_index(drop=True)
 n_after = len(df)
 print("\n=== Drop‑NaN‑Report ===")
 print(f"Columns before filtering: {n_before}")
@@ -136,7 +143,12 @@ for k, v in missing_counts.items():
     print(f"  {k:20s} → {v}")
 print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 
-# 7. Pre‑processing: numeric vs. categorical
+# 7.1. Pre-processing: input parameters
+# Remove already converted parameters, characterization parameters, and workup parameters that are irrelevant for phase selectivity.
+X = df.drop(columns=["id", TARGET] + yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h"])
+y = df[TARGET].values
+
+# 7.2. Pre‑processing: numeric vs. categorical
 numeric_cols = X.select_dtypes(include=["int64", "float64"]).columns.tolist()
 categorical_cols = X.select_dtypes(include=["object", "bool"]).columns.tolist()
 
@@ -167,14 +179,17 @@ if TASK_IS_CLASSIFICATION:
         model = Pipeline([
             ("preprocess", preprocess),
             ("classifier", DecisionTreeClassifier(  # Changed to Classifier
-                random_state=42
+                    #criterion="gini",
+                    #min_impurity_decrease=1e-3,
+                    max_depth=None,
+                    random_state=0
             ))
         ])
 else:
     if EXTRA_TREE:
         model = Pipeline(
             [("preprocess", preprocess), ("regressor", ExtraTreeRegressor(
-            max_depth=5,  # Explizite Limitierung
+            max_depth=5,  # Explicit limit
             min_samples_leaf=5,
             random_state=42
         ))]
@@ -198,7 +213,7 @@ else:
     print(f"R^2  mean ± std : {r2.mean():.3f} ± {r2.std():.3f}")
     print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
 
-# 10. Fit on the full data set & extract insight
+# 10. Fit on the full data set & extract insights
 model.fit(X, y)
 if TASK_IS_CLASSIFICATION:
     tree = model.named_steps["classifier"]
@@ -210,9 +225,28 @@ ohe = model.named_steps["preprocess"].named_transformers_["cat"].named_steps["on
 cat_feature_names = list(ohe.get_feature_names_out(categorical_cols))
 feature_names = numeric_cols + cat_feature_names
 
-print("\nTop‑10 feature importances")
-for idx in np.argsort(tree.feature_importances_)[-10:][::-1]:
-    print(f"{feature_names[idx]:30s} : {tree.feature_importances_[idx]:.4f}")
+#print("\nTop‑10 feature importances")
+#for idx in np.argsort(tree.feature_importances_)[-10:][::-1]:
+#    print(f"{feature_names[idx]:30s} : {tree.feature_importances_[idx]:.4f}")
 
-print("\nDecision‑tree (first 4 levels)")
-print(export_text(tree, feature_names=feature_names, max_depth=4))
+#print("\nDecision‑tree (first 7 levels)")
+#print(export_text(tree, feature_names=feature_names, max_depth=7))
+
+clf = model.named_steps["classifier"]
+feature_names = model.named_steps["preprocess"].get_feature_names_out()
+
+# Plot and save as PDF
+plt.figure(figsize=(16, 8))
+plot_tree(
+    clf,
+    feature_names=feature_names,
+    class_names=[str(c) for c in clf.classes_],
+    filled=True,
+    rounded=True,
+)
+plt.savefig("MOCOF-1_decision_tree.pdf", format="pdf", dpi=300, bbox_inches="tight")
+
+print("\nFeature importances")
+importances = clf.feature_importances_
+for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
+    print(f"{name}: {imp:.4f}")
