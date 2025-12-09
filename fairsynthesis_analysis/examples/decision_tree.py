@@ -3,25 +3,31 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
 pd.set_option("display.max_rows", None)
-import matplotlib.pyplot as plt
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import RepeatedKFold, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.tree import DecisionTreeRegressor, export_text, plot_tree
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.tree import ExtraTreeRegressor
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
-from sklearn.tree import export_graphviz
-import graphviz
+from sklearn.preprocessing import LabelEncoder
 import fairsynthesis_data_model.mofsy_api as api
+from plot_decision_tree import plot_decision_tree
 from molmass import Formula
+from deduplicate_experiments import get_duplicate_indices
+from range_decision_tree import RangeDecisionTreeClassifier
 
 BASE = Path(__file__).parents[2] # repository root
 
 TASK_IS_CLASSIFICATION = True # Classification vs. Regression
+RANGE_TREE = False
 EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
+MAX_DEPTH = 4
+DEDUPLICATE = True
+DEDUPLICATE_RELATIVE_TOLERANCE = 3.0 # in percent
 
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
@@ -157,6 +163,34 @@ print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 X = df.drop(columns=["id", TARGET] + yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h"])
 y = df[TARGET].values
 
+# Find duplicates in X
+if DEDUPLICATE:
+    print("\n=== Deduplicating feature matrix ===")
+
+    duplicate_indices, duplicate_pairs, epsilon_dict, param_stats = get_duplicate_indices(
+        X,
+        relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE,
+        verbose=True
+    )
+
+    print(f"Found {len(duplicate_indices)} duplicate rows")
+    # print the experiment id for all duplicates
+    print("Duplicate experiment IDs:")
+    for (i,j) in duplicate_pairs:
+        print(f"  {df.loc[i, 'id']} is duplicate of {df.loc[j, 'id']}")
+
+    # Remove duplicates from both X and y
+    X = X.drop(duplicate_indices)
+    mask = np.ones(len(y), dtype=bool)
+    mask[duplicate_indices] = False
+    y = y[mask]
+
+    print(f"Final shapes: X={X.shape}, y={y.shape}")
+
+label_encoder = LabelEncoder()
+y_encoded = label_encoder.fit_transform(y)
+class_names_ordered = label_encoder.classes_
+
 # 7.2. Pre‑processing: numeric vs. categorical
 numeric_cols = X.select_dtypes(include=["int64", "float64"]).columns.tolist()
 categorical_cols = X.select_dtypes(include=["object", "bool"]).columns.tolist()
@@ -175,11 +209,22 @@ preprocess = ColumnTransformer(
 
 # 8. Decision‑Tree pipeline
 if TASK_IS_CLASSIFICATION:
-    if EXTRA_TREE:
+    if RANGE_TREE:
+        model = Pipeline([
+            ("preprocess", preprocess),
+            ("classifier", RangeDecisionTreeClassifier(
+                max_depth=4,
+                min_samples_leaf=5,
+                split_strategy='both',  # Evaluates both standard and range splits
+                max_range_splits=10,
+                random_state=0
+            ))
+        ])
+    elif EXTRA_TREE:
         model = Pipeline([
             ("preprocess", preprocess),
             ("classifier", ExtraTreeClassifier(  # Changed to Classifier
-                max_depth=5,
+                max_depth=MAX_DEPTH,
                 min_samples_leaf=5,
                 random_state=42
             ))
@@ -190,7 +235,7 @@ if TASK_IS_CLASSIFICATION:
             ("classifier", DecisionTreeClassifier(  # Changed to Classifier
                     #criterion="gini",
                     #min_impurity_decrease=1e-3,
-                    max_depth=None,
+                    max_depth=MAX_DEPTH,
                     random_state=0
             ))
         ])
@@ -198,14 +243,14 @@ else:
     if EXTRA_TREE:
         model = Pipeline(
             [("preprocess", preprocess), ("regressor", ExtraTreeRegressor(
-            max_depth=5,  # Explicit limit
+            max_depth=MAX_DEPTH,  # Explicit limit
             min_samples_leaf=5,
             random_state=42
         ))]
         )
     else:
         model = Pipeline(
-            [("preprocess", preprocess), ("regressor", DecisionTreeRegressor(random_state=42))]
+            [("preprocess", preprocess), ("regressor", DecisionTreeRegressor(random_state=42, max_depth=MAX_DEPTH))]
         )
 
 # 9. Repeated 5‑fold CV (3 repeats) – report R^2 & MSE
@@ -223,7 +268,7 @@ else:
     print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
 
 # 10. Fit on the full data set & extract insights
-model.fit(X, y)
+model.fit(X, y_encoded)
 if TASK_IS_CLASSIFICATION:
     tree = model.named_steps["classifier"]
 else:
@@ -244,55 +289,9 @@ feature_names = numeric_cols + cat_feature_names
 clf = model.named_steps["classifier"]
 feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
-# Plot and save as PDF
-plt.figure(figsize=(16, 8))
-# Full export using matplotlib, but not suitable for publication
-plot_tree(
-    clf,
-    feature_names=feature_names,
-    class_names=[str(c) for c in clf.classes_],
-    filled=True,
-    rounded=True,
-)
-plt.savefig("MOCOF-1_decision_tree.pdf", format="pdf", dpi=300, bbox_inches="tight")
-
-# customized export using graphviz, suitable for publication. Subset of graph.
-dot = export_graphviz(
-    clf,
-    feature_names=feature_names,
-    class_names=[str(c) for c in clf.classes_],
-    filled=True,
-    rounded=True,
-    max_depth=3,
-    impurity=False,        # remove gini
-    proportion=False,
-    node_ids=False,
-    out_file=None
-)
-
-graph = graphviz.Source(dot)
-graph.format = "pdf"
-graph.render("MOCOF-1_decision_tree_subset_pub", cleanup=True)
-
-
-# customized export using graphviz, suitable for publication. Full graph.
-dot = export_graphviz(
-    clf,
-    feature_names=feature_names,
-    class_names=[str(c) for c in clf.classes_],
-    filled=True,
-    rounded=True,
-    proportion=False,
-    node_ids=False,
-    out_file=None
-)
-
-graph = graphviz.Source(dot)
-graph.format = "pdf"
-graph.render("MOCOF-1_decision_tree_full_pub", cleanup=True)
-
-
 print("\nFeature importances")
 importances = clf.feature_importances_
 for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
     print(f"{name}: {imp:.4f}")
+
+plot_decision_tree(clf, model, feature_names, X, y_encoded, class_names_ordered, MAX_DEPTH)
