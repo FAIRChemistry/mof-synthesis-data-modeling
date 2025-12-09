@@ -25,7 +25,7 @@ BASE = Path(__file__).parents[2] # repository root
 TASK_IS_CLASSIFICATION = True # Classification vs. Regression
 RANGE_TREE = False
 EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
-MAX_DEPTH = 4
+MAX_DEPTH = 300
 DEDUPLICATE = True
 DEDUPLICATE_RELATIVE_TOLERANCE = 3.0 # in percent
 

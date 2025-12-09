@@ -156,51 +156,19 @@ def compare_dataframe_rows(row1: pd.Series,
     # No significant differences found - rows are similar
     return True
 
+def get_duplicate_indices(
+    X: pd.DataFrame,
+    relative_tolerance: float = 5.0,
+    verbose: bool = True
+) -> tuple:
 
-def get_duplicate_indices(X: pd.DataFrame,
-                         relative_tolerance: float = 5.0,
-                         verbose: bool = True) -> tuple:
-    """
-    Find indices of rows that are duplicates (too similar to previous rows).
-
-    This function compares each row to all previous rows and marks it as duplicate
-    if all values are within the parameter-specific epsilon tolerance.
-
-    Args:
-        X: pandas DataFrame with features (feature matrix)
-        relative_tolerance: Percentage of mean to use as epsilon (default: 5%)
-        verbose: Print progress information
-
-    Returns:
-        Tuple of (duplicate_indices, epsilon_dict, param_stats)
-        - duplicate_indices: List of row indices marked as duplicates
-        - epsilon_dict: Dictionary of epsilon values per feature
-        - param_stats: Dictionary of statistics per feature
-    """
-
-    # Calculate statistics for all numerical columns
     if verbose:
         print("\nCalculating feature statistics...")
     param_stats = calculate_dataframe_statistics(X)
 
-    # Calculate adaptive epsilon for each parameter
     if verbose:
         print("Calculating adaptive epsilon values...")
     epsilon_dict = calculate_adaptive_epsilon(param_stats, relative_tolerance)
-
-    # Print epsilon values for transparency
-    if verbose:
-        print(f"\nUsing relative tolerance: {relative_tolerance}%")
-        print("\nFeature-specific epsilon values:")
-        print("-" * 70)
-        print(f"{'Feature':<40} {'Mean':<12} {'Epsilon':<12}")
-        print("-" * 70)
-        for feature_name in sorted(epsilon_dict.keys()):
-            if feature_name in param_stats:
-                mean = param_stats[feature_name]['mean']
-                epsilon = epsilon_dict[feature_name]
-                print(f"{feature_name:<40} {mean:<12.4f} {epsilon:<12.4f}")
-        print("-" * 70)
 
     duplicate_indices = []
     duplicate_pairs = []
@@ -208,28 +176,28 @@ def get_duplicate_indices(X: pd.DataFrame,
     if verbose:
         print(f"\nProcessing {len(X)} rows...")
 
-    # Loop over all rows
-    for i in range(len(X)):
-        if verbose and (i + 1) % 10 == 0:
-            print(f"Processed {i + 1}/{len(X)} rows...")
+    n = len(X)
+
+    # Outer loop backwards: newest → oldest
+    for i in range(n - 1, -1, -1):
+        if verbose and ((n - i) % 10 == 0):
+            print(f"Processed {n - i}/{n} rows...")
 
         current_row = X.iloc[i]
 
-        # Check against all previous rows
-        for j in range(i):
-            # Skip if previous row was already marked for removal
+        # Compare against even newer rows only
+        for j in range(n - 1, i, -1):
+
             if j in duplicate_indices:
                 continue
 
-            previous_row = X.iloc[j]
+            newer_row = X.iloc[j]
 
-            # Compare rows
-            if compare_dataframe_rows(current_row, previous_row, epsilon_dict):
-                # Too similar - mark current as duplicate
+            if compare_dataframe_rows(current_row, newer_row, epsilon_dict):
                 duplicate_indices.append(i)
                 duplicate_pairs.append((i, j))
                 if verbose:
                     print(f"  → Row {i} is similar to row {j} (marked as duplicate).")
-                break  # No need to check other previous rows
+                break
 
     return duplicate_indices, duplicate_pairs, epsilon_dict, param_stats
