@@ -113,7 +113,7 @@ Activation under vacuum (boolean): If there is Dry"""
             params['acid_amount_umol'] = -1.0
 
         # Other additives
-        catalyst_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.CATALYST and r.inchi != "InChI=1S/H2O/h1H2"), None)
+        catalyst_reagent = next((r for r in synthesis.reagents.reagent if (r.role == Role.CATALYST or r.role == Role.REAGENT) and r.inchi != "InChI=1S/H2O/h1H2"), None)
         if catalyst_reagent:
             params['other_additives'] = catalyst_reagent.inchi.split('/')[1] if catalyst_reagent.inchi.startswith("InChI=1S/") else catalyst_reagent.inchi
         else:

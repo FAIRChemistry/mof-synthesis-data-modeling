@@ -4775,7 +4775,7 @@
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Terephthalaldehyde"/>
         <Add vessel="Schlenk bomb" amount="598.5 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="396.09 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="416.6 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="45.841 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="oDCB"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -4795,7 +4795,7 @@
       <Reagent id="Terephthalaldehyde" inchi="InChI=1S/C8H6O2/c9-5-7-1-2-8(6-10)4-3-7/h1-6H" name="Terephthalaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="oDCB" inchi="InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H" name="oDCB" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -4811,7 +4811,7 @@
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE"/>
         <Add vessel="Schlenk bomb" amount="3192.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="408.31 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="402.76 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="44.317 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -4831,7 +4831,7 @@
       <Reagent id="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE" inchi="InChI=1S/C8H2F4O2/c9-5-3(1-13)6(10)8(12)4(2-14)7(5)11/h1-2H" name="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -4847,7 +4847,7 @@
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE"/>
         <Add vessel="Schlenk bomb" amount="2394.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="404.71 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="401.6 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="44.19 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="74.41 micromole" reagent="Benzenamine, 4-bromo-"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
@@ -4868,7 +4868,7 @@
       <Reagent id="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE" inchi="InChI=1S/C8H2F4O2/c9-5-3(1-13)6(10)8(12)4(2-14)7(5)11/h1-2H" name="2,3,5,6-TETRAFLUOROTEREPHTHALALDEHYDE" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="Benzenamine, 4-bromo-" inchi="InChI=1S/C6H6BrN/c7-5-1-3-6(8)4-2-5/h1-4H,8H2" name="Benzenamine, 4-bromo-" role="catalyst"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
@@ -4954,7 +4954,7 @@
         <Add vessel="Schlenk bomb" amount="26.6 micromole" reagent="Terephthalaldehyde"/>
         <Add vessel="Schlenk bomb" amount="1197.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="806.67 micromole" reagent="2-Chloro-4-nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -4974,7 +4974,7 @@
       <Reagent id="Terephthalaldehyde" inchi="InChI=1S/C8H6O2/c9-5-7-1-2-8(6-10)4-3-7/h1-6H" name="Terephthalaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="2-Chloro-4-nitrophenol" inchi="InChI=1S/C6H4ClNO3/c7-5-3-4(8(10)11)1-2-6(5)9/h1-3,9H" name="2-Chloro-4-nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -4990,7 +4990,7 @@
         <Add vessel="Schlenk bomb" amount="26.6 micromole" reagent="Terephthalaldehyde"/>
         <Add vessel="Schlenk bomb" amount="1197.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="819.49 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -5010,7 +5010,7 @@
       <Reagent id="Terephthalaldehyde" inchi="InChI=1S/C8H6O2/c9-5-7-1-2-8(6-10)4-3-7/h1-6H" name="Terephthalaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -5027,7 +5027,7 @@
         <Add vessel="Schlenk bomb" amount="13.3 micromole" reagent="Zinc acetate dihydrate"/>
         <Add vessel="Schlenk bomb" amount="1197.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="805.11 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -5048,7 +5048,7 @@
       <Reagent id="Zinc acetate dihydrate" inchi="InChI=1S/2C2H4O2.2H2O.Zn/c2*1-2(3)4;;;/h2*1H3,(H,3,4);2*1H2;/q;;;;+2/p-2" name="Zinc acetate dihydrate" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -5064,7 +5064,7 @@
         <Add vessel="Schlenk bomb" amount="26.6 micromole" reagent="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde"/>
         <Add vessel="Schlenk bomb" amount="1197.0 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="805.11 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -5084,7 +5084,7 @@
       <Reagent id="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde" inchi="InChI=1S/C10H10O4/c1-13-9-3-8(6-12)10(14-2)4-7(9)5-11/h3-6H,1-2H3" name="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -5134,7 +5134,7 @@
         <Add vessel="Schlenk bomb" amount="25.23 micromole" reagent="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde"/>
         <Add vessel="Schlenk bomb" amount="2264.15 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="411.9 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -5154,7 +5154,7 @@
       <Reagent id="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde" inchi="InChI=1S/C10H10O4/c1-13-9-3-8(6-12)10(14-2)4-7(9)5-11/h3-6H,1-2H3" name="2,5-Dimethoxybenzene-1,4-dicarboxaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>
@@ -5170,7 +5170,7 @@
         <Add vessel="Schlenk bomb" amount="27.27 micromole" reagent="2,5-Dihydroxyterephthalaldehyde"/>
         <Add vessel="Schlenk bomb" amount="2452.83 micromole" reagent="Water"/>
         <Add vessel="Schlenk bomb" amount="812.3 micromole" reagent="4-Nitrophenol"/>
-        <Add vessel="Schlenk bomb" amount="399.0 micromole" reagent="1,3-Dinitrobenzene"/>
+        <Add vessel="Schlenk bomb" amount="43.904 microlitre" reagent="1,3-Dinitrobenzene"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>
@@ -5190,7 +5190,7 @@
       <Reagent id="2,5-Dihydroxyterephthalaldehyde" inchi="InChI=1S/C8H6O4/c9-3-5-1-7(11)6(4-10)2-8(5)12/h1-4,11-12H" name="2,5-Dihydroxyterephthalaldehyde" role="substrate"/>
       <Reagent id="Water" inchi="InChI=1S/H2O/h1H2" name="Water" role="catalyst"/>
       <Reagent id="4-Nitrophenol" inchi="InChI=1S/C6H5NO3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H" name="4-Nitrophenol" role="acid"/>
-      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="reagent"/>
+      <Reagent id="1,3-Dinitrobenzene" inchi="InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H" name="1,3-Dinitrobenzene" role="solvent"/>
       <Reagent id="PhNO2" inchi="InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H" name="PhNO2" role="solvent"/>
       <Reagent id="DO" inchi="InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2" name="DO" role="solvent"/>
     </Reagents>

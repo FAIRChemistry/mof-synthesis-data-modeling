@@ -23502,8 +23502,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 416.6,
+                "Unit": "microlitre",
+                "Value": 45.841,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -23608,7 +23608,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "oDCB",
@@ -23684,8 +23684,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 402.76,
+                "Unit": "microlitre",
+                "Value": 44.317,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -23790,7 +23790,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -23866,8 +23866,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 401.6,
+                "Unit": "microlitre",
+                "Value": 44.19,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -23982,7 +23982,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "Benzenamine, 4-bromo-",
@@ -24405,8 +24405,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -24511,7 +24511,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -24587,8 +24587,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -24693,7 +24693,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -24779,8 +24779,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -24891,7 +24891,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -24967,8 +24967,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -25073,7 +25073,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -25315,8 +25315,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -25421,7 +25421,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
@@ -25497,8 +25497,8 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Unit": "micromole",
-                "Value": 399.0,
+                "Unit": "microlitre",
+                "Value": 43.904,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_reagent": "1,3-Dinitrobenzene"
@@ -25603,7 +25603,7 @@
             "_id": "1,3-Dinitrobenzene",
             "_inchi": "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H",
             "_name": "1,3-Dinitrobenzene",
-            "_role": "reagent"
+            "_role": "solvent"
           },
           {
             "_id": "PhNO2",
