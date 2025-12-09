@@ -13,6 +13,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeRegressor, export_text, plot_tree
 from sklearn.tree import ExtraTreeRegressor
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
+from sklearn.tree import export_graphviz
+import graphviz
 import fairsynthesis_data_model.mofsy_api as api
 from molmass import Formula
 
@@ -244,6 +246,7 @@ feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
 # Plot and save as PDF
 plt.figure(figsize=(16, 8))
+# Full export using matplotlib, but not suitable for publication
 plot_tree(
     clf,
     feature_names=feature_names,
@@ -252,6 +255,42 @@ plot_tree(
     rounded=True,
 )
 plt.savefig("MOCOF-1_decision_tree.pdf", format="pdf", dpi=300, bbox_inches="tight")
+
+# customized export using graphviz, suitable for publication. Subset of graph.
+dot = export_graphviz(
+    clf,
+    feature_names=feature_names,
+    class_names=[str(c) for c in clf.classes_],
+    filled=True,
+    rounded=True,
+    max_depth=3,
+    impurity=False,        # remove gini
+    proportion=False,
+    node_ids=False,
+    out_file=None
+)
+
+graph = graphviz.Source(dot)
+graph.format = "pdf"
+graph.render("MOCOF-1_decision_tree_subset_pub", cleanup=True)
+
+
+# customized export using graphviz, suitable for publication. Full graph.
+dot = export_graphviz(
+    clf,
+    feature_names=feature_names,
+    class_names=[str(c) for c in clf.classes_],
+    filled=True,
+    rounded=True,
+    proportion=False,
+    node_ids=False,
+    out_file=None
+)
+
+graph = graphviz.Source(dot)
+graph.format = "pdf"
+graph.render("MOCOF-1_decision_tree_full_pub", cleanup=True)
+
 
 print("\nFeature importances")
 importances = clf.feature_importances_

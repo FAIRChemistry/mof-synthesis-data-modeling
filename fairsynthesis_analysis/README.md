@@ -14,3 +14,5 @@ It imports molar fractions and synthesis data, calculates the approximate yield 
 
 ## decision_tree.py
 It trains decision tree classifiers to model the outcome of the synthesis based on the synthesis parameters.
+The decision tree it plotted.
+Required the installation of graphviz (e.g., `brew install graphviz` on MacOS or `sudo apt install graphviz` on Linux).
