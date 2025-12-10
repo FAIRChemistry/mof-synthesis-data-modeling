@@ -36,12 +36,12 @@ sum_formula = {
 }
 formula_mass = {k: Formula(v).mass for k, v in sum_formula.items()}
 
-# 1. Load raw data
 params_path = BASE / "data" / "MOCOF-1" / "converted" / "params_from_sciformation.json"
 proc_path   = BASE / "data" / "MOCOF-1" / "converted" / "procedure_from_sciformation.json"
 char_path   = BASE / "data" / "MOCOF-1" / "converted" / "characterization_from_sciformation.json"
 frac_path   = BASE / "fairsynthesis_analysis" / "examples" / "data" / "pxrd_molar_fraction_overview.csv"
 
+# 1. Load raw data
 with open(params_path) as f:
     raw_params = json.load(f)
 
@@ -218,6 +218,7 @@ preprocess = ColumnTransformer(
 )
 
 # 8. Decision‑Tree pipeline
+
 if TASK_IS_CLASSIFICATION:
     if RANGE_TREE:
         model = Pipeline([
