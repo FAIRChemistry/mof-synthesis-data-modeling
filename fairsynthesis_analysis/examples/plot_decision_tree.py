@@ -4,8 +4,8 @@ import pandas as pd
 pd.set_option("display.max_rows", None)
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
-from sklearn.tree import export_graphviz
-import graphviz
+# from sklearn.tree import export_graphviz
+# import graphviz
 import dtreeviz
 
 
@@ -23,39 +23,39 @@ def plot_decision_tree(clf, model, feature_names, X, y_encoded, class_names_orde
     plt.savefig("MOCOF-1_decision_tree.pdf", format="pdf", dpi=300, bbox_inches="tight")
 
     # customized export using graphviz, suitable for publication. Subset of graph.
-    dot = export_graphviz(
-        clf,
-        feature_names=feature_names,
-        class_names=[str(c) for c in clf.classes_],
-        filled=True,
-        rounded=True,
-        max_depth=max_depth,
-        impurity=False,        # remove gini
-        proportion=False,
-        node_ids=False,
-        out_file=None
-    )
+    #dot = export_graphviz(
+    #    clf,
+    #    feature_names=feature_names,
+    #    class_names=[str(c) for c in clf.classes_],
+    #    filled=True,
+    #    rounded=True,
+    #    max_depth=max_depth,
+    #    impurity=False,        # remove gini
+    #    proportion=False,
+    #    node_ids=False,
+    #    out_file=None
+    #)
 
-    graph = graphviz.Source(dot)
-    graph.format = "pdf"
-    graph.render("MOCOF-1_decision_tree_subset_pub", cleanup=True)
+    #graph = graphviz.Source(dot)
+    #graph.format = "pdf"
+    #graph.render("MOCOF-1_decision_tree_subset_pub", cleanup=True)
 
 
     # customized export using graphviz, suitable for publication. Full graph.
-    dot = export_graphviz(
-        clf,
-        feature_names=feature_names,
-        class_names=[str(c) for c in clf.classes_],
-        filled=True,
-        rounded=True,
-        proportion=False,
-        node_ids=False,
-        out_file=None
-    )
+    #dot = export_graphviz(
+    #    clf,
+    #    feature_names=feature_names,
+    #    class_names=[str(c) for c in clf.classes_],
+    #    filled=True,
+    #    rounded=True,
+    #    proportion=False,
+    #    node_ids=False,
+    #    out_file=None
+    #)
 
-    graph = graphviz.Source(dot)
-    graph.format = "pdf"
-    graph.render("MOCOF-1_decision_tree_full_pub", cleanup=True)
+    #graph = graphviz.Source(dot)
+    #graph.format = "pdf"
+    #graph.render("MOCOF-1_decision_tree_full_pub", cleanup=True)
 
 
     # even better plot for publication using dtreeviz
@@ -171,21 +171,21 @@ def plot_decision_tree(clf, model, feature_names, X, y_encoded, class_names_orde
         return '\n'.join(final_lines)
 
     # Export with graphviz and customize
-    dot_original = export_graphviz(
-        clf,
-        feature_names=feature_names,
-        class_names=[str(c) for c in class_names_ordered],
-        filled=True,
-        rounded=True,
-        max_depth=max_depth,
-        impurity=False,
-        proportion=True,  # Show proportions instead of sample counts
-        out_file=None
-    )
+    #dot_original = export_graphviz(
+    #    clf,
+    #    feature_names=feature_names,
+    #    class_names=[str(c) for c in class_names_ordered],
+    #    filled=True,
+    #    rounded=True,
+    #    max_depth=max_depth,
+    #    impurity=False,
+    #    proportion=True,  # Show proportions instead of sample counts
+    #    out_file=None
+    #)
 
     # Apply customization
-    dot_custom = customize_dot_for_edge_labels(dot_original)
+    #dot_custom = customize_dot_for_edge_labels(dot_original)
 
-    graph = graphviz.Source(dot_custom)
-    graph.format = "pdf"
-    graph.render("MOCOF-1_decision_tree_edges_custom", cleanup=True)
+    #graph = graphviz.Source(dot_custom)
+    #graph.format = "pdf"
+    #graph.render("MOCOF-1_decision_tree_edges_custom", cleanup=True)
