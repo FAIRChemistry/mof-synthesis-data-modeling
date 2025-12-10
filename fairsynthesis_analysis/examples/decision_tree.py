@@ -82,22 +82,32 @@ df = (
     .merge(char_df, on="id", how="left")
 )
 
+# Shorten parameter names for visualization
+df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP")
+df = df.rename(columns={"acid_pKa_DMSO": "Acid_pKa"})
+df = df.rename(columns={"degassing": "Degas"})
+df = df.rename(columns={"temperature_C": "Temp_degC"})
+df = df.rename(columns={"solvent_2_name": "Solvent2"}).replace("o-dichlorobenzene", "o-DCB")
+df = df.rename(columns={"aldehyde_monomer_structure": "TPA_substitution"}).replace("C8H6O2", "none").replace("C10H10O4", "(OMe)2")
+df = df.rename(columns={"vessel": "Vessel"})
+df = df.rename(columns={"other_additives": "Additive"}).replace("C6H6BrN", "PBA")
+
 # 4. Parameter conversion
-df["dialdehyde_equiv"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
-df["water_per_dialdehyde"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
-df["porphyrin_conc_mmol_L"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
-df["acid_conc_mol_L"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
-df["solvent_hydrophobic_fraction"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
-df["additional_m-dinitrobenzene"] = (df["solvent_3_volume_uL"] > 0)
+df["TPA_eq"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
+df["H2O_per_TPA"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
+df["TAPP_c_mM"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
+df["Acid_c_M"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
+df["Solvent2_x"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
+df["m-DNB"] = (df["solvent_3_volume_uL"] > 0)
 
 centers = np.array([7, 10, 13, 20, 40])
 bin_edges = [-np.inf, 8.5, 11.5, 16.5, 30, np.inf]
 cats = pd.cut(
-    df["porphyrin_conc_mmol_L"],
+    df["TAPP_c_mM"],
     bins=bin_edges,
     include_lowest=True,
 )
-df["porphyrin_conc_mmol_L"] = centers[cats.cat.codes]
+df["TAPP_c_mM"] = centers[cats.cat.codes]
 
 # 5. Yield calculation (real values) and categorical main product
 df["yield_MOCOF-1"] = (
@@ -170,7 +180,7 @@ if DEDUPLICATE:
     duplicate_indices, duplicate_pairs, epsilon_dict, param_stats = get_duplicate_indices(
         X,
         relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE,
-        verbose=True
+        verbose=False
     )
 
     print(f"Found {len(duplicate_indices)} duplicate rows")
@@ -255,7 +265,7 @@ else:
 
 # 9. Repeated 5‑fold CV (3 repeats) – report R^2 & MSE
 cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
-
+print("\n=== Decision tree results ===")
 if TASK_IS_CLASSIFICATION:
     accuracy = cross_val_score(model, X, y, cv=cv, scoring="accuracy")
     print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}")
@@ -289,9 +299,9 @@ feature_names = numeric_cols + cat_feature_names
 clf = model.named_steps["classifier"]
 feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
-print("\nFeature importances")
+print("Feature importances")
 importances = clf.feature_importances_
 for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
     print(f"{name}: {imp:.4f}")
-
+print("\n")
 plot_decision_tree(clf, model, feature_names, X, y_encoded, class_names_ordered, MAX_DEPTH)
