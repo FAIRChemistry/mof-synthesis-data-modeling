@@ -10,15 +10,12 @@ from sklearn.impute import SimpleImputer
 from sklearn.model_selection import RepeatedKFold, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.tree import ExtraTreeRegressor
-from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
 from sklearn.preprocessing import LabelEncoder
 import fairsynthesis_data_model.mofsy_api as api
-from plot_decision_tree import plot_decision_tree
+from plot_decision_tree import plot_decision_tree_matplotlib, plot_decision_tree_dtreeviz, plot_decision_tree_graphviz
 from molmass import Formula
 from deduplicate_experiments import get_duplicate_indices
-from range_decision_tree import RangeDecisionTreeClassifier
+from decision_tree_model import create_model
 
 BASE = Path(__file__).parents[2] # repository root
 
@@ -218,91 +215,68 @@ preprocess = ColumnTransformer(
 )
 
 # 8. Decision‑Tree pipeline
-
-if TASK_IS_CLASSIFICATION:
-    if RANGE_TREE:
-        model = Pipeline([
-            ("preprocess", preprocess),
-            ("classifier", RangeDecisionTreeClassifier(
-                max_depth=4,
-                min_samples_leaf=5,
-                split_strategy='both',  # Evaluates both standard and range splits
-                max_range_splits=10,
-                random_state=0
-            ))
-        ])
-    elif EXTRA_TREE:
-        model = Pipeline([
-            ("preprocess", preprocess),
-            ("classifier", ExtraTreeClassifier(  # Changed to Classifier
-                max_depth=MAX_DEPTH,
-                min_samples_leaf=5,
-                random_state=42
-            ))
-        ])
-    else:
-        model = Pipeline([
-            ("preprocess", preprocess),
-            ("classifier", DecisionTreeClassifier(  # Changed to Classifier
-                    #criterion="gini",
-                    #min_impurity_decrease=1e-3,
-                    max_depth=MAX_DEPTH,
-                    random_state=0
-            ))
-        ])
-else:
-    if EXTRA_TREE:
-        model = Pipeline(
-            [("preprocess", preprocess), ("regressor", ExtraTreeRegressor(
-            max_depth=MAX_DEPTH,  # Explicit limit
-            min_samples_leaf=5,
-            random_state=42
-        ))]
-        )
-    else:
-        model = Pipeline(
-            [("preprocess", preprocess), ("regressor", DecisionTreeRegressor(random_state=42, max_depth=MAX_DEPTH))]
-        )
+model_endless = create_model(TASK_IS_CLASSIFICATION, RANGE_TREE, EXTRA_TREE, 10000, preprocess)
+model = create_model(TASK_IS_CLASSIFICATION, RANGE_TREE, EXTRA_TREE, MAX_DEPTH, preprocess)
 
 # 9. Repeated 5‑fold CV (3 repeats) – report R^2 & MSE
-cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
-print("\n=== Decision tree results ===")
-if TASK_IS_CLASSIFICATION:
-    accuracy = cross_val_score(model, X, y, cv=cv, scoring="accuracy")
-    print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}")
+def print_decision_tree_results(model, X, y):
+    cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
+    if TASK_IS_CLASSIFICATION:
+        accuracy = cross_val_score(model, X, y, cv=cv, scoring="accuracy")
+        print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}")
 
-else:
-    r2 = cross_val_score(model, X, y, cv=cv, scoring="r2")
-    mse = -cross_val_score(model, X, y, cv=cv, scoring="neg_mean_squared_error")
+    else:
+        r2 = cross_val_score(model, X, y, cv=cv, scoring="r2")
+        mse = -cross_val_score(model, X, y, cv=cv, scoring="neg_mean_squared_error")
 
-    print(f"R^2  mean ± std : {r2.mean():.3f} ± {r2.std():.3f}")
-    print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
+        print(f"R^2  mean ± std : {r2.mean():.3f} ± {r2.std():.3f}")
+        print(f"MSE mean ± std : {mse.mean():.4f} ± {mse.std():.4f}")
+
+print("\n=== Decision tree results for limitless tree ===")
+print_decision_tree_results(model_endless, X, y_encoded)
+print("\n=== Decision tree results for max_depth={} ===".format(MAX_DEPTH))
+print_decision_tree_results(model, X, y_encoded)
 
 # 10. Fit on the full data set & extract insights
+model_endless.fit(X, y_encoded)
 model.fit(X, y_encoded)
 if TASK_IS_CLASSIFICATION:
+    tree_endless = model_endless.named_steps["classifier"]
     tree = model.named_steps["classifier"]
 else:
+    tree_endless = model_endless.named_steps["regressor"]
     tree = model.named_steps["regressor"]
 
-# feature names after one‑hot encoding
-ohe = model.named_steps["preprocess"].named_transformers_["cat"].named_steps["onehot"]
-cat_feature_names = list(ohe.get_feature_names_out(categorical_cols))
-feature_names = numeric_cols + cat_feature_names
+def process_dt_results(model):
+    # feature names after one‑hot encoding
+    ohe = model.named_steps["preprocess"].named_transformers_["cat"].named_steps["onehot"]
+    cat_feature_names = list(ohe.get_feature_names_out(categorical_cols))
+    feature_names = numeric_cols + cat_feature_names
+    clf = model.named_steps["classifier"]
 
-#print("\nTop‑10 feature importances")
-#for idx in np.argsort(tree.feature_importances_)[-10:][::-1]:
-#    print(f"{feature_names[idx]:30s} : {tree.feature_importances_[idx]:.4f}")
+    print("Feature importances")
+    importances = clf.feature_importances_
+    for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
+        print(f"{name}: {imp:.4f}")
+    print("\n")
+    return ohe, cat_feature_names, feature_names, clf, importances
 
-#print("\nDecision‑tree (first 7 levels)")
-#print(export_text(tree, feature_names=feature_names, max_depth=7))
 
-clf = model.named_steps["classifier"]
-feature_names = model.named_steps["preprocess"].get_feature_names_out()
+print("\n=== Decision tree insights for limitless tree ===")
+(ohe_l, cat_feature_names_l, feature_names_l, clf_l, importances_l) = process_dt_results(model_endless)
 
-print("Feature importances")
-importances = clf.feature_importances_
-for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
-    print(f"{name}: {imp:.4f}")
-print("\n")
-plot_decision_tree(clf, model, feature_names, X, y_encoded, class_names_ordered, MAX_DEPTH)
+print("\n=== Decision tree insights for max_depth={} ===".format(MAX_DEPTH))
+(ohe, cat_feature_names, feature_names, clf, importances) = process_dt_results(model)
+
+# First plot both full trees with matplotlib for debugging
+plot_decision_tree_matplotlib("matplotlib_decision_tree_l_full", clf_l, feature_names_l)
+plot_decision_tree_matplotlib("matplotlib_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, feature_names)
+
+# Then plot limitless tree with graphviz once with max_depth and once fully
+plot_decision_tree_graphviz("graphviz_decision_tree_l_full", clf_l, feature_names_l, max_depth=10000000)
+plot_decision_tree_graphviz("graphviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, feature_names_l, max_depth=MAX_DEPTH)
+
+# Finally plot max_depth tree with dtreeviz and once limitless tree with dtreeviz
+plot_decision_tree_dtreeviz("dtreeviz_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
+plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_full", clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=10000000)
+plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
