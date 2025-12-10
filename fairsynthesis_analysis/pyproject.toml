@@ -23,6 +23,7 @@ dependencies = [
     "scipy>=1.15.2",
     "graphviz>=0.21",
     "dtreeviz>=2.2.2",
+    "matplotlib>=3.10.7",
 ]
 
 [project.scripts]

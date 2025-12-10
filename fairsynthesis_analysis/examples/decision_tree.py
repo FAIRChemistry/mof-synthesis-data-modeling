@@ -80,31 +80,31 @@ df = (
 )
 
 # Shorten parameter names for visualization
-df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP")
+df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)-TDPP").replace("C44H32N8.Co","TAPP")
 df = df.rename(columns={"acid_pKa_DMSO": "Acid_pKa"})
 df = df.rename(columns={"degassing": "Degas"})
 df = df.rename(columns={"temperature_C": "Temp_degC"})
-df = df.rename(columns={"solvent_2_name": "Solvent2"}).replace("o-dichlorobenzene", "o-DCB")
-df = df.rename(columns={"aldehyde_monomer_structure": "TPA_substitution"}).replace("C8H6O2", "none").replace("C10H10O4", "(OMe)2")
+df = df.rename(columns={"solvent_2_name": "Solvent2"}).replace("o-dichlorobenzene", "o-DCB").replace("nitrobenzene", "PhNO2")
+df = df.rename(columns={"aldehyde_monomer_structure": "TPA_substitution"}).replace("C8H6O2", "none").replace("C10H10O4", "(OMe)2").replace("C8H4F2O2","F2")
 df = df.rename(columns={"vessel": "Vessel"})
-df = df.rename(columns={"other_additives": "Additive"}).replace("C6H6BrN", "PBA")
+df = df.rename(columns={"other_additives": "Additive"}).replace("C6H6BrN", "PBA").replace("C19H16O", "TrOH")
 
 # 4. Parameter conversion
 df["TPA_eq"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
 df["H2O_per_TPA"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
-df["TAPP_c_mM"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
-df["Acid_c_M"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
-df["Solvent2_x"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
+df["TAPP_conc_mM"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
+df["Acid_conc_M"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
+df["Solvent2_fraction"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
 df["m-DNB"] = (df["solvent_3_volume_uL"] > 0)
 
 centers = np.array([7, 10, 13, 20, 40])
 bin_edges = [-np.inf, 8.5, 11.5, 16.5, 30, np.inf]
 cats = pd.cut(
-    df["TAPP_c_mM"],
+    df["TAPP_conc_mM"],
     bins=bin_edges,
     include_lowest=True,
 )
-df["TAPP_c_mM"] = centers[cats.cat.codes]
+df["TAPP_conc_mM"] = centers[cats.cat.codes]
 
 # 5. Yield calculation (real values) and categorical main product
 df["yield_MOCOF-1"] = (
@@ -223,7 +223,7 @@ def print_decision_tree_results(model, X, y):
     cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
     if TASK_IS_CLASSIFICATION:
         accuracy = cross_val_score(model, X, y, cv=cv, scoring="accuracy")
-        print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}")
+        print(f"Accuracy: {accuracy.mean():.2f} ± {accuracy.std():.2f}\n")
 
     else:
         r2 = cross_val_score(model, X, y, cv=cv, scoring="r2")
@@ -234,8 +234,8 @@ def print_decision_tree_results(model, X, y):
 
 print("\n=== Decision tree results for limitless tree ===")
 print_decision_tree_results(model_endless, X, y_encoded)
-print("\n=== Decision tree results for max_depth={} ===".format(MAX_DEPTH))
-print_decision_tree_results(model, X, y_encoded)
+#print("\n=== Decision tree results for max_depth={} ===".format(MAX_DEPTH))
+#print_decision_tree_results(model, X, y_encoded)
 
 # 10. Fit on the full data set & extract insights
 model_endless.fit(X, y_encoded)
@@ -253,30 +253,26 @@ def process_dt_results(model):
     cat_feature_names = list(ohe.get_feature_names_out(categorical_cols))
     feature_names = numeric_cols + cat_feature_names
     clf = model.named_steps["classifier"]
-
-    print("Feature importances")
     importances = clf.feature_importances_
-    for name, imp in sorted(zip(feature_names, importances), key=lambda x: -x[1]):
-        print(f"{name}: {imp:.4f}")
-    print("\n")
     return ohe, cat_feature_names, feature_names, clf, importances
 
-
-print("\n=== Decision tree insights for limitless tree ===")
 (ohe_l, cat_feature_names_l, feature_names_l, clf_l, importances_l) = process_dt_results(model_endless)
-
-print("\n=== Decision tree insights for max_depth={} ===".format(MAX_DEPTH))
+print("Feature importances")
+for name, imp in sorted(zip(feature_names_l, importances_l), key=lambda x: -x[1]):
+    print(f"{name}: {imp:.4f}")
+print("\n")
+#print("\n=== Decision tree insights for max_depth={} ===".format(MAX_DEPTH))
 (ohe, cat_feature_names, feature_names, clf, importances) = process_dt_results(model)
 
 # First plot both full trees with matplotlib for debugging
-plot_decision_tree_matplotlib("matplotlib_decision_tree_l_full", clf_l, feature_names_l)
-plot_decision_tree_matplotlib("matplotlib_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, feature_names)
+#plot_decision_tree_matplotlib("matplotlib_decision_tree_l_full", clf_l, feature_names_l)
+#plot_decision_tree_matplotlib("matplotlib_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, feature_names)
 
-# Then plot limitless tree with graphviz once with max_depth and once fully
-plot_decision_tree_graphviz("graphviz_decision_tree_l_full", clf_l, feature_names_l, max_depth=10000000)
-plot_decision_tree_graphviz("graphviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, feature_names_l, max_depth=MAX_DEPTH)
+# plot limitless tree with graphviz
+plot_decision_tree_graphviz("Decision-tree_full", clf_l, feature_names_l, max_depth=10000000)
+#plot_decision_tree_graphviz("graphviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, feature_names_l, max_depth=MAX_DEPTH)
 
-# Finally plot max_depth tree with dtreeviz and once limitless tree with dtreeviz
-plot_decision_tree_dtreeviz("dtreeviz_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
-plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_full", clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=10000000)
-plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
+# plot max_depth tree with dtreeviz
+plot_decision_tree_dtreeviz("Decision-tree_{}-levels".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
+#plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_full", clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=10000000)
+#plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)

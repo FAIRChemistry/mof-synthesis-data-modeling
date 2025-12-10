@@ -5,9 +5,9 @@ from sklearn.tree import plot_tree
 from sklearn.tree import export_graphviz
 import graphviz
 import dtreeviz
+import re
 
-
-def plot_decision_tree_matplotlib(label, clf, feature_names):
+def plot_decision_tree_matplotlib(label, clf, feature_names): #unused now
     # Plot and save as PDF
     plt.figure(figsize=(16, 8))
     # Full export using matplotlib, but not suitable for publication
@@ -21,22 +21,66 @@ def plot_decision_tree_matplotlib(label, clf, feature_names):
     plt.savefig(label + ".pdf", format="pdf", dpi=300, bbox_inches="tight")
 
 def plot_decision_tree_graphviz(label, clf, feature_names, max_depth):
-    # customized export using graphviz, suitable for publication
-    dot = export_graphviz(
-        clf,
-        feature_names=feature_names,
-        class_names=[str(c) for c in clf.classes_],
-        filled=True,
-        rounded=True,
-        max_depth=max_depth,
-        impurity=False,        # remove gini
-        proportion=False,
-        node_ids=False,
-        out_file=None
-    )
-    graph = graphviz.Source(dot)
-    graph.format = "pdf"
-    graph.render(label + "_pub", cleanup=True)
+    # customized export using graphviz, suitable for full tree
+        dot = export_graphviz(
+            clf,
+            feature_names=feature_names,
+            filled=True,
+            rounded=False,
+            max_depth=max_depth,
+            impurity=False,
+            proportion=False,
+            node_ids=False,
+            out_file=None,
+        )
+        # display conditions at the bottom
+        node_re = re.compile(r'(\d+) \[label="([^"]*)"', re.MULTILINE)
+        def reorder_label(match):
+            node_id = match.group(1)
+            label = match.group(2)
+            lines = label.split("\\n")
+            # identify condition and value lines
+            cond_lines = [l for l in lines if "<=" in l or ">" in l]
+            value_lines = [l for l in lines if l.startswith("value =")]
+            other_lines = [l for l in lines if l not in cond_lines + value_lines]
+            new_lines = value_lines + cond_lines + other_lines
+            new_label = "\\n".join(new_lines)
+            return f'{node_id} [label="{new_label}"'
+        dot = node_re.sub(reorder_label, dot)
+        # remove sample numbers
+        dot = re.sub(r'\\nsamples = [^\\n"]*', '', dot)
+        # convert "value = [31.0, 36.0, 55.0, 20.0]" -> "value = [31, 36, 55, 20]"
+        def round_value_line(m):
+            nums = m.group(1).split(',')
+            ints = [str(int(float(x))) for x in nums]
+            return "value = [" + ", ".join(ints) + "]"
+        dot = re.sub(r'value = \[([0-9eE\.\+,\-\s]+)\]', round_value_line, dot)
+        # add legend
+        class_names = ["COF-366-Co", "Co(tapp)", "Co(tapp)nXn", "MOCOF-1"][:len([str(c) for c in clf.classes_])]
+        class_colors = ["#e08343", "#59e346", "#499de2", "#d344e2"]
+        rows = []
+        for name, color in zip(class_names, class_colors):
+            rows.append(
+                f'<TR>'
+                f'<TD BGCOLOR="{color}" WIDTH="20" HEIGHT="20"></TD>'
+                f'<TD ALIGN="LEFT">{name}</TD>'
+                f'</TR>'
+            )
+        legend_html = (
+            '<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">'
+            '<TR><TD COLSPAN="2"><B>Main product</B></TD></TR>'
+            + "".join(rows) +
+            '</TABLE>>'
+        )
+        legend_node = (
+            '\nlegend [shape=plaintext, style=filled, fillcolor="white", '
+            'fontcolor="black", label=' + legend_html + '];\n'
+        )
+        dot = dot.replace("\n}", legend_node + "}")
+        # plot
+        graph = graphviz.Source(dot)
+        graph.format = "pdf"
+        graph.render(label, cleanup=True)
 
 def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ordered, max_depth):
     # Get original feature names from the ColumnTransformer
@@ -66,7 +110,7 @@ def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ord
         X_train=X_transformed_df,
         y_train=y_encoded,
         feature_names=feature_names_clean,
-        target_name="Product",
+        target_name="Main product",
         class_names=list(class_names_ordered),
     )
 
@@ -76,6 +120,6 @@ def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ord
         show_node_labels=False,
         show_just_path=False,
         depth_range_to_display=(0, max_depth),
-        scale=2.0,
+        scale=1.0,
     )
     v_subset.save(label + ".svg")
