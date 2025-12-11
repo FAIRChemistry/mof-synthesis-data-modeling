@@ -24,7 +24,17 @@ RANGE_TREE = False
 EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
 MAX_DEPTH = 3
 DEDUPLICATE = True
-DEDUPLICATE_RELATIVE_TOLERANCE = 3.0 # in percent
+DEDUPLICATE_RELATIVE_TOLERANCE = 0.03 # in percent
+HIGH_YIELD_THRESHOLD = 0.90
+TARGET_IS_PRODUCT_TYPE = True
+
+if TARGET_IS_PRODUCT_TYPE:
+    MODEL_TARGET = "main_product"
+    MODEL_TARGET_LABEL = "Main Product"
+else:
+    MODEL_TARGET = "MOCOF_high_yield"
+    MODEL_TARGET_LABEL = ">={}% MOCOF-1".format(int(HIGH_YIELD_THRESHOLD*100))
+
 
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
@@ -141,20 +151,20 @@ df["yield_Co(tapp)nXn"] = (
     )
 ).round(2)
 df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXn"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
+df["MOCOF_high_yield"] = df["yield_MOCOF-1"] >= HIGH_YIELD_THRESHOLD
 
 yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXn", "yield_Co(tapp)"]
 df["main_product"] = df[yield_cols].idxmax(axis=1).str.replace("yield_", "")
-#print(df[["id"] + yield_cols + ["main_product"]])
-TARGET = "main_product"
+# print(df[["id"] + yield_cols + ["main_product"]])
 
 # 6. Remove rows where the target is NaN
 n_before = len(df)
-mask_missing = df[[TARGET]].isnull().any(axis=1)
+mask_missing = df[[MODEL_TARGET]].isnull().any(axis=1)
 missing_counts = {
-    "target_nan":               int(df[TARGET].isnull().sum()),
+    "target_nan":               int(df[MODEL_TARGET].isnull().sum()),
 }
 dropped_ids = df.loc[mask_missing, "id"].tolist()
-df = df.dropna(subset=[TARGET]).reset_index(drop=True)
+df = df.dropna(subset=[MODEL_TARGET]).reset_index(drop=True)
 n_after = len(df)
 print("\n=== Drop‑NaN‑Report ===")
 print(f"Columns before filtering: {n_before}")
@@ -167,8 +177,8 @@ print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 
 # 7.1. Pre-processing: input parameters
 # Remove already converted parameters, characterization parameters, and workup parameters that are irrelevant for phase selectivity.
-X = df.drop(columns=["id", TARGET] + yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h"])
-y = df[TARGET].values
+X = df.drop(columns=["id", MODEL_TARGET] + yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "main_product", "MOCOF_high_yield"])
+y = df[MODEL_TARGET].values
 
 # Find duplicates in X
 if DEDUPLICATE:
@@ -176,7 +186,7 @@ if DEDUPLICATE:
 
     duplicate_indices, duplicate_pairs, epsilon_dict, param_stats = get_duplicate_indices(
         X,
-        relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE,
+        relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE * 100,
         verbose=False
     )
 
@@ -273,6 +283,6 @@ plot_decision_tree_graphviz("Decision-tree_full", clf_l, feature_names_l, max_de
 #plot_decision_tree_graphviz("graphviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, feature_names_l, max_depth=MAX_DEPTH)
 
 # plot max_depth tree with dtreeviz
-plot_decision_tree_dtreeviz("Decision-tree_{}-levels".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
+plot_decision_tree_dtreeviz("Decision-tree_{}-levels".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, MAX_DEPTH, MODEL_TARGET_LABEL)
 #plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_full", clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=10000000)
 #plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)

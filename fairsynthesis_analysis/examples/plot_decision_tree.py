@@ -82,7 +82,7 @@ def plot_decision_tree_graphviz(label, clf, feature_names, max_depth):
         graph.format = "pdf"
         graph.render(label, cleanup=True)
 
-def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ordered, max_depth):
+def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ordered, max_depth, target_label):
     # Get original feature names from the ColumnTransformer
     raw_feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
@@ -110,7 +110,7 @@ def plot_decision_tree_dtreeviz(label, clf, model, X, y_encoded, class_names_ord
         X_train=X_transformed_df,
         y_train=y_encoded,
         feature_names=feature_names_clean,
-        target_name="Main product",
+        target_name=target_label,
         class_names=list(class_names_ordered),
     )
 
