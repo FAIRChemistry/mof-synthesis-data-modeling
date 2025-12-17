@@ -214,15 +214,12 @@ class_names_ordered = label_encoder.classes_
 
 # 7.2. Pre‑processing: numeric vs. categorical
 numeric_cols = X.select_dtypes(include=["int64", "float64"]).columns.tolist()
-categorical_cols = X.select_dtypes(include=["object", "bool"]).columns.tolist()
+numeric_pipe = Pipeline([("imputer", SimpleImputer(strategy="median"))])  # optional
 
-numeric_pipe = Pipeline([("imputer", SimpleImputer(strategy="median"))])
-categorical_pipe = Pipeline(
-    [
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore")),
-    ]
-)
+categorical_cols = X.select_dtypes(include=["object", "bool"]).columns.tolist()
+categorical_pipe = Pipeline([
+    ("onehot", OneHotEncoder(handle_unknown="ignore"))
+])
 
 preprocess = ColumnTransformer(
     [("num", numeric_pipe, numeric_cols), ("cat", categorical_pipe, categorical_cols)]
