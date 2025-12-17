@@ -16,6 +16,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
 import fairsynthesis_data_model.mofsy_api as api
 from plot_decision_tree import plot_decision_tree_matplotlib, plot_decision_tree_dtreeviz, plot_decision_tree_graphviz
+from plot_confusion_matrix import plot_confusion_matrix
 from molmass import Formula
 from deduplicate_experiments import get_duplicate_indices
 from decision_tree_model import create_model
@@ -279,48 +280,14 @@ def process_dt_results(model):
     return ohe, cat_feature_names, feature_names, clf, importances
 
 (ohe_l, cat_feature_names_l, feature_names_l, clf_l, importances_l) = process_dt_results(model_endless)
-print("Feature importances")
+(ohe, cat_feature_names, feature_names, clf, importances) = process_dt_results(model)
+print("Feature importances (of full tree):")
 for name, imp in sorted(zip(feature_names_l, importances_l), key=lambda x: -x[1]):
     print(f"{name}: {imp:.4f}")
 print("\n")
 
 # Confusion matrix (classification scoring matrix)
-cm_cv_norm = confusion_matrix(
-    y_encoded,
-    y_pred_cv,
-    labels=np.arange(len(class_names_ordered)),
-    normalize="true"
-)
+plot_confusion_matrix(y_encoded, y_pred_cv, class_names_ordered)
 
-disp_norm = ConfusionMatrixDisplay(
-    confusion_matrix=cm_cv_norm,
-    display_labels=class_names_ordered
-)
-
-fig, ax = plt.subplots(figsize=(8, 8))
-disp_norm.plot(
-    ax=ax,
-    cmap="Blues",
-    values_format=".2f",
-    xticks_rotation=45
-)
-ax.set_title("Normalized Cross-Validated Confusion Matrix")
-plt.tight_layout()
-plt.show()
-
-
-#print("\n=== Decision tree insights for max_depth={} ===".format(MAX_DEPTH))
-(ohe, cat_feature_names, feature_names, clf, importances) = process_dt_results(model)
-
-# First plot both full trees with matplotlib for debugging
-#plot_decision_tree_matplotlib("matplotlib_decision_tree_l_full", clf_l, feature_names_l)
-#plot_decision_tree_matplotlib("matplotlib_decision_tree_max_depth_{}".format(MAX_DEPTH), clf, feature_names)
-
-# plot limitless tree with graphviz
 plot_decision_tree_graphviz("Decision-tree_full", clf_l, feature_names_l, max_depth=10000000)
-#plot_decision_tree_graphviz("graphviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, feature_names_l, max_depth=MAX_DEPTH)
-
-# plot max_depth tree with dtreeviz
 plot_decision_tree_dtreeviz("Decision-tree_{}-levels".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, MAX_DEPTH, MODEL_TARGET_LABEL)
-#plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_full", clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=10000000)
-#plot_decision_tree_dtreeviz("dtreeviz_decision_tree_l_max_depth_{}".format(MAX_DEPTH), clf_l, model_endless, X, y_encoded, class_names_ordered, max_depth=MAX_DEPTH)
