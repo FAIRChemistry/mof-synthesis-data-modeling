@@ -7,7 +7,10 @@ import pandas as pd
 pd.set_option("display.max_rows", None)
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.model_selection import RepeatedKFold, cross_val_score
+from sklearn.model_selection import cross_val_predict, RepeatedKFold, cross_val_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.model_selection import KFold
+import matplotlib.pyplot as plt
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
@@ -244,8 +247,16 @@ def print_decision_tree_results(model, X, y):
 
 print("\n=== Decision tree results for limitless tree ===")
 print_decision_tree_results(model_endless, X, y_encoded)
-#print("\n=== Decision tree results for max_depth={} ===".format(MAX_DEPTH))
-#print_decision_tree_results(model, X, y_encoded)
+
+# Cross-validated confusion matrix (validation / out-of-fold)
+cv_cm = KFold(n_splits=5, shuffle=True, random_state=42)
+y_pred_cv = cross_val_predict(
+    model_endless,
+    X,
+    y_encoded,
+    cv=cv_cm,
+    method="predict"
+)
 
 # 10. Fit on the full data set & extract insights
 model_endless.fit(X, y_encoded)
@@ -256,6 +267,7 @@ if TASK_IS_CLASSIFICATION:
 else:
     tree_endless = model_endless.named_steps["regressor"]
     tree = model.named_steps["regressor"]
+
 
 def process_dt_results(model):
     # feature names after one‑hot encoding
@@ -271,6 +283,32 @@ print("Feature importances")
 for name, imp in sorted(zip(feature_names_l, importances_l), key=lambda x: -x[1]):
     print(f"{name}: {imp:.4f}")
 print("\n")
+
+# Confusion matrix (classification scoring matrix)
+cm_cv_norm = confusion_matrix(
+    y_encoded,
+    y_pred_cv,
+    labels=np.arange(len(class_names_ordered)),
+    normalize="true"
+)
+
+disp_norm = ConfusionMatrixDisplay(
+    confusion_matrix=cm_cv_norm,
+    display_labels=class_names_ordered
+)
+
+fig, ax = plt.subplots(figsize=(8, 8))
+disp_norm.plot(
+    ax=ax,
+    cmap="Blues",
+    values_format=".2f",
+    xticks_rotation=45
+)
+ax.set_title("Normalized Cross-Validated Confusion Matrix")
+plt.tight_layout()
+plt.show()
+
+
 #print("\n=== Decision tree insights for max_depth={} ===".format(MAX_DEPTH))
 (ohe, cat_feature_names, feature_names, clf, importances) = process_dt_results(model)
 

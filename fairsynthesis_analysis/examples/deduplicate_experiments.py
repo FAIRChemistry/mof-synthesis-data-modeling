@@ -158,7 +158,7 @@ def compare_dataframe_rows(row1: pd.Series,
 
 def get_duplicate_indices(
     X: pd.DataFrame,
-    relative_tolerance: float = 5.0,
+    relative_tolerance: float,
     verbose: bool = True
 ) -> tuple:
 
