@@ -33,10 +33,11 @@ def create_model(task_is_classification: bool, range_tree: bool, extra_tree: boo
             model = Pipeline([
                 ("preprocess", preprocess),
                 ("classifier", DecisionTreeClassifier(  # Changed to Classifier
-                        #criterion="gini",
+                        criterion="entropy",
                         #min_impurity_decrease=1e-3,
+                        max_features=0.6,
                         max_depth=max_depth,
-                        random_state=0
+                        random_state=42
                 ))
             ])
     else:

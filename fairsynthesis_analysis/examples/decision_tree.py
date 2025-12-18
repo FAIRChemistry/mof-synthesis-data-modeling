@@ -24,12 +24,12 @@ from decision_tree_model import create_model
 BASE = Path(__file__).parents[2] # repository root
 
 TASK_IS_CLASSIFICATION = True # Classification vs. Regression
-RANGE_TREE = False
+RANGE_TREE = False # unused now
 EXTRA_TREE = False # Use ExtraTree instead of DecisionTree
 MAX_DEPTH = 3
 DEDUPLICATE = True
-DEDUPLICATE_RELATIVE_TOLERANCE = 0.03 # in percent
-HIGH_YIELD_THRESHOLD = 0.90
+DEDUPLICATE_RELATIVE_TOLERANCE = 5 # in percent
+HIGH_YIELD_THRESHOLD = 0.90 # unused now
 TARGET_IS_PRODUCT_TYPE = True
 
 if TARGET_IS_PRODUCT_TYPE:
@@ -94,31 +94,22 @@ df = (
 )
 
 # Shorten parameter names for visualization
-df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)-TDPP").replace("C44H32N8.Co","TAPP")
+df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)-TDPP").replace("C44H32N8.Co","TAPP").replace("C120H88N8.Co","TTPP")
 df = df.rename(columns={"acid_pKa_DMSO": "Acid_pKa"})
 df = df.rename(columns={"degassing": "Degas"})
 df = df.rename(columns={"temperature_C": "Temp_degC"})
 df = df.rename(columns={"solvent_2_name": "Solvent2"}).replace("o-dichlorobenzene", "o-DCB").replace("nitrobenzene", "PhNO2")
-df = df.rename(columns={"aldehyde_monomer_structure": "TPA_substitution"}).replace("C8H6O2", "none").replace("C10H10O4", "(OMe)2").replace("C8H4F2O2","F2")
+df = df.rename(columns={"aldehyde_monomer_structure": "TPA_substitution"}).replace("C8H6O2", "none").replace("C10H10O4", "(OMe)2").replace("C8H4F2O2","F2").replace("C8H2F4O2","F4")
 df = df.rename(columns={"vessel": "Vessel"})
 df = df.rename(columns={"other_additives": "Additive"}).replace("C6H6BrN", "PBA").replace("C19H16O", "TrOH")
 
 # 4. Parameter conversion
 df["TPA_eq"] = df["aldehyde_monomer_amount_umol"] / df["aminoporphyrin_monomer_amount_umol"]
 df["H2O_per_TPA"] = df["water_amount_umol"] / df["aldehyde_monomer_amount_umol"]
-df["TAPP_conc_mM"] = (df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3).round()
-df["Acid_conc_M"] = df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1).round(1)
+df["TAPP_conc_mM"] = (((df["aminoporphyrin_monomer_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)*1e3)/2).round())*2
+df["Acid_conc_M"] = (df["acid_amount_umol"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_volume_uL"]].sum(axis=1)).round(1)
 df["Solvent2_fraction"] = df["solvent_2_volume_uL"] / df[["solvent_1_volume_uL", "solvent_2_volume_uL"]].sum(axis=1)
 df["m-DNB"] = (df["solvent_3_volume_uL"] > 0)
-
-centers = np.array([7, 10, 13, 20, 40])
-bin_edges = [-np.inf, 8.5, 11.5, 16.5, 30, np.inf]
-cats = pd.cut(
-    df["TAPP_conc_mM"],
-    bins=bin_edges,
-    include_lowest=True,
-)
-df["TAPP_conc_mM"] = centers[cats.cat.codes]
 
 # 5. Yield calculation (real values) and categorical main product
 df["yield_MOCOF-1"] = (
@@ -159,7 +150,6 @@ df["MOCOF_high_yield"] = df["yield_MOCOF-1"] >= HIGH_YIELD_THRESHOLD
 
 yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXn", "yield_Co(tapp)"]
 df["main_product"] = df[yield_cols].idxmax(axis=1).str.replace("yield_", "")
-# print(df[["id"] + yield_cols + ["main_product"]])
 
 # 6. Remove rows where the target is NaN
 n_before = len(df)
@@ -181,16 +171,16 @@ print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 
 # 7.1. Pre-processing: input parameters
 # Remove already converted parameters, characterization parameters, and workup parameters that are irrelevant for phase selectivity.
-X = df.drop(columns=["id", MODEL_TARGET] + yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "main_product", "MOCOF_high_yield"])
+X = df.drop(columns= yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "MOCOF_high_yield"])
 y = df[MODEL_TARGET].values
 
-# Find duplicates in X
+# Find duplicates
 if DEDUPLICATE:
     print("\n=== Deduplicating feature matrix ===")
 
     duplicate_indices, duplicate_pairs, epsilon_dict, param_stats = get_duplicate_indices(
-        X,
-        relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE * 100,
+        X.drop(columns= ["id"]),
+        relative_tolerance=DEDUPLICATE_RELATIVE_TOLERANCE,
         verbose=False
     )
 
@@ -207,6 +197,9 @@ if DEDUPLICATE:
     y = y[mask]
 
     print(f"Final shapes: X={X.shape}, y={y.shape}")
+
+#X.to_csv("decision-tree_input.csv", index=False)
+X = X.drop(columns= ["id", MODEL_TARGET])
 
 label_encoder = LabelEncoder()
 y_encoded = label_encoder.fit_transform(y)
@@ -284,7 +277,7 @@ for name, imp in sorted(zip(feature_names_l, importances_l), key=lambda x: -x[1]
 print("\n")
 
 # Confusion matrix (classification scoring matrix)
-plot_confusion_matrix(y_encoded, y_pred_cv, class_names_ordered)
+#plot_confusion_matrix(y_encoded, y_pred_cv, class_names_ordered)
 
 plot_decision_tree_graphviz("Decision-tree_full", clf_l, feature_names_l, max_depth=10000000)
 plot_decision_tree_dtreeviz("Decision-tree_{}-levels".format(MAX_DEPTH), clf, model, X, y_encoded, class_names_ordered, MAX_DEPTH, MODEL_TARGET_LABEL)
