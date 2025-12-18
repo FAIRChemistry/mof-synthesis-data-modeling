@@ -18,7 +18,8 @@
       "required": [
         "Metadata",
         "Reagents",
-        "Procedure"
+        "Procedure",
+        "Hardware"
       ],
       "type": "object"
     },
@@ -31,7 +32,10 @@
           "type": "array"
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": [
+        "Component"
+      ]
     },
     "HardwareComponentsEntry": {
       "properties": {
@@ -49,7 +53,8 @@
         }
       },
       "required": [
-        "_id"
+        "_id",
+        "_type"
       ],
       "type": "object"
     },
@@ -66,9 +71,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "_description"
-      ],
+      "required": [],
       "type": "object"
     },
     "ProcedureSections": {
@@ -85,7 +88,9 @@
         }
       },
       "required": [
-        "Reaction"
+        "Reaction",
+        "Workup",
+        "Prep"
       ]
     },
     "ProcedureSection": {
@@ -139,25 +144,15 @@
         {
           "title": "HeatChill",
           "required": [
-            "_temp"
+            "_temp",
+            "_time"
           ],
           "properties": {
             "$xml_type": {
               "const": "HeatChill"
             },
             "_temp": {
-              "$ref": "#/$defs/Temperature",
-              "properties": {
-                "Unit": {
-                  "const": "celsius"
-                },
-                "Value": {
-                  "minimum": 20,
-                  "type": "number"
-                }
-              },
-              "type": "object",
-              "title": "Temperature"
+              "$ref": "#/$defs/Temperature"
             },
             "_time": {
               "$ref": "#/$defs/Time"
@@ -175,7 +170,6 @@
             },
             "_gas": {
               "type": "string",
-              "const": "Ar",
               "description": "refilling gas"
             }
           }
@@ -190,19 +184,7 @@
               "const": "WashSolid"
             },
             "_solvent": {
-              "type": "string",
-              "enum": [
-                "CHCl3",
-                "DMF",
-                "MeOH",
-                "acetone",
-                "EtOH",
-                "NaCl aq",
-                "scCO2",
-                "MeCN",
-                "Et3N",
-                "MeOH+scCO2"
-              ]
+              "type": "string"
             }
           }
         },
@@ -229,10 +211,16 @@
             "_time": {
               "$ref": "#/$defs/Time"
             }
-          }
+          },
+          "required": [
+            "_time"
+          ]
         },
         {
-          "required": [],
+          "required": [
+            "_time",
+            "_temp"
+          ],
           "title": "Dry",
           "properties": {
             "$xml_type": {
@@ -295,7 +283,8 @@
       },
       "type": "object",
       "required": [
-        "Value"
+        "Value",
+        "Unit"
       ]
     },
     "Temperature": {
@@ -310,7 +299,11 @@
           "minimum": -273.15,
           "type": "number"
         }
-      }
+      },
+      "required": [
+        "Unit",
+        "Value"
+      ]
     },
     "Time": {
       "title": "Time",
@@ -319,21 +312,32 @@
         "Value": {
           "minimum": 0,
           "type": "number"
+        },
+        "Unit": {
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "Unit",
+        "Value"
+      ]
     },
     "Pressure": {
       "$ref": "#/$defs/Quantity",
       "title": "Pressure",
       "properties": {
         "Unit": {
-          "const": "pascal"
+          "type": "string"
         },
         "Value": {
           "minimum": 0,
           "type": "number"
         }
-      }
+      },
+      "required": [
+        "Unit",
+        "Value"
+      ]
     },
     "Role": {
       "enum": [
@@ -387,7 +391,12 @@
           "$ref": "#/$defs/Role"
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": [
+        "_name",
+        "_role",
+        "_id"
+      ]
     }
   },
   "properties": {
