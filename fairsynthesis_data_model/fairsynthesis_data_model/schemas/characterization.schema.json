@@ -22,8 +22,7 @@
             }
           },
           "required": [
-            "Pxrd",
-            "Weight"
+            "Pxrd"
           ],
           "type": "object"
         }
