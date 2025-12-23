@@ -34,7 +34,7 @@
     },
     {
       "0_vial_no": "S-2",
-      "0_date": "10.10.2026",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 0.4,
       "1_metal_salt_mass_unit": "mmol",
@@ -66,7 +66,7 @@
     },
     {
       "0_vial_no": "S-3",
-      "0_date": "10.10.2027",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 1.64,
       "1_metal_salt_mass_unit": "mmol",
@@ -98,7 +98,7 @@
     },
     {
       "0_vial_no": "S-4",
-      "0_date": "10.10.2028",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 1,
       "1_metal_salt_mass_unit": "mmol",
@@ -130,7 +130,7 @@
     },
     {
       "0_vial_no": "S-5",
-      "0_date": "10.10.2029",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 1,
       "1_metal_salt_mass_unit": "mmol",
@@ -162,7 +162,7 @@
     },
     {
       "0_vial_no": "S-6",
-      "0_date": "10.10.2030",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 1,
       "1_metal_salt_mass_unit": "mmol",
@@ -194,7 +194,7 @@
     },
     {
       "0_vial_no": "S-7",
-      "0_date": "10.10.2031",
+      "0_date": "10.10.2025",
       "1_metal_salt_name": "FeCl3·6H2O",
       "1_metal_salt_mass": 1,
       "1_metal_salt_mass_unit": "mmol",
@@ -204,7 +204,7 @@
       "3_solvent": "DMF",
       "3_solvent_unit": "ml",
       "3_solvent_amount": 10,
-      "4_modulator": "5M HF, 1M HCl",
+      "4_modulator": "5 M HF aq + 1 M HCl aq (1:1)",
       "4_modulator_unit": "μl",
       "4_modulator_amount": 240,
       "5_sonicator_time": 30,

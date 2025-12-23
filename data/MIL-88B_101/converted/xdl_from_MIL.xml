@@ -171,7 +171,7 @@
         <Add vessel="S-7" amount="1.0 millimole" reagent="FeCl3·6H2O"/>
         <Add vessel="S-7" amount="2.0 millimole" reagent="Benzene-1,4-dicarboxylic acid"/>
         <Add vessel="S-7" amount="10.0 millilitre" reagent="DMF"/>
-        <Add vessel="S-7" amount="240.0 microlitre" reagent="5M HF, 1M HCl"/>
+        <Add vessel="S-7" amount="240.0 microlitre" reagent="5 M HF aq + 1 M HCl aq (1:1)"/>
       </Prep>
       <Reaction>
         <Sonicate vessel="S-7" time="30.0 minute"/>
@@ -187,7 +187,7 @@
       <Reagent id="Benzene-1,4-dicarboxylic acid" name="Benzene-1,4-dicarboxylic acid" role="ligand"/>
       <Reagent id="DMF" name="DMF" role="solvent"/>
       <Reagent id="EtOH" name="EtOH" role="solvent"/>
-      <Reagent id="5M HF, 1M HCl" name="5M HF, 1M HCl" role="reagent"/>
+      <Reagent id="5 M HF aq + 1 M HCl aq (1:1)" name="5 M HF aq + 1 M HCl aq (1:1)" role="reagent"/>
     </Reagents>
   </Synthesis>
 </XDL>

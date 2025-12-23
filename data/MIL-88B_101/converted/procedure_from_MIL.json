@@ -834,7 +834,7 @@
                 "Value": 240.0,
                 "$xml_append": "${Value} ${Unit}"
               },
-              "_reagent": "5M HF, 1M HCl"
+              "_reagent": "5 M HF aq + 1 M HCl aq (1:1)"
             }
           ]
         },
@@ -918,8 +918,8 @@
             "_role": "solvent"
           },
           {
-            "_id": "5M HF, 1M HCl",
-            "_name": "5M HF, 1M HCl",
+            "_id": "5 M HF aq + 1 M HCl aq (1:1)",
+            "_name": "5 M HF aq + 1 M HCl aq (1:1)",
             "_role": "reagent"
           }
         ]
