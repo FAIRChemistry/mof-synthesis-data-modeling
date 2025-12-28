@@ -94,7 +94,7 @@ df = (
 )
 
 # Shorten parameter names for visualization
-df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)-TDPP").replace("C44H32N8.Co","TAPP").replace("C120H88N8.Co","TTPP")
+df = df.rename(columns={"aminoporphyrin_monomer_type": "Co(tapp)_precursor"}).replace("C128H104N8O8.Co", "Co(tdpp)").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)(tdpp)").replace("C44H32N8.Co","Co(tapp)").replace("C120H88N8.Co","Co(ttpp)")
 df = df.rename(columns={"acid_pKa_DMSO": "Acid_pKa"})
 df = df.rename(columns={"degassing": "Degas"})
 df = df.rename(columns={"temperature_C": "Temp_degC"})
@@ -132,8 +132,8 @@ df["yield_COF-366-Co"] = (
     )
     / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
 ).round(2)
-# Assuming the amorphous component was Co(tapp)nXn. Minimum function to avoid overestimation.
-df["yield_Co(tapp)nXn"] = (
+# Assuming the amorphous component was Co(tapp)nXm. Minimum function to avoid overestimation.
+df["yield_Co(tapp)nXm"] = (
     np.minimum(1 - df["yield_COF-366-Co"] - df["yield_MOCOF-1"],
             df["unknown"]
             * df["product_mass_g"]
@@ -145,10 +145,10 @@ df["yield_Co(tapp)nXn"] = (
             / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
     )
 ).round(2)
-df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXn"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
+df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXm"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
 df["MOCOF_high_yield"] = df["yield_MOCOF-1"] >= HIGH_YIELD_THRESHOLD
 
-yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXn", "yield_Co(tapp)"]
+yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXm", "yield_Co(tapp)"]
 df["main_product"] = df[yield_cols].idxmax(axis=1).str.replace("yield_", "")
 
 # 6. Remove rows where the target is NaN
@@ -198,7 +198,7 @@ if DEDUPLICATE:
 
     print(f"Final shapes: X={X.shape}, y={y.shape}")
 
-#X.to_csv("decision-tree_input.csv", index=False)
+X.to_csv("decision-tree_input.csv", index=False)
 X = X.drop(columns= ["id", MODEL_TARGET])
 
 label_encoder = LabelEncoder()
