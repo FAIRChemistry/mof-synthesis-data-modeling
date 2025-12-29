@@ -109,7 +109,7 @@ def _(pl):
 @app.cell
 def _(mo, pl):
     molar_fraction = pl.read_csv(
-        mo.notebook_dir() / "data/pxrd_molar_fraction_overview.csv"
+        mo.notebook_dir() / "data/phase_molar-fractions.csv"
     )
     return (molar_fraction,)
 
@@ -152,7 +152,7 @@ def _():
     sum_formula = {
         "COF-366-Co": "C60H36CoN8",
         "MOCOF-1": "C52H33CoN8",
-        "unknown": "C44H31CoN8",
+        "amorphous": "C44H31CoN8",
     }
     formula_mass = {k: Formula(v).mass for k, v in sum_formula.items()}
     return (formula_mass,)
@@ -240,7 +240,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                 / (
                     pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
-                    + pl.col("unknown") * formula_mass["unknown"]
+                    + pl.col("amorphous") * formula_mass["amorphous"]
                 )
                 / pl.col("precursor_amount_mol")
             ).round(2).clip(upper_bound=1).alias("yield_COF-366-Co"),
@@ -250,7 +250,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                 / (
                     pl.col("COF-366-Co") * formula_mass["COF-366-Co"]
                     + pl.col("MOCOF-1") * formula_mass["MOCOF-1"]
-                    + pl.col("unknown") * formula_mass["unknown"]
+                    + pl.col("amorphous") * formula_mass["amorphous"]
                 )
                 / pl.col("precursor_amount_mol")
             ).round(2).clip(upper_bound=1).alias("yield_MOCOF-1"),
@@ -258,7 +258,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
         .with_columns(
             pl.col("COF-366-Co").alias("mol_fraction_COF-366-Co"),
             pl.col("MOCOF-1").alias("mol_fraction_MOCOF-1"),
-            pl.col("unknown").alias("mol_fraction_unknown"),
+            pl.col("amorphous").alias("mol_fraction_amorphous"),
         )
         .select(
             pl.col("*").exclude(
@@ -267,7 +267,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
                     "precursor_amount_mol",
                     "COF-366-Co",
                     "MOCOF-1",
-                    "unknown",
+                    "amorphous",
                 ]
             )
         )
@@ -370,7 +370,6 @@ def _(df_selected, px):
     _fig.add_trace(_mesh)
 
     _fig.show()
-
     return ConvexHull, np
 
 
@@ -440,7 +439,7 @@ def _(ConvexHull, alt, df_selected, np, pl):
         pl.col("water_per_aldeyde").is_not_null() & pl.col("yield_MOCOF-1").is_not_null()
     )
     _points = np.column_stack([
-        _df["water_per_aldeyde"].to_numpy(), 
+        _df["water_per_aldeyde"].to_numpy(),
         _df["yield_MOCOF-1"].to_numpy()
     ])
 

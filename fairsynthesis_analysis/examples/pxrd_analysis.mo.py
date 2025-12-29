@@ -46,8 +46,8 @@ def _():
 
 @app.cell
 def _():
-    from fairsynthesis_analysis import PXRDSpectrum
-    return (PXRDSpectrum,)
+    from fairsynthesis_analysis import PXRDPattern
+    return (PXRDPattern,)
 
 
 @app.cell
@@ -78,15 +78,15 @@ def _(
 
 
 @app.cell
-def _(PXRDFile, PXRDSpectrum):
-    def load_pxrd_data(pxrd_file: PXRDFile) -> PXRDSpectrum | None:
+def _(PXRDFile, PXRDPattern):
+    def load_pxrd_data(pxrd_file: PXRDFile) -> PXRDPattern | None:
         """Load PXRD data from a CharacterizationEntry if available.
 
         Args:
             characterization (CharacterizationEntry): The characterization entry to check.
 
         Returns:
-            PXRDSpectrum | None: The loaded PXRD spectrum or None if not available.
+            PXRDPattern | None: The loaded PXRD spectrum or None if not available.
         """
     return
 
@@ -112,12 +112,12 @@ def _(di, mo, pl):
                 pl.col("id"),
                 pl.col("molar_fraction").struct.field("COF-366-Co").alias("COF-366-Co"),
                 pl.col("molar_fraction").struct.field("MOCOF-1").alias("MOCOF-1"),
-                pl.col("molar_fraction").struct.field("unknown").alias("unknown"),
+                pl.col("molar_fraction").struct.field("amorphous").alias("amorphous"),
             ]
         )
         .sort("id")
     )
-    _data.write_csv(mo.notebook_dir() / "data/pxrd_molar_fraction_overview.csv")
+    _data.write_csv(mo.notebook_dir() / "data/phase_molar-fractions.csv")
     overview_selection = mo.ui.table(_data, selection="single")
     overview_selection
     return (overview_selection,)
@@ -144,9 +144,9 @@ def _(mo, overview_selection):
 
 
 @app.cell
-def _(PXRDSpectrum, api, characterization: "Characterization", selection):
+def _(PXRDPattern, api, characterization: "Characterization", selection):
     _c = api.get_characterization_by_experiment_id(characterization, selection)
-    it = [PXRDSpectrum(it) for it in api.find_corresponding_pxrd_files(_c)]
+    it = [PXRDPattern(it) for it in api.find_corresponding_pxrd_files(_c)]
     return (it,)
 
 
@@ -259,7 +259,7 @@ def _():
 
 @app.cell
 def _(
-    PXRDSpectrum,
+    PXRDPattern,
     api,
     characterization: "Characterization",
     default_settings,
@@ -267,14 +267,14 @@ def _(
 ):
     def get_pxrd_spectrum(
         experiment_id: str,
-    ) -> PXRDSpectrum | None:
+    ) -> PXRDPattern | None:
         """Retrieve the PXRD spectrum from a CharacterizationEntry.
 
         Args:
             characterization_entry (CharacterizationEntry): The characterization entry to check.
 
         Returns:
-            PXRDSpectrum | None: The PXRD spectrum if available, otherwise None.
+            PXRDPattern | None: The PXRD spectrum if available, otherwise None.
         """
         if experiment_id in id_settings:
             settings = id_settings[experiment_id]
@@ -286,7 +286,7 @@ def _(
         pxrd_files = api.find_corresponding_pxrd_files(characterization_entry)
         # if pxrd_files:
         return (
-            PXRDSpectrum(pxrd_files[0])
+            PXRDPattern(pxrd_files[0])
             #.subtract_background()
             .normalize(settings["normalization"])
             .correct_baseline(settings["correct_baseline"])

@@ -43,14 +43,14 @@ else:
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
     "MOCOF-1": "C52H33CoN8",
-    "unknown": "C44H31CoN8", #assuming Co(H−1tapp)
+    "amorphous": "C44H31CoN8", #assuming Co(H−1tapp)
 }
 formula_mass = {k: Formula(v).mass for k, v in sum_formula.items()}
 
 params_path = BASE / "data" / "MOCOF-1" / "converted" / "params_from_sciformation.json"
 proc_path   = BASE / "data" / "MOCOF-1" / "converted" / "procedure_from_sciformation.json"
 char_path   = BASE / "data" / "MOCOF-1" / "converted" / "characterization_from_sciformation.json"
-frac_path   = BASE / "fairsynthesis_analysis" / "examples" / "data" / "pxrd_molar_fraction_overview.csv"
+frac_path   = BASE / "fairsynthesis_analysis" / "examples" / "data" / "phase_molar-fractions.csv"
 
 # 1. Load raw data
 with open(params_path) as f:
@@ -118,7 +118,7 @@ df["yield_MOCOF-1"] = (
     / (
         df["COF-366-Co"] * formula_mass["COF-366-Co"]
         + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-        + df["unknown"] * formula_mass["unknown"]
+        + df["amorphous"] * formula_mass["amorphous"]
     )
     / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
 ).round(2)
@@ -128,19 +128,19 @@ df["yield_COF-366-Co"] = (
     / (
         df["COF-366-Co"] * formula_mass["COF-366-Co"]
         + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-        + df["unknown"] * formula_mass["unknown"]
+        + df["amorphous"] * formula_mass["amorphous"]
     )
     / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
 ).round(2)
 # Assuming the amorphous component was Co(tapp)nXm. Minimum function to avoid overestimation.
 df["yield_Co(tapp)nXm"] = (
     np.minimum(1 - df["yield_COF-366-Co"] - df["yield_MOCOF-1"],
-            df["unknown"]
+            df["amorphous"]
             * df["product_mass_g"]
             / (
                 df["COF-366-Co"] * formula_mass["COF-366-Co"]
                 + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-                + df["unknown"] * formula_mass["unknown"]
+                + df["amorphous"] * formula_mass["amorphous"]
             )
             / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
     )
@@ -171,7 +171,7 @@ print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 
 # 7.1. Pre-processing: input parameters
 # Remove already converted parameters, characterization parameters, and workup parameters that are irrelevant for phase selectivity.
-X = df.drop(columns= yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "MOCOF_high_yield"])
+X = df.drop(columns= yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "amorphous", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "MOCOF_high_yield"])
 y = df[MODEL_TARGET].values
 
 # Find duplicates

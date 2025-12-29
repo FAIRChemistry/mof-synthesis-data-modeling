@@ -1,1 +1,1 @@
-from ._pxrd import PXRDSpectrum as PXRDSpectrum
+from ._pxrd import PXRDPattern as PXRDPattern
