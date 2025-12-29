@@ -109,7 +109,7 @@ KE-226,Co(tdpp),none,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.493
 KE-227,Co(tdpp),none,7.0,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.9910179640718564,45.0,20.0,0.6,0.25037481259370314,False,MOCOF-1
 KE-228,Co(tdpp),none,8.0,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.9910179640718564,45.0,18.0,1.1,0.25037481259370314,True,MOCOF-1
 KE-229,Co(tdpp),none,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.9910179640718564,45.0,18.0,1.2,0.25037481259370314,True,Co(tapp)
-KE-230,Co(tdpp),none,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,2.0,45.0,18.0,1.1,0.25037481259370314,True,MOCOF-1
+KE-230,Co(tdpp),none,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,2.0,45.0,18.0,1.1,0.25037481259370314,True,Co(tapp)nXm
 KE-231,Co(tdpp),(OMe)2,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.9910179640718564,45.0,18.0,1.1,0.25037481259370314,True,MOCOF-1
 KE-232,Co(tdpp),none,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.9363772455089823,89.87978353304986,20.0,0.6,0.25037481259370314,False,Co(tapp)
 KE-233,Co(tdpp),(OMe)2,10.8,none,PhNO2,"1,4-dioxane",Schlenk bomb,True,120.0,1.8884730538922156,89.74038842647641,18.0,0.6,0.25037481259370314,True,MOCOF-1
