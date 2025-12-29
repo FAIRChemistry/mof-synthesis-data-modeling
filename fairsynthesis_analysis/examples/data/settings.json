@@ -2,7 +2,7 @@
     "KE-008": {
         "normalization": {
             "cu_range": [
-                1,
+                38,
                 40
             ],
             "co_range": [
