@@ -6,7 +6,7 @@ This folder contains a node script to export MOFSY data to the MPIF format.
 
 Make sure you have Node.js ≥ 18 and npm (or pnpm/yarn) installed.
 
-Then run:
+Then run on this directory:
 
 ```bash
 npm install

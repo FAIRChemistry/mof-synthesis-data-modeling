@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "dataName": "MIL-88B_101",
-    "creationDate": "2023-01-01",
+    "dataName": "Fe–terephthalate MOF synthesis",
+    "creationDate": "",
     "generatorVersion": "1.0",
-    "publicationDOI": "todo",
-    "procedureStatus": "success",
+    "publicationDOI": "",
+    "procedureStatus": "",
     "name": "Ciftci, Esengul",
     "email": "e.ciftci@fkf.mpg.de",
     "orcid": "0000-0002-4994-3486",
@@ -12,18 +12,16 @@
   },
   "productInfo": {
     "type": "porous framework material",
-    "systematicName": "MIL-88B_101",
+    "systematicName": "",
     "state": "solid",
-    "color": "white",
+    "color": "",
     "handlingAtmosphere": "air"
   },
   "synthesisGeneral": {
-    "performedDate": "2023-01-01",
-    "labTemperature": 24,
-    "labHumidity": 35,
+    "performedDate": "",
     "reactionType": "mix",
-    "reactionAtmosphere": "vacuum",
-    "temperatureController": "microwave",
+    "reactionAtmosphere": "air",
+    "temperatureController": "",
     "productAmountUnit": "",
     "scale": "milligram"
   },
