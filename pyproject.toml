@@ -1,13 +1,10 @@
 [project]
-name = "fairsynthesis"
+name = "fair-synthesis"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
     "pyzmq>=27.1.0",
 ]
 
-[tool.uv.workspace]
-members = [
-    "fairsynthesis_analysis",
-    "fairsynthesis_data_model",
-]
+[tool.uv]
+package = true

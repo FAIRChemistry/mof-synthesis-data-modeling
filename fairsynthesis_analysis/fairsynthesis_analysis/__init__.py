@@ -1,1 +1,0 @@
-from ._pxrd import PXRDSpectrum as PXRDSpectrum
