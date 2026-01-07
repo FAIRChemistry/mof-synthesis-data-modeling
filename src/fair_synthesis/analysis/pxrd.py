@@ -35,7 +35,7 @@ def _extract_corresponding_reference(pxrd_file: PXRDFile, references: list[PXRDF
 
 
 @dataclass
-class PXRDSpectrum(PXRDFile):
+class PXRDPattern(PXRDFile):
     """Class representing a PXRD spectrum."""
 
     def __init__(
@@ -77,14 +77,14 @@ class PXRDSpectrum(PXRDFile):
         self.two_theta = np.asarray(two_theta)
         self.intensity = np.asarray(intensity)
 
-    def subtract_background(self, background=None, normalize=False) -> "PXRDSpectrum":
+    def subtract_background(self, background=None, normalize=False) -> "PXRDPattern":
         """Subtracts a background from the intensity values.
 
         Args:
-            background (PXRDSpectrum): The background spectrum to subtract.
+            background (PXRDPattern): The background spectrum to subtract.
 
         Returns:
-            PXRDSpectrum: A new PXRDSpectrum instance with the background subtracted.
+            PXRDPattern: A new PXRDPattern instance with the background subtracted.
         """
         if background is None:
 
@@ -102,7 +102,7 @@ class PXRDSpectrum(PXRDFile):
                 return _background_file
 
             background_file = select_background_spectrum(self)
-            background = PXRDSpectrum(background_file)
+            background = PXRDPattern(background_file)
 
         if normalize:
             background = background.normalize()
@@ -113,17 +113,17 @@ class PXRDSpectrum(PXRDFile):
         intensity = intensity[self.two_theta <= background.two_theta.max()]
         two_theta = two_theta[self.two_theta >= background.two_theta.min()]
 
-        return PXRDSpectrum(
+        return PXRDPattern(
             self,
             two_theta,
             intensity - np.interp(two_theta, background.two_theta, background.intensity),
         )
 
-    def normalize(self, settings=None) -> "PXRDSpectrum":
+    def normalize(self, settings=None) -> "PXRDPattern":
         """Normalizes the intensity values to a range of 0 to 1.
 
         Returns:
-            PXRDSpectrum: A new PXRDSpectrum instance with normalized intensity values.
+            PXRDPattern: A new PXRDPattern instance with normalized intensity values.
         """
         if settings is None:
             settings = {}
@@ -141,13 +141,13 @@ class PXRDSpectrum(PXRDFile):
             self.intensity[(self.two_theta >= reference_range[0]) & (self.two_theta <= reference_range[1])]
         )
 
-        return PXRDSpectrum(self, self.two_theta, self.intensity / mean_in_range)
+        return PXRDPattern(self, self.two_theta, self.intensity / mean_in_range)
 
-    def correct_baseline(self, settings=None) -> "PXRDSpectrum":
+    def correct_baseline(self, settings=None) -> "PXRDPattern":
         """Corrects the baseline of the intensity values.
 
         Returns:
-            PXRDSpectrum: A new PXRDSpectrum instance with baseline-corrected intensity values.
+            PXRDPattern: A new PXRDPattern instance with baseline-corrected intensity values.
         """
         if settings is None:
             settings = {}
@@ -168,15 +168,15 @@ class PXRDSpectrum(PXRDFile):
             y_detrend[~_bool] = y - base
             return y_detrend
 
-        return PXRDSpectrum(self, self.two_theta, _baseline_correction(self.two_theta, self.intensity))
+        return PXRDPattern(self, self.two_theta, _baseline_correction(self.two_theta, self.intensity))
 
     def calc_molar_fraction(
-        self, products: dict[str, "PXRDSpectrum"] | dict[str, list["PXRDSpectrum"]]
+        self, products: dict[str, "PXRDPattern"] | dict[str, list["PXRDPattern"]]
     ) -> dict[str, float]:
         """Calculates the molar fraction of each product based on the intensity values.
 
         Args:
-            products (dict[str, PXRDSpectrum | list[PXRDSpectrum]]):
+            products (dict[str, PXRDPattern | list[PXRDPattern]]):
                 A dictionary of product names and their corresponding PXRD files.
         Returns:
             dict[str, float]: A dictionary of product names and their corresponding molar fractions (2 digits after decimal).
@@ -185,7 +185,7 @@ class PXRDSpectrum(PXRDFile):
         def _linear_combination_shortening(x, y, components):
             phase_keys = list(components)
             if not phase_keys:
-                return {"unknown": 1.0}
+                return {"amorphous": 1.0}
 
             phase_arrays = [np.asarray(components[name], dtype=float) for name in phase_keys]
             target = np.asarray(y, dtype=float)
@@ -208,7 +208,7 @@ class PXRDSpectrum(PXRDFile):
                     labels.append(name)
 
             contributions = {label: value for label, value in zip(labels, weights)}
-            contributions["unknown"] = max(0.0, 1.0 - weights.sum())
+            contributions["amorphous"] = max(0.0, 1.0 - weights.sum())
             if sum(contributions.values()) > 0:
                 total = 1 #sum(contributions.values())
                 contributions = {k: v / total for k, v in contributions.items()}

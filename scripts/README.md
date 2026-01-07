@@ -18,5 +18,5 @@ Required the installation of graphviz (e.g., `brew install graphviz` on MacOS or
 ## pxrd_analysis.mo.py
 It imports PXRD patterns and metadata, and calculates the approximate molar fraction of each phase.
 
-## statistics.mo.py
-It imports molar fractions and synthesis data, calculates the approximate yield of each phase, and analyzes its statistics with respect to the synthesis procedure.
+## convex-hull.mo.py
+It imports molar fractions and synthesis data, calculates the approximate yield of each phase, and plots convex hulls with respect to the synthesis procedure.

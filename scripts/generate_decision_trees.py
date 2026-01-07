@@ -40,14 +40,14 @@ else:
 sum_formula = {
     "COF-366-Co": "C60H36CoN8",
     "MOCOF-1": "C52H33CoN8",
-    "unknown": "C44H31CoN8", #assuming Co(H−1tapp)
+    "amorphous": "C44H31CoN8", #assuming Co(H−1tapp)
 }
 formula_mass = {k: Formula(v).mass for k, v in sum_formula.items()}
 
 params_path = BASE / "data" / "MOCOF-1" / "converted" / "params_from_sciformation.json"
 proc_path   = BASE / "data" / "MOCOF-1" / "converted" / "procedure_from_sciformation.json"
 char_path   = BASE / "data" / "MOCOF-1" / "converted" / "characterization_from_sciformation.json"
-frac_path   = BASE / "scripts" / "pxrd_analysis" / "data" / "pxrd_molar_fraction_overview.csv"
+frac_path   = BASE / "scripts" / "pxrd_analysis" / "data" / "phase_molar-fractions.csv"
 
 # 1. Load raw data
 with open(params_path) as f:
@@ -91,7 +91,7 @@ df = (
 )
 
 # Shorten parameter names for visualization
-df = df.rename(columns={"aminoporphyrin_monomer_type": "TAPP_precursor"}).replace("C128H104N8O8.Co", "TDPP").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)-TDPP").replace("C44H32N8.Co","TAPP").replace("C120H88N8.Co","TTPP")
+df = df.rename(columns={"aminoporphyrin_monomer_type": "Co(tapp)_precursor"}).replace("C128H104N8O8.Co", "Co(tdpp)").replace("C128H104N8O8.2C6H6N2O2.CHF3O3S.Co","Co(III)(tdpp)").replace("C44H32N8.Co","Co(tapp)").replace("C120H88N8.Co","Co(ttpp)")
 df = df.rename(columns={"acid_pKa_DMSO": "Acid_pKa"})
 df = df.rename(columns={"degassing": "Degas"})
 df = df.rename(columns={"temperature_C": "Temp_degC"})
@@ -115,7 +115,7 @@ df["yield_MOCOF-1"] = (
     / (
         df["COF-366-Co"] * formula_mass["COF-366-Co"]
         + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-        + df["unknown"] * formula_mass["unknown"]
+        + df["amorphous"] * formula_mass["amorphous"]
     )
     / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
 ).round(2)
@@ -125,27 +125,27 @@ df["yield_COF-366-Co"] = (
     / (
         df["COF-366-Co"] * formula_mass["COF-366-Co"]
         + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-        + df["unknown"] * formula_mass["unknown"]
+        + df["amorphous"] * formula_mass["amorphous"]
     )
     / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
 ).round(2)
-# Assuming the amorphous component was Co(tapp)nXn. Minimum function to avoid overestimation.
-df["yield_Co(tapp)nXn"] = (
+# Assuming the amorphous component was Co(tapp)nXm. Minimum function to avoid overestimation.
+df["yield_Co(tapp)nXm"] = (
     np.minimum(1 - df["yield_COF-366-Co"] - df["yield_MOCOF-1"],
-            df["unknown"]
+            df["amorphous"]
             * df["product_mass_g"]
             / (
                 df["COF-366-Co"] * formula_mass["COF-366-Co"]
                 + df["MOCOF-1"] * formula_mass["MOCOF-1"]
-                + df["unknown"] * formula_mass["unknown"]
+                + df["amorphous"] * formula_mass["amorphous"]
             )
             / df["aminoporphyrin_monomer_amount_umol"] / 1e-6
     )
 ).round(2)
-df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXn"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
+df["yield_Co(tapp)"] = (1 - df["yield_Co(tapp)nXm"] - df["yield_COF-366-Co"] - df["yield_MOCOF-1"]).round(2)
 df["MOCOF_high_yield"] = df["yield_MOCOF-1"] >= HIGH_YIELD_THRESHOLD
 
-yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXn", "yield_Co(tapp)"]
+yield_cols = ["yield_COF-366-Co", "yield_MOCOF-1", "yield_Co(tapp)nXm", "yield_Co(tapp)"]
 df["main_product"] = df[yield_cols].idxmax(axis=1).str.replace("yield_", "")
 
 # 6. Remove rows where the target is NaN
@@ -168,7 +168,7 @@ print(f"Example‑IDs of removed experiments (max 10): {dropped_ids[:10]}")
 
 # 7.1. Pre-processing: input parameters
 # Remove already converted parameters, characterization parameters, and workup parameters that are irrelevant for phase selectivity.
-X = df.drop(columns= yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "unknown", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "MOCOF_high_yield"])
+X = df.drop(columns= yield_cols + ["product_mass_g", "COF-366-Co", "MOCOF-1", "amorphous", "water_amount_umol", "acid_amount_umol", "acid_name", "aminoporphyrin_monomer_amount_umol", "aldehyde_monomer_amount_umol", "solvent_1_volume_uL", "solvent_2_volume_uL", "solvent_3_name", "solvent_3_volume_uL", "activation_with_scCO2", "workup_with_NaCl", "MeOH_in_scCO2_activation", "activation_under_vacuum", "duration_h", "MOCOF_high_yield"])
 y = df[MODEL_TARGET].values
 
 # Find duplicates
@@ -195,7 +195,7 @@ if DEDUPLICATE:
 
     print(f"Final shapes: X={X.shape}, y={y.shape}")
 
-#X.to_csv("decision-tree_input.csv", index=False)
+X.to_csv("decision-tree_input.csv", index=False)
 X = X.drop(columns= ["id", MODEL_TARGET])
 
 label_encoder = LabelEncoder()

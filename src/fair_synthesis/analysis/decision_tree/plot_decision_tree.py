@@ -56,7 +56,7 @@ def plot_decision_tree_graphviz(label, clf, feature_names, max_depth):
             return "value = [" + ", ".join(ints) + "]"
         dot = re.sub(r'value = \[([0-9eE\.\+,\-\s]+)\]', round_value_line, dot)
         # add legend
-        class_names = ["COF-366-Co", "Co(tapp)", "Co(tapp)nXn", "MOCOF-1"][:len([str(c) for c in clf.classes_])]
+        class_names = ["COF-366-Co", "Co(tapp)", "Co(tapp)nXm", "MOCOF-1"][:len([str(c) for c in clf.classes_])]
         class_colors = ["#e08343", "#59e346", "#499de2", "#d344e2"]
         rows = []
         for name, color in zip(class_names, class_colors):
