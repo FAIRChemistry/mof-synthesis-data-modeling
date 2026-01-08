@@ -24,7 +24,7 @@ dependencies = [
     "python-dateutil>=2.9.0.post0",
     "pyyaml>=6.0.2",
     "sympy>=1.14.0",
-
+    "starfile>=0.5.13",
 ]
 
 readme = "README.md"
