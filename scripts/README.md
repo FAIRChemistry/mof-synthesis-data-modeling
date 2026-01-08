@@ -1,11 +1,12 @@
 # Scripts
 ## Running
 1. Install [uv](https://github.com/astral-sh/uv) by e.g., 'pip install uv'
-2. Open cmd / Terminal, go to the `scripts` folder, and execute `uv run format_and_serialize_all.py`, `uv run generate_decision_trees.py` or `uv run marimo edit`.
+2. Go to the project root folder and execute: `uv pip install -e .`
+3. Go to the `scripts` folder, and execute `uv run format_and_serialize_all.py`, `uv run generate_decision_trees.py` or `uv run marimo edit`.
 
 In case of marimo:
-3. Workspace > examples > pxrd_analysis.mo.py or statitstics.mo.py
-4. Run all slate cells (right bottom)
+4. Workspace > examples > pxrd_analysis.mo.py or statitstics.mo.py
+5. Run all slate cells (right bottom)
 
 ## format_and_serialize_all.py
 Runs all formatting and serialization scripts to convert raw data into the MOFSY format and serialize it into XDL and MPIF.
