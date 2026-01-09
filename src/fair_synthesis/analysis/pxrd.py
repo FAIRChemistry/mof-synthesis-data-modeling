@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-
+import os
 import numpy as np
 import pybaselines as pb
 from fair_synthesis.formatting.pxrd_collector import PXRDFile
@@ -51,9 +51,11 @@ class PXRDPattern(PXRDFile):
         self.other_metadata = pxrd_file.other_metadata
         self.path = pxrd_file.path
 
+        repo_root = Path(__file__).parent.parent.parent.parent
+
         # --- Load data if not passed manually ---
         if two_theta is None or intensity is None:
-            pxrd_path = Path(__file__).parent.parent / pxrd_file.path
+            pxrd_path = os.path.join(repo_root, self.path)
             pxrd_data = np.loadtxt(pxrd_path)
 
             #def _convert_Co_to_Cu(two_theta: np.ndarray) -> np.ndarray:
