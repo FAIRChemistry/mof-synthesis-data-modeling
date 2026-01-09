@@ -81,16 +81,16 @@ def dict_to_xml(root_tag, data):
 def mofsy2xdl():
     current_file_dir = __file__.rsplit('/', 1)[0]
 
-    # sciformation case
+    # MOCOF-1 case
     mofsy_file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
     xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mofsy_file_path)))
-    print("XML Result: " + xml)
+    #print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'xdl_from_sciformation.xml'))
 
-    # excel MIL_2 case
+    # Fe–terephthalate case
     mil_2_file_path = os.path.join(current_file_dir, '../../..', 'data', 'Fe–terephthalate', 'converted', 'procedure_from_MIL.json')
     xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
-    print("XML Result: " + xml)
+    #print("XML Result: " + xml)
     save_string_as_file(xml, os.path.join(current_file_dir, '../../..', 'data', 'Fe–terephthalate', 'converted', 'xdl_from_MIL.xml'))
 
 
