@@ -51,6 +51,21 @@ _mpif_synthesis_safety_note
 ;
 
 #Section 4: Synthesis Procedure Details
+_mpif_substrate_number	2
+loop_
+_mpif_substrate_id
+_mpif_substrate_name
+_mpif_substrate_molarity
+_mpif_substrate_molarity_unit
+_mpif_substrate_amount
+_mpif_substrate_amount_unit
+_mpif_substrate_supplier
+_mpif_substrate_purity_percent
+_mpif_substrate_cas
+_mpif_substrate_smiles
+KE-072	KE-072			-1	micromole				?
+PDA	PDA			-1	micromole				?
+
 _mpif_solvent_number	2
 loop_
 _mpif_solvent_id
@@ -84,7 +99,7 @@ _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Evacuate and refill with Ar. 
+preparation	Preparation	Air	Add -1 micromole of KE-072. Add -1 micromole of PDA. Add -1 micromole of PNP. Add -1 micromole of Wasser. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Evacuate and refill with Ar. 
 reaction	Reaction	Air	Heat/Chill to 150 celsius for 72 hour. 
 workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
 

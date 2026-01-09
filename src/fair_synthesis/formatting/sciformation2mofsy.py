@@ -89,7 +89,7 @@ def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
         if component.rxn_role == RxnRole.SOLVENT:
             amount = format_amount_volume(component.volume)
 
-        if component.rxn_role != RxnRole.PRODUCT and amount.value > 0:
+        if component.rxn_role != RxnRole.PRODUCT:
             prep.append(
                 StepEntryClass(xml_type=XMLType.ADD, amount=amount, reagent=component.molecule_name, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
             )
@@ -235,18 +235,23 @@ def sciformation2mofsy():
     # print("Procedure Result: " + str(result_dict_procedure))
     # print("Characterization Result: " + str(result_dict_characterization))
 
+    save_json(result_dict_procedure, result_file_path_procedure)
+    save_json(result_dict_characterization, result_file_path_characterization)
+
     # Validate results according to schemas
     validate(instance=result_dict_procedure, schema=load_json(os.path.join(repo_root_path, 'data_model', 'procedure.schema.json')))
     print("Valid procedure JSON was generated.")
     validate(instance=result_dict_characterization, schema=load_json(os.path.join(repo_root_path, 'data_model', 'characterization.schema.json')))
     print("Valid characterization JSON was generated.")
 
+    # Remove entry with id KE-113 because it is invalid. It had been caught via our validation based on procedure_MOCOF-1.schema.
+    # Experiment KE-113 had been planned in sciformation but never been carried out, hence it has no specified amounts for the reagents.
+    result_dict_procedure['Synthesis'] = [entry for entry in result_dict_procedure['Synthesis'] if entry['Metadata']['_description'] != 'KE-113']
+
     # Additionally validate based on more strict use case specific schema
     validate(instance=result_dict_procedure, schema=load_json(os.path.join(repo_root_path, 'data_model', 'procedure_MOCOF-1.schema.json')))
     print("The procedure JSON is valid according to the MOCOF-1 specific schema.")
 
-    save_json(result_dict_procedure, result_file_path_procedure)
-    save_json(result_dict_characterization, result_file_path_characterization)
 
 
 
