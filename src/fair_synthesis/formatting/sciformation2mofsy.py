@@ -18,10 +18,10 @@ from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, default_code: str = "KE") -> Tuple[SynthesisProcedure, Characterization]:
+def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema, pxrd_folder_path: str, repo_root_path: str, default_code: str = "KE") -> Tuple[SynthesisProcedure, Characterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
-    pxrd_files = collect_pxrd_files(pxrd_folder_path)
+    pxrd_files = collect_pxrd_files(pxrd_folder_path, repo_root_path)
 
     for experiment in eln.experiments:
         reaction_product = find_reaction_components(experiment, RxnRole.PRODUCT)[0]
@@ -216,16 +216,16 @@ def format_length(length: str) -> AmountCharacterization:
 
 def sciformation2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    pxrd_folder = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'PXRD')
-    pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
+    repo_root_path = os.path.join(current_file_dir, '../../..')
+    file_path = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
+    pxrd_folder = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'PXRD')
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
     print("Cleaned data: " + str(cleaned_eln))
 
     # Validate data according to schema
     validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, '../../../data_model', 'sciformation_eln_cleaned.schema.json')))
 
-    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder_relative)
+    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder, repo_root_path)
     result_file_path_mofsy = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
     result_file_path_characterization = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
     result_dict_mofsy = mofsy.to_dict()

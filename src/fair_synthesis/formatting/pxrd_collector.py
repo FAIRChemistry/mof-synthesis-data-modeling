@@ -46,18 +46,26 @@ def collect_pxrd_file_paths(path: str) -> list:
             pxrd_files.append(os.path.join(root, file))
     return pxrd_files
 
-def collect_pxrd_files(path: str) -> List[PXRDFile]:
+def collect_pxrd_files(path: str, relative_root: str|None = None) -> List[PXRDFile]:
     """
     Collects all PXRD files from the given directory and its subdirectories.
 
     Args:
         path (str): The path to the directory to search for PXRD files.
+        relative_root (str): The root path to which the collected PXRD file paths should be relative.
 
     Returns:
         list: A list of PXRDFile objects representing the collected PXRD files.
     """
     pxrd_files = collect_pxrd_file_paths(path)
-    return [PXRDFile(pxrd_file) for pxrd_file in pxrd_files]
+    result = [PXRDFile(pxrd_file) for pxrd_file in pxrd_files]
+
+    # update paths to be relative to relative_root
+    if relative_root is not None:
+        for pxrd_file in result:
+            pxrd_file.path = os.path.relpath(pxrd_file.path, relative_root)
+
+    return result
 
 
 def filter_pxrd_files(experiment_id: str, all_pxrd_files: list) -> List[PXRDFile] | None:
