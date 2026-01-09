@@ -56,19 +56,19 @@ class PXRDPattern(PXRDFile):
             pxrd_path = Path(__file__).parent.parent / pxrd_file.path
             pxrd_data = np.loadtxt(pxrd_path)
 
-            def _convert_Co_to_Cu(two_theta: np.ndarray) -> np.ndarray:
-                """Convert 2θ from Co-Kα1 to Cu-Kα1."""
-                λ_Cu = 1.540562  # Å
-                λ_Co = 1.788965  # Å
-                return np.degrees(2 * np.arcsin(λ_Cu / λ_Co * np.sin(np.radians(two_theta) / 2)))
+            #def _convert_Co_to_Cu(two_theta: np.ndarray) -> np.ndarray:
+            #    """Convert 2θ from Co-Kα1 to Cu-Kα1."""
+            #    λ_Cu = 1.540562  # Å
+            #    λ_Co = 1.788965  # Å
+            #    return np.degrees(2 * np.arcsin(λ_Cu / λ_Co * np.sin(np.radians(two_theta) / 2)))
 
-            if pxrd_file.xray_source == "Co-Kα1":
-                two_theta = _convert_Co_to_Cu(pxrd_data[:, 0])
-            elif pxrd_file.xray_source == "Cu-Kα1":
-                two_theta = pxrd_data[:, 0]
-            else:
-                raise ValueError(f"Unsupported X-ray source: {pxrd_file.xray_source}")
-
+            #if pxrd_file.xray_source == "Co-Kα1":
+            #    two_theta = _convert_Co_to_Cu(pxrd_data[:, 0])
+            #elif pxrd_file.xray_source == "Cu-Kα1":
+            #    two_theta = pxrd_data[:, 0]
+            #else:
+            #    raise ValueError(f"Unsupported X-ray source: {pxrd_file.xray_source}")
+            two_theta = pxrd_data[:, 0]
             intensity = pxrd_data[:, 1]
         else:
             two_theta = two_theta.copy()

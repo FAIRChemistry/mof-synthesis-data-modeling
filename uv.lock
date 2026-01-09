@@ -669,7 +669,7 @@ wheels = [
 
 [[package]]
 name = "marimo"
-version = "0.18.4"
+version = "0.19.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -690,9 +690,9 @@ dependencies = [
     { name = "uvicorn" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/04/dc/46cdff84f6a92847bada01ba20cfa79e3c77d1f39a7627f35855ab5451ad/marimo-0.18.4.tar.gz", hash = "sha256:30b5d8cd8f3e9054b5f7332bf0f4d11cb608712995e4f4feed7337d118eef8ab", size = 37851688 }
+sdist = { url = "https://files.pythonhosted.org/packages/2f/47/8d01d2c162d557249fe57f54ee2c17f998279793c49cbc62ed0ec7440514/marimo-0.19.0.tar.gz", hash = "sha256:4007034660bc63400762dfa7573f84ddf051bc5378c83805e84950b24f5dfb15", size = 39372726 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/60/c7/cd3b652650c188d7b1d7cefad8194d51f10600c84e5d1b68be8d6f0b40ba/marimo-0.18.4-py3-none-any.whl", hash = "sha256:7c1d72f37e9662e8811eff801f6c85451af685fe1cbd22c49a85e7b1f57aebec", size = 38369689 },
+    { url = "https://files.pythonhosted.org/packages/33/53/78b3fc888a112cabffd8755147bf63046b10dd75b99e541b9b2458eb8b3d/marimo-0.19.0-py3-none-any.whl", hash = "sha256:da277e870604da9e86bb24fa209e67900161036fc54352a6e769b21a2247d5af", size = 39912270 },
 ]
 
 [[package]]
@@ -805,11 +805,11 @@ wheels = [
 
 [[package]]
 name = "molmass"
-version = "2025.12.12"
+version = "2026.1.8"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/de/08dcc31a96845b9b2c7e474f3e588de1b6df0969e34ca6dca4dc1d782626/molmass-2025.12.12.tar.gz", hash = "sha256:3597ae9d0c5ab8ac8ac722d41e64f4148735346fc551f7315464a67a085c97d8", size = 84201 }
+sdist = { url = "https://files.pythonhosted.org/packages/50/b6/a9adb3a4f142d52295aed0194161ffa0b1ee5d5bc986be608c328245e075/molmass-2026.1.8.tar.gz", hash = "sha256:6f677940148f876a6690149956598841f068111cb8ff3c63cf831833e88a5247", size = 83094 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ac/94/01c02febe0040e376d9cb0a361735bf65cad4b915b2141f57114da3cf090/molmass-2025.12.12-py3-none-any.whl", hash = "sha256:b90adf995abcf858b1f0e0b58c134e17da212436561f265fae792d37ab255e6f", size = 75180 },
+    { url = "https://files.pythonhosted.org/packages/03/12/b6f548ac321f0239c3523b32bd629ccf8025ff59fbf8dbada22b0de96ce2/molmass-2026.1.8-py3-none-any.whl", hash = "sha256:d7ad83bd542c5bf132a8eca28630ad774c10f0890d9cf51625774838d03d5f8b", size = 73797 },
 ]
 
 [[package]]
