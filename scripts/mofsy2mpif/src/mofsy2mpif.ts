@@ -34,7 +34,7 @@ import Ajv from 'ajv';
 const currentDir = __dirname;
 const rootDirectory = path.join(currentDir, "..", "..", "..");
 const dataDirectory = path.join(rootDirectory, "data");
-const schemasDirectory = path.join(rootDirectory, "fairsynthesis_data_model", "fairsynthesis_data_model", "schemas");
+const schemasDirectory = path.join(rootDirectory, "data_model");
 
 
 function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reagentId: string): StepEntryObject | undefined {
@@ -341,7 +341,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
 
 
-        const pxrdFilePath = path.join(dataDirectory, firstPxrd.RelativeFilePath);
+        const pxrdFilePath = path.join(rootDirectory, firstPxrd.RelativeFilePath);
         const pxrdContent = fs.readFileSync(pxrdFilePath, 'utf-8');
         const pxrdData: Array<{ twoTheta: number; intensity: number; }> = [];
         const lines = pxrdContent.split('\n');
@@ -385,11 +385,11 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 });
 }
 
-// MIL-88B_101
-let inputProcedure = path.join(dataDirectory, "MIL-88B_101", "converted", "procedure_from_MIL.json");
-let inputCharacterization = path.join(dataDirectory, "MIL-88B_101", "converted", "characterization_from_MIL.json");
-let outputFolder = path.join(dataDirectory, "MIL-88B_101", "converted", "mpif_outputs");
-let paramsFile = path.join(dataDirectory, "MIL-88B_101", "mpif_params.json");
+// Fe–terephthalate
+let inputProcedure = path.join(dataDirectory, "Fe–terephthalate", "converted", "procedure_from_MIL.json");
+let inputCharacterization = path.join(dataDirectory, "Fe–terephthalate", "converted", "characterization_from_MIL.json");
+let outputFolder = path.join(dataDirectory, "Fe–terephthalate", "converted", "mpif_outputs");
+let paramsFile = path.join(dataDirectory, "Fe–terephthalate", "mpif_params.json");
 const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");
 mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
 

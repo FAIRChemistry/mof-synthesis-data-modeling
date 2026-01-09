@@ -1,7 +1,7 @@
 data_MOCOF-1 synthesis trial
-_mpif_audit_creation_date	2025-11-12
+_mpif_audit_creation_date	2026-01-09
 _mpif_audit_generator_version	1.0
-_mpif_audit_publication_doi	'todo'
+_mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'success'
 
 #Section 1: Author details
@@ -66,7 +66,7 @@ _mpif_substrate_smiles
 Co(tdpp)	Co(tdpp)			13.36	micromole				?
 Terephthalaldehyde	Terephthalaldehyde			26.6	micromole				?
 
-_mpif_solvent_number	2
+_mpif_solvent_number	3
 loop_
 _mpif_solvent_id
 _mpif_solvent_name
@@ -78,6 +78,7 @@ _mpif_solvent_supplier
 _mpif_solvent_purity_percent
 _mpif_solvent_cas
 _mpif_solvent_smiles
+1,3-Dinitrobenzene	1,3-Dinitrobenzene			43.904	microlitre				?
 PhNO2	PhNO2			167	microlitre				?
 DO	DO			500	microlitre				?
 
@@ -99,7 +100,7 @@ _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 13.36 micromole of Co(tdpp). Add 26.6 micromole of Terephthalaldehyde. Add 1197 micromole of Water. Add 806.67 micromole of 2-Chloro-4-nitrophenol. Add 399 micromole of 1,3-Dinitrobenzene. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Evacuate and refill with Ar. 
+preparation	Preparation	Air	Add 13.36 micromole of Co(tdpp). Add 26.6 micromole of Terephthalaldehyde. Add 1197 micromole of Water. Add 806.67 micromole of 2-Chloro-4-nitrophenol. Add 43.904 microlitre of 1,3-Dinitrobenzene. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Evacuate and refill with Ar. 
 reaction	Reaction	Air	Heat/Chill to 120 celsius for 110 hour. 
 workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
 

@@ -1,7 +1,7 @@
-data_MIL-88B_101
-_mpif_audit_creation_date	2025-11-12
+data_Fe–terephthalate MOF synthesis
+_mpif_audit_creation_date	2026-01-09
 _mpif_audit_generator_version	1.0
-_mpif_audit_publication_doi	'todo'
+_mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'success'
 
 #Section 1: Author details
@@ -16,11 +16,11 @@ _mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
 _mpif_product_name_common	'MIL-53 (Fe)'
-_mpif_product_name_systematic	'MIL-88B_101'
+_mpif_product_name_systematic	''
 _mpif_product_formula	''
 _mpif_product_formula_weight	
 _mpif_product_state	'solid'
-_mpif_product_color	'white'
+_mpif_product_color	''
 _mpif_product_handling_atmosphere	'air'
 _mpif_product_handling_note
 ;
@@ -28,15 +28,15 @@ _mpif_product_handling_note
 ;
 
 #Section 3: Synthesis General Information
-_mpif_synthesis_performed_date	2023-01-01
-_mpif_synthesis_lab_temperature_C	24
-_mpif_synthesis_lab_humidity_percent	35
+_mpif_synthesis_performed_date	undefined
+_mpif_synthesis_lab_temperature_C	undefined
+_mpif_synthesis_lab_humidity_percent	undefined
 _mpif_synthesis_type	'mix'
 _mpif_synthesis_react_temperature_C	150
-_mpif_synthesis_react_temperature_controller	'microwave'
+_mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	3
 _mpif_synthesis_react_time_unit	'days'
-_mpif_synthesis_react_atmosphere	'vacuum'
+_mpif_synthesis_react_atmosphere	'air'
 _mpif_synthesis_react_container	'unknown_container'
 _mpif_synthesis_react_note
 ;
