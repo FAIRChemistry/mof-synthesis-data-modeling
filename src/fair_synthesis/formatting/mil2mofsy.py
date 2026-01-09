@@ -331,14 +331,22 @@ def mil2mofsy():
     # Validate data according to schema
     validate(instance=mil, schema=load_json(os.path.join(repo_root_path, 'data_model', 'MIL.schema.json')))
 
-    mofsy, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder, repo_root_path)
-    result_file_path_mofsy = os.path.join(repo_root_path, 'data', 'Fe–terephthalate', 'converted', 'procedure_from_MIL.json')
+    procedure, characterization = convert_mil_2_json_from_excel_to_mofsy(Mil.from_dict(mil), pxrd_folder, repo_root_path)
+    result_file_path_procedure = os.path.join(repo_root_path, 'data', 'Fe–terephthalate', 'converted', 'procedure_from_MIL.json')
     result_file_path_characterization = os.path.join(repo_root_path, 'data', 'Fe–terephthalate', 'converted', 'characterization_from_MIL.json')
-    result_dict_mofsy = mofsy.to_dict()
+    result_dict_procedure = procedure.to_dict()
     result_dict_characterization = characterization.to_dict()
-    print("Procedure Result: " + str(result_dict_mofsy))
-    print("Characterization Result: " + str(result_dict_characterization))
-    save_json(result_dict_mofsy, result_file_path_mofsy)
+    # print("Procedure Result: " + str(result_dict_mofsy))
+    # print("Characterization Result: " + str(result_dict_characterization))
+
+    # Validate results according to schemas
+    validate(instance=result_dict_procedure, schema=load_json(os.path.join(repo_root_path, 'data_model', 'procedure.schema.json')))
+    print("Valid procedure JSON was generated.")
+    validate(instance=result_dict_characterization, schema=load_json(os.path.join(repo_root_path, 'data_model', 'characterization.schema.json')))
+    print("Valid characterization JSON was generated.")
+
+
+    save_json(result_dict_procedure, result_file_path_procedure)
     save_json(result_dict_characterization, result_file_path_characterization)
 
 

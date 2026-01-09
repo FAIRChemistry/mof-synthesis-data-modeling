@@ -10844,42 +10844,6 @@
               "_vessel": "Schlenk bomb",
               "$xml_type": "Add",
               "_amount": {
-                "Value": -1,
-                "$xml_append": "${Value} ${Unit}"
-              },
-              "_reagent": "KE-072"
-            },
-            {
-              "_vessel": "Schlenk bomb",
-              "$xml_type": "Add",
-              "_amount": {
-                "Value": -1,
-                "$xml_append": "${Value} ${Unit}"
-              },
-              "_reagent": "PDA"
-            },
-            {
-              "_vessel": "Schlenk bomb",
-              "$xml_type": "Add",
-              "_amount": {
-                "Value": -1,
-                "$xml_append": "${Value} ${Unit}"
-              },
-              "_reagent": "PNP"
-            },
-            {
-              "_vessel": "Schlenk bomb",
-              "$xml_type": "Add",
-              "_amount": {
-                "Value": -1,
-                "$xml_append": "${Value} ${Unit}"
-              },
-              "_reagent": "Wasser"
-            },
-            {
-              "_vessel": "Schlenk bomb",
-              "$xml_type": "Add",
-              "_amount": {
                 "Unit": "microlitre",
                 "Value": 167.0,
                 "$xml_append": "${Value} ${Unit}"

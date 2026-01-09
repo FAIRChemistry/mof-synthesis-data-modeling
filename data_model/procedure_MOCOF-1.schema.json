@@ -224,9 +224,6 @@
           }
         },
         {
-          "$ref": "#/$defs/sonicate"
-        },
-        {
           "required": [],
           "title": "Dry",
           "properties": {
@@ -261,7 +258,7 @@
         "Value": {
           "minimum": 0,
           "type": "number",
-          "maximum": 300
+          "maximum": 320
         },
         "Unit": {
           "type": "string",

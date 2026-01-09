@@ -2199,10 +2199,6 @@
     <Metadata description="KE-113"/>
     <Procedure>
       <Prep>
-        <Add vessel="Schlenk bomb" amount="-1.0 ${Unit}" reagent="KE-072"/>
-        <Add vessel="Schlenk bomb" amount="-1.0 ${Unit}" reagent="PDA"/>
-        <Add vessel="Schlenk bomb" amount="-1.0 ${Unit}" reagent="PNP"/>
-        <Add vessel="Schlenk bomb" amount="-1.0 ${Unit}" reagent="Wasser"/>
         <Add vessel="Schlenk bomb" amount="167.0 microlitre" reagent="PhNO2"/>
         <Add vessel="Schlenk bomb" amount="500.0 microlitre" reagent="DO"/>
         <EvacuateAndRefill vessel="Schlenk bomb" gas="Ar"/>

@@ -89,7 +89,7 @@ def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
         if component.rxn_role == RxnRole.SOLVENT:
             amount = format_amount_volume(component.volume)
 
-        if component.rxn_role != RxnRole.PRODUCT:
+        if component.rxn_role != RxnRole.PRODUCT and amount.value > 0:
             prep.append(
                 StepEntryClass(xml_type=XMLType.ADD, amount=amount, reagent=component.molecule_name, temp=None, time=None, vessel=vessel, gas=None, solvent=None, comment=None, pressure=None)
             )
@@ -189,12 +189,12 @@ def format_mass(mass: float|None, mass_unit: MassUnit) -> AmountCharacterization
 
 def format_amount_mole(amount: float | None) -> Quantity:
     if amount is None:
-        return Quantity(value=-1, unit=None)
+        return Quantity(value=-1, unit=AmountUnit.MICROMOLE)
     return Quantity(value=float(round(amount * 1000000,2)), unit=AmountUnit.MICROMOLE)
 
 def format_amount_volume(amount: float | None) -> Quantity:
     if amount is None:
-        return Quantity(value=-1, unit=None)
+        return Quantity(value=-1, unit=AmountUnit.MICROLITRE)
     # original value from sciformation is in mL but we want to export to microLitre
     amount_in_ul = round(float(amount) * 1000, 3)
     return Quantity(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
@@ -220,19 +220,32 @@ def sciformation2mofsy():
     file_path = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
     pxrd_folder = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'PXRD')
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
-    print("Cleaned data: " + str(cleaned_eln))
+    # print("Cleaned data: " + str(cleaned_eln))
+    print("The Sciformation ELN data has been cleaned.")
+
 
     # Validate data according to schema
-    validate(instance=cleaned_eln, schema=load_json(os.path.join(current_file_dir, '../../../data_model', 'sciformation_eln_cleaned.schema.json')))
+    validate(instance=cleaned_eln, schema=load_json(os.path.join(repo_root_path, 'data_model', 'sciformation_eln_cleaned.schema.json')))
 
-    mofsy, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder, repo_root_path)
-    result_file_path_mofsy = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
-    result_file_path_characterization = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
-    result_dict_mofsy = mofsy.to_dict()
+    procedure, characterization = convert_cleaned_eln_to_mofsy(SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder, repo_root_path)
+    result_file_path_procedure = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
+    result_file_path_characterization = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
+    result_dict_procedure = procedure.to_dict()
     result_dict_characterization = characterization.to_dict()
-    print("Procedure Result: " + str(result_dict_mofsy))
-    print("Characterization Result: " + str(result_dict_characterization))
-    save_json(result_dict_mofsy, result_file_path_mofsy)
+    # print("Procedure Result: " + str(result_dict_procedure))
+    # print("Characterization Result: " + str(result_dict_characterization))
+
+    # Validate results according to schemas
+    validate(instance=result_dict_procedure, schema=load_json(os.path.join(repo_root_path, 'data_model', 'procedure.schema.json')))
+    print("Valid procedure JSON was generated.")
+    validate(instance=result_dict_characterization, schema=load_json(os.path.join(repo_root_path, 'data_model', 'characterization.schema.json')))
+    print("Valid characterization JSON was generated.")
+
+    # Additionally validate based on more strict use case specific schema
+    validate(instance=result_dict_procedure, schema=load_json(os.path.join(repo_root_path, 'data_model', 'procedure_MOCOF-1.schema.json')))
+    print("The procedure JSON is valid according to the MOCOF-1 specific schema.")
+
+    save_json(result_dict_procedure, result_file_path_procedure)
     save_json(result_dict_characterization, result_file_path_characterization)
 
 

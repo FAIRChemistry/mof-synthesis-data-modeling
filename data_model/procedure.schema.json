@@ -218,8 +218,6 @@
         },
         {
           "required": [
-            "_time",
-            "_temp"
           ],
           "title": "Dry",
           "properties": {
