@@ -244,6 +244,7 @@ dependencies = [
     { name = "marimo" },
     { name = "matplotlib" },
     { name = "molmass" },
+    { name = "npm" },
     { name = "numpy" },
     { name = "openai" },
     { name = "pandas" },
@@ -270,6 +271,7 @@ requires-dist = [
     { name = "marimo", specifier = ">=0.12.6" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "molmass", specifier = ">=2025.9.4" },
+    { name = "npm", specifier = ">=0.1.1" },
     { name = "numpy", specifier = ">=2.2.4" },
     { name = "openai", specifier = ">=2.6.1" },
     { name = "pandas", specifier = ">=2.3.3" },
@@ -863,6 +865,15 @@ wheels = [
 ]
 
 [[package]]
+name = "npm"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "optional-django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ca/4d/7d59d82b777f3f7a1128608195655a1b36c1de89c292363d53d52d92a807/npm-0.1.1.tar.gz", hash = "sha256:84aefc83a3486d034c4c14f8bcd4b746b95b529289b0d042c268f6201c3034e9", size = 2521 }
+
+[[package]]
 name = "numpy"
 version = "2.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -930,6 +941,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/d8/b1/12fe1c196bea32626
 wheels = [
     { url = "https://files.pythonhosted.org/packages/27/4b/7c1a00c2c3fbd004253937f7520f692a9650767aa73894d7a34f0d65d3f4/openai-2.14.0-py3-none-any.whl", hash = "sha256:7ea40aca4ffc4c4a776e77679021b47eec1160e341f42ae086ba949c9dcc9183", size = 1067558 },
 ]
+
+[[package]]
+name = "optional-django"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/da/9e/b9b6a3854c613da94d695a2a52ca70ad1f0c65337c1b6e37f5f447964d19/optional-django-0.1.0.tar.gz", hash = "sha256:77d6b9fb74bda30583e1af4683a39e0af725cea6003252bba75838f4939326c5", size = 9530 }
 
 [[package]]
 name = "packaging"

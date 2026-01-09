@@ -25,6 +25,7 @@ dependencies = [
     "pyyaml>=6.0.2",
     "sympy>=1.14.0",
     "starfile>=0.5.13",
+    "npm>=0.1.1",
 ]
 
 readme = "README.md"
