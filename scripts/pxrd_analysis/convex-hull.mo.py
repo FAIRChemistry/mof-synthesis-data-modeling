@@ -38,12 +38,11 @@ def _():
 @app.cell
 def _(mo):
     procedure_file_path = (
-        mo.notebook_dir() / "../../data/MOCOF-1/converted/procedure_from_sciformation.json"
-    )
+        mo.notebook_dir() /
+        "../../data/MOCOF-1/converted/procedure_from_sciformation.json")
     characterization_file_path = (
-        mo.notebook_dir()
-        / "../../data/MOCOF-1/converted/characterization_from_sciformation.json"
-    )
+        mo.notebook_dir() /
+        "../../data/MOCOF-1/converted/characterization_from_sciformation.json")
     return characterization_file_path, procedure_file_path
 
 
@@ -75,7 +74,6 @@ def _(pl):
 
         return result
 
-
     def dict_to_dataframe(data, sep="_"):
         """Convert nested dict to a Polars DataFrame.
         Zeilen = Länge der längsten Liste; Dicts/Skalare gelten in jeder Zeile.
@@ -91,7 +89,8 @@ def _(pl):
                 if isinstance(value, list):
                     item = value[i] if i < len(value) else None
                 else:
-                    # Dicts & Skalare nicht zeilenbildend: in jeder Zeile gleich
+                    # Dicts & Skalare nicht zeilenbildend: in jeder Zeile
+                    # gleich
                     item = value
 
                 if item is None:
@@ -138,7 +137,8 @@ def _(api, characterization, dict_to_dataframe, molar_fraction, pl):
     for _id in molar_fraction["id"]:
         _df.append(
             dict_to_dataframe(
-                api.get_characterization_by_experiment_id(characterization, _id).to_dict()
+                api.get_characterization_by_experiment_id(
+                    characterization, _id).to_dict()
             ).with_columns(id=pl.lit(_id))
         )
     df_characterization = pl.concat(_df, how="diagonal")
@@ -285,10 +285,12 @@ def _(df3, mo, pl):
                 / pl.col("aminoporphyrin_monomer_amount_umol")
             ).round(2),
             water_per_amine=(
-                pl.col("water_amount_umol") / pl.col("aminoporphyrin_monomer_amount_umol")
+                pl.col("water_amount_umol") /
+                pl.col("aminoporphyrin_monomer_amount_umol")
             ).round(1).clip(lower_bound=10),
             water_per_aldeyde=(
-                pl.col("water_amount_umol") / pl.col("aldehyde_monomer_amount_umol")
+                pl.col("water_amount_umol") /
+                pl.col("aldehyde_monomer_amount_umol")
             ).round(1).clip(lower_bound=10),
         ),
         initial_selection=range(len(df3)),
@@ -306,7 +308,18 @@ def _():
 @app.cell
 def _(df_selected, px):
     _df = df_selected.value
-    _fig = px.scatter_3d(_df, x="ald_per_amine", y="water_per_amine", z="yield_MOCOF-1", log_x=True, log_y=True, hover_data=['id', 'ald_per_amine', 'water_per_amine', 'yield_MOCOF-1'])
+    _fig = px.scatter_3d(
+        _df,
+        x="ald_per_amine",
+        y="water_per_amine",
+        z="yield_MOCOF-1",
+        log_x=True,
+        log_y=True,
+        hover_data=[
+            'id',
+            'ald_per_amine',
+            'water_per_amine',
+            'yield_MOCOF-1'])
     _fig.update_traces(marker=dict(size=4))
     _fig.update_layout(scene_aspectmode="cube")
     _fig.show()
@@ -351,18 +364,23 @@ def _(df_selected, px):
     from scipy.spatial import ConvexHull
     import numpy as np
 
-    _points = _df.drop_nulls(["ald_per_amine", "water_per_amine", "yield_MOCOF-1"])[["ald_per_amine", "water_per_amine", "yield_MOCOF-1"]]
+    _points = _df.drop_nulls(["ald_per_amine",
+                              "water_per_amine",
+                              "yield_MOCOF-1"])[["ald_per_amine",
+                                                 "water_per_amine",
+                                                 "yield_MOCOF-1"]]
     _hull = ConvexHull(_points).simplices
 
     import plotly.graph_objects as go
 
     _mesh = go.Mesh3d(
-        x=_points[:,0], y=_points[:,1], z=_points[:,2],
-        i=_hull[:,0], j=_hull[:,1], k=_hull[:,2],
+        x=_points[:, 0], y=_points[:, 1], z=_points[:, 2],
+        i=_hull[:, 0], j=_hull[:, 1], k=_hull[:, 2],
         opacity=0.5,
         color='lightblue',
         flatshading=True,
-        lighting=dict(ambient=0.4, diffuse=0.7, specular=0.2, roughness=0.7, fresnel=0.05),
+        lighting=dict(ambient=0.4, diffuse=0.7, specular=0.2,
+                      roughness=0.7, fresnel=0.05),
         lightposition=dict(x=2, y=90, z=2),
         hoverinfo='skip'
     )
@@ -417,17 +435,18 @@ def _(alt, df_selected):
             opacity=1
         )
         .encode(
-            x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
+            x=alt.X(field="water_per_aldeyde", type="quantitative",
+                    scale=alt.Scale(type="log")),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
             tooltip=[
                 alt.Tooltip(field="id"),
-                #alt.Tooltip(field="water_per_aldeyde", format=",.1f"),
-                #alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
+                # alt.Tooltip(field="water_per_aldeyde", format=",.1f"),
+                # alt.Tooltip(field="yield_MOCOF-1", format=",.2f"),
             ],
         )
         .properties(height=290, width="container",
                     config={"axis": {"grid": False}}
-                   )
+                    )
     )
     _chart
     return
@@ -436,7 +455,8 @@ def _(alt, df_selected):
 @app.cell
 def _(ConvexHull, alt, df_selected, np, pl):
     _df = df_selected.value.filter(
-        pl.col("water_per_aldeyde").is_not_null() & pl.col("yield_MOCOF-1").is_not_null()
+        pl.col("water_per_aldeyde").is_not_null() & pl.col(
+            "yield_MOCOF-1").is_not_null()
     )
     _points = np.column_stack([
         _df["water_per_aldeyde"].to_numpy(),
@@ -461,7 +481,8 @@ def _(ConvexHull, alt, df_selected, np, pl):
             opacity=1
         )
         .encode(
-            x=alt.X(field="water_per_aldeyde", type="quantitative", scale=alt.Scale(type="log")),
+            x=alt.X(field="water_per_aldeyde", type="quantitative",
+                    scale=alt.Scale(type="log")),
             y=alt.Y(field="yield_MOCOF-1", type="quantitative"),
             tooltip=[
                 alt.Tooltip(field="id"),
@@ -548,8 +569,10 @@ def _(ConvexHull, alt, df_selected, np, pl):
             opacity=1
         )
         .encode(
-            x=alt.X('acid_pKa_DMSO', type='quantitative', title='Acid pKa(DMSO)'),
-            y=alt.Y('yield_MOCOF-1', type='quantitative', title='Yield of MOCOF-1'),
+            x=alt.X('acid_pKa_DMSO', type='quantitative',
+                    title='Acid pKa(DMSO)'),
+            y=alt.Y('yield_MOCOF-1', type='quantitative',
+                    title='Yield of MOCOF-1'),
             tooltip=[
                 alt.Tooltip('acid_name'),
                 alt.Tooltip('id'),

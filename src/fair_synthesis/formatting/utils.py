@@ -15,7 +15,8 @@ RE_INCHI = re.compile(
 )
 RE_INCHIKEY = re.compile(r"/^([0-9A-Z\-]+)$/")
 
-# This data structure will store the PubChem compounds that have been queried, so that we don't have to query them again
+# This data structure will store the PubChem compounds that have been
+# queried, so that we don't have to query them again
 cached_compounds = {}
 
 
@@ -50,30 +51,33 @@ def query_compound_from_pub_chem(query: str) -> pcp.Compound | None:
     return None
 
 
-
-
 def load_json(file_path):
     with open(file_path, 'r') as f:
         data = json.load(f)
     return data
 
+
 def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
+
 
 def save_starfile(data, file_path):
     # create missing directories
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     starfile.write(data, file_path)
 
+
 def save_string_as_file(data: str, file_path):
     with open(file_path, 'wb') as f:
         f.write(data.encode('utf-8'))
+
 
 def load_yaml(file_path):
     with open(file_path, 'r') as f:
         data = yaml.safe_load(f)
     return data
+
 
 def format_to_camel_case(text: str):
     if "_" in text or "-" in text:
@@ -81,4 +85,3 @@ def format_to_camel_case(text: str):
         return ''.join([s[0].lower(), s[1:]])
     else:
         return text
-

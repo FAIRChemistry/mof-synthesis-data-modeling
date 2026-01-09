@@ -5,7 +5,9 @@ from fair_synthesis.generated_apis.characterization_data_structure import Charac
 from fair_synthesis.formatting.utils import load_json, save_json
 
 
-def extract_interesting_params_for_mocof_1(procedure: SynthesisProcedure, characterization: Characterization):
+def extract_interesting_params_for_mocof_1(
+        procedure: SynthesisProcedure,
+        characterization: Characterization):
     """Interesting are:
     Experimend ID: Metadata._description (just to keep track of data)
 Aminoporphyrin monomer type: Search for the Reagent with _inchi containing "Co" (case sensitive) and extract sum formula from  _inchi
@@ -41,10 +43,15 @@ Activation under vacuum (boolean): If there is Dry"""
         params = {}
 
         # Aminoporphyrin monomer
-        aminoporphyrin_reagent = next((r for r in synthesis.reagents.reagent if r.inchi and "Co" in r.inchi), none_default)
+        aminoporphyrin_reagent = next(
+            (r for r in synthesis.reagents.reagent if r.inchi and "Co" in r.inchi),
+            none_default)
         if aminoporphyrin_reagent:
-            params['aminoporphyrin_monomer_type'] = aminoporphyrin_reagent.inchi.split('/')[1] if aminoporphyrin_reagent.inchi.startswith("InChI=1S/") else aminoporphyrin_reagent.inchi
-            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aminoporphyrin_reagent.name), None)
+            params['aminoporphyrin_monomer_type'] = aminoporphyrin_reagent.inchi.split(
+                '/')[1] if aminoporphyrin_reagent.inchi.startswith("InChI=1S/") else aminoporphyrin_reagent.inchi
+            add_step = next(
+                (step for step in synthesis.procedure.prep.step if step.reagent == aminoporphyrin_reagent.name),
+                None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['aminoporphyrin_monomer_amount_umol'] = add_step.amount.value
             else:
@@ -54,10 +61,15 @@ Activation under vacuum (boolean): If there is Dry"""
             params['aminoporphyrin_monomer_amount_umol'] = -1.0
 
         # Aldehyde monomer
-        aldehyde_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.SUBSTRATE and (not r.inchi or "Co" not in r.inchi)), none_default)
+        aldehyde_reagent = next(
+            (r for r in synthesis.reagents.reagent if r.role == Role.SUBSTRATE and (
+                not r.inchi or "Co" not in r.inchi)), none_default)
         if aldehyde_reagent:
-            params['aldehyde_monomer_structure'] = aldehyde_reagent.inchi.split('/')[1]
-            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == aldehyde_reagent.name), None)
+            params['aldehyde_monomer_structure'] = aldehyde_reagent.inchi.split(
+                '/')[1]
+            add_step = next(
+                (step for step in synthesis.procedure.prep.step if step.reagent == aldehyde_reagent.name),
+                None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['aldehyde_monomer_amount_umol'] = add_step.amount.value
             else:
@@ -67,9 +79,13 @@ Activation under vacuum (boolean): If there is Dry"""
             params['aldehyde_monomer_amount_umol'] = -1.0
 
         # Water amount
-        water_reagent = next((r for r in synthesis.reagents.reagent if r.inchi == "InChI=1S/H2O/h1H2"), None)
+        water_reagent = next(
+            (r for r in synthesis.reagents.reagent if r.inchi == "InChI=1S/H2O/h1H2"),
+            None)
         if water_reagent:
-            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == water_reagent.name), None)
+            add_step = next(
+                (step for step in synthesis.procedure.prep.step if step.reagent == water_reagent.name),
+                None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['water_amount_umol'] = add_step.amount.value
             else:
@@ -96,15 +112,21 @@ Activation under vacuum (boolean): If there is Dry"""
         }
 
         def get_acid_name_and_pKa(acid_structure):
-            return acid_structure_mapping.get(acid_structure, ("unknown", -100.0))
+            return acid_structure_mapping.get(
+                acid_structure, ("unknown", -100.0))
 
-        acid_reagent = next((r for r in synthesis.reagents.reagent if r.role == Role.ACID), none_default)
+        acid_reagent = next(
+            (r for r in synthesis.reagents.reagent if r.role == Role.ACID),
+            none_default)
         if acid_reagent:
-            acid_structure = acid_reagent.inchi.split('/')[1] if acid_reagent.inchi.startswith("InChI=1S/") else acid_reagent.inchi
+            acid_structure = acid_reagent.inchi.split(
+                '/')[1] if acid_reagent.inchi.startswith("InChI=1S/") else acid_reagent.inchi
             acid_name, acid_pKa = get_acid_name_and_pKa(acid_structure)
             params['acid_name'] = acid_name
             params['acid_pKa_DMSO'] = acid_pKa
-            add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == acid_reagent.name), None)
+            add_step = next(
+                (step for step in synthesis.procedure.prep.step if step.reagent == acid_reagent.name),
+                None)
             if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROMOLE:
                 params['acid_amount_umol'] = add_step.amount.value
             else:
@@ -115,59 +137,73 @@ Activation under vacuum (boolean): If there is Dry"""
             params['acid_amount_umol'] = -1.0
 
         # Other additives
-        catalyst_reagent = next((r for r in synthesis.reagents.reagent if (r.role == Role.CATALYST or r.role == Role.REAGENT) and r.inchi != "InChI=1S/H2O/h1H2"), None)
+        catalyst_reagent = next(
+            (r for r in synthesis.reagents.reagent if (
+                r.role == Role.CATALYST or r.role == Role.REAGENT) and r.inchi != "InChI=1S/H2O/h1H2"),
+            None)
         if catalyst_reagent:
-            params['other_additives'] = catalyst_reagent.inchi.split('/')[1] if catalyst_reagent.inchi.startswith("InChI=1S/") else catalyst_reagent.inchi
+            params['other_additives'] = catalyst_reagent.inchi.split(
+                '/')[1] if catalyst_reagent.inchi.startswith("InChI=1S/") else catalyst_reagent.inchi
         else:
             params['other_additives'] = none_default
 
         # Solvents
         solvent_inchi_map = {
-              "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2": (1, "1,4-dioxane"),
-              "InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H": (2, "nitrobenzene"),
-              "InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H": (2, "o-dichlorobenzene"),
-              "InChI=1S/C9H12/c1-7-4-8(2)6-9(3)5-7/h4-6H,1-3H3": (2, "mesitylene"),
-              "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H": (3, "m-dinitrobenzene")
+            "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2": (1, "1,4-dioxane"),
+            "InChI=1S/C6H5NO2/c8-7(9)6-4-2-1-3-5-6/h1-5H": (2, "nitrobenzene"),
+            "InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H": (2, "o-dichlorobenzene"),
+            "InChI=1S/C9H12/c1-7-4-8(2)6-9(3)5-7/h4-6H,1-3H3": (2, "mesitylene"),
+            "InChI=1S/C6H4N2O4/c9-7(10)5-2-1-3-6(4-5)8(11)12/h1-4H": (3, "m-dinitrobenzene")
         }
-        solvent_reagents = [r for r in synthesis.reagents.reagent if r.role == Role.SOLVENT]
+        solvent_reagents = [
+            r for r in synthesis.reagents.reagent if r.role == Role.SOLVENT]
         solvent_others = []
         for idx, solvent_reagent in enumerate(solvent_reagents):
             if solvent_reagent.inchi == "None" and solvent_reagent.name == "C4H8O2":
-                      solvent_reagent.inchi = "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                solvent_reagent.inchi = "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
             if solvent_reagent.inchi in solvent_inchi_map:
-                      solvent_number, solvent_name = solvent_inchi_map[solvent_reagent.inchi]
-                      params[f'solvent_{solvent_number}_name'] = solvent_name
-                      add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_reagent.name), none_default)
-                      if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
-                              params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+                solvent_number, solvent_name = solvent_inchi_map[solvent_reagent.inchi]
+                params[f'solvent_{solvent_number}_name'] = solvent_name
+                add_step = next(
+                    (step for step in synthesis.procedure.prep.step if step.reagent == solvent_reagent.name),
+                    none_default)
+                if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
+                    params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
             else:
-                      solvent_others.append(solvent_reagent.name)
+                solvent_others.append(solvent_reagent.name)
 
         for solvent_other in solvent_others:
-                for solvent_number in range(1, 3):
-                        if f'solvent_{solvent_number}_name' not in params:
-                                params[f'solvent_{solvent_number}_name'] = solvent_other
-                                add_step = next((step for step in synthesis.procedure.prep.step if step.reagent == solvent_other), none_default)
-                                if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
-                                        params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
+            for solvent_number in range(1, 3):
+                if f'solvent_{solvent_number}_name' not in params:
+                    params[f'solvent_{solvent_number}_name'] = solvent_other
+                    add_step = next(
+                        (step for step in synthesis.procedure.prep.step if step.reagent == solvent_other),
+                        none_default)
+                    if add_step and add_step.amount and add_step.amount.unit == AmountUnit.MICROLITRE:
+                        params[f'solvent_{solvent_number}_volume_uL'] = add_step.amount.value
 
-        #if solvent slots 1-3 are missing, fill them with "None" and 0.0
+        # if solvent slots 1-3 are missing, fill them with "None" and 0.0
         for solvent_number in range(1, 4):
-           if f'solvent_{solvent_number}_name' not in params:
+            if f'solvent_{solvent_number}_name' not in params:
                 params[f'solvent_{solvent_number}_name'] = none_default
                 params[f'solvent_{solvent_number}_volume_uL'] = 0.0
 
         # Vessel
         if synthesis.hardware and synthesis.hardware.component:
-            vessel_component = next((comp for comp in synthesis.hardware.component if comp.type), none_default)
+            vessel_component = next(
+                (comp for comp in synthesis.hardware.component if comp.type),
+                none_default)
             if vessel_component:
                 params['vessel'] = vessel_component.type
 
         # Degassing
-        params['degassing'] = any(step for step in synthesis.procedure.prep.step if step.xml_type == XMLType.EVACUATE_AND_REFILL)
+        params['degassing'] = any(
+            step for step in synthesis.procedure.prep.step if step.xml_type == XMLType.EVACUATE_AND_REFILL)
 
         # Temperature and Duration
-        heat_chill_step = next((step for step in synthesis.procedure.reaction.step if step.xml_type == XMLType.HEAT_CHILL), none_default)
+        heat_chill_step = next(
+            (step for step in synthesis.procedure.reaction.step if step.xml_type == XMLType.HEAT_CHILL),
+            none_default)
         if heat_chill_step:
             if heat_chill_step.temp:
                 params['temperature_C'] = heat_chill_step.temp.value
@@ -177,33 +213,52 @@ Activation under vacuum (boolean): If there is Dry"""
                 assert heat_chill_step.time.unit == AmountUnit.HOUR
 
         # Workup with NaCl
-        params['workup_with_NaCl'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent == Solvent.NA_CL_AQ)
+        params['workup_with_NaCl'] = any(
+            step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent == Solvent.NA_CL_AQ)
 
         # Activation with scCO2
-        scCO2_activation = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and (step.solvent == Solvent.SC_CO2 or step.solvent == Solvent.ME_OH_SC_CO2))
+        scCO2_activation = any(
+            step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and (
+                step.solvent == Solvent.SC_CO2 or step.solvent == Solvent.ME_OH_SC_CO2))
         params['activation_with_scCO2'] = scCO2_activation
         if scCO2_activation:
-            params['MeOH_in_scCO2_activation'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent ==Solvent.ME_OH_SC_CO2)
+            params['MeOH_in_scCO2_activation'] = any(
+                step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.WASH_SOLID and step.solvent == Solvent.ME_OH_SC_CO2)
         else:
             params['MeOH_in_scCO2_activation'] = False
 
         # Activation under vacuum
-        params['activation_under_vacuum'] = any(step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.DRY)
+        params['activation_under_vacuum'] = any(
+            step for step in synthesis.procedure.workup.step if step.xml_type == XMLType.DRY)
 
         params_per_experiment[experiment_id] = params
 
     return params_per_experiment
 
 
-
 def extract_interesting_params():
     current_file_dir = __file__.rsplit('/', 1)[0]
 
     # sciformation case
-    mofsy_procedure_file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
-    mofsy_characterization_file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
-    procedure = SynthesisProcedure.from_dict(load_json(mofsy_procedure_file_path))
-    characterization = Characterization.from_dict(load_json(mofsy_characterization_file_path))
-    params = extract_interesting_params_for_mocof_1(procedure, characterization)
-    save_json(params, os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'params_from_sciformation.json'))
-
+    mofsy_procedure_file_path = os.path.join(
+        current_file_dir,
+        '../../..',
+        'data',
+        'MOCOF-1',
+        'converted',
+        'procedure_from_sciformation.json')
+    mofsy_characterization_file_path = os.path.join(
+        current_file_dir,
+        '../../..',
+        'data',
+        'MOCOF-1',
+        'converted',
+        'characterization_from_sciformation.json')
+    procedure = SynthesisProcedure.from_dict(
+        load_json(mofsy_procedure_file_path))
+    characterization = Characterization.from_dict(
+        load_json(mofsy_characterization_file_path))
+    params = extract_interesting_params_for_mocof_1(
+        procedure, characterization)
+    save_json(params, os.path.join(current_file_dir, '../../..', 'data',
+              'MOCOF-1', 'converted', 'params_from_sciformation.json'))

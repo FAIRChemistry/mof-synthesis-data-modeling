@@ -5,6 +5,7 @@ from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProc
 from lxml import etree
 from string import Template
 
+
 def convert_mofsy_procedure_to_xdl_string(mofsy: SynthesisProcedure) -> str:
     """
     Convert Mofsy procedure to XDL format, which is in XML.
@@ -23,10 +24,12 @@ def dict_to_xml(root_tag, data):
 
     def build_element(parent, key, value):
         # Determine tag name
-        tag = value.get('$xml_type') if isinstance(value, dict) and '$xml_type' in value else key
+        tag = value.get('$xml_type') if isinstance(
+            value, dict) and '$xml_type' in value else key
 
         if isinstance(value, dict):
-            # Build attributes including support for $xml_append inside _/@ fields
+            # Build attributes including support for $xml_append inside _/@
+            # fields
             attribs = {}
             for k, v in value.items():
                 if k.startswith('@') or k.startswith('_'):
@@ -53,7 +56,12 @@ def dict_to_xml(root_tag, data):
 
             # Recursively handle children
             for subkey, subval in value.items():
-                if subkey in {'$xml_type', '$xml_append', '#text', '#cdata', '#comment'}:
+                if subkey in {
+                    '$xml_type',
+                    '$xml_append',
+                    '#text',
+                    '#cdata',
+                        '#comment'}:
                     continue
                 if subkey.startswith('@') or subkey.startswith('_'):
                     continue  # already handled as attribute
@@ -82,17 +90,46 @@ def mofsy2xdl():
     current_file_dir = __file__.rsplit('/', 1)[0]
 
     # MOCOF-1 case
-    mofsy_file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
-    xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mofsy_file_path)))
-    #print("XML Result: " + xml)
-    save_string_as_file(xml, os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'converted', 'xdl_from_sciformation.xml'))
+    mofsy_file_path = os.path.join(
+        current_file_dir,
+        '../../..',
+        'data',
+        'MOCOF-1',
+        'converted',
+        'procedure_from_sciformation.json')
+    xml = convert_mofsy_procedure_to_xdl_string(
+        SynthesisProcedure.from_dict(load_json(mofsy_file_path)))
+    # print("XML Result: " + xml)
+    save_string_as_file(
+        xml,
+        os.path.join(
+            current_file_dir,
+            '../../..',
+            'data',
+            'MOCOF-1',
+            'converted',
+            'xdl_from_sciformation.xml'))
 
     # Fe–terephthalate case
-    mil_2_file_path = os.path.join(current_file_dir, '../../..', 'data', 'Fe–terephthalate', 'converted', 'procedure_from_MIL.json')
-    xml = convert_mofsy_procedure_to_xdl_string(SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
-    #print("XML Result: " + xml)
-    save_string_as_file(xml, os.path.join(current_file_dir, '../../..', 'data', 'Fe–terephthalate', 'converted', 'xdl_from_MIL.xml'))
-
+    mil_2_file_path = os.path.join(
+        current_file_dir,
+        '../../..',
+        'data',
+        'Fe–terephthalate',
+        'converted',
+        'procedure_from_MIL.json')
+    xml = convert_mofsy_procedure_to_xdl_string(
+        SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
+    # print("XML Result: " + xml)
+    save_string_as_file(
+        xml,
+        os.path.join(
+            current_file_dir,
+            '../../..',
+            'data',
+            'Fe–terephthalate',
+            'converted',
+            'xdl_from_MIL.xml'))
 
 
 if __name__ == '__main__':

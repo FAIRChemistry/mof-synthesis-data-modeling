@@ -16,15 +16,17 @@ class PXRDFile:
         file_name = os.path.basename(path)
 
         # File name pattern: PXRD_(experiment id)_(X-ray source)_(sample holder shape)-(sample holder diameter).xyd, eg. PXRD_KE-232_Co-Kα1_film-3mm.xyd
-        # Extract experiment id, x-ray source, sample holder shape and diameter from the file name
+        # Extract experiment id, x-ray source, sample holder shape and diameter
+        # from the file name
         file_name_parts = file_name.replace(".xyd", "").split("_")
         self.experiment_id = file_name_parts[1]
-        self.xray_source = file_name_parts[2].replace("a","α")
+        self.xray_source = file_name_parts[2].replace("a", "α")
         self.sample_holder_shape = file_name_parts[3].split("-")[0]
-        self.sample_holder_diameter = file_name_parts[3].split("-")[1] if "-" in file_name_parts[3] else None
-        self.other_metadata = file_name_parts[4] if len(file_name_parts) > 4 else None
+        self.sample_holder_diameter = file_name_parts[3].split(
+            "-")[1] if "-" in file_name_parts[3] else None
+        self.other_metadata = file_name_parts[4] if len(
+            file_name_parts) > 4 else None
         process_pxrd_file_use_case_specific(self)  # Process the PXRD file
-
 
 
 def collect_pxrd_file_paths(path: str) -> list:
@@ -46,7 +48,9 @@ def collect_pxrd_file_paths(path: str) -> list:
             pxrd_files.append(os.path.join(root, file))
     return pxrd_files
 
-def collect_pxrd_files(path: str, relative_root: str|None = None) -> List[PXRDFile]:
+
+def collect_pxrd_files(path: str, relative_root: str |
+                       None = None) -> List[PXRDFile]:
     """
     Collects all PXRD files from the given directory and its subdirectories.
 
@@ -68,7 +72,9 @@ def collect_pxrd_files(path: str, relative_root: str|None = None) -> List[PXRDFi
     return result
 
 
-def filter_pxrd_files(experiment_id: str, all_pxrd_files: list) -> List[PXRDFile] | None:
+def filter_pxrd_files(
+        experiment_id: str,
+        all_pxrd_files: list) -> List[PXRDFile] | None:
     """
     Filters the collected PXRD files based on the given experiment ID.
 
@@ -79,5 +85,6 @@ def filter_pxrd_files(experiment_id: str, all_pxrd_files: list) -> List[PXRDFile
     Returns:
         list: A list of PXRDFile objects representing the filtered PXRD files.
     """
-    filtered_files = [pxrd_file for pxrd_file in all_pxrd_files if pxrd_file.experiment_id == experiment_id]
+    filtered_files = [
+        pxrd_file for pxrd_file in all_pxrd_files if pxrd_file.experiment_id == experiment_id]
     return filtered_files if len(filtered_files) > 0 else None

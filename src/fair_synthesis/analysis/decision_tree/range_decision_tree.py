@@ -110,8 +110,14 @@ class RangeDecisionTreeClassifier(BaseEstimator, ClassifierMixin):
     >>> clf.score(X_test, y_test)
     """
 
-    def __init__(self, max_depth=None, min_samples_split=2, min_samples_leaf=1,
-                 split_strategy='both', max_range_splits=10, random_state=None):
+    def __init__(
+            self,
+            max_depth=None,
+            min_samples_split=2,
+            min_samples_leaf=1,
+            split_strategy='both',
+            max_range_splits=10,
+            random_state=None):
         self.max_depth = max_depth
         self.min_samples_split = min_samples_split
         self.min_samples_leaf = min_samples_leaf
@@ -190,7 +196,8 @@ class RangeDecisionTreeClassifier(BaseEstimator, ClassifierMixin):
         impurity_left = self._gini_impurity(y_left)
         impurity_right = self._gini_impurity(y_right)
 
-        weighted_impurity = (n_left / n) * impurity_left + (n_right / n) * impurity_right
+        weighted_impurity = (n_left / n) * impurity_left + \
+            (n_right / n) * impurity_right
 
         return impurity_parent - weighted_impurity
 
@@ -321,14 +328,16 @@ class RangeDecisionTreeClassifier(BaseEstimator, ClassifierMixin):
                 upper = unique_values[j]
 
                 # Split: inside range (left) vs outside range (right)
-                inside_mask = (X[:, feature_idx] >= lower) & (X[:, feature_idx] <= upper)
+                inside_mask = (X[:, feature_idx] >= lower) & (
+                    X[:, feature_idx] <= upper)
                 outside_mask = ~inside_mask
 
                 if np.sum(inside_mask) < self.min_samples_leaf or \
                         np.sum(outside_mask) < self.min_samples_leaf:
                     continue
 
-                gain = self._information_gain(y, y[inside_mask], y[outside_mask])
+                gain = self._information_gain(
+                    y, y[inside_mask], y[outside_mask])
 
                 if gain > best_gain:
                     best_gain = gain
@@ -552,8 +561,8 @@ class RangeDecisionTreeClassifier(BaseEstimator, ClassifierMixin):
                 n_right = node.right.samples
 
                 decrease = node.impurity - (
-                        (n_left / n_samples) * node.left.impurity +
-                        (n_right / n_samples) * node.right.impurity
+                    (n_left / n_samples) * node.left.impurity +
+                    (n_right / n_samples) * node.right.impurity
                 )
 
                 importances[node.feature] += decrease * n_samples

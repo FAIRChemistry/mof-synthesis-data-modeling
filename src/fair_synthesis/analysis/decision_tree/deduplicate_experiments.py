@@ -33,7 +33,8 @@ from typing import Dict, List
 import statistics
 
 
-def calculate_dataframe_statistics(df: pd.DataFrame) -> Dict[str, Dict[str, float]]:
+def calculate_dataframe_statistics(
+        df: pd.DataFrame) -> Dict[str, Dict[str, float]]:
     """
     Calculate statistics (min, max, mean, std) for each numerical column.
 
@@ -70,7 +71,7 @@ def calculate_dataframe_statistics(df: pd.DataFrame) -> Dict[str, Dict[str, floa
     return param_stats
 
 
-def calculate_adaptive_epsilon(param_stats: Dict[str, Dict[str, float]], 
+def calculate_adaptive_epsilon(param_stats: Dict[str, Dict[str, float]],
                                relative_tolerance: float = 5.0) -> Dict[str, float]:
     """
     Calculate epsilon for each parameter based on its statistical distribution.
@@ -97,15 +98,16 @@ def calculate_adaptive_epsilon(param_stats: Dict[str, Dict[str, float]],
         # Handle edge case where mean is very close to zero
         if abs(mean) < 1e-10:
             value_range = stats['max'] - stats['min']
-            epsilon = value_range * (relative_tolerance / 100.0) if value_range > 0 else 1e-6
+            epsilon = value_range * \
+                (relative_tolerance / 100.0) if value_range > 0 else 1e-6
 
         epsilon_dict[param_name] = epsilon
 
     return epsilon_dict
 
 
-def compare_dataframe_rows(row1: pd.Series, 
-                           row2: pd.Series, 
+def compare_dataframe_rows(row1: pd.Series,
+                           row2: pd.Series,
                            epsilon_dict: Dict[str, float]) -> bool:
     """
     Compare two DataFrame rows for similarity using parameter-specific epsilon values.
@@ -131,11 +133,14 @@ def compare_dataframe_rows(row1: pd.Series,
             return False
 
         # Check if both are numerical
-        if pd.api.types.is_numeric_dtype(type(val1)) and pd.api.types.is_numeric_dtype(type(val2)):
+        if pd.api.types.is_numeric_dtype(
+                type(val1)) and pd.api.types.is_numeric_dtype(
+                type(val2)):
             # Get parameter-specific epsilon, default to 0.01 if not found
             epsilon = epsilon_dict.get(col, 0.01)
 
-            # Compare numerical values with parameter-specific epsilon tolerance
+            # Compare numerical values with parameter-specific epsilon
+            # tolerance
             if abs(float(val1) - float(val2)) > epsilon:
                 return False  # Found significant numerical difference
 
@@ -150,11 +155,12 @@ def compare_dataframe_rows(row1: pd.Series,
                 return False  # String values differ
 
         # If types don't match, not similar
-        elif type(val1) != type(val2):
+        elif not isinstance(val1, type(val2)):
             return False
 
     # No significant differences found - rows are similar
     return True
+
 
 def get_duplicate_indices(
     X: pd.DataFrame,
@@ -197,7 +203,8 @@ def get_duplicate_indices(
                 duplicate_indices.append(i)
                 duplicate_pairs.append((i, j))
                 if verbose:
-                    print(f"  → Row {i} is similar to row {j} (marked as duplicate).")
+                    print(
+                        f"  → Row {i} is similar to row {j} (marked as duplicate).")
                 break
 
     return duplicate_indices, duplicate_pairs, epsilon_dict, param_stats

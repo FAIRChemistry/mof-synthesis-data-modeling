@@ -28,7 +28,7 @@ def from_union(fs, x):
     for f in fs:
         try:
             return f(x)
-        except:
+        except BaseException:
             pass
     assert False
 
@@ -40,7 +40,7 @@ def to_float(x: Any) -> float:
 
 def from_dict(f: Callable[[Any], T], x: Any) -> Dict[str, T]:
     assert isinstance(x, dict)
-    return { k: f(v) for (k, v) in x.items() }
+    return {k: f(v) for (k, v) in x.items()}
 
 
 def to_class(c: Type[T], x: Any) -> dict:
@@ -71,7 +71,29 @@ class Mocof1Param:
     water_amount_umol: float
     workup_with_na_cl: bool
 
-    def __init__(self, acid_amount_umol: float, acid_name: str, acid_pKa_DMSO: float, activation_under_vacuum: bool, activation_with_sc_co2: bool, aldehyde_monomer_amount_umol: float, aldehyde_monomer_structure: str, aminoporphyrin_monomer_amount_umol: float,  aminoporphyrin_monomer_type: str, degassing: bool, duration_h: float, me_oh_in_sc_co2_activation: bool, other_additives: Optional[str], solvent_1__name: str, solvent_1__volume_u_l: float, solvent_2__name: Optional[str], solvent_2__volume_u_l: float, temperature_c: float, vessel: str, water_amount_umol: float, workup_with_na_cl: bool) -> None:
+    def __init__(
+            self,
+            acid_amount_umol: float,
+            acid_name: str,
+            acid_pKa_DMSO: float,
+            activation_under_vacuum: bool,
+            activation_with_sc_co2: bool,
+            aldehyde_monomer_amount_umol: float,
+            aldehyde_monomer_structure: str,
+            aminoporphyrin_monomer_amount_umol: float,
+            aminoporphyrin_monomer_type: str,
+            degassing: bool,
+            duration_h: float,
+            me_oh_in_sc_co2_activation: bool,
+            other_additives: Optional[str],
+            solvent_1__name: str,
+            solvent_1__volume_u_l: float,
+            solvent_2__name: Optional[str],
+            solvent_2__volume_u_l: float,
+            temperature_c: float,
+            vessel: str,
+            water_amount_umol: float,
+            workup_with_na_cl: bool) -> None:
         self.acid_amount_umol = acid_amount_umol
         self.acid_name = acid_name
         self.acid_pKa_DMSO = acid_pKa_DMSO
@@ -102,43 +124,81 @@ class Mocof1Param:
         acid_pKa_DMSO = from_float(obj.get("acid_pKa_DMSO"))
         activation_under_vacuum = from_bool(obj.get("activation_under_vacuum"))
         activation_with_sc_co2 = from_bool(obj.get("activation_with_scCO2"))
-        aldehyde_monomer_amount_umol = from_float(obj.get("aldehyde_monomer_amount_umol"))
-        aldehyde_monomer_structure = from_str(obj.get("aldehyde_monomer_structure"))
-        aminoporphyrin_monomer_amount_umol = from_float(obj.get("aminoporphyrin_monomer_amount_umol"))
-        aminoporphyrin_monomer_type = from_str(obj.get("aminoporphyrin_monomer_type"))
+        aldehyde_monomer_amount_umol = from_float(
+            obj.get("aldehyde_monomer_amount_umol"))
+        aldehyde_monomer_structure = from_str(
+            obj.get("aldehyde_monomer_structure"))
+        aminoporphyrin_monomer_amount_umol = from_float(
+            obj.get("aminoporphyrin_monomer_amount_umol"))
+        aminoporphyrin_monomer_type = from_str(
+            obj.get("aminoporphyrin_monomer_type"))
         degassing = from_bool(obj.get("degassing"))
         duration_h = from_float(obj.get("duration_h"))
-        me_oh_in_sc_co2_activation = from_bool(obj.get("MeOH_in_scCO2_activation"))
-        other_additives = from_union([from_none, from_str], obj.get("other_additives"))
+        me_oh_in_sc_co2_activation = from_bool(
+            obj.get("MeOH_in_scCO2_activation"))
+        other_additives = from_union(
+            [from_none, from_str], obj.get("other_additives"))
         solvent_1__name = from_str(obj.get("solvent_1_name"))
         solvent_1__volume_u_l = from_float(obj.get("solvent_1_volume_uL"))
-        solvent_2__name = from_union([from_none, from_str], obj.get("solvent_2_name"))
+        solvent_2__name = from_union(
+            [from_none, from_str], obj.get("solvent_2_name"))
         value = obj.get("solvent_2_volume_uL")
-        solvent_2__volume_u_l = from_float(value) if isinstance(value, (float, int)) and not isinstance(value, bool) else None
+        solvent_2__volume_u_l = from_float(value) if isinstance(
+            value, (float, int)) and not isinstance(value, bool) else None
         temperature_c = from_float(obj.get("temperature_C"))
         vessel = from_str(obj.get("vessel"))
         water_amount_umol = from_float(obj.get("water_amount_umol"))
         workup_with_na_cl = from_bool(obj.get("workup_with_NaCl"))
-        return Mocof1Param(acid_amount_umol, acid_name, acid_pKa_DMSO, activation_under_vacuum, activation_with_sc_co2, aldehyde_monomer_amount_umol, aldehyde_monomer_structure, aminoporphyrin_monomer_amount_umol, aminoporphyrin_monomer_type, degassing, duration_h, me_oh_in_sc_co2_activation, other_additives, solvent_1__name, solvent_1__volume_u_l, solvent_2__name, solvent_2__volume_u_l, temperature_c, vessel, water_amount_umol, workup_with_na_cl)
+        return Mocof1Param(
+            acid_amount_umol,
+            acid_name,
+            acid_pKa_DMSO,
+            activation_under_vacuum,
+            activation_with_sc_co2,
+            aldehyde_monomer_amount_umol,
+            aldehyde_monomer_structure,
+            aminoporphyrin_monomer_amount_umol,
+            aminoporphyrin_monomer_type,
+            degassing,
+            duration_h,
+            me_oh_in_sc_co2_activation,
+            other_additives,
+            solvent_1__name,
+            solvent_1__volume_u_l,
+            solvent_2__name,
+            solvent_2__volume_u_l,
+            temperature_c,
+            vessel,
+            water_amount_umol,
+            workup_with_na_cl)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["acid_amount_umol"] = to_float(self.acid_amount_umol)
         result["acid_name"] = from_str(self.acid_name)
         result["acid_pKa_DMSO"] = to_float(self.acid_pKa_DMSO)
-        result["activation_under_vacuum"] = from_bool(self.activation_under_vacuum)
-        result["activation_with_scCO2"] = from_bool(self.activation_with_sc_co2)
-        result["aldehyde_monomer_amount_umol"] = to_float(self.aldehyde_monomer_amount_umol)
-        result["aldehyde_monomer_structure"] = from_str(self.aldehyde_monomer_structure)
-        result["aminoporphyrin_monomer_amount_umol"] = to_float(self.aminoporphyrin_monomer_amount_umol)
-        result["aminoporphyrin_monomer_type"] = from_str(self.aminoporphyrin_monomer_type)
+        result["activation_under_vacuum"] = from_bool(
+            self.activation_under_vacuum)
+        result["activation_with_scCO2"] = from_bool(
+            self.activation_with_sc_co2)
+        result["aldehyde_monomer_amount_umol"] = to_float(
+            self.aldehyde_monomer_amount_umol)
+        result["aldehyde_monomer_structure"] = from_str(
+            self.aldehyde_monomer_structure)
+        result["aminoporphyrin_monomer_amount_umol"] = to_float(
+            self.aminoporphyrin_monomer_amount_umol)
+        result["aminoporphyrin_monomer_type"] = from_str(
+            self.aminoporphyrin_monomer_type)
         result["degassing"] = from_bool(self.degassing)
         result["duration_h"] = to_float(self.duration_h)
-        result["MeOH_in_scCO2_activation"] = from_bool(self.me_oh_in_sc_co2_activation)
-        result["other_additives"] = from_union([from_none, from_str], self.other_additives)
+        result["MeOH_in_scCO2_activation"] = from_bool(
+            self.me_oh_in_sc_co2_activation)
+        result["other_additives"] = from_union(
+            [from_none, from_str], self.other_additives)
         result["solvent_1_name"] = from_str(self.solvent_1__name)
         result["solvent_1_volume_uL"] = to_float(self.solvent_1__volume_u_l)
-        result["solvent_2_name"] = from_union([from_none, from_str], self.solvent_2__name)
+        result["solvent_2_name"] = from_union(
+            [from_none, from_str], self.solvent_2__name)
         result["solvent_2_volume_uL"] = to_float(self.solvent_2__volume_u_l)
         result["temperature_C"] = to_float(self.temperature_c)
         result["vessel"] = from_str(self.vessel)

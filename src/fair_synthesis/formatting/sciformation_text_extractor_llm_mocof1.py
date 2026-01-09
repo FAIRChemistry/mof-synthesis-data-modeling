@@ -6,7 +6,8 @@ from jsonschema import validate, ValidationError
 from .sciformation_text_extractor_mocof1 import fix_inchi_code_for_do, use_more_detailed_reagent_roles
 
 # Load schema from file
-schema_path = Path(__file__).parent / "sciformation_text_extractor_llm_mocof1_experiment_diff.schema.json"
+schema_path = Path(__file__).parent / \
+    "sciformation_text_extractor_llm_mocof1_experiment_diff.schema.json"
 with open(schema_path, "r", encoding="utf-8") as f:
     experiment_diff_schema = json.load(f)
 
@@ -25,7 +26,7 @@ def extract_experiment_diff(realization_text: str):
     with open(instructions_path, "r", encoding="utf-8") as f:
         instructions = f.read()
 
-    messages_content = "You are given the realization text of an experiment. Extract structured information from it according to the ExperimentDiff schema. Only include properties that apply. Further instructions:\n"+ instructions
+    messages_content = "You are given the realization text of an experiment. Extract structured information from it according to the ExperimentDiff schema. Only include properties that apply. Further instructions:\n" + instructions
 
     # print("sending experiment to LLM: ", current_experiment)
 
@@ -82,7 +83,9 @@ def apply_diff(item: dict, diff: dict) -> dict:
                 target_list = target[k]
                 for i, patch_item in enumerate(v):
                     if i < len(target_list):
-                        if isinstance(patch_item, dict) and isinstance(target_list[i], dict):
+                        if isinstance(
+                                patch_item, dict) and isinstance(
+                                target_list[i], dict):
                             merge(target_list[i], patch_item)
                         else:
                             target_list[i] = patch_item
@@ -99,22 +102,23 @@ def apply_diff(item: dict, diff: dict) -> dict:
 
 
 def process_realization_text(data: list):
-    max_process_count = 100000 # put a low value here only for testing purposes
+    max_process_count = 100000  # put a low value here only for testing purposes
     i = 0
     """Loop through experiment array and apply diffs."""
     for item in data:
         i += 1
         if i > max_process_count:
-            print(f"Reached max process count of {max_process_count}, stopping.")
+            print(
+                f"Reached max process count of {max_process_count}, stopping.")
             break
-        if "realizationText" in item and isinstance(item["realizationText"], str):
+        if "realizationText" in item and isinstance(
+                item["realizationText"], str):
             try:
                 print("Processing experiment with index ", i)
                 diff = extract_experiment_diff(item["realizationText"])
                 apply_diff(item, diff)
             except Exception as e:
                 print(f"Error processing item. Cause: {e}")
-
 
 
 def process_data_use_case_specific(data):

@@ -53,12 +53,11 @@ def _():
 @app.cell
 def _(mo):
     procedure_file_path = (
-        mo.notebook_dir() / "../../data/MOCOF-1/converted/procedure_from_sciformation.json"
-    )
+        mo.notebook_dir() /
+        "../../data/MOCOF-1/converted/procedure_from_sciformation.json")
     characterization_file_path = (
-        mo.notebook_dir()
-        / "../../data/MOCOF-1/converted/characterization_from_sciformation.json"
-    )
+        mo.notebook_dir() /
+        "../../data/MOCOF-1/converted/characterization_from_sciformation.json")
     return characterization_file_path, procedure_file_path
 
 
@@ -110,9 +109,12 @@ def _(di, mo, pl):
         .select(
             [
                 pl.col("id"),
-                pl.col("molar_fraction").struct.field("COF-366-Co").alias("COF-366-Co"),
-                pl.col("molar_fraction").struct.field("MOCOF-1").alias("MOCOF-1"),
-                pl.col("molar_fraction").struct.field("amorphous").alias("amorphous"),
+                pl.col("molar_fraction").struct.field(
+                    "COF-366-Co").alias("COF-366-Co"),
+                pl.col("molar_fraction").struct.field(
+                    "MOCOF-1").alias("MOCOF-1"),
+                pl.col("molar_fraction").struct.field(
+                    "amorphous").alias("amorphous"),
             ]
         )
         .sort("id")
@@ -129,7 +131,7 @@ def _(api, procedure: "SynthesisProcedure"):
     for _it in api.get_synthesis_list(procedure):
         try:
             _list.append(_it.metadata.description)
-        except:
+        except BaseException:
             continue
     all_synthesis = _list
     return (all_synthesis,)
@@ -160,11 +162,16 @@ def _(mo, settings):
     - max_half_window: {max_half_window}
     - smooth_half_window: {smooth_half_window}
     """).batch(
-        cu1=mo.ui.number(value=settings["normalization"]["cu_range"][0], step=0.01),
-        cu2=mo.ui.number(value=settings["normalization"]["cu_range"][1], step=0.01),
-        co1=mo.ui.number(value=settings["normalization"]["co_range"][0], step=0.01),
-        co2=mo.ui.number(value=settings["normalization"]["co_range"][1], step=0.01),
-        max_half_window=mo.ui.number(value=settings["correct_baseline"]["max_half_window"]),
+        cu1=mo.ui.number(
+            value=settings["normalization"]["cu_range"][0], step=0.01),
+        cu2=mo.ui.number(
+            value=settings["normalization"]["cu_range"][1], step=0.01),
+        co1=mo.ui.number(
+            value=settings["normalization"]["co_range"][0], step=0.01),
+        co2=mo.ui.number(
+            value=settings["normalization"]["co_range"][1], step=0.01),
+        max_half_window=mo.ui.number(
+            value=settings["correct_baseline"]["max_half_window"]),
         smooth_half_window=mo.ui.number(
             value=settings["correct_baseline"]["smooth_half_window"]
         ),
@@ -216,8 +223,9 @@ def _(id_settings, json, mo, save_button, selection, settings_override):
 @app.cell
 def _(it, settings_override):
     it_measurement = it[0]
-    #it_background_subtracted = it_measurement.subtract_background()
-    it_normalized = it_measurement.normalize(settings_override["normalization"])
+    # it_background_subtracted = it_measurement.subtract_background()
+    it_normalized = it_measurement.normalize(
+        settings_override["normalization"])
     it_baseline_corrected = it_normalized.correct_baseline(
         settings_override["correct_baseline"]
     )
@@ -238,7 +246,7 @@ def _(
         mo.accordion(
             {
                 "Measurement": it_measurement._display_(),
-                #"Background subtracted": it_background_subtracted._display_(),
+                # "Background subtracted": it_background_subtracted._display_(),
                 "Normalized": it_normalized._display_(),
                 "Baseline Corrected": it_baseline_corrected._display_(),
                 "Molar Fractions": it_baseline_corrected.calc_molar_fraction(
@@ -287,7 +295,7 @@ def _(
         # if pxrd_files:
         return (
             PXRDPattern(pxrd_files[0])
-            #.subtract_background()
+            # .subtract_background()
             .normalize(settings["normalization"])
             .correct_baseline(settings["correct_baseline"])
         )
@@ -343,7 +351,7 @@ def _(
             di[_s] = (get_pxrd_spectrum(_s)).calc_molar_fraction(
                 {"COF-366-Co": cof366, "MOCOF-1": mocof1}
             )
-        except:
+        except BaseException:
             di[_s] = None
     return (di,)
 

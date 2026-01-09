@@ -40,7 +40,7 @@ def from_union(fs, x):
     for f in fs:
         try:
             return f(x)
-        except:
+        except BaseException:
             pass
     assert False
 
@@ -119,7 +119,12 @@ class Pxrd:
     sample_holder: SampleHolder
     x_ray_source: XRaySource
 
-    def __init__(self, other_metadata: Optional[str], relative_file_path: str, sample_holder: SampleHolder, x_ray_source: XRaySource) -> None:
+    def __init__(
+            self,
+            other_metadata: Optional[str],
+            relative_file_path: str,
+            sample_holder: SampleHolder,
+            x_ray_source: XRaySource) -> None:
         self.other_metadata = other_metadata
         self.relative_file_path = relative_file_path
         self.sample_holder = sample_holder
@@ -128,16 +133,22 @@ class Pxrd:
     @staticmethod
     def from_dict(obj: Any) -> 'Pxrd':
         assert isinstance(obj, dict)
-        other_metadata = from_union([from_str, from_none], obj.get("OtherMetadata"))
+        other_metadata = from_union(
+            [from_str, from_none], obj.get("OtherMetadata"))
         relative_file_path = from_str(obj.get("RelativeFilePath"))
         sample_holder = SampleHolder.from_dict(obj.get("SampleHolder"))
         x_ray_source = XRaySource(obj.get("XRaySource"))
-        return Pxrd(other_metadata, relative_file_path, sample_holder, x_ray_source)
+        return Pxrd(
+            other_metadata,
+            relative_file_path,
+            sample_holder,
+            x_ray_source)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.other_metadata is not None:
-            result["OtherMetadata"] = from_union([from_str, from_none], self.other_metadata)
+            result["OtherMetadata"] = from_union(
+                [from_str, from_none], self.other_metadata)
         result["RelativeFilePath"] = from_str(self.relative_file_path)
         result["SampleHolder"] = to_class(SampleHolder, self.sample_holder)
         result["XRaySource"] = to_enum(XRaySource, self.x_ray_source)
@@ -180,7 +191,8 @@ class CharacterizationClass:
     def to_dict(self) -> dict:
         result: dict = {}
         result["Pxrd"] = from_list(lambda x: to_class(Pxrd, x), self.pxrd)
-        result["Weight"] = from_list(lambda x: to_class(Weighing, x), self.weight)
+        result["Weight"] = from_list(
+            lambda x: to_class(Weighing, x), self.weight)
         return result
 
 
@@ -188,20 +200,25 @@ class CharacterizationEntry:
     characterization: CharacterizationClass
     experiment_id: str
 
-    def __init__(self, characterization: CharacterizationClass, experiment_id: str) -> None:
+    def __init__(
+            self,
+            characterization: CharacterizationClass,
+            experiment_id: str) -> None:
         self.characterization = characterization
         self.experiment_id = experiment_id
 
     @staticmethod
     def from_dict(obj: Any) -> 'CharacterizationEntry':
         assert isinstance(obj, dict)
-        characterization = CharacterizationClass.from_dict(obj.get("Characterization"))
+        characterization = CharacterizationClass.from_dict(
+            obj.get("Characterization"))
         experiment_id = from_str(obj.get("ExperimentId"))
         return CharacterizationEntry(characterization, experiment_id)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Characterization"] = to_class(CharacterizationClass, self.characterization)
+        result["Characterization"] = to_class(
+            CharacterizationClass, self.characterization)
         result["ExperimentId"] = from_str(self.experiment_id)
         return result
 
@@ -211,18 +228,23 @@ class Characterization:
 
     product_characterization: List[CharacterizationEntry]
 
-    def __init__(self, product_characterization: List[CharacterizationEntry]) -> None:
+    def __init__(
+            self,
+            product_characterization: List[CharacterizationEntry]) -> None:
         self.product_characterization = product_characterization
 
     @staticmethod
     def from_dict(obj: Any) -> 'Characterization':
         assert isinstance(obj, dict)
-        product_characterization = from_list(CharacterizationEntry.from_dict, obj.get("ProductCharacterization"))
+        product_characterization = from_list(
+            CharacterizationEntry.from_dict,
+            obj.get("ProductCharacterization"))
         return Characterization(product_characterization)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["ProductCharacterization"] = from_list(lambda x: to_class(CharacterizationEntry, x), self.product_characterization)
+        result["ProductCharacterization"] = from_list(lambda x: to_class(
+            CharacterizationEntry, x), self.product_characterization)
         return result
 
 

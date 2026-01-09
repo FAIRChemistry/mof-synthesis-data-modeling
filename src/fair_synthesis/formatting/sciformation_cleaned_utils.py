@@ -8,6 +8,7 @@ from fair_synthesis.formatting.utils import query_compound_from_pub_chem
 
 cached_inchis = {}
 
+
 def get_inchi(reaction_component: ReactionComponent) -> str | None:
     if reaction_component.inchi:
         return reaction_component.inchi
@@ -21,12 +22,14 @@ def get_inchi(reaction_component: ReactionComponent) -> str | None:
     result = "None"
 
     if reaction_component.smiles:
-        pub_chem_compound = query_compound_from_pub_chem(reaction_component.smiles)
+        pub_chem_compound = query_compound_from_pub_chem(
+            reaction_component.smiles)
         if pub_chem_compound:
             result = pub_chem_compound.inchi
 
     cached_inchis[reaction_component.smiles] = result
     return result
+
 
 def time_to_seconds(time: float, time_unit: Unit) -> float:
     if time_unit == Unit.S:
@@ -40,7 +43,11 @@ def time_to_seconds(time: float, time_unit: Unit) -> float:
     else:
         return time
 
-def time_to_target_format(time: float, time_unit_source: Unit, time_unit_target: Unit) -> float:
+
+def time_to_target_format(
+        time: float,
+        time_unit_source: Unit,
+        time_unit_target: Unit) -> float:
     time_in_seconds = time_to_seconds(time, time_unit_source)
     if time_unit_target == Unit.S:
         return time_in_seconds
@@ -52,6 +59,7 @@ def time_to_target_format(time: float, time_unit_source: Unit, time_unit_target:
         return time_in_seconds / 86400
     else:
         raise ValueError(f"Unknown target time unit: {time_unit_target}")
+
 
 def mass_to_gram(mass: float, mass_unit: MassUnit) -> float:
     if mass_unit == MassUnit.UG:
@@ -65,7 +73,11 @@ def mass_to_gram(mass: float, mass_unit: MassUnit) -> float:
     else:
         raise ValueError("Unknown mass unit")
 
-def mass_to_target_format(mass: float, mass_unit_source: MassUnit, mass_unit_target: MassUnit) -> float:
+
+def mass_to_target_format(
+        mass: float,
+        mass_unit_source: MassUnit,
+        mass_unit_target: MassUnit) -> float:
     mass_in_gram = mass_to_gram(mass, mass_unit_source)
     if mass_unit_target == MassUnit.MG:
         return mass_in_gram * 1000
@@ -78,7 +90,10 @@ def mass_to_target_format(mass: float, mass_unit_source: MassUnit, mass_unit_tar
     else:
         raise ValueError(f"Unknown target mass unit: {mass_unit_target}")
 
-def find_reaction_components(experiment: Experiment, rxn_type: RxnRole) -> List[ReactionComponent]:
+
+def find_reaction_components(
+        experiment: Experiment,
+        rxn_type: RxnRole) -> List[ReactionComponent]:
     results = []
     for component in experiment.reaction_components:
         if component.rxn_role.value == rxn_type.value:
