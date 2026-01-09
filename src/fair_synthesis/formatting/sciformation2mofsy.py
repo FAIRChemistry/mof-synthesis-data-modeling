@@ -217,7 +217,7 @@ def format_length(length: str) -> AmountCharacterization:
 def sciformation2mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
     file_path = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    pxrd_folder = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'pxrd')
+    pxrd_folder = os.path.join(current_file_dir, '../../..', 'data', 'MOCOF-1', 'PXRD')
     pxrd_folder_relative = rel_path = os.path.relpath(pxrd_folder, os.getcwd())
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
     print("Cleaned data: " + str(cleaned_eln))
