@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.6"
+__generated_with = "0.19.0"
 app = marimo.App(width="medium")
 
 
@@ -340,25 +340,33 @@ def _(df_selected, px):
     )
 
     _fig.update_traces(marker=dict(size=4))
+    fontsize = 28
     _fig.update_layout(
         scene_aspectmode="cube",
         scene=dict(
             xaxis=dict(
-                title=dict(text="Aldehyde equiv", font=dict(size=18)),
-                tickfont=dict(size=14)
+                title=dict(text="Aldehyde equiv", font=dict(size=fontsize)),
+                tickfont=dict(size=fontsize*0.6),
+                type="log",
+                nticks=3,
             ),
             yaxis=dict(
-                title=dict(text="Water equiv", font=dict(size=18)),
-                tickfont=dict(size=14)
+                title=dict(text="Water equiv", font=dict(size=fontsize)),
+                tickfont=dict(size=fontsize*0.55),
+                type="log",
+                exponentformat="power",
+                nticks=3,
+                autorange=False,     # disable automatic range
+                range=[0.9, 3]
             ),
             zaxis=dict(
-                title=dict(text="Yield of MOCOF-1", font=dict(size=18)),
-                tickfont=dict(size=14)
+                title=dict(text="MOCOF-1 yield", font=dict(size=fontsize)),
+                tickfont=dict(size=fontsize*0.6),
+                nticks=4
             )
         ),
         width=900,
         height=700,
-        font=dict(size=16)
     )
 
     from scipy.spatial import ConvexHull
@@ -572,7 +580,7 @@ def _(ConvexHull, alt, df_selected, np, pl):
             x=alt.X('acid_pKa_DMSO', type='quantitative',
                     title='Acid pKa(DMSO)'),
             y=alt.Y('yield_MOCOF-1', type='quantitative',
-                    title='Yield of MOCOF-1'),
+                    title='MOCOF-1 yield'),
             tooltip=[
                 alt.Tooltip('acid_name'),
                 alt.Tooltip('id'),
@@ -591,9 +599,8 @@ def _(ConvexHull, alt, df_selected, np, pl):
 
     _final_chart = (
         (_hull_line + _scatter)
-        .properties(width=140, height=140)
-        .configure_axis(labelFontSize=8, titleFontSize=8)
-        .configure_legend(labelFontSize=8, titleFontSize=8)
+        .properties(width=285, height=110)
+        .configure_axis(labelFontSize=8, titleFontSize=10, titleFontWeight='normal')
     )
     _final_chart
     return

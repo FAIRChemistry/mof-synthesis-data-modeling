@@ -99,6 +99,8 @@ def plot_decision_tree_dtreeviz(
         max_depth,
         target_label,
         plots_dir: Path):
+    # Plot with statistics. Suitable for small trees
+
     # Get original feature names from the ColumnTransformer
     raw_feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
@@ -137,8 +139,11 @@ def plot_decision_tree_dtreeviz(
         histtype="barstacked",
         show_node_labels=False,
         show_just_path=False,
+        label_fontsize=14,
+        ticks_fontsize=14,
         depth_range_to_display=(0, max_depth),
-        scale=1.0,
+        scale=1,
+        #orientation="LR"
     )
     outfile = plots_dir / f"{label}.svg"
     v_subset.save(str(outfile))
