@@ -19,6 +19,8 @@ import pandas as pd
 pd.set_option("display.max_rows", None)
 
 BASE = Path(__file__).parents[1]  # repository root
+output_dir = BASE / "output"
+output_dir.mkdir(parents=True, exist_ok=True)
 
 TASK_IS_CLASSIFICATION = True  # Classification vs. Regression
 RANGE_TREE = False  # unused now
@@ -250,7 +252,7 @@ if DEDUPLICATE:
 
     print(f"Final shapes: X={X.shape}, y={y.shape}")
 
-X.to_csv("decision-tree_input.csv", index=False)
+X.to_csv(output_dir / "Decision-tree_input.csv", index=False)
 X = X.drop(columns=["id", MODEL_TARGET])
 
 label_encoder = LabelEncoder()
@@ -341,11 +343,11 @@ for name, imp in sorted(
     print(f"{name}: {imp:.4f}")
 print("\n")
 
-# Confusion matrix (classification scoring matrix)
+# Confusion matrix (classification scoring matrix). Unused now
 # plot_confusion_matrix(y_encoded, y_pred_cv, class_names_ordered)
 
 plot_decision_tree_graphviz(
-    "Decision-tree_full", clf_l, feature_names_l, max_depth=10000000)
+    "Decision-tree_full", clf_l, feature_names_l, max_depth=10000000, plots_dir=output_dir)
 plot_decision_tree_dtreeviz(
     "Decision-tree_{}-levels".format(MAX_DEPTH),
     clf,
@@ -354,4 +356,5 @@ plot_decision_tree_dtreeviz(
     y_encoded,
     class_names_ordered,
     MAX_DEPTH,
-    MODEL_TARGET_LABEL)
+    MODEL_TARGET_LABEL,
+    plots_dir=output_dir)

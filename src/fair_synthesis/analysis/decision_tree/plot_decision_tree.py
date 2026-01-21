@@ -1,6 +1,7 @@
 import re
 import dtreeviz
 import graphviz
+from pathlib import Path
 from sklearn.tree import export_graphviz
 from sklearn.tree import plot_tree
 import matplotlib.pyplot as plt
@@ -22,7 +23,7 @@ def plot_decision_tree_matplotlib(label, clf, feature_names):  # unused now
     plt.savefig(label + ".pdf", format="pdf", dpi=300, bbox_inches="tight")
 
 
-def plot_decision_tree_graphviz(label, clf, feature_names, max_depth):
+def plot_decision_tree_graphviz(label, clf, feature_names, max_depth, plots_dir: Path):
     # customized export using graphviz, suitable for full tree
     dot = export_graphviz(
         clf,
@@ -85,7 +86,7 @@ def plot_decision_tree_graphviz(label, clf, feature_names, max_depth):
     # plot
     graph = graphviz.Source(dot)
     graph.format = "pdf"
-    graph.render(label, cleanup=True)
+    graph.render(label, directory=str(plots_dir), cleanup=True)
 
 
 def plot_decision_tree_dtreeviz(
@@ -96,7 +97,8 @@ def plot_decision_tree_dtreeviz(
         y_encoded,
         class_names_ordered,
         max_depth,
-        target_label):
+        target_label,
+        plots_dir: Path):
     # Get original feature names from the ColumnTransformer
     raw_feature_names = model.named_steps["preprocess"].get_feature_names_out()
 
@@ -138,4 +140,6 @@ def plot_decision_tree_dtreeviz(
         depth_range_to_display=(0, max_depth),
         scale=1.0,
     )
-    v_subset.save(label + ".svg")
+    outfile = plots_dir / f"{label}.svg"
+    v_subset.save(str(outfile))
+    outfile.with_suffix("").unlink()
