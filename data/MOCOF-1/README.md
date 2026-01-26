@@ -12,10 +12,9 @@ Search with certain parameters
 Paste it into the address bar. Change the "startUseCase?useCase=performSearch&" in the beginning to "performSearch?". Add "format=jsonRaw" at the end. Open the URL. (It takes time for large data)
 Save the JSON data.
 
-## [generated](converted/)
+## [converted](converted/)
 
-Converting to the MOFSY format
-For the conversion to the MOFSY format, see the [data model folder README](../../fairsynthesis_data_model/).
+Contains the formatted, validated, and serialized data in the MOFSY, XDL and MPIF formats (JSON, XDL, MPIF).
 
 ## [PXRD](./PXRD/)
 

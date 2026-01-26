@@ -9,7 +9,7 @@ from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProc
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
     SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
     Unit as UnitCharacterization, Pxrd, SampleHolderType
-from fair_synthesis.generated_apis.mil_json_from_excel_data_structure import Mil
+from fair_synthesis.generated_apis.fe_terephthalate_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
@@ -337,18 +337,18 @@ def format_length(length: str) -> AmountCharacterization:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-def mil2mofsy():
+def fe_terephthalate2Mofsy():
     current_file_dir = __file__.rsplit('/', 1)[0]
     repo_root_path = os.path.join(current_file_dir, '../../..')
     file_path = os.path.join(repo_root_path, 'data',
-                             'Fe–terephthalate', 'converted', 'MIL.json')
+                             'Fe–terephthalate', 'converted', 'Fe–terephthalate.json')
     pxrd_folder = os.path.join(
         repo_root_path, 'data', 'Fe–terephthalate', 'PXRD')
     mil = load_json(file_path)
 
     # Validate data according to schema
     validate(instance=mil, schema=load_json(os.path.join(
-        repo_root_path, 'data_model', 'MIL.schema.json')))
+        repo_root_path, 'data_model', 'Fe–terephthalate.schema.json')))
 
     procedure, characterization = convert_mil_2_json_from_excel_to_mofsy(
         Mil.from_dict(mil), pxrd_folder, repo_root_path)
@@ -357,13 +357,13 @@ def mil2mofsy():
         'data',
         'Fe–terephthalate',
         'converted',
-        'procedure_from_MIL.json')
+        'procedure_from_Fe–terephthalate.json')
     result_file_path_characterization = os.path.join(
         repo_root_path,
         'data',
         'Fe–terephthalate',
         'converted',
-        'characterization_from_MIL.json')
+        'characterization_from_Fe–terephthalate.json')
     result_dict_procedure = procedure.to_dict()
     result_dict_characterization = characterization.to_dict()
     # print("Procedure Result: " + str(result_dict_mofsy))
@@ -387,4 +387,4 @@ def mil2mofsy():
 
 
 if __name__ == '__main__':
-    mil2mofsy()
+    fe_terephthalate2Mofsy()

@@ -390,8 +390,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 }
 
 // Fe–terephthalate
-let inputProcedure = path.join(dataDirectory, "Fe–terephthalate", "converted", "procedure_from_MIL.json");
-let inputCharacterization = path.join(dataDirectory, "Fe–terephthalate", "converted", "characterization_from_MIL.json");
+let inputProcedure = path.join(dataDirectory, "Fe–terephthalate", "converted", "procedure_from_Fe–terephthalate.json");
+let inputCharacterization = path.join(dataDirectory, "Fe–terephthalate", "converted", "characterization_from_Fe–terephthalate.json");
 let outputFolder = path.join(dataDirectory, "Fe–terephthalate", "converted", "mpif_outputs");
 let paramsFile = path.join(dataDirectory, "Fe–terephthalate", "mpif_params.json");
 const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");

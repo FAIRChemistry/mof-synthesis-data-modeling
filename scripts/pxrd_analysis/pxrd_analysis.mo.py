@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.6"
+__generated_with = "0.19.0"
 app = marimo.App(width="medium")
 
 
@@ -141,6 +141,7 @@ def _(api, procedure: "SynthesisProcedure"):
 def _(mo, overview_selection):
     mo.stop(len(overview_selection.value) < 1)
     selection = overview_selection.value["id"].first()
+    print(str(selection))
     mo.md(f"# Insight into {selection}")
     return (selection,)
 
@@ -354,6 +355,21 @@ def _(
         except BaseException:
             di[_s] = None
     return (di,)
+
+
+@app.cell
+def _():
+    return
+
+
+@app.cell
+def _():
+    return
+
+
+@app.cell
+def _():
+    return
 
 
 @app.cell

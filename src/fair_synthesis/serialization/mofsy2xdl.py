@@ -117,7 +117,7 @@ def mofsy2xdl():
         'data',
         'Fe–terephthalate',
         'converted',
-        'procedure_from_MIL.json')
+        'procedure_from_Fe–terephthalate.json')
     xml = convert_mofsy_procedure_to_xdl_string(
         SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
     # print("XML Result: " + xml)
@@ -129,7 +129,7 @@ def mofsy2xdl():
             'data',
             'Fe–terephthalate',
             'converted',
-            'xdl_from_MIL.xml'))
+            'xdl_from_Fe–terephthalate.xml'))
 
 
 if __name__ == '__main__':
