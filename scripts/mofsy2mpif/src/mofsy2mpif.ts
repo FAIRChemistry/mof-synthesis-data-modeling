@@ -161,15 +161,15 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     let productAmountUnit = mpifParams.productInfo.productAmountUnit;
     if (productWeight && productWeight.length>0) {
         const lastWeight = productWeight[productWeight.length -1];
-        productAmount = lastWeight.Weight.Unit;
-        productAmountUnit = lastWeight.Weight.Value;
+        productAmount = lastWeight.Weight.Value;
+        productAmountUnit = lastWeight.Weight.Unit;
         // shorten unit if needed
-        if (productAmount === "gram") {
-            productAmount = 'g';
-        } else if (productAmount === "milligram") {
-            productAmount = 'mg';
-        } else if (productAmount === "milliliter") {
-            productAmount = 'mL';
+        if (productAmountUnit === "gram") {
+            productAmountUnit = 'g';
+        } else if (productAmountUnit === "milligram") {
+            productAmountUnit = 'mg';
+        } else if (productAmountUnit === "milliliter") {
+            productAmountUnit = 'mL';
         }
     }
 

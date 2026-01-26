@@ -42,8 +42,8 @@ _mpif_synthesis_react_note
 ;
 
 ;
-_mpif_synthesis_product_amount	mg
-_mpif_synthesis_product_amount_unit	'6.54'
+_mpif_synthesis_product_amount	6.54
+_mpif_synthesis_product_amount_unit	'mg'
 _mpif_synthesis_scale	'milligram'
 _mpif_synthesis_safety_note
 ;
