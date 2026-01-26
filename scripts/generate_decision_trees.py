@@ -19,7 +19,7 @@ import pandas as pd
 pd.set_option("display.max_rows", None)
 
 BASE = Path(__file__).parents[1]  # repository root
-output_dir = BASE / "scripts" / "decision_tree_results"
+output_dir = BASE / "decision_tree_results"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 TASK_IS_CLASSIFICATION = True  # Classification vs. Regression
