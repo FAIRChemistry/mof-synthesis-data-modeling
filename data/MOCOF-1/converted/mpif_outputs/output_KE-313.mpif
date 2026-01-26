@@ -1,5 +1,5 @@
 data_MOCOF-1 synthesis trial
-_mpif_audit_creation_date	2026-01-09
+_mpif_audit_creation_date	2026-01-26
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'success'
@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 17.59 micromole of Terephthalaldehyde. Add 836.06 micromole of Benzoic acid. Add 598.5 micromole of Wasser. Add 1000 microlitre of PhNO2. Add 1667 microlitre of DO. Evacuate and refill with Ar. 
 reaction	Reaction	Air	Heat/Chill to 120 celsius for 70 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry for  . 
+workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry. 
 
 #Characterization Information
 

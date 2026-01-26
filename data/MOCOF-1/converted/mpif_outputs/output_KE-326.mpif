@@ -1,5 +1,5 @@
 data_MOCOF-1 synthesis trial
-_mpif_audit_creation_date	2026-01-09
+_mpif_audit_creation_date	2026-01-26
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'success'
@@ -102,7 +102,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 80 micromole of Co(tdpp). Add 160 micromole of Terephthalaldehyde. Add 4839.99 micromole of 2-Chloro-4-nitrophenol. Add 7200 micromole of Water. Add 294 microlitre of m-DNB. Add 932 microlitre of PhNO2. Add 2784.962 microlitre of DO. Evacuate and refill with Ar. 
 reaction	Reaction	Air	Heat/Chill to 120 celsius for 70 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry for  . 
+workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry. 
 
 #Characterization Information
 

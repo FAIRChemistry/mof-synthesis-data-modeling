@@ -93,7 +93,11 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 result += `Heat/Chill to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Dry:
-                result += `Dry for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
+                if (step._time && step._time.Value) {
+                    result += `Dry for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
+                } else {
+                    result += `Dry. `;
+                }
                 break;
             case XMLType.EvacuateAndRefill:
                 result += `Evacuate and refill with ${step._gas || ''}. `;
