@@ -24,7 +24,7 @@ import {
     StepEntryObject,
     XMLType
 } from "./generated/procedure";
-import { MPIFParameters, Convert as ConvertToMpifParams} from "./generated/mpif_params"
+import {Convert as ConvertToMpifParams, MPIFParameters, ReactionAtmosphere} from "./generated/mpif_params"
 import * as fs from 'fs';
 import path from "path";
 import Ajv from 'ajv';
@@ -90,7 +90,8 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 result += `Add ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''} of ${step._reagent || step._solvent}. `;
                 break;
             case XMLType.HeatChill:
-                result += `Heat/Chill to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
+                const verb = (step._temp && step._temp.Value && step._temp.Value > 25) ? "Heat" : "Chill";
+                result += `${verb} to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Dry:
                 if (step._time && step._time.Value) {
@@ -100,7 +101,7 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 }
                 break;
             case XMLType.EvacuateAndRefill:
-                result += `Evacuate and refill with ${step._gas || ''}. `;
+                result += `Degas the reaction mixture. `; // specific to MOCOF-1 case, otherwise: Evacuate and refill with ${step._gas || ''}
                 break;
             case XMLType.Wait:
                 result += `Wait for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
@@ -155,7 +156,22 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     }
     const char = correspondingCharacterization.Characterization;
 
-    const productName = synthesisEntry.Metadata._product || 'unknown_product';
+    const productWeight = char.Weight
+    let productAmount = mpifParams.productInfo.productAmount;
+    let productAmountUnit = mpifParams.productInfo.productAmountUnit;
+    if (productWeight && productWeight.length>0) {
+        const lastWeight = productWeight[productWeight.length -1];
+        productAmount = lastWeight.Weight.Unit;
+        productAmountUnit = lastWeight.Weight.Value;
+        // shorten unit if needed
+        if (productAmount === "gram") {
+            productAmount = 'g';
+        } else if (productAmount === "milligram") {
+            productAmount = 'mg';
+        } else if (productAmount === "milliliter") {
+            productAmount = 'mL';
+        }
+    }
 
     let reactionTemp = -1;
     let reactionTime = -1;
@@ -261,7 +277,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         creationDate: new Date().toISOString().split('T')[0],
         generatorVersion: mpifParams.metadata.generatorVersion,
         publicationDOI: mpifParams.metadata.publicationDOI,
-        procedureStatus: 'success',
+        procedureStatus: mpifParams.metadata.procedureStatus,
         name: mpifParams.metadata.name,
         email: mpifParams.metadata.email,
         orcid: mpifParams.metadata.orcid,
@@ -272,7 +288,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     const productInfo: ProductInfo = {
         type: mpifParams.productInfo.type,
         casNumber: mpifParams.productInfo.casNumber,
-        commonName: mpifParams.productInfo.commonName || productName,
+        commonName: mpifParams.productInfo.commonName || '',
         systematicName: mpifParams.productInfo.systematicName,
         formula: mpifParams.productInfo.formula,
         formulaWeight: mpifParams.productInfo.formulaWeight,
@@ -283,6 +299,10 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         cif: mpifParams.productInfo.cif
     }
 
+    // reaction atmosphere: if a step EvacuateAndRefill is present in the reaction steps, use vacuum, otherwise use air
+    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject, XMLType.EvacuateAndRefill);
+    const reactionAtmosphere = evacuateStep ? ReactionAtmosphere.Vacuum : ReactionAtmosphere.Air;
+
     const synthesisGeneral: SynthesisGeneral = {
         performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || "undefined",
         labTemperature: mpifParams.synthesisGeneral.labTemperature,
@@ -292,11 +312,11 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         temperatureController: mpifParams.synthesisGeneral.temperatureController,
         reactionTime: reactionTime,
         reactionTimeUnit: reactionTimeUnit,
-        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere,
-        reactionContainer: vessel._name || 'unknown_container',
+        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || reactionAtmosphere,
+        reactionContainer: vessel._id || 'unknown_container',
         reactionNote: reactionNote,
-        productAmount: mpifParams.productInfo.productAmount,
-        productAmountUnit: mpifParams.productInfo.productAmountUnit,
+        productAmount: productAmount,
+        productAmountUnit: productAmountUnit,
         productYield: mpifParams.productInfo.productYield,
         scale: mpifParams.synthesisGeneral.scale,
     }
@@ -311,7 +331,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         {
             id: 'reaction',
             type: 'Reaction',
-            atmosphere: mpifParams.steps.reactionAtmosphere || 'Air',
+            // use the reaction atmosphere determined above unless overridden in the mpifParams. Make first character upper case
+            atmosphere: mpifParams.steps.reactionAtmosphere || (reactionAtmosphere.toString().charAt(0).toUpperCase() + reactionAtmosphere.toString().slice(1).toLowerCase()) as 'Air' | 'Vacuum',
             detail: reaction_details
         },
         {

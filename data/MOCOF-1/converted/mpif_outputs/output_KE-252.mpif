@@ -2,7 +2,7 @@ data_MOCOF-1 synthesis trial
 _mpif_audit_creation_date	2026-01-26
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
-_mpif_audit_procedure_status	'success'
+_mpif_audit_procedure_status	'test'
 
 #Section 1: Author details
 _mpif_audit_contact_author_name	'Endo, Kenichi'
@@ -15,7 +15,7 @@ _mpif_audit_contact_author_phone	?
 _mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
-_mpif_product_name_common	'unknown_product'
+_mpif_product_name_common	''
 _mpif_product_name_systematic	''
 _mpif_product_formula	''
 _mpif_product_formula_weight	
@@ -36,14 +36,14 @@ _mpif_synthesis_react_temperature_C	120
 _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	64
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	'undefined'
-_mpif_synthesis_react_container	'unknown_container'
+_mpif_synthesis_react_atmosphere	'vacuum'
+_mpif_synthesis_react_container	'Schlenk bomb'
 _mpif_synthesis_react_note
 ;
 
 ;
-_mpif_synthesis_product_amount	undefined
-_mpif_synthesis_product_amount_unit	'undefined'
+_mpif_synthesis_product_amount	mg
+_mpif_synthesis_product_amount_unit	'10.39'
 _mpif_synthesis_scale	'milligram'
 _mpif_synthesis_safety_note
 ;
@@ -100,8 +100,8 @@ _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 26.91 micromole of Terephthalaldehyde. Add 1197 micromole of Water. Add 405.64 micromole of 2-Chloro-4-nitrophenol. Add 48.8 microlitre of m-DNB. Add 155 microlitre of PhNO2. Add 463 microlitre of DO. Evacuate and refill with Ar. 
-reaction	Reaction	Air	Heat/Chill to 120 celsius for 64 hour. 
+preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 26.91 micromole of Terephthalaldehyde. Add 1197 micromole of Water. Add 405.64 micromole of 2-Chloro-4-nitrophenol. Add 48.8 microlitre of m-DNB. Add 155 microlitre of PhNO2. Add 463 microlitre of DO. Degas the reaction mixture. 
+reaction	Reaction	Vacuum	Heat to 120 celsius for 64 hour. 
 workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . 
 
 #Characterization Information

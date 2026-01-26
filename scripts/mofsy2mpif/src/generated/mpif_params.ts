@@ -77,7 +77,7 @@ export enum Type {
 
 export interface Steps {
     preparationAtmosphere: PreparationAtmosphere;
-    reactionAtmosphere:    PreparationAtmosphere;
+    reactionAtmosphere?:   PreparationAtmosphere;
     workupAtmosphere:      PreparationAtmosphere;
     [property: string]: any;
 }
@@ -346,7 +346,7 @@ const typeMap: any = {
     ], "any"),
     "Steps": o([
         { json: "preparationAtmosphere", js: "preparationAtmosphere", typ: r("PreparationAtmosphere") },
-        { json: "reactionAtmosphere", js: "reactionAtmosphere", typ: r("PreparationAtmosphere") },
+        { json: "reactionAtmosphere", js: "reactionAtmosphere", typ: u(undefined, r("PreparationAtmosphere")) },
         { json: "workupAtmosphere", js: "workupAtmosphere", typ: r("PreparationAtmosphere") },
     ], "any"),
     "SynthesisGeneral": o([

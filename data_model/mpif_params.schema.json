@@ -27,7 +27,6 @@
       },
       "required": [
         "preparationAtmosphere",
-        "reactionAtmosphere",
         "workupAtmosphere"
       ],
       "$defs": {

@@ -2,7 +2,7 @@ data_Fe–terephthalate MOF synthesis
 _mpif_audit_creation_date	2026-01-26
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
-_mpif_audit_procedure_status	'success'
+_mpif_audit_procedure_status	'test'
 
 #Section 1: Author details
 _mpif_audit_contact_author_name	'Ciftci, Esengul'
@@ -15,7 +15,7 @@ _mpif_audit_contact_author_phone	?
 _mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
-_mpif_product_name_common	'MIL-88B+MIL101 (mix phases)'
+_mpif_product_name_common	''
 _mpif_product_name_systematic	''
 _mpif_product_formula	''
 _mpif_product_formula_weight	
@@ -37,7 +37,7 @@ _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	3
 _mpif_synthesis_react_time_unit	'days'
 _mpif_synthesis_react_atmosphere	'air'
-_mpif_synthesis_react_container	'unknown_container'
+_mpif_synthesis_react_container	'S-4'
 _mpif_synthesis_react_note
 ;
 In: oven
@@ -99,7 +99,7 @@ _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 1 millimole of FeCl3·6H2O. Add 1 millimole of Benzene-1,4-dicarboxylic acid. Add 5 millilitre of DMF. 
-reaction	Reaction	Air	Sonicate for 30 minute. Heat/Chill to 120 celsius for 3 day. 
+reaction	Reaction	Air	Sonicate for 30 minute. Heat to 120 celsius for 3 day. 
 workup	Work-up	Air	Wash solid with EtOH  . Dry for 1 day. 
 
 #Characterization Information

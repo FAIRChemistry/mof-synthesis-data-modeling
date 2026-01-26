@@ -2,7 +2,7 @@ data_MOCOF-1 synthesis trial
 _mpif_audit_creation_date	2026-01-26
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
-_mpif_audit_procedure_status	'success'
+_mpif_audit_procedure_status	'test'
 
 #Section 1: Author details
 _mpif_audit_contact_author_name	'Endo, Kenichi'
@@ -15,7 +15,7 @@ _mpif_audit_contact_author_phone	?
 _mpif_product_type	'porous framework material'
 _mpif_product_cas	?
 _mpif_product_ccdc	''
-_mpif_product_name_common	'unknown_product'
+_mpif_product_name_common	''
 _mpif_product_name_systematic	''
 _mpif_product_formula	''
 _mpif_product_formula_weight	
@@ -36,14 +36,14 @@ _mpif_synthesis_react_temperature_C	120
 _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	72
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	'undefined'
-_mpif_synthesis_react_container	'unknown_container'
+_mpif_synthesis_react_atmosphere	'air'
+_mpif_synthesis_react_container	'microwave vial'
 _mpif_synthesis_react_note
 ;
 
 ;
-_mpif_synthesis_product_amount	undefined
-_mpif_synthesis_product_amount_unit	'undefined'
+_mpif_synthesis_product_amount	mg
+_mpif_synthesis_product_amount_unit	'12.07'
 _mpif_synthesis_scale	'milligram'
 _mpif_synthesis_safety_note
 ;
@@ -100,7 +100,7 @@ _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.5 micromole of KE-018. Add 40.5 micromole of 2,5-Dimethoxybenzene-1,4-dicarboxaldehyde. Add 507.519 microlitre of nBuOH. Add 507.519 microlitre of oDCB. Add 726.84 micromole of CH3COOH. Add 4618.93 micromole of H2O. 
-reaction	Reaction	Air	Heat/Chill to 120 celsius for 72 hour. 
+reaction	Reaction	Air	Heat to 120 celsius for 72 hour. 
 workup	Work-up	Air	Wash solid with acetone  . Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
 
 #Characterization Information
