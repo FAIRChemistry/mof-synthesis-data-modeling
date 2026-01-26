@@ -1,10 +1,10 @@
 import json
 import os.path
 
-import fairsynthesis_data_model.mofsy_api as api
-from fairsynthesis_data_model.generated.procedure_data_structure import SynthesisProcedure
-from fairsynthesis_data_model.generated.characterization_data_structure import Characterization
-from fairsynthesis_data_model.generated.mocof_1_params import Mocof1Param
+import fair_synthesis.formatting.mofsy_api as api
+from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure
+from fair_synthesis.generated_apis.characterization_data_structure import Characterization
+from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
 
 current_file_dir = __file__.rsplit('/', 1)[0]
 procedure_file_path = os.path.join(
