@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.61 micromole of KE-185. Add 13.6 micromole of Terephthalaldehyde. Add 404.66 micromole of 2,4-Dinitrophenol. Add 1224.31 micromole of Wasser. Add 170.81 microlitre of oDCB. Add 511.407 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 120 celsius for 70 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

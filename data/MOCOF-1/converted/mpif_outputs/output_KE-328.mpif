@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 26.6 micromole of Terephthalaldehyde. Add 427.45 micromole of Benzoic acid. Add 598.5 micromole of Water. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 120 celsius for 70 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . Dry. 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with MeOH. Wash solid with scCO2. Dry. 
 
 #Characterization Information
 

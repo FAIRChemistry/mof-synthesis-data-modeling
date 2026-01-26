@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 52.89 micromole of ASR-118. Add 105.78 micromole of Terephthalaldehyde. Add 2379.99 micromole of Wasser. Add 1564.04 micromole of Benzoic acid. Add 661.853 microlitre of PhNO2. Add 1984.567 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 120 celsius for 64 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

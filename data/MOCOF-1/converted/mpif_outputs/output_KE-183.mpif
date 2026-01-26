@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.91 micromole of KE-160. Add 27.82 micromole of Terephthalaldehyde. Add 433.18 micromole of Benzoic acid. Add 626.01 micromole of Wasser. Add 174.677 microlitre of PhNO2. Add 522.984 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 120 celsius for 68 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

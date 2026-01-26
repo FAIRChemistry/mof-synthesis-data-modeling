@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 26.87 micromole of KE-039. Add 57.5 micromole of PDA. Add 799.23 micromole of Benzoic acid. Add 4788 micromole of Wasser. Add 333 microlitre of TMB. Add 1000 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 120 celsius for 72 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wait for 24 hour. Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wait for 24 hour. Wash solid with scCO2. 
 
 #Characterization Information
 

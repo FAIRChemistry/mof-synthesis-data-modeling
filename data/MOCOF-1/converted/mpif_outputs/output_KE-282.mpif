@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 14.32 micromole of KE-279. Add 29.08 micromole of Terephthalaldehyde. Add 598.5 micromole of Water. Add 416.93 micromole of 4-Nitrophenol. Add 222 microlitre of m-DNB. Add 444 microlitre of DO. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 150 celsius for 72 hour. 
-workup	Work-up	Air	Wash solid with NaCl aq  . Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with NaCl aq. Wash solid with DMF. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

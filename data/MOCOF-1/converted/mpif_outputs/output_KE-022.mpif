@@ -101,7 +101,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 12.6 micromole of KE-018. Add 37.8 micromole of 2,5-Dimethoxybenzene-1,4-dicarboxaldehyde. Add 473.684 microlitre of C4H8O2. Add 473.684 microlitre of oDCB. Add 678.38 micromole of CH3COOH. Add 4311 micromole of H2O. 
 reaction	Reaction	Air	Heat to 120 celsius for 72 hour. 
-workup	Work-up	Air	Wash solid with acetone  . Wash solid with DMF  . Wash solid with CHCl3  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with acetone. Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

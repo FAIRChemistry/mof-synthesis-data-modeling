@@ -113,7 +113,7 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 result += `Sonicate for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.WashSolid:
-                result += `Wash solid with ${step._solvent || ''} ${step._amount ? step._amount.Value : ''} ${step._amount ? step._amount.Unit : ''}. `;
+                result += `Wash solid with ${step._solvent || ''}${step._amount ? " " + step._amount.Value : ''}${step._amount ? " "+ step._amount.Unit : ''}. `;
                 break;
 
 

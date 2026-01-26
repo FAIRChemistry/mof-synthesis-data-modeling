@@ -102,7 +102,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 26.6 micromole of Terephthalaldehyde. Add 1795.5 micromole of Water. Add 805.11 micromole of 4-Nitrophenol. Add 48.8 microlitre of m-DNB. Add 463 microlitre of DO. Add 155 microlitre of PhNO2. Degas the reaction mixture. 
 reaction	Reaction	Vacuum	Heat to 150 celsius for 71 hour. 
-workup	Work-up	Air	Wash solid with DMF  . Wash solid with MeOH  . Wash solid with scCO2  . 
+workup	Work-up	Air	Wash solid with DMF. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information
 

@@ -100,7 +100,7 @@ _mpif_procedure_atmosphere
 _mpif_procedure_detail
 preparation	Preparation	Air	Add 0.4 millimole of FeCl3. Add 0.4 millimole of Benzene-1,4-dicarboxylic acid. Add 4 millilitre of DMF. 
 reaction	Reaction	Air	Sonicate for 30 minute. Heat to 120 celsius for 1 day. 
-workup	Work-up	Air	Wash solid with EtOH  . Dry for 1 day. 
+workup	Work-up	Air	Wash solid with EtOH. Dry for 1 day. 
 
 #Characterization Information
 
