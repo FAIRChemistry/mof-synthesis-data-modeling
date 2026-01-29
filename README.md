@@ -1,4 +1,4 @@
-# Data-Model–Based Processing and Analysis of MOF Synthesis Data
+# Data-Model-Driven Management and Analysis of MOF Synthesis Data
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
