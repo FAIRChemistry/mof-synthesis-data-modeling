@@ -1,4 +1,4 @@
-# Data-Model-Driven Management and Analysis of MOF Synthesis Data
+# Analysis and Management of Materials Synthesis Data using Data Models: Application to Metal–organic Frameworks
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
