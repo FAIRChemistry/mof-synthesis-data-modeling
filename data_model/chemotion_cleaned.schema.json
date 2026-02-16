@@ -1,0 +1,370 @@
+{
+  "type": "object",
+  "properties": {
+    "collections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "reactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "object",
+                  "properties": {
+                    "ops": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "insert": {
+                            "type": "string"
+                          },
+                          "attributes": {
+                            "type": "object",
+                            "properties": {
+                              "script": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "script"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "insert"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "ops"
+                  ]
+                },
+                "solvent": {
+                  "type": "string"
+                },
+                "temperature": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": false
+                    },
+                    "userText": {
+                      "type": "string"
+                    },
+                    "valueUnit": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "userText",
+                    "valueUnit"
+                  ]
+                },
+                "status": {
+                  "type": "string"
+                },
+                "observation": {
+                  "type": "object",
+                  "properties": {
+                    "ops": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "insert": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "insert"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "ops"
+                  ]
+                },
+                "purification": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "rf_value": {
+                  "type": "string"
+                },
+                "timestamp_start": {
+                  "type": "string"
+                },
+                "timestamp_stop": {
+                  "type": "string"
+                },
+                "tlc_description": {
+                  "type": "string"
+                },
+                "tlc_solvents": {
+                  "type": "string"
+                },
+                "starting_materials": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sample_entry"
+                  }
+                },
+                "solvents": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sample_entry"
+                  }
+                },
+                "reactants": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sample_entry"
+                  }
+                },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sample_entry"
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "created_at",
+                "name",
+                "description",
+                "solvent",
+                "temperature",
+                "status",
+                "observation",
+                "purification",
+                "rf_value",
+                "timestamp_start",
+                "timestamp_stop",
+                "tlc_description",
+                "tlc_solvents",
+                "starting_materials",
+                "solvents",
+                "reactants",
+                "products"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "created_at",
+          "user_id",
+          "reactions"
+        ]
+      }
+    }
+  },
+  "required": [
+    "collections"
+  ],
+  "$defs": {
+    "sample_entry": {
+      "type": "object",
+      "properties": {
+        "sample": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "created_by": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "impurities": {
+              "type": "string"
+            },
+            "molecule": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "inchikey": {
+                  "type": "string"
+                },
+                "inchistring": {
+                  "type": "string"
+                },
+                "density": {
+                  "type": "integer"
+                },
+                "molecular_weight": {
+                  "type": "number"
+                },
+                "molfile": {
+                  "type": "string"
+                },
+                "melting_point": {
+                  "type": "null"
+                },
+                "boiling_point": {
+                  "type": "null"
+                },
+                "names": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "additionalName": {
+                  "type": "object",
+                  "properties": {
+                    "molecule_id": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  },
+                  "required": [
+                    "molecule_id",
+                    "name",
+                    "description",
+                    "created_at",
+                    "updated_at"
+                  ]
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "required": [
+                "id",
+                "created_at",
+                "inchikey",
+                "inchistring",
+                "density",
+                "molecular_weight",
+                "molfile",
+                "melting_point",
+                "boiling_point",
+                "names",
+                "additionalName",
+                "updated_at"
+              ]
+            },
+            "molfile": {
+              "type": "string"
+            },
+            "purity": {
+              "type": "integer"
+            },
+            "target_amount_unit": {
+              "type": "string"
+            },
+            "target_amount_value": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "description",
+            "created_at",
+            "created_by",
+            "impurities",
+            "molecule",
+            "molfile",
+            "purity",
+            "target_amount_unit",
+            "target_amount_value"
+          ]
+        },
+        "coefficient": {
+          "type": "integer"
+        },
+        "position": {
+          "type": "integer"
+        },
+        "waste": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reference": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sample",
+        "coefficient",
+        "position",
+        "waste",
+        "reference"
+      ]
+    }
+  }
+}
