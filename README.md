@@ -1,4 +1,4 @@
-# Analysis and Management of Materials Synthesis Data using Data Models: Application to Metal–Organic Frameworks
+# Data management and analysis of metal–organic framework synthesis using data models
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
