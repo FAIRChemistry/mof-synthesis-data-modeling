@@ -5,14 +5,14 @@ from sympy import sympify
 
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, ProcedureSectionClass, \
-    Hardware, Quantity, AmountUnit, Temperature, TempUnit, Time, Solvent, Gas
+    Hardware, AmountUnit, Temperature, TemperatureUnit, TimeClass, Amount, Solvent, TimeUnit
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
-    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
-    Unit as UnitCharacterization, Weighing, Pxrd, SampleHolderType
+    SampleHolder, CharacterizationEntry, \
+    Length, LengthUnit, Weight, WeightUnit, Pxrd, SampleHolderType
 from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
     Experiment, ReactionComponent, MassUnit
 from .mofsy_utils import rxn_role_to_xdl_role
-from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_target_format, time_to_target_format, Unit as TimeUnit
+from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_target_format, time_to_target_format, Unit as TimeUnitSciformation
 from .sciformation_cleaner import clean_sciformation_eln
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
@@ -64,8 +64,7 @@ def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema,
             CharacterizationEntry(
                 characterization=CharacterizationClass(
                     pxrd=pxrd_list,
-                    weight=[
-                        Weighing(reaction_product_mass)]),
+                    weight=[ reaction_product_mass]),
                 experiment_id=experiment_id))
 
         synthesis = SynthesisElement(
@@ -116,7 +115,7 @@ def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
                     pressure=None))
 
     if experiment.degassing:
-        gas: Gas = Gas(experiment.degassing.value)
+        gas = experiment.degassing.value
         prep.append(
             StepEntryClass(
                 xml_type=XMLType.EVACUATE_AND_REFILL,
@@ -130,7 +129,7 @@ def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
                 comment=None,
                 pressure=None))
 
-    time: Time = format_time(experiment.duration, experiment.duration_unit)
+    time: TimeClass = format_time(experiment.duration, experiment.duration_unit)
     temp: Temperature = format_temperature(experiment.temperature)
     reaction.append(
         StepEntryClass(
@@ -162,7 +161,7 @@ def construct_procedure(experiment: Experiment) -> ProcedureSectionsClass:
                     pressure=None))
 
     if experiment.wait_after_rinse:
-        wait_time: Time = format_time(
+        wait_time: TimeClass = format_time(
             str(experiment.wait_after_rinse), experiment.wait_after_rinse_unit)
         workup.append(
             StepEntryClass(
@@ -253,32 +252,32 @@ def format_temperature(temp: str) -> Temperature:
     if "->" in temperature_string:  # if temperature is a range
         start_temp: float = float(sympify(temperature_string.split("->")[0]))
         end_temp: float = float(sympify(temperature_string.split("->")[1]))
-        return Temperature(value=float(end_temp), unit=TempUnit.CELSIUS)
+        return Temperature(value=float(end_temp), unit=TemperatureUnit.CELSIUS)
         # raise ValueError("Temperature ranges are not supported in MOFSY. Please provide a single temperature value.")
         # return str(start_temp) + " -> " + str(end_temp) + " C"
     else:
         temp: float = float(sympify(temperature_string))
-        return Temperature(value=round(temp, 2), unit=TempUnit.CELSIUS)
+        return Temperature(value=round(temp, 2), unit=TemperatureUnit.CELSIUS)
 
 
 def format_mass(
         mass: float | None,
-        mass_unit: MassUnit) -> AmountCharacterization:
+        mass_unit: MassUnit) -> Weight:
     if (mass is None) or (mass_unit is None):
-        return AmountCharacterization(
-            value=-1, unit=UnitCharacterization.MILLIGRAM)
+        return Weight(
+            value=0, unit=WeightUnit.MILLIGRAM)
     mass_in_mg = mass_to_target_format(mass, mass_unit, MassUnit.MG)
-    return AmountCharacterization(
+    return Weight(
         value=round(
             mass_in_mg,
             2),
-        unit=UnitCharacterization.MILLIGRAM)
+        unit=WeightUnit.MILLIGRAM)
 
 
-def format_amount_mole(amount: float | None) -> Quantity:
+def format_amount_mole(amount: float | None) -> Amount:
     if amount is None:
-        return Quantity(value=-1, unit=AmountUnit.MICROMOLE)
-    return Quantity(
+        return Amount(value=0, unit=AmountUnit.MICROMOLE)
+    return Amount(
         value=float(
             round(
                 amount *
@@ -287,31 +286,31 @@ def format_amount_mole(amount: float | None) -> Quantity:
         unit=AmountUnit.MICROMOLE)
 
 
-def format_amount_volume(amount: float | None) -> Quantity:
+def format_amount_volume(amount: float | None) -> Amount:
     if amount is None:
-        return Quantity(value=-1, unit=AmountUnit.MICROLITRE)
+        return Amount(value=0, unit=AmountUnit.MICROLITRE)
     # original value from sciformation is in mL but we want to export to
     # microLitre
     amount_in_ul = round(float(amount) * 1000, 3)
-    return Quantity(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
+    return Amount(value=amount_in_ul, unit=AmountUnit.MICROLITRE)
 
 
-def format_time(time: str, time_unit: TimeUnit) -> Time:
+def format_time(time: str, time_unit: TimeUnitSciformation) -> TimeClass:
     time_in_h = time_to_target_format(
-        float(sympify(time)), time_unit, TimeUnit.H)
-    return Time(value=round(time_in_h, 2), unit=AmountUnit.HOUR)
+        float(sympify(time)), time_unit, TimeUnitSciformation.H)
+    return TimeClass(value=round(time_in_h, 2), unit=TimeUnit.HOUR)
 
 
-def format_length(length: str) -> AmountCharacterization:
+def format_length(length: str) -> Length:
     if length.endswith("mm"):
-        return AmountCharacterization(value=float(
-            length[:-2]), unit=UnitCharacterization.MILLIMETER)
+        return Length(value=float(
+            length[:-2]), unit=LengthUnit.MILLIMETER)
     elif length.endswith("cm"):
-        return AmountCharacterization(value=float(
-            length[:-2]) * 10, unit=UnitCharacterization.CENTIMETER)
+        return Length(value=float(
+            length[:-2]) * 10, unit=LengthUnit.CENTIMETER)
     elif length.endswith("m"):
-        return AmountCharacterization(value=float(
-            length[:-1]) * 1000, unit=UnitCharacterization.METER)
+        return Length(value=float(
+            length[:-1]) * 1000, unit=LengthUnit.METER)
     else:
         raise ValueError(f"Unknown length unit in {length}")
 

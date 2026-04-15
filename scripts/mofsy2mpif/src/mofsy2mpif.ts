@@ -18,10 +18,11 @@ import {
     AmountUnit,
     ComponentElement,
     Convert as ConvertProc,
-    FlatProcedureObject,
-    ProcedureWithDifferentSectionsObject,
+    ProcedureSectionObject,
+    ProcedureSectionsObject,
     Role,
     StepEntryObject,
+    TimeUnit,
     XMLType
 } from "./generated/procedure";
 import {Convert as ConvertToMpifParams, MPIFParameters, ReactionAtmosphere} from "./generated/mpif_params"
@@ -37,8 +38,8 @@ const dataDirectory = path.join(rootDirectory, "data");
 const schemasDirectory = path.join(rootDirectory, "data_model");
 
 
-function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reagentId: string): StepEntryObject | undefined {
-    for (const prepareStep of (procedure.Prep as FlatProcedureObject).Step as StepEntryObject[]) {
+function findStepByReagent(procedure: ProcedureSectionsObject, reagentId: string): StepEntryObject | undefined {
+    for (const prepareStep of (procedure.Prep as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (prepareStep._reagent === reagentId) {
             return prepareStep;
         }
@@ -46,7 +47,7 @@ function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reag
             return prepareStep;
         }
     }
-    for (const reactionStep of (procedure.Reaction as FlatProcedureObject).Step as StepEntryObject[]) {
+    for (const reactionStep of (procedure.Reaction as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (reactionStep._reagent === reagentId) {
             return reactionStep;
         }
@@ -54,7 +55,7 @@ function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reag
             return reactionStep;
         }
     }
-    for (const workupStep of (procedure.Workup as FlatProcedureObject).Step as StepEntryObject[]) {
+    for (const workupStep of (procedure.Workup as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (workupStep._reagent === reagentId) {
             return workupStep;
         }
@@ -64,18 +65,18 @@ function findStepByReagent(procedure: ProcedureWithDifferentSectionsObject, reag
     }
 }
 
-function findStepByType(procedure: ProcedureWithDifferentSectionsObject, xmlType: XMLType): StepEntryObject | undefined {
-    for (const reactionStep of (procedure.Reaction as FlatProcedureObject).Step as StepEntryObject[]) {
+function findStepByType(procedure: ProcedureSectionsObject, xmlType: XMLType): StepEntryObject | undefined {
+    for (const reactionStep of (procedure.Reaction as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (reactionStep.$xml_type === xmlType) {
             return reactionStep;
         }
     }
-    for (const prepareStep of (procedure.Prep as FlatProcedureObject).Step as StepEntryObject[]) {
+    for (const prepareStep of (procedure.Prep as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (prepareStep.$xml_type === xmlType) {
             return prepareStep;
         }
     }
-    for (const workupStep of (procedure.Workup as FlatProcedureObject).Step as StepEntryObject[]) {
+    for (const workupStep of (procedure.Workup as ProcedureSectionObject).Step as StepEntryObject[]) {
         if (workupStep.$xml_type === xmlType) {
             return workupStep;
         }
@@ -94,8 +95,8 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 result += `${verb} to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Dry:
-                if (step._time && step._time.Value) {
-                    result += `Dry for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
+                if (step._time && step._time) {
+                    result += `Dry for ${step._time ? step._time : ''} ${step._time ? step._time.Unit : ''}. `;
                 } else {
                     result += `Dry. `;
                 }
@@ -105,9 +106,6 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 break;
             case XMLType.Wait:
                 result += `Wait for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
-                break;
-            case XMLType.Evaporate:
-                result += `Evaporate solvent. `;
                 break;
             case XMLType.Sonicate:
                 result += `Sonicate for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
@@ -142,7 +140,7 @@ const mpifParams: MPIFParameters = ConvertToMpifParams.toMPIFParameters(paramsDa
 // the procedure and characterization values are actually objects of lists of procedure and characterization entries from many experiments.
 // For each of them, a separate output file should be created.
 
-const prodedure = ConvertProc.toProcedure(procedureJsonFile);
+const prodedure = ConvertProc.toSynthesisProcedure(procedureJsonFile);
 const productCharacterization = ConvertChar.toCharacterization(characterizationJsonFile);
 
 prodedure.Synthesis.forEach((synthesisEntry, index) => {
@@ -161,8 +159,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     let productAmountUnit = mpifParams.productInfo.productAmountUnit;
     if (productWeight && productWeight.length>0) {
         const lastWeight = productWeight[productWeight.length -1];
-        productAmount = lastWeight.Weight.Value;
-        productAmountUnit = lastWeight.Weight.Unit;
+        productAmount = lastWeight.Value;
+        productAmountUnit = lastWeight.Unit;
         // shorten unit if needed
         if (productAmountUnit === "gram") {
             productAmountUnit = 'g';
@@ -178,16 +176,16 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     let reactionTimeUnit: '' | 's' | 'min' | 'h' | 'days' = '';
     let reactionNote = mpifParams.synthesisGeneral.reactionNote || '';
 
-    const heatStep = findStepByType(synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject, XMLType.HeatChill);
+    const heatStep = findStepByType(synthesisEntry.Procedure as ProcedureSectionsObject, XMLType.HeatChill);
     if (heatStep) {
         if (heatStep._temp && heatStep._temp.Value !== undefined) {
             reactionTemp = heatStep._temp.Value;
         }
         if (heatStep._time && heatStep._time.Value !== undefined) {
             reactionTime = heatStep._time.Value;
-            if (heatStep._time.Unit == AmountUnit.Hour) {
+            if (heatStep._time.Unit == TimeUnit.Hour) {
                 reactionTimeUnit = 'h';
-            } else if (heatStep._time.Unit == AmountUnit.Day) {
+            } else if (heatStep._time.Unit == TimeUnit.Day) {
                 reactionTimeUnit = 'days';
             }
         }
@@ -202,7 +200,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 
     for (const reagent of synthesisEntry.Reagents.Reagent) {
 
-            const step = findStepByReagent(synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject, reagent._id!);
+            const step = findStepByReagent(synthesisEntry.Procedure as ProcedureSectionsObject, reagent._id!);
             if (!step) {
                 continue;
             }
@@ -267,9 +265,9 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
     ]
 
-    let prep_details = stringifySteps(((synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject).Prep as FlatProcedureObject).Step as StepEntryObject[])
-    let reaction_details = stringifySteps(((synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject).Reaction as FlatProcedureObject).Step as StepEntryObject[])
-    let workup_details = stringifySteps(((synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject).Workup as FlatProcedureObject).Step as StepEntryObject[])
+    let prep_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Prep as ProcedureSectionObject).Step as StepEntryObject[])
+    let reaction_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Reaction as ProcedureSectionObject).Step as StepEntryObject[])
+    let workup_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Workup as ProcedureSectionObject).Step as StepEntryObject[])
 
     // write all the data into the MPIF structures
     const metadata: MPIFMetadata = {
@@ -300,7 +298,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     }
 
     // reaction atmosphere: if a step EvacuateAndRefill is present in the reaction steps, use vacuum, otherwise use air
-    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureWithDifferentSectionsObject, XMLType.EvacuateAndRefill);
+    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureSectionsObject, XMLType.EvacuateAndRefill);
     const reactionAtmosphere = evacuateStep ? ReactionAtmosphere.Vacuum : ReactionAtmosphere.Air;
 
     const synthesisGeneral: SynthesisGeneral = {

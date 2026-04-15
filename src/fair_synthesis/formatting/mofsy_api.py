@@ -1,7 +1,7 @@
 import json
 from typing import List, Dict
 
-from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Quantity
+from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Amount
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationEntry, Characterization
 from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
 from fair_synthesis.formatting.pxrd_collector import PXRDFile
@@ -105,13 +105,13 @@ def find_corresponding_pxrd_files(
 
 
 def find_product_mass(
-        characterization: CharacterizationEntry) -> Quantity | None:
+        characterization: CharacterizationEntry) -> Amount | None:
     # Filter characterizations by whether they have the weight attribute
     mass_characterizations = [
-        c for c in characterization.characterization.weight if c.weight]
+        c for c in characterization.characterization.weight if c]
     if mass_characterizations:
         # Return the weight of the first characterization that has it
-        return mass_characterizations[0].weight
+        return mass_characterizations[0]
     return None
 
 

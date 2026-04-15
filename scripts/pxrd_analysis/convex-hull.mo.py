@@ -6,6 +6,7 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
+
     import marimo as mo
     return (mo,)
 
@@ -218,7 +219,7 @@ def _(df_2, df_characterization, df_procedure, formula_mass, pl):
         .join(
             df_characterization.select(
                 "id",
-                (pl.col("Characterization_Weight_0_Weight_Value") * 1e-3).alias(
+                (pl.col("Characterization_Weight_0_Value") * 1e-3).alias(
                     "product_mass_g"
                 ),
             ),

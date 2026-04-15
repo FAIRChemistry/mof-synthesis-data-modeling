@@ -20,7 +20,7 @@ def from_union(fs, x):
     for f in fs:
         try:
             return f(x)
-        except BaseException:
+        except:
             pass
     assert False
 
@@ -64,14 +64,9 @@ class ComponentElement:
     chemical: Optional[str]
     comment: Optional[str]
     id: str
-    type: Optional[str]
+    type: str
 
-    def __init__(
-            self,
-            chemical: Optional[str],
-            comment: Optional[str],
-            id: str,
-            type: Optional[str]) -> None:
+    def __init__(self, chemical: Optional[str], comment: Optional[str], id: str, type: str) -> None:
         self.chemical = chemical
         self.comment = comment
         self.id = id
@@ -83,54 +78,44 @@ class ComponentElement:
         chemical = from_union([from_str, from_none], obj.get("_chemical"))
         comment = from_union([from_str, from_none], obj.get("_comment"))
         id = from_str(obj.get("_id"))
-        type = from_union([from_str, from_none], obj.get("_type"))
+        type = from_str(obj.get("_type"))
         return ComponentElement(chemical, comment, id, type)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.chemical is not None:
-            result["_chemical"] = from_union(
-                [from_str, from_none], self.chemical)
+            result["_chemical"] = from_union([from_str, from_none], self.chemical)
         if self.comment is not None:
-            result["_comment"] = from_union(
-                [from_str, from_none], self.comment)
+            result["_comment"] = from_union([from_str, from_none], self.comment)
         result["_id"] = from_str(self.id)
-        if self.type is not None:
-            result["_type"] = from_union([from_str, from_none], self.type)
+        result["_type"] = from_str(self.type)
         return result
 
 
 class Hardware:
-    component: Optional[List[ComponentElement]]
+    component: List[ComponentElement]
 
-    def __init__(self, component: Optional[List[ComponentElement]]) -> None:
+    def __init__(self, component: List[ComponentElement]) -> None:
         self.component = component
 
     @staticmethod
     def from_dict(obj: Any) -> 'Hardware':
         assert isinstance(obj, dict)
-        component = from_union([lambda x: from_list(
-            ComponentElement.from_dict, x), from_none], obj.get("Component"))
+        component = from_list(ComponentElement.from_dict, obj.get("Component"))
         return Hardware(component)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.component is not None:
-            result["Component"] = from_union([lambda x: from_list(
-                lambda x: to_class(ComponentElement, x), x), from_none], self.component)
+        result["Component"] = from_list(lambda x: to_class(ComponentElement, x), self.component)
         return result
 
 
 class Metadata:
-    description: str
+    description: Optional[str]
     product: Optional[str]
     product_inchi: Optional[str]
 
-    def __init__(
-            self,
-            description: str,
-            product: Optional[str],
-            product_inchi: Optional[str]) -> None:
+    def __init__(self, description: Optional[str], product: Optional[str], product_inchi: Optional[str]) -> None:
         self.description = description
         self.product = product
         self.product_inchi = product_inchi
@@ -138,113 +123,86 @@ class Metadata:
     @staticmethod
     def from_dict(obj: Any) -> 'Metadata':
         assert isinstance(obj, dict)
-        description = from_str(obj.get("_description"))
+        description = from_union([from_str, from_none], obj.get("_description"))
         product = from_union([from_str, from_none], obj.get("_product"))
-        product_inchi = from_union(
-            [from_str, from_none], obj.get("_product_inchi"))
+        product_inchi = from_union([from_str, from_none], obj.get("_product_inchi"))
         return Metadata(description, product, product_inchi)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["_description"] = from_str(self.description)
+        if self.description is not None:
+            result["_description"] = from_union([from_str, from_none], self.description)
         if self.product is not None:
-            result["_product"] = from_union(
-                [from_str, from_none], self.product)
+            result["_product"] = from_union([from_str, from_none], self.product)
         if self.product_inchi is not None:
-            result["_product_inchi"] = from_union(
-                [from_str, from_none], self.product_inchi)
+            result["_product_inchi"] = from_union([from_str, from_none], self.product_inchi)
         return result
 
 
 class AmountUnit(Enum):
-    BAR = "bar"
-    CELSIUS = "celsius"
     CENTILITRE = "centilitre"
-    CENTIMETER = "centimeter"
-    DAY = "day"
     DECILITRE = "decilitre"
-    DIMENSIONLESS = "dimensionless"
     GRAM = "gram"
-    HOUR = "hour"
-    ITEM = "item"
-    KELVIN = "kelvin"
     KILOGRAM = "kilogram"
     LITRE = "litre"
-    METER = "meter"
     MICROGRAM = "microgram"
     MICROLITRE = "microlitre"
     MICROMOLE = "micromole"
     MILLIGRAM = "milligram"
     MILLILITRE = "millilitre"
-    MILLIMETER = "millimeter"
     MILLIMOLE = "millimole"
-    MILLISECOND = "millisecond"
-    MINUTE = "minute"
     MOLE = "mole"
-    OHM = "ohm"
-    PASCAL = "pascal"
-    SECOND = "second"
     TON = "ton"
-    WEEK = "week"
 
 
-class Quantity:
+class Amount:
     """amount of the involved chemical"""
 
-    unit: Optional[AmountUnit]
+    unit: AmountUnit
     value: float
 
-    def __init__(self, unit: Optional[AmountUnit], value: float) -> None:
+    def __init__(self, unit: AmountUnit, value: float) -> None:
         self.unit = unit
         self.value = value
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Quantity':
+    def from_dict(obj: Any) -> 'Amount':
         assert isinstance(obj, dict)
-        unit = from_union([AmountUnit, from_none], obj.get("Unit"))
+        unit = AmountUnit(obj.get("Unit"))
         value = from_float(obj.get("Value"))
-        return Quantity(unit, value)
+        return Amount(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.unit is not None:
-            result["Unit"] = from_union(
-                [lambda x: to_enum(AmountUnit, x), from_none], self.unit)
+        result["Unit"] = to_enum(AmountUnit, self.unit)
         result["Value"] = to_float(self.value)
         result["$xml_append"] = "${Value} ${Unit}"
         return result
 
 
-class Gas(Enum):
-    AR = "Ar"
-
-
 class PressureUnit(Enum):
+    BAR = "bar"
     PASCAL = "pascal"
 
 
-class Pressure:
-    """amount of the involved chemical"""
-
-    unit: Optional[PressureUnit]
+class PressureClass:
+    unit: PressureUnit
     value: float
 
-    def __init__(self, unit: Optional[PressureUnit], value: float) -> None:
+    def __init__(self, unit: PressureUnit, value: float) -> None:
         self.unit = unit
         self.value = value
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Pressure':
+    def from_dict(obj: Any) -> 'PressureClass':
         assert isinstance(obj, dict)
-        unit = from_union([PressureUnit, from_none], obj.get("Unit"))
+        unit = PressureUnit(obj.get("Unit"))
         value = from_float(obj.get("Value"))
-        return Pressure(unit, value)
+        return PressureClass(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.unit is not None:
-            result["Unit"] = from_union(
-                [lambda x: to_enum(PressureUnit, x), from_none], self.unit)
+        result["Unit"] = to_enum(PressureUnit, self.unit)
         result["Value"] = to_float(self.value)
         result["$xml_append"] = "${Value} ${Unit}"
         return result
@@ -263,60 +221,61 @@ class Solvent(Enum):
     SC_CO2 = "scCO2"
 
 
-class TempUnit(Enum):
+class TemperatureUnit(Enum):
     CELSIUS = "celsius"
 
 
 class Temperature:
-    """amount of the involved chemical"""
-
-    unit: Optional[TempUnit]
+    unit: TemperatureUnit
     value: float
 
-    def __init__(self, unit: Optional[TempUnit], value: float) -> None:
+    def __init__(self, unit: TemperatureUnit, value: float) -> None:
         self.unit = unit
         self.value = value
 
     @staticmethod
     def from_dict(obj: Any) -> 'Temperature':
         assert isinstance(obj, dict)
-        unit = from_union([TempUnit, from_none], obj.get("Unit"))
+        unit = TemperatureUnit(obj.get("Unit"))
         value = from_float(obj.get("Value"))
         return Temperature(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.unit is not None:
-            result["Unit"] = from_union(
-                [lambda x: to_enum(TempUnit, x), from_none], self.unit)
+        result["Unit"] = to_enum(TemperatureUnit, self.unit)
         result["Value"] = to_float(self.value)
         result["$xml_append"] = "${Value} ${Unit}"
         return result
 
 
-class Time:
-    """amount of the involved chemical"""
+class TimeUnit(Enum):
+    DAY = "day"
+    HOUR = "hour"
+    MILLISECOND = "millisecond"
+    MINUTE = "minute"
+    SECOND = "second"
+    WEEK = "week"
 
+
+class TimeClass:
+    unit: TimeUnit
     value: float
-    unit: Optional[AmountUnit]
 
-    def __init__(self, value: float, unit: Optional[AmountUnit]) -> None:
-        self.value = value
+    def __init__(self, unit: TimeUnit, value: float) -> None:
         self.unit = unit
+        self.value = value
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Time':
+    def from_dict(obj: Any) -> 'TimeClass':
         assert isinstance(obj, dict)
+        unit = TimeUnit(obj.get("Unit"))
         value = from_float(obj.get("Value"))
-        unit = from_union([AmountUnit, from_none], obj.get("Unit"))
-        return Time(value, unit)
+        return TimeClass(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
+        result["Unit"] = to_enum(TimeUnit, self.unit)
         result["Value"] = to_float(self.value)
-        if self.unit is not None:
-            result["Unit"] = from_union(
-                [lambda x: to_enum(AmountUnit, x), from_none], self.unit)
         result["$xml_append"] = "${Value} ${Unit}"
         return result
 
@@ -335,32 +294,21 @@ class StepEntryClass:
     comment: Optional[str]
     vessel: Optional[str]
     xml_type: XMLType
-    amount: Optional[Quantity]
+    amount: Optional[Amount]
     """amount of the involved chemical"""
 
     reagent: Optional[str]
     """name of the involved chemical as listed in the "reagents\""""
 
     temp: Optional[Temperature]
-    time: Optional[Time]
-    gas: Optional[Gas]
+    time: Optional[Union[float, int, bool, str, List[Any], TimeClass]]
+    gas: Optional[str]
     """refilling gas"""
 
     solvent: Optional[Solvent]
-    pressure: Optional[Pressure]
+    pressure: Optional[Union[float, int, bool, str, List[Any], PressureClass]]
 
-    def __init__(
-            self,
-            comment: Optional[str],
-            vessel: Optional[str],
-            xml_type: XMLType,
-            amount: Optional[Quantity],
-            reagent: Optional[str],
-            temp: Optional[Temperature],
-            time: Optional[Time],
-            gas: Optional[Gas],
-            solvent: Optional[Solvent],
-            pressure: Optional[Pressure]) -> None:
+    def __init__(self, comment: Optional[str], vessel: Optional[str], xml_type: XMLType, amount: Optional[Amount], reagent: Optional[str], temp: Optional[Temperature], time: Optional[Union[float, int, bool, str, List[Any], TimeClass]], gas: Optional[str], solvent: Optional[Solvent], pressure: Optional[Union[float, int, bool, str, List[Any], PressureClass]]) -> None:
         self.comment = comment
         self.vessel = vessel
         self.xml_type = xml_type
@@ -378,138 +326,63 @@ class StepEntryClass:
         comment = from_union([from_str, from_none], obj.get("_comment"))
         vessel = from_union([from_str, from_none], obj.get("_vessel"))
         xml_type = XMLType(obj.get("$xml_type"))
-        amount = from_union(
-            [Quantity.from_dict, from_none], obj.get("_amount"))
+        amount = from_union([Amount.from_dict, from_none], obj.get("_amount"))
         reagent = from_union([from_str, from_none], obj.get("_reagent"))
         temp = from_union([Temperature.from_dict, from_none], obj.get("_temp"))
-        time = from_union([Time.from_dict, from_none], obj.get("_time"))
-        gas = from_union([Gas, from_none], obj.get("_gas"))
+        time = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), TimeClass.from_dict], obj.get("_time"))
+        gas = from_union([from_str, from_none], obj.get("_gas"))
         solvent = from_union([Solvent, from_none], obj.get("_solvent"))
-        pressure = from_union(
-            [Pressure.from_dict, from_none], obj.get("_pressure"))
-        return StepEntryClass(
-            comment,
-            vessel,
-            xml_type,
-            amount,
-            reagent,
-            temp,
-            time,
-            gas,
-            solvent,
-            pressure)
+        pressure = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), PressureClass.from_dict], obj.get("_pressure"))
+        return StepEntryClass(comment, vessel, xml_type, amount, reagent, temp, time, gas, solvent, pressure)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.comment is not None:
-            result["_comment"] = from_union(
-                [from_str, from_none], self.comment)
+            result["_comment"] = from_union([from_str, from_none], self.comment)
         if self.vessel is not None:
             result["_vessel"] = from_union([from_str, from_none], self.vessel)
         result["$xml_type"] = to_enum(XMLType, self.xml_type)
         if self.amount is not None:
-            result["_amount"] = from_union(
-                [lambda x: to_class(Quantity, x), from_none], self.amount)
+            result["_amount"] = from_union([lambda x: to_class(Amount, x), from_none], self.amount)
         if self.reagent is not None:
-            result["_reagent"] = from_union(
-                [from_str, from_none], self.reagent)
+            result["_reagent"] = from_union([from_str, from_none], self.reagent)
         if self.temp is not None:
-            result["_temp"] = from_union(
-                [lambda x: to_class(Temperature, x), from_none], self.temp)
+            result["_temp"] = from_union([lambda x: to_class(Temperature, x), from_none], self.temp)
         if self.time is not None:
-            result["_time"] = from_union(
-                [lambda x: to_class(Time, x), from_none], self.time)
+            result["_time"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(TimeClass, x)], self.time)
         if self.gas is not None:
-            result["_gas"] = from_union(
-                [lambda x: to_enum(Gas, x), from_none], self.gas)
+            result["_gas"] = from_union([from_str, from_none], self.gas)
         if self.solvent is not None:
-            result["_solvent"] = from_union(
-                [lambda x: to_enum(Solvent, x), from_none], self.solvent)
+            result["_solvent"] = from_union([lambda x: to_enum(Solvent, x), from_none], self.solvent)
         if self.pressure is not None:
-            result["_pressure"] = from_union(
-                [lambda x: to_class(Pressure, x), from_none], self.pressure)
+            result["_pressure"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(PressureClass, x)], self.pressure)
         return result
 
 
 class ProcedureSectionClass:
     step: List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]
 
-    def __init__(self,
-                 step: List[Optional[Union[float,
-                                           int,
-                                           bool,
-                                           str,
-                                           List[Any],
-                                           StepEntryClass]]]) -> None:
+    def __init__(self, step: List[Optional[Union[float, int, bool, str, List[Any], StepEntryClass]]]) -> None:
         self.step = step
 
     @staticmethod
     def from_dict(obj: Any) -> 'ProcedureSectionClass':
         assert isinstance(obj, dict)
-        step = from_list(
-            lambda x: from_union(
-                [
-                    from_none,
-                    from_float,
-                    from_int,
-                    from_bool,
-                    from_str,
-                    lambda x: from_list(
-                        lambda x: x,
-                        x),
-                    StepEntryClass.from_dict],
-                x),
-            obj.get("Step"))
+        step = from_list(lambda x: from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), StepEntryClass.from_dict], x), obj.get("Step"))
         return ProcedureSectionClass(step)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Step"] = from_list(
-            lambda x: from_union(
-                [
-                    from_none,
-                    to_float,
-                    from_int,
-                    from_bool,
-                    from_str,
-                    lambda x: from_list(
-                        lambda x: x,
-                        x),
-                    lambda x: to_class(
-                        StepEntryClass,
-                        x)],
-                x),
-            self.step)
+        result["Step"] = from_list(lambda x: from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(StepEntryClass, x)], x), self.step)
         return result
 
 
 class ProcedureSectionsClass:
-    prep: Optional[Union[float, int, bool,
-                         str, List[Any], ProcedureSectionClass]]
-    reaction: Optional[Union[float, int, bool,
-                             str, List[Any], ProcedureSectionClass]]
-    workup: Optional[Union[float, int, bool,
-                           str, List[Any], ProcedureSectionClass]]
+    prep: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]]
+    reaction: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]]
+    workup: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]]
 
-    def __init__(self,
-                 prep: Optional[Union[float,
-                                      int,
-                                      bool,
-                                      str,
-                                      List[Any],
-                                      ProcedureSectionClass]],
-                 reaction: Optional[Union[float,
-                                          int,
-                                          bool,
-                                          str,
-                                          List[Any],
-                                          ProcedureSectionClass]],
-                 workup: Optional[Union[float,
-                                        int,
-                                        bool,
-                                        str,
-                                        List[Any],
-                                        ProcedureSectionClass]]) -> None:
+    def __init__(self, prep: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]], reaction: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]], workup: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionClass]]) -> None:
         self.prep = prep
         self.reaction = reaction
         self.workup = workup
@@ -517,77 +390,16 @@ class ProcedureSectionsClass:
     @staticmethod
     def from_dict(obj: Any) -> 'ProcedureSectionsClass':
         assert isinstance(obj, dict)
-        prep = from_union([from_none,
-                           from_float,
-                           from_int,
-                           from_bool,
-                           from_str,
-                           lambda x: from_list(lambda x: x,
-                                               x),
-                           ProcedureSectionClass.from_dict],
-                          obj.get("Prep"))
-        reaction = from_union([from_none,
-                               from_float,
-                               from_int,
-                               from_bool,
-                               from_str,
-                               lambda x: from_list(lambda x: x,
-                                                   x),
-                               ProcedureSectionClass.from_dict],
-                              obj.get("Reaction"))
-        workup = from_union([from_none,
-                             from_float,
-                             from_int,
-                             from_bool,
-                             from_str,
-                             lambda x: from_list(lambda x: x,
-                                                 x),
-                             ProcedureSectionClass.from_dict],
-                            obj.get("Workup"))
+        prep = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), ProcedureSectionClass.from_dict], obj.get("Prep"))
+        reaction = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), ProcedureSectionClass.from_dict], obj.get("Reaction"))
+        workup = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), ProcedureSectionClass.from_dict], obj.get("Workup"))
         return ProcedureSectionsClass(prep, reaction, workup)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.prep is not None:
-            result["Prep"] = from_union([from_none,
-                                         to_float,
-                                         from_int,
-                                         from_bool,
-                                         from_str,
-                                         lambda x: from_list(lambda x: x,
-                                                             x),
-                                         lambda x: to_class(ProcedureSectionClass,
-                                                            x)],
-                                        self.prep)
-        result["Reaction"] = from_union(
-            [
-                from_none,
-                to_float,
-                from_int,
-                from_bool,
-                from_str,
-                lambda x: from_list(
-                    lambda x: x,
-                    x),
-                lambda x: to_class(
-                    ProcedureSectionClass,
-                    x)],
-            self.reaction)
-        if self.workup is not None:
-            result["Workup"] = from_union(
-                [
-                    from_none,
-                    to_float,
-                    from_int,
-                    from_bool,
-                    from_str,
-                    lambda x: from_list(
-                        lambda x: x,
-                        x),
-                    lambda x: to_class(
-                        ProcedureSectionClass,
-                        x)],
-                self.workup)
+        result["Prep"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(ProcedureSectionClass, x)], self.prep)
+        result["Reaction"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(ProcedureSectionClass, x)], self.reaction)
+        result["Workup"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(ProcedureSectionClass, x)], self.workup)
         return result
 
 
@@ -606,21 +418,13 @@ class Role(Enum):
 class ReagentElement:
     cas: Optional[str]
     comment: Optional[str]
-    id: Optional[str]
+    id: str
     inchi: Optional[str]
-    name: Optional[str]
+    name: str
     purity: Optional[str]
-    role: Optional[Role]
+    role: Role
 
-    def __init__(
-            self,
-            cas: Optional[str],
-            comment: Optional[str],
-            id: Optional[str],
-            inchi: Optional[str],
-            name: Optional[str],
-            purity: Optional[str],
-            role: Optional[Role]) -> None:
+    def __init__(self, cas: Optional[str], comment: Optional[str], id: str, inchi: Optional[str], name: str, purity: Optional[str], role: Role) -> None:
         self.cas = cas
         self.comment = comment
         self.id = id
@@ -634,11 +438,11 @@ class ReagentElement:
         assert isinstance(obj, dict)
         cas = from_union([from_str, from_none], obj.get("_cas"))
         comment = from_union([from_str, from_none], obj.get("_comment"))
-        id = from_union([from_str, from_none], obj.get("_id"))
+        id = from_str(obj.get("_id"))
         inchi = from_union([from_str, from_none], obj.get("_inchi"))
-        name = from_union([from_str, from_none], obj.get("_name"))
+        name = from_str(obj.get("_name"))
         purity = from_union([from_str, from_none], obj.get("_purity"))
-        role = from_union([Role, from_none], obj.get("_role"))
+        role = Role(obj.get("_role"))
         return ReagentElement(cas, comment, id, inchi, name, purity, role)
 
     def to_dict(self) -> dict:
@@ -646,19 +450,14 @@ class ReagentElement:
         if self.cas is not None:
             result["_cas"] = from_union([from_str, from_none], self.cas)
         if self.comment is not None:
-            result["_comment"] = from_union(
-                [from_str, from_none], self.comment)
-        if self.id is not None:
-            result["_id"] = from_union([from_str, from_none], self.id)
+            result["_comment"] = from_union([from_str, from_none], self.comment)
+        result["_id"] = from_str(self.id)
         if self.inchi is not None:
             result["_inchi"] = from_union([from_str, from_none], self.inchi)
-        if self.name is not None:
-            result["_name"] = from_union([from_str, from_none], self.name)
+        result["_name"] = from_str(self.name)
         if self.purity is not None:
             result["_purity"] = from_union([from_str, from_none], self.purity)
-        if self.role is not None:
-            result["_role"] = from_union(
-                [lambda x: to_enum(Role, x), from_none], self.role)
+        result["_role"] = to_enum(Role, self.role)
         return result
 
 
@@ -676,28 +475,17 @@ class Reagents:
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Reagent"] = from_list(
-            lambda x: to_class(ReagentElement, x), self.reagent)
+        result["Reagent"] = from_list(lambda x: to_class(ReagentElement, x), self.reagent)
         return result
 
 
 class SynthesisElement:
-    hardware: Optional[Hardware]
+    hardware: Hardware
     metadata: Metadata
-    procedure: Optional[Union[float, int, bool,
-                              str, List[Any], ProcedureSectionsClass]]
+    procedure: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionsClass]]
     reagents: Reagents
 
-    def __init__(self,
-                 hardware: Optional[Hardware],
-                 metadata: Metadata,
-                 procedure: Optional[Union[float,
-                                           int,
-                                           bool,
-                                           str,
-                                           List[Any],
-                                           ProcedureSectionsClass]],
-                 reagents: Reagents) -> None:
+    def __init__(self, hardware: Hardware, metadata: Metadata, procedure: Optional[Union[float, int, bool, str, List[Any], ProcedureSectionsClass]], reagents: Reagents) -> None:
         self.hardware = hardware
         self.metadata = metadata
         self.procedure = procedure
@@ -706,41 +494,17 @@ class SynthesisElement:
     @staticmethod
     def from_dict(obj: Any) -> 'SynthesisElement':
         assert isinstance(obj, dict)
-        hardware = from_union(
-            [Hardware.from_dict, from_none], obj.get("Hardware"))
+        hardware = Hardware.from_dict(obj.get("Hardware"))
         metadata = Metadata.from_dict(obj.get("Metadata"))
-        procedure = from_union([from_none,
-                                from_float,
-                                from_int,
-                                from_bool,
-                                from_str,
-                                lambda x: from_list(lambda x: x,
-                                                    x),
-                                ProcedureSectionsClass.from_dict],
-                               obj.get("Procedure"))
+        procedure = from_union([from_none, from_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), ProcedureSectionsClass.from_dict], obj.get("Procedure"))
         reagents = Reagents.from_dict(obj.get("Reagents"))
         return SynthesisElement(hardware, metadata, procedure, reagents)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        if self.hardware is not None:
-            result["Hardware"] = from_union(
-                [lambda x: to_class(Hardware, x), from_none], self.hardware)
+        result["Hardware"] = to_class(Hardware, self.hardware)
         result["Metadata"] = to_class(Metadata, self.metadata)
-        result["Procedure"] = from_union(
-            [
-                from_none,
-                to_float,
-                from_int,
-                from_bool,
-                from_str,
-                lambda x: from_list(
-                    lambda x: x,
-                    x),
-                lambda x: to_class(
-                    ProcedureSectionsClass,
-                    x)],
-            self.procedure)
+        result["Procedure"] = from_union([from_none, to_float, from_int, from_bool, from_str, lambda x: from_list(lambda x: x, x), lambda x: to_class(ProcedureSectionsClass, x)], self.procedure)
         result["Reagents"] = to_class(Reagents, self.reagents)
         return result
 
@@ -759,8 +523,7 @@ class SynthesisProcedure:
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Synthesis"] = from_list(
-            lambda x: to_class(SynthesisElement, x), self.synthesis)
+        result["Synthesis"] = from_list(lambda x: to_class(SynthesisElement, x), self.synthesis)
         return result
 
 

@@ -54,8 +54,8 @@
               "_vessel": "S-1",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -69,8 +69,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -92,8 +92,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -184,8 +184,8 @@
               "_vessel": "S-2",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -199,8 +199,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -222,8 +222,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -314,8 +314,8 @@
               "_vessel": "S-3",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -329,8 +329,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -352,8 +352,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -444,8 +444,8 @@
               "_vessel": "S-4",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -459,8 +459,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 3,
                 "Unit": "day",
+                "Value": 3,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -482,8 +482,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -574,8 +574,8 @@
               "_vessel": "S-5",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -589,8 +589,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 3,
                 "Unit": "day",
+                "Value": 3,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -612,8 +612,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -704,8 +704,8 @@
               "_vessel": "S-6",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -719,8 +719,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 7,
                 "Unit": "day",
+                "Value": 7,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -742,8 +742,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
@@ -844,8 +844,8 @@
               "_vessel": "S-7",
               "$xml_type": "Sonicate",
               "_time": {
-                "Value": 30.0,
                 "Unit": "minute",
+                "Value": 30.0,
                 "$xml_append": "${Value} ${Unit}"
               }
             },
@@ -859,8 +859,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 5,
                 "Unit": "day",
+                "Value": 5,
                 "$xml_append": "${Value} ${Unit}"
               }
             }
@@ -882,8 +882,8 @@
                 "$xml_append": "${Value} ${Unit}"
               },
               "_time": {
-                "Value": 1,
                 "Unit": "day",
+                "Value": 1,
                 "$xml_append": "${Value} ${Unit}"
               },
               "_pressure": {
