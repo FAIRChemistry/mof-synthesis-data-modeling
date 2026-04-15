@@ -7,7 +7,7 @@
 - [Contributing](#contributing)
 ---
 ## Overview
-Preprint available at: https://chemrxiv.org/engage/chemrxiv/article-details/XXXX  
+Preprint available at: https://chemrxiv.org/doi/full/10.26434/chemrxiv.10001842/v1
 This project formats, validates, serializes, and analyzes the given MOF synthesis data using data models. It was developed to demonstrate the usefulness of data models for realizing FAIR data and software management in chemical synthesis projects. The data models and codes can be reused by those who are interested in developing or using such a workflow.
 
 ---
