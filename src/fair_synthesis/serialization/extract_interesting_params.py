@@ -1,6 +1,6 @@
 import os
 
-from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, Role, AmountUnit, TempUnit, XMLType, Solvent
+from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, Role, AmountUnit, TemperatureUnit, XMLType, Solvent, TimeUnit
 from fair_synthesis.generated_apis.characterization_data_structure import Characterization
 from fair_synthesis.formatting.utils import load_json, save_json
 
@@ -207,10 +207,10 @@ Activation under vacuum (boolean): If there is Dry"""
         if heat_chill_step:
             if heat_chill_step.temp:
                 params['temperature_C'] = heat_chill_step.temp.value
-                assert heat_chill_step.temp.unit == TempUnit.CELSIUS
+                assert heat_chill_step.temp.unit == TemperatureUnit.CELSIUS
             if heat_chill_step.time:
                 params['duration_h'] = heat_chill_step.time.value
-                assert heat_chill_step.time.unit == AmountUnit.HOUR
+                assert heat_chill_step.time.unit == TimeUnit.HOUR
 
         # Workup with NaCl
         params['workup_with_NaCl'] = any(

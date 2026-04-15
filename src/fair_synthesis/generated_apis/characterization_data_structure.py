@@ -40,7 +40,7 @@ def from_union(fs, x):
     for f in fs:
         try:
             return f(x)
-        except BaseException:
+        except:
             pass
     assert False
 
@@ -50,33 +50,30 @@ def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
     return [f(y) for y in x]
 
 
-class Unit(Enum):
+class LengthUnit(Enum):
     CENTIMETER = "centimeter"
-    GRAM = "gram"
     METER = "meter"
-    MICROGRAM = "microgram"
-    MILLIGRAM = "milligram"
     MILLIMETER = "millimeter"
 
 
-class Quantity:
-    unit: Unit
+class Length:
+    unit: LengthUnit
     value: float
 
-    def __init__(self, unit: Unit, value: float) -> None:
+    def __init__(self, unit: LengthUnit, value: float) -> None:
         self.unit = unit
         self.value = value
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Quantity':
+    def from_dict(obj: Any) -> 'Length':
         assert isinstance(obj, dict)
-        unit = Unit(obj.get("Unit"))
+        unit = LengthUnit(obj.get("Unit"))
         value = from_float(obj.get("Value"))
-        return Quantity(unit, value)
+        return Length(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Unit"] = to_enum(Unit, self.unit)
+        result["Unit"] = to_enum(LengthUnit, self.unit)
         result["Value"] = to_float(self.value)
         return result
 
@@ -87,23 +84,23 @@ class SampleHolderType(Enum):
 
 
 class SampleHolder:
-    diameter: Quantity
+    diameter: Length
     type: SampleHolderType
 
-    def __init__(self, diameter: Quantity, type: SampleHolderType) -> None:
+    def __init__(self, diameter: Length, type: SampleHolderType) -> None:
         self.diameter = diameter
         self.type = type
 
     @staticmethod
     def from_dict(obj: Any) -> 'SampleHolder':
         assert isinstance(obj, dict)
-        diameter = Quantity.from_dict(obj.get("Diameter"))
+        diameter = Length.from_dict(obj.get("Diameter"))
         type = SampleHolderType(obj.get("Type"))
         return SampleHolder(diameter, type)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Diameter"] = to_class(Quantity, self.diameter)
+        result["Diameter"] = to_class(Length, self.diameter)
         result["Type"] = to_enum(SampleHolderType, self.type)
         return result
 
@@ -119,12 +116,7 @@ class Pxrd:
     sample_holder: SampleHolder
     x_ray_source: XRaySource
 
-    def __init__(
-            self,
-            other_metadata: Optional[str],
-            relative_file_path: str,
-            sample_holder: SampleHolder,
-            x_ray_source: XRaySource) -> None:
+    def __init__(self, other_metadata: Optional[str], relative_file_path: str, sample_holder: SampleHolder, x_ray_source: XRaySource) -> None:
         self.other_metadata = other_metadata
         self.relative_file_path = relative_file_path
         self.sample_holder = sample_holder
@@ -133,51 +125,55 @@ class Pxrd:
     @staticmethod
     def from_dict(obj: Any) -> 'Pxrd':
         assert isinstance(obj, dict)
-        other_metadata = from_union(
-            [from_str, from_none], obj.get("OtherMetadata"))
+        other_metadata = from_union([from_str, from_none], obj.get("OtherMetadata"))
         relative_file_path = from_str(obj.get("RelativeFilePath"))
         sample_holder = SampleHolder.from_dict(obj.get("SampleHolder"))
         x_ray_source = XRaySource(obj.get("XRaySource"))
-        return Pxrd(
-            other_metadata,
-            relative_file_path,
-            sample_holder,
-            x_ray_source)
+        return Pxrd(other_metadata, relative_file_path, sample_holder, x_ray_source)
 
     def to_dict(self) -> dict:
         result: dict = {}
         if self.other_metadata is not None:
-            result["OtherMetadata"] = from_union(
-                [from_str, from_none], self.other_metadata)
+            result["OtherMetadata"] = from_union([from_str, from_none], self.other_metadata)
         result["RelativeFilePath"] = from_str(self.relative_file_path)
         result["SampleHolder"] = to_class(SampleHolder, self.sample_holder)
         result["XRaySource"] = to_enum(XRaySource, self.x_ray_source)
         return result
 
 
-class Weighing:
-    weight: Quantity
+class WeightUnit(Enum):
+    GRAM = "gram"
+    MICROGRAM = "microgram"
+    MILLIGRAM = "milligram"
 
-    def __init__(self, weight: Quantity) -> None:
-        self.weight = weight
+
+class Weight:
+    unit: WeightUnit
+    value: float
+
+    def __init__(self, unit: WeightUnit, value: float) -> None:
+        self.unit = unit
+        self.value = value
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Weighing':
+    def from_dict(obj: Any) -> 'Weight':
         assert isinstance(obj, dict)
-        weight = Quantity.from_dict(obj.get("Weight"))
-        return Weighing(weight)
+        unit = WeightUnit(obj.get("Unit"))
+        value = from_float(obj.get("Value"))
+        return Weight(unit, value)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Weight"] = to_class(Quantity, self.weight)
+        result["Unit"] = to_enum(WeightUnit, self.unit)
+        result["Value"] = to_float(self.value)
         return result
 
 
 class CharacterizationClass:
     pxrd: List[Pxrd]
-    weight: List[Weighing]
+    weight: Optional[List[Weight]]
 
-    def __init__(self, pxrd: List[Pxrd], weight: List[Weighing]) -> None:
+    def __init__(self, pxrd: List[Pxrd], weight: Optional[List[Weight]]) -> None:
         self.pxrd = pxrd
         self.weight = weight
 
@@ -185,14 +181,14 @@ class CharacterizationClass:
     def from_dict(obj: Any) -> 'CharacterizationClass':
         assert isinstance(obj, dict)
         pxrd = from_list(Pxrd.from_dict, obj.get("Pxrd"))
-        weight = from_list(Weighing.from_dict, obj.get("Weight"))
+        weight = from_union([lambda x: from_list(Weight.from_dict, x), from_none], obj.get("Weight"))
         return CharacterizationClass(pxrd, weight)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["Pxrd"] = from_list(lambda x: to_class(Pxrd, x), self.pxrd)
-        result["Weight"] = from_list(
-            lambda x: to_class(Weighing, x), self.weight)
+        if self.weight is not None:
+            result["Weight"] = from_union([lambda x: from_list(lambda x: to_class(Weight, x), x), from_none], self.weight)
         return result
 
 
@@ -200,25 +196,20 @@ class CharacterizationEntry:
     characterization: CharacterizationClass
     experiment_id: str
 
-    def __init__(
-            self,
-            characterization: CharacterizationClass,
-            experiment_id: str) -> None:
+    def __init__(self, characterization: CharacterizationClass, experiment_id: str) -> None:
         self.characterization = characterization
         self.experiment_id = experiment_id
 
     @staticmethod
     def from_dict(obj: Any) -> 'CharacterizationEntry':
         assert isinstance(obj, dict)
-        characterization = CharacterizationClass.from_dict(
-            obj.get("Characterization"))
+        characterization = CharacterizationClass.from_dict(obj.get("Characterization"))
         experiment_id = from_str(obj.get("ExperimentId"))
         return CharacterizationEntry(characterization, experiment_id)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["Characterization"] = to_class(
-            CharacterizationClass, self.characterization)
+        result["Characterization"] = to_class(CharacterizationClass, self.characterization)
         result["ExperimentId"] = from_str(self.experiment_id)
         return result
 
@@ -228,23 +219,18 @@ class Characterization:
 
     product_characterization: List[CharacterizationEntry]
 
-    def __init__(
-            self,
-            product_characterization: List[CharacterizationEntry]) -> None:
+    def __init__(self, product_characterization: List[CharacterizationEntry]) -> None:
         self.product_characterization = product_characterization
 
     @staticmethod
     def from_dict(obj: Any) -> 'Characterization':
         assert isinstance(obj, dict)
-        product_characterization = from_list(
-            CharacterizationEntry.from_dict,
-            obj.get("ProductCharacterization"))
+        product_characterization = from_list(CharacterizationEntry.from_dict, obj.get("ProductCharacterization"))
         return Characterization(product_characterization)
 
     def to_dict(self) -> dict:
         result: dict = {}
-        result["ProductCharacterization"] = from_list(lambda x: to_class(
-            CharacterizationEntry, x), self.product_characterization)
+        result["ProductCharacterization"] = from_list(lambda x: to_class(CharacterizationEntry, x), self.product_characterization)
         return result
 
 

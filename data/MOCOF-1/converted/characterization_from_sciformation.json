@@ -17,10 +17,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.74
-            }
+            "Unit": "milligram",
+            "Value": 8.74
           }
         ]
       },
@@ -43,10 +41,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.24
-            }
+            "Unit": "milligram",
+            "Value": 9.24
           }
         ]
       },
@@ -69,10 +65,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.48
-            }
+            "Unit": "milligram",
+            "Value": 8.48
           }
         ]
       },
@@ -95,10 +89,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.8
-            }
+            "Unit": "milligram",
+            "Value": 8.8
           }
         ]
       },
@@ -121,10 +113,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.56
-            }
+            "Unit": "milligram",
+            "Value": 9.56
           }
         ]
       },
@@ -147,10 +137,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.42
-            }
+            "Unit": "milligram",
+            "Value": 7.42
           }
         ]
       },
@@ -173,10 +161,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.57
-            }
+            "Unit": "milligram",
+            "Value": 6.57
           }
         ]
       },
@@ -199,10 +185,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.83
-            }
+            "Unit": "milligram",
+            "Value": 7.83
           }
         ]
       },
@@ -225,10 +209,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.33
-            }
+            "Unit": "milligram",
+            "Value": 10.33
           }
         ]
       },
@@ -251,10 +233,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.21
-            }
+            "Unit": "milligram",
+            "Value": 9.21
           }
         ]
       },
@@ -277,10 +257,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.07
-            }
+            "Unit": "milligram",
+            "Value": 12.07
           }
         ]
       },
@@ -303,10 +281,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.17
-            }
+            "Unit": "milligram",
+            "Value": 7.17
           }
         ]
       },
@@ -329,10 +305,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.58
-            }
+            "Unit": "milligram",
+            "Value": 9.58
           }
         ]
       },
@@ -355,10 +329,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.97
-            }
+            "Unit": "milligram",
+            "Value": 7.97
           }
         ]
       },
@@ -403,10 +375,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 4.4
-            }
+            "Unit": "milligram",
+            "Value": 4.4
           }
         ]
       },
@@ -429,10 +399,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 4.77
-            }
+            "Unit": "milligram",
+            "Value": 4.77
           }
         ]
       },
@@ -455,10 +423,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.65
-            }
+            "Unit": "milligram",
+            "Value": 0.65
           }
         ]
       },
@@ -481,10 +447,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.18
-            }
+            "Unit": "milligram",
+            "Value": 2.18
           }
         ]
       },
@@ -507,10 +471,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.04
-            }
+            "Unit": "milligram",
+            "Value": 0.04
           }
         ]
       },
@@ -533,10 +495,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.62
-            }
+            "Unit": "milligram",
+            "Value": 13.62
           }
         ]
       },
@@ -559,10 +519,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.07
-            }
+            "Unit": "milligram",
+            "Value": 12.07
           }
         ]
       },
@@ -585,10 +543,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.18
-            }
+            "Unit": "milligram",
+            "Value": 12.18
           }
         ]
       },
@@ -599,10 +555,8 @@
         "Pxrd": [],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.0
-            }
+            "Unit": "milligram",
+            "Value": 0.0
           }
         ]
       },
@@ -625,10 +579,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 25.85
-            }
+            "Unit": "milligram",
+            "Value": 25.85
           }
         ]
       },
@@ -651,10 +603,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 21.66
-            }
+            "Unit": "milligram",
+            "Value": 21.66
           }
         ]
       },
@@ -688,10 +638,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.33
-            }
+            "Unit": "milligram",
+            "Value": 12.33
           }
         ]
       },
@@ -714,10 +662,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.84
-            }
+            "Unit": "milligram",
+            "Value": 11.84
           }
         ]
       },
@@ -740,10 +686,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.66
-            }
+            "Unit": "milligram",
+            "Value": 10.66
           }
         ]
       },
@@ -766,10 +710,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.19
-            }
+            "Unit": "milligram",
+            "Value": 10.19
           }
         ]
       },
@@ -792,10 +734,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.56
-            }
+            "Unit": "milligram",
+            "Value": 12.56
           }
         ]
       },
@@ -818,10 +758,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.87
-            }
+            "Unit": "milligram",
+            "Value": 10.87
           }
         ]
       },
@@ -844,10 +782,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.38
-            }
+            "Unit": "milligram",
+            "Value": 12.38
           }
         ]
       },
@@ -858,10 +794,8 @@
         "Pxrd": [],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 17.12
-            }
+            "Unit": "milligram",
+            "Value": 17.12
           }
         ]
       },
@@ -884,10 +818,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.44
-            }
+            "Unit": "milligram",
+            "Value": 2.44
           }
         ]
       },
@@ -910,10 +842,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.56
-            }
+            "Unit": "milligram",
+            "Value": 0.56
           }
         ]
       },
@@ -936,10 +866,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 1.88
-            }
+            "Unit": "milligram",
+            "Value": 1.88
           }
         ]
       },
@@ -962,10 +890,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.69
-            }
+            "Unit": "milligram",
+            "Value": 8.69
           }
         ]
       },
@@ -988,10 +914,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.86
-            }
+            "Unit": "milligram",
+            "Value": 9.86
           }
         ]
       },
@@ -1014,10 +938,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.69
-            }
+            "Unit": "milligram",
+            "Value": 11.69
           }
         ]
       },
@@ -1040,10 +962,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.46
-            }
+            "Unit": "milligram",
+            "Value": 11.46
           }
         ]
       },
@@ -1066,10 +986,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.2
-            }
+            "Unit": "milligram",
+            "Value": 12.2
           }
         ]
       },
@@ -1092,10 +1010,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.17
-            }
+            "Unit": "milligram",
+            "Value": 7.17
           }
         ]
       },
@@ -1129,10 +1045,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.3
-            }
+            "Unit": "milligram",
+            "Value": 11.3
           }
         ]
       },
@@ -1166,10 +1080,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.92
-            }
+            "Unit": "milligram",
+            "Value": 12.92
           }
         ]
       },
@@ -1192,10 +1104,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.22
-            }
+            "Unit": "milligram",
+            "Value": 2.22
           }
         ]
       },
@@ -1218,10 +1128,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.21
-            }
+            "Unit": "milligram",
+            "Value": 10.21
           }
         ]
       },
@@ -1244,10 +1152,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.9
-            }
+            "Unit": "milligram",
+            "Value": 8.9
           }
         ]
       },
@@ -1270,10 +1176,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.55
-            }
+            "Unit": "milligram",
+            "Value": 12.55
           }
         ]
       },
@@ -1296,10 +1200,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 36.8
-            }
+            "Unit": "milligram",
+            "Value": 36.8
           }
         ]
       },
@@ -1322,10 +1224,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.96
-            }
+            "Unit": "milligram",
+            "Value": 11.96
           }
         ]
       },
@@ -1348,10 +1248,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.58
-            }
+            "Unit": "milligram",
+            "Value": 13.58
           }
         ]
       },
@@ -1374,10 +1272,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 15.02
-            }
+            "Unit": "milligram",
+            "Value": 15.02
           }
         ]
       },
@@ -1400,10 +1296,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.28
-            }
+            "Unit": "milligram",
+            "Value": 8.28
           }
         ]
       },
@@ -1426,10 +1320,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.18
-            }
+            "Unit": "milligram",
+            "Value": 7.18
           }
         ]
       },
@@ -1452,10 +1344,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.31
-            }
+            "Unit": "milligram",
+            "Value": 8.31
           }
         ]
       },
@@ -1478,10 +1368,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 18.46
-            }
+            "Unit": "milligram",
+            "Value": 18.46
           }
         ]
       },
@@ -1504,10 +1392,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": -1
-            }
+            "Unit": "milligram",
+            "Value": 0
           }
         ]
       },
@@ -1530,10 +1416,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.5
-            }
+            "Unit": "milligram",
+            "Value": 12.5
           }
         ]
       },
@@ -1556,10 +1440,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.12
-            }
+            "Unit": "milligram",
+            "Value": 6.12
           }
         ]
       },
@@ -1582,10 +1464,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 5.72
-            }
+            "Unit": "milligram",
+            "Value": 5.72
           }
         ]
       },
@@ -1608,10 +1488,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.14
-            }
+            "Unit": "milligram",
+            "Value": 2.14
           }
         ]
       },
@@ -1634,10 +1512,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.72
-            }
+            "Unit": "milligram",
+            "Value": 9.72
           }
         ]
       },
@@ -1660,10 +1536,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.89
-            }
+            "Unit": "milligram",
+            "Value": 12.89
           }
         ]
       },
@@ -1686,10 +1560,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.33
-            }
+            "Unit": "milligram",
+            "Value": 8.33
           }
         ]
       },
@@ -1700,10 +1572,8 @@
         "Pxrd": [],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": -1
-            }
+            "Unit": "milligram",
+            "Value": 0
           }
         ]
       },
@@ -1726,10 +1596,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.05
-            }
+            "Unit": "milligram",
+            "Value": 12.05
           }
         ]
       },
@@ -1752,10 +1620,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.77
-            }
+            "Unit": "milligram",
+            "Value": 11.77
           }
         ]
       },
@@ -1778,10 +1644,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.5
-            }
+            "Unit": "milligram",
+            "Value": 11.5
           }
         ]
       },
@@ -1804,10 +1668,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.65
-            }
+            "Unit": "milligram",
+            "Value": 7.65
           }
         ]
       },
@@ -1830,10 +1692,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.22
-            }
+            "Unit": "milligram",
+            "Value": 8.22
           }
         ]
       },
@@ -1856,10 +1716,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.45
-            }
+            "Unit": "milligram",
+            "Value": 10.45
           }
         ]
       },
@@ -1882,10 +1740,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.15
-            }
+            "Unit": "milligram",
+            "Value": 11.15
           }
         ]
       },
@@ -1908,10 +1764,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.79
-            }
+            "Unit": "milligram",
+            "Value": 10.79
           }
         ]
       },
@@ -1934,10 +1788,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 4.36
-            }
+            "Unit": "milligram",
+            "Value": 4.36
           }
         ]
       },
@@ -1960,10 +1812,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.39
-            }
+            "Unit": "milligram",
+            "Value": 6.39
           }
         ]
       },
@@ -1986,10 +1836,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.52
-            }
+            "Unit": "milligram",
+            "Value": 6.52
           }
         ]
       },
@@ -2012,10 +1860,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.33
-            }
+            "Unit": "milligram",
+            "Value": 7.33
           }
         ]
       },
@@ -2038,10 +1884,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.72
-            }
+            "Unit": "milligram",
+            "Value": 10.72
           }
         ]
       },
@@ -2064,10 +1908,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.83
-            }
+            "Unit": "milligram",
+            "Value": 6.83
           }
         ]
       },
@@ -2090,10 +1932,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.97
-            }
+            "Unit": "milligram",
+            "Value": 9.97
           }
         ]
       },
@@ -2116,10 +1956,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.79
-            }
+            "Unit": "milligram",
+            "Value": 3.79
           }
         ]
       },
@@ -2142,10 +1980,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.36
-            }
+            "Unit": "milligram",
+            "Value": 8.36
           }
         ]
       },
@@ -2168,10 +2004,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.73
-            }
+            "Unit": "milligram",
+            "Value": 13.73
           }
         ]
       },
@@ -2194,10 +2028,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.37
-            }
+            "Unit": "milligram",
+            "Value": 14.37
           }
         ]
       },
@@ -2220,10 +2052,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.02
-            }
+            "Unit": "milligram",
+            "Value": 14.02
           }
         ]
       },
@@ -2246,10 +2076,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.0
-            }
+            "Unit": "milligram",
+            "Value": 0.0
           }
         ]
       },
@@ -2272,10 +2100,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.36
-            }
+            "Unit": "milligram",
+            "Value": 13.36
           }
         ]
       },
@@ -2298,10 +2124,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.6
-            }
+            "Unit": "milligram",
+            "Value": 12.6
           }
         ]
       },
@@ -2324,10 +2148,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.22
-            }
+            "Unit": "milligram",
+            "Value": 6.22
           }
         ]
       },
@@ -2350,10 +2172,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.65
-            }
+            "Unit": "milligram",
+            "Value": 13.65
           }
         ]
       },
@@ -2376,10 +2196,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.21
-            }
+            "Unit": "milligram",
+            "Value": 12.21
           }
         ]
       },
@@ -2402,10 +2220,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.87
-            }
+            "Unit": "milligram",
+            "Value": 14.87
           }
         ]
       },
@@ -2428,10 +2244,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.54
-            }
+            "Unit": "milligram",
+            "Value": 11.54
           }
         ]
       },
@@ -2454,10 +2268,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.57
-            }
+            "Unit": "milligram",
+            "Value": 13.57
           }
         ]
       },
@@ -2480,10 +2292,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.58
-            }
+            "Unit": "milligram",
+            "Value": 14.58
           }
         ]
       },
@@ -2506,10 +2316,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.06
-            }
+            "Unit": "milligram",
+            "Value": 8.06
           }
         ]
       },
@@ -2532,10 +2340,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.02
-            }
+            "Unit": "milligram",
+            "Value": 7.02
           }
         ]
       },
@@ -2558,10 +2364,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.58
-            }
+            "Unit": "milligram",
+            "Value": 12.58
           }
         ]
       },
@@ -2584,10 +2388,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 15.16
-            }
+            "Unit": "milligram",
+            "Value": 15.16
           }
         ]
       },
@@ -2610,10 +2412,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.54
-            }
+            "Unit": "milligram",
+            "Value": 6.54
           }
         ]
       },
@@ -2636,10 +2436,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.93
-            }
+            "Unit": "milligram",
+            "Value": 3.93
           }
         ]
       },
@@ -2662,10 +2460,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 1.5
-            }
+            "Unit": "milligram",
+            "Value": 1.5
           }
         ]
       },
@@ -2688,10 +2484,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.75
-            }
+            "Unit": "milligram",
+            "Value": 7.75
           }
         ]
       },
@@ -2714,10 +2508,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.85
-            }
+            "Unit": "milligram",
+            "Value": 8.85
           }
         ]
       },
@@ -2740,10 +2532,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.25
-            }
+            "Unit": "milligram",
+            "Value": 11.25
           }
         ]
       },
@@ -2766,10 +2556,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.81
-            }
+            "Unit": "milligram",
+            "Value": 10.81
           }
         ]
       },
@@ -2792,10 +2580,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.89
-            }
+            "Unit": "milligram",
+            "Value": 12.89
           }
         ]
       },
@@ -2818,10 +2604,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.42
-            }
+            "Unit": "milligram",
+            "Value": 13.42
           }
         ]
       },
@@ -2844,10 +2628,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.24
-            }
+            "Unit": "milligram",
+            "Value": 13.24
           }
         ]
       },
@@ -2870,10 +2652,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.96
-            }
+            "Unit": "milligram",
+            "Value": 8.96
           }
         ]
       },
@@ -2896,10 +2676,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.07
-            }
+            "Unit": "milligram",
+            "Value": 6.07
           }
         ]
       },
@@ -2922,10 +2700,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.96
-            }
+            "Unit": "milligram",
+            "Value": 13.96
           }
         ]
       },
@@ -2948,10 +2724,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.62
-            }
+            "Unit": "milligram",
+            "Value": 2.62
           }
         ]
       },
@@ -2974,10 +2748,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.02
-            }
+            "Unit": "milligram",
+            "Value": 12.02
           }
         ]
       },
@@ -3000,10 +2772,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.34
-            }
+            "Unit": "milligram",
+            "Value": 10.34
           }
         ]
       },
@@ -3026,10 +2796,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.75
-            }
+            "Unit": "milligram",
+            "Value": 13.75
           }
         ]
       },
@@ -3052,10 +2820,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.51
-            }
+            "Unit": "milligram",
+            "Value": 12.51
           }
         ]
       },
@@ -3078,10 +2844,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.87
-            }
+            "Unit": "milligram",
+            "Value": 2.87
           }
         ]
       },
@@ -3104,10 +2868,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.59
-            }
+            "Unit": "milligram",
+            "Value": 8.59
           }
         ]
       },
@@ -3130,10 +2892,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.54
-            }
+            "Unit": "milligram",
+            "Value": 2.54
           }
         ]
       },
@@ -3156,10 +2916,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.95
-            }
+            "Unit": "milligram",
+            "Value": 8.95
           }
         ]
       },
@@ -3182,10 +2940,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.62
-            }
+            "Unit": "milligram",
+            "Value": 9.62
           }
         ]
       },
@@ -3208,10 +2964,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.77
-            }
+            "Unit": "milligram",
+            "Value": 7.77
           }
         ]
       },
@@ -3234,10 +2988,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 31.42
-            }
+            "Unit": "milligram",
+            "Value": 31.42
           }
         ]
       },
@@ -3260,10 +3012,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 36.9
-            }
+            "Unit": "milligram",
+            "Value": 36.9
           }
         ]
       },
@@ -3286,10 +3036,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 35.51
-            }
+            "Unit": "milligram",
+            "Value": 35.51
           }
         ]
       },
@@ -3312,10 +3060,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.79
-            }
+            "Unit": "milligram",
+            "Value": 7.79
           }
         ]
       },
@@ -3338,10 +3084,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.92
-            }
+            "Unit": "milligram",
+            "Value": 12.92
           }
         ]
       },
@@ -3364,10 +3108,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.6
-            }
+            "Unit": "milligram",
+            "Value": 12.6
           }
         ]
       },
@@ -3390,10 +3132,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.6
-            }
+            "Unit": "milligram",
+            "Value": 7.6
           }
         ]
       },
@@ -3416,10 +3156,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.34
-            }
+            "Unit": "milligram",
+            "Value": 6.34
           }
         ]
       },
@@ -3442,10 +3180,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 5.21
-            }
+            "Unit": "milligram",
+            "Value": 5.21
           }
         ]
       },
@@ -3468,10 +3204,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.47
-            }
+            "Unit": "milligram",
+            "Value": 3.47
           }
         ]
       },
@@ -3494,10 +3228,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 8.96
-            }
+            "Unit": "milligram",
+            "Value": 8.96
           }
         ]
       },
@@ -3520,10 +3252,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.31
-            }
+            "Unit": "milligram",
+            "Value": 10.31
           }
         ]
       },
@@ -3546,10 +3276,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.85
-            }
+            "Unit": "milligram",
+            "Value": 11.85
           }
         ]
       },
@@ -3572,10 +3300,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.97
-            }
+            "Unit": "milligram",
+            "Value": 6.97
           }
         ]
       },
@@ -3598,10 +3324,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.12
-            }
+            "Unit": "milligram",
+            "Value": 12.12
           }
         ]
       },
@@ -3624,10 +3348,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.0
-            }
+            "Unit": "milligram",
+            "Value": 11.0
           }
         ]
       },
@@ -3650,10 +3372,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.08
-            }
+            "Unit": "milligram",
+            "Value": 9.08
           }
         ]
       },
@@ -3676,10 +3396,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.66
-            }
+            "Unit": "milligram",
+            "Value": 6.66
           }
         ]
       },
@@ -3702,10 +3420,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.21
-            }
+            "Unit": "milligram",
+            "Value": 3.21
           }
         ]
       },
@@ -3728,10 +3444,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.74
-            }
+            "Unit": "milligram",
+            "Value": 6.74
           }
         ]
       },
@@ -3754,10 +3468,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.17
-            }
+            "Unit": "milligram",
+            "Value": 10.17
           }
         ]
       },
@@ -3780,10 +3492,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.79
-            }
+            "Unit": "milligram",
+            "Value": 11.79
           }
         ]
       },
@@ -3806,10 +3516,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 4.65
-            }
+            "Unit": "milligram",
+            "Value": 4.65
           }
         ]
       },
@@ -3832,10 +3540,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.76
-            }
+            "Unit": "milligram",
+            "Value": 10.76
           }
         ]
       },
@@ -3858,10 +3564,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.98
-            }
+            "Unit": "milligram",
+            "Value": 10.98
           }
         ]
       },
@@ -3884,10 +3588,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 5.42
-            }
+            "Unit": "milligram",
+            "Value": 5.42
           }
         ]
       },
@@ -3910,10 +3612,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.01
-            }
+            "Unit": "milligram",
+            "Value": 11.01
           }
         ]
       },
@@ -3936,10 +3636,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.74
-            }
+            "Unit": "milligram",
+            "Value": 14.74
           }
         ]
       },
@@ -3962,10 +3660,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 53.62
-            }
+            "Unit": "milligram",
+            "Value": 53.62
           }
         ]
       },
@@ -3988,10 +3684,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.39
-            }
+            "Unit": "milligram",
+            "Value": 10.39
           }
         ]
       },
@@ -4025,10 +3719,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.11
-            }
+            "Unit": "milligram",
+            "Value": 6.11
           }
         ]
       },
@@ -4051,10 +3743,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.41
-            }
+            "Unit": "milligram",
+            "Value": 3.41
           }
         ]
       },
@@ -4077,10 +3767,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.03
-            }
+            "Unit": "milligram",
+            "Value": 6.03
           }
         ]
       },
@@ -4103,10 +3791,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.69
-            }
+            "Unit": "milligram",
+            "Value": 7.69
           }
         ]
       },
@@ -4129,10 +3815,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 7.12
-            }
+            "Unit": "milligram",
+            "Value": 7.12
           }
         ]
       },
@@ -4155,10 +3839,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 15.06
-            }
+            "Unit": "milligram",
+            "Value": 15.06
           }
         ]
       },
@@ -4181,10 +3863,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.02
-            }
+            "Unit": "milligram",
+            "Value": 12.02
           }
         ]
       },
@@ -4207,10 +3887,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.56
-            }
+            "Unit": "milligram",
+            "Value": 3.56
           }
         ]
       },
@@ -4233,10 +3911,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 9.63
-            }
+            "Unit": "milligram",
+            "Value": 9.63
           }
         ]
       },
@@ -4259,10 +3935,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 4.61
-            }
+            "Unit": "milligram",
+            "Value": 4.61
           }
         ]
       },
@@ -4285,10 +3959,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.57
-            }
+            "Unit": "milligram",
+            "Value": 13.57
           }
         ]
       },
@@ -4311,10 +3983,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.44
-            }
+            "Unit": "milligram",
+            "Value": 12.44
           }
         ]
       },
@@ -4348,10 +4018,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.57
-            }
+            "Unit": "milligram",
+            "Value": 3.57
           }
         ]
       },
@@ -4385,10 +4053,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 18.1
-            }
+            "Unit": "milligram",
+            "Value": 18.1
           }
         ]
       },
@@ -4411,10 +4077,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 11.19
-            }
+            "Unit": "milligram",
+            "Value": 11.19
           }
         ]
       },
@@ -4437,10 +4101,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 6.8
-            }
+            "Unit": "milligram",
+            "Value": 6.8
           }
         ]
       },
@@ -4463,10 +4125,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 3.17
-            }
+            "Unit": "milligram",
+            "Value": 3.17
           }
         ]
       },
@@ -4489,10 +4149,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 1.58
-            }
+            "Unit": "milligram",
+            "Value": 1.58
           }
         ]
       },
@@ -4515,10 +4173,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 0.76
-            }
+            "Unit": "milligram",
+            "Value": 0.76
           }
         ]
       },
@@ -4541,10 +4197,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 13.89
-            }
+            "Unit": "milligram",
+            "Value": 13.89
           }
         ]
       },
@@ -4567,10 +4221,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 14.46
-            }
+            "Unit": "milligram",
+            "Value": 14.46
           }
         ]
       },
@@ -4593,10 +4245,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 102.41
-            }
+            "Unit": "milligram",
+            "Value": 102.41
           }
         ]
       },
@@ -4619,10 +4269,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 43.66
-            }
+            "Unit": "milligram",
+            "Value": 43.66
           }
         ]
       },
@@ -4656,10 +4304,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 79.79
-            }
+            "Unit": "milligram",
+            "Value": 79.79
           }
         ]
       },
@@ -4682,10 +4328,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 12.29
-            }
+            "Unit": "milligram",
+            "Value": 12.29
           }
         ]
       },
@@ -4708,10 +4352,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 2.77
-            }
+            "Unit": "milligram",
+            "Value": 2.77
           }
         ]
       },
@@ -4734,10 +4376,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 70.87
-            }
+            "Unit": "milligram",
+            "Value": 70.87
           }
         ]
       },
@@ -4760,10 +4400,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 10.32
-            }
+            "Unit": "milligram",
+            "Value": 10.32
           }
         ]
       },
@@ -4786,10 +4424,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 42.41
-            }
+            "Unit": "milligram",
+            "Value": 42.41
           }
         ]
       },
@@ -4812,10 +4448,8 @@
         ],
         "Weight": [
           {
-            "Weight": {
-              "Unit": "milligram",
-              "Value": 43.95
-            }
+            "Unit": "milligram",
+            "Value": 43.95
           }
         ]
       },

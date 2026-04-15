@@ -5,10 +5,11 @@ from sympy import sympify
 
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionClass, ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, \
-    Hardware, Quantity, AmountUnit, Role, Temperature, TempUnit, Pressure, PressureUnit, Time, Solvent
-from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
-    SampleHolder, Quantity as AmountCharacterization, CharacterizationEntry, \
-    Unit as UnitCharacterization, Pxrd, SampleHolderType
+    Hardware, TimeUnit, Role, Temperature, TemperatureUnit, PressureClass, PressureUnit, TimeClass, Amount, AmountUnit, Solvent
+from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationClass, Characterization, \
+    XRaySource, \
+    SampleHolder as AmountCharacterization, CharacterizationEntry, Pxrd, SampleHolderType, Weight, WeightUnit, \
+    LengthUnit, Length, SampleHolder
 from fair_synthesis.generated_apis.fe_terephthalate_json_from_excel_data_structure import Mil
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
@@ -217,7 +218,7 @@ def convert_mil_2_json_from_excel_to_mofsy(mil: Mil,
                 solvent=None,
                 comment=None,
                 # hardcode, because it always is vacuum in every experiment
-                pressure=Pressure(value=0, unit=PressureUnit.PASCAL)
+                pressure=PressureClass(value=0, unit=PressureUnit.PASCAL)
             ),
         ]
 
@@ -279,60 +280,60 @@ def format_temperature(temp: str, temp_unit: str) -> Temperature:
             f"Only Celsius is supported as temperature unit in converter, but got {temp_unit}")
     temperature_string: str = temp.replace("RT", "25")
     temp: float = float(sympify(temperature_string))
-    return Temperature(value=round(temp, 2), unit=TempUnit.CELSIUS)
+    return Temperature(value=round(temp, 2), unit=TemperatureUnit.CELSIUS)
 
 
-def format_mass(mass: float | None, mass_unit: str) -> Quantity:
+def format_mass(mass: float | None, mass_unit: str) -> Amount:
     if (mass is None) or (mass_unit is None):
-        return Quantity(value=-1, unit=None)
+        return Amount(value=-1, unit=AmountUnit.MILLIGRAM)
     if mass_unit == "mg":
-        return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
+        return Amount(value=round(mass, 2), unit=AmountUnit.MILLIGRAM)
     elif mass_unit == "mmol":
-        return Quantity(value=round(mass, 2), unit=AmountUnit.MILLIMOLE)
+        return Amount(value=round(mass, 2), unit=AmountUnit.MILLIMOLE)
     else:
         raise ValueError(
             f"Only mg is supported as mass unit in converter, but got {mass_unit}")
 
 
-def format_amount_volume(amount: float | None, volume_unit: str) -> Quantity:
+def format_amount_volume(amount: float | None, volume_unit: str) -> Amount:
     if amount is None:
-        return Quantity(value=-1, unit=None)
+        return Amount(value=-1, unit=AmountUnit.MILLILITRE)
     if volume_unit.lower() == "ml":
-        return Quantity(value=amount, unit=AmountUnit.MILLILITRE)
+        return Amount(value=amount, unit=AmountUnit.MILLILITRE)
     elif volume_unit.lower() in ["l", "lt", "liter", "litre"]:
-        return Quantity(value=round(amount, 2), unit=AmountUnit.LITRE)
+        return Amount(value=round(amount, 2), unit=AmountUnit.LITRE)
     elif volume_unit.lower() in ["µl", "ul", "microliter", "microlitre", "μl"]:
-        return Quantity(value=round(amount, 2), unit=AmountUnit.MICROLITRE)
+        return Amount(value=round(amount, 2), unit=AmountUnit.MICROLITRE)
 
     raise ValueError(
         f"{volume_unit} is not supported as volume unit in converter")
 
 
-def format_time(time: float | None, time_unit: str) -> Time:
+def format_time(time: float | None, time_unit: str) -> TimeClass:
     if time is None or time_unit is None:
-        return Time(value=-1, unit=None)
+        return TimeClass(value=-1, unit=TimeUnit.MINUTE)
     if time_unit in ["h", "hour", "hours"]:
-        return Time(value=round(time, 2), unit=AmountUnit.HOUR)
+        return TimeClass(value=round(time, 2), unit=TimeUnit.HOUR)
     elif time_unit in ["min", "mins", "minute", "minutes"]:
-        return Time(value=round(time, 2), unit=AmountUnit.MINUTE)
+        return TimeClass(value=round(time, 2), unit=TimeUnit.MINUTE)
     elif time_unit in ["s", "sec", "secs", "second", "seconds"]:
-        return Time(value=round(time, 2), unit=AmountUnit.SECOND)
+        return TimeClass(value=round(time, 2), unit=TimeUnit.SECOND)
     elif time_unit in ["d", "day", "days"]:
-        return Time(value=round(time, 2), unit=AmountUnit.DAY)
+        return TimeClass(value=round(time, 2), unit=TimeUnit.DAY)
     else:
         raise ValueError(f"Unknown time unit in {time_unit}")
 
 
-def format_length(length: str) -> AmountCharacterization:
+def format_length(length: str) -> Length:
     if length.endswith("mm"):
-        return AmountCharacterization(value=float(
-            length[:-2]), unit=UnitCharacterization.MILLIMETER)
+        return Length(value=float(
+            length[:-2]), unit=LengthUnit.MILLIMETER)
     elif length.endswith("cm"):
-        return AmountCharacterization(value=float(
-            length[:-2]) * 10, unit=UnitCharacterization.CENTIMETER)
+        return Length(value=float(
+            length[:-2]) * 10, unit=LengthUnit.CENTIMETER)
     elif length.endswith("m"):
-        return AmountCharacterization(value=float(
-            length[:-1]) * 1000, unit=UnitCharacterization.METER)
+        return Length(value=float(
+            length[:-1]) * 1000, unit=LengthUnit.METER)
     else:
         raise ValueError(f"Unknown length unit in {length}")
 

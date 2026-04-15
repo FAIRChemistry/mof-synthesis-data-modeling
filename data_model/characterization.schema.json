@@ -17,7 +17,7 @@
             "Weight": {
               "type": "array",
               "items": {
-                "$ref": "#/$defs/Weighing"
+                "$ref": "#/$defs/Weight"
               }
             }
           },
@@ -60,7 +60,7 @@
     "SampleHolder": {
       "properties": {
         "Diameter": {
-          "$ref": "#/$defs/Quantity"
+          "$ref": "#/$defs/Length"
         },
         "Type": {
           "$ref": "#/$defs/SampleHolderType"
@@ -79,26 +79,15 @@
       ],
       "type": "string"
     },
-    "Weighing": {
-      "properties": {
-        "Weight": {
-          "$ref": "#/$defs/Quantity"
-        }
-      },
-      "required": [
-        "Weight"
-      ],
-      "title": "weighing",
-      "type": "object"
-    },
-    "Quantity": {
-      "title": "Quantity",
+    "Weight": {
+      "title": "Weight",
       "properties": {
         "Unit": {
-          "$ref": "#/$defs/Unit"
+          "$ref": "#/$defs/WeightUnit"
         },
         "Value": {
-          "type": "number"
+          "type": "number",
+          "minimum": 0
         }
       },
       "type": "object",
@@ -107,14 +96,38 @@
         "Unit"
       ]
     },
-    "Unit": {
+    "Length": {
+      "title": "Length",
+      "properties": {
+        "Unit": {
+          "$ref": "#/$defs/LengthUnit"
+        },
+        "Value": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "type": "object",
+      "required": [
+        "Value",
+        "Unit"
+      ]
+    },
+    "LengthUnit": {
+      "title": "LengthUnit",
       "enum": [
-        "microgram",
-        "milligram",
-        "gram",
         "millimeter",
         "centimeter",
         "meter"
+      ],
+      "type": "string"
+    },
+    "WeightUnit": {
+      "title": "WeightUnit",
+      "enum": [
+        "microgram",
+        "milligram",
+        "gram"
       ],
       "type": "string"
     },

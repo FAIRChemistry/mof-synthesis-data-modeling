@@ -22,8 +22,8 @@ export interface CharacterizationEntry {
 }
 
 export interface CharacterizationObject {
-    Pxrd:   Pxrd[];
-    Weight: Weighing[];
+    Pxrd:    Pxrd[];
+    Weight?: Weight[];
     [property: string]: any;
 }
 
@@ -36,23 +36,20 @@ export interface Pxrd {
 }
 
 export interface SampleHolder {
-    Diameter: Quantity;
+    Diameter: Length;
     Type:     SampleHolderType;
     [property: string]: any;
 }
 
-export interface Quantity {
-    Unit:  Unit;
+export interface Length {
+    Unit:  LengthUnit;
     Value: number;
     [property: string]: any;
 }
 
-export enum Unit {
+export enum LengthUnit {
     Centimeter = "centimeter",
-    Gram = "gram",
     Meter = "meter",
-    Microgram = "microgram",
-    Milligram = "milligram",
     Millimeter = "millimeter",
 }
 
@@ -66,9 +63,16 @@ export enum XRaySource {
     CuKα1 = "Cu Kα1",
 }
 
-export interface Weighing {
-    Weight: Quantity;
+export interface Weight {
+    Unit:  WeightUnit;
+    Value: number;
     [property: string]: any;
+}
+
+export enum WeightUnit {
+    Gram = "gram",
+    Microgram = "microgram",
+    Milligram = "milligram",
 }
 
 // Converts JSON strings to/from your types
@@ -245,7 +249,7 @@ const typeMap: any = {
     ], "any"),
     "CharacterizationObject": o([
         { json: "Pxrd", js: "Pxrd", typ: a(r("Pxrd")) },
-        { json: "Weight", js: "Weight", typ: a(r("Weighing")) },
+        { json: "Weight", js: "Weight", typ: u(undefined, a(r("Weight"))) },
     ], "any"),
     "Pxrd": o([
         { json: "OtherMetadata", js: "OtherMetadata", typ: u(undefined, "") },
@@ -254,22 +258,20 @@ const typeMap: any = {
         { json: "XRaySource", js: "XRaySource", typ: r("XRaySource") },
     ], "any"),
     "SampleHolder": o([
-        { json: "Diameter", js: "Diameter", typ: r("Quantity") },
+        { json: "Diameter", js: "Diameter", typ: r("Length") },
         { json: "Type", js: "Type", typ: r("SampleHolderType") },
     ], "any"),
-    "Quantity": o([
-        { json: "Unit", js: "Unit", typ: r("Unit") },
+    "Length": o([
+        { json: "Unit", js: "Unit", typ: r("LengthUnit") },
         { json: "Value", js: "Value", typ: 3.14 },
     ], "any"),
-    "Weighing": o([
-        { json: "Weight", js: "Weight", typ: r("Quantity") },
+    "Weight": o([
+        { json: "Unit", js: "Unit", typ: r("WeightUnit") },
+        { json: "Value", js: "Value", typ: 3.14 },
     ], "any"),
-    "Unit": [
+    "LengthUnit": [
         "centimeter",
-        "gram",
         "meter",
-        "microgram",
-        "milligram",
         "millimeter",
     ],
     "SampleHolderType": [
@@ -279,5 +281,10 @@ const typeMap: any = {
     "XRaySource": [
         "Co Kα1",
         "Cu Kα1",
+    ],
+    "WeightUnit": [
+        "gram",
+        "microgram",
+        "milligram",
     ],
 };

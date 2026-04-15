@@ -136,7 +136,7 @@
               "description": "name of the involved chemical as listed in the \"reagents\""
             },
             "_amount": {
-              "$ref": "#/$defs/Quantity",
+              "$ref": "#/$defs/Amount",
               "description": "amount of the involved chemical"
             }
           }
@@ -184,7 +184,19 @@
               "const": "WashSolid"
             },
             "_solvent": {
-              "type": "string"
+              "type": "string",
+              "enum": [
+                "CHCl3",
+                "DMF",
+                "MeOH",
+                "acetone",
+                "EtOH",
+                "NaCl aq",
+                "scCO2",
+                "MeCN",
+                "Et3N",
+                "MeOH+scCO2"
+              ]
             }
           }
         },
@@ -217,8 +229,7 @@
           ]
         },
         {
-          "required": [
-          ],
+          "required": [],
           "title": "Dry",
           "properties": {
             "$xml_type": {
@@ -237,46 +248,31 @@
         }
       ]
     },
-    "Quantity": {
-      "title": "Quantity",
+    "Amount": {
+      "title": "Amount",
       "properties": {
+        "Value": {
+          "type": "number",
+          "minimum": 0
+        },
         "Unit": {
+          "title": "AmountUnit",
           "enum": [
             "microgram",
             "milligram",
             "gram",
             "kilogram",
             "ton",
-            "millisecond",
-            "second",
-            "minute",
-            "hour",
-            "day",
-            "week",
-            "kelvin",
             "microlitre",
             "millilitre",
             "centilitre",
             "decilitre",
             "litre",
-            "ohm",
-            "dimensionless",
-            "item",
             "micromole",
             "millimole",
-            "mole",
-            "celsius",
-            "kelvin",
-            "millimeter",
-            "centimeter",
-            "meter",
-            "pascal",
-            "bar"
+            "mole"
           ],
           "type": "string"
-        },
-        "Value": {
-          "type": "number"
         }
       },
       "type": "object",
@@ -287,45 +283,59 @@
     },
     "Temperature": {
       "title": "Temperature",
-      "$ref": "#/$defs/Quantity",
       "type": "object",
       "properties": {
-        "Unit": {
-          "const": "celsius"
-        },
         "Value": {
           "minimum": -273.15,
           "type": "number"
+        },
+        "Unit": {
+          "type": "string",
+          "title": "TemperatureUnit",
+          "const": "celsius"
         }
       },
       "required": [
-        "Unit",
-        "Value"
+        "Value",
+        "Unit"
       ]
     },
     "Time": {
       "title": "Time",
-      "$ref": "#/$defs/Quantity",
       "properties": {
         "Value": {
           "minimum": 0,
           "type": "number"
         },
         "Unit": {
-          "type": "string"
+          "type": "string",
+          "title": "TimeUnit",
+          "enum": [
+            "millisecond",
+            "second",
+            "minute",
+            "hour",
+            "day",
+            "week"
+          ]
         }
       },
       "required": [
-        "Unit",
-        "Value"
+        "Value",
+        "Unit"
       ]
     },
     "Pressure": {
-      "$ref": "#/$defs/Quantity",
       "title": "Pressure",
       "properties": {
         "Unit": {
-          "type": "string"
+          "type": "string",
+          "title": "PressureUnit",
+          "type": "string",
+          "enum": [
+            "pascal",
+            "bar"
+          ]
         },
         "Value": {
           "minimum": 0,
