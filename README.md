@@ -27,8 +27,8 @@ This project formats, validates, serializes, and analyzes the given MOF synthesi
 # Install uv
 pip install uv
 # Clone the repository
-git clone https://github.com/FAIRChemistry/FAIRSynthesis_MOF.git
-cd FAIRSynthesis_MOF
+git clone https://github.com/FAIRChemistry/mof-synthesis-data-modeling.git
+cd mof-synthesis-data-modeling
 # Install dependencies in a virtual environment
 uv pip install -e .
 ```
