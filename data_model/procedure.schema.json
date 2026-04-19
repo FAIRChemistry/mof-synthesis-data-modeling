@@ -292,7 +292,24 @@
         "Unit": {
           "type": "string",
           "title": "TemperatureUnit",
-          "const": "celsius"
+          "enum": [
+            "celsius",
+            "kelvin"
+          ]
+        },
+        "if": {
+          "properties": {
+            "Unit": {
+              "const": "kelvin"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "Value": {
+              "minimum": 0
+            }
+          }
         }
       },
       "required": [
