@@ -223,6 +223,7 @@ class Solvent(Enum):
 
 class TemperatureUnit(Enum):
     CELSIUS = "celsius"
+    KELVIN = "kelvin"
 
 
 class Temperature:

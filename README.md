@@ -12,8 +12,8 @@ This project formats, validates, serializes, and analyzes the given MOF synthesi
 
 ---
 ## Features
-- Two example datasets of MOF synthesis
-- Formatting synthesis and characterization data into a well-defined and interoperable structure with the data models
+- Three example datasets of MOF synthesis in different formats (handwritten CSV, Sciformation ELN export, and Chemotion ELN export)
+- Formatting synthesis and characterization data from these formats into a well-defined and interoperable structure with the data models
 - Rigorous data validation using JSON schema
 - Data serialization into known formats, XDL and MPIF
 - Phase mole fraction analysis of PXRD data using reference patterns
