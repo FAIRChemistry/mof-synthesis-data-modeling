@@ -9,6 +9,7 @@ from fair_synthesis.generated_apis.procedure_data_structure import (
     ComponentElement, ProcedureSectionsClass, Reagents, XMLType,
     StepEntryClass, ProcedureSectionClass, Hardware,
     AmountUnit, Temperature, TemperatureUnit, TimeClass, Amount, TimeUnit, Role,
+    Solvent,
 )
 from fair_synthesis.generated_apis.characterization_data_structure import (
     CharacterizationClass, Characterization, XRaySource, SampleHolder,
@@ -87,6 +88,28 @@ def _build_vessel_id(vessel_size: Optional[dict]) -> str:
     return f"{amount}{unit}_vial"
 
 
+def _parse_solvent(name: Optional[str]) -> Optional[Solvent]:
+    if not name:
+        return None
+
+    normalized_name = name.strip().lower()
+    solvent_map = {
+        "acetone": Solvent.ACETONE,
+        "acetonitrile": Solvent.ME_CN,
+        "chcl3": Solvent.CH_CL3,
+        "chloroform": Solvent.CH_CL3,
+        "dmf": Solvent.DMF,
+        "ethanol": Solvent.ET_OH,
+        "etoh": Solvent.ET_OH,
+        "meoh": Solvent.ME_OH,
+        "methanol": Solvent.ME_OH,
+        "nacl aq": Solvent.NA_CL_AQ,
+        "scco2": Solvent.SC_CO2,
+        "triethylamine": Solvent.ET3_N,
+    }
+    return solvent_map.get(normalized_name)
+
+
 def convert_cleaned_chemotion_to_mofsy(
         cleaned: dict,
 ) -> Tuple[SynthesisProcedure, Characterization]:
@@ -152,17 +175,18 @@ def convert_cleaned_chemotion_to_mofsy(
         workup_steps: List[StepEntryClass] = []
         for entry in rxn["purification_solvents"]:
             sample = entry["sample"]
-            if sample.get("real_amount_value") or sample.get("target_amount_value"):
+            solvent = _parse_solvent(sample["name"])
+            if solvent and (sample.get("real_amount_value") or sample.get("target_amount_value")):
                 amount = _parse_amount(sample)
                 workup_steps.append(StepEntryClass(
                     xml_type=XMLType.WASH_SOLID,
                     vessel=vessel_id,
                     amount=amount,
-                    reagent=sample["name"],
+                    reagent=None,
                     temp=None,
                     time=None,
                     gas=None,
-                    solvent=None,
+                    solvent=solvent,
                     comment=None,
                     pressure=None,
                 ))

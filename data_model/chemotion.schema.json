@@ -724,7 +724,10 @@
               "$ref": "#/definitions/uuid"
             },
             "role": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "origin": {
               "type": "object"
@@ -786,6 +789,7 @@
             "volume": {
               "type": [
                 "object",
+                "string",
                 "null"
               ]
             },
