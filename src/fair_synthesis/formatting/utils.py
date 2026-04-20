@@ -4,6 +4,7 @@ import starfile
 import yaml
 import re
 import pubchempy as pcp
+from urllib.error import URLError
 
 # Partially copied and adapted from https://github.com/FAIRChemistry/substance-query/blob/main/substancewidget
 # /substancewidget.py
@@ -28,17 +29,21 @@ def query_compound_from_pub_chem(query: str) -> pcp.Compound | None:
     if query in cached_compounds:
         return cached_compounds[query]
 
-    match query:
-        case query if query.isdigit():
-            compound_options = [(pcp.Compound.from_cid(query))]
-        case query if RE_SMILES.match(query):
-            compound_options = pcp.get_compounds(query, "smiles")
-        case query if RE_INCHI.match(query):
-            compound_options = pcp.get_compounds(query, "inchi")
-        case query if RE_INCHIKEY.match(query):
-            compound_options = pcp.get_compounds(query, "inchikey")
-        case _:
-            compound_options = pcp.get_compounds(query, "name")
+    try:
+        match query:
+            case query if query.isdigit():
+                compound_options = [(pcp.Compound.from_cid(query))]
+            case query if RE_SMILES.match(query):
+                compound_options = pcp.get_compounds(query, "smiles")
+            case query if RE_INCHI.match(query):
+                compound_options = pcp.get_compounds(query, "inchi")
+            case query if RE_INCHIKEY.match(query):
+                compound_options = pcp.get_compounds(query, "inchikey")
+            case _:
+                compound_options = pcp.get_compounds(query, "name")
+    except (URLError, TimeoutError, OSError):
+        cached_compounds[query] = None
+        return None
 
     # for now by default select first option
     if len(compound_options) > 0:

@@ -1,4 +1,4 @@
-import {
+import type {
   MPIFData,
   MPIFMetadata,
   ProductInfo,
@@ -9,7 +9,7 @@ import {
   TGAData,
   AdsorptionData,
   DesorptionData
-} from './mpif';
+} from './mpif.ts';
 
 export class MPIFParser {
   private lines: string[] = [];
