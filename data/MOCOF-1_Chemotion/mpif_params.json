@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "dataName": "MOCOF-1 synthesis trial",
+    "creationDate": "",
+    "generatorVersion": "1.0",
+    "publicationDOI": "",
+    "procedureStatus": "test",
+    "name": "Endo, Kenichi",
+    "email": "kenichi.endo@ipoc.uni-stuttgart.de",
+    "orcid": "0000-0002-4128-6514",
+    "address": "Pfaffenwaldring 55, 70569 Stuttgart, Germany"
+  },
+  "productInfo": {
+    "type": "porous framework material",
+    "systematicName": "",
+    "state": "solid",
+    "color": "",
+    "handlingAtmosphere": ""
+  },
+  "synthesisGeneral": {
+    "performedDate": "",
+    "reactionType": "mix",
+    "temperatureController": "",
+    "productAmountUnit": "",
+    "scale": "milligram"
+  },
+  "steps": {
+    "preparationAtmosphere": "Air",
+    "workupAtmosphere": "Air"
+  }
+}
