@@ -4,7 +4,7 @@ import os.path
 import fair_synthesis.formatting.mofsy_api as api
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure
 from fair_synthesis.generated_apis.characterization_data_structure import Characterization
-from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
+from fair_synthesis.generated_apis.mocof_1_params import Mocof1ParamValue as Mocof1Param
 
 current_file_dir = __file__.rsplit('/', 1)[0]
 procedure_file_path = os.path.join(

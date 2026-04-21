@@ -27,7 +27,7 @@ import type {
     ProcedureSectionsObject,
     StepEntryObject
 } from "./generated/procedure.ts";
-import {Convert as ConvertToMpifParams} from "./generated/mpif_params.ts"
+import {Convert as ConvertToMpifParams, ReactionAtmosphere} from "./generated/mpif_params.ts"
 import type {MPIFParameters} from "./generated/mpif_params.ts"
 import * as fs from 'fs';
 import path from "path";
@@ -225,7 +225,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
             }
             const amountUnit = step._amount ? step._amount.Unit : undefined;
 
-            if (reagent._role !== Role.Solvent) {
+            if (reagent._role == Role.Substrate) {
             substrates.push({
                 id: reagent._id || 'unknown_id',
                 name: reagent._name || 'unknown_name',
@@ -291,6 +291,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
     ]
 
+    let prep_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Prep as ProcedureSectionObject).Step as StepEntryObject[])
+    let reaction_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Reaction as ProcedureSectionObject).Step as StepEntryObject[])
     let workup_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Workup as ProcedureSectionObject).Step as StepEntryObject[])
 
     // write all the data into the MPIF structures
@@ -321,6 +323,10 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         cif: mpifParams.productInfo.cif
     }
 
+    // reaction atmosphere: if a step EvacuateAndRefill is present in the reaction steps, use vacuum, otherwise use air
+    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureSectionsObject, XMLType.EvacuateAndRefill);
+    const reactionAtmosphere = evacuateStep ? ReactionAtmosphere.Vacuum : ReactionAtmosphere.Air;
+
     const synthesisGeneral: SynthesisGeneral = {
         performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || "undefined",
         labTemperature: mpifParams.synthesisGeneral.labTemperature,
@@ -330,7 +336,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         temperatureController: mpifParams.synthesisGeneral.temperatureController,
         reactionTime: reactionTime,
         reactionTimeUnit: reactionTimeUnit,
-        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || '',
+        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || reactionAtmosphere,
         reactionContainer: vesselId,
         reactionNote: reactionNote,
         productAmount: productAmount,
@@ -339,14 +345,28 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         scale: mpifParams.synthesisGeneral.scale,
     }
 
-    const steps: ProcedureStep[] = workup_details ? [
+    const steps: ProcedureStep[] = [
+        {
+            id: 'preparation',
+            type: 'Preparation',
+            atmosphere: mpifParams.steps.preparationAtmosphere || 'Air',
+            detail: prep_details
+        },
+        {
+            id: 'reaction',
+            type: 'Reaction',
+            // use the reaction atmosphere determined above unless overridden in the mpifParams. Make first character upper case
+            atmosphere: mpifParams.steps.reactionAtmosphere || (reactionAtmosphere.toString().charAt(0).toUpperCase() + reactionAtmosphere.toString().slice(1).toLowerCase()) as 'Air' | 'Vacuum',
+            detail: reaction_details
+        },
         {
             id: 'workup',
             type: 'Work-up',
             atmosphere: mpifParams.steps.workupAtmosphere || 'Air',
             detail: workup_details
         }
-    ] : [];
+
+    ];
 
     const synthesisDetails: SynthesisDetails = {
         substrates: substrates,

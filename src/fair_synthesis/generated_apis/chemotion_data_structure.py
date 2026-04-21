@@ -230,3 +230,4 @@ def schema_from_dict(s: Any) -> Schema:
 
 def schema_to_dict(x: Schema) -> Any:
     return to_class(Schema, x)
+

@@ -3,7 +3,7 @@ from typing import List, Dict
 
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Amount
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationEntry, Characterization
-from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
+from fair_synthesis.generated_apis.mocof_1_params import Mocof1ParamValue as Mocof1Param
 from fair_synthesis.formatting.pxrd_collector import PXRDFile
 
 

@@ -65,7 +65,7 @@ export interface StepEntryObject {
      */
     _reagent?: string;
     _temp?:    Temperature;
-    _time?:   null | TimeObject;
+    _time?:    any[] | boolean | number | number | null | TimeObject | string;
     /**
      * refilling gas
      */
@@ -486,3 +486,4 @@ const typeMap: any = {
         "substrate",
     ],
 };
+

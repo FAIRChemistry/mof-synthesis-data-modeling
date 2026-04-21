@@ -240,3 +240,4 @@ def characterization_from_dict(s: Any) -> Characterization:
 
 def characterization_to_dict(x: Characterization) -> Any:
     return to_class(Characterization, x)
+

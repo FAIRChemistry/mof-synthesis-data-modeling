@@ -2,6 +2,7 @@
   "title": "Mocof-1-Params",
   "type": "object",
   "additionalProperties": {
+    "title": "Mocof-1-Param",
     "type": "object",
     "properties": {
       "aminoporphyrin_monomer_type": {

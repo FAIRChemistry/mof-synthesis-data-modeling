@@ -223,7 +223,6 @@ class Solvent(Enum):
 
 class TemperatureUnit(Enum):
     CELSIUS = "celsius"
-    KELVIN = "kelvin"
 
 
 class Temperature:
@@ -534,3 +533,4 @@ def synthesis_procedure_from_dict(s: Any) -> SynthesisProcedure:
 
 def synthesis_procedure_to_dict(x: SynthesisProcedure) -> Any:
     return to_class(SynthesisProcedure, x)
+
