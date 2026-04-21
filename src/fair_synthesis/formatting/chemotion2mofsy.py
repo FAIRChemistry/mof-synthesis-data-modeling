@@ -88,6 +88,10 @@ def _build_vessel_id(vessel_size: Optional[dict]) -> str:
     return f"{amount}{unit}_vial"
 
 
+def _get_vessel_id(rxn: dict) -> str:
+    return rxn.get("vessel") or _build_vessel_id(rxn.get("vessel_size"))
+
+
 def _parse_solvent(name: Optional[str]) -> Optional[Solvent]:
     if not name:
         return None
@@ -101,13 +105,38 @@ def _parse_solvent(name: Optional[str]) -> Optional[Solvent]:
         "dmf": Solvent.DMF,
         "ethanol": Solvent.ET_OH,
         "etoh": Solvent.ET_OH,
+        "et3n": Solvent.ET3_N,
         "meoh": Solvent.ME_OH,
         "methanol": Solvent.ME_OH,
+        "mecn": Solvent.ME_CN,
         "nacl aq": Solvent.NA_CL_AQ,
         "scco2": Solvent.SC_CO2,
+        "meoh+scco2": Solvent.ME_OH_SC_CO2,
         "triethylamine": Solvent.ET3_N,
     }
     return solvent_map.get(normalized_name)
+
+
+def _append_wash_step(
+        workup_steps: List[StepEntryClass],
+        vessel_id: str,
+        solvent: Solvent) -> None:
+    if any(step.xml_type == XMLType.WASH_SOLID and step.solvent == solvent
+           for step in workup_steps):
+        return
+
+    workup_steps.append(StepEntryClass(
+        xml_type=XMLType.WASH_SOLID,
+        vessel=vessel_id,
+        amount=None,
+        reagent=None,
+        temp=None,
+        time=None,
+        gas=None,
+        solvent=solvent,
+        comment=None,
+        pressure=None,
+    ))
 
 
 def convert_cleaned_chemotion_to_mofsy(
@@ -118,7 +147,7 @@ def convert_cleaned_chemotion_to_mofsy(
 
     for rxn in cleaned["reactions"]:
         experiment_id: str = rxn.get("short_label") or rxn["id"]
-        vessel_id = _build_vessel_id(rxn.get("vessel_size"))
+        vessel_id = _get_vessel_id(rxn)
         temperature = _parse_temperature(rxn.get("temperature"))
         duration = _parse_duration(rxn.get("duration", ""))
 
@@ -159,6 +188,20 @@ def convert_cleaned_chemotion_to_mofsy(
                 pressure=None,
             ))
 
+        if rxn.get("degassing"):
+            prep_steps.append(StepEntryClass(
+                xml_type=XMLType.EVACUATE_AND_REFILL,
+                amount=None,
+                reagent=None,
+                vessel=vessel_id,
+                temp=None,
+                time=None,
+                gas=rxn["degassing"],
+                solvent=None,
+                comment=None,
+                pressure=None,
+            ))
+
         reaction_steps = [StepEntryClass(
             xml_type=XMLType.HEAT_CHILL,
             temp=temperature,
@@ -176,20 +219,48 @@ def convert_cleaned_chemotion_to_mofsy(
         for entry in rxn["purification_solvents"]:
             sample = entry["sample"]
             solvent = _parse_solvent(sample["name"])
-            if solvent and (sample.get("real_amount_value") or sample.get("target_amount_value")):
-                amount = _parse_amount(sample)
-                workup_steps.append(StepEntryClass(
-                    xml_type=XMLType.WASH_SOLID,
-                    vessel=vessel_id,
-                    amount=amount,
-                    reagent=None,
-                    temp=None,
-                    time=None,
-                    gas=None,
-                    solvent=solvent,
-                    comment=None,
-                    pressure=None,
-                ))
+            if solvent:
+                _append_wash_step(workup_steps, vessel_id, solvent)
+
+        for solvent_name in rxn.get("rinse") or []:
+            solvent = _parse_solvent(solvent_name)
+            if solvent:
+                _append_wash_step(workup_steps, vessel_id, solvent)
+
+        if rxn.get("wait_after_rinse"):
+            workup_steps.append(StepEntryClass(
+                xml_type=XMLType.WAIT,
+                vessel=vessel_id,
+                amount=None,
+                reagent=None,
+                temp=None,
+                time=TimeClass(
+                    value=float(rxn["wait_after_rinse"]),
+                    unit=TimeUnit.HOUR,
+                ),
+                gas=None,
+                solvent=None,
+                comment=None,
+                pressure=None,
+            ))
+
+        wash_solid = _parse_solvent(rxn.get("wash_solid"))
+        if wash_solid:
+            _append_wash_step(workup_steps, vessel_id, wash_solid)
+
+        if rxn.get("evaporate"):
+            workup_steps.append(StepEntryClass(
+                xml_type=XMLType.DRY,
+                vessel=vessel_id,
+                amount=None,
+                reagent=None,
+                temp=None,
+                time=None,
+                gas=None,
+                solvent=None,
+                comment=None,
+                pressure=None,
+            ))
 
         procedure = ProcedureSectionsClass(
             prep=ProcedureSectionClass(prep_steps),
