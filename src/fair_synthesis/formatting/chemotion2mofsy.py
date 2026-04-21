@@ -75,8 +75,6 @@ def _infer_role(entry: dict) -> Role:
     unit_str = sample.get("real_amount_unit") or sample.get("target_amount_unit") or "g"
     if entry.get("reference"):
         return Role.SUBSTRATE
-    if unit_str == "l":
-        return Role.SOLVENT
     return Role.REAGENT
 
 
@@ -188,20 +186,6 @@ def convert_cleaned_chemotion_to_mofsy(
                 pressure=None,
             ))
 
-        if rxn.get("degassing"):
-            prep_steps.append(StepEntryClass(
-                xml_type=XMLType.EVACUATE_AND_REFILL,
-                amount=None,
-                reagent=None,
-                vessel=vessel_id,
-                temp=None,
-                time=None,
-                gas=rxn["degassing"],
-                solvent=None,
-                comment=None,
-                pressure=None,
-            ))
-
         reaction_steps = [StepEntryClass(
             xml_type=XMLType.HEAT_CHILL,
             temp=temperature,
@@ -216,33 +200,11 @@ def convert_cleaned_chemotion_to_mofsy(
         )]
 
         workup_steps: List[StepEntryClass] = []
-        for entry in rxn["purification_solvents"]:
-            sample = entry["sample"]
-            solvent = _parse_solvent(sample["name"])
-            if solvent:
-                _append_wash_step(workup_steps, vessel_id, solvent)
 
         for solvent_name in rxn.get("rinse") or []:
             solvent = _parse_solvent(solvent_name)
             if solvent:
                 _append_wash_step(workup_steps, vessel_id, solvent)
-
-        if rxn.get("wait_after_rinse"):
-            workup_steps.append(StepEntryClass(
-                xml_type=XMLType.WAIT,
-                vessel=vessel_id,
-                amount=None,
-                reagent=None,
-                temp=None,
-                time=TimeClass(
-                    value=float(rxn["wait_after_rinse"]),
-                    unit=TimeUnit.HOUR,
-                ),
-                gas=None,
-                solvent=None,
-                comment=None,
-                pressure=None,
-            ))
 
         wash_solid = _parse_solvent(rxn.get("wash_solid"))
         if wash_solid:

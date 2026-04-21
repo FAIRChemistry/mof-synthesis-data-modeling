@@ -1,4 +1,5 @@
 SUPPORTED_RINSE_SOLVENTS = {
+    "dioxane/phno₂": "dioxane/PhNO2",
     "acetone": "acetone",
     "et3n": "Et3N",
     "mecn": "MeCN",
@@ -20,7 +21,7 @@ def process_free_text_fields(data: list[dict]) -> None:
         description = item.get("plain_text_description") or ""
         observation = item.get("plain_text_observation") or ""
         reaction_text = _reaction_text(description)
-        workup_text = _workup_text(observation)
+        workup_text = observation.split("Analysis", 1)[0].strip()
 
         vessel = _extract_vessel(reaction_text)
         if vessel:
@@ -33,11 +34,6 @@ def process_free_text_fields(data: list[dict]) -> None:
         rinse = _extract_rinse(workup_text)
         if rinse:
             item["rinse"] = rinse
-
-        wait_after_rinse = _extract_wait_after_rinse(workup_text)
-        if wait_after_rinse:
-            item["wait_after_rinse"] = wait_after_rinse
-            item["wait_after_rinse_unit"] = "h"
 
         wash_solid = _extract_wash_solid(workup_text)
         if wash_solid:
@@ -54,16 +50,7 @@ def _reaction_text(description: str) -> str:
         for marker in ("procedure", "reaction")
         if lowered.find(marker) >= 0
     ]
-    if marker_positions:
-        return description[min(marker_positions):].strip()
-
-    text = description.split("Analysis", 1)[0]
-    return text.split("PXRD", 1)[0].strip()
-
-
-def _workup_text(observation: str) -> str:
-    text = observation.split("Analysis", 1)[0]
-    return text.split("PXRD", 1)[0].strip()
+    return description[min(marker_positions):].strip()
 
 
 def _extract_vessel(text: str) -> str | None:
@@ -77,8 +64,8 @@ def _extract_vessel(text: str) -> str | None:
 
 def _extract_degassing(text: str) -> str | None:
     lowered = text.lower()
-    if "fpt" in lowered or "ar replace" in lowered:
-        return "Ar"
+    if "fpt" in lowered:
+        return "FPT"
     return None
 
 
@@ -90,19 +77,9 @@ def _extract_rinse(text: str) -> list[str]:
             result.append(solvent)
     return result
 
-
-def _extract_wait_after_rinse(text: str) -> int | None:
-    lowered = text.lower()
-    if "soxhlet" in lowered or "open to air" in lowered:
-        return 24
-    return None
-
-
 def _extract_wash_solid(text: str) -> str | None:
     lowered = text.lower()
-    if "samples under fillers" in lowered or "meoh filled up" in lowered:
-        return "MeOH+scCO2"
-    if any(term in lowered for term in ["supercritical co2", "scco<sub>2</sub>", "scco2", "scco₂", "scco₂"]):
+    if any(term in lowered for term in ["supercritical co2", "scco2", "scco₂"]):
         return "scCO2"
     return None
 
