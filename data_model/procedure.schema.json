@@ -195,7 +195,8 @@
                 "scCO2",
                 "MeCN",
                 "Et3N",
-                "MeOH+scCO2"
+                "MeOH+scCO2",
+                "dioxane/nitrobenzene"
               ]
             }
           }

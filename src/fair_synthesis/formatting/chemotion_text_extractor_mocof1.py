@@ -1,5 +1,5 @@
 SUPPORTED_RINSE_SOLVENTS = {
-    "dioxane/phno₂": "dioxane/PhNO2",
+    "dioxane/phno₂": "dioxane-PhNO2",
     "acetone": "acetone",
     "et3n": "Et3N",
     "mecn": "MeCN",

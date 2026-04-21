@@ -211,6 +211,7 @@ class PressureClass:
 class Solvent(Enum):
     ACETONE = "acetone"
     CH_CL3 = "CHCl3"
+    DIOXANE_NITROBENZENE = "dioxane/nitrobenzene"
     DMF = "DMF"
     ET3_N = "Et3N"
     ET_OH = "EtOH"
