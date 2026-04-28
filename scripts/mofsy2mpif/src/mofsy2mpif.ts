@@ -57,28 +57,28 @@ function resolveRepoPath(relativePath: string): string {
     return path.join(rootDirectory, relativePath);
 }
 
-function findStepByReagent(procedure: ProcedureSectionsObject, reagentId: string): StepEntryObject | undefined {
+function matchesReagentReference(step: StepEntryObject, candidates: string[]): boolean {
+    return candidates.some(candidate => step._reagent === candidate || step._solvent === candidate);
+}
+
+function findStepByReagent(procedure: ProcedureSectionsObject, reagentId?: string, reagentName?: string): StepEntryObject | undefined {
+    const candidates = [reagentId, reagentName].filter((value): value is string => value !== undefined && value !== null);
+    if (candidates.length === 0) {
+        return undefined;
+    }
+
     for (const prepareStep of (procedure.Prep as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (prepareStep._reagent === reagentId) {
-            return prepareStep;
-        }
-        if (prepareStep._solvent === reagentId) {
+        if (matchesReagentReference(prepareStep, candidates)) {
             return prepareStep;
         }
     }
     for (const reactionStep of (procedure.Reaction as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (reactionStep._reagent === reagentId) {
-            return reactionStep;
-        }
-        if (reactionStep._solvent === reagentId) {
+        if (matchesReagentReference(reactionStep, candidates)) {
             return reactionStep;
         }
     }
     for (const workupStep of (procedure.Workup as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (workupStep._reagent === reagentId) {
-            return workupStep;
-        }
-        if (workupStep._solvent === reagentId) {
+        if (matchesReagentReference(workupStep, candidates)) {
             return workupStep;
         }
     }
@@ -218,14 +218,17 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     const solvents: Solvent[] = [];
 
     for (const reagent of synthesisEntry.Reagents.Reagent) {
+        const step = findStepByReagent(
+            synthesisEntry.Procedure as ProcedureSectionsObject,
+            reagent._id,
+            reagent._name
+        );
+        if (!step) {
+            continue;
+        }
+        const amountUnit = step._amount ? step._amount.Unit : undefined;
 
-            const step = findStepByReagent(synthesisEntry.Procedure as ProcedureSectionsObject, reagent._id!);
-            if (!step) {
-                continue;
-            }
-            const amountUnit = step._amount ? step._amount.Unit : undefined;
-
-            if (reagent._role == Role.Substrate) {
+        if (reagent._role == Role.Substrate) {
             substrates.push({
                 id: reagent._id || 'unknown_id',
                 name: reagent._name || 'unknown_name',
