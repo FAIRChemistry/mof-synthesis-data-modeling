@@ -66,6 +66,6 @@ example_experiment_id_3 = "KE-008"
 example_synthesis_3 = api.get_params_by_experiment_id(
     params, example_experiment_id_3)
 print(
-    f"Parameters for Experiment ID {example_experiment_id_3}: {
-        json.dumps(
-            Mocof1Param.to_dict(example_synthesis_3))}")
+    f"Parameters for Experiment ID {example_experiment_id_3}: "
+    f"{json.dumps(Mocof1Param.to_dict(example_synthesis_3))}"
+)
