@@ -27,7 +27,7 @@ import type {
     ProcedureSectionsObject,
     StepEntryObject
 } from "./generated/procedure.ts";
-import {Convert as ConvertToMpifParams, ReactionAtmosphere} from "./generated/mpif_params.ts"
+import {Convert as ConvertToMpifParams} from "./generated/mpif_params.ts"
 import type {MPIFParameters} from "./generated/mpif_params.ts"
 import * as fs from 'fs';
 import path from "path";
@@ -57,28 +57,28 @@ function resolveRepoPath(relativePath: string): string {
     return path.join(rootDirectory, relativePath);
 }
 
-function matchesReagentReference(step: StepEntryObject, candidates: string[]): boolean {
-    return candidates.some(candidate => step._reagent === candidate || step._solvent === candidate);
-}
-
-function findStepByReagent(procedure: ProcedureSectionsObject, reagentId?: string, reagentName?: string): StepEntryObject | undefined {
-    const candidates = [reagentId, reagentName].filter((value): value is string => value !== undefined && value !== null);
-    if (candidates.length === 0) {
-        return undefined;
-    }
-
+function findStepByReagent(procedure: ProcedureSectionsObject, reagentId: string): StepEntryObject | undefined {
     for (const prepareStep of (procedure.Prep as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (matchesReagentReference(prepareStep, candidates)) {
+        if (prepareStep._reagent === reagentId) {
+            return prepareStep;
+        }
+        if (prepareStep._solvent === reagentId) {
             return prepareStep;
         }
     }
     for (const reactionStep of (procedure.Reaction as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (matchesReagentReference(reactionStep, candidates)) {
+        if (reactionStep._reagent === reagentId) {
+            return reactionStep;
+        }
+        if (reactionStep._solvent === reagentId) {
             return reactionStep;
         }
     }
     for (const workupStep of (procedure.Workup as ProcedureSectionObject).Step as StepEntryObject[]) {
-        if (matchesReagentReference(workupStep, candidates)) {
+        if (workupStep._reagent === reagentId) {
+            return workupStep;
+        }
+        if (workupStep._solvent === reagentId) {
             return workupStep;
         }
     }
@@ -218,17 +218,14 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     const solvents: Solvent[] = [];
 
     for (const reagent of synthesisEntry.Reagents.Reagent) {
-        const step = findStepByReagent(
-            synthesisEntry.Procedure as ProcedureSectionsObject,
-            reagent._id,
-            reagent._name
-        );
-        if (!step) {
-            continue;
-        }
-        const amountUnit = step._amount ? step._amount.Unit : undefined;
 
-        if (reagent._role == Role.Substrate) {
+            const step = findStepByReagent(synthesisEntry.Procedure as ProcedureSectionsObject, reagent._id!);
+            if (!step) {
+                continue;
+            }
+            const amountUnit = step._amount ? step._amount.Unit : undefined;
+
+            if (reagent._role !== Role.Solvent) {
             substrates.push({
                 id: reagent._id || 'unknown_id',
                 name: reagent._name || 'unknown_name',
@@ -294,8 +291,6 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
     ]
 
-    let prep_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Prep as ProcedureSectionObject).Step as StepEntryObject[])
-    let reaction_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Reaction as ProcedureSectionObject).Step as StepEntryObject[])
     let workup_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Workup as ProcedureSectionObject).Step as StepEntryObject[])
 
     // write all the data into the MPIF structures
@@ -326,10 +321,6 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         cif: mpifParams.productInfo.cif
     }
 
-    // reaction atmosphere: if a step EvacuateAndRefill is present in the reaction steps, use vacuum, otherwise use air
-    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureSectionsObject, XMLType.EvacuateAndRefill);
-    const reactionAtmosphere = evacuateStep ? ReactionAtmosphere.Vacuum : ReactionAtmosphere.Air;
-
     const synthesisGeneral: SynthesisGeneral = {
         performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || "undefined",
         labTemperature: mpifParams.synthesisGeneral.labTemperature,
@@ -339,7 +330,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         temperatureController: mpifParams.synthesisGeneral.temperatureController,
         reactionTime: reactionTime,
         reactionTimeUnit: reactionTimeUnit,
-        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || reactionAtmosphere,
+        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || '',
         reactionContainer: vesselId,
         reactionNote: reactionNote,
         productAmount: productAmount,
@@ -348,28 +339,14 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         scale: mpifParams.synthesisGeneral.scale,
     }
 
-    const steps: ProcedureStep[] = [
-        {
-            id: 'preparation',
-            type: 'Preparation',
-            atmosphere: mpifParams.steps.preparationAtmosphere || 'Air',
-            detail: prep_details
-        },
-        {
-            id: 'reaction',
-            type: 'Reaction',
-            // use the reaction atmosphere determined above unless overridden in the mpifParams. Make first character upper case
-            atmosphere: mpifParams.steps.reactionAtmosphere || (reactionAtmosphere.toString().charAt(0).toUpperCase() + reactionAtmosphere.toString().slice(1).toLowerCase()) as 'Air' | 'Vacuum',
-            detail: reaction_details
-        },
+    const steps: ProcedureStep[] = workup_details ? [
         {
             id: 'workup',
             type: 'Work-up',
             atmosphere: mpifParams.steps.workupAtmosphere || 'Air',
             detail: workup_details
         }
-
-    ];
+    ] : [];
 
     const synthesisDetails: SynthesisDetails = {
         substrates: substrates,
