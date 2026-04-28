@@ -16,7 +16,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["acetone", "Et3N", "MeCN", "NaCl aq", "DMF", "CHCl3", "MeOH", "EtOH"]
+        "enum": ["acetone", "Et3N", "MeCN", "NaCl aq", "DMF", "CHCl3", "MeOH", "EtOH", "dioxane/nitrobenzene"]
       }
     },
     "wait_after_rinse": {

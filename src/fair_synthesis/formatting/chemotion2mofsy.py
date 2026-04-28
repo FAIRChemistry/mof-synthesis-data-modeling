@@ -111,7 +111,12 @@ def _parse_solvent(name: Optional[str]) -> Optional[Solvent]:
         "scco2": Solvent.SC_CO2,
         "meoh+scco2": Solvent.ME_OH_SC_CO2,
         "triethylamine": Solvent.ET3_N,
-        "dioxane-phno2": Solvent.DIOXANE_NITROBENZENE
+        "dioxane-phno2": Solvent.DIOXANE_NITROBENZENE,
+        "dioxane/nitrobenzene": Solvent.DIOXANE_NITROBENZENE,
+        "dioxane/phno2": Solvent.DIOXANE_NITROBENZENE,
+        "dioxane/phno₂": Solvent.DIOXANE_NITROBENZENE,
+        "phno2/dioxane": Solvent.DIOXANE_NITROBENZENE,
+        "phno₂/dioxane": Solvent.DIOXANE_NITROBENZENE,
     }
     return solvent_map.get(normalized_name)
 

@@ -18,10 +18,10 @@ For degassing, analyze plain_text_description:
 - Else use null.
 
 For rinse, analyze plain_text_observation:
-- Search for these supported solvents only: acetone, Et3N, MeCN, NaCl aq, DMF, CHCl3, MeOH, EtOH.
+- Search for these supported solvents only: acetone, Et3N, MeCN, NaCl aq, DMF, CHCl3, MeOH, EtOH, dioxane/nitrobenzene.
 - Treat "ethanol" as EtOH.
+- Treat "dioxane/PhNO2", "dioxane/PhNO₂", "PhNO2/dioxane", and "PhNO₂/dioxane" as dioxane/nitrobenzene.
 - Include each supported solvent found in the text once, using the exact schema spelling.
-- Ignore unsupported mixtures such as dioxane/PhNO2 because they are not represented in the target MOFSY solvent enum.
 
 For wait_after_rinse, analyze plain_text_observation:
 - If the text contains "Soxhlet" or "open to air", set wait_after_rinse to 24 and wait_after_rinse_unit to "h".
