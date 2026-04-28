@@ -1,5 +1,5 @@
 data_MOCOF-1 synthesis trial
-_mpif_audit_creation_date	2026-04-21
+_mpif_audit_creation_date	2026-04-28
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'test'
@@ -36,7 +36,7 @@ _mpif_synthesis_react_temperature_C	120
 _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	88
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	''
+_mpif_synthesis_react_atmosphere	'vacuum'
 _mpif_synthesis_react_container	'Schlenk bomb'
 _mpif_synthesis_react_note
 ;
@@ -51,7 +51,7 @@ _mpif_synthesis_safety_note
 ;
 
 #Section 4: Synthesis Procedure Details
-_mpif_substrate_number	4
+_mpif_substrate_number	2
 loop_
 _mpif_substrate_id
 _mpif_substrate_name
@@ -65,8 +65,6 @@ _mpif_substrate_cas
 _mpif_substrate_smiles
 Co(tdpp)	Co(tdpp)			13.3	micromole				?
 Terephthalaldehyde	Terephthalaldehyde			25.94	micromole				?
-Water	Water			1197	micromole				?
-3,5-Dinitrobenzoic acid	3,5-Dinitrobenzoic acid			406.05	micromole				?
 
 _mpif_solvent_number	2
 loop_
@@ -95,12 +93,14 @@ _mpif_vessel_purpose
 _mpif_vessel_note
 Schlenk bomb	undefined	mL	Glass	Flask	-	Reaction	-
 
-_mpif_procedure_number	1
+_mpif_procedure_number	3
 loop_
 _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
+preparation	Preparation	Air	Add 13.3 micromole of Co(tdpp). Add 25.94 micromole of Terephthalaldehyde. Add 1197 micromole of Water. Add 406.05 micromole of 3,5-Dinitrobenzoic acid. Add 167 microlitre of PhNO2. Add 500 microlitre of DO. Degas the reaction mixture. 
+reaction	Reaction	Vacuum	Heat to 120 celsius for 88 hour. 
 workup	Work-up	Air	Wash solid with DMF. Wash solid with MeOH. Wash solid with EtOH. Wash solid with scCO2. 
 
 #Characterization Information
