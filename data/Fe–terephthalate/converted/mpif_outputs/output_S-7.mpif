@@ -51,7 +51,7 @@ _mpif_synthesis_safety_note
 ;
 
 #Section 4: Synthesis Procedure Details
-_mpif_substrate_number	1
+_mpif_substrate_number	3
 loop_
 _mpif_substrate_id
 _mpif_substrate_name
@@ -64,6 +64,8 @@ _mpif_substrate_purity_percent
 _mpif_substrate_cas
 _mpif_substrate_smiles
 FeCl3·6H2O	FeCl3·6H2O			1	millimole				?
+Benzene-1,4-dicarboxylic acid	Benzene-1,4-dicarboxylic acid			2	millimole				?
+5 M HF aq + 1 M HCl aq (1:1)	5 M HF aq + 1 M HCl aq (1:1)			240	microlitre				?
 
 _mpif_solvent_number	2
 loop_
@@ -92,14 +94,12 @@ _mpif_vessel_purpose
 _mpif_vessel_note
 S-7	undefined	mL	Teflon	Autoclave	-	Reaction	-
 
-_mpif_procedure_number	3
+_mpif_procedure_number	1
 loop_
 _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 1 millimole of FeCl3·6H2O. Add 2 millimole of Benzene-1,4-dicarboxylic acid. Add 10 millilitre of DMF. Add 240 microlitre of 5 M HF aq + 1 M HCl aq (1:1). 
-reaction	Reaction	Air	Sonicate for 30 minute. Heat to 100 celsius for 5 day. 
 workup	Work-up	Air	Wash solid with EtOH. Dry for 1 day. 
 
 #Characterization Information

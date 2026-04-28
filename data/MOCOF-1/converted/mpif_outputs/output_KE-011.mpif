@@ -36,7 +36,7 @@ _mpif_synthesis_react_temperature_C	120
 _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	72
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	'air'
+_mpif_synthesis_react_atmosphere	''
 _mpif_synthesis_react_container	'microwave vial'
 _mpif_synthesis_react_note
 ;
@@ -51,7 +51,7 @@ _mpif_synthesis_safety_note
 ;
 
 #Section 4: Synthesis Procedure Details
-_mpif_substrate_number	2
+_mpif_substrate_number	4
 loop_
 _mpif_substrate_id
 _mpif_substrate_name
@@ -65,6 +65,8 @@ _mpif_substrate_cas
 _mpif_substrate_smiles
 KE-007	KE-007			12.07	micromole				?
 2,5-Dimethoxybenzene-1,4-dicarboxaldehyde	2,5-Dimethoxybenzene-1,4-dicarboxaldehyde			23.9	micromole				?
+AcOH	AcOH			716.07	micromole				?
+H2O	H2O			4550.5	micromole				?
 
 _mpif_solvent_number	2
 loop_
@@ -93,14 +95,12 @@ _mpif_vessel_purpose
 _mpif_vessel_note
 microwave vial	undefined	mL		Vial	-	Reaction	microwave vial
 
-_mpif_procedure_number	3
+_mpif_procedure_number	1
 loop_
 _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 12.07 micromole of KE-007. Add 23.9 micromole of 2,5-Dimethoxybenzene-1,4-dicarboxaldehyde. Add 500 microlitre of nBuOH. Add 500 microlitre of oDCB. Add 716.07 micromole of AcOH. Add 4550.5 micromole of H2O. 
-reaction	Reaction	Air	Heat to 120 celsius for 72 hour. 
 workup	Work-up	Air	Wash solid with acetone. Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wait for 24 hour. Wash solid with scCO2. 
 
 #Characterization Information
