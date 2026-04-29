@@ -211,6 +211,7 @@ class PressureClass:
 class Solvent(Enum):
     ACETONE = "acetone"
     CH_CL3 = "CHCl3"
+    DIOXANE_NITROBENZENE = "dioxane/nitrobenzene"
     DMF = "DMF"
     ET3_N = "Et3N"
     ET_OH = "EtOH"
@@ -223,7 +224,6 @@ class Solvent(Enum):
 
 class TemperatureUnit(Enum):
     CELSIUS = "celsius"
-    KELVIN = "kelvin"
 
 
 class Temperature:
@@ -534,3 +534,4 @@ def synthesis_procedure_from_dict(s: Any) -> SynthesisProcedure:
 
 def synthesis_procedure_to_dict(x: SynthesisProcedure) -> Any:
     return to_class(SynthesisProcedure, x)
+

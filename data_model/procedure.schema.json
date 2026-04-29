@@ -195,7 +195,8 @@
                 "scCO2",
                 "MeCN",
                 "Et3N",
-                "MeOH+scCO2"
+                "MeOH+scCO2",
+                "dioxane/nitrobenzene"
               ]
             }
           }
@@ -293,23 +294,8 @@
           "type": "string",
           "title": "TemperatureUnit",
           "enum": [
-            "celsius",
-            "kelvin"
+            "celsius"
           ]
-        },
-        "if": {
-          "properties": {
-            "Unit": {
-              "const": "kelvin"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "Value": {
-              "minimum": 0
-            }
-          }
         }
       },
       "required": [
@@ -348,7 +334,6 @@
         "Unit": {
           "type": "string",
           "title": "PressureUnit",
-          "type": "string",
           "enum": [
             "pascal",
             "bar"

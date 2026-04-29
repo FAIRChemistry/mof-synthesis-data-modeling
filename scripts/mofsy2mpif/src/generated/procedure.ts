@@ -65,7 +65,7 @@ export interface StepEntryObject {
      */
     _reagent?: string;
     _temp?:    Temperature;
-    _time?:   null | TimeObject;
+    _time?:    any[] | boolean | number | number | null | TimeObject | string;
     /**
      * refilling gas
      */
@@ -124,6 +124,7 @@ export enum PressureUnit {
 export enum Solvent {
     Acetone = "acetone",
     CHCl3 = "CHCl3",
+    DioxaneNitrobenzene = "dioxane/nitrobenzene",
     Dmf = "DMF",
     Et3N = "Et3N",
     EtOH = "EtOH",
@@ -454,6 +455,7 @@ const typeMap: any = {
     "Solvent": [
         "acetone",
         "CHCl3",
+        "dioxane/nitrobenzene",
         "DMF",
         "Et3N",
         "EtOH",
@@ -486,3 +488,4 @@ const typeMap: any = {
         "substrate",
     ],
 };
+

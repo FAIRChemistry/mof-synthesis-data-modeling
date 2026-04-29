@@ -1,0 +1,77 @@
+{
+  "targets": [
+    {
+      "name": "procedure_python",
+      "schema": "data_model/procedure.schema.json",
+      "output": "src/fair_synthesis/generated_apis/procedure_data_structure.py",
+      "language": "python",
+      "top_level": "SynthesisProcedure",
+      "renderer_options": {},
+      "xml_append_after_unit_value": true
+    },
+    {
+      "name": "characterization_python",
+      "schema": "data_model/characterization.schema.json",
+      "output": "src/fair_synthesis/generated_apis/characterization_data_structure.py",
+      "language": "python",
+      "top_level": "Characterization",
+      "renderer_options": {}
+    },
+    {
+      "name": "chemotion_python",
+      "schema": "data_model/chemotion.schema.json",
+      "output": "src/fair_synthesis/generated_apis/chemotion_data_structure.py",
+      "language": "python",
+      "top_level": "Schema",
+      "renderer_options": {}
+    },
+    {
+      "name": "sciformation_cleaned_python",
+      "schema": "data_model/sciformation_eln_cleaned.schema.json",
+      "output": "src/fair_synthesis/generated_apis/sciformation_eln_cleaned_data_structure.py",
+      "language": "python",
+      "top_level": "SciformationCleanedELNSchema",
+      "renderer_options": {}
+    },
+    {
+      "name": "mocof_1_params_python",
+      "schema": "data_model/mocof-1-params.schema.json",
+      "output": "src/fair_synthesis/generated_apis/mocof_1_params.py",
+      "language": "python",
+      "top_level": "Mocof1Param",
+      "renderer_options": {}
+    },
+    {
+      "name": "fe_terephthalate_python",
+      "schema": "data_model/Fe–terephthalate.schema.json",
+      "output": "src/fair_synthesis/generated_apis/fe_terephthalate_json_from_excel_data_structure.py",
+      "language": "python",
+      "top_level": "Mil",
+      "renderer_options": {}
+    },
+    {
+      "name": "procedure_typescript",
+      "schema": "data_model/procedure.schema.json",
+      "output": "scripts/mofsy2mpif/src/generated/procedure.ts",
+      "language": "typescript",
+      "top_level": "SynthesisProcedure",
+      "renderer_options": {}
+    },
+    {
+      "name": "characterization_typescript",
+      "schema": "data_model/characterization.schema.json",
+      "output": "scripts/mofsy2mpif/src/generated/characterization.ts",
+      "language": "typescript",
+      "top_level": "Characterization",
+      "renderer_options": {}
+    },
+    {
+      "name": "mpif_params_typescript",
+      "schema": "data_model/mpif_params.schema.json",
+      "output": "scripts/mofsy2mpif/src/generated/mpif_params.ts",
+      "language": "typescript",
+      "top_level": "MPIFParameters",
+      "renderer_options": {}
+    }
+  ]
+}

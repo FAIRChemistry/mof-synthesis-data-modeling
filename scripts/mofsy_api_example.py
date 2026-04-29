@@ -4,7 +4,7 @@ import os.path
 import fair_synthesis.formatting.mofsy_api as api
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure
 from fair_synthesis.generated_apis.characterization_data_structure import Characterization
-from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
+from fair_synthesis.generated_apis.mocof_1_params import Mocof1ParamValue as Mocof1Param
 
 current_file_dir = __file__.rsplit('/', 1)[0]
 procedure_file_path = os.path.join(
@@ -66,6 +66,6 @@ example_experiment_id_3 = "KE-008"
 example_synthesis_3 = api.get_params_by_experiment_id(
     params, example_experiment_id_3)
 print(
-    f"Parameters for Experiment ID {example_experiment_id_3}: {
-        json.dumps(
-            Mocof1Param.to_dict(example_synthesis_3))}")
+    f"Parameters for Experiment ID {example_experiment_id_3}: "
+    f"{json.dumps(Mocof1Param.to_dict(example_synthesis_3))}"
+)

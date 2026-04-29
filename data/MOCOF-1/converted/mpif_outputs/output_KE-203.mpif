@@ -1,5 +1,5 @@
 data_MOCOF-1 synthesis trial
-_mpif_audit_creation_date	2026-01-26
+_mpif_audit_creation_date	2026-04-28
 _mpif_audit_generator_version	1.0
 _mpif_audit_publication_doi	''
 _mpif_audit_procedure_status	'test'
@@ -36,7 +36,7 @@ _mpif_synthesis_react_temperature_C	120
 _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	64
 _mpif_synthesis_react_time_unit	'h'
-_mpif_synthesis_react_atmosphere	'vacuum'
+_mpif_synthesis_react_atmosphere	''
 _mpif_synthesis_react_container	'Schlenk bomb'
 _mpif_synthesis_react_note
 ;
@@ -51,7 +51,7 @@ _mpif_synthesis_safety_note
 ;
 
 #Section 4: Synthesis Procedure Details
-_mpif_substrate_number	2
+_mpif_substrate_number	5
 loop_
 _mpif_substrate_id
 _mpif_substrate_name
@@ -65,6 +65,9 @@ _mpif_substrate_cas
 _mpif_substrate_smiles
 KE-185	KE-185			14.08	micromole				?
 Terephthalaldehyde	Terephthalaldehyde			42.23	micromole				?
+Wasser	Wasser			633.41	micromole				?
+Benzoic acid	Benzoic acid			436.46	micromole				?
+4-(Trimethylsilyl)ethynylbenzaldehyde	4-(Trimethylsilyl)ethynylbenzaldehyde			16.61	micromole				?
 
 _mpif_solvent_number	2
 loop_
@@ -93,14 +96,12 @@ _mpif_vessel_purpose
 _mpif_vessel_note
 Schlenk bomb	undefined	mL	Glass	Flask	-	Reaction	-
 
-_mpif_procedure_number	3
+_mpif_procedure_number	1
 loop_
 _mpif_procedure_id
 _mpif_procedure_type
 _mpif_procedure_atmosphere
 _mpif_procedure_detail
-preparation	Preparation	Air	Add 14.08 micromole of KE-185. Add 42.23 micromole of Terephthalaldehyde. Add 633.41 micromole of Wasser. Add 436.46 micromole of Benzoic acid. Add 16.61 micromole of 4-(Trimethylsilyl)ethynylbenzaldehyde. Add 176.74 microlitre of PhNO2. Add 529.162 microlitre of DO. Degas the reaction mixture. 
-reaction	Reaction	Vacuum	Heat to 120 celsius for 64 hour. 
 workup	Work-up	Air	Wash solid with DMF. Wash solid with CHCl3. Wash solid with MeOH. Wash solid with scCO2. 
 
 #Characterization Information

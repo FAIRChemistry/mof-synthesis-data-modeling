@@ -3,7 +3,7 @@ from typing import List, Dict
 
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, ReagentElement, SynthesisElement, Role, Amount
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationEntry, Characterization
-from fair_synthesis.generated_apis.mocof_1_params import Mocof1Param
+from fair_synthesis.generated_apis.mocof_1_params import Mocof1ParamValue as Mocof1Param
 from fair_synthesis.formatting.pxrd_collector import PXRDFile
 
 
@@ -138,47 +138,29 @@ def print_procedure(synthesis: SynthesisElement):
         print("Prep Steps:")
         for step in synthesis.procedure.prep.step:
             print(
-                f" -(Type: {
-                    step.xml_type}, Amount: {
-                    step.amount}, Reagent: {
-                    step.reagent}, Temp: {
-                    step.temp}, Time: {
-                        step.time}, Vessel: {
-                            step.vessel}, Solvent: {
-                                step.solvent}, Gas: {
-                                    step.gas}, Pressure: {
-                                        step.pressure}, Comment: {
-                                            step.comment})")
+                f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, "
+                f"Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, "
+                f"Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, "
+                f"Comment: {step.comment})"
+            )
     if synthesis.procedure.reaction:
         print("Reaction Steps:")
         for step in synthesis.procedure.reaction.step:
             print(
-                f" -(Type: {
-                    step.xml_type}, Amount: {
-                    step.amount}, Reagent: {
-                    step.reagent}, Temp: {
-                    step.temp}, Time: {
-                        step.time}, Vessel: {
-                            step.vessel}, Solvent: {
-                                step.solvent}, Gas: {
-                                    step.gas}, Pressure: {
-                                        step.pressure}, Comment: {
-                                            step.comment})")
+                f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, "
+                f"Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, "
+                f"Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, "
+                f"Comment: {step.comment})"
+            )
     if synthesis.procedure.workup:
         print("Workup Steps:")
         for step in synthesis.procedure.workup.step:
             print(
-                f" -(Type: {
-                    step.xml_type}, Amount: {
-                    step.amount}, Reagent: {
-                    step.reagent}, Temp: {
-                    step.temp}, Time: {
-                        step.time}, Vessel: {
-                            step.vessel}, Solvent: {
-                                step.solvent}, Gas: {
-                                    step.gas}, Pressure: {
-                                        step.pressure}, Comment: {
-                                            step.comment})")
+                f" -(Type: {step.xml_type}, Amount: {step.amount}, Reagent: {step.reagent}, "
+                f"Temp: {step.temp}, Time: {step.time}, Vessel: {step.vessel}, "
+                f"Solvent: {step.solvent}, Gas: {step.gas}, Pressure: {step.pressure}, "
+                f"Comment: {step.comment})"
+            )
 
 
 def print_product(product: Product):
@@ -191,6 +173,4 @@ def print_product(product: Product):
             print(f"   Experiment ID: {pxrd_file.experiment_id}")
             print(f"   X-ray Source: {pxrd_file.xray_source}")
             print(f"   Sample Holder Shape: {pxrd_file.sample_holder_shape}")
-            print(
-                f"   Sample Holder Diameter: {
-                    pxrd_file.sample_holder_diameter}")
+            print(f"   Sample Holder Diameter: {pxrd_file.sample_holder_diameter}")

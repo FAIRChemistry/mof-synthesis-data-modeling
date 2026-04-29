@@ -1,0 +1,42 @@
+{
+  "mofsy2xdl": [
+    {
+      "id": "mocof-1-sciformation",
+      "procedure": "data/MOCOF-1/converted/procedure_from_sciformation.json",
+      "xdlOutput": "data/MOCOF-1/converted/xdl_from_sciformation.xml"
+    },
+    {
+      "id": "mocof-1-chemotion",
+      "procedure": "data/MOCOF-1_Chemotion/converted/procedure_from_chemotion.json",
+      "xdlOutput": "data/MOCOF-1_Chemotion/converted/xdl_from_chemotion.xml"
+    },
+    {
+      "id": "fe-terephthalate",
+      "procedure": "data/Fe–terephthalate/converted/procedure_from_Fe–terephthalate.json",
+      "xdlOutput": "data/Fe–terephthalate/converted/xdl_from_Fe–terephthalate.xml"
+    }
+  ],
+  "mofsy2mpif": [
+    {
+      "id": "fe-terephthalate",
+      "procedure": "data/Fe–terephthalate/converted/procedure_from_Fe–terephthalate.json",
+      "characterization": "data/Fe–terephthalate/converted/characterization_from_Fe–terephthalate.json",
+      "mpifOutputFolder": "data/Fe–terephthalate/converted/mpif_outputs",
+      "mpifParams": "data/Fe–terephthalate/mpif_params.json"
+    },
+    {
+      "id": "mocof-1-sciformation",
+      "procedure": "data/MOCOF-1/converted/procedure_from_sciformation.json",
+      "characterization": "data/MOCOF-1/converted/characterization_from_sciformation.json",
+      "mpifOutputFolder": "data/MOCOF-1/converted/mpif_outputs",
+      "mpifParams": "data/MOCOF-1/mpif_params.json"
+    },
+    {
+      "id": "mocof-1-chemotion",
+      "procedure": "data/MOCOF-1_Chemotion/converted/procedure_from_chemotion.json",
+      "characterization": "data/MOCOF-1_Chemotion/converted/characterization_from_chemotion.json",
+      "mpifOutputFolder": "data/MOCOF-1_Chemotion/converted/mpif_outputs",
+      "mpifParams": "data/MOCOF-1_Chemotion/mpif_params.json"
+    }
+  ]
+}

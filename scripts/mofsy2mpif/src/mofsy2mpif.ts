@@ -1,4 +1,4 @@
-import {
+import type {
     Characterization,
     Hardware,
     MPIFData,
@@ -11,32 +11,51 @@ import {
     SynthesisDetails,
     SynthesisGeneral,
     Vessel
-} from './mpif-gui/mpif'
-import {stringifyMPIF} from './mpif-gui/mpifParser'
-import {CharacterizationEntry, Convert as ConvertChar, XRaySource} from "./generated/characterization";
+} from './mpif-gui/mpif.ts'
+import {stringifyMPIF} from './mpif-gui/mpifParser.ts'
+import {Convert as ConvertChar, XRaySource} from "./generated/characterization.ts";
+import type {CharacterizationEntry} from "./generated/characterization.ts";
 import {
-    AmountUnit,
-    ComponentElement,
     Convert as ConvertProc,
-    ProcedureSectionObject,
-    ProcedureSectionsObject,
     Role,
-    StepEntryObject,
     TimeUnit,
     XMLType
-} from "./generated/procedure";
-import {Convert as ConvertToMpifParams, MPIFParameters, ReactionAtmosphere} from "./generated/mpif_params"
+} from "./generated/procedure.ts";
+import type {
+    ComponentElement,
+    ProcedureSectionObject,
+    ProcedureSectionsObject,
+    StepEntryObject
+} from "./generated/procedure.ts";
+import {Convert as ConvertToMpifParams} from "./generated/mpif_params.ts"
+import type {MPIFParameters} from "./generated/mpif_params.ts"
 import * as fs from 'fs';
 import path from "path";
 import Ajv from 'ajv';
+import {fileURLToPath} from "url";
 
 
 // __dirname gives the directory of the current script
-const currentDir = __dirname;
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
 const rootDirectory = path.join(currentDir, "..", "..", "..");
 const dataDirectory = path.join(rootDirectory, "data");
 const schemasDirectory = path.join(rootDirectory, "data_model");
 
+type Mofsy2MpifSource = {
+    id: string;
+    procedure: string;
+    characterization: string;
+    mpifOutputFolder: string;
+    mpifParams: string;
+}
+
+type ConversionSources = {
+    mofsy2mpif?: Mofsy2MpifSource[];
+}
+
+function resolveRepoPath(relativePath: string): string {
+    return path.join(rootDirectory, relativePath);
+}
 
 function findStepByReagent(procedure: ProcedureSectionsObject, reagentId: string): StepEntryObject | undefined {
     for (const prepareStep of (procedure.Prep as ProcedureSectionObject).Step as StepEntryObject[]) {
@@ -95,8 +114,8 @@ function stringifySteps(steps: StepEntryObject[]): string {
                 result += `${verb} to ${step._temp ? step._temp.Value : ''} ${step._temp ? step._temp.Unit : ''} for ${step._time ? step._time.Value : ''} ${step._time ? step._time.Unit : ''}. `;
                 break;
             case XMLType.Dry:
-                if (step._time && step._time) {
-                    result += `Dry for ${step._time ? step._time : ''} ${step._time ? step._time.Unit : ''}. `;
+                if (step._time && step._time.Value !== undefined) {
+                    result += `Dry for ${step._time.Value} ${step._time.Unit}. `;
                 } else {
                     result += `Dry. `;
                 }
@@ -206,7 +225,7 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
             }
             const amountUnit = step._amount ? step._amount.Unit : undefined;
 
-            if (reagent._role == Role.Substrate) {
+            if (reagent._role !== Role.Solvent) {
             substrates.push({
                 id: reagent._id || 'unknown_id',
                 name: reagent._name || 'unknown_name',
@@ -226,35 +245,42 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     }
 
     const vessel: ComponentElement|undefined = synthesisEntry.Hardware!.Component![0]
+    const vesselId = vessel?._id || 'unknown_container';
     let vessel_material = "unknown"
     let vessel_type: '' | 'Vial' | 'Jar' | 'Autoclave' | 'Beaker' | 'Flask' | 'Centrifuge-tube' | 'Other' = ""
     let vessel_note = undefined
     if (vessel && vessel._type) {
-        if (vessel._type!.toLowerCase().includes("glass")) {
+        const normalizedVesselType = vessel._type!.toLowerCase();
+        if (normalizedVesselType.includes("glass")) {
             vessel_material = "Glass"
-        }else if (vessel._type!.toLowerCase().includes("microwave")) {
+        }else if (normalizedVesselType.includes("microwave")) {
             vessel_material = ''
             vessel_note = vessel._type;
-        } else if (vessel._type!.toLowerCase().includes("teflon")) {
+        } else if (normalizedVesselType.includes("teflon")) {
             vessel_material = "Teflon"
-        } else if (vessel._type!.toLowerCase().includes("schlenk bomb")) {
+        } else if (normalizedVesselType.includes("schlenk bomb")) {
             vessel_material = "Glass"
-        } else {
-            throw new Error("Vessel material not recognized: " + vessel._type)
         }
-        if (vessel._type!.toLowerCase().includes("vial")) {
+        if (normalizedVesselType.includes("vial")) {
             vessel_type = "Vial"
-        } else if (vessel._type!.toLowerCase().includes("autoclave")) {
+        } else if (normalizedVesselType.includes("autoclave")) {
             vessel_type = "Autoclave"
-        } else if (vessel._type!.toLowerCase().includes("schlenk bomb")) {
+        } else if (normalizedVesselType.includes("schlenk bomb")) {
             vessel_type = "Flask"
+        } else if (normalizedVesselType.includes("jar")) {
+            vessel_type = "Jar"
+        } else if (normalizedVesselType.includes("beaker")) {
+            vessel_type = "Beaker"
+        } else if (normalizedVesselType.includes("centrifuge")) {
+            vessel_type = "Centrifuge-tube"
         } else {
-            throw new Error("Vessel type not recognized: " + vessel._type)
+            vessel_type = "Other"
+            vessel_note = vessel._type;
         }
     }
     const vessels: Vessel[] = [
         {
-            id: vessel._id,
+            id: vesselId,
             volume: undefined,
             volumeUnit: "mL",
             material: vessel_material,
@@ -265,14 +291,12 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         }
     ]
 
-    let prep_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Prep as ProcedureSectionObject).Step as StepEntryObject[])
-    let reaction_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Reaction as ProcedureSectionObject).Step as StepEntryObject[])
     let workup_details = stringifySteps(((synthesisEntry.Procedure as ProcedureSectionsObject).Workup as ProcedureSectionObject).Step as StepEntryObject[])
 
     // write all the data into the MPIF structures
     const metadata: MPIFMetadata = {
         dataName: mpifParams.metadata.dataName,
-        creationDate: new Date().toISOString().split('T')[0],
+        creationDate: process.env.MPIF_CREATION_DATE || mpifParams.metadata.creationDate || new Date().toISOString().split('T')[0],
         generatorVersion: mpifParams.metadata.generatorVersion,
         publicationDOI: mpifParams.metadata.publicationDOI,
         procedureStatus: mpifParams.metadata.procedureStatus,
@@ -297,10 +321,6 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         cif: mpifParams.productInfo.cif
     }
 
-    // reaction atmosphere: if a step EvacuateAndRefill is present in the reaction steps, use vacuum, otherwise use air
-    const evacuateStep = findStepByType(synthesisEntry.Procedure as ProcedureSectionsObject, XMLType.EvacuateAndRefill);
-    const reactionAtmosphere = evacuateStep ? ReactionAtmosphere.Vacuum : ReactionAtmosphere.Air;
-
     const synthesisGeneral: SynthesisGeneral = {
         performedDate: synthesisEntry.Metadata._date as string || mpifParams.synthesisGeneral.performedDate.toString() || "undefined",
         labTemperature: mpifParams.synthesisGeneral.labTemperature,
@@ -310,8 +330,8 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         temperatureController: mpifParams.synthesisGeneral.temperatureController,
         reactionTime: reactionTime,
         reactionTimeUnit: reactionTimeUnit,
-        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || reactionAtmosphere,
-        reactionContainer: vessel._id || 'unknown_container',
+        reactionAtmosphere: mpifParams.synthesisGeneral.reactionAtmosphere || '',
+        reactionContainer: vesselId,
         reactionNote: reactionNote,
         productAmount: productAmount,
         productAmountUnit: productAmountUnit,
@@ -319,28 +339,14 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
         scale: mpifParams.synthesisGeneral.scale,
     }
 
-    const steps: ProcedureStep[] = [
-        {
-            id: 'preparation',
-            type: 'Preparation',
-            atmosphere: mpifParams.steps.preparationAtmosphere || 'Air',
-            detail: prep_details
-        },
-        {
-            id: 'reaction',
-            type: 'Reaction',
-            // use the reaction atmosphere determined above unless overridden in the mpifParams. Make first character upper case
-            atmosphere: mpifParams.steps.reactionAtmosphere || (reactionAtmosphere.toString().charAt(0).toUpperCase() + reactionAtmosphere.toString().slice(1).toLowerCase()) as 'Air' | 'Vacuum',
-            detail: reaction_details
-        },
+    const steps: ProcedureStep[] = workup_details ? [
         {
             id: 'workup',
             type: 'Work-up',
             atmosphere: mpifParams.steps.workupAtmosphere || 'Air',
             detail: workup_details
         }
-
-    ];
+    ] : [];
 
     const synthesisDetails: SynthesisDetails = {
         substrates: substrates,
@@ -398,28 +404,27 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 
 
     const mpifString = stringifyMPIF(mpifData);
-    const outputFilePath = outputFolder + "/" + `output_${experimentId}.mpif`; // replace with desired output path
+    const outputFilePath = outputFolderPath + "/" + `output_${experimentId}.mpif`; // replace with desired output path
     // first generate the folder if needed
-    if (!fs.existsSync(outputFolder)) {
-        fs.mkdirSync(outputFolder, { recursive: true });
+    if (!fs.existsSync(outputFolderPath)) {
+        fs.mkdirSync(outputFolderPath, { recursive: true });
     }
     fs.writeFileSync(outputFilePath, mpifString);
 
 });
 }
 
-// Fe–terephthalate
-let inputProcedure = path.join(dataDirectory, "Fe–terephthalate", "converted", "procedure_from_Fe–terephthalate.json");
-let inputCharacterization = path.join(dataDirectory, "Fe–terephthalate", "converted", "characterization_from_Fe–terephthalate.json");
-let outputFolder = path.join(dataDirectory, "Fe–terephthalate", "converted", "mpif_outputs");
-let paramsFile = path.join(dataDirectory, "Fe–terephthalate", "mpif_params.json");
 const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");
-mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
+const conversionSources = JSON.parse(
+    fs.readFileSync(path.join(dataDirectory, "conversion_sources.json"), 'utf-8')
+) as ConversionSources;
 
-// MOCOF-1
-inputProcedure = path.join(dataDirectory, "MOCOF-1", "converted", "procedure_from_sciformation.json");
-inputCharacterization = path.join(dataDirectory, "MOCOF-1", "converted", "characterization_from_sciformation.json");
-outputFolder = path.join(dataDirectory, "MOCOF-1", "converted", "mpif_outputs");
-paramsFile = path.join(dataDirectory, "MOCOF-1", "mpif_params.json");
-mofsyToMpif(inputProcedure, inputCharacterization, outputFolder, paramsFile, paramsSchema);
-
+for (const source of conversionSources.mofsy2mpif || []) {
+    mofsyToMpif(
+        resolveRepoPath(source.procedure),
+        resolveRepoPath(source.characterization),
+        resolveRepoPath(source.mpifOutputFolder),
+        resolveRepoPath(source.mpifParams),
+        paramsSchema
+    );
+}

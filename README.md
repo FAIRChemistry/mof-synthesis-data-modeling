@@ -67,6 +67,13 @@ uv run marimo edit
 1. Workspace > scripts > convex-hull.mo.py
 2. Run all slate cells (right bottom)
 
+### Smoke tests for scripts
+Run the smoke test suite that exercises the main scripts end-to-end:
+```bash
+uv run pytest tests/test_smoke_scripts.py
+```
+This test uses a temporary copy of the repository and runs the scripts with the same environment variables used in CI. Make sure `node` is available, because the smoke suite includes `scripts/mofsy2mpif/src/mofsy2mpif.ts`.
+
 ---
 ## Contributing
 - Use `uv run ...` as a substitution for `python ...`.

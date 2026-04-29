@@ -1,3 +1,8 @@
+# Unpublished data
+data/MOCOF-1_Chemotion/chemotion_export.json
+data/MOCOF-1_Chemotion/converted/
+
+# macOS
 **/.DS_Store
 
 # Byte-compiled / optimized / DLL files

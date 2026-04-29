@@ -1,4 +1,5 @@
 import os
+from typing import Any
 
 from fair_synthesis.formatting.utils import load_json, save_string_as_file
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure
@@ -88,48 +89,17 @@ def dict_to_xml(root_tag, data):
 
 def mofsy2xdl():
     current_file_dir = __file__.rsplit('/', 1)[0]
+    repo_root = os.path.abspath(os.path.join(current_file_dir, '../../..'))
+    config = load_json(os.path.join(repo_root, 'data', 'conversion_sources.json'))
 
-    # MOCOF-1 case
-    mofsy_file_path = os.path.join(
-        current_file_dir,
-        '../../..',
-        'data',
-        'MOCOF-1',
-        'converted',
-        'procedure_from_sciformation.json')
-    xml = convert_mofsy_procedure_to_xdl_string(
-        SynthesisProcedure.from_dict(load_json(mofsy_file_path)))
-    # print("XML Result: " + xml)
-    save_string_as_file(
-        xml,
-        os.path.join(
-            current_file_dir,
-            '../../..',
-            'data',
-            'MOCOF-1',
-            'converted',
-            'xdl_from_sciformation.xml'))
+    for source in config.get('mofsy2xdl', []):
+        source_config: dict[str, Any] = source
+        procedure_path = os.path.join(repo_root, source_config['procedure'])
+        output_path = os.path.join(repo_root, source_config['xdlOutput'])
 
-    # Fe–terephthalate case
-    mil_2_file_path = os.path.join(
-        current_file_dir,
-        '../../..',
-        'data',
-        'Fe–terephthalate',
-        'converted',
-        'procedure_from_Fe–terephthalate.json')
-    xml = convert_mofsy_procedure_to_xdl_string(
-        SynthesisProcedure.from_dict(load_json(mil_2_file_path)))
-    # print("XML Result: " + xml)
-    save_string_as_file(
-        xml,
-        os.path.join(
-            current_file_dir,
-            '../../..',
-            'data',
-            'Fe–terephthalate',
-            'converted',
-            'xdl_from_Fe–terephthalate.xml'))
+        xml = convert_mofsy_procedure_to_xdl_string(
+            SynthesisProcedure.from_dict(load_json(procedure_path)))
+        save_string_as_file(xml, output_path)
 
 
 if __name__ == '__main__':
