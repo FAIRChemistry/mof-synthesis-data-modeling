@@ -53,6 +53,8 @@ def _reaction_text(description: str) -> str:
         for marker in ("procedure", "reaction")
         if lowered.find(marker) >= 0
     ]
+    if not marker_positions:
+        return description.strip()
     return description[min(marker_positions):].strip()
 
 
