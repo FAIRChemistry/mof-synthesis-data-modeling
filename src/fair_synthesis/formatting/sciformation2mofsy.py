@@ -388,6 +388,12 @@ def sciformation2mofsy(
     validate(instance=enriched_cleaned_eln.to_dict(), schema=load_json(os.path.join(
         resolved_repo_root, 'data_model', 'sciformation_eln_enriched.schema.json')))
 
+    enriched_cleaned_eln = _enrich_cleaned_sciformation(
+        cleaned_eln, use_llm_for_extraction=use_llm_for_extraction)
+    save_json(enriched_cleaned_eln.to_dict(), enriched_output_path)
+    validate(instance=enriched_cleaned_eln.to_dict(), schema=load_json(os.path.join(
+        repo_root_path, 'data_model', 'sciformation_eln_enriched.schema.json')))
+
     procedure, characterization = convert_cleaned_eln_to_mofsy(
         enriched_cleaned_eln, pxrd_folder, resolved_repo_root)
     result_dict_procedure = procedure.to_dict()
