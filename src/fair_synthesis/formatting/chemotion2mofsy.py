@@ -1,7 +1,7 @@
 import os
 import re
+from copy import deepcopy
 from typing import List, Optional, Tuple
-
 from jsonschema import validate
 
 from fair_synthesis.generated_apis.procedure_data_structure import (
@@ -12,10 +12,19 @@ from fair_synthesis.generated_apis.procedure_data_structure import (
     Solvent,
 )
 from fair_synthesis.generated_apis.characterization_data_structure import (
-    CharacterizationClass, Characterization, XRaySource, SampleHolder,
-    CharacterizationEntry, Weight, WeightUnit, Pxrd, SampleHolderType,
+    CharacterizationClass, Characterization,
+    CharacterizationEntry, Weight, WeightUnit
 )
-from fair_synthesis.formatting.chemotion_cleaner import clean_chemotion
+from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
+    ChemotionCleanedSchema,
+)
+from fair_synthesis.generated_apis.chemotion_enriched_data_structure import (
+    ChemotionEnrichedSchema,
+)
+from fair_synthesis.formatting.chemotion_cleaner import clean_chemotion, resolve_chemotion_input_path
+from fair_synthesis.formatting.chemotion_text_extractor_mocof1 import (
+    process_data_use_case_specific as enrich_cleaned_chemotion_for_mocof1,
+)
 from fair_synthesis.formatting.utils import load_json, save_json
 
 
@@ -143,17 +152,26 @@ def _append_wash_step(
     ))
 
 
+def _enrich_cleaned_chemotion(
+        cleaned: ChemotionCleanedSchema) -> ChemotionEnrichedSchema:
+    enriched_dict = deepcopy(cleaned.to_dict())
+    reactions = enriched_dict.get("reactions", [])
+    enrich_cleaned_chemotion_for_mocof1(reactions)
+    return ChemotionEnrichedSchema.from_dict(enriched_dict)
+
+
 def convert_cleaned_chemotion_to_mofsy(
-        cleaned: dict,
+        cleaned: ChemotionEnrichedSchema,
 ) -> Tuple[SynthesisProcedure, Characterization]:
     synthesis_list: List[SynthesisElement] = []
     characterization_list: List[CharacterizationEntry] = []
 
-    for rxn in cleaned["reactions"]:
-        experiment_id: str = rxn.get("short_label") or rxn["id"]
+    for reaction in cleaned.reactions:
+        rxn = reaction.to_dict()
+        experiment_id: str = reaction.short_label or reaction.id
         vessel_id = _get_vessel_id(rxn)
         temperature = _parse_temperature(rxn.get("temperature"))
-        duration = _parse_duration(rxn.get("duration", ""))
+        duration = _parse_duration(reaction.duration)
 
         reagents: List[ReagentElement] = []
         prep_steps: List[StepEntryClass] = []
@@ -274,8 +292,14 @@ def chemotion2mofsy():
     current_file_dir = __file__.rsplit("/", 1)[0]
     repo_root = os.path.join(current_file_dir, "../../..")
 
-    input_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json")
+    try:
+        input_path = resolve_chemotion_input_path(repo_root)
+    except FileNotFoundError:
+        print("Chemotion input data not found. Skipping Chemotion conversion.")
+        return
     cleaned_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
+    enriched_output_filename = "chemotion_enriched.json"
+    enriched_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", enriched_output_filename)
     procedure_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "procedure_from_chemotion.json")
     characterization_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "characterization_from_chemotion.json")
 
@@ -283,10 +307,18 @@ def chemotion2mofsy():
 
     raw_data = load_json(input_path)
     cleaned = clean_chemotion(raw_data)
-    save_json(cleaned, cleaned_output_path)
+    save_json(cleaned.to_dict(), cleaned_output_path)
     print("Chemotion data cleaned.")
+    validate(instance=cleaned.to_dict(), schema=load_json(
+        os.path.join(repo_root, "data_model", "chemotion_cleaned.schema.json")))
 
-    procedure, characterization = convert_cleaned_chemotion_to_mofsy(cleaned)
+    enriched_cleaned = _enrich_cleaned_chemotion(
+        cleaned)
+    save_json(enriched_cleaned.to_dict(), enriched_output_path)
+    validate(instance=enriched_cleaned.to_dict(), schema=load_json(
+        os.path.join(repo_root, "data_model", "chemotion_enriched.schema.json")))
+    procedure, characterization = convert_cleaned_chemotion_to_mofsy(
+        enriched_cleaned)
 
     result_procedure = procedure.to_dict()
     result_characterization = characterization.to_dict()

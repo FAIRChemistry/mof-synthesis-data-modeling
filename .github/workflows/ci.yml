@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: scripts/mofsy2mpif/package-lock.json
+
+      - name: Install Python dependencies
+        run: uv sync
+
+      - name: Install mofsy2mpif Node dependencies
+        run: npm ci
+        working-directory: scripts/mofsy2mpif
+
+      - name: Run smoke tests
+        run: uv run --with pytest pytest tests/test_smoke_scripts.py

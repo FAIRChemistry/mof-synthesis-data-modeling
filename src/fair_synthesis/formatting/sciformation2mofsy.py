@@ -1,4 +1,5 @@
 import os
+from copy import deepcopy
 from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
@@ -9,16 +10,34 @@ from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProc
 from fair_synthesis.generated_apis.characterization_data_structure import CharacterizationClass, Characterization, XRaySource, \
     SampleHolder, CharacterizationEntry, \
     Length, LengthUnit, Weight, WeightUnit, Pxrd, SampleHolderType
-from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import SciformationCleanedELNSchema, RxnRole, \
-    Experiment, ReactionComponent, MassUnit
+from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import (
+    SciformationCleanedELNSchema,
+)
+from fair_synthesis.generated_apis.sciformation_eln_enriched_data_structure import (
+    SciformationEnrichedELNSchema, RxnRole, Experiment, ReactionComponent, MassUnit,
+)
 from .mofsy_utils import rxn_role_to_xdl_role
 from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_target_format, time_to_target_format, Unit as TimeUnitSciformation
 from .sciformation_cleaner import clean_sciformation_eln
+from .sciformation_text_extractor_llm_mocof1 import process_data_use_case_specific as enrich_cleaned_eln_with_llm
+from .sciformation_text_extractor_mocof1 import process_data_use_case_specific as enrich_cleaned_eln_for_mocof1
 from .utils import load_json, save_json
 from .pxrd_collector import collect_pxrd_files, filter_pxrd_files
 
 
-def convert_cleaned_eln_to_mofsy(eln: SciformationCleanedELNSchema,
+def _enrich_cleaned_sciformation(
+        cleaned: SciformationCleanedELNSchema,
+        use_llm_for_extraction: bool = False) -> SciformationEnrichedELNSchema:
+    enriched_dict = deepcopy(cleaned.to_dict())
+    experiments = enriched_dict.get("experiments", [])
+    if use_llm_for_extraction:
+        enrich_cleaned_eln_with_llm(experiments)
+    else:
+        enrich_cleaned_eln_for_mocof1(experiments)
+    return SciformationEnrichedELNSchema.from_dict(enriched_dict)
+
+
+def convert_cleaned_eln_to_mofsy(eln: SciformationEnrichedELNSchema,
                                  pxrd_folder_path: str,
                                  repo_root_path: str,
                                  default_code: str = "KE") -> Tuple[SynthesisProcedure,
@@ -315,22 +334,33 @@ def format_length(length: str) -> Length:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-def sciformation2mofsy():
+def sciformation2mofsy(use_llm_for_extraction: bool = False):
     current_file_dir = __file__.rsplit('/', 1)[0]
     repo_root_path = os.path.join(current_file_dir, '../../..')
     file_path = os.path.join(repo_root_path, 'data',
                              'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
     pxrd_folder = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'PXRD')
+    cleaned_output_path = os.path.join(
+        repo_root_path, 'data', 'MOCOF-1', 'converted', 'sciformation_eln_cleaned.json')
+    enriched_output_filename = 'sciformation_eln_enriched_with_llm.json' if use_llm_for_extraction else 'sciformation_eln_enriched.json'
+    enriched_output_path = os.path.join(
+        repo_root_path, 'data', 'MOCOF-1', 'converted', enriched_output_filename)
     cleaned_eln = clean_sciformation_eln(load_json(file_path))
-    # print("Cleaned data: " + str(cleaned_eln))
     print("The Sciformation ELN data has been cleaned.")
+    save_json(cleaned_eln.to_dict(), cleaned_output_path)
 
     # Validate data according to schema
-    validate(instance=cleaned_eln, schema=load_json(os.path.join(
+    validate(instance=cleaned_eln.to_dict(), schema=load_json(os.path.join(
         repo_root_path, 'data_model', 'sciformation_eln_cleaned.schema.json')))
 
+    enriched_cleaned_eln = _enrich_cleaned_sciformation(
+        cleaned_eln, use_llm_for_extraction=use_llm_for_extraction)
+    save_json(enriched_cleaned_eln.to_dict(), enriched_output_path)
+    validate(instance=enriched_cleaned_eln.to_dict(), schema=load_json(os.path.join(
+        repo_root_path, 'data_model', 'sciformation_eln_enriched.schema.json')))
+
     procedure, characterization = convert_cleaned_eln_to_mofsy(
-        SciformationCleanedELNSchema.from_dict(cleaned_eln), pxrd_folder, repo_root_path)
+        enriched_cleaned_eln, pxrd_folder, repo_root_path)
     result_file_path_procedure = os.path.join(
         repo_root_path,
         'data',

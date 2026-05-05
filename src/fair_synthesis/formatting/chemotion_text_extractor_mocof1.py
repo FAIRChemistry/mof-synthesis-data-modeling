@@ -68,7 +68,7 @@ def _extract_vessel(text: str) -> str | None:
 def _extract_degassing(text: str) -> str | None:
     lowered = text.lower()
     if "fpt" in lowered:
-        return "FPT"
+        return "Ar"
     return None
 
 

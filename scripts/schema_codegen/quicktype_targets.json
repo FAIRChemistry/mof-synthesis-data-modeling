@@ -26,11 +26,35 @@
       "renderer_options": {}
     },
     {
+      "name": "chemotion_cleaned_python",
+      "schema": "data_model/chemotion_cleaned.schema.json",
+      "output": "src/fair_synthesis/generated_apis/chemotion_cleaned_data_structure.py",
+      "language": "python",
+      "top_level": "ChemotionCleanedSchema",
+      "renderer_options": {}
+    },
+    {
+      "name": "chemotion_enriched_python",
+      "schema": "data_model/chemotion_enriched.schema.json",
+      "output": "src/fair_synthesis/generated_apis/chemotion_enriched_data_structure.py",
+      "language": "python",
+      "top_level": "ChemotionEnrichedSchema",
+      "renderer_options": {}
+    },
+    {
       "name": "sciformation_cleaned_python",
       "schema": "data_model/sciformation_eln_cleaned.schema.json",
       "output": "src/fair_synthesis/generated_apis/sciformation_eln_cleaned_data_structure.py",
       "language": "python",
       "top_level": "SciformationCleanedELNSchema",
+      "renderer_options": {}
+    },
+    {
+      "name": "sciformation_enriched_python",
+      "schema": "data_model/sciformation_eln_enriched.schema.json",
+      "output": "src/fair_synthesis/generated_apis/sciformation_eln_enriched_data_structure.py",
+      "language": "python",
+      "top_level": "SciformationEnrichedELNSchema",
       "renderer_options": {}
     },
     {

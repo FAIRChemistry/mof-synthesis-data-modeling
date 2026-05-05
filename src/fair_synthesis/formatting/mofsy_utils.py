@@ -1,6 +1,6 @@
 
 from fair_synthesis.generated_apis.procedure_data_structure import Role
-from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import RxnRole
+from fair_synthesis.generated_apis.sciformation_eln_enriched_data_structure import RxnRole
 
 
 def rxn_role_to_xdl_role(rnx_role: RxnRole) -> Role | None:

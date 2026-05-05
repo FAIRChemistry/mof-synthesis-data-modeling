@@ -1,9 +1,25 @@
 import os
 
 from fair_synthesis.formatting.utils import load_json, save_json
+from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
+    ChemotionCleanedSchema,
+    chemotion_cleaned_schema_from_dict,
+)
 from fair_synthesis.generated_apis.chemotion_data_structure import schema_from_dict
-from fair_synthesis.formatting.chemotion_text_extractor_llm_mocof1 import process_data_use_case_specific as process_data_with_llm
-from fair_synthesis.formatting.chemotion_text_extractor_mocof1 import process_data_use_case_specific as process_data
+
+
+def resolve_chemotion_input_path(repo_root: str) -> str:
+    candidate_paths = [
+        os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json"),
+        os.path.join(repo_root, "data", "chemotion_export.json", "export.json"),
+    ]
+    for candidate_path in candidate_paths:
+        if os.path.exists(candidate_path):
+            return candidate_path
+    raise FileNotFoundError(
+        "No Chemotion export found. Looked in: "
+        + ", ".join(candidate_paths)
+    )
 
 
 def _resolve_sample(sample_id: str, samples: dict, molecules: dict, molecule_names: dict) -> dict:
@@ -38,7 +54,7 @@ def _build_sample_entry(row: dict, sample_id: str, samples: dict, molecules: dic
     }
 
 
-def clean_chemotion(data: dict, use_llm_for_extraction: bool = False) -> dict:
+def clean_chemotion(data: dict) -> ChemotionCleanedSchema:
     schema = schema_from_dict(data)
 
     samples: dict = data.get("Sample", {})
@@ -104,22 +120,17 @@ def clean_chemotion(data: dict, use_llm_for_extraction: bool = False) -> dict:
         for section in ("starting_materials", "solvents", "purification_solvents", "products"):
             rxn[section].sort(key=lambda e: e.get("position") or 0)
 
-    cleaned_reactions = list(reactions.values())
-    if use_llm_for_extraction:
-        process_data_with_llm(cleaned_reactions)
-    else:
-        process_data(cleaned_reactions)
-
-    return {"reactions": cleaned_reactions}
+    cleaned = {"reactions": list(reactions.values())}
+    return chemotion_cleaned_schema_from_dict(cleaned)
 
 
 if __name__ == "__main__":
     current_file_dir = __file__.rsplit("/", 1)[0]
     repo_root = os.path.join(current_file_dir, "../../..")
-    input_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json")
+    input_path = resolve_chemotion_input_path(repo_root)
     output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     result = clean_chemotion(load_json(input_path))
-    save_json(result, output_path)
+    save_json(result.to_dict(), output_path)
     print("Chemotion data cleaned and saved.")

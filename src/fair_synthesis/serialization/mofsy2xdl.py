@@ -97,6 +97,10 @@ def mofsy2xdl():
         procedure_path = os.path.join(repo_root, source_config['procedure'])
         output_path = os.path.join(repo_root, source_config['xdlOutput'])
 
+        if not os.path.exists(procedure_path):
+            print(f"Skipping XDL conversion for missing procedure file: {procedure_path}")
+            continue
+
         xml = convert_mofsy_procedure_to_xdl_string(
             SynthesisProcedure.from_dict(load_json(procedure_path)))
         save_string_as_file(xml, output_path)
