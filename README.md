@@ -39,16 +39,9 @@ Windows: https://graphviz.org/download/
 
 ---
 ## Usage
-### Formatting, validation, and serialization into XDL
+### Formatting, validation, and serialization
 ```bash
 uv run scripts/format_and_serialize_all.py
-```
-### Serialization into MPIF
-```bash
-cd scripts/mofsy2mpif
-uv run npm install
-uv run npm start
-cd ../..
 ```
 ### Phase mole fraction analysis of PXRD patterns
 ```bash
