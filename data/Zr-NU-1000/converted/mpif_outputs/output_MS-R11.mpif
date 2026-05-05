@@ -37,7 +37,7 @@ _mpif_synthesis_react_temperature_controller	''
 _mpif_synthesis_react_time	12
 _mpif_synthesis_react_time_unit	'h'
 _mpif_synthesis_react_atmosphere	''
-_mpif_synthesis_react_container	'vial'
+_mpif_synthesis_react_container	'undefined'
 _mpif_synthesis_react_note
 ;
 
@@ -78,5 +78,5 @@ _mpif_vessel_type
 _mpif_vessel_supplier
 _mpif_vessel_purpose
 _mpif_vessel_note
-vial	undefined	mL	unknown	Vial	-	Reaction	-
+undefined	undefined	mL	unknown	Other	-	Reaction	undefined
 

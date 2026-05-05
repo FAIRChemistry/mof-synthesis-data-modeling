@@ -4,8 +4,8 @@
       "Hardware": {
         "Component": [
           {
-            "_id": "vial",
-            "_type": "vial"
+            "_id": "undefined",
+            "_type": "undefined"
           }
         ]
       },
@@ -16,7 +16,7 @@
         "Prep": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -26,7 +26,7 @@
               "_reagent": "ZrOCl2 8H2O"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -36,7 +36,7 @@
               "_reagent": "H4TBAPy"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -46,7 +46,7 @@
               "_reagent": "benzoic acid"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
@@ -60,7 +60,7 @@
         "Reaction": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
@@ -112,8 +112,8 @@
       "Hardware": {
         "Component": [
           {
-            "_id": "vial",
-            "_type": "vial"
+            "_id": "undefined",
+            "_type": "undefined"
           }
         ]
       },
@@ -124,7 +124,7 @@
         "Prep": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -134,7 +134,7 @@
               "_reagent": "ZrOCl2 8H2O"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -144,7 +144,7 @@
               "_reagent": "H4TBAPy"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -154,7 +154,7 @@
               "_reagent": "BzOH"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
@@ -168,7 +168,7 @@
         "Reaction": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",
@@ -328,8 +328,8 @@
       "Hardware": {
         "Component": [
           {
-            "_id": "vial",
-            "_type": "vial"
+            "_id": "undefined",
+            "_type": "undefined"
           }
         ]
       },
@@ -340,7 +340,7 @@
         "Prep": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -350,7 +350,7 @@
               "_reagent": "ZrOCl2 8H2O"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -360,7 +360,7 @@
               "_reagent": "H4TBAPy"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "milligram",
@@ -370,7 +370,7 @@
               "_reagent": "BzOH"
             },
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "Add",
               "_amount": {
                 "Unit": "microlitre",
@@ -384,7 +384,7 @@
         "Reaction": {
           "Step": [
             {
-              "_vessel": "vial",
+              "_vessel": "undefined",
               "$xml_type": "HeatChill",
               "_temp": {
                 "Unit": "celsius",

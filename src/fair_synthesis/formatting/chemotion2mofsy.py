@@ -98,7 +98,7 @@ def _infer_role(entry: dict) -> Role:
 
 def _build_vessel_id(vessel_size: Optional[dict]) -> str:
     if not vessel_size:
-        return "vial"
+        return "undefined"
     amount = vessel_size.get("amount", "")
     unit = vessel_size.get("unit", "")
     return f"{amount}{unit}_vial"
