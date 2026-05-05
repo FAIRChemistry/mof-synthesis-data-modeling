@@ -1,0 +1,52 @@
+{
+  "ProductCharacterization": [
+    {
+      "Characterization": {
+        "Pxrd": [],
+        "Weight": [
+          {
+            "Unit": "milligram",
+            "Value": 1220.0
+          }
+        ]
+      },
+      "ExperimentId": "MS-R11"
+    },
+    {
+      "Characterization": {
+        "Pxrd": [],
+        "Weight": [
+          {
+            "Unit": "milligram",
+            "Value": 240.0
+          }
+        ]
+      },
+      "ExperimentId": "MS-R13"
+    },
+    {
+      "Characterization": {
+        "Pxrd": [],
+        "Weight": [
+          {
+            "Unit": "milligram",
+            "Value": 218.0
+          }
+        ]
+      },
+      "ExperimentId": "MS-R19"
+    },
+    {
+      "Characterization": {
+        "Pxrd": [],
+        "Weight": [
+          {
+            "Unit": "milligram",
+            "Value": 0.0
+          }
+        ]
+      },
+      "ExperimentId": "MS-R4"
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "reactions": [
+    {
+      "duration": "12 Hour(s)",
+      "id": "4630aa98-e1e3-4791-9b43-cf95eea03af5",
+      "name": "Synthesis of Zr-NU-1000-O\u2082CH (200 mg)",
+      "plain_text_description": "Purpose: Try the 200 mg scale method to obtain pure Zr-NU-1000\nReference: Nat. Protocol. (200 mg)\nAnalysis\nPXRD: (A) Zr-NU-1000 (100 peak weak; Zr-NU-901?) (B) Zr-NU-1000\nConclusion\nOne batch out of two was successful.\n\nProcedure\nReaction\n2 x 100 mL screw bottles + red PBT/silicone/PTFE caps (A, B)\nAdd ZrOCl\u2082\u00b78H\u2082O (388.1 mg, 389.4 mg)\nAdd benzoic acid (10.834 g, 10.826 g)\nAdd DMF\nSonicate until fully dissolved\nHeat at 80 \u00b0C for 1 h \u2192 clear solution [Do not exceed 1 h]\nCool down in a water bath, \u226430 min\nAdd H\u2084TBAPy (160.2 mg, 160.4 mg)\nSonicate for 20 min \u2192 uniform suspension\nHeat at 100 \u00b0C (the grid was covered by aluminium foil!) for 18 h [15.5 h] \u2192 light yellow precipitation\nCool down to RT\n",
+      "plain_text_observation": "Centrifuge (7750 \u00d7 g, 5 min) \u2192 Discard the supernatant\nAdd DMF (45 mL)\nSoak for 2 h\nCentrifuge \u2192 Discard the supernatant\nRepeat three times in total.\nTransfer the solid into a bottle containing 52 mL DMF.\nAdd 2 mL of 8 M HCl (aq) and mix gently.\nHeat the mixture at 100 \u00b0C for 14 h.\nCool the reaction mixture to room temperature\nCentrifuge \u2192 Discard the supernatant\nAdd 45 mL DMF\nSoak for 2 h\nCentrifuge \u2192 Discard the supernatant\nRepeat three times in total.\nAdd 45 mL acetone\nSoak for 12 h, then centrifuge.\nRepeat the acetone exchange three times in total. [Correct it]\nDry the sample in the oven at 80 \u00b0C for 1 h.\nWeigh (1190 mg, 1251 mg)\n",
+      "products": [
+        {
+          "equivalent": 4.717735126904624,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "7085dcfa-c91c-4b11-ae76-c308c047a42b",
+            "inchikey": "SWVAKZBEMNGTHZ-UHFFFAOYSA-A",
+            "inchistring": "InChI=1S/2C44H26O8.3CH2O2.6H2O.4O.6Zr/c2*45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34;3*2-1-3;;;;;;;;;;;;;;;;/h2*1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52);3*1H,(H,2,3);6*1H2;;;;;;;;;;/q;;;;;;;;;;;;;;;3*+1;2*+2;+3/p-16",
+            "molecular_weight": 2206.7272600000015,
+            "name": "Zr-NU-1000-(O2CH)3(OH)(OH2)",
+            "real_amount_unit": "g",
+            "real_amount_value": 1.22,
+            "short_label": "MS-45",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        }
+      ],
+      "purification_solvents": [],
+      "short_label": "MS-R11",
+      "solvents": [],
+      "starting_materials": [
+        {
+          "equivalent": 5.137229610375296,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "a0b89e9a-e9c7-4b02-89fe-0394ae6356cc",
+            "inchikey": "ZSJKTBDAJTWRFH-UHFFFAOYSA-J",
+            "inchistring": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "molecular_weight": 322.25164,
+            "name": "ZrOCl2 8H2O",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-2-9",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.388
+          }
+        },
+        {
+          "equivalent": 1.0,
+          "position": 1,
+          "reference": true,
+          "sample": {
+            "id": "d5be1a2c-55b0-449c-ba79-e9952dde9c12",
+            "inchikey": "HVCDAMXLLUJLQZ-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "molecular_weight": 682.67244,
+            "name": "H4TBAPy",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-98-5",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.16
+          }
+        },
+        {
+          "equivalent": 377.3328207830016,
+          "position": 2,
+          "reference": false,
+          "sample": {
+            "id": "e983c267-f9d1-4c27-a43b-9f0ac30236dc",
+            "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "molecular_weight": 122.12134,
+            "name": "benzoic acid",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "MS-43",
+            "target_amount_unit": "g",
+            "target_amount_value": 10.8
+          }
+        },
+        {
+          "equivalent": 1763.331389784466,
+          "position": 3,
+          "reference": false,
+          "sample": {
+            "id": "82197e78-a5a6-49f1-b68e-1c6377cb3d54",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "DMF",
+            "real_amount_unit": "l",
+            "real_amount_value": null,
+            "short_label": "INV-12-12",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.032
+          }
+        }
+      ],
+      "temperature": {
+        "data": [],
+        "userText": "120",
+        "valueUnit": "\u00b0C"
+      },
+      "vessel_size": null
+    },
+    {
+      "duration": "16 Hour(s)",
+      "id": "0813885b-ed75-4589-a84a-2c585d1c254a",
+      "name": "Synthesis of Zr-NU-1000-O\u2082CH (seeding)",
+      "plain_text_description": "Purpose: (A) Characterize the Zr-NU-1000 sample by N2 sorption. (B) Try seeding to obtain pure Zr-NU-1000 reproducibly. \nReferences: MS-R11; 10.1021/jacs.6b01414 (seeding of PCN-222/224)\nAnalysis\nPXRD: Zr-NU-1000 (A: 100 peak little weak. B: 100 peak weak, Zr-NU-901 or guest?. C: No peak at 4.4\u00b0)\nN2 sorption: uptake ca. 40% of HSH-040/052\nConclusion\nSeeding cannot prevent Zr-NU-901 formation.\nEither product A contains non-porous amorphous impurities or N2 sorption measurement went wrong.\n\nProcedure\nReaction\n3 x 100 mL bottle + red PBT/silicone/PTFE cap (A\u2013C)\nAdd ZrOCl\u2082\u00b78H\u2082O ( 388.2\t\t 389.3\t\t 388.5  mg)\nAdd BzOH (10.84\t\t10.828\t\t10.815 g)\nB: Add Zr-NU-1000 (Kirti)\nAdd DMF\nSonicate until fully dissolved.\nHeat at 80 \u00b0C for 1 h.\nCool down (\u226430 min)\nAdd H\u2084TBAPy (160.5 \t\t160.2 \t\t161.1 mg)\nSonicate for 20 min to disperse the ligand.\nHeat at 100 \u00b0C for 15.5 h \u2192 light-yellow precipitate forms.\nCool down to RT\n",
+      "plain_text_observation": "C lost by mistake\nCentrifuge (7750 g, 5 min, RT) \u2192 Discard supernatant\nRinse with 45 mL DMF (2 h, centrifuge) twice.\nTransfer the sediment to a 100 mL bottle with 52 mL DMF.\nAdd 2 mL of 8 M HCl (aq) and swirl.\nHeat at 100 \u00b0C (the grid was covered by aluminium foil!) for 12 h.\nCool down to RT\nCentrifuge (7750 g, 5 min, RT) \u2192 Discard supernatant\nRinse with 45 mL of DMF (2 h, centrifuge) twice.\nRinse with 45 mL of acetone (2 h \u00d7 4, o/n \u00d7 1, 0 h \u00d7 1; centrifuge) \nDry in the oven\n\u2192 Weigh: A 212 mg, B 269 mg\nA \u2192 N2 sorption (Boshra, 44.3 mg \u2192 outgas 120 \u00b0C, 12 h \u2192 42.6 mg)\n",
+      "products": [
+        {
+          "equivalent": 0.9280790413582867,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "184cf267-fffd-4b31-9387-3ca135c23dce",
+            "inchikey": "SWVAKZBEMNGTHZ-UHFFFAOYSA-A",
+            "inchistring": "InChI=1S/2C44H26O8.3CH2O2.6H2O.4O.6Zr/c2*45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34;3*2-1-3;;;;;;;;;;;;;;;;/h2*1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52);3*1H,(H,2,3);6*1H2;;;;;;;;;;/q;;;;;;;;;;;;;;;3*+1;2*+2;+3/p-16",
+            "molecular_weight": 2206.7272600000015,
+            "name": "Zr-NU-1000-(O2CH)3(OH)(OH2)",
+            "real_amount_unit": "g",
+            "real_amount_value": 0.24,
+            "short_label": "MS-19",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        }
+      ],
+      "purification_solvents": [
+        {
+          "equivalent": 0.0,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "66ae3af3-f963-46c3-afb1-b01a47db3d67",
+            "inchikey": "VEXZGXHMUGYJMC-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/ClH/h1H",
+            "molecular_weight": 36.46094,
+            "name": "HCl",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "KE-31",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.0
+          }
+        },
+        {
+          "equivalent": 29390.802262860125,
+          "position": 1,
+          "reference": false,
+          "sample": {
+            "id": "9237e2d0-0863-45e4-8084-71307b3d0ebe",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "N,N-dimethylformamide",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "KE-32",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.232
+          }
+        },
+        {
+          "equivalent": 2368.379925263443,
+          "position": 2,
+          "reference": false,
+          "sample": {
+            "id": "058b75bd-6904-4858-ab82-3c8a4bd8da38",
+            "inchikey": "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/H2O/h1H2",
+            "molecular_weight": 18.01528,
+            "name": "oxidane",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "KE-33",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.002
+          }
+        },
+        {
+          "equivalent": 7834.893014729558,
+          "position": 3,
+          "reference": false,
+          "sample": {
+            "id": "67e0273e-1877-4021-b484-e1892173bb70",
+            "inchikey": "CSCPPACGZOOCGX-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H6O/c1-3(2)4/h1-2H3",
+            "molecular_weight": 58.07914,
+            "name": "propan-2-one",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "KE-34",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.27
+          }
+        }
+      ],
+      "short_label": "MS-R13",
+      "solvents": [],
+      "starting_materials": [
+        {
+          "equivalent": 5.137229610375296,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "d39d2bba-109b-42ce-9dea-a75b63b3a2f5",
+            "inchikey": "ZSJKTBDAJTWRFH-UHFFFAOYSA-J",
+            "inchistring": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "molecular_weight": 322.25164,
+            "name": "ZrOCl2 8H2O",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-2-10",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.388
+          }
+        },
+        {
+          "equivalent": 1.0,
+          "position": 1,
+          "reference": true,
+          "sample": {
+            "id": "6b30ff3e-a287-4a49-aa4d-515fcaeafb1a",
+            "inchikey": "HVCDAMXLLUJLQZ-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "molecular_weight": 682.67244,
+            "name": "H4TBAPy",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-98-4",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.16
+          }
+        },
+        {
+          "equivalent": 377.3328207830016,
+          "position": 2,
+          "reference": false,
+          "sample": {
+            "id": "a017d77e-5ca4-4ec7-b25a-1b0538ddec2f",
+            "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "molecular_weight": 122.12134,
+            "name": "BzOH",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-3-15",
+            "target_amount_unit": "g",
+            "target_amount_value": 10.8
+          }
+        },
+        {
+          "equivalent": 1763.331389784466,
+          "position": 3,
+          "reference": false,
+          "sample": {
+            "id": "24eabed1-60be-4d49-9943-a26bc28c79d2",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "DMF",
+            "real_amount_unit": "l",
+            "real_amount_value": null,
+            "short_label": "INV-12-13",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.032
+          }
+        }
+      ],
+      "temperature": {
+        "data": [],
+        "userText": "80\u2192100",
+        "valueUnit": "\u00b0C"
+      },
+      "vessel_size": null
+    },
+    {
+      "duration": "15.5 Hour(s)",
+      "id": "c2f3c3e0-472a-4f9d-be5e-9dbab2f0bdf6",
+      "name": "Synthesis of Zr-NU-1000-formate (2 g)",
+      "plain_text_description": "Purpose: Preparation of Zr-NU-1000 for catalysis tests.\nReferences: MS-R13A,C; 2 \u2192 6 batches\nAnalysis\nWeighing: 125% yield\nPXRD-X1\u20137: no peak at 4.4\u00b0 in X2,X3,X4,X7, high-angle shifted vs X1,X5,X6 \u2190 because of residual acetone\nPXRD-2A\u2013F: strong 100 signal, very weak peak at 4.4\u00b0 \u2190 because of residual acetone\nPXRD-3: matching HSH-052\nDigestion 1H NMR ref: DMF, HCO2, Me2ND, acetone-d5/4 \u2192 Acetone proton exchange is quite fast, within 20 min, even after dilution\nDigestion 1H NMR 2A_20s: 2 TBAPy, 2.4 formate, 0.66 BzOH, 0.14 DMF, 0.12 acetone-d5/4. 3350 g/mol (S/N = 453 for formate)\nDigestion 1H NMR 2A vs 2B_10s: formate/TBAPy ratios match within 3% \u2192 425 \u00b5L D2O is enough for dilution\nDigestion 1H NMR 2C_12s vs 24s: TBAPy/formate signal 6% weaker than D1 = 24 \u2192 D1 should be \u226524 for zg30, \u2265 40 for zg\nDigestion 1H NMR 2A_20s vs 2C_12s: TBAPy/formate lower in 2C by more than 10% \u2192 Brief sonication was not enough.\nDigestion 1H NMR 2C vs 2D: DMSO gives sharper signals. Acetone protons are still exchanged.\nDigestion 1H NMR 3B_24s vs 48s: TBAPy/formate does not differ more than 1% from D1 = 24 \u2192 D1 = 24 is enough in NaOD/D2O/DMSO. Can be 12?\nDigestion 1H NMR 3B_24s: DMSO2_d5 \u2192 DMSO2 protons are exchanged by NaOD.\nN2 sorption-3: 47% uptake at P/P0 = 0.40 compared to HSH-040\nSEM-3: Hexagonal rods (5\u20137 \u00b5m length, 1.0\u20131.6 \u00b5m across flats, dislocations in the central part), a few irregular particles\nTGA-3: residual mass 89.8% at 400 \u00b0C, 26.2% at 750 \u00b0C, 26.0% at 900 \u00b0C (HSH-040: 89.9% at 400 \u00b0C, 37.5% at 750 \u00b0C) (70% residual mass in comparison) (theoretical: 33% \u2192 79% purity)\nConclusions\nAll 6 batches somehow gave Zr-NU-1000 with less Zr-NU-901 than in MS-R13 or MS-R11.\nSolution 1H NMR analysis should be done with DMSO + sonication 30 min (acetone); NaOD/D2O + sonication 30 min + DMSO (formate, should be checked with D2O as well); and DMSO + D2SO4 (5%) + sonication (others) using durene as internal standard. (durene adsorption should be checked by durene/DMSO peak ratio)\n\nProcedure\nReaction\n6 \u00d7 100 mL bottles + red PBT/silicone/PTFE caps (A\u2013F)\nWeigh in ZrOCl2\u00b78H2O (388.3, 388.6, 388.2, 388.1, 388.4, 388.9 mg)\nAdd BzOH (10.83, 10.822, 10.804, 10.811, 10.824, 10.834 mg)\nAdd DMF\nSonicate until fully dissolved.\nHeat at 80 \u00b0C for 1 h\nCool down (\u226430 min)\nAdd H\u2084TBAPy (160.6, 160.3, 161.3, 160.2, 160.8, 160.9 mg)\nSonicate for 20 min; observe dispersion\nHeat at 100 \u00b0C (the grid was covered by aluminium foil!) for 15.5 h; observe light-yellow precipitation\nCool down to RT\n",
+      "plain_text_observation": "50 mL centrifuge tubes\nCentrifuge (7750 g, 5 min, RT) \u2192 Discard supernatant\nRinse with 45 mL DMF (2 h, centrifuge) twice\n100 mL bottles\nTransfer the solid with 52 mL DMF\nAdd 2 mL of 8 M HCl (aq) and swirl\nHeat at 100 \u00b0C for 12 h.\nCool down\n50 mL centrifuge tubes\nCentrifuge (7750 g, 5 min, RT) \u2192 Discard supernatant\nRinse with 45 mL DMF (2 h, centrifuge) twice\nRinse with 45 mL acetone (2 h \u00d7 4, o/n, 5 min; centrifuge)\nDry at 80 \u00b0C (oven) shortly.\nVials\nWeigh \u2192 317, 344, 331, 310, 330, 305 mg (sum: 1.94 g)\n\u2192 PXRD (X1\u2013X7. Why 7 patterns for 6 samples??; \u00f8 3 mm, Kapton; 4.334, Cu; 1\u201350.89\u00b0, 2.01\u00b0/step, 5 s/step)\n\nTaken over by Kenichi\n\n\"MS-R19-2\"\n2026-03-25: 22 \u00b0C, 30% RH\n\u2192 PXRD-2 (\u00f8 8/3 mm, tape; 4.334, Cu; 1\u201351.22\u00b0, 2.01\u00b0/step, 5 s/step) (avg. ca. 4 mg each)\n2026-03-26: 24 \u00b0C, 26% RH\n20 mL glass screw vial + PTFE sealing cap (tare: 18.62421 g)\nCombine all the batches\nShake\nWeigh \u2192 1.86 g\nStore in a desiccator with silica gel\n\u2192 2.63 mg, 2.27 mg (A,B) [A: ref 10.1021/jacs.0c09782, 2 mg]\n2 mL centrifuge tube\nAdd 175 \u00b5L of 0.1 M NaOD/D\u2082O (11.8 \u00b5L of 30% NaOD/D2O in 1 mL D2O\nSonicate 30 min \u2192 ca. 35 \u00b0C, green-fluorescent yellow solution + white solids\nAdd 850 \u00b5L (A, 8.39 \u00b5mol) or 425 \u00b5L (B) TMSP-d\u2084/D\u2082O (2.38 mg / 1400 \u00b5L, 172 g/mol)\nShake\nCentrifuge (MiniSpin Plus, 14100 \u00d7 g, 1 min)\n\u2192 Supernatant \u2192 NMR tubes (Norell 502-7) \u2192 \u00b9H NMR-2A,B (U1.834; N PROTON15ppm; D1 (A) 10/20 (B) 10, NS (A) 64 (B) 16, SW 19; zg)\n2026-03-27: 24 \u00b0C, 26% RH\n\u2192 0.98, 0.92 mg (C, D), in parallel with acetone 1 \u00b5L + DMF 1 \u00b5L (ref), \n2 mL centrifuge tubes\nAdd 100 \u00b5L of 0.1 M NaOD/D\u2082O (11.8 \u00b5L of 30% NaOD/D\u2082O in 1 mL D\u2082O)\nSonicate briefly. Observe a green-fluorescent yellow suspension\nAdd 450 \u00b5L D\u2082O (C, ref) or DMSO-d\u2086 (D)\nShake\nCentrifuge (MiniSpin Plus, 14100 \u00d7 g, 1 min) \u2192 (C) white solids (D) yellow solids discarded\nNMR tubes (Norell 502-7) \u2192 U1.834 (14:17 on NMR PC)\n \u00b9H NMR-2C_1s (U1.834; N PROTON15ppm; SW 19) (green-fluorescent yellow solution)\n \u00b9H NMR-2C_12s (U1.834; N PROTON20ppm; D1 12)\n\u00b9H NMR-2C_24s (U1.834; N PROTON20ppm; D1 24)\n\u00b9H NMR-2D (U1.834; N PROTON15ppm) (blue-fluorescent colorless solution)\n\u00b9H NMR-ref (U1.834; N PROTON15ppm; SW 19) (colorless solution) (14:27)\nDry under vacuum at 80 \u00b0C for 2 h (Vacutherm)\n\n\"MS-R19-3\"\nWeigh \u2192 1.31 g\n2026-03-30: 21 \u00b0C, 30% RH\n\u2192 PXRD-3 (\u00f8 8 mm, Scotch Magic Tape; 4.334, Cu; 1\u201350\u00b0, 5\u00b0/step, 5 min)\n\u2192 1.86, 1.19 mg (A, B), in parallel with acetone 1 \u00b5L and DMF 1 \u00b5L (ref), \n2 mL centrifuge tubes\nAdd 100 \u00b5L of D2SO4 (A, ref; INV-16) or 0.1 M NaOD/D\u2082O (B, 11.8 \u00b5L of 30% NaOD/D\u2082O (INV-15) in 1 mL D\u2082O) (10:25)\nSonicate briefly; observe (A) dark red-brown solution? (B) green-fluorescent yellow suspension\nAdd 450 \u00b5L DMSO2/DMSO-d\u2086 (2.41 mg / 1000 \u00b5L; D028NF-539 / INV-19)\nSonicate & shake; observe (A) Exotherm, yellow turbid viscous liquid (ref) viscous? colorless solution\nDiscard A and ref\nCentrifuge (MiniSpin Plus, 14100 \u00d7 g, 1 min) \u2192 Discard yellow sediment\nNMR tubes (Norell 502-7)\n\u00b9H NMR-3 (U1.834; N PROTON15ppm; D1 24/48) (blue-fluorescent colorless solution) (NMR PC clock: +2 min)\n\u2192 SEM (Al pouch; Buchmeiser; DITF; Pd\u2013Pt 10 nm; 4 kV)\n\u2192 50 mg \u2192 N2 sorption (Boshra; outgas 80 \u00b0C, 12 h)\n\u2192 10 mg \u2192 TGA (Florian; DITF; Al2O3, 1 mg, synthetic air, 10 K/min, 900 \u00b0C)\nHand over to Wael\n",
+      "products": [
+        {
+          "equivalent": 0.843005129233777,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "e7aea8b4-ee48-45a4-95e3-7f6aab568c0c",
+            "inchikey": "SWVAKZBEMNGTHZ-UHFFFAOYSA-A",
+            "inchistring": "InChI=1S/2C44H26O8.3CH2O2.6H2O.4O.6Zr/c2*45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34;3*2-1-3;;;;;;;;;;;;;;;;/h2*1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52);3*1H,(H,2,3);6*1H2;;;;;;;;;;/q;;;;;;;;;;;;;;;3*+1;2*+2;+3/p-16",
+            "molecular_weight": 2206.7272600000015,
+            "name": "Zr-NU-1000-(O2CH)3(OH)(OH2)",
+            "real_amount_unit": "g",
+            "real_amount_value": 0.218,
+            "short_label": "MS-44",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        }
+      ],
+      "purification_solvents": [],
+      "short_label": "MS-R19",
+      "solvents": [],
+      "starting_materials": [
+        {
+          "equivalent": 5.137229610375296,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "48d1111a-f4f5-407b-ab65-38f7c13d2d79",
+            "inchikey": "ZSJKTBDAJTWRFH-UHFFFAOYSA-J",
+            "inchistring": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "molecular_weight": 322.25164,
+            "name": "ZrOCl2 8H2O",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-2-13",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.388
+          }
+        },
+        {
+          "equivalent": 1.0,
+          "position": 1,
+          "reference": true,
+          "sample": {
+            "id": "c41d826f-f13e-483c-a9e8-afbea519f5e5",
+            "inchikey": "HVCDAMXLLUJLQZ-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "molecular_weight": 682.67244,
+            "name": "H4TBAPy",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-98-8",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.16
+          }
+        },
+        {
+          "equivalent": 377.3328207830016,
+          "position": 2,
+          "reference": false,
+          "sample": {
+            "id": "4d640b6e-1ad8-4cf9-ad2f-8d8f9103cbff",
+            "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "molecular_weight": 122.12134,
+            "name": "BzOH",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-3-20",
+            "target_amount_unit": "g",
+            "target_amount_value": 10.8
+          }
+        },
+        {
+          "equivalent": 1763.331389784466,
+          "position": 3,
+          "reference": false,
+          "sample": {
+            "id": "7e6fa26f-0adf-4921-b78e-0aefb96a7f30",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "DMF",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-12-5-3",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.032
+          }
+        }
+      ],
+      "temperature": {
+        "data": [],
+        "userText": "100",
+        "valueUnit": "\u00b0C"
+      },
+      "vessel_size": {
+        "amount": 100.0,
+        "unit": "ml"
+      }
+    },
+    {
+      "duration": "16 Hour(s)",
+      "id": "cd84eb82-c445-4dd5-a394-c5d0348d5147",
+      "name": "Synthesis of Zr-NU-1000-formate (first trial), scCO2 test",
+      "plain_text_description": "Data lost and recreated from MS-R5\n\nPurpose: Production of Zr-NU-1000-(O2CH)3(OH)(OH2) for catalysis\nReference: paper; AD-R2 \u2192 pure H4TBAPy; HSH-052\nAnalysis\nPXRD: Zr-NU-1000 (100 peak weak: guest or NU-901. broad)\nDigestion 1H NMR: formate, TBAPy, BzO, Me2ND\nSEM-EDX: small prisms, some dents in the middle\nConclusions\nToo fast nucleation.\nThe cap should be changed.\n\nProcedure\nReaction\n100 mL screw bottle with PP cap [Next time PBT/silicone/PTFE cap]\nAdd H\u2084TBAPy\nAdd DMF 40 mL \nSonicated until uniformly suspended\nHeat at 100 \u00b0C for 1 h (glassware oven @0.830) \u2192 clear solution [next time use UN30]\n[Next time, cool down according to HSH-052]\n\n500 mL screw bottle with PP cap [Next time PBT/silicone/PTFE cap]\nWeigh in ZrOCl\u2082\u00b78H\u2082O and BzOH.\nAdd DMF 120 mL\nSonicate until dissolved\nHeat at 100 \u00b0C for 1 h (Oven @0.830) [next time use UN30]\nAdd the 100 mL-bottle content (in fume hood)\nShake\nHeat at 120 \u00b0C for 16 h (convection oven Carbolite Gero PFSC30 (the grid was covered by aluminium foil!)) \u2192 Yellow precipitation [solution color: colorless ?]\nCool down to RT\n",
+      "plain_text_observation": "Workup\n50 mL centrifuge tube [Lit. 3 tubes: This experiment: 1 tube ]\nCollect precipitate by repeated centrifugation (Hettich Universal 320, 3260 \u00d7 g, 15 min) \u2192 Yellow turbid supernatant discarded [Lit. 7750 \u00d7 g for 5 min. Next time, follow this with Sorvall ST 8]\nAdd DMF 45 mL. sonication: No, Vortex: Yes\nWait for 2 h\nCentrifuge \u2192 Yellow supernatant [Clear]\nWash the sediment with DMF and centrifugation x2 \u2192 Colorless supernatant [Vortex]\n\n500 mL screw bottle with PP cap [Next time PBT/silicone/PTFE cap]\nTransfer the sediment with DMF 260 mL \nAdd 8 M HCl aq 10 mL [HSH-052: 12 M, 6.67 \u00b5L]\nSonicate \u2192 uniform suspension\nHeat at 100 \u00b0C for 12 h\n\n50 mL centrifuge tube [Lit. 3 tubes: This experiment: 1 tube ]\nCollect precipitate by repeated centrifugation \u2192 Colorless supernatant discarded\nAdd DMF 45 mL [vortex shaker]\n[Lit. wait for 2 h. Next time follow this]\nCentrifuge\nWash the sediment with DMF [45 mL] and centrifugation x2 [Vortex] [HSH-052: 2 h each cycle]\nAdd acetone 45 mL [Vortex]\nWait for 2 h [Lit. 12 h. Next time follow this.\nCentrifuge \u2192 colorless supernatant\nWash the sediment by soaking in acetone [45 mL] and centrifugation x2  (total 14 h) [sonication] [HSH-052: 12 h each cycle]\nHeat at 80 \u00b0C for 1 h (glassware drying oven) [Lit. vacuum oven. Next time, follow this or an explosion-proof oven.] [HSH-052: 12 h]\nStored in glovebox [move to desiccator]\n\nAnalysis\n\u2192 PXRD (\u00f8 3 mm, Kapton x2, partially filled; 4.334, Cu; 1\u201354\u00b0, 4\u00b0/step\n\u2192 SEM-EDX (Buchmeiser; C 22 nm; morphology; Cl vs COZr)\nDigestion NMR\nVial or centrifuge tube?\nAdd 200 \u00b5L NaOD/D2O (11.8 \u00b5L of 30% NaOD/D2O in 1 mL D2O)\nAdd MOF sample (3 mg)\nSonicate 30 min\nCentrifuge 1 min\nAdd D\u2082O (400 \u00b5L)\nAdd TMSP-d\u2084/D2O (150 \u00b5L, 0.1 M; 17.2 mg/mL).\nMix\n\u2192 Supernatant \u2192 \u00b9H NMR.\n\nscCO2 drying test\n",
+      "products": [
+        {
+          "equivalent": 0.0,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "f24a7753-ee7f-4940-b754-d6a90549dd30",
+            "inchikey": "SWVAKZBEMNGTHZ-UHFFFAOYSA-A",
+            "inchistring": "InChI=1S/2C44H26O8.3CH2O2.6H2O.4O.6Zr/c2*45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34;3*2-1-3;;;;;;;;;;;;;;;;/h2*1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52);3*1H,(H,2,3);6*1H2;;;;;;;;;;/q;;;;;;;;;;;;;;;3*+1;2*+2;+3/p-16",
+            "molecular_weight": 2206.7272600000015,
+            "name": "Zr-NU-1000-(O2CH)3(OH)(OH2)",
+            "real_amount_unit": "g",
+            "real_amount_value": 0.0,
+            "short_label": "MS-47",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        }
+      ],
+      "purification_solvents": [
+        {
+          "equivalent": 5989.069140356402,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "223f72fc-3f50-40cd-a059-ef66cac81446",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "N,N-dimethylformamide",
+            "real_amount_unit": "l",
+            "real_amount_value": 0.27,
+            "short_label": "MS-26",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        },
+        {
+          "equivalent": 3133.957205891823,
+          "position": 1,
+          "reference": false,
+          "sample": {
+            "id": "654d7ad7-7cb6-4829-b91e-ab1c226fe048",
+            "inchikey": "CSCPPACGZOOCGX-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H6O/c1-3(2)4/h1-2H3",
+            "molecular_weight": 58.07914,
+            "name": "propan-2-one",
+            "real_amount_unit": "l",
+            "real_amount_value": 0.135,
+            "short_label": "MS-27",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.0
+          }
+        }
+      ],
+      "short_label": "MS-R4",
+      "solvents": [],
+      "starting_materials": [
+        {
+          "equivalent": 5.203,
+          "position": 0,
+          "reference": false,
+          "sample": {
+            "id": "26afc87f-798e-421b-8cdc-1beffbc38268",
+            "inchikey": "ZSJKTBDAJTWRFH-UHFFFAOYSA-J",
+            "inchistring": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "molecular_weight": 322.25164,
+            "name": "ZrOCl2 8H2O",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-2-14",
+            "target_amount_unit": "g",
+            "target_amount_value": 1.9648372304820159
+          }
+        },
+        {
+          "equivalent": 1.0,
+          "position": 1,
+          "reference": true,
+          "sample": {
+            "id": "4b4490df-1a57-4100-9acd-236ef97edc23",
+            "inchikey": "HVCDAMXLLUJLQZ-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "molecular_weight": 682.67244,
+            "name": "H4TBAPy",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-98-12",
+            "target_amount_unit": "g",
+            "target_amount_value": 0.8
+          }
+        },
+        {
+          "equivalent": 377.3328207830016,
+          "position": 2,
+          "reference": false,
+          "sample": {
+            "id": "cc7d45a9-6f1a-4b1b-b9fd-284a3f33e25f",
+            "inchikey": "WPYMKLBDIGXBTP-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "molecular_weight": 122.12134,
+            "name": "BzOH",
+            "real_amount_unit": "g",
+            "real_amount_value": null,
+            "short_label": "INV-3-22",
+            "target_amount_unit": "g",
+            "target_amount_value": 54.0
+          }
+        },
+        {
+          "equivalent": 1763.3313897844664,
+          "position": 3,
+          "reference": false,
+          "sample": {
+            "id": "c55fa6d2-7268-408b-a04b-4ea3f17cf50f",
+            "inchikey": "ZMXDDKWLCZADIW-UHFFFAOYSA-N",
+            "inchistring": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "molecular_weight": 73.09378,
+            "name": "DMF",
+            "real_amount_unit": "l",
+            "real_amount_value": null,
+            "short_label": "INV-12-15",
+            "target_amount_unit": "l",
+            "target_amount_value": 0.16
+          }
+        }
+      ],
+      "temperature": {
+        "data": [],
+        "userText": "120",
+        "valueUnit": "\u00b0C"
+      },
+      "vessel_size": null
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "Synthesis": [
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "vial",
+            "_type": "vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "MS-R11"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 388.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "ZrOCl2 8H2O"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 160.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "H4TBAPy"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 10800.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "benzoic acid"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 32000.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "HeatChill",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 12.0,
+                "$xml_append": "${Value} ${Unit}"
+              }
+            }
+          ]
+        },
+        "Workup": {
+          "Step": []
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "ZrOCl2 8H2O",
+            "_inchi": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "_name": "ZrOCl2 8H2O",
+            "_role": "reagent"
+          },
+          {
+            "_id": "H4TBAPy",
+            "_inchi": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "_name": "H4TBAPy",
+            "_role": "substrate"
+          },
+          {
+            "_id": "benzoic acid",
+            "_inchi": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "_name": "benzoic acid",
+            "_role": "reagent"
+          },
+          {
+            "_id": "DMF",
+            "_inchi": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "_name": "DMF",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "vial",
+            "_type": "vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "MS-R13"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 388.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "ZrOCl2 8H2O"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 160.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "H4TBAPy"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 10800.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "BzOH"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 32000.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "HeatChill",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 16.0,
+                "$xml_append": "${Value} ${Unit}"
+              }
+            }
+          ]
+        },
+        "Workup": {
+          "Step": []
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "ZrOCl2 8H2O",
+            "_inchi": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "_name": "ZrOCl2 8H2O",
+            "_role": "reagent"
+          },
+          {
+            "_id": "H4TBAPy",
+            "_inchi": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "_name": "H4TBAPy",
+            "_role": "substrate"
+          },
+          {
+            "_id": "BzOH",
+            "_inchi": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "_name": "BzOH",
+            "_role": "reagent"
+          },
+          {
+            "_id": "DMF",
+            "_inchi": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "_name": "DMF",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "100.0ml_vial",
+            "_type": "100.0ml_vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "MS-R19"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "_vessel": "100.0ml_vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 388.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "ZrOCl2 8H2O"
+            },
+            {
+              "_vessel": "100.0ml_vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 160.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "H4TBAPy"
+            },
+            {
+              "_vessel": "100.0ml_vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 10800.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "BzOH"
+            },
+            {
+              "_vessel": "100.0ml_vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 32.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "_vessel": "100.0ml_vial",
+              "$xml_type": "HeatChill",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 100.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 15.5,
+                "$xml_append": "${Value} ${Unit}"
+              }
+            }
+          ]
+        },
+        "Workup": {
+          "Step": []
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "ZrOCl2 8H2O",
+            "_inchi": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "_name": "ZrOCl2 8H2O",
+            "_role": "reagent"
+          },
+          {
+            "_id": "H4TBAPy",
+            "_inchi": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "_name": "H4TBAPy",
+            "_role": "substrate"
+          },
+          {
+            "_id": "BzOH",
+            "_inchi": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "_name": "BzOH",
+            "_role": "reagent"
+          },
+          {
+            "_id": "DMF",
+            "_inchi": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "_name": "DMF",
+            "_role": "reagent"
+          }
+        ]
+      }
+    },
+    {
+      "Hardware": {
+        "Component": [
+          {
+            "_id": "vial",
+            "_type": "vial"
+          }
+        ]
+      },
+      "Metadata": {
+        "_description": "MS-R4"
+      },
+      "Procedure": {
+        "Prep": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 1964.837,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "ZrOCl2 8H2O"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 800.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "H4TBAPy"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "milligram",
+                "Value": 54000.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "BzOH"
+            },
+            {
+              "_vessel": "vial",
+              "$xml_type": "Add",
+              "_amount": {
+                "Unit": "microlitre",
+                "Value": 160000.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_reagent": "DMF"
+            }
+          ]
+        },
+        "Reaction": {
+          "Step": [
+            {
+              "_vessel": "vial",
+              "$xml_type": "HeatChill",
+              "_temp": {
+                "Unit": "celsius",
+                "Value": 120.0,
+                "$xml_append": "${Value} ${Unit}"
+              },
+              "_time": {
+                "Unit": "hour",
+                "Value": 16.0,
+                "$xml_append": "${Value} ${Unit}"
+              }
+            }
+          ]
+        },
+        "Workup": {
+          "Step": []
+        }
+      },
+      "Reagents": {
+        "Reagent": [
+          {
+            "_id": "ZrOCl2 8H2O",
+            "_inchi": "InChI=1S/2ClH.9H2O.Zr/h2*1H;9*1H2;/q;;;;;;;;;;;+4/p-4",
+            "_name": "ZrOCl2 8H2O",
+            "_role": "reagent"
+          },
+          {
+            "_id": "H4TBAPy",
+            "_inchi": "InChI=1S/C44H26O8/c45-41(46)27-9-1-23(2-10-27)35-21-36(24-3-11-28(12-4-24)42(47)48)32-19-20-34-38(26-7-15-30(16-8-26)44(51)52)22-37(25-5-13-29(14-6-25)43(49)50)33-18-17-31(35)39(32)40(33)34/h1-22H,(H,45,46)(H,47,48)(H,49,50)(H,51,52)",
+            "_name": "H4TBAPy",
+            "_role": "substrate"
+          },
+          {
+            "_id": "BzOH",
+            "_inchi": "InChI=1S/C7H6O2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H,8,9)",
+            "_name": "BzOH",
+            "_role": "reagent"
+          },
+          {
+            "_id": "DMF",
+            "_inchi": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3",
+            "_name": "DMF",
+            "_role": "reagent"
+          }
+        ]
+      }
+    }
+  ]
+}

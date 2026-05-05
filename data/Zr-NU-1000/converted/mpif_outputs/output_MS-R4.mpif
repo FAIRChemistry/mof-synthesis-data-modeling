@@ -1,0 +1,82 @@
+data_Zr-NU-1000 synthesis trial
+_mpif_audit_creation_date	2026-04-28
+_mpif_audit_generator_version	1.0
+_mpif_audit_publication_doi	''
+_mpif_audit_procedure_status	'test'
+
+#Section 1: Author details
+_mpif_audit_contact_author_name	'Endo, Kenichi'
+_mpif_audit_contact_author_email	kenichi.endo@ipoc.uni-stuttgart.de
+_mpif_audit_contact_author_id_orcid	0000-0002-4128-6514
+_mpif_audit_contact_author_address	'Pfaffenwaldring 55, 70569 Stuttgart, Germany'
+_mpif_audit_contact_author_phone	?
+
+#Section 2: Product General Information
+_mpif_product_type	'porous framework material'
+_mpif_product_cas	?
+_mpif_product_ccdc	''
+_mpif_product_name_common	''
+_mpif_product_name_systematic	''
+_mpif_product_formula	''
+_mpif_product_formula_weight	
+_mpif_product_state	'solid'
+_mpif_product_color	'light yellow'
+_mpif_product_handling_atmosphere	'air'
+_mpif_product_handling_note
+;
+
+;
+
+#Section 3: Synthesis General Information
+_mpif_synthesis_performed_date	undefined
+_mpif_synthesis_lab_temperature_C	undefined
+_mpif_synthesis_lab_humidity_percent	undefined
+_mpif_synthesis_type	'mix'
+_mpif_synthesis_react_temperature_C	120
+_mpif_synthesis_react_temperature_controller	''
+_mpif_synthesis_react_time	16
+_mpif_synthesis_react_time_unit	'h'
+_mpif_synthesis_react_atmosphere	''
+_mpif_synthesis_react_container	'vial'
+_mpif_synthesis_react_note
+;
+
+;
+_mpif_synthesis_product_amount	0
+_mpif_synthesis_product_amount_unit	'mg'
+_mpif_synthesis_scale	'milligram'
+_mpif_synthesis_safety_note
+;
+
+;
+
+#Section 4: Synthesis Procedure Details
+_mpif_substrate_number	4
+loop_
+_mpif_substrate_id
+_mpif_substrate_name
+_mpif_substrate_molarity
+_mpif_substrate_molarity_unit
+_mpif_substrate_amount
+_mpif_substrate_amount_unit
+_mpif_substrate_supplier
+_mpif_substrate_purity_percent
+_mpif_substrate_cas
+_mpif_substrate_smiles
+ZrOCl2 8H2O	ZrOCl2 8H2O			1964.837	milligram				?
+H4TBAPy	H4TBAPy			800	milligram				?
+BzOH	BzOH			54000	milligram				?
+DMF	DMF			160000	microlitre				?
+
+_mpif_vessel_number	1
+loop_
+_mpif_vessel_id
+_mpif_vessel_volume
+_mpif_vessel_volume_unit
+_mpif_vessel_material
+_mpif_vessel_type
+_mpif_vessel_supplier
+_mpif_vessel_purpose
+_mpif_vessel_note
+vial	undefined	mL	unknown	Vial	-	Reaction	-
+
