@@ -420,11 +420,21 @@ const conversionSources = JSON.parse(
 ) as ConversionSources;
 
 for (const source of conversionSources.mofsy2mpif || []) {
+    const procedurePath = resolveRepoPath(source.procedure);
+    const characterizationPath = resolveRepoPath(source.characterization);
+    const mpifParamsPath = resolveRepoPath(source.mpifParams);
+    if (!fs.existsSync(procedurePath) || !fs.existsSync(characterizationPath) || !fs.existsSync(mpifParamsPath)) {
+        console.log(
+            `Skipping ${source.id} because one or more input files are missing.`,
+        );
+        continue;
+    }
+
     mofsyToMpif(
-        resolveRepoPath(source.procedure),
-        resolveRepoPath(source.characterization),
+        procedurePath,
+        characterizationPath,
         resolveRepoPath(source.mpifOutputFolder),
-        resolveRepoPath(source.mpifParams),
+        mpifParamsPath,
         paramsSchema
     );
 }

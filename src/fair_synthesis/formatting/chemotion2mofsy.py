@@ -21,7 +21,7 @@ from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
 from fair_synthesis.generated_apis.chemotion_enriched_data_structure import (
     ChemotionEnrichedSchema,
 )
-from fair_synthesis.formatting.chemotion_cleaner import clean_chemotion
+from fair_synthesis.formatting.chemotion_cleaner import clean_chemotion, resolve_chemotion_input_path
 from fair_synthesis.formatting.chemotion_text_extractor_mocof1 import (
     process_data_use_case_specific as enrich_cleaned_chemotion_for_mocof1,
 )
@@ -292,7 +292,11 @@ def chemotion2mofsy():
     current_file_dir = __file__.rsplit("/", 1)[0]
     repo_root = os.path.join(current_file_dir, "../../..")
 
-    input_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json")
+    try:
+        input_path = resolve_chemotion_input_path(repo_root)
+    except FileNotFoundError:
+        print("Chemotion input data not found. Skipping Chemotion conversion.")
+        return
     cleaned_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
     enriched_output_filename = "chemotion_enriched.json"
     enriched_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", enriched_output_filename)

@@ -8,6 +8,20 @@ from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
 from fair_synthesis.generated_apis.chemotion_data_structure import schema_from_dict
 
 
+def resolve_chemotion_input_path(repo_root: str) -> str:
+    candidate_paths = [
+        os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json"),
+        os.path.join(repo_root, "data", "chemotion_export.json", "export.json"),
+    ]
+    for candidate_path in candidate_paths:
+        if os.path.exists(candidate_path):
+            return candidate_path
+    raise FileNotFoundError(
+        "No Chemotion export found. Looked in: "
+        + ", ".join(candidate_paths)
+    )
+
+
 def _resolve_sample(sample_id: str, samples: dict, molecules: dict, molecule_names: dict) -> dict:
     sample = samples.get(sample_id, {})
     molecule_id = sample.get("molecule_id")
@@ -113,7 +127,7 @@ def clean_chemotion(data: dict) -> ChemotionCleanedSchema:
 if __name__ == "__main__":
     current_file_dir = __file__.rsplit("/", 1)[0]
     repo_root = os.path.join(current_file_dir, "../../..")
-    input_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "chemotion_export.json")
+    input_path = resolve_chemotion_input_path(repo_root)
     output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
