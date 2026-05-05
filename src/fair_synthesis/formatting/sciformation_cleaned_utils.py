@@ -1,7 +1,7 @@
 from typing import List
 
 
-from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import RxnRole, Unit, Experiment, \
+from fair_synthesis.generated_apis.sciformation_eln_enriched_data_structure import RxnRole, Unit, Experiment, \
     ReactionComponent, MassUnit
 from fair_synthesis.formatting.utils import query_compound_from_pub_chem
 
