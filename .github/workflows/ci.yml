@@ -39,4 +39,4 @@ jobs:
         working-directory: scripts/mofsy2mpif
 
       - name: Run smoke tests
-        run: uv run pytest tests/test_smoke_scripts.py
+        run: uv run --with pytest pytest tests/test_smoke_scripts.py
