@@ -1,5 +1,5 @@
 {
-  "title": "Sciformation Cleaned ELN Base Schema",
+  "title": "Sciformation Enriched ELN Schema",
   "type": "object",
   "properties": {
     "experiments": {
@@ -108,7 +108,9 @@
                     "reactant",
                     "reagent",
                     "solvent",
-                    "product"
+                    "product",
+                    "acid",
+                    "catalyst"
                   ]
                 },
                 "mass": {
@@ -159,6 +161,37 @@
                 "rxnRole"
               ]
             }
+          },
+          "vessel": {
+            "type": "string",
+            "enum": [
+              "microwave vial",
+              "Schlenk bomb"
+            ]
+          },
+          "degassing": {
+            "type": "string",
+            "enum": [
+              "Ar"
+            ]
+          },
+          "rinse": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "wait_after_rinse": {
+            "type": "integer"
+          },
+          "wait_after_rinse_unit": {
+            "$ref": "#/properties/experiments/items/properties/durationUnit"
+          },
+          "wash_solid": {
+            "type": "string"
+          },
+          "evaporate": {
+            "type": "boolean"
           }
         },
         "required": [

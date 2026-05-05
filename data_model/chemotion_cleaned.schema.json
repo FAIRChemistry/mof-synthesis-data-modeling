@@ -1,0 +1,246 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chemotion Cleaned Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reactions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/reaction"
+      }
+    }
+  },
+  "required": [
+    "reactions"
+  ],
+  "$defs": {
+    "temperature": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {}
+        },
+        "userText": {
+          "type": "string"
+        },
+        "valueUnit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data",
+        "userText",
+        "valueUnit"
+      ]
+    },
+    "vesselSize": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "amount"
+      ]
+    },
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "short_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inchikey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inchistring": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "molecular_weight": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "real_amount_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "real_amount_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_amount_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "target_amount_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "short_label",
+        "inchikey",
+        "inchistring",
+        "molecular_weight",
+        "real_amount_value",
+        "real_amount_unit",
+        "target_amount_value",
+        "target_amount_unit"
+      ]
+    },
+    "sampleEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sample": {
+          "$ref": "#/$defs/sample"
+        },
+        "reference": {
+          "type": "boolean"
+        },
+        "equivalent": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "position": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "sample",
+        "reference",
+        "equivalent",
+        "position"
+      ]
+    },
+    "reaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "short_label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "temperature": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/temperature"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration": {
+          "type": "string"
+        },
+        "vessel_size": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/vesselSize"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "plain_text_description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plain_text_observation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "starting_materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sampleEntry"
+          }
+        },
+        "solvents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sampleEntry"
+          }
+        },
+        "purification_solvents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sampleEntry"
+          }
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sampleEntry"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "short_label",
+        "name",
+        "temperature",
+        "duration",
+        "vessel_size",
+        "plain_text_description",
+        "plain_text_observation",
+        "starting_materials",
+        "solvents",
+        "purification_solvents",
+        "products"
+      ]
+    }
+  }
+}
