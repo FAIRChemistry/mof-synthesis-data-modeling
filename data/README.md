@@ -3,7 +3,8 @@
 This folder contains example datasets as subfolders.
 In each subfolder, the "converted" folder contains
 - cleaned ELN export
-- reformatted and validated data (synthesis procedure and characterization)
+- enriched ELN export (includes additional parameters parsed from the textual procedure description)
+- restructured and validated data (synthesis procedure and characterization)
 - XDL and MPIF serializations
 
 ## PXRD data
