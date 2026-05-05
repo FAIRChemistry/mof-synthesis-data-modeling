@@ -32,9 +32,14 @@ cd mof-synthesis-data-modeling
 # Install dependencies in a virtual environment
 uv pip install -e .
 ```
-### Install Graphviz for decision tree visualization
-macOS: `brew install graphviz`  
-Debian/Ubuntu: `sudo apt install graphviz`  
+### Install dependencies outside PyPI
+macOS
+```bash
+brew install graphviz
+brew install node
+npm install ajv
+```
+Debian/Ubuntu: `sudo apt install graphviz`, etc.
 Windows: https://graphviz.org/download/
 
 ---
