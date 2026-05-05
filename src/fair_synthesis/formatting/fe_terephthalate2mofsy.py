@@ -1,8 +1,18 @@
+import argparse
 import os
 from typing import List, Tuple
 from jsonschema import validate
 from sympy import sympify
 
+from fair_synthesis.conversion_config import (
+    ConversionConfig,
+    ConversionSource,
+    ensure_converted_dir,
+    get_artifact_path,
+    get_repo_root,
+    get_source_aux_path,
+    get_source_input_path,
+)
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, SynthesisElement, ReagentElement, Metadata, ComponentElement, \
     ProcedureSectionClass, ProcedureSectionsClass, Reagents, XMLType, StepEntryClass, \
     Hardware, TimeUnit, Role, Temperature, TemperatureUnit, PressureClass, PressureUnit, TimeClass, Amount, AmountUnit, Solvent
@@ -338,33 +348,32 @@ def format_length(length: str) -> Length:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-def fe_terephthalate2Mofsy():
-    current_file_dir = __file__.rsplit('/', 1)[0]
-    repo_root_path = os.path.join(current_file_dir, '../../..')
-    file_path = os.path.join(repo_root_path, 'data',
-                             'Fe–terephthalate', 'converted', 'Fe–terephthalate.json')
-    pxrd_folder = os.path.join(
-        repo_root_path, 'data', 'Fe–terephthalate', 'PXRD')
-    mil = load_json(file_path)
+def fe_terephthalate2Mofsy(
+    input_path: str | None = None,
+    pxrd_folder: str | None = None,
+    procedure_output_path: str | None = None,
+    characterization_output_path: str | None = None,
+    repo_root_path: str | None = None,
+) -> bool:
+    resolved_repo_root = repo_root_path or get_repo_root()
+    input_path = input_path or os.path.join(
+        resolved_repo_root, 'data', 'Fe–terephthalate', 'converted', 'Fe–terephthalate.json')
+    pxrd_folder = pxrd_folder or os.path.join(
+        resolved_repo_root, 'data', 'Fe–terephthalate', 'PXRD')
+    procedure_output_path = procedure_output_path or os.path.join(
+        resolved_repo_root, 'data', 'Fe–terephthalate', 'converted', 'procedure_from_Fe–terephthalate.json')
+    characterization_output_path = characterization_output_path or os.path.join(
+        resolved_repo_root, 'data', 'Fe–terephthalate', 'converted', 'characterization_from_Fe–terephthalate.json')
+
+    os.makedirs(os.path.dirname(procedure_output_path), exist_ok=True)
+    mil = load_json(input_path)
 
     # Validate data according to schema
     validate(instance=mil, schema=load_json(os.path.join(
-        repo_root_path, 'data_model', 'Fe–terephthalate.schema.json')))
+        resolved_repo_root, 'data_model', 'Fe–terephthalate.schema.json')))
 
     procedure, characterization = convert_mil_2_json_from_excel_to_mofsy(
-        Mil.from_dict(mil), pxrd_folder, repo_root_path)
-    result_file_path_procedure = os.path.join(
-        repo_root_path,
-        'data',
-        'Fe–terephthalate',
-        'converted',
-        'procedure_from_Fe–terephthalate.json')
-    result_file_path_characterization = os.path.join(
-        repo_root_path,
-        'data',
-        'Fe–terephthalate',
-        'converted',
-        'characterization_from_Fe–terephthalate.json')
+        Mil.from_dict(mil), pxrd_folder, resolved_repo_root)
     result_dict_procedure = procedure.to_dict()
     result_dict_characterization = characterization.to_dict()
     # print("Procedure Result: " + str(result_dict_mofsy))
@@ -372,20 +381,51 @@ def fe_terephthalate2Mofsy():
 
     # Validate results according to schemas
     validate(instance=result_dict_procedure, schema=load_json(
-        os.path.join(repo_root_path, 'data_model', 'procedure.schema.json')))
+        os.path.join(resolved_repo_root, 'data_model', 'procedure.schema.json')))
     print("Valid procedure JSON was generated.")
     validate(
         instance=result_dict_characterization,
         schema=load_json(
             os.path.join(
-                repo_root_path,
+                resolved_repo_root,
                 'data_model',
                 'characterization.schema.json')))
     print("Valid characterization JSON was generated.")
 
-    save_json(result_dict_procedure, result_file_path_procedure)
-    save_json(result_dict_characterization, result_file_path_characterization)
+    save_json(result_dict_procedure, procedure_output_path)
+    save_json(result_dict_characterization, characterization_output_path)
+    return True
+
+
+def run_fe_terephthalate_source(
+    repo_root: str,
+    config: ConversionConfig,
+    source: ConversionSource,
+) -> bool:
+    ensure_converted_dir(repo_root, config, source)
+    return fe_terephthalate2Mofsy(
+        input_path=get_source_input_path(repo_root, source),
+        pxrd_folder=get_source_aux_path(repo_root, source, "pxrdFolder"),
+        procedure_output_path=get_artifact_path(repo_root, config, source, "procedure"),
+        characterization_output_path=get_artifact_path(repo_root, config, source, "characterization"),
+        repo_root_path=repo_root,
+    )
+
+
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Convert the Fe-terephthalate dataset to MOFSY.")
+    parser.add_argument("--input-path")
+    parser.add_argument("--pxrd-folder")
+    parser.add_argument("--procedure-output-path")
+    parser.add_argument("--characterization-output-path")
+    return parser
 
 
 if __name__ == '__main__':
-    fe_terephthalate2Mofsy()
+    args = _build_arg_parser().parse_args()
+    fe_terephthalate2Mofsy(
+        input_path=args.input_path,
+        pxrd_folder=args.pxrd_folder,
+        procedure_output_path=args.procedure_output_path,
+        characterization_output_path=args.characterization_output_path,
+    )

@@ -1,6 +1,8 @@
+import argparse
 import os
 from datetime import datetime
 
+from fair_synthesis.conversion_config import get_repo_root
 from .utils import format_to_camel_case, load_json, save_json
 from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure import (
     SciformationCleanedELNSchema,
@@ -138,22 +140,28 @@ def clean_sciformation_eln(
     return result
 
 
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Clean a Sciformation export into the intermediate schema.")
+    parser.add_argument("--input-path")
+    parser.add_argument("--output-path")
+    return parser
+
+
 if __name__ == '__main__':
-    # Can be run independently to test the function
-    current_file_dir = __file__.rsplit('/', 1)[0]
-    file_path = os.path.join(
-        current_file_dir,
-        '../../..',
+    args = _build_arg_parser().parse_args()
+    repo_root = get_repo_root()
+    file_path = args.input_path or os.path.join(
+        repo_root,
         'data',
         'MOCOF-1',
         'Sciformation_KE-MOCOF_jsonRaw.json')
-    result_file_path_normal = os.path.join(
-        current_file_dir,
-        '../../..',
+    result_file_path_normal = args.output_path or os.path.join(
+        repo_root,
         'data',
         'MOCOF-1',
         'converted',
         'sciformation_eln_cleaned.json')
+    os.makedirs(os.path.dirname(result_file_path_normal), exist_ok=True)
     data = load_json(file_path)
     result = clean_sciformation_eln(data)
 
