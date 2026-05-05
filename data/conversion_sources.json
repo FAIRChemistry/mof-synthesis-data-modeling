@@ -126,7 +126,6 @@
     ],
     "chemotion_workflow_without_text_extraction": [
       "chemotion_to_mofsy_without_text_extraction",
-      "mofsy_to_xdl",
       "mofsy_to_mpif"
     ],
     "fe_terephthalate_workflow": [
