@@ -32,23 +32,30 @@ cd mof-synthesis-data-modeling
 # Install dependencies in a virtual environment
 uv pip install -e .
 ```
-### Install Graphviz for decision tree visualization
-macOS: `brew install graphviz`  
-Debian/Ubuntu: `sudo apt install graphviz`  
+### Install dependencies outside PyPI
+macOS
+```bash
+brew install graphviz
+brew install node
+npm install ajv
+```
+Debian/Ubuntu: `sudo apt install graphviz`, etc.
 Windows: https://graphviz.org/download/
 
 ---
 ## Usage
-### Formatting, validation, and serialization into XDL
+### (Re)generate codes based on schema
+```bash
+cd scripts/schema_codegen
+uv run npm install
+uv run npm run generate -- --list
+uv run npm run generate --
+uv run npm run generate -- procedure_python
+cd ../..
+```
+### Formatting, validation, and serialization
 ```bash
 uv run scripts/format_and_serialize_all.py
-```
-### Serialization into MPIF
-```bash
-cd scripts/mofsy2mpif
-uv run npm install
-uv run npm start
-cd ../..
 ```
 ### Phase mole fraction analysis of PXRD patterns
 ```bash

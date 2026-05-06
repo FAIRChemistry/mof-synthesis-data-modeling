@@ -1,3 +1,4 @@
+import argparse
 import os
 from copy import deepcopy
 from typing import List, Tuple
@@ -15,6 +16,15 @@ from fair_synthesis.generated_apis.sciformation_eln_cleaned_data_structure impor
 )
 from fair_synthesis.generated_apis.sciformation_eln_enriched_data_structure import (
     SciformationEnrichedELNSchema, RxnRole, Experiment, ReactionComponent, MassUnit,
+)
+from fair_synthesis.conversion_config import (
+    ConversionConfig,
+    ConversionSource,
+    ensure_converted_dir,
+    get_artifact_path,
+    get_repo_root,
+    get_source_aux_path,
+    get_source_input_path,
 )
 from .mofsy_utils import rxn_role_to_xdl_role
 from .sciformation_cleaned_utils import find_reaction_components, get_inchi, mass_to_target_format, time_to_target_format, Unit as TimeUnitSciformation
@@ -334,24 +344,49 @@ def format_length(length: str) -> Length:
         raise ValueError(f"Unknown length unit in {length}")
 
 
-def sciformation2mofsy(use_llm_for_extraction: bool = False):
-    current_file_dir = __file__.rsplit('/', 1)[0]
-    repo_root_path = os.path.join(current_file_dir, '../../..')
-    file_path = os.path.join(repo_root_path, 'data',
-                             'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
-    pxrd_folder = os.path.join(repo_root_path, 'data', 'MOCOF-1', 'PXRD')
-    cleaned_output_path = os.path.join(
-        repo_root_path, 'data', 'MOCOF-1', 'converted', 'sciformation_eln_cleaned.json')
-    enriched_output_filename = 'sciformation_eln_enriched_with_llm.json' if use_llm_for_extraction else 'sciformation_eln_enriched.json'
-    enriched_output_path = os.path.join(
-        repo_root_path, 'data', 'MOCOF-1', 'converted', enriched_output_filename)
-    cleaned_eln = clean_sciformation_eln(load_json(file_path))
+def sciformation2mofsy(
+    input_path: str | None = None,
+    pxrd_folder: str | None = None,
+    cleaned_output_path: str | None = None,
+    enriched_output_path: str | None = None,
+    procedure_output_path: str | None = None,
+    characterization_output_path: str | None = None,
+    repo_root_path: str | None = None,
+    use_llm_for_extraction: bool = False,
+) -> bool:
+    resolved_repo_root = repo_root_path or get_repo_root()
+    input_path = input_path or os.path.join(
+        resolved_repo_root, 'data', 'MOCOF-1', 'Sciformation_KE-MOCOF_jsonRaw.json')
+    pxrd_folder = pxrd_folder or os.path.join(resolved_repo_root, 'data', 'MOCOF-1', 'PXRD')
+    cleaned_output_path = cleaned_output_path or os.path.join(
+        resolved_repo_root, 'data', 'MOCOF-1', 'converted', 'sciformation_eln_cleaned.json')
+    enriched_output_path = enriched_output_path or os.path.join(
+        resolved_repo_root,
+        'data',
+        'MOCOF-1',
+        'converted',
+        'sciformation_eln_enriched_with_llm.json' if use_llm_for_extraction else 'sciformation_eln_enriched.json',
+    )
+    procedure_output_path = procedure_output_path or os.path.join(
+        resolved_repo_root, 'data', 'MOCOF-1', 'converted', 'procedure_from_sciformation.json')
+    characterization_output_path = characterization_output_path or os.path.join(
+        resolved_repo_root, 'data', 'MOCOF-1', 'converted', 'characterization_from_sciformation.json')
+
+    os.makedirs(os.path.dirname(cleaned_output_path), exist_ok=True)
+
+    cleaned_eln = clean_sciformation_eln(load_json(input_path))
     print("The Sciformation ELN data has been cleaned.")
     save_json(cleaned_eln.to_dict(), cleaned_output_path)
 
     # Validate data according to schema
     validate(instance=cleaned_eln.to_dict(), schema=load_json(os.path.join(
-        repo_root_path, 'data_model', 'sciformation_eln_cleaned.schema.json')))
+        resolved_repo_root, 'data_model', 'sciformation_eln_cleaned.schema.json')))
+
+    enriched_cleaned_eln = _enrich_cleaned_sciformation(
+        cleaned_eln, use_llm_for_extraction=use_llm_for_extraction)
+    save_json(enriched_cleaned_eln.to_dict(), enriched_output_path)
+    validate(instance=enriched_cleaned_eln.to_dict(), schema=load_json(os.path.join(
+        resolved_repo_root, 'data_model', 'sciformation_eln_enriched.schema.json')))
 
     enriched_cleaned_eln = _enrich_cleaned_sciformation(
         cleaned_eln, use_llm_for_extraction=use_llm_for_extraction)
@@ -360,36 +395,24 @@ def sciformation2mofsy(use_llm_for_extraction: bool = False):
         repo_root_path, 'data_model', 'sciformation_eln_enriched.schema.json')))
 
     procedure, characterization = convert_cleaned_eln_to_mofsy(
-        enriched_cleaned_eln, pxrd_folder, repo_root_path)
-    result_file_path_procedure = os.path.join(
-        repo_root_path,
-        'data',
-        'MOCOF-1',
-        'converted',
-        'procedure_from_sciformation.json')
-    result_file_path_characterization = os.path.join(
-        repo_root_path,
-        'data',
-        'MOCOF-1',
-        'converted',
-        'characterization_from_sciformation.json')
+        enriched_cleaned_eln, pxrd_folder, resolved_repo_root)
     result_dict_procedure = procedure.to_dict()
     result_dict_characterization = characterization.to_dict()
     # print("Procedure Result: " + str(result_dict_procedure))
     # print("Characterization Result: " + str(result_dict_characterization))
 
-    save_json(result_dict_procedure, result_file_path_procedure)
-    save_json(result_dict_characterization, result_file_path_characterization)
+    save_json(result_dict_procedure, procedure_output_path)
+    save_json(result_dict_characterization, characterization_output_path)
 
     # Validate results according to schemas
     validate(instance=result_dict_procedure, schema=load_json(
-        os.path.join(repo_root_path, 'data_model', 'procedure.schema.json')))
+        os.path.join(resolved_repo_root, 'data_model', 'procedure.schema.json')))
     print("Valid procedure JSON was generated.")
     validate(
         instance=result_dict_characterization,
         schema=load_json(
             os.path.join(
-                repo_root_path,
+                resolved_repo_root,
                 'data_model',
                 'characterization.schema.json')))
     print("Valid characterization JSON was generated.")
@@ -405,11 +428,52 @@ def sciformation2mofsy(use_llm_for_extraction: bool = False):
         instance=result_dict_procedure,
         schema=load_json(
             os.path.join(
-                repo_root_path,
+                resolved_repo_root,
                 'data_model',
                 'procedure_MOCOF-1.schema.json')))
     print("The procedure JSON is valid according to the MOCOF-1 specific schema.")
+    return True
+
+
+def run_sciformation_source(
+    repo_root: str,
+    config: ConversionConfig,
+    source: ConversionSource,
+    use_llm_for_extraction: bool = False,
+) -> bool:
+    ensure_converted_dir(repo_root, config, source)
+    return sciformation2mofsy(
+        input_path=get_source_input_path(repo_root, source),
+        pxrd_folder=get_source_aux_path(repo_root, source, "pxrdFolder"),
+        cleaned_output_path=get_artifact_path(repo_root, config, source, "sciformation_cleaned"),
+        enriched_output_path=get_artifact_path(repo_root, config, source, "sciformation_enriched"),
+        procedure_output_path=get_artifact_path(repo_root, config, source, "procedure"),
+        characterization_output_path=get_artifact_path(repo_root, config, source, "characterization"),
+        repo_root_path=repo_root,
+        use_llm_for_extraction=use_llm_for_extraction,
+    )
+
+
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Convert a Sciformation export to MOFSY.")
+    parser.add_argument("--input-path")
+    parser.add_argument("--pxrd-folder")
+    parser.add_argument("--cleaned-output-path")
+    parser.add_argument("--enriched-output-path")
+    parser.add_argument("--procedure-output-path")
+    parser.add_argument("--characterization-output-path")
+    parser.add_argument("--use-llm-for-extraction", action="store_true")
+    return parser
 
 
 if __name__ == '__main__':
-    sciformation2mofsy()
+    args = _build_arg_parser().parse_args()
+    sciformation2mofsy(
+        input_path=args.input_path,
+        pxrd_folder=args.pxrd_folder,
+        cleaned_output_path=args.cleaned_output_path,
+        enriched_output_path=args.enriched_output_path,
+        procedure_output_path=args.procedure_output_path,
+        characterization_output_path=args.characterization_output_path,
+        use_llm_for_extraction=args.use_llm_for_extraction,
+    )

@@ -1,3 +1,4 @@
+import argparse
 import os
 import re
 from copy import deepcopy
@@ -21,6 +22,14 @@ from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
 from fair_synthesis.generated_apis.chemotion_enriched_data_structure import (
     ChemotionEnrichedSchema,
 )
+from fair_synthesis.conversion_config import (
+    ConversionConfig,
+    ConversionSource,
+    ensure_converted_dir,
+    get_artifact_path,
+    get_repo_root,
+    get_source_input_path,
+)
 from fair_synthesis.formatting.chemotion_cleaner import clean_chemotion, resolve_chemotion_input_path
 from fair_synthesis.formatting.chemotion_text_extractor_mocof1 import (
     process_data_use_case_specific as enrich_cleaned_chemotion_for_mocof1,
@@ -35,10 +44,10 @@ def _parse_temperature(temperature: Optional[dict]) -> Temperature:
     user_text: str = temperature["userText"].strip()
     value_unit: str = temperature.get("valueUnit", "°C")
 
-    if "->" in user_text:
-        value = float(user_text.split("->")[-1].strip())
-    else:
-        value = float(user_text)
+    numeric_matches = re.findall(r"[-+]?\d+(?:\.\d+)?", user_text.replace("→", "->"))
+    if not numeric_matches:
+        return Temperature(value=0.0, unit=TemperatureUnit.CELSIUS)
+    value = float(numeric_matches[-1])
 
     if "K" in value_unit and "°C" not in value_unit:
         return Temperature(value=value, unit=TemperatureUnit.KELVIN)
@@ -89,7 +98,7 @@ def _infer_role(entry: dict) -> Role:
 
 def _build_vessel_id(vessel_size: Optional[dict]) -> str:
     if not vessel_size:
-        return "vial"
+        return "undefined"
     amount = vessel_size.get("amount", "")
     unit = vessel_size.get("unit", "")
     return f"{amount}{unit}_vial"
@@ -153,10 +162,12 @@ def _append_wash_step(
 
 
 def _enrich_cleaned_chemotion(
-        cleaned: ChemotionCleanedSchema) -> ChemotionEnrichedSchema:
+        cleaned: ChemotionCleanedSchema,
+        enrich_descriptions: bool = True) -> ChemotionEnrichedSchema:
     enriched_dict = deepcopy(cleaned.to_dict())
-    reactions = enriched_dict.get("reactions", [])
-    enrich_cleaned_chemotion_for_mocof1(reactions)
+    if enrich_descriptions:
+        reactions = enriched_dict.get("reactions", [])
+        enrich_cleaned_chemotion_for_mocof1(reactions)
     return ChemotionEnrichedSchema.from_dict(enriched_dict)
 
 
@@ -288,20 +299,36 @@ def _format_product_weight(sample: dict) -> Weight:
     return Weight(value=round(float(value), 3), unit=WeightUnit.MILLIGRAM)
 
 
-def chemotion2mofsy():
-    current_file_dir = __file__.rsplit("/", 1)[0]
-    repo_root = os.path.join(current_file_dir, "../../..")
+def chemotion2mofsy(
+    input_path: Optional[str] = None,
+    cleaned_output_path: Optional[str] = None,
+    enriched_output_path: Optional[str] = None,
+    procedure_output_path: Optional[str] = None,
+    characterization_output_path: Optional[str] = None,
+    repo_root: Optional[str] = None,
+    enrich_descriptions: bool = True,
+) -> bool:
+    resolved_repo_root = repo_root or get_repo_root()
 
-    try:
-        input_path = resolve_chemotion_input_path(repo_root)
-    except FileNotFoundError:
-        print("Chemotion input data not found. Skipping Chemotion conversion.")
-        return
-    cleaned_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
-    enriched_output_filename = "chemotion_enriched.json"
-    enriched_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", enriched_output_filename)
-    procedure_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "procedure_from_chemotion.json")
-    characterization_output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "characterization_from_chemotion.json")
+    if input_path is None:
+        try:
+            input_path = resolve_chemotion_input_path(resolved_repo_root)
+        except FileNotFoundError:
+            print("Chemotion input data not found. Skipping Chemotion conversion.")
+            return False
+
+    if not os.path.exists(input_path):
+        print(f"Chemotion input data not found. Skipping Chemotion conversion: {input_path}")
+        return False
+
+    cleaned_output_path = cleaned_output_path or os.path.join(
+        resolved_repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
+    enriched_output_path = enriched_output_path or os.path.join(
+        resolved_repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_enriched.json")
+    procedure_output_path = procedure_output_path or os.path.join(
+        resolved_repo_root, "data", "MOCOF-1_Chemotion", "converted", "procedure_from_chemotion.json")
+    characterization_output_path = characterization_output_path or os.path.join(
+        resolved_repo_root, "data", "MOCOF-1_Chemotion", "converted", "characterization_from_chemotion.json")
 
     os.makedirs(os.path.dirname(cleaned_output_path), exist_ok=True)
 
@@ -310,13 +337,15 @@ def chemotion2mofsy():
     save_json(cleaned.to_dict(), cleaned_output_path)
     print("Chemotion data cleaned.")
     validate(instance=cleaned.to_dict(), schema=load_json(
-        os.path.join(repo_root, "data_model", "chemotion_cleaned.schema.json")))
+        os.path.join(resolved_repo_root, "data_model", "chemotion_cleaned.schema.json")))
 
     enriched_cleaned = _enrich_cleaned_chemotion(
-        cleaned)
+        cleaned,
+        enrich_descriptions=enrich_descriptions,
+    )
     save_json(enriched_cleaned.to_dict(), enriched_output_path)
     validate(instance=enriched_cleaned.to_dict(), schema=load_json(
-        os.path.join(repo_root, "data_model", "chemotion_enriched.schema.json")))
+        os.path.join(resolved_repo_root, "data_model", "chemotion_enriched.schema.json")))
     procedure, characterization = convert_cleaned_chemotion_to_mofsy(
         enriched_cleaned)
 
@@ -327,13 +356,55 @@ def chemotion2mofsy():
     save_json(result_characterization, characterization_output_path)
 
     validate(instance=result_procedure, schema=load_json(
-        os.path.join(repo_root, "data_model", "procedure.schema.json")))
+        os.path.join(resolved_repo_root, "data_model", "procedure.schema.json")))
     print("Valid procedure JSON was generated.")
 
     validate(instance=result_characterization, schema=load_json(
-        os.path.join(repo_root, "data_model", "characterization.schema.json")))
+        os.path.join(resolved_repo_root, "data_model", "characterization.schema.json")))
     print("Valid characterization JSON was generated.")
+    return True
+
+
+def run_chemotion_source(
+    repo_root: str,
+    config: ConversionConfig,
+    source: ConversionSource,
+    enrich_descriptions: bool,
+) -> bool:
+    ensure_converted_dir(repo_root, config, source)
+    return chemotion2mofsy(
+        input_path=get_source_input_path(repo_root, source),
+        cleaned_output_path=get_artifact_path(repo_root, config, source, "chemotion_cleaned"),
+        enriched_output_path=get_artifact_path(repo_root, config, source, "chemotion_enriched"),
+        procedure_output_path=get_artifact_path(repo_root, config, source, "procedure"),
+        characterization_output_path=get_artifact_path(repo_root, config, source, "characterization"),
+        repo_root=repo_root,
+        enrich_descriptions=enrich_descriptions,
+    )
+
+
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Convert a Chemotion export to MOFSY.")
+    parser.add_argument("--input-path")
+    parser.add_argument("--cleaned-output-path")
+    parser.add_argument("--enriched-output-path")
+    parser.add_argument("--procedure-output-path")
+    parser.add_argument("--characterization-output-path")
+    parser.add_argument(
+        "--skip-text-extraction",
+        action="store_true",
+        help="Skip use-case-specific text extraction before MOFSY conversion.",
+    )
+    return parser
 
 
 if __name__ == "__main__":
-    chemotion2mofsy()
+    args = _build_arg_parser().parse_args()
+    chemotion2mofsy(
+        input_path=args.input_path,
+        cleaned_output_path=args.cleaned_output_path,
+        enriched_output_path=args.enriched_output_path,
+        procedure_output_path=args.procedure_output_path,
+        characterization_output_path=args.characterization_output_path,
+        enrich_descriptions=not args.skip_text_extraction,
+    )

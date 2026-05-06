@@ -1,33 +1,31 @@
 {
   "metadata": {
-    "dataName": "Fe–terephthalate MOF synthesis",
+    "dataName": "Zr-NU-1000 synthesis trial",
     "creationDate": "2026-04-28",
     "generatorVersion": "1.0",
     "publicationDOI": "",
     "procedureStatus": "test",
-    "name": "Ciftci, Esengul",
-    "email": "e.ciftci@fkf.mpg.de",
-    "orcid": "0000-0002-4994-3486",
-    "address": "Heisenbergstrasse 1, 70569, Stuttgart, Germany"
+    "name": "Endo, Kenichi",
+    "email": "kenichi.endo@ipoc.uni-stuttgart.de",
+    "orcid": "0000-0002-4128-6514",
+    "address": "Pfaffenwaldring 55, 70569 Stuttgart, Germany"
   },
   "productInfo": {
     "type": "porous framework material",
     "systematicName": "",
     "state": "solid",
-    "color": "",
-    "handlingAtmosphere": "air"
+    "color": "light yellow",
+    "handlingAtmosphere": "Air"
   },
   "synthesisGeneral": {
     "performedDate": "",
     "reactionType": "mix",
-    "reactionAtmosphere": "air",
     "temperatureController": "",
     "productAmountUnit": "",
     "scale": "milligram"
   },
   "steps": {
     "preparationAtmosphere": "Air",
-    "reactionAtmosphere": "Air",
     "workupAtmosphere": "Air"
   }
 }

@@ -43,18 +43,104 @@ const schemasDirectory = path.join(rootDirectory, "data_model");
 
 type Mofsy2MpifSource = {
     id: string;
-    procedure: string;
-    characterization: string;
-    mpifOutputFolder: string;
-    mpifParams: string;
+    workflow: string;
+    root: string;
+    basename: string;
+    mpifParams?: string;
+    [key: string]: unknown;
+}
+
+type ArtifactConfig = {
+    prefix?: string;
+    suffix?: string;
+    extension?: string;
+    fixedName?: string;
 }
 
 type ConversionSources = {
-    mofsy2mpif?: Mofsy2MpifSource[];
+    conventions: {
+        convertedFolder: string;
+        artifacts: Record<string, ArtifactConfig>;
+    };
+    workflows: Record<string, string[]>;
+    sources: Mofsy2MpifSource[];
 }
 
 function resolveRepoPath(relativePath: string): string {
     return path.join(rootDirectory, relativePath);
+}
+
+function getConvertedDir(config: ConversionSources, source: Mofsy2MpifSource): string {
+    return path.join(resolveRepoPath(source.root), config.conventions.convertedFolder);
+}
+
+function getArtifactPath(config: ConversionSources, source: Mofsy2MpifSource, artifactId: string): string {
+    const artifactConfig = config.conventions.artifacts[artifactId];
+    if (!artifactConfig) {
+        throw new Error(`Unknown artifact config: ${artifactId}`);
+    }
+    if (artifactConfig.fixedName) {
+        return path.join(getConvertedDir(config, source), artifactConfig.fixedName);
+    }
+
+    const prefix = artifactConfig.prefix || "";
+    const suffix = artifactConfig.suffix || "";
+    const extension = artifactConfig.extension || "";
+    return path.join(
+        getConvertedDir(config, source),
+        `${prefix}${source.basename}${suffix}${extension}`,
+    );
+}
+
+function getSourceAuxPath(source: Mofsy2MpifSource, key: string): string | undefined {
+    const rawValue = source[key];
+    if (typeof rawValue !== "string") {
+        return undefined;
+    }
+    return path.join(resolveRepoPath(source.root), rawValue);
+}
+
+function workflowContainsStep(config: ConversionSources, source: Mofsy2MpifSource, stepId: string): boolean {
+    return (config.workflows[source.workflow] || []).includes(stepId);
+}
+
+type CLIArgs = {
+    procedurePath?: string;
+    characterizationPath?: string;
+    outputFolderPath?: string;
+    paramsPath?: string;
+}
+
+function parseCLIArgs(argv: string[]): CLIArgs {
+    const result: CLIArgs = {};
+    for (let i = 0; i < argv.length; i += 1) {
+        const arg = argv[i];
+        const value = argv[i + 1];
+        if (!value) {
+            continue;
+        }
+        switch (arg) {
+            case "--procedure-path":
+                result.procedurePath = value;
+                i += 1;
+                break;
+            case "--characterization-path":
+                result.characterizationPath = value;
+                i += 1;
+                break;
+            case "--output-folder-path":
+                result.outputFolderPath = value;
+                i += 1;
+                break;
+            case "--params-path":
+                result.paramsPath = value;
+                i += 1;
+                break;
+            default:
+                break;
+        }
+    }
+    return result;
 }
 
 function findStepByReagent(procedure: ProcedureSectionsObject, reagentId: string): StepEntryObject | undefined {
@@ -139,6 +225,15 @@ function stringifySteps(steps: StepEntryObject[]): string {
     return result;
 }
 
+function normalizeMpifParamsData(paramsData: Record<string, any>): Record<string, any> {
+    const normalized = structuredClone(paramsData);
+    const handlingAtmosphere = normalized?.productInfo?.handlingAtmosphere;
+    if (typeof handlingAtmosphere === "string") {
+        normalized.productInfo.handlingAtmosphere = handlingAtmosphere.toLowerCase();
+    }
+    return normalized;
+}
+
 function mofsyToMpif(inputProcedurePath: string, inputCharacterizationPath: string, outputFolderPath: string, inputParamsPath: string, paramsSchemaPath: string) {
 
 const procedureJsonFile = fs.readFileSync(inputProcedurePath, 'utf-8');
@@ -147,13 +242,13 @@ const characterizationJsonFile = fs.readFileSync(inputCharacterizationPath, 'utf
 const ajv = new Ajv();
 const paramsSchema = JSON.parse(fs.readFileSync(paramsSchemaPath, 'utf-8'));
 const paramsDataString = fs.readFileSync(inputParamsPath, 'utf-8');
-const paramsData = JSON.parse(paramsDataString);
+const paramsData = normalizeMpifParamsData(JSON.parse(paramsDataString));
 const validate = ajv.compile(paramsSchema);
 if (!validate(paramsData)) {
   console.log(validate.errors);
     throw new Error("MPIF Parameters JSON file is not valid against the schema.");
 }
-const mpifParams: MPIFParameters = ConvertToMpifParams.toMPIFParameters(paramsDataString);
+const mpifParams: MPIFParameters = ConvertToMpifParams.toMPIFParameters(JSON.stringify(paramsData));
 
 // reads in procedure and characterization JSON files and writes the corresponding data into the MPIFData structure, which is then converted to a string in MPIF format and written to a file
 // the procedure and characterization values are actually objects of lists of procedure and characterization entries from many experiments.
@@ -296,7 +391,10 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
     // write all the data into the MPIF structures
     const metadata: MPIFMetadata = {
         dataName: mpifParams.metadata.dataName,
-        creationDate: process.env.MPIF_CREATION_DATE || mpifParams.metadata.creationDate || new Date().toISOString().split('T')[0],
+        // Prefer a fixed checked-in creation date from mpif_params.json so rerunning
+        // the generators does not rewrite every MPIF artifact just because "today" changed.
+        // The environment variable remains a fallback for ad hoc overrides when the config leaves it empty.
+        creationDate: mpifParams.metadata.creationDate || process.env.MPIF_CREATION_DATE || new Date().toISOString().split('T')[0],
         generatorVersion: mpifParams.metadata.generatorVersion,
         publicationDOI: mpifParams.metadata.publicationDOI,
         procedureStatus: mpifParams.metadata.procedureStatus,
@@ -415,26 +513,53 @@ prodedure.Synthesis.forEach((synthesisEntry, index) => {
 }
 
 const paramsSchema = path.join(schemasDirectory, "mpif_params.schema.json");
-const conversionSources = JSON.parse(
-    fs.readFileSync(path.join(dataDirectory, "conversion_sources.json"), 'utf-8')
-) as ConversionSources;
+const cliArgs = parseCLIArgs(process.argv.slice(2));
 
-for (const source of conversionSources.mofsy2mpif || []) {
-    const procedurePath = resolveRepoPath(source.procedure);
-    const characterizationPath = resolveRepoPath(source.characterization);
-    const mpifParamsPath = resolveRepoPath(source.mpifParams);
-    if (!fs.existsSync(procedurePath) || !fs.existsSync(characterizationPath) || !fs.existsSync(mpifParamsPath)) {
-        console.log(
-            `Skipping ${source.id} because one or more input files are missing.`,
-        );
-        continue;
-    }
-
+if (
+    cliArgs.procedurePath &&
+    cliArgs.characterizationPath &&
+    cliArgs.outputFolderPath &&
+    cliArgs.paramsPath
+) {
     mofsyToMpif(
-        procedurePath,
-        characterizationPath,
-        resolveRepoPath(source.mpifOutputFolder),
-        mpifParamsPath,
+        cliArgs.procedurePath,
+        cliArgs.characterizationPath,
+        cliArgs.outputFolderPath,
+        cliArgs.paramsPath,
         paramsSchema
     );
+} else {
+    const conversionSources = JSON.parse(
+        fs.readFileSync(path.join(dataDirectory, "conversion_sources.json"), 'utf-8')
+    ) as ConversionSources;
+
+    for (const source of conversionSources.sources || []) {
+        if (!workflowContainsStep(conversionSources, source, "mofsy_to_mpif")) {
+            continue;
+        }
+
+        const procedurePath = getArtifactPath(conversionSources, source, "procedure");
+        const characterizationPath = getArtifactPath(conversionSources, source, "characterization");
+        const mpifParamsPath = getSourceAuxPath(source, "mpifParams");
+        const mpifOutputFolder = getArtifactPath(conversionSources, source, "mpif_output_folder");
+        if (
+            !mpifParamsPath ||
+            !fs.existsSync(procedurePath) ||
+            !fs.existsSync(characterizationPath) ||
+            !fs.existsSync(mpifParamsPath)
+        ) {
+            console.log(
+                `Skipping ${source.id} because one or more input files are missing.`,
+            );
+            continue;
+        }
+
+        mofsyToMpif(
+            procedurePath,
+            characterizationPath,
+            mpifOutputFolder,
+            mpifParamsPath,
+            paramsSchema
+        );
+    }
 }

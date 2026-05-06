@@ -1,6 +1,8 @@
+import argparse
 import os
 
 from fair_synthesis.formatting.utils import load_json, save_json
+from fair_synthesis.conversion_config import get_repo_root
 from fair_synthesis.generated_apis.chemotion_cleaned_data_structure import (
     ChemotionCleanedSchema,
     chemotion_cleaned_schema_from_dict,
@@ -54,6 +56,21 @@ def _build_sample_entry(row: dict, sample_id: str, samples: dict, molecules: dic
     }
 
 
+def _normalize_vessel_size(vessel_size: dict | None) -> dict | None:
+    if not vessel_size:
+        return None
+
+    amount = vessel_size.get("amount")
+    unit = vessel_size.get("unit")
+    if amount is None or unit is None:
+        return None
+
+    return {
+        "amount": amount,
+        "unit": unit,
+    }
+
+
 def clean_chemotion(data: dict) -> ChemotionCleanedSchema:
     schema = schema_from_dict(data)
 
@@ -70,7 +87,7 @@ def clean_chemotion(data: dict) -> ChemotionCleanedSchema:
             "name": rxn.get("name", ""),
             "temperature": rxn.get("temperature"),
             "duration": rxn.get("duration", ""),
-            "vessel_size": rxn.get("vessel_size"),
+            "vessel_size": _normalize_vessel_size(rxn.get("vessel_size")),
             "plain_text_description": rxn.get("plain_text_description"),
             "plain_text_observation": rxn.get("plain_text_observation"),
             "starting_materials": [],
@@ -124,11 +141,19 @@ def clean_chemotion(data: dict) -> ChemotionCleanedSchema:
     return chemotion_cleaned_schema_from_dict(cleaned)
 
 
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Clean a Chemotion export into the intermediate schema.")
+    parser.add_argument("--input-path")
+    parser.add_argument("--output-path")
+    return parser
+
+
 if __name__ == "__main__":
-    current_file_dir = __file__.rsplit("/", 1)[0]
-    repo_root = os.path.join(current_file_dir, "../../..")
-    input_path = resolve_chemotion_input_path(repo_root)
-    output_path = os.path.join(repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
+    args = _build_arg_parser().parse_args()
+    repo_root = get_repo_root()
+    input_path = args.input_path or resolve_chemotion_input_path(repo_root)
+    output_path = args.output_path or os.path.join(
+        repo_root, "data", "MOCOF-1_Chemotion", "converted", "chemotion_cleaned.json")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     result = clean_chemotion(load_json(input_path))

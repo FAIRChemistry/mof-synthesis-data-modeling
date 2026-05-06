@@ -1,6 +1,13 @@
+import argparse
 import os
-from typing import Any
 
+from fair_synthesis.conversion_config import (
+    ConversionConfig,
+    ConversionSource,
+    get_artifact_path,
+    get_repo_root,
+    iter_sources_for_step,
+)
 from fair_synthesis.formatting.utils import load_json, save_string_as_file
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure
 from lxml import etree
@@ -87,24 +94,57 @@ def dict_to_xml(root_tag, data):
     return etree.tostring(root, pretty_print=True, encoding="unicode")
 
 
-def mofsy2xdl():
-    current_file_dir = __file__.rsplit('/', 1)[0]
-    repo_root = os.path.abspath(os.path.join(current_file_dir, '../../..'))
-    config = load_json(os.path.join(repo_root, 'data', 'conversion_sources.json'))
+def run_mofsy2xdl_for_source(
+    repo_root: str,
+    config: ConversionConfig,
+    source: ConversionSource,
+) -> bool:
+    procedure_path = get_artifact_path(repo_root, config, source, "procedure")
+    output_path = get_artifact_path(repo_root, config, source, "xdl")
 
-    for source in config.get('mofsy2xdl', []):
-        source_config: dict[str, Any] = source
-        procedure_path = os.path.join(repo_root, source_config['procedure'])
-        output_path = os.path.join(repo_root, source_config['xdlOutput'])
+    if not os.path.exists(procedure_path):
+        print(f"Skipping XDL conversion for missing procedure file: {procedure_path}")
+        return False
 
+    xml = convert_mofsy_procedure_to_xdl_string(
+        SynthesisProcedure.from_dict(load_json(procedure_path)))
+    save_string_as_file(xml, output_path)
+    return True
+
+
+def mofsy2xdl(
+    procedure_path: str | None = None,
+    output_path: str | None = None,
+    repo_root: str | None = None,
+    config: ConversionConfig | None = None,
+) -> bool:
+    if procedure_path and output_path:
         if not os.path.exists(procedure_path):
             print(f"Skipping XDL conversion for missing procedure file: {procedure_path}")
-            continue
-
+            return False
         xml = convert_mofsy_procedure_to_xdl_string(
             SynthesisProcedure.from_dict(load_json(procedure_path)))
         save_string_as_file(xml, output_path)
+        return True
+
+    resolved_repo_root = repo_root or get_repo_root()
+    resolved_config = config or load_json(os.path.join(resolved_repo_root, 'data', 'conversion_sources.json'))
+    ran_any = False
+    for source in iter_sources_for_step(resolved_config, "mofsy_to_xdl"):
+        ran_any = run_mofsy2xdl_for_source(resolved_repo_root, resolved_config, source) or ran_any
+    return ran_any
+
+
+def _build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Convert MOFSY procedure files to XDL.")
+    parser.add_argument("--procedure-path")
+    parser.add_argument("--output-path")
+    return parser
 
 
 if __name__ == '__main__':
-    mofsy2xdl()
+    args = _build_arg_parser().parse_args()
+    mofsy2xdl(
+        procedure_path=args.procedure_path,
+        output_path=args.output_path,
+    )

@@ -1,6 +1,5 @@
 import json
 import os
-import starfile
 import yaml
 import re
 import pubchempy as pcp
@@ -65,12 +64,6 @@ def load_json(file_path):
 def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
-
-
-def save_starfile(data, file_path):
-    # create missing directories
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
-    starfile.write(data, file_path)
 
 
 def save_string_as_file(data: str, file_path):

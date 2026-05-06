@@ -1,5 +1,12 @@
 import os
 
+from fair_synthesis.conversion_config import (
+    ConversionConfig,
+    ConversionSource,
+    get_artifact_path,
+    get_repo_root,
+    iter_sources_for_step,
+)
 from fair_synthesis.generated_apis.procedure_data_structure import SynthesisProcedure, Role, AmountUnit, TemperatureUnit, XMLType, Solvent, TimeUnit
 from fair_synthesis.generated_apis.characterization_data_structure import Characterization
 from fair_synthesis.formatting.utils import load_json, save_json
@@ -236,29 +243,40 @@ Activation under vacuum (boolean): If there is Dry"""
     return params_per_experiment
 
 
-def extract_interesting_params():
-    current_file_dir = __file__.rsplit('/', 1)[0]
+def run_extract_interesting_params_for_source(
+    repo_root: str,
+    config: ConversionConfig,
+    source: ConversionSource,
+) -> bool:
+    mofsy_procedure_file_path = get_artifact_path(repo_root, config, source, "procedure")
+    mofsy_characterization_file_path = get_artifact_path(repo_root, config, source, "characterization")
+    params_output_path = get_artifact_path(repo_root, config, source, "params")
 
-    # sciformation case
-    mofsy_procedure_file_path = os.path.join(
-        current_file_dir,
-        '../../..',
-        'data',
-        'MOCOF-1',
-        'converted',
-        'procedure_from_sciformation.json')
-    mofsy_characterization_file_path = os.path.join(
-        current_file_dir,
-        '../../..',
-        'data',
-        'MOCOF-1',
-        'converted',
-        'characterization_from_sciformation.json')
+    if not os.path.exists(mofsy_procedure_file_path) or not os.path.exists(mofsy_characterization_file_path):
+        print(f"Skipping parameter extraction for missing MOFSY files in source {source['id']}.")
+        return False
+
     procedure = SynthesisProcedure.from_dict(
         load_json(mofsy_procedure_file_path))
     characterization = Characterization.from_dict(
         load_json(mofsy_characterization_file_path))
     params = extract_interesting_params_for_mocof_1(
         procedure, characterization)
-    save_json(params, os.path.join(current_file_dir, '../../..', 'data',
-              'MOCOF-1', 'converted', 'params_from_sciformation.json'))
+    save_json(params, params_output_path)
+    return True
+
+
+def extract_interesting_params(
+    repo_root: str | None = None,
+    config: ConversionConfig | None = None,
+) -> bool:
+    resolved_repo_root = repo_root or get_repo_root()
+    resolved_config = config or load_json(os.path.join(resolved_repo_root, 'data', 'conversion_sources.json'))
+    ran_any = False
+    for source in iter_sources_for_step(resolved_config, "extract_mocof1_params"):
+        ran_any = run_extract_interesting_params_for_source(
+            resolved_repo_root,
+            resolved_config,
+            source,
+        ) or ran_any
+    return ran_any

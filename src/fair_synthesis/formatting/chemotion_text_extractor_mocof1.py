@@ -53,6 +53,8 @@ def _reaction_text(description: str) -> str:
         for marker in ("procedure", "reaction")
         if lowered.find(marker) >= 0
     ]
+    if not marker_positions:
+        return description.strip()
     return description[min(marker_positions):].strip()
 
 
@@ -68,7 +70,7 @@ def _extract_vessel(text: str) -> str | None:
 def _extract_degassing(text: str) -> str | None:
     lowered = text.lower()
     if "fpt" in lowered:
-        return "Ar"
+        return "FPT"
     return None
 
 
