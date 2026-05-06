@@ -44,6 +44,15 @@ Windows: https://graphviz.org/download/
 
 ---
 ## Usage
+### (Re)generate codes based on schema
+```bash
+cd scripts/schema_codegen
+uv run npm install
+uv run npm run generate -- --list
+uv run npm run generate --
+uv run npm run generate -- procedure_python
+cd ../..
+```
 ### Formatting, validation, and serialization
 ```bash
 uv run scripts/format_and_serialize_all.py
