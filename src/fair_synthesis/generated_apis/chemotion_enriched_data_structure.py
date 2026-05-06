@@ -62,6 +62,7 @@ def to_enum(c: Type[EnumT], x: Any) -> EnumT:
 
 class Degassing(Enum):
     AR = "Ar"
+    FPT = "FPT"
 
 
 class Sample:
